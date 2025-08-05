@@ -1,9 +1,9 @@
 ---
-title: "Week 10"
+title: "Week 9"
 subtitle: "Statistical Learning"
 description: ""
 author: "Tiago Ventura"
-date: "11/012/2023"
+date: "11/04/2025"
 #listing:
   # - id: slides
   #   contents:

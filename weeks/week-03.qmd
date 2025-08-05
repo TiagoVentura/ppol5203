@@ -3,7 +3,7 @@ title: "Week 03"
 subtitle: "Intro to Python - OOP, Data Types, Control Statements and Functions"
 description: ""
 author: "Tiago Ventura"
-date: "09/24/2023"
+date: "09/23/2025"
 #listing:
   # - id: slides
   #   contents:

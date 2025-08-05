@@ -4,14 +4,14 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Week\n\n\nTopic\n\n\nDate\n\n\n\n\n\n\nWeek 01\n\n\nIntroduction, Installations, IDEs, Command line\n\n\nSeptember 10, 2023\n\n\n\n\nWeek 02\n\n\nVersion Control, Workflow and Reproducibility: Or a bit of Git & GitHub\n\n\nSeptember 17, 2023\n\n\n\n\nWeek 03\n\n\nIntro to Python - OOP, Data Types, Control Statements and Functions\n\n\nSeptember 24, 2023\n\n\n\n\nWeek 04\n\n\nIntro to Python II: Scaling up your code - Iteration, Comprehension and Functions \n\n\nOctober 01, 2023\n\n\n\n\nWeek 05\n\n\nFrom Nested lists to Dataframes: Numpy and Intro to Pandas\n\n\nOctober 08, 2023\n\n\n\n\nWeek 06\n\n\nPandas II: Data Wrangling\n\n\nOctober 15, 2023\n\n\n\n\nWeek 07\n\n\nJoining, Tidying and Visualizing Data\n\n\nOctober 22, 2023\n\n\n\n\nWeek 08\n\n\nScraping\n\n\nOctober 29, 2023\n\n\n\n\nWeek 09\n\n\nApis + Selenium\n\n\nNovember 05, 2023\n\n\n\n\nWeek 10\n\n\nStatistical Learning\n\n\nNovember 12, 2023\n\n\n\n\nWeek 11\n\n\nText as Data I: Discovery and Topics\n\n\nNovember 19, 2023\n\n\n\n\nWeek 12\n\n\nText as Data II: Supervised Learning\n\n\nNovember 26, 2023\n\n\n\n\nWeek 13\n\n\nSQL\n\n\nDecember 03, 2023\n\n\n\n\nWeek 14\n\n\nPresentations of Final Projects\n\n\nDecember 10, 2023\n\n\n\n\n\n\nNo matching items"
+    "text": "Week\n\n\nTopic\n\n\nDate\n\n\n\n\n\n\nWeek 01\n\n\nIntroduction, Installations, IDEs, Command line\n\n\nSeptember 09, 2025\n\n\n\n\nWeek 02\n\n\nVersion Control, Workflow and Reproducibility: Or a bit of Git & GitHub\n\n\nSeptember 16, 2025\n\n\n\n\nWeek 03\n\n\nIntro to Python - OOP, Data Types, Control Statements and Functions\n\n\nSeptember 23, 2025\n\n\n\n\nWeek 04\n\n\nIntro to Python II: Scaling up your code - Iteration, Comprehension and Functions \n\n\nSeptember 30, 2025\n\n\n\n\nWeek 05\n\n\nFrom Nested lists to Dataframes: Numpy and Intro to Pandas\n\n\nOctober 07, 2025\n\n\n\n\nWeek 06\n\n\nPandas II: Data Wrangling\n\n\nOctober 14, 2025\n\n\n\n\nWeek 07\n\n\nJoining, Tidying and Visualizing Data\n\n\nOctober 21, 2025\n\n\n\n\nWeek 08\n\n\nScraping + APIs\n\n\nOctober 28, 2025\n\n\n\n\nWeek 9\n\n\nStatistical Learning\n\n\nNovember 04, 2025\n\n\n\n\nWeek 10\n\n\nText as Data I: Discovery and Topics\n\n\nNovember 11, 2023\n\n\n\n\nWeek 11\n\n\nText as Data II: Supervised Learning\n\n\nNovember 18, 2025\n\n\n\n\nWeek 12\n\n\nGenerative AI: Classification, Surveys and Prompting\n\n\nNovember 25, 2025\n\n\n\n\nWeek 13\n\n\nSQL\n\n\nDecember 03, 2024\n\n\n\n\nWeek 14\n\n\nPresentations of Final Projects\n\n\nDecember 09, 2023\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "schedule.html#weekly-schedule",
     "href": "schedule.html#weekly-schedule",
     "title": "Schedule",
     "section": "",
-    "text": "Week\n\n\nTopic\n\n\nDate\n\n\n\n\n\n\nWeek 01\n\n\nIntroduction, Installations, IDEs, Command line\n\n\nSeptember 10, 2023\n\n\n\n\nWeek 02\n\n\nVersion Control, Workflow and Reproducibility: Or a bit of Git & GitHub\n\n\nSeptember 17, 2023\n\n\n\n\nWeek 03\n\n\nIntro to Python - OOP, Data Types, Control Statements and Functions\n\n\nSeptember 24, 2023\n\n\n\n\nWeek 04\n\n\nIntro to Python II: Scaling up your code - Iteration, Comprehension and Functions \n\n\nOctober 01, 2023\n\n\n\n\nWeek 05\n\n\nFrom Nested lists to Dataframes: Numpy and Intro to Pandas\n\n\nOctober 08, 2023\n\n\n\n\nWeek 06\n\n\nPandas II: Data Wrangling\n\n\nOctober 15, 2023\n\n\n\n\nWeek 07\n\n\nJoining, Tidying and Visualizing Data\n\n\nOctober 22, 2023\n\n\n\n\nWeek 08\n\n\nScraping\n\n\nOctober 29, 2023\n\n\n\n\nWeek 09\n\n\nApis + Selenium\n\n\nNovember 05, 2023\n\n\n\n\nWeek 10\n\n\nStatistical Learning\n\n\nNovember 12, 2023\n\n\n\n\nWeek 11\n\n\nText as Data I: Discovery and Topics\n\n\nNovember 19, 2023\n\n\n\n\nWeek 12\n\n\nText as Data II: Supervised Learning\n\n\nNovember 26, 2023\n\n\n\n\nWeek 13\n\n\nSQL\n\n\nDecember 03, 2023\n\n\n\n\nWeek 14\n\n\nPresentations of Final Projects\n\n\nDecember 10, 2023\n\n\n\n\n\n\nNo matching items"
+    "text": "Week\n\n\nTopic\n\n\nDate\n\n\n\n\n\n\nWeek 01\n\n\nIntroduction, Installations, IDEs, Command line\n\n\nSeptember 09, 2025\n\n\n\n\nWeek 02\n\n\nVersion Control, Workflow and Reproducibility: Or a bit of Git & GitHub\n\n\nSeptember 16, 2025\n\n\n\n\nWeek 03\n\n\nIntro to Python - OOP, Data Types, Control Statements and Functions\n\n\nSeptember 23, 2025\n\n\n\n\nWeek 04\n\n\nIntro to Python II: Scaling up your code - Iteration, Comprehension and Functions \n\n\nSeptember 30, 2025\n\n\n\n\nWeek 05\n\n\nFrom Nested lists to Dataframes: Numpy and Intro to Pandas\n\n\nOctober 07, 2025\n\n\n\n\nWeek 06\n\n\nPandas II: Data Wrangling\n\n\nOctober 14, 2025\n\n\n\n\nWeek 07\n\n\nJoining, Tidying and Visualizing Data\n\n\nOctober 21, 2025\n\n\n\n\nWeek 08\n\n\nScraping + APIs\n\n\nOctober 28, 2025\n\n\n\n\nWeek 9\n\n\nStatistical Learning\n\n\nNovember 04, 2025\n\n\n\n\nWeek 10\n\n\nText as Data I: Discovery and Topics\n\n\nNovember 11, 2023\n\n\n\n\nWeek 11\n\n\nText as Data II: Supervised Learning\n\n\nNovember 18, 2025\n\n\n\n\nWeek 12\n\n\nGenerative AI: Classification, Surveys and Prompting\n\n\nNovember 25, 2025\n\n\n\n\nWeek 13\n\n\nSQL\n\n\nDecember 03, 2024\n\n\n\n\nWeek 14\n\n\nPresentations of Final Projects\n\n\nDecember 09, 2023\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -46,7 +46,7 @@
     "href": "index.html#teaching-assistants",
     "title": "PPOL 5203 - Data Science I: Foundations",
     "section": "Teaching Assistants:",
-    "text": "Teaching Assistants:\n\nAastha Jha (DSPP Second-Year Student)\n\nEmail: aj935@georgetown.edu\nOffice Hours:\n\nEvery Wednesdays, from 1pm to 2pm.\n\nLocation: Room 395\n\n\nShirui Zhou (DSPP Alumni)\n\nEmail: sz614@georgetown.edu\nOffice Hours:\n\nEvery Monday, from 1pm to 2pm\nLocation: via Zoom\n\n\n\n\nCourse Infra-structure\nClass Website: A class website https://tiagoventura.github.io/ppol5203 will be used throughout the course and should be checked on a regular basis for lecture materials and required readings.\nClass Slack Channel: The class also has a dedicated slack channel (ppol-564-fall-2024.slack.com). The channel serves as an open forum to discuss, collaborate, pose problems/questions, and offer solutions. Students are encouraged to pose any questions they have there as this will provide the professor and TA the means of answering the question so that all can see the response. If you’re unfamiliar with, please consult the following start-up tutorial (https://get.slack.help/hc/en-us/articles/218080037-Getting-started-for-new-members). Please follow the invite link to be added to the Slack channel.\nCanvas: A Canvas site (http://canvas.georgetown.edu) will be used throughout the course and should be checked on a regular basis for announcements. ll announcements for the assignments and classes will be posted on Canvas; they will not be distributed in class or by e-mail. Support for Canvas is available at (202) 687-4949\nNOTE: Students are encouraged to run lecture code on their own machines. If you do not have access to a laptop on which you can install python3, please contact the professor and/or TA for assistance. Only python3 will be used in this course.\nDatacamp: As part of this course, you will have access to a DataCamp classroom that you can use to take Datacamp modules for free. Datacamp courses can be a useful tool for you to practice the concepts we see in class. Although I will not assign specific courses for you,, you can use Datacamp courses to review the topics we cover in class. The lecture notes will cover in details all our in-class discussions. Datacamp courses will be considered additional material."
+    "text": "Teaching Assistants:\n\nRebecca Wagner (DSPP Second-Year Student)\n\nEmail:\nOffice Hours:\n\nTBD\n\n\n\n\nCourse Infra-structure\nClass Website: A class website https://tiagoventura.github.io/ppol5203 will be used throughout the course and should be checked on a regular basis for lecture materials and required readings.\nClass Slack Channel: The class also has a dedicated slack channel (ppol-564-fall-2024.slack.com). The channel serves as an open forum to discuss, collaborate, pose problems/questions, and offer solutions. Students are encouraged to pose any questions they have there as this will provide the professor and TA the means of answering the question so that all can see the response. If you’re unfamiliar with, please consult the following start-up tutorial (https://get.slack.help/hc/en-us/articles/218080037-Getting-started-for-new-members). Please follow the invite link to be added to the Slack channel.\nCanvas: A Canvas site (http://canvas.georgetown.edu) will be used throughout the course and should be checked on a regular basis for announcements. ll announcements for the assignments and classes will be posted on Canvas; they will not be distributed in class or by e-mail. Support for Canvas is available at (202) 687-4949\nNOTE: Students are encouraged to run lecture code on their own machines. If you do not have access to a laptop on which you can install python3, please contact the professor and/or TA for assistance. Only python3 will be used in this course.\nDatacamp: As part of this course, you will have access to a DataCamp classroom that you can use to take Datacamp modules for free. Datacamp courses can be a useful tool for you to practice the concepts we see in class. Although I will not assign specific courses for you,, you can use Datacamp courses to review the topics we cover in class. The lecture notes will cover in details all our in-class discussions. Datacamp courses will be considered additional material."
   },
   {
     "objectID": "lecture_notes/week-01/course_infrastructure.html",
@@ -102,7 +102,7 @@
     "href": "problemset.html",
     "title": "Problem Sets",
     "section": "",
-    "text": "Problem Set\n\n\nContent\n\n\nDate Assigned\n\n\nDue Date\n\n\n\n\n\n\nProblem Set 1\n\n\nVersion Control, Workflow and Reproducibility\n\n\n09/17/2023\n\n\nBefore EOD Friday Week 3\n\n\n\n\n\n\nNo matching items"
+    "text": "Problem Set\n\n\nContent\n\n\nDate Assigned\n\n\nDue Date\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "weeks/week-01.html",
@@ -144,7 +144,7 @@
     "href": "finalproject.html#all-components-of-the-project",
     "title": "Instructions for Data Science I - Final Project",
     "section": "All components of the project:",
-    "text": "All components of the project:\n\nProject Proposal\nThe project proposal asks that you sketch out a general 2 page (single-spaced; 12pt font) project proposal. The proposal should offer the following information:\n\nA high-level statement of the problem you intend to address or the analysis you aim to generate\nThe data source(s) you intend to use\nYour plan to obtain that data\nThe methods (learned in class) that you aim to employ\n\ndata wrangling\nmultiple visualizations\na text analysis component\na machine (statistical) learning component\n\nA definition for what “success” means with respect to your project.\n\nIn your words, what would a successful project look like? What is the results you want to show? What would be a surprising finding for you?\n\n\n\n\nPresentation\nYou will have the opportunity to present you final project in class. As a Data scientists, your presentation skills are as important as your data skills. You should prepare a 10-12 minutes presentation. It should cover:\n\nMotivation or problem statement\nData collection\nMethods\nResults\nLessons learned and next steps\n\n\n\nProject Report\nThe report is a complete description of the project’s analysis and results. The report should be a 10 page in length (single-spaced; 12pt font) and cover the points presented below. Citations and Front page will not be considered in the 10 page.\nBelow I’ve outlined points that one should aim to discuss in each section. Note that paper should read as a cohesive report:\n\nIntroduction\n\nsummarize your motivation, present some previous work related to your question\npresent your research question\nsummarize your report\n\nData and Methods\n\nWhere does the data come from? – What is the unit of observation? – What are the variables of interest? – What steps did you take to wrangle the data?\n\nAnalysis\n\nDescribe the methods/tools you explored in your project.\n\nResults\n\nGive a detailed summary of your results. – Present your results clearly and concisely. – Please use visualizations instead of tables whenever possible.\n\nDiscussion\n\nRe-introduce your main results\nState your contributions\nWhere do you want take this project next?\n\n\nIMPORTANT: There is not literature review section. You can use the literature to motivate your work. But you don’t need to have a full section on literature review. Read for example, papers at main general interest journals, like here, here and here. All these super accomplished articles do not have long literature reviews."
+    "text": "All components of the project:\n\nProject Proposal\nThe project proposal asks that you sketch out a general 2 page (single-spaced; 12pt font) project proposal. The proposal should offer the following information:\n\nA high-level statement of the problem you intend to address or the analysis you aim to generate\nThe data source(s) you intend to use\nYour plan to obtain that data\nThe methods (learned in class) that you aim to employ\n\ndata wrangling\nmultiple visualizations\na text analysis component\na machine (statistical) learning component\n\nA definition for what “success” means with respect to your project.\n\nIn your words, what would a successful project look like? What is the results you want to show? What would be a surprising finding for you?\n\n\n\n\nPresentation\nYou will have the opportunity to present you final project in class. As a Data scientists, your presentation skills are as important as your data skills. You should prepare a 10-12 minutes presentation. It should cover:\n\nMotivation or problem statement\nData collection\nMethods\nResults\nLessons learned and next steps\n\n\n\nProject Report\nThe report is a complete description of the project’s analysis and results. The report should be a 10 page in length (single-spaced; 12pt font) and cover the points presented below. Citations and Front page will not be considered in the 10 page.\nBelow I’ve outlined points that one should aim to discuss in each section. Note that paper should read as a cohesive report:\n\nIntroduction\n\nsummarize your motivation, present some previous work related to your question\npresent your research question\nsummarize your report\n\nData and Methods\n\nWhere does the data come from? – What is the unit of observation? – What are the variables of interest? – What steps did you take to wrangle the data?\n\nAnalysis\n\nDescribe the methods/tools you explored in your project.\n\nResults\n\nGive a detailed summary of your results. – Present your results clearly and concisely. – Please use visualizations instead of tables whenever possible.\n\nDiscussion\n\nRe-introduce your main results\nState your contributions\nWhere do you want take this project next?\n\n\n\nIMPORTANT: There is not literature review section. You can use the literature to motivate your work. But you don’t need to have a full section on literature review. Read for example, papers at main general interest journals, like here, here and here. All these super accomplished articles do not have long literature reviews."
   },
   {
     "objectID": "finalproject.html#submission-of-the-final-project",
@@ -158,7 +158,7 @@
     "href": "finalproject.html#templates-for-writing",
     "title": "Instructions for Data Science I - Final Project",
     "section": "Templates for writing",
-    "text": "Templates for writing\nHere, I suggest you with a few templates for writing your reports. In my experience, writing data science reports using LaTeX is an gain in productivity in the long-run.\nIf you want to experiment with LaTeX via overleaf, you should use this template from PNAS (Just remember to switch to a one-column template):\n\nPNAS Template\n\nYou can also use the Journal of Quantitative Description templates in Word Doc or LaTeX:\n\nJQD Word\nJQD LaTeX\n\nOr, you can use templates from Quarto and write you entire project using quarto or markdown files"
+    "text": "Templates for writing\n\nHere, I suggest you with a few templates for writing your reports. In my experience, writing data science reports using LaTeX is an gain in productivity in the long-run.\nIf you want to experiment with LaTeX via overleaf, you should use this template from PNAS (Just remember to switch to a one-column template):\n\nPNAS Template\n\nYou can also use the Journal of Quantitative Description templates in Word Doc or LaTeX:\n\nJQD Word\nJQD LaTeX\n\nOr, you can use templates from Quarto and write you entire project using quarto or markdown files"
   },
   {
     "objectID": "finalproject.html#example-of-final-projects-from-previous-dspp-years",
@@ -403,14 +403,14 @@
     "href": "syllabus.html#course-description",
     "title": "Syllabus: PPOL 5203 - Data Science I: Foundations",
     "section": "Course Description",
-    "text": "Course Description\nThis first course in the core data science sequence teaches Data Science for Public Policy (DSPP) students how to synthesize disparate, possibly unstructured data in order to draw meaningful insights. Topics covered include the fundamentals of object-oriented programming in Python; literate programming; an introduction to algorithms and data types; data wrangling, visualization, and extraction; an introduction to machine learning methods, and text analysis. In addition, students will be exposed to Git and Github for version control and reproducible research. The objective of the course is to teach students how incorporate data into their decision-making and analysis. No prior programming experience is assumed or required.\nClass Website: https://tiagoventura.github.io/ppol5203"
+    "text": "Course Description\nThis first course in the core data science sequence teaches Data Science for Public Policy (DSPP) students how to synthesize disparate, possibly unstructured data in order to draw meaningful insights. Topics covered include the fundamentals of object-oriented programming in Python; literate programming; an introduction to algorithms and data types; data wrangling, visualization, and extraction; an introduction to machine learning methods,text analysis and working with Generative AI Models. In addition, students will be exposed to Git and Github for version control and reproducible research. The objective of the course is to teach students how incorporate data into their decision-making and analysis. No prior programming experience is assumed or required.\nClass Website: https://tiagoventura.github.io/ppol5203"
   },
   {
     "objectID": "syllabus.html#learning-goals",
     "href": "syllabus.html#learning-goals",
     "title": "Syllabus: PPOL 5203 - Data Science I: Foundations",
     "section": "Learning Goals",
-    "text": "Learning Goals\nAfter completing this course, the students will be able to:\n\nGeneral understanding of python’s object oriented programming syntax and data structures.\nCompetency using version control (Git/Github).\nLearn to manipulate and explore data with Pandas and other tools.\nGeneral understanding of analyzing algorithms and data structures.\nLearn to extract and process data from structured and unstructured sources.\nGet some intuition of modeling text data in Python.\nLearn the basics of machine learning as a modeling approach.\nLearn basics of using SQL to query databases."
+    "text": "Learning Goals\nAfter completing this course, the students will be able to:\n\nGeneral understanding of python’s object oriented programming syntax and data structures.\nCompetency using version control (Git/Github).\nLearn to manipulate and explore data with Pandas and other tools.\nGeneral understanding of analyzing algorithms and data structures.\nLearn to extract and process data from structured and unstructured sources.\nGet some intuition of modeling text data in Python.\nLearn the basics of machine learning as a modeling approach.\nLearn how to build analysis pipelines with Generative AI Models\nLearn basics of using SQL to query databases."
   },
   {
     "objectID": "syllabus.html#instructors-and-tas",
@@ -424,7 +424,7 @@
     "href": "syllabus.html#teaching-assistants",
     "title": "Syllabus: PPOL 5203 - Data Science I: Foundations",
     "section": "Teaching Assistants:",
-    "text": "Teaching Assistants:\n\nAastha Jha (DSPP Second-Year Student)\n\nEmail: aj935@georgetown.edu\nOffice Hours:\n\nEvery Wednesdays, from 1pm to 2pm.\n\nLocation:\n\n\nShirui Zhou (DSPP Alumni)\n\nEmail: sz614@georgetown.edu\nOffice Hours:\n\nEvery Monday, from 1pm to 2pm\nLocation:"
+    "text": "Teaching Assistants:\n\nXXXX\n\nEmail: XXX\nOffice Hours:\n\nXXXXX\nLocation:"
   },
   {
     "objectID": "syllabus.html#our-classes",
@@ -452,7 +452,7 @@
     "href": "syllabus.html#weekly-schedule",
     "title": "Syllabus: PPOL 5203 - Data Science I: Foundations",
     "section": "Weekly Schedule",
-    "text": "Weekly Schedule\n\n\n\n\n\n\nWeek\n\n\nTopic\n\n\nDate\n\n\n\n\n\n\nWeek 01\n\n\nIntroduction, Installations, IDEs, Command line\n\n\nSeptember 10, 2023\n\n\n\n\nWeek 02\n\n\nVersion Control, Workflow and Reproducibility: Or a bit of Git & GitHub\n\n\nSeptember 17, 2023\n\n\n\n\nWeek 03\n\n\nIntro to Python - OOP, Data Types, Control Statements and Functions\n\n\nSeptember 24, 2023\n\n\n\n\nWeek 04\n\n\nIntro to Python II: Scaling up your code - Iteration, Comprehension and Functions \n\n\nOctober 01, 2023\n\n\n\n\nWeek 05\n\n\nFrom Nested lists to Dataframes: Numpy and Intro to Pandas\n\n\nOctober 08, 2023\n\n\n\n\nWeek 06\n\n\nPandas II: Data Wrangling\n\n\nOctober 15, 2023\n\n\n\n\nWeek 07\n\n\nJoining, Tidying and Visualizing Data\n\n\nOctober 22, 2023\n\n\n\n\nWeek 08\n\n\nScraping\n\n\nOctober 29, 2023\n\n\n\n\nWeek 09\n\n\nApis + Selenium\n\n\nNovember 05, 2023\n\n\n\n\nWeek 10\n\n\nStatistical Learning\n\n\nNovember 12, 2023\n\n\n\n\nWeek 11\n\n\nText as Data I: Discovery and Topics\n\n\nNovember 19, 2023\n\n\n\n\nWeek 12\n\n\nText as Data II: Supervised Learning\n\n\nNovember 26, 2023\n\n\n\n\nWeek 13\n\n\nSQL\n\n\nDecember 03, 2023\n\n\n\n\nWeek 14\n\n\nPresentations of Final Projects\n\n\nDecember 10, 2023\n\n\n\n\n\n\nNo matching items"
+    "text": "Weekly Schedule\n\n\n\n\n\n\nWeek\n\n\nTopic\n\n\nDate\n\n\n\n\n\n\nWeek 01\n\n\nIntroduction, Installations, IDEs, Command line\n\n\nSeptember 09, 2025\n\n\n\n\nWeek 02\n\n\nVersion Control, Workflow and Reproducibility: Or a bit of Git & GitHub\n\n\nSeptember 16, 2025\n\n\n\n\nWeek 03\n\n\nIntro to Python - OOP, Data Types, Control Statements and Functions\n\n\nSeptember 23, 2025\n\n\n\n\nWeek 04\n\n\nIntro to Python II: Scaling up your code - Iteration, Comprehension and Functions \n\n\nSeptember 30, 2025\n\n\n\n\nWeek 05\n\n\nFrom Nested lists to Dataframes: Numpy and Intro to Pandas\n\n\nOctober 07, 2025\n\n\n\n\nWeek 06\n\n\nPandas II: Data Wrangling\n\n\nOctober 14, 2025\n\n\n\n\nWeek 07\n\n\nJoining, Tidying and Visualizing Data\n\n\nOctober 21, 2025\n\n\n\n\nWeek 08\n\n\nScraping + APIs\n\n\nOctober 28, 2025\n\n\n\n\nWeek 9\n\n\nStatistical Learning\n\n\nNovember 04, 2025\n\n\n\n\nWeek 10\n\n\nText as Data I: Discovery and Topics\n\n\nNovember 11, 2023\n\n\n\n\nWeek 11\n\n\nText as Data II: Supervised Learning\n\n\nNovember 18, 2025\n\n\n\n\nWeek 12\n\n\nGenerative AI: Classification, Surveys and Prompting\n\n\nNovember 25, 2025\n\n\n\n\nWeek 13\n\n\nSQL\n\n\nDecember 03, 2024\n\n\n\n\nWeek 14\n\n\nPresentations of Final Projects\n\n\nDecember 09, 2023\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "syllabus.html#course-requirements",
@@ -1360,14 +1360,14 @@
   {
     "objectID": "weeks/week-11.html",
     "href": "weeks/week-11.html",
-    "title": "Week 11",
+    "title": "Week 10",
     "section": "",
     "text": "Text analysis I: Counting, Describing and Fitting Topics html –  Jupyter Notebook"
   },
   {
     "objectID": "weeks/week-11.html#lecture-notes",
     "href": "weeks/week-11.html#lecture-notes",
-    "title": "Week 11",
+    "title": "Week 10",
     "section": "",
     "text": "Text analysis I: Counting, Describing and Fitting Topics html –  Jupyter Notebook"
   },
@@ -1388,14 +1388,14 @@
   {
     "objectID": "weeks/week-10.html",
     "href": "weeks/week-10.html",
-    "title": "Week 10",
+    "title": "Week 9",
     "section": "",
     "text": "Statistical Learning: inference and predictions html –  Jupyter Notebook"
   },
   {
     "objectID": "weeks/week-10.html#lecture-notes",
     "href": "weeks/week-10.html#lecture-notes",
-    "title": "Week 10",
+    "title": "Week 9",
     "section": "",
     "text": "Statistical Learning: inference and predictions html –  Jupyter Notebook"
   },
@@ -1465,14 +1465,14 @@
   {
     "objectID": "weeks/week-12.html",
     "href": "weeks/week-12.html",
-    "title": "Week 12",
+    "title": "Week 11",
     "section": "",
     "text": "Text analysis II: Supervised models html –  Jupyter Notebook"
   },
   {
     "objectID": "weeks/week-12.html#lectures-notes",
     "href": "weeks/week-12.html#lectures-notes",
-    "title": "Week 12",
+    "title": "Week 11",
     "section": "",
     "text": "Text analysis II: Supervised models html –  Jupyter Notebook"
   },
@@ -3232,5 +3232,40 @@
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "Database Systems: Motivation",
     "text": "Database Systems: Motivation\nAssume you are starting a company collecting daily a high volume of data, you can:\n\nUse a file system to store data as daily csvs, jsons, etc..\nOR build a structured, secured and efficient system to store and access the data\n\n\nWhile the first works at small scale (your computer and your DS final projects), if you have a large scale data collection, OR continous insertion of data, thinking og a secured system is often the way to go.\n\nStructured Data Storage: Decide which variables to store.\nEnable Relationships: Build ids for your variables\nDefine types: pre-specify which types each columns is\nValidation Rules: define a set of rules to guarantee integrity of your data"
+  },
+  {
+    "objectID": "weeks/week-13_New_AI.html",
+    "href": "weeks/week-13_New_AI.html",
+    "title": "Week 12",
+    "section": "",
+    "text": "SQL html –  Jupyter Notebook"
+  },
+  {
+    "objectID": "weeks/week-13_New_AI.html#lectures-notes",
+    "href": "weeks/week-13_New_AI.html#lectures-notes",
+    "title": "Week 12",
+    "section": "",
+    "text": "SQL html –  Jupyter Notebook"
+  },
+  {
+    "objectID": "weeks/week-12_.html",
+    "href": "weeks/week-12_.html",
+    "title": "Week 12",
+    "section": "",
+    "text": "SQL html –  Jupyter Notebook"
+  },
+  {
+    "objectID": "weeks/week-12_.html#lectures-notes",
+    "href": "weeks/week-12_.html#lectures-notes",
+    "title": "Week 12",
+    "section": "",
+    "text": "SQL html –  Jupyter Notebook"
+  },
+  {
+    "objectID": "index.html#instructor",
+    "href": "index.html#instructor",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "Instructor",
+    "text": "Instructor\n\nInstructor\n\nProfessor: Dr. Tiago Ventura\nPronouns: He/Him\nEmail: tv186@georgetown.edu\nOffice hours:\n\nTime: Every Tuesday, 4pm - 6pm\nLocation: 125E, Office Number 766\n\n\nYou are all welcome to the office hours at any time. You can come to the office hours to:\n\nDrink some coffee;\nTalk about soccer;\nAsk what I am doing research at;\nAsk any question about our class.\n\nAll are valid options! No need to schedule time with me to go to office hours!"
   }
 ]

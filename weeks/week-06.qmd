@@ -3,7 +3,7 @@ title: "Week 06"
 subtitle: "Pandas II: Data Wrangling"
 description: ""
 author: "Tiago Ventura"
-date: "10/15/2023"
+date: "10/14/2025"
 #listing:
   # - id: slides
   #   contents:

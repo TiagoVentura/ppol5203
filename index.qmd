@@ -29,7 +29,7 @@ After completing this course, the students will be able to:
 
 -   Learn basics of using SQL to query databases.
 
-## Instructors and TAs
+## Instructor
 
 ### Instructor
 
@@ -54,16 +54,10 @@ All are valid options! No need to schedule time with me to go to office hours!
 
 ## Teaching Assistants:
 
--   Aastha Jha (DSPP Second-Year Student)
-    -   Email: aj935\@georgetown.edu
+-   Rebecca Wagner (DSPP Second-Year Student)
+    -   Email:
     -   Office Hours:
-        -   Every Wednesdays, from 1pm to 2pm.\
-        -   Location: Room 395
--   Shirui Zhou (DSPP Alumni)
-    -   Email: sz614\@georgetown.edu
-    -   Office Hours:
-        -   Every Monday, from 1pm to 2pm
-        -   Location: via Zoom
+        -   TBD
 
 ### Course Infra-structure
 

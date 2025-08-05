@@ -3,7 +3,7 @@ title: "Week 07"
 subtitle: "Joining, Tidying and Visualizing Data"
 description: ""
 author: "Tiago Ventura"
-date: "10/22/2023"
+date: "10/21/2025"
 #listing:
   # - id: slides
   #   contents:
@@ -54,9 +54,11 @@ Download the datasets <a href="/lecture_notes/week-06/data_week6.zip" download> 
     -   Theory
 
         -   [Ch. 2: Visualizing data: Mapping data onto aesthetics](https://clauswilke.com/dataviz/aesthetic-mapping.html) - Fundamentals of Data Visualization - Wilke, Claus
+
         -   [Ch. 4: Color scales](https://clauswilke.com/dataviz/color-basics.html) - Fundamentals of Data Visualization - Wilke, Claus
+
         -   [Ch. 5: Directory of Visualizations](https://clauswilke.com/dataviz/color-basics.html) - `datviz`
-        
+
         -   [Grammar of Graphics: How ggplot works](https://socviz.co/makeplot.html#makeplot) by Kieran Healy
 
     -   In-Practice

@@ -1,9 +1,9 @@
 ---
 title: "Week 08"
-subtitle: "Scraping"
+subtitle: "Scraping + APIs"
 description: ""
 author: "Tiago Ventura"
-date: "10/29/2023"
+date: "10/28/2025"
 #listing:
   # - id: slides
   #   contents:

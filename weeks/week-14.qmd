@@ -3,7 +3,7 @@ title: "Week 14"
 subtitle: "Presentations of Final Projects"
 description: ""
 author: "Tiago Ventura"
-date: "12/10/2023"
+date: "12/09/2023"
 #listing:
   # - id: slides
   #   contents:

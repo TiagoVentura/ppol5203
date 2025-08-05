@@ -1,9 +1,9 @@
 ---
-title: "Week 12"
+title: "Week 11"
 subtitle: "Text as Data II: Supervised Learning"
 description: ""
 author: "Tiago Ventura"
-date: "11/26/2023"
+date: "11/18/2025"
 #listing:
   # - id: slides
   #   contents:

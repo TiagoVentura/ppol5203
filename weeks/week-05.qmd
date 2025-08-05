@@ -3,7 +3,7 @@ title: "Week 05"
 subtitle: "From Nested lists to Dataframes: Numpy and Intro to Pandas"
 description: ""
 author: "Tiago Ventura"
-date: "10/08/2023"
+date: "10/07/2025"
 #listing:
   # - id: slides
   #   contents:

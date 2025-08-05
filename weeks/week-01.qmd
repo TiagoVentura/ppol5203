@@ -3,7 +3,7 @@ title: "Week 01"
 subtitle: "Introduction, Installations, IDEs, Command line"
 description: ""
 author: "Tiago Ventura"
-date: "09/10/2023"
+date: "09/09/2025"
 #listing:
   # - id: slides
   #   contents:

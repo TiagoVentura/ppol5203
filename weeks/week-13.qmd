@@ -3,7 +3,7 @@ title: "Week 13"
 subtitle: "SQL"
 description: ""
 author: "Tiago Ventura"
-date: "12/03/2023"
+date: "12/03/2024"
 #listing:
   # - id: slides
   #   contents:

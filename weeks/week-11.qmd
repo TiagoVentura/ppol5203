@@ -1,9 +1,9 @@
 ---
-title: "Week 11"
+title: "Week 10"
 subtitle: "Text as Data I: Discovery and Topics"
 description: ""
 author: "Tiago Ventura"
-date: "11/19/2023"
+date: "11/11/2023"
 #listing:
   # - id: slides
   #   contents:

@@ -110,6 +110,9 @@ Below I've outlined points that one should aim to discuss in each section. Note 
     -   State your contributions
     -   Where do you want take this project next?
 
+
+<!-- NOTE: REMOVE THE PNAS TEMPLATE!!!!-->
+
 **IMPORTANT:** There is not literature review section. You can use the literature to motivate your work. But you don't need to have a full section on literature review. Read for example, papers at main general interest journals, like [here](https://www.pnas.org/doi/10.1073/pnas.1804840115), [here](https://www.nature.com/articles/s41562-023-01600-1) and [here](https://www.science.org/doi/10.1126/sciadv.aau4586). All these super accomplished articles do not have long literature reviews.
 
 ## Submission of the Final Project
@@ -137,6 +140,8 @@ Remember to check examples from the first class about a README for a published a
 Of course, no commits after the due date will be considered in the assessment.
 
 ## Templates for writing
+
+<!-- NOTE: REMOVE THE PNAS TEMPLATE!!!!-->
 
 Here, I suggest you with a few templates for writing your reports. In my experience, writing data science reports using [LaTeX](https://towardsdatascience.com/latex-for-data-scientists-in-under-6-minutes-3815d973c05c) is an gain in productivity in the long-run.
 

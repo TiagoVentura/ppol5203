@@ -3,7 +3,7 @@ title: "Week 02"
 subtitle: "Version Control, Workflow and Reproducibility: Or a bit of Git & GitHub"
 description: ""
 #author: "Tiago Ventura"
-date: "09/17/2023"
+date: "09/16/2025"
 #listing:
   # - id: slides
   #   contents:
