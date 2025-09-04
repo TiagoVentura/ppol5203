@@ -4,14 +4,14 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Week\n\n\nTopic\n\n\nDate\n\n\n\n\n\n\nWeek 01\n\n\nIntroduction, Installations, IDEs, Command line\n\n\nSeptember 09, 2025\n\n\n\n\n\n\nNo matching items"
+    "text": "Week\n\n\nTopic\n\n\nDate\n\n\n\n\n\n\nWeek 01\n\n\nIntroduction, Installations, IDEs, Command line\n\n\nSeptember 09, 2025\n\n\n\n\nWeek 02\n\n\nVersion Control, Workflow and Reproducibility: Or a bit of Git & GitHub\n\n\nSeptember 16, 2025\n\n\n\n\nWeek 03\n\n\nIntro to Python - OOP, Data Types, Control Statements and Functions\n\n\nSeptember 23, 2025\n\n\n\n\nWeek 04\n\n\nIntro to Python II: Scaling up your code - Iteration, Comprehension and Functions \n\n\nSeptember 30, 2025\n\n\n\n\nWeek 05\n\n\nFrom Nested lists to Dataframes: Numpy and Intro to Pandas\n\n\nOctober 07, 2025\n\n\n\n\nWeek 06\n\n\nPandas II: Data Wrangling\n\n\nOctober 14, 2025\n\n\n\n\nWeek 07\n\n\nJoining, Tidying and Visualizing Data\n\n\nOctober 21, 2025\n\n\n\n\nWeek 08\n\n\nScraping + APIs\n\n\nOctober 28, 2025\n\n\n\n\nWeek 9\n\n\nStatistical Learning\n\n\nNovember 04, 2025\n\n\n\n\nWeek 10\n\n\nText as Data I: Discovery and Topics\n\n\nNovember 11, 2023\n\n\n\n\nWeek 11\n\n\nText as Data II: Supervised Learning\n\n\nNovember 18, 2025\n\n\n\n\nWeek 12\n\n\nGenerative AI: Classification, Surveys and Prompting (Invited Speaker - Dr. Patrick Wu, American University)\n\n\nNovember 25, 2025\n\n\n\n\nWeek 13\n\n\nSQL\n\n\nDecember 03, 2024\n\n\n\n\nWeek 14\n\n\nPresentations of Final Projects\n\n\nDecember 09, 2023\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "schedule.html#weekly-schedule",
     "href": "schedule.html#weekly-schedule",
     "title": "Schedule",
     "section": "",
-    "text": "Week\n\n\nTopic\n\n\nDate\n\n\n\n\n\n\nWeek 01\n\n\nIntroduction, Installations, IDEs, Command line\n\n\nSeptember 09, 2025\n\n\n\n\n\n\nNo matching items"
+    "text": "Week\n\n\nTopic\n\n\nDate\n\n\n\n\n\n\nWeek 01\n\n\nIntroduction, Installations, IDEs, Command line\n\n\nSeptember 09, 2025\n\n\n\n\nWeek 02\n\n\nVersion Control, Workflow and Reproducibility: Or a bit of Git & GitHub\n\n\nSeptember 16, 2025\n\n\n\n\nWeek 03\n\n\nIntro to Python - OOP, Data Types, Control Statements and Functions\n\n\nSeptember 23, 2025\n\n\n\n\nWeek 04\n\n\nIntro to Python II: Scaling up your code - Iteration, Comprehension and Functions \n\n\nSeptember 30, 2025\n\n\n\n\nWeek 05\n\n\nFrom Nested lists to Dataframes: Numpy and Intro to Pandas\n\n\nOctober 07, 2025\n\n\n\n\nWeek 06\n\n\nPandas II: Data Wrangling\n\n\nOctober 14, 2025\n\n\n\n\nWeek 07\n\n\nJoining, Tidying and Visualizing Data\n\n\nOctober 21, 2025\n\n\n\n\nWeek 08\n\n\nScraping + APIs\n\n\nOctober 28, 2025\n\n\n\n\nWeek 9\n\n\nStatistical Learning\n\n\nNovember 04, 2025\n\n\n\n\nWeek 10\n\n\nText as Data I: Discovery and Topics\n\n\nNovember 11, 2023\n\n\n\n\nWeek 11\n\n\nText as Data II: Supervised Learning\n\n\nNovember 18, 2025\n\n\n\n\nWeek 12\n\n\nGenerative AI: Classification, Surveys and Prompting (Invited Speaker - Dr. Patrick Wu, American University)\n\n\nNovember 25, 2025\n\n\n\n\nWeek 13\n\n\nSQL\n\n\nDecember 03, 2024\n\n\n\n\nWeek 14\n\n\nPresentations of Final Projects\n\n\nDecember 09, 2023\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -131,6 +131,272 @@
     "title": "Week 01",
     "section": "",
     "text": "Lectures Notes:\n\nInstructions for setting up the course infra-structure.\nUsing Jupyter Notebooks: html,  notebook \nUsing Quarto for Python and R html,  notebook \nBasics of Command Line: html,  notebook \n\n\n\nSlides\nWeek 01:Introduction, Installations, IDEs, Command line\n\n\nReadings\nThe readings for this week will cover a more general introduction to data science from a applied perspective (which you can call Data Science and Public Policy, Data Science for Public Good, or Computational Social Science in academic spaces)\nRequired Readings\n\nBit by Bit: Social Research in the Digital Age By Mathew Salganik\nIntroduction\nObserving Behavior\nA Three-Step Guide to Training Computational Social Science Ph.D. Students for Academic and Non-Academic Careers - By Aniket Kesari, Jae Yeon Kim, Sono Shah, Taylor Brown, Tiago Ventura and Tina Law\n\nBest Practices in Programming, IDEs and Files Management:\nRequired Readings\n\nJupyter Notebook for Beginners: A tutorial Pryke, Benjamin - www.dataquest.io\nUsing Python with RStudio and reticulate: here and here\n\nAdditional\n\nMore on RStudio + Reticulate\nR & Python: A Love Story - rstudio.com\nRStudio 1.2 Preview: Reticulated Python\nOn using LaTex to write math in markdown - docx2latex.com"
+  },
+  {
+    "objectID": "weeks/week-02.html",
+    "href": "weeks/week-02.html",
+    "title": "Week 02",
+    "section": "",
+    "text": "Lecture Notes\n\nVersion Control, Workflow and Reproducibility: Or a bit of Git & GitHub: html,  notebook \n\n\n\nSlides\nVersion Control, Workflow and Reproducibility: Or a bit of Git & GitHub\n\n\nPractice Exercises\nLink for practice exercise: https://classroom.github.com/a/epMgGVTy\n\nSolutions\n\n\n\nReadings\nRequired Readings\n\nThe Plain Person’s Guide to Plain Text Social Science - Healy, Kieran\n\nCh. 1: Introduction;\nCh. 2: Keep a Record;\nCh. 3: Write and Edit;\nCh. 4: Reproduce Work.\n\nPro Git - Chacon & Straub\n\nCh. 1: Getting Started; Read 1.1 - 1.3\nCh. 2: Git Basics; Only read 2.1 - 2.5\nCh. 3: Git Branching\n\n\nAdditional Resources and Suggested Materials\n\nMore on Git/Github in Pro Git:\n\nRead 1.4 - 1.7 for help on installation and commandline\nRead Ch. 6 for more information regarding Git + Github.\n\nCh. 13 Detect Git from RStudio -Happy Git with R - Bryan, Jenny & Jim Hester"
+  },
+  {
+    "objectID": "weeks/week-06.html",
+    "href": "weeks/week-06.html",
+    "title": "Week 06",
+    "section": "",
+    "text": "Today, we will go over three notebooks and you have a additional notebook to work by yourselves:\n\nPandas - data loading: html –  Jupyter Notebook \nPandas - data wrangling: html –  Jupyter Notebook \nPandas - Joining Data : html –  Jupyter Notebook \nPandas Miscellaneous: html –  Jupyter Notebook"
+  },
+  {
+    "objectID": "weeks/week-06.html#lectures-notes",
+    "href": "weeks/week-06.html#lectures-notes",
+    "title": "Week 06",
+    "section": "",
+    "text": "Today, we will go over three notebooks and you have a additional notebook to work by yourselves:\n\nPandas - data loading: html –  Jupyter Notebook \nPandas - data wrangling: html –  Jupyter Notebook \nPandas - Joining Data : html –  Jupyter Notebook \nPandas Miscellaneous: html –  Jupyter Notebook"
+  },
+  {
+    "objectID": "weeks/week-06.html#datasets",
+    "href": "weeks/week-06.html#datasets",
+    "title": "Week 06",
+    "section": "Datasets",
+    "text": "Datasets\nDownload the datasets  here"
+  },
+  {
+    "objectID": "weeks/week-06.html#slides",
+    "href": "weeks/week-06.html#slides",
+    "title": "Week 06",
+    "section": "Slides",
+    "text": "Slides\n\nPandas: Data Wrangling"
+  },
+  {
+    "objectID": "weeks/week-06.html#readings",
+    "href": "weeks/week-06.html#readings",
+    "title": "Week 06",
+    "section": "Readings",
+    "text": "Readings\nSuggested Readings for Pandas\n\nPDS VanderPlas\nCh. 4: Data Manipulation with Pandas\nTidy Data in Python\nTidy Data by Hadley Wickham in R\n\nAnd all our lecture notes!\n\nAdditional Resources and Suggested Materials\n\nPython Pandas Tutorial: A Complete Introduction for Beginners\nData Wrangling with Pandas Cheat Sheet - pandas.pydata.org\ndplyr-style Data Manipulation with Pipes in Python - Allen, Akinkunle\nPython Pandas vs. R Dplyr - The Full Cheatsheet - Martin Šiklar\nMethods Chaining in Pandas\nThe Pandas Assign Method and Chaining\n\nExercises in Pandas"
+  },
+  {
+    "objectID": "weeks/week-13.html",
+    "href": "weeks/week-13.html",
+    "title": "Week 13",
+    "section": "",
+    "text": "SQL html –  Jupyter Notebook"
+  },
+  {
+    "objectID": "weeks/week-13.html#lectures-notes",
+    "href": "weeks/week-13.html#lectures-notes",
+    "title": "Week 13",
+    "section": "",
+    "text": "SQL html –  Jupyter Notebook"
+  },
+  {
+    "objectID": "weeks/week-11.html",
+    "href": "weeks/week-11.html",
+    "title": "Week 10",
+    "section": "",
+    "text": "Text analysis I: Counting, Describing and Fitting Topics html –  Jupyter Notebook"
+  },
+  {
+    "objectID": "weeks/week-11.html#lecture-notes",
+    "href": "weeks/week-11.html#lecture-notes",
+    "title": "Week 10",
+    "section": "",
+    "text": "Text analysis I: Counting, Describing and Fitting Topics html –  Jupyter Notebook"
+  },
+  {
+    "objectID": "weeks/week-04.html",
+    "href": "weeks/week-04.html",
+    "title": "Week 04",
+    "section": "",
+    "text": "We will cover these notebooks\nFinish from last week:\n\nIntro to Python II - Control Statements and Functions: html,  Jupyter Notebook \n\nFrom this week:\n\nComprehension and Generators: html –  Jupyter Notebook \nFile Management: html –  Jupyter Notebook \nData as Nested lists - html –  Jupyter Notebook"
+  },
+  {
+    "objectID": "weeks/week-04.html#lectures-notes",
+    "href": "weeks/week-04.html#lectures-notes",
+    "title": "Week 04",
+    "section": "",
+    "text": "We will cover these notebooks\nFinish from last week:\n\nIntro to Python II - Control Statements and Functions: html,  Jupyter Notebook \n\nFrom this week:\n\nComprehension and Generators: html –  Jupyter Notebook \nFile Management: html –  Jupyter Notebook \nData as Nested lists - html –  Jupyter Notebook"
+  },
+  {
+    "objectID": "weeks/week-04.html#datasets",
+    "href": "weeks/week-04.html#datasets",
+    "title": "Week 04",
+    "section": "Datasets",
+    "text": "Datasets\nDownload the datasets  here"
+  },
+  {
+    "objectID": "weeks/week-04.html#slides",
+    "href": "weeks/week-04.html#slides",
+    "title": "Week 04",
+    "section": "Slides",
+    "text": "Slides\n\nControl Statements, Comprehensions, Nested Lists, and Numpy"
+  },
+  {
+    "objectID": "weeks/week-04.html#readings",
+    "href": "weeks/week-04.html#readings",
+    "title": "Week 04",
+    "section": "Readings",
+    "text": "Readings\n\nRequired Readings\nPDS VanderPlas\n\nCh. 2: Introduction to Numpy - Python Data Science Handbook - VanderPlas, Jake\n\nPDA Wes McKinney, Chapter 3\n\nList, Set, and Dictionary Comprehensions\nFile Management System\n\nAdditional Readings\n\nfor-loop-vs-list-comprehension-vs-high-order-functions"
+  },
+  {
+    "objectID": "weeks/week-12_.html",
+    "href": "weeks/week-12_.html",
+    "title": "Week 12",
+    "section": "",
+    "text": "SQL html –  Jupyter Notebook"
+  },
+  {
+    "objectID": "weeks/week-12_.html#lectures-notes",
+    "href": "weeks/week-12_.html#lectures-notes",
+    "title": "Week 12",
+    "section": "",
+    "text": "SQL html –  Jupyter Notebook"
+  },
+  {
+    "objectID": "weeks/week-08.html",
+    "href": "weeks/week-08.html",
+    "title": "Week 08",
+    "section": "",
+    "text": "Parsing Unstructured Data: Scraping Static Websites: html –  Jupyter Notebook"
+  },
+  {
+    "objectID": "weeks/week-08.html#lectures-notes",
+    "href": "weeks/week-08.html#lectures-notes",
+    "title": "Week 08",
+    "section": "",
+    "text": "Parsing Unstructured Data: Scraping Static Websites: html –  Jupyter Notebook"
+  },
+  {
+    "objectID": "weeks/week-10.html",
+    "href": "weeks/week-10.html",
+    "title": "Week 9",
+    "section": "",
+    "text": "Statistical Learning: inference and predictions html –  Jupyter Notebook"
+  },
+  {
+    "objectID": "weeks/week-10.html#lecture-notes",
+    "href": "weeks/week-10.html#lecture-notes",
+    "title": "Week 9",
+    "section": "",
+    "text": "Statistical Learning: inference and predictions html –  Jupyter Notebook"
+  },
+  {
+    "objectID": "weeks/week-05.html",
+    "href": "weeks/week-05.html",
+    "title": "Week 05",
+    "section": "",
+    "text": "Today, we will go over three notebooks:\n\nFile Management: html –  Jupyter Notebook \nData as Nested lists - html –  Jupyter Notebook \nNumpy: html –  Jupyter Notebook \nIntro do Pandas: html –  Jupyter Notebook"
+  },
+  {
+    "objectID": "weeks/week-05.html#lectures-notes",
+    "href": "weeks/week-05.html#lectures-notes",
+    "title": "Week 05",
+    "section": "",
+    "text": "Today, we will go over three notebooks:\n\nFile Management: html –  Jupyter Notebook \nData as Nested lists - html –  Jupyter Notebook \nNumpy: html –  Jupyter Notebook \nIntro do Pandas: html –  Jupyter Notebook"
+  },
+  {
+    "objectID": "weeks/week-05.html#datasets",
+    "href": "weeks/week-05.html#datasets",
+    "title": "Week 05",
+    "section": "Datasets",
+    "text": "Datasets\nDownload the datasets  here"
+  },
+  {
+    "objectID": "weeks/week-05.html#slides",
+    "href": "weeks/week-05.html#slides",
+    "title": "Week 05",
+    "section": "Slides",
+    "text": "Slides\n\nNumpy and Intro do Pandas"
+  },
+  {
+    "objectID": "weeks/week-05.html#readings",
+    "href": "weeks/week-05.html#readings",
+    "title": "Week 05",
+    "section": "Readings",
+    "text": "Readings\n\nSuggested Reading for Numpy\nPDS VanderPlas\n\nCh. 2: Introduction to Numpy - Python Data Science Handbook - VanderPlas, Jake\n\n\nSuggested Readings for Pandas\n\nPDS VanderPlas\nCh. 4: Data Manipulation with Pandas\nTidy Data in Python\nTidy Data by Hadley Wickham in R\n\nAnd all our lecture notes!\n\nAdditional Resources and Suggested Materials\n\nPython Pandas Tutorial: A Complete Introduction for Beginners\nData Wrangling with Pandas Cheat Sheet - pandas.pydata.org\ndplyr-style Data Manipulation with Pipes in Python - Allen, Akinkunle\nPython Pandas vs. R Dplyr - The Full Cheatsheet - Martin Šiklar\nMethods Chaining in Pandas\n\nExercises in Pandas"
+  },
+  {
+    "objectID": "weeks/week-07.html",
+    "href": "weeks/week-07.html",
+    "title": "Week 07",
+    "section": "",
+    "text": "Pandas - Joining Data : html –  Jupyter Notebook \nData Visualization: html –  Jupyter Notebook"
+  },
+  {
+    "objectID": "weeks/week-07.html#lectures-notes",
+    "href": "weeks/week-07.html#lectures-notes",
+    "title": "Week 07",
+    "section": "",
+    "text": "Pandas - Joining Data : html –  Jupyter Notebook \nData Visualization: html –  Jupyter Notebook"
+  },
+  {
+    "objectID": "weeks/week-07.html#datasets",
+    "href": "weeks/week-07.html#datasets",
+    "title": "Week 07",
+    "section": "Datasets",
+    "text": "Datasets\nDownload the datasets  here"
+  },
+  {
+    "objectID": "weeks/week-07.html#slides",
+    "href": "weeks/week-07.html#slides",
+    "title": "Week 07",
+    "section": "Slides",
+    "text": "Slides\n\nJoining, Tidying and Visualizing Data"
+  },
+  {
+    "objectID": "weeks/week-12.html",
+    "href": "weeks/week-12.html",
+    "title": "Week 11",
+    "section": "",
+    "text": "Text analysis II: Supervised models html –  Jupyter Notebook"
+  },
+  {
+    "objectID": "weeks/week-12.html#lectures-notes",
+    "href": "weeks/week-12.html#lectures-notes",
+    "title": "Week 11",
+    "section": "",
+    "text": "Text analysis II: Supervised models html –  Jupyter Notebook"
+  },
+  {
+    "objectID": "weeks/week-03.html",
+    "href": "weeks/week-03.html",
+    "title": "Week 03",
+    "section": "",
+    "text": "Intro to Python - OOP, Data Types, and Collectors: html,  Jupyter Notebook \nIntro to Python II - Control Statements and Functions: html,  Jupyter Notebook"
+  },
+  {
+    "objectID": "weeks/week-03.html#lectures-notes",
+    "href": "weeks/week-03.html#lectures-notes",
+    "title": "Week 03",
+    "section": "",
+    "text": "Intro to Python - OOP, Data Types, and Collectors: html,  Jupyter Notebook \nIntro to Python II - Control Statements and Functions: html,  Jupyter Notebook"
+  },
+  {
+    "objectID": "weeks/week-03.html#slides",
+    "href": "weeks/week-03.html#slides",
+    "title": "Week 03",
+    "section": "Slides",
+    "text": "Slides\nWeek 3 - Intro do Python: OOP, Control Statements and Functions"
+  },
+  {
+    "objectID": "weeks/week-03.html#in-class-exercise",
+    "href": "weeks/week-03.html#in-class-exercise",
+    "title": "Week 03",
+    "section": "In-Class Exercise",
+    "text": "In-Class Exercise\nSee slides or notebook for the exercise"
+  },
+  {
+    "objectID": "weeks/week-03.html#required-readings",
+    "href": "weeks/week-03.html#required-readings",
+    "title": "Week 03",
+    "section": "Required Readings",
+    "text": "Required Readings\nFrom Miller, Brad, and David Ranum, Problem Solving with Algorithms and Data Structures using Python\n\nGetting Started with Data\nControl Structure\nException Handling\nDefining Functions\n\nFrom Wes McKinney, Python for Data Analysis\n\nChapter 2: Python Language Basics, IPython, and Jupyter Notebooks\nChapter 2: Built-In Data Structures, Functions, and Files\n\nMutable vs Immutable Objects in Python - Mohan, Megha"
+  },
+  {
+    "objectID": "weeks/week-03.html#additional-code",
+    "href": "weeks/week-03.html#additional-code",
+    "title": "Week 03",
+    "section": "Additional Code",
+    "text": "Additional Code\n\nData Carpentry\n\nPython Fundamentals\nRepeated Actions with Loops\nMaking Choices\nCreating Functions\nStoring Multiple Values in Lists"
   },
   {
     "objectID": "problemset.html",
@@ -459,7 +725,7 @@
     "href": "syllabus.html#instructors-and-tas",
     "title": "Syllabus: PPOL 5203 - Data Science I: Foundations",
     "section": "Instructors and TAs",
-    "text": "Instructors and TAs\n\nInstructor\n\nProfessor: Dr. Tiago Ventura\nPronouns: He/Him\nEmail: tv186@georgetown.edu\nOffice hours:\n\nTime: Every Tuesday, 4pm - 5pm\nLocation: 125E, Office Number 766\n\n\nYou are all welcome to the office hours at any time. No need to schedule time with me to go to office hours!\n\n\nTeaching Assistants:\n\nRebecca Wagner (DSPP Second-Year Student)\n\nEmail:rlw137@georgetown.edu\nOffice Hours:\n\nin person: Every Monday 2pm, McCourt, Room 602\nvirtual: Every Tuesday 7pm. Zoom link"
+    "text": "Instructors and TAs\n\nInstructor\n\nProfessor: Dr. Tiago Ventura\nPronouns: He/Him\nEmail: tv186@georgetown.edu\nOffice hours:\n\nTime: Every Tuesday, 4pm - 5pm\nLocation: 125E, Office Number 766\n\n\nYou are all welcome to the office hours at any time. No need to schedule time with me to go to office hours!\n\n\nTeaching Assistant:\n\nRebecca Wagner (DSPP Second-Year Student)\n\nEmail:rlw137@georgetown.edu\nOffice Hours:\n\nin person: Every Monday 2pm, McCourt, Room 602\nvirtual: Every Tuesday 7pm. Zoom link"
   },
   {
     "objectID": "syllabus.html#our-classes",
