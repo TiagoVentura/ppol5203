@@ -1,0 +1,85 @@
+---
+title: "Week 06"
+subtitle: "Pandas II: Data Wrangling"
+description: ""
+author: "Tiago Ventura"
+date: "10/14/2025"
+#listing:
+  # - id: slides
+  #   contents:
+  #     - ../slides/week-01/*.qmd
+  #   type: table
+  #   fields: [title, date]
+  #   date-format: "ddd, MMM DD"
+  #   field-display-names:
+  #     title: "Topic"
+  #     date: "Date"
+  #   sort: [filename]
+  #   sort-ui: false
+  #   filter-ui: false
+  # - id: assignments
+  #   contents:
+  #     - ../hw/w1-*.qmd
+  #     - ../labs/w1-*.qmd
+  #   type: table
+  #   fields: [categories, title, date]
+  #   date-format: "ddd, MMM DD"
+  #   field-display-names:
+  #     categories: "Assignment"
+  #     title: "Title"
+  #     date: "Due"
+  #   sort: [date]
+  #   sort-ui: false
+  #   filter-ui: false
+tbl-colwidths: [10,50,40]
+---
+
+## Lectures Notes:
+
+Today, we will go over three notebooks and you have a additional notebook to work by yourselves:
+
+-   Pandas - data loading: [html](/lecture_notes/week-06/_week-6b-pandas_data_loading.html) -- <a href="/lecture_notes/week-06/_week-6b-pandas_data_loading.ipynb" download> Jupyter Notebook </a>
+
+-   Pandas - data wrangling: [html](/lecture_notes/week-06/_week-6c-data_wrangling_pandas.html) -- <a href="/lecture_notes/week-06/_week-6c-data_wrangling_pandas.ipynb" download> Jupyter Notebook </a>
+
+-   Pandas - Joining Data : [html](/lecture_notes/week-06/_week-5c-joining_data.html) -- <a href="/lecture_notes/week-06/_week-5c-joining_data.ipynb" download> Jupyter Notebook </a>
+
+-   Pandas Miscellaneous: [html](/lecture_notes/week-06/_week-6e-miscelanneous.html) -- <a href="/lecture_notes/week-06/_week-6e-miscelanneous.ipynb" download> Jupyter Notebook </a>
+
+## Datasets
+
+Download the datasets <a href="/lecture_notes/week-06/data_week6.zip" download> here </a>
+
+## Slides
+
+-   [Pandas: Data Wrangling](/slides/week-6.html)
+
+## Readings
+
+**Suggested Readings for Pandas**
+
+-   PDS VanderPlas
+
+-   [Ch. 4: Data Manipulation with Pandas](https://jakevdp.github.io/PythonDataScienceHandbook/03.00-introduction-to-pandas.html)
+
+-   [Tidy Data in Python](https://www.jeannicholashould.com/tidy-data-in-python.html)
+
+-   [Tidy Data by Hadley Wickham in R](https://r4ds.hadley.nz/data-tidy.html)
+
+And all our lecture notes!
+
+-   **Additional Resources and Suggested Materials**
+
+    -   [Python Pandas Tutorial: A Complete Introduction for Beginners](https://www.learndatasci.com/tutorials/python-pandas-tutorial-complete-introduction-for-beginners/#)
+
+    -   [Data Wrangling with Pandas Cheat Sheet](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf) - pandas.pydata.org
+
+    -   [dplyr-style Data Manipulation with Pipes in Python](https://towardsdatascience.com/dplyr-style-data-manipulation-with-pipes-in-python-380dcb137000) - Allen, Akinkunle
+
+    -   [Python Pandas vs. R Dplyr - The Full Cheatsheet](https://medium.com/towards-data-science/python-pandas-vs-r-dplyr-5b5081945ccb) - Martin Šiklar
+
+    -   [Methods Chaining in Pandas](https://medium.com/@ulriktpedersen/modern-pandas-streamlining-your-workflow-with-method-chaining-f65e75deb193)
+
+    -   [The Pandas Assign Method and Chaining](https://ponder.io/professional-pandas-the-pandas-assign-method-and-chaining/)
+
+-   [Exercises in Pandas](https://github.com/guipsamora/pandas_exercises)

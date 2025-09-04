@@ -1,0 +1,76 @@
+---
+title: "Week 07"
+subtitle: "Joining, Tidying and Visualizing Data"
+description: ""
+author: "Tiago Ventura"
+date: "10/21/2025"
+#listing:
+  # - id: slides
+  #   contents:
+  #     - ../slides/week-01/*.qmd
+  #   type: table
+  #   fields: [title, date]
+  #   date-format: "ddd, MMM DD"
+  #   field-display-names:
+  #     title: "Topic"
+  #     date: "Date"
+  #   sort: [filename]
+  #   sort-ui: false
+  #   filter-ui: false
+  # - id: assignments
+  #   contents:
+  #     - ../hw/w1-*.qmd
+  #     - ../labs/w1-*.qmd
+  #   type: table
+  #   fields: [categories, title, date]
+  #   date-format: "ddd, MMM DD"
+  #   field-display-names:
+  #     categories: "Assignment"
+  #     title: "Title"
+  #     date: "Due"
+  #   sort: [date]
+  #   sort-ui: false
+  #   filter-ui: false
+tbl-colwidths: [10,50,40]
+---
+
+## Lectures Notes:
+
+-   Pandas - Joining Data : [html](/lecture_notes/week-06/_week-5c-joining_data.html) -- <a href="/lecture_notes/week-06/_week-5c-joining_data.ipynb" download> Jupyter Notebook </a>
+
+-   Data Visualization: [html](/lecture_notes/week-07/_week-6-data-visualization.html) -- <a href="/lecture_notes/week-07/_week-6-data-visualization.ipynb" download> Jupyter Notebook </a>
+
+## Datasets
+
+Download the datasets <a href="/lecture_notes/week-06/data_week6.zip" download> here </a>
+
+## Slides
+
+-   [Joining, Tidying and Visualizing Data](/slides/week-7.html)
+
+# Readings
+
+-   ***Required Readings***
+    -   Theory
+
+        -   [Ch. 2: Visualizing data: Mapping data onto aesthetics](https://clauswilke.com/dataviz/aesthetic-mapping.html) - Fundamentals of Data Visualization - Wilke, Claus
+
+        -   [Ch. 4: Color scales](https://clauswilke.com/dataviz/color-basics.html) - Fundamentals of Data Visualization - Wilke, Claus
+
+        -   [Ch. 5: Directory of Visualizations](https://clauswilke.com/dataviz/color-basics.html) - `datviz`
+
+        -   [Grammar of Graphics: How ggplot works](https://socviz.co/makeplot.html#makeplot) by Kieran Healy
+
+    -   In-Practice
+
+        -   [Making Plots With `plotnine`](https://datacarpentry.org/python-ecology-lesson/07-visualization-ggplot-python.html) - i.e. `ggplot` in Python
+        -   [Ch. 4: Visualization with Matplotlib](https://jakevdp.github.io/PythonDataScienceHandbook/index.html) - Python Data Science Handbook - VanderPlas, Jake - i.e. `matplotlib` and `seaborn` libraries
+
+<br>
+
+-   <font color = "grey">***Additional Resources and Suggested Materials***</font>
+    -   [The Python Graph Gallery](https://python-graph-gallery.com/)
+    -   Bokeh - For interactive Graphics
+        -   [Bokeh User Guide](https://docs.bokeh.org/en/latest/docs/user_guide.html#userguide)
+        -   [Bokeh Tutorial](https://mybinder.org/v2/gh/bokeh/bokeh-notebooks/master?filepath=tutorial%2F00%20-%20Introduction%20and%20Setup.ipynb)
+-   Either [Fundamentals of Data Visualization - Wilke, Claus](https://clauswilke.com/dataviz/) or [Data Visualization: A practical introduction by Kieran Healy](https://socviz.co/index.html#preface) are amazing sources you can consult frequently <br>

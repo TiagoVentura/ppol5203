@@ -1,0 +1,53 @@
+---
+title: "Week 11"
+subtitle: "Text as Data II: Supervised Learning"
+description: ""
+author: "Tiago Ventura"
+date: "11/18/2025"
+#listing:
+  # - id: slides
+  #   contents:
+  #     - ../slides/week-01/*.qmd
+  #   type: table
+  #   fields: [title, date]
+  #   date-format: "ddd, MMM DD"
+  #   field-display-names:
+  #     title: "Topic"
+  #     date: "Date"
+  #   sort: [filename]
+  #   sort-ui: false
+  #   filter-ui: false
+  # - id: assignments
+  #   contents:
+  #     - ../hw/w1-*.qmd
+  #     - ../labs/w1-*.qmd
+  #   type: table
+  #   fields: [categories, title, date]
+  #   date-format: "ddd, MMM DD"
+  #   field-display-names:
+  #     categories: "Assignment"
+  #     title: "Title"
+  #     date: "Due"
+  #   sort: [date]
+  #   sort-ui: false
+  #   filter-ui: false
+tbl-colwidths: [10,50,40]
+---
+
+## Lectures Notes:
+
+-   Text analysis II: Supervised models [html](/lecture_notes/week-12/_week_12_nlp_II_onlysp.html) -- <a href="/lecture_notes/week-12/_week_12_nlp_II_onlysp.ipynb" download> Jupyter Notebook </a>
+
+# Slides
+
+-   [Text analysis II](/slides/week-12.html)
+
+# Readings
+
+-   Topic models : [David Blei, Probabilistic Topic Models](https://www.cs.columbia.edu/~blei/papers/Blei2012.pdf)
+
+-   Dictionary Methods: [Rathje, Steve, Jay J. Van Bavel, and Sander Van Der Linden. "Out-group animosity drives engagement on social media." Proceedings of the National Academy of Sciences 118, no. 26 (2021): e2024292118](https://www.pnas.org/doi/10.1073/pnas.2024292118)
+
+-   Toxicity using Google Perspective API: [Ventura, Tiago, Kevin Munger, Katherine McCabe, and Keng-Chi Chang. "Connective effervescence and streaming chat during political debates." Journal of Quantitative Description: Digital Media 1 (2021).](https://journalqd.org/article/view/2573/1820)
+
+-   Using ChatGPT to Scale Politicians: [Wu, Patrick Y., Jonathan Nagler, Joshua A. Tucker, and Solomon Messing. "Large Language Models Can Be Used to Estimate the Latent Positions of Politicians.](https://www.patrickywu.com/PatrickYWu_JMP1_LaMPscores.pdf)

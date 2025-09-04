@@ -1,0 +1,81 @@
+---
+title: "Week 01"
+subtitle: "Introduction, Installations, IDEs, Command line"
+description: ""
+author: "Tiago Ventura"
+date: "09/09/2025"
+#listing:
+  # - id: slides
+  #   contents:
+  #     - ../slides/week-01/*.qmd
+  #   type: table
+  #   fields: [title, date]
+  #   date-format: "ddd, MMM DD"
+  #   field-display-names:
+  #     title: "Topic"
+  #     date: "Date"
+  #   sort: [filename]
+  #   sort-ui: false
+  #   filter-ui: false
+  # - id: assignments
+  #   contents:
+  #     - ../hw/w1-*.qmd
+  #     - ../labs/w1-*.qmd
+  #   type: table
+  #   fields: [categories, title, date]
+  #   date-format: "ddd, MMM DD"
+  #   field-display-names:
+  #     categories: "Assignment"
+  #     title: "Title"
+  #     date: "Due"
+  #   sort: [date]
+  #   sort-ui: false
+  #   filter-ui: false
+tbl-colwidths: [10,50,40]
+---
+
+# Lectures Notes:
+
+-   [Instructions for setting up the course infra-structure](/lecture_notes/week-01/course_infrastructure.html).
+
+-   Using Jupyter Notebooks: [html](/lecture_notes/week-01/_using-jupyter-notebooks.html), <a href="/lecture_notes/week-01/_using-jupyter-notebooks.ipynb" download> notebook </a>
+
+-   Using Quarto for Python and R [html](/lecture_notes/week-01/intro-to-quarto.html), <a href="/lecture_notes/week-01/intro-to-quarto.qmd" download> notebook </a>
+
+-   Basics of Command Line: [html](/lecture_notes/week-01/_basics_of_cmd.html), <a href="/lecture_notes/week-01/_basics_of_cmd.ipynb" download> notebook </a>
+
+# Slides
+
+[Week 01:Introduction, Installations, IDEs, Command line](/slides/week-1.html)
+
+# Readings
+
+The readings for this week will cover a more general introduction to data science from a applied perspective (which you can call Data Science and Public Policy, Data Science for Public Good, or Computational Social Science in academic spaces)
+
+**Required Readings**
+
+-   **Bit by Bit: Social Research in the Digital Age** By Mathew Salganik
+
+-   [Introduction](https://www.bitbybitbook.com/en/1st-ed/introduction/)
+
+-   [Observing Behavior](https://www.bitbybitbook.com/en/1st-ed/observing-behavior/)
+
+-   [A Three-Step Guide to Training Computational Social Science Ph.D. Students for Academic and Non-Academic Careers](https://www.cambridge.org/core/journals/ps-political-science-and-politics/article/training-computational-social-science-phd-students-for-academic-and-nonacademic-careers/1455690939833B9FFCAC664D4E412057) - By Aniket Kesari, Jae Yeon Kim, Sono Shah, Taylor Brown, Tiago Ventura and Tina Law
+
+**Best Practices in Programming, IDEs and Files Management:**
+
+**Required Readings**
+
+-   [Jupyter Notebook for Beginners: A tutorial](https://www.dataquest.io/blog/jupyter-notebook-tutorial/) Pryke, Benjamin - www.dataquest.io
+
+-   Using Python with RStudio and reticulate: [here](https://docs.rstudio.com/tutorials/user/using-python-with-rstudio-and-reticulate/) and [here](https://support.posit.co/hc/en-us/articles/360023654474-Installing-and-Configuring-Python-with-RStudio)
+
+**Additional**
+
+-   More on RStudio + Reticulate
+
+-   [R & Python: A Love Story](https://rstudio.com/solutions/r-and-python/) - rstudio.com
+
+-   [RStudio 1.2 Preview: Reticulated Python](https://blog.rstudio.com/2018/10/09/rstudio-1-2-preview-reticulated-python/)
+
+-   [On using LaTex to write math in markdown](https://docx2latex.com/tutorials/Mathematical-equations-LaTeX.html) - docx2latex.com

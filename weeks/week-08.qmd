@@ -1,0 +1,84 @@
+---
+title: "Week 08"
+subtitle: "Scraping + APIs"
+description: ""
+author: "Tiago Ventura"
+date: "10/28/2025"
+#listing:
+  # - id: slides
+  #   contents:
+  #     - ../slides/week-01/*.qmd
+  #   type: table
+  #   fields: [title, date]
+  #   date-format: "ddd, MMM DD"
+  #   field-display-names:
+  #     title: "Topic"
+  #     date: "Date"
+  #   sort: [filename]
+  #   sort-ui: false
+  #   filter-ui: false
+  # - id: assignments
+  #   contents:
+  #     - ../hw/w1-*.qmd
+  #     - ../labs/w1-*.qmd
+  #   type: table
+  #   fields: [categories, title, date]
+  #   date-format: "ddd, MMM DD"
+  #   field-display-names:
+  #     categories: "Assignment"
+  #     title: "Title"
+  #     date: "Due"
+  #   sort: [date]
+  #   sort-ui: false
+  #   filter-ui: false
+tbl-colwidths: [10,50,40]
+---
+
+## Lectures Notes:
+
+-   Parsing Unstructured Data: Scraping Static Websites: [html](/lecture_notes/week-08/_week-07_scraping_static.html) -- <a href="/lecture_notes/week-08/_week-07_scraping_static.ipynb" download> Jupyter Notebook </a>
+
+# Slides
+
+-   [Parsing Unstructured Data: Scraping Static Websites](/slides/week-8.html)
+
+# Readings
+
+-   On HTMLs
+
+    -   [tags](https://betterprogramming.pub/understanding-html-basics-for-web-scraping-ae351ee0b3f9)
+
+    -   [Anchors and Elements](https://www.semrush.com/blog/html-anchor/)
+
+    -   [Inspecting HTML elements](https://storage.googleapis.com/lds-media/documents/css_selector_vs_xpath.mp4)
+
+    -   [CSS Selector Reference](https://www.w3schools.com/cssref/css_selectors.asp) - w3schools.com
+
+-   [Selector Gadget](https://selectorgadget.com/)
+
+-   Web Scraping
+
+    -   [Tutorial: A Practical Introduction to Web Scraping in Python](https://realpython.com/python-web-scraping-practical-introduction/)
+    -   [Tutorial: Python Web Scraping Using BeautifulSoup](https://www.dataquest.io/blog/web-scraping-tutorial-python/) - dataquest.io
+    -   [Ultimate Guide to Web Scraping with Python Part 1: Requests and BeautifulSoup](https://www.learndatasci.com/tutorials/ultimate-guide-web-scraping-w-python-requests-and-beautifulsoup/) - LearnDataSci - Martin, Brendan
+    -   On the legality of webscraping
+        -   [Web Scraping and Crawling are Perfectly Legal, Right?](https://benbernardblog.com/web-scraping-and-crawling-are-perfectly-legal-right/)
+    -   [robots.txt](http://www.robotstxt.org/robotstxt.html)
+
+-   Changes in the APIs
+
+    -   https://inews.co.uk/news/twitter-researchers-delete-data-unless-pay-2364535
+
+    -   https://www.reddit.com/r/modnews/comments/134tjpe/reddit_data_api_update_changes_to_pushshift_access/
+
+    -   https://www.tiktok.com/legal/page/global/terms-of-service-research-api/en
+
+    -   https://www.bloomberg.com/news/articles/2022-06-23/meta-pulls-support-for-tool-used-to-keep-misinformation-in-check?leadSource=uverify%20wall
+
+<!-- https://www.varonis.com/blog/what-is-oauth -->
+
+<!-- https://dl.acm.org/doi/pdf/10.1145/3290605.3300683 -->
+
+<!-- https://dl.acm.org/doi/pdf/10.1145/3290605.3300683 -->
+
+<!-- https://arxiv.org/abs/2203.10666 -->

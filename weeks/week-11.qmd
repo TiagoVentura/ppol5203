@@ -1,0 +1,67 @@
+---
+title: "Week 10"
+subtitle: "Text as Data I: Discovery and Topics"
+description: ""
+author: "Tiago Ventura"
+date: "11/11/2023"
+#listing:
+  # - id: slides
+  #   contents:
+  #     - ../slides/week-01/*.qmd
+  #   type: table
+  #   fields: [title, date]
+  #   date-format: "ddd, MMM DD"
+  #   field-display-names:
+  #     title: "Topic"
+  #     date: "Date"
+  #   sort: [filename]
+  #   sort-ui: false
+  #   filter-ui: false
+  # - id: assignments
+  #   contents:
+  #     - ../hw/w1-*.qmd
+  #     - ../labs/w1-*.qmd
+  #   type: table
+  #   fields: [categories, title, date]
+  #   date-format: "ddd, MMM DD"
+  #   field-display-names:
+  #     categories: "Assignment"
+  #     title: "Title"
+  #     date: "Due"
+  #   sort: [date]
+  #   sort-ui: false
+  #   filter-ui: false
+tbl-colwidths: [10,50,40]
+---
+
+## Lecture notes
+
+-   Text analysis I: Counting, Describing and Fitting Topics [html](/lecture_notes/week-11/_week_11_nlp_I.html) -- <a href="/lecture_notes/week-11/_week_11_nlp_I.ipynb" download> Jupyter Notebook </a>
+
+# Slides
+
+-   [Text analysis I](/slides/week-11.html)
+
+# Readings
+
+**Required Reading:**
+
+There is a copy of this book in the library. Unfortunately there is no online version of this book. If you cannot get your hands on the book, please read the articles suggested below.
+
+-   Grimmer, J., Roberts, M. E., & Stewart, B. M. (2022). Text as data: A new framework for machine learning and the social sciences. Princeton University Press. Chapter 2.
+
+Or one of the three below:
+
+-   Political Science Perspective: [Wilkerson, J. and Casas, A. (2017). Large-Scale Computerized Text Analysis in Political Science: Opportunities and Challenges. Annual Review of Political Science, 20, 529:544.](https://www.annualreviews.org/doi/abs/10.1146/annurev-polisci-052615-025542?journalCode=polisci)
+
+-   Economics Perspective: [Gentzkow, Matthew, Bryan Kelly, and Matt Taddy. "Text as data." Journal of Economic Literature 57, no. 3 (2019): 535-574.](https://web.stanford.edu/~gentzkow/research/text-as-data.pdf)
+
+-   Sociology Perspective: <https://www.sciencedirect.com/science/article/pii/S0049089X22000904>
+
+**Additional Readings:**
+
+-   Text Pre-Processing: [Denny, M. J., & Spirling, A. (2018). Text preprocessing for unsupervised learning: why it matters, when it misleads, and what to do about it. Political Analysis, 26(2): 168-189.](https://www.cambridge.org/core/journals/political-analysis/article/abs/text-preprocessing-for-unsupervised-learning-why-it-matters-when-it-misleads-and-what-to-do-about-it/AA7D4DE0AA6AB208502515AE3EC6989E)
+
+-   Descriptive Analysis of Text: [Linder, Fridolin, Bruce Desmarais, Matthew Burgess, and Eugenia Giraudy. "Text as policy: Measuring policy similarity through bill text reuse." *Policy Studies Journal* 48, no. 2 (2020): 546-574.](//onlinelibrary.wiley.com/doi/abs/10.1111/psj.12257)
+
+-   Topic models : [David Blei, Probabilistic Topic Models](https://www.cs.columbia.edu/~blei/papers/Blei2012.pdf)

@@ -1,0 +1,26 @@
+---
+title: "Problem Sets"
+listing:
+  - id: pset
+    contents:
+      - problem_sets/ps01.qmd
+      - problem_sets/ps02.qmd
+      - problem_sets/ps03.qmd
+      - problem_sets/ps04.qmd
+      - problem_sets/ps05.qmd
+    type: table
+    fields: [title, content, dateassigned, duedate]
+    field-display-names:
+      title: "Problem Set"
+      content: "Content"
+      dateassigned: "Date Assigned"
+      duedate: "Due Date"
+    date-format: "MMMM DD, YYYY"
+    sort: [filename]
+    sort-ui: false
+    filter-ui: false
+editor: visual
+---
+
+::: {#pset}
+:::

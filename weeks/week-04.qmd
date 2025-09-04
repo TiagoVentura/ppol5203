@@ -1,0 +1,77 @@
+---
+title: "Week 04"
+subtitle: "Intro to Python II: Scaling up your code - Iteration, Comprehension and Functions "
+description: ""
+author: "Tiago Ventura"
+date: "09/30/2025"
+#listing:
+  # - id: slides
+  #   contents:
+  #     - ../slides/week-01/*.qmd
+  #   type: table
+  #   fields: [title, date]
+  #   date-format: "ddd, MMM DD"
+  #   field-display-names:
+  #     title: "Topic"
+  #     date: "Date"
+  #   sort: [filename]
+  #   sort-ui: false
+  #   filter-ui: false
+  # - id: assignments
+  #   contents:
+  #     - ../hw/w1-*.qmd
+  #     - ../labs/w1-*.qmd
+  #   type: table
+  #   fields: [categories, title, date]
+  #   date-format: "ddd, MMM DD"
+  #   field-display-names:
+  #     categories: "Assignment"
+  #     title: "Title"
+  #     date: "Due"
+  #   sort: [date]
+  #   sort-ui: false
+  #   filter-ui: false
+tbl-colwidths: [10,50,40]
+---
+
+## Lectures Notes:
+
+We will cover these notebooks
+
+**Finish from last week:**
+
+-   Intro to Python II - Control Statements and Functions: [html](/lecture_notes/week-03/_week-03_iter_control_functions.html), <a href="/lecture_notes/week-03/_week-03_iter_control_functions.ipynb" download> Jupyter Notebook </a>
+
+**From this week:**
+
+-   Comprehension and Generators: [html](/lecture_notes/week-04/_week_4_comprehension_generators.html) -- <a href="/lecture_notes/week-04/_week_4_comprehension_generators.ipynb" download> Jupyter Notebook </a>
+
+-   File Management: [html](/lecture_notes/week-04/_week_4_file_management.html) -- <a href="/lecture_notes/week-04/_week_4_file_management.ipynb" download> Jupyter Notebook </a>
+
+-   Data as Nested lists - [html](/lecture_notes/week-04/_week_4_nested_lists.html) -- <a href="/lecture_notes/week-04/_week_4_nested_lists.ipynb" download> Jupyter Notebook </a>
+
+## Datasets
+
+Download the datasets <a href="/lecture_notes/week-04/data_week4.zip" download> here </a>
+
+## Slides
+
+-   [Control Statements, Comprehensions, Nested Lists, and Numpy](/slides/week-4.html)
+
+## Readings
+
+-   ***Required Readings***
+
+-   PDS VanderPlas
+
+    -   [Ch. 2: Introduction to Numpy](https://jakevdp.github.io/PythonDataScienceHandbook/02.00-introduction-to-numpy.html) - Python Data Science Handbook - VanderPlas, Jake
+
+-   PDA Wes McKinney, [Chapter 3](https://wesmckinney.com/book/python-builtin.html)
+
+    -   [List, Set, and Dictionary Comprehensions](https://wesmckinney.com/book/python-builtin.html#comprehensions)
+
+    -   [File Management System](https://wesmckinney.com/book/python-builtin.html#files_os)
+
+-   **Additional Readings**
+
+    -   [for-loop-vs-list-comprehension-vs-high-order-functions](https://medium.com/globant/for-loop-vs-list-comprehension-vs-high-order-functions-a766a8b9cbe1#:~:text=List%20comprehensions%20are%20generally%20faster,great%20choice%20for%20simple%20iterations.)

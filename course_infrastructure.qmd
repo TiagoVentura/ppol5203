@@ -1,0 +1,154 @@
+---
+title: "Week 1: Course Infrastructure"
+execute: 
+  error: true
+format:
+  html:
+    code-tools: true
+editor_options: 
+  chunk_output_type: console
+---
+
+# Introduction
+
+Throughout the semester, we will use a combination of computational tools. This a summary of the main tools:
+
+-   **CommandLine:** primarily to interact with git, install programs and run a few scripts
+
+-   **Python3:** for programming taks
+
+-   **Git/Github:** for version control, reproucibility and for sharing materials
+
+-   **Jupyter Notebooks:** as a main IDE to work with Python
+
+-   **Quarto via RStudio:** as a secondary IDE (you can make your primary if you prefer) to coding in Python/R/SQL
+
+-   **Slack:** for communication.
+
+Let's cover how to set up each of these tools in your local machines.
+
+::: callout-warning
+If you run into issues, please reach out to the Teaching Assistant for assistance
+:::
+
+## CommandLine
+
+At times, we'll use a unix-based commandline. The commandline will feature into our discussion on using `git` and also running Python programs. If you use a Mac or a Linux operating system, then a functioning commandline comes with your operating system. For Apple machines, this is the **Terminal**.
+
+For Windows (specifically Windows 10), you can enable Linux Bash shell. The following offers a [tutorial](https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/) on how to do this.
+
+If you're using a version of Windows that pre-dates version 10, then [Git Bash](https://www.atlassian.com/git/tutorials/git-bash#:~:text=Git%20Bash%20is%20an%20application,operating%20system%20through%20written%20commands.) offers a program will allow you to use `git` commands from your windows machine.
+
+Later in the first class, we will cover some concepts of working with the commandline. You can get a full notebook with a intro to commandline in the materials for week 1
+
+## Python3
+
+We'll use Python3 throughout this course. Below are instructions for downloading Python3 using commandline packages manager (`Homebrew` for mac, `Chocolatey` for windows).
+
+-   [Installing Python3 using Homebrew on a Mac (Apple)](https://docs.python-guide.org/starting/install3/osx/)
+
+-   [Installing Python3 using Chocolatey on a PC (Windows)](https://python-docs.readthedocs.io/en/latest/starting/install3/win.html)
+
+An alternative way to install Python3 is to download an [**Anaconda** distribution](https://www.anaconda.com/products/individual). I will use `pip` rather than `conda` in the instruction for downloading Python modules. These are simply two ways of downloading and managing open-source software packages. **Choose which ever works best for you**
+
+Most computers already have python3 installed. You can check if that is your case through your commandline
+
+``` markdown
+python3 --version
+```
+
+On some versions of Windows, you may need to use py instead of python3:
+
+``` markdown
+py --version
+```
+
+In either case, the output of this command should be something like Python 3.8.5
+
+## Jupyter Notebooks
+
+Once you have Python3 on your computer, you can install a Jupyter Notebook. If you downloaded Python3 using Anaconda, then Jupyter Notebook comes with the distribution and requires no further installation on your part. If you are not using Anaconda, you can install Jupyter notebook running the following code using your commandline.
+
+``` markdown
+# on your command line
+pip install jupyter
+```
+
+You can then activate a Jupyter Notebook from the commandline by typing:
+
+``` markdown
+# on your command line
+jupyter notebook
+```
+
+### Workflow to work with Juyter Notebooks
+
+Here is my workflow to open Jupyter Notebooks using the commandline.
+
+1.  Open the terminal
+
+2.  Navigate (using `cd`) to the folder you want to be the root of your jupyter notebook
+
+3.  Open the notebook (`jupyter notebook`)
+
+It looks like this if I were to open a notebook in the folder I have for this course
+
+``` markdown
+# open terminal
+cd ppol_5203
+jupyter notebook
+```
+
+### Workflow with Anaconda.
+
+If you installed Python using Anaconda distribution system (here: https://www.anaconda.com/products/individual). You can open Jupyter through a point-and-click system. It take forever, but it works!
+
+In the lecture notes, you can also find a Introduction to Jupyter notebook. We will cover this in the first class of the course.
+
+## Rstudio + Reticulate\|Quarto
+
+**A quick digression of the R vs Python debate**
+
+For some of your classes in the Data Science and Public Policy Masters, you will be using R. Some data scientists and computational social scientists have strong beleifs as to which langugae is better. I, and the DSPP faculty, do not subscribe to that view. Most techniques that are relevent for applied data science can be done in either language.
+
+In my personal opinion, R outperforms Python in data manipulation tasks, visualization and statistical modeling. This is because R started out as a statistical programming environment, and that heritage is still visible. Meanwhile, Python started our a general purpose programming language, which was heavily adopted by computer scientists, which means Python outperforms on abstraction, machine learning tasks, working with more complex data types.
+
+Most importantly, you will be using more one language compared to the other conditional on your career path and the type of tasks you end up working with. If you end up in a team full of computer scientists, it is more likely Python will be your favored language. If you move to work more with social scientists, R will probably be more heavily used. There is no need to chose now. Learn both and broad your horizons. As general programming languages, learning both requires almost the same amount of effort of learning one in isolation.
+
+**Back to the course infrastructure**
+
+In your classes that are focused on using `R`, `RStudio` will be your main IDE. However, `RStudio` isn't just for `R`. It can handle a number of different languages. We can use Python in `RStudio` using the `reticulate` package.
+
+I create a full notebook to teach you how to use Python in Rstudio. Check [the intro do quarto notebook](/lecture_notes/week-1/intro_to_quarto.html). Let's cover some of the installation steps here:
+
+To install `RStudio`, [download from the following link](https://www.rstudio.com/products/rstudio/download/) . `reticulate` is an R package that allows one run a Python REPL in the R console. In addition, it allows one to read in and use Python code, and pass data between R and and Python. The following provides [instructions on installing `reticulate`](https://rstudio.github.io/reticulate/).
+
+With `reticulate`, you can use Rstudio as a IDE for Python. Another option is to use Quarto (the next-generation version of R Markdown) as an unified framework to generate notebooks with text + code. If you're an R Markdown user, you will see how Quarto is just an extension of the capabilities that were previously provided by R Markdown. Now, instead of `.rmd` files, we have `.qmd` files. Quarto is already installed with RStudio.
+
+## Git
+
+We'll go over more Git/GitHub instructions during the second class session. Before that session:
+
+-   [Install Git if it's not installed already](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+
+-   [Create a GitHub account if you don't have one already (any email and free subscription is fine)](https://docs.github.com/en/github/getting-started-with-github/signing-up-for-a-new-github-account)
+
+## Slack
+
+Our course will make use of Slack for internal communication. Enter in our workspace with this link: (<https://join.slack.com/t/ppol5203fall2024/shared_invite/zt-2ou5gm0ww-YJUJfR3vTfzN4IuKcULFDQ>).
+
+**When should you use slack?**
+
+-   Interact with the TAs
+
+-   Ask questions to your colleagues
+
+-   Share links that are interesting to the discussions in class.
+
+**When I should not use slack?**
+
+-   If you have a question you believe will require a longer conversation, I prefer if you can stop by at my office hours
+
+Remember, you don't need to let me know you are going to my office hours. Just stop by!
+
+If you're new to Slack, check out this [tutorial](https://get.slack.help/hc/en-us/articles/218080037-Getting-started-for-new-members). In the first class, I'll send out the invitation for everyone to join Slack and we'll discuss how to use it.

@@ -1,0 +1,89 @@
+---
+title: "Week 05"
+subtitle: "From Nested lists to Dataframes: Numpy and Intro to Pandas"
+description: ""
+author: "Tiago Ventura"
+date: "10/07/2025"
+#listing:
+  # - id: slides
+  #   contents:
+  #     - ../slides/week-01/*.qmd
+  #   type: table
+  #   fields: [title, date]
+  #   date-format: "ddd, MMM DD"
+  #   field-display-names:
+  #     title: "Topic"
+  #     date: "Date"
+  #   sort: [filename]
+  #   sort-ui: false
+  #   filter-ui: false
+  # - id: assignments
+  #   contents:
+  #     - ../hw/w1-*.qmd
+  #     - ../labs/w1-*.qmd
+  #   type: table
+  #   fields: [categories, title, date]
+  #   date-format: "ddd, MMM DD"
+  #   field-display-names:
+  #     categories: "Assignment"
+  #     title: "Title"
+  #     date: "Due"
+  #   sort: [date]
+  #   sort-ui: false
+  #   filter-ui: false
+tbl-colwidths: [10,50,40]
+---
+
+## Lectures Notes:
+
+Today, we will go over three notebooks:
+
+-   File Management: [html](/lecture_notes/week-04/_week_4_file_management.html) -- <a href="/lecture_notes/week-04/_week_4_file_management.ipynb" download> Jupyter Notebook </a>
+
+-   Data as Nested lists - [html](/lecture_notes/week-04/_week_4_nested_lists.html) -- <a href="/lecture_notes/week-04/_week_4_nested_lists.ipynb" download> Jupyter Notebook </a>
+
+-   Numpy: [html](/lecture_notes/week-04/_week_5_numpy.html) -- <a href="/lecture_notes/week-05/_week_5_numpy.ipynb" download> Jupyter Notebook </a>
+
+-   Intro do Pandas: [html](/lecture_notes/week-05/_week_5a_intro_to_pandas.html) -- <a href="/lecture_notes/week-05/_week_5a_intro_to_pandas.ipynb" download> Jupyter Notebook </a>
+
+## Datasets
+
+Download the datasets <a href="/lecture_notes/week-04/data_week4.zip" download> here </a>
+
+## Slides
+
+-   [Numpy and Intro do Pandas](/slides/week-5.html)
+
+## Readings
+
+-   ***Suggested Reading for Numpy***
+
+-   PDS VanderPlas
+
+    -   [Ch. 2: Introduction to Numpy](https://jakevdp.github.io/PythonDataScienceHandbook/02.00-introduction-to-numpy.html) - Python Data Science Handbook - VanderPlas, Jake
+
+**Suggested Readings for Pandas**
+
+-   PDS VanderPlas
+
+-   [Ch. 4: Data Manipulation with Pandas](https://jakevdp.github.io/PythonDataScienceHandbook/03.00-introduction-to-pandas.html)
+
+-   [Tidy Data in Python](https://www.jeannicholashould.com/tidy-data-in-python.html)
+
+-   [Tidy Data by Hadley Wickham in R](https://r4ds.hadley.nz/data-tidy.html)
+
+And all our lecture notes!
+
+-   **Additional Resources and Suggested Materials**
+
+    -   [Python Pandas Tutorial: A Complete Introduction for Beginners](https://www.learndatasci.com/tutorials/python-pandas-tutorial-complete-introduction-for-beginners/#)
+
+    -   [Data Wrangling with Pandas Cheat Sheet](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf) - pandas.pydata.org
+
+    -   [dplyr-style Data Manipulation with Pipes in Python](https://towardsdatascience.com/dplyr-style-data-manipulation-with-pipes-in-python-380dcb137000) - Allen, Akinkunle
+
+    -   [Python Pandas vs. R Dplyr - The Full Cheatsheet](https://medium.com/towards-data-science/python-pandas-vs-r-dplyr-5b5081945ccb) - Martin Šiklar
+
+    -   [Methods Chaining in Pandas](https://medium.com/@ulriktpedersen/modern-pandas-streamlining-your-workflow-with-method-chaining-f65e75deb193)
+
+-   [Exercises in Pandas](https://github.com/guipsamora/pandas_exercises)

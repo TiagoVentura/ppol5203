@@ -1,0 +1,63 @@
+---
+title: "PPOL 5203 - Data Science I: Foundations"
+subtitle: "McCourt School for Public Polcy, Georgetown University"
+---
+
+## Course Description
+
+This first course in the core data science sequence teaches Data Science for Public Policy (DSPP) students how to synthesize disparate, possibly unstructured data in order to draw meaningful insights. Topics covered include the fundamentals of object-oriented programming in Python; literate programming; an introduction to algorithms and data types; data wrangling, visualization, and extraction; an introduction to machine learning methods, and text analysis. In addition, students will be exposed to Git and Github for version control and reproducible research. The objective of the course is to teach students how to incorporate data into their decision-making and analysis. No prior programming experience is assumed or required.
+
+This is not the first time this course is taught at DSPP. For this reason, several of the materials here are borrowed from previous iterations of this course taught by [Dr. Rebecca Johnson](https://www.rebeccajohnson.io/) and [Dr. Eric Dunford](http://ericdunford.com/)
+
+## Goals
+
+After completing this course, the students will be able to:
+
+-   General understanding of python's object oriented programming syntax and data structures.
+
+-   Competency using version control (Git/Github).
+
+-   Learn to manipulate and explore data with Pandas and other tools.
+
+-   General understanding of analyzing algorithms and data structures.
+
+-   Learn to extract and process data from structured and unstructured sources.
+
+-   Get some intuition of modeling text data in Python.
+
+-   Learn the basics of machine learning as a modeling approach.
+
+-   Learn how to use Generative AI for multiple applied tasks.
+
+-   Learn basics of using SQL to query databases.
+
+## Instructor
+
+-   Professor: [Dr. Tiago Ventura](https://www.venturatiago.com/)
+-   Pronouns: He/Him
+-   Email: [tv186\@georgetown.edu](mailto:tv186@georgetown.edu)
+-   Office hours:
+    -   Time: Every Tuesday, 4pm - 5pm
+    -   Location: 125E, Office Number 766
+
+**You are all welcome to the office hours at any time.** No need to schedule time with me to go to office hours!
+
+## Teaching Assistants:
+
+-   Rebecca Wagner (DSPP Second-Year Student)
+    -   Email:rlw137@georgetown.edu
+    -   Office Hours:
+        -   in person: Every Monday 2pm, McCourt, Room 602
+        -   virtual: Every Tuesday 7pm. [Zoom link](https://georgetown.zoom.us/j/94242889689)
+
+### Course Infra-structure
+
+**Class Website**: A class website <https://tiagoventura.github.io/ppol5203> will be used throughout the course and should be checked on a regular basis for lecture materials and required readings.
+
+**Class Slack Channel**: The class also has a dedicated slack channel. You can join on clicking [here](https://join.slack.com/t/ppol5203-fall2025/shared_invite/zt-3cmg2zqoz-uFHOG_a9tsxBBBm2wCz~zg). The channel serves as an open forum to discuss, collaborate, pose problems/questions, and offer solutions. Students are encouraged to pose any questions they have there as this will provide the professor and TA the means of answering the question so that all can see the response. If you're unfamiliar with, please consult the following start-up tutorial (https://get.slack.help/hc/en-us/articles/218080037-Getting-started-for-new-members). Please follow the [***invite link***](https://join.slack.com/t/ppol5203-fall2025/shared_invite/zt-3cmg2zqoz-uFHOG_a9tsxBBBm2wCz~zg) to be added to the Slack channel.
+
+**Canvas**: A Canvas site (http://canvas.georgetown.edu) will be used throughout the course and should be checked on a regular basis for announcements. ll announcements for the assignments and classes will be posted on Canvas; they will not be distributed in class or by e-mail. Support for Canvas is available at (202) 687-4949
+
+NOTE: Students are encouraged to run lecture code on their own machines. If you do not have access to a laptop on which you can install `python3`, please contact the professor and/or TA for assistance. Only `python3` will be used in this course.
+
+**Datacamp:** As part of this course, you will have access to a DataCamp classroom that you can use to take Datacamp modules for free. Datacamp courses can be a useful tool for you to practice the concepts we see in class. Although I will not assign specific courses for you,, you can use Datacamp courses to review the topics we cover in class. The lecture notes will cover in details all our in-class discussions. Datacamp courses will be considered additional material.

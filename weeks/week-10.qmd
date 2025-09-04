@@ -1,0 +1,59 @@
+---
+title: "Week 9"
+subtitle: "Statistical Learning"
+description: ""
+author: "Tiago Ventura"
+date: "11/04/2025"
+#listing:
+  # - id: slides
+  #   contents:
+  #     - ../slides/week-01/*.qmd
+  #   type: table
+  #   fields: [title, date]
+  #   date-format: "ddd, MMM DD"
+  #   field-display-names:
+  #     title: "Topic"
+  #     date: "Date"
+  #   sort: [filename]
+  #   sort-ui: false
+  #   filter-ui: false
+  # - id: assignments
+  #   contents:
+  #     - ../hw/w1-*.qmd
+  #     - ../labs/w1-*.qmd
+  #   type: table
+  #   fields: [categories, title, date]
+  #   date-format: "ddd, MMM DD"
+  #   field-display-names:
+  #     categories: "Assignment"
+  #     title: "Title"
+  #     date: "Due"
+  #   sort: [date]
+  #   sort-ui: false
+  #   filter-ui: false
+tbl-colwidths: [10,50,40]
+---
+
+## Lecture Notes
+
+-   Statistical Learning: inference and predictions [html](/lecture_notes/week-10/_week-9-models.html) -- <a href="/lecture_notes/week-10/_week-9-models.ipynb" download> Jupyter Notebook </a>
+
+# Slides
+
+-   [Statistical Learning: inference and predictions](/slides/week-10.html)
+
+# Readings
+
+-   **Required Readings**:
+    -   [James, Gareth, Daniela Witten, Trevor Hastie, Robert Tibshirani, and Jonathan Taylor, 2023 "An introduction to statistical learning: With applications in python."](https://www.statlearning.com/)
+        -   What is statistical learning? - **James et al. Ch. 2**
+        -   Resampling Methods - **James et al. Ch. 5**
+
+<br>
+
+-   **Additional Resources and Suggested Materials**</font>
+    -   [Python Virtual Environments: A Primer](https://realpython.com/python-virtual-environments-a-primer/) - realpython.com
+    -   Scikit-learn documentation
+        -   [Models](https://scikit-learn.org/stable/tutorial/basic/tutorial.html)
+        -   [Preprocessing](https://scikit-learn.org/stable/modules/preprocessing.html) - scikit-learn.org
+        -   [Cross-Validation](https://scikit-learn.org/stable/modules/cross_validation.html) - scikit-learn.org

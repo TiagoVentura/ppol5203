@@ -1,0 +1,12 @@
+/.quarto/
+/_solutions_psets/
+/_solutions_ex/
+.Rproj.user
+.env
+lecture_notes/week-06/acled_south_america.csv
+lecture_notes/_old/week-11/tweets_congress.csv
+/proposals/
+lecture_notes/_old/week-12/tweets_congress.csv
+lecture_notes/_old/week-13/country.sqlite
+**/_old/
+*.csv

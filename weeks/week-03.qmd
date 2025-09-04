@@ -1,0 +1,85 @@
+---
+title: "Week 03"
+subtitle: "Intro to Python - OOP, Data Types, Control Statements and Functions"
+description: ""
+author: "Tiago Ventura"
+date: "09/23/2025"
+#listing:
+  # - id: slides
+  #   contents:
+  #     - ../slides/week-01/*.qmd
+  #   type: table
+  #   fields: [title, date]
+  #   date-format: "ddd, MMM DD"
+  #   field-display-names:
+  #     title: "Topic"
+  #     date: "Date"
+  #   sort: [filename]
+  #   sort-ui: false
+  #   filter-ui: false
+  # - id: assignments
+  #   contents:
+  #     - ../hw/w1-*.qmd
+  #     - ../labs/w1-*.qmd
+  #   type: table
+  #   fields: [categories, title, date]
+  #   date-format: "ddd, MMM DD"
+  #   field-display-names:
+  #     categories: "Assignment"
+  #     title: "Title"
+  #     date: "Due"
+  #   sort: [date]
+  #   sort-ui: false
+  #   filter-ui: false
+tbl-colwidths: [10,50,40]
+---
+
+## Lectures Notes:
+
+Intro to Python - OOP, Data Types, and Collectors: [html](/lecture_notes/week-03/_week-03_data_types.html), <a href="/lecture_notes/week-03/_week-03_data_types.ipynb" download> Jupyter Notebook </a>
+
+Intro to Python II - Control Statements and Functions: [html](/lecture_notes/week-03/_week-03_iter_control_functions.html), <a href="/lecture_notes/week-03/_week-03_iter_control_functions.ipynb" download> Jupyter Notebook </a>
+
+## Slides
+
+[Week 3 - Intro do Python: OOP, Control Statements and Functions](/slides/week-3.html)
+
+## In-Class Exercise
+
+See slides or [notebook for the exercise](/lecture_notes/week-03/_week-03_data_types.html)
+
+<!-- -   [solutions](/solutions_html/_week_03_solution.html) -->
+
+## Required Readings
+
+From [Miller, Brad, and David Ranum, Problem Solving with Algorithms and Data Structures using Python](https://runestone.academy/ns/books/published/pythonds/index.html)
+
+-   [Getting Started with Data](https://runestone.academy/ns/books/published/pythonds/Introduction/GettingStartedwithData.html)
+
+-   [Control Structure](https://runestone.academy/ns/books/published/pythonds/Introduction/ControlStructures.html)
+
+-   [Exception Handling](https://runestone.academy/ns/books/published/pythonds/Introduction/ExceptionHandling.html)
+
+-   [Defining Functions](https://runestone.academy/ns/books/published/pythonds/Introduction/DefiningFunctions.html)
+
+From Wes McKinney, Python for Data Analysis
+
+-   [Chapter 2: Python Language Basics, IPython, and Jupyter Notebooks](https://wesmckinney.com/book/python-basics.html)
+
+-   [Chapter 2: Built-In Data Structures, Functions, and Files](https://wesmckinney.com/book/python-builtin.html)
+
+[Mutable vs Immutable Objects in Python](https://medium.com/@meghamohan/mutable-and-immutable-side-of-python-c2145cf72747) - Mohan, Megha
+
+## Additional Code
+
+-   Data Carpentry
+
+    -   [Python Fundamentals](https://swcarpentry.github.io/python-novice-inflammation/01-intro/index.html)
+
+    -   [Repeated Actions with Loops](https://swcarpentry.github.io/python-novice-inflammation/04-loop/index.html)
+
+    -   [Making Choices](https://swcarpentry.github.io/python-novice-inflammation/07-cond/index.html)
+
+    -   [Creating Functions](https://swcarpentry.github.io/python-novice-inflammation/08-func/index.html)
+
+    -   [Storing Multiple Values in Lists](https://swcarpentry.github.io/python-novice-inflammation/05-lists/index.html)
