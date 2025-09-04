@@ -102,8 +102,23 @@ NOTE: Students are encouraged to run lecture code on their own machines. If you 
 
 ## Weekly Schedule
 
-::: {#schedule}
-:::
+| Week    | Topic                                                                 | Date                           |
+|---------|----------------------------------------------------------------------|--------------------------------|
+| Week 01 | Introduction, Installations, IDEs, Command line                      | September 09, 2025             |
+| Week 02 | Version Control, Workflow and Reproducibility: Or a bit of Git & GitHub | September 16, 2025             |
+| Week 03 | Intro to Python - OOP, Data Types, Control Statements and Functions  | September 23, 2025             |
+| Week 04 | Intro to Python II: Scaling up your code - Iteration, Comprehension and Functions | September 30, 2025             |
+| Week 05 | From Nested lists to Dataframes: Numpy and Intro to Pandas           | October 07, 2025               |
+| Week 06 | Pandas II: Data Wrangling                                            | October 14, 2025               |
+| Week 07 | Joining, Tidying and Visualizing Data                                | October 21, 2025               |
+| Week 08 | Scraping + APIs                                                      | October 28, 2025               |
+| Week 09 | Statistical Learning                                                 | November 04, 2025              |
+| Week 10 | Text as Data I: Discovery and Topics                                 | November 11, 2023              |
+| Week 11 | Text as Data II: Supervised Learning                                 | November 18, 2025              |
+| Week 12 | Generative AI: Classification, Surveys and Prompting (Invited Speaker - Dr. Patrick Wu, American University) | November 25, 2025              |
+| Week 13 | SQL                                                                  | December 03, 2024              |
+| Week 14 | Presentations of Final Projects                                      | December 09, 2023              |
+
 
 ## Course Requirements
 
