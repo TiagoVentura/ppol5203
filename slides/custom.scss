@@ -15,6 +15,17 @@ $font-family-sans-serif: "Palatino Linotype", "Book Antiqua", Palatino,
   text-align:left; 
 }
 
+/* Apply font globally */
+body {
+  font-family: $font-family-sans-serif;
+}
+
+/* make bold red */
+
+.reveal b, 
+.reveal strong {
+  color: #D50032;
+}
 .blue {
   color: #041E42;
   font-weight: bold;
@@ -48,13 +59,8 @@ code.sourceCode {
 }
 
 code {
-  font-size: 1.0em;
+  font-size: 1.2em;
   /* or try font-size: xx-large; */
-}
-
-/* Increase font size of R output */
-code.output {
-  font-size: 4.2em;
 }
 
 .larger-font {

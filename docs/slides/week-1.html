@@ -10,8 +10,8 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.450">
 
-  <meta name="author" content="Professor: Tiago Ventura">
-  <title>PPOL 5203 - Data Science I: Foundations -  PPOL 5203 - Data Science I: Foundations </title>
+  <meta name="author" content=" Professor: Tiago Ventura ">
+  <title>PPOL 5203 - Data Science I: Foundations</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -329,13 +329,13 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title"><span style="font-size: 80%;"> PPOL 5203 - Data Science I: Foundations </span></h1>
-  <p class="subtitle"><span style="font-size: 100%;"> <br>Week 1: Introductions, Installations, IDEs, Command line </span></p>
+  <h1 class="title">PPOL 5203 - Data Science I: Foundations</h1>
+  <p class="subtitle"><span style="font-size: 200%;"> <br>Week 1: Introductions, Installations, IDEs, Command line </span></p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Professor: Tiago Ventura 
+<span style="font-size: 150%;"> Professor: Tiago Ventura </span> 
 </div>
 </div>
 </div>
@@ -349,97 +349,103 @@ Professor: Tiago Ventura
 <section id="plans-for-today" class="slide level2 center">
 <h2>Plans for Today</h2>
 <ul>
-<li class="fragment"><p>Motivating <span class="blue">Data Science for Public Policy</span>, or <span class="blue">Computational Social Science</span>.</p></li>
+<li class="fragment"><p>Motivating <span class="blue">Data Science for Public Policy</span>.</p></li>
 <li class="fragment"><p>Goals of the course</p></li>
 <li class="fragment"><p>Introductions</p></li>
 <li class="fragment"><p>Course Logistics</p></li>
 <li class="fragment"><p>IDEs</p>
 <ul>
 <li class="fragment">Jupyter</li>
-<li class="fragment">Quarto</li>
 </ul></li>
 <li class="fragment"><p>Introduction to commandline</p></li>
 </ul>
 </section></section>
 <section>
-<section id="why-are-we-here" class="title-slide slide level1 center" data-background-color="#447099">
-<h1>Why are we here?</h1>
+<section id="motivationdigital-information-age" class="title-slide slide level1 center" data-background-color="#447099">
+<h1>Motivation:Digital Information Age</h1>
 
 </section>
-<section id="rise-of-the-digital-information-age" class="slide level2 center">
-<h2>Rise of the digital information age</h2>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="week1_figs/digital.jpeg" style="width:50.0%"></p>
-</figure>
-</div>
-</div>
-</div>
+<section id="section" class="slide level2 center">
+<h2></h2>
 
-<aside><div>
-<p>https://www.washingtonpost.com/wp-dyn/content/graphic/2011/02/11/GR2011021100614.html</p>
-</div></aside></section>
-<section id="powerful-and-cheap-computer-power" class="slide level2 center">
-<h2>Powerful and Cheap Computer Power</h2>
+<img data-src="week1_figs/digital.jpeg" style="width:80.0%" class="r-stretch quarto-figure-center"></section>
+<section id="powerful-and-cheap-computing-power" class="slide level2 center">
+<h2>Powerful and Cheap Computing Power</h2>
 
 <img data-src="week1_figs/collab.png" style="width:80.0%" class="r-stretch quarto-figure-center"></section>
-<section id="as-a-consequence" class="slide level2 center">
-<h2>As a consequence:</h2>
+<section id="world-of-generative-ai-models" class="slide level2 center">
+<h2>World of Generative AI Models</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output cell-output-error">
+<pre><code>Error in knitr::include_graphics("week1_figs/gpt.png"): Cannot find the file(s): "week1_figs/gpt.png"</code></pre>
+</div>
+</div>
+</section>
+<section id="as-a-consequence-we-live-in-a-world" class="slide level2 center">
+<h2>As a consequence, we live in a world:</h2>
 <ul>
-<li class="fragment"><p>Abundance of data we can use for research and governments can use to make better decisions</p>
+<li class="fragment"><p><strong>With</strong> abundance of data we can use for research and policy decisions:</p>
 <ul>
-<li class="fragment"><p>Novel research questions</p></li>
-<li class="fragment"><p>New ways to answer old, long-standing research questions</p></li>
+<li class="fragment">Internet data, social media, geo-tracking tools, etc…</li>
 </ul></li>
-<li class="fragment"><p>New technologies also have social implications and can generate important policy questions.</p>
+<li class="fragment"><p><strong>With</strong> easily available technologies to analyze this data at scale</p>
+<ul>
+<li class="fragment">Your laptops, cloud computing, ChatBots…</li>
+</ul></li>
+<li class="fragment"><p><strong>But</strong> with new technologies that also have novel social implications:</p>
 <ul>
 <li class="fragment"><p>Privacy issues</p></li>
 <li class="fragment"><p>Use of technology by bad actors.</p></li>
 <li class="fragment"><p>Use of technology by governments to censor/monitor citizens.</p></li>
-<li class="fragment"><p>etc…</p></li>
 </ul></li>
-<li class="fragment"><p>Policy scholars (but pretty much any researcher) need to be equipped to properly deal with these challenges</p></li>
+<li class="fragment"><p>Policy scholars (but pretty much any researcher) need to be equipped to properly <strong>work</strong> with this data and <strong>understand</strong> the effects of these news technologies</p></li>
 </ul>
 </section>
 <section id="data-science-for-public-policy" class="slide level2 center">
 <h2>Data Science for Public Policy</h2>
-<p><span class="red">Data Scientist for Public Policy</span> focuses on <strong>computational approaches</strong> to solve/understand <strong>Policy Problems</strong>.</p>
+<p><span class="red">Data Scientist for Public Policy</span> focuses on <strong>computational approaches</strong> to solve/understand <strong>policy problems</strong>.</p>
 <ul>
-<li class="fragment"><p>Part of a larger and new field called <a href="https://en.wikipedia.org/wiki/Computational_social_science">computational social sciente</a></p></li>
-<li class="fragment"><p>But with a more <span class="red">policy-focus</span>.</p></li>
-<li class="fragment"><p><strong>What is social science?</strong> It refers to a domain of study - social phenomena:</p>
+<li class="fragment"><p>Part of a larger and new field called <a href="https://en.wikipedia.org/wiki/Computational_social_science">computational social science</a></p></li>
+<li class="fragment"><p><strong>Social science</strong></p>
 <ul>
-<li class="fragment">Encompasses many <strong>scales</strong>: human psychology, language, economic behavior, political systems, policy problems</li>
+<li class="fragment">Understands human behavior: human psychology, language, economic behavior, political systems, policy problems</li>
 <li class="fragment">Involve many <strong>approaches</strong>: qualitative interviews, statistical analysis, simulations</li>
 </ul></li>
-<li class="fragment"><p><strong>What is Data Science?</strong>:</p>
+<li class="fragment"><p><strong>Data Science</strong>:</p>
 <ul>
-<li class="fragment">Use often large-scale data + algorithms to answer questions</li>
+<li class="fragment">Tools to work with large-scale data + learning models + novel data sources</li>
 </ul></li>
 </ul>
+</section></section>
+<section>
+<section id="computational-social-science-in-practice" class="title-slide slide level1 center">
+<h1>Computational Social Science in Practice</h1>
+
 </section>
-<section id="an-example-data-donation-whatsapp-groups" class="slide level2 center">
-<h2>An example: Data Donation WhatsApp Groups</h2>
+<section id="misinformation-on-whatsapp" class="slide level2 center">
+<h2>Misinformation on WhatsApp</h2>
+
+<img data-src="week1_figs/whatsappmotivation.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section>
+<section id="data-donation-whatsapp-groups" class="slide level2 center">
+<h2>Data Donation WhatsApp Groups</h2>
 
 <img data-src="week1_figs/wpp.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section>
 <section id="all-the-steps-tools-....-so-far-..." class="slide level2 center">
 <h2>All the steps + Tools <code>....</code> so far <code>...</code></h2>
 <ul>
-<li class="fragment"><p><span class="blue">Step 1</span>: Recruiting participants online</p>
+<li class="fragment"><p><span class="blue">Step 1</span>: Recruiting participants online (SS)</p>
 <ul>
 <li class="fragment">Online Panels + Facebook Ads</li>
 </ul></li>
-<li class="fragment"><p><span class="blue">Step 2</span>: Running online surveys</p>
+<li class="fragment"><p><span class="blue">Step 2</span>: Running online surveys (SS)</p>
 <ul>
 <li class="fragment">Qualtrics + R</li>
 </ul></li>
-<li class="fragment"><p><span class="blue">Step 3</span>: Development of data donation pipeline (with MDI)</p>
+<li class="fragment"><p><span class="blue">Step 3</span>: Development of data donation pipeline (with MDI) (DS/CS)</p>
 <ul>
 <li class="fragment">JavaScript (JS) + Python</li>
 </ul></li>
-<li class="fragment"><p><span class="blue">Step 4</span>: Analyze the data</p>
+<li class="fragment"><p><span class="blue">Step 4</span>: Analyze the data (SS/DS)</p>
 <ul>
 <li class="fragment">SQL + Python + R</li>
 </ul></li>
@@ -448,9 +454,11 @@ Professor: Tiago Ventura
 <section id="readings-for-this-week" class="slide level2 center">
 <h2>Readings for this week</h2>
 <ul>
-<li class="fragment"><p><strong>Bit by Bit: Social Research in the Digital Age</strong> By Mathew Salganik</p></li>
+<li class="fragment"><p>Bit by Bit: Social Research in the Digital Age By Mathew Salganik</p>
+<ul>
 <li class="fragment"><p><a href="https://www.bitbybitbook.com/en/1st-ed/introduction/">Introduction</a></p></li>
 <li class="fragment"><p><a href="https://www.bitbybitbook.com/en/1st-ed/observing-behavior/">Observing Behavior</a></p></li>
+</ul></li>
 <li class="fragment"><p><a href="https://www.cambridge.org/core/journals/ps-political-science-and-politics/article/training-computational-social-science-phd-students-for-academic-and-nonacademic-careers/1455690939833B9FFCAC664D4E412057">Training Computational Social Science PhD Students for Academic and Non-Academic Careers</a> - Written by me and some colleagues in academia, industry and non-profits</p></li>
 </ul>
 </section>
@@ -460,7 +468,7 @@ Professor: Tiago Ventura
 <p>The goal of this course is to teach you:</p>
 <ul>
 <li class="fragment"><p><strong>Computational thinking</strong>: how to approach problems and devise solutions from a computational perspective.</p></li>
-<li class="fragment"><p>Get you started on <strong>Python</strong> and a bit of <strong>SQL</strong> for applied data science; lay the foundations for the remainder of the core sequence</p></li>
+<li class="fragment"><p>Get you started on <strong>Python</strong>, introduce some useful tools (scrapping, text analysis and API applications of GenAI models), and bit of <strong>SQL</strong> for applied data science; lay the foundations for the remainder of the core DS sequence</p></li>
 <li class="fragment"><p><strong>Workflows and tools:</strong> Git/Github + Commandline.</p></li>
 </ul>
 </section></section>
@@ -469,46 +477,148 @@ Professor: Tiago Ventura
 <h1>PPOL 5203 - Data Science I: Foundations</h1>
 
 </section>
-<section id="course-schedule" class="slide level2 center">
+<section id="course-schedule" class="slide level2 center" style="font-size: .8em;">
 <h2>Course Schedule</h2>
-
-<img data-src="week1_figs/schedule_2024.png" class="r-stretch"></section></section>
+<table>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 55%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Week</th>
+<th>Topic</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Week 01</td>
+<td>Introduction, Installations, IDEs, Command line</td>
+<td>September 09, 2025</td>
+</tr>
+<tr class="even">
+<td>Week 02</td>
+<td>Version Control, Workflow and Reproducibility: Or a bit of Git &amp; GitHub</td>
+<td>September 16, 2025</td>
+</tr>
+<tr class="odd">
+<td>Week 03</td>
+<td>Intro to Python - OOP, Data Types, Control Statements and Functions</td>
+<td>September 23, 2025</td>
+</tr>
+<tr class="even">
+<td>Week 04</td>
+<td>Intro to Python II: Scaling up your code - Iteration, Comprehension and Functions</td>
+<td>September 30, 2025</td>
+</tr>
+<tr class="odd">
+<td>Week 05</td>
+<td>From Nested lists to Dataframes: Numpy and Intro to Pandas</td>
+<td>October 07, 2025</td>
+</tr>
+<tr class="even">
+<td>Week 06</td>
+<td>Pandas II: Data Wrangling</td>
+<td>October 14, 2025</td>
+</tr>
+<tr class="odd">
+<td>Week 07</td>
+<td>Joining, Tidying and Visualizing Data</td>
+<td>October 21, 2025</td>
+</tr>
+<tr class="even">
+<td>Week 08</td>
+<td>Scraping + APIs</td>
+<td>October 28, 2025</td>
+</tr>
+<tr class="odd">
+<td>Week 09</td>
+<td>Statistical Learning</td>
+<td>November 04, 2025</td>
+</tr>
+<tr class="even">
+<td>Week 10</td>
+<td>Text as Data I: Discovery and Topics</td>
+<td>November 11, 2023</td>
+</tr>
+<tr class="odd">
+<td>Week 11</td>
+<td>Text as Data II: Supervised Learning</td>
+<td>November 18, 2025</td>
+</tr>
+<tr class="even">
+<td>Week 12</td>
+<td>Generative AI: Classification, Surveys and Prompting (Invited Speaker - Dr.&nbsp;Patrick Wu, American University)</td>
+<td>November 25, 2025</td>
+</tr>
+<tr class="odd">
+<td>Week 13</td>
+<td>SQL</td>
+<td>December 03, 2024</td>
+</tr>
+<tr class="even">
+<td>Week 14</td>
+<td>Presentations of Final Projects</td>
+<td>December 09, 2023</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="between-text-as-data-i-and-ii-i-might-have-some-updates" class="slide level2 center">
+<h2>Between Text-as-Data I and II… I might have some updates…</h2>
+<div class="fragment">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../baby.jpeg" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section></section>
 <section>
-<section id="introductions" class="title-slide slide level1 center" data-background-color="#447099">
+<section id="introductions" class="title-slide slide level1 center">
 <h1>Introductions</h1>
 
 </section>
-<section id="about-me" class="slide level2 center">
-<h2>About me</h2>
+<section id="section-1" class="slide level2 center">
+<h2></h2>
+<div>
+<div class="fragment">
+<p><strong>Professor Tiago Ventura (he/him)</strong></p>
 <ul>
-<li class="fragment"><p><strong>Professor Tiago Ventura (he/him)</strong></p>
-<ul>
-<li class="fragment">Assistant Professor at McCourt School.</li>
-<li class="fragment">Political Science Ph.D.</li>
-<li class="fragment">Postdoc at Center for Social Media and Politics at NYU.</li>
-<li class="fragment">Researcher at Twitter.</li>
-</ul></li>
-<li class="fragment"><p><strong>Research Interests:</strong></p>
-<ul>
-<li class="fragment">Social media and politics</li>
-<li class="fragment">Computational methods, NLP and LLMs</li>
-<li class="fragment">Focus on Global South</li>
-</ul></li>
-<li class="fragment"><p><strong>Outside of work, I enjoy watching soccer and reading sci-fi.</strong></p>
-<ul>
-<li class="fragment"><p>Sometimes I enjoy soccer while working!</p></li>
-<li class="fragment"><p>And I am from Brazil!</p></li>
-</ul></li>
+<li>Assistant Professor at McCourt School.</li>
+<li>Political Science PhD</li>
+<li>Postdoc at Center for Social Media and Politics - NYU.</li>
+<li>Researcher at Twitter.</li>
 </ul>
+</div>
+<div class="fragment">
+<p><strong>My Research: Effects of technology in politics + applications of computational models to social science:</strong></p>
+<ul>
+<li>Global Social Media Deactivation.</li>
+<li>Developing a data donation pipeline for WhatsApp data.</li>
+<li>Measuring Humanness vs AI-Generated Content on Social Media.</li>
+<li>Using LLMs to augment web-browsing data with synthetic data</li>
+</ul>
+</div>
+<div class="fragment">
+<p><strong>Outside of work, I enjoy <span class="red">watching soccer, reading sci-fi and running</span></strong></p>
+</div>
+</div>
 </section>
 <section id="quiz" class="slide level2 center" data-background-color="#447099">
-<h2><strong>Quiz!</strong></h2>
+<h2>Quiz!</h2>
 <h3 id="which-programming-language-did-i-use-the-most-at">Which programming language did I use the most at?</h3>
 <ul>
-<li class="fragment"><p><strong>PhD</strong></p></li>
-<li class="fragment"><p><strong>Postdoc</strong></p></li>
-<li class="fragment"><p><strong>Twitter</strong></p></li>
-<li class="fragment"><p><strong>As a Faculty</strong></p></li>
+<li class="fragment"><p>PhD</p></li>
+<li class="fragment"><p>Postdoc</p></li>
+<li class="fragment"><p>Twitter</p></li>
+<li class="fragment"><p>As a Faculty</p></li>
 </ul>
 </section>
 <section id="a-comment-from-the-pre-course-survey-from-last-year" class="slide level2 center">
@@ -529,16 +639,16 @@ Professor: Tiago Ventura
 <h2>Logistics</h2>
 <div>
 <ul>
-<li class="fragment"><p><strong>Communication</strong>: via slack. Join the <a href="https://join.slack.com/t/ppol5203fall2024/shared_invite/zt-2ou5gm0ww-YJUJfR3vTfzN4IuKcULFDQ">workspace!</a></p></li>
+<li class="fragment"><p><strong>Communication</strong>: via slack. Join the <a href="https://join.slack.com/t/ppol5203-fall2025/shared_invite/zt-3cmg2zqoz-uFHOG_a9tsxBBBm2wCz~zg">workspace!</a></p></li>
 <li class="fragment"><p><strong>All materials</strong>: hosted on the class website: <a href="https://tiagoventura.github.io/ppol5203/" class="uri">https://tiagoventura.github.io/ppol5203/</a></p></li>
 <li class="fragment"><p><strong>Syllabus</strong>: also on the website.</p></li>
-<li class="fragment"><p><strong>My Office Hours</strong>: Every tuesday from 4 to 6pm. Just stop by!</p></li>
+<li class="fragment"><p><strong>My Office Hours</strong>: Every tuesday from 4 to 5pm. Just stop by!</p></li>
 <li class="fragment"><p><strong>Canvas</strong>: Only for official communication! Materials will be hosted in the website!</p></li>
-<li class="fragment"><p><strong>Datacamp</strong>: Additional exercises! I will assign modules for you! Access our free account <a href="https://www.datacamp.com/groups/shared_links/30765dd1c783b864ab9ad885cb08a129b7113054664cddb1446f4e3d46b4605d">here</a></p></li>
+<li class="fragment"><p><strong>Datacamp</strong>: Additional exercises! Access our free account <a href="https://www.datacamp.com/groups/shared_links/30765dd1c783b864ab9ad885cb08a129b7113054664cddb1446f4e3d46b4605d">here</a></p></li>
 </ul>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_65200c95" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:2em;">
+<div class="countdown" id="timer_d73a8e12" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:2em;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -546,23 +656,16 @@ Professor: Tiago Ventura
 </div>
 </div>
 </section>
-<section id="tas" class="slide level2 center">
-<h2>TAs</h2>
+<section id="ta" class="slide level2 center">
+<h2>TA</h2>
 <ul>
-<li class="fragment">Aastha Jha (DSPP Second-Year Student)
+<li class="fragment">Rebecca Wagner (DSPP Second-Year Student)
 <ul>
-<li class="fragment">Email: aj935@georgetown.edu</li>
+<li class="fragment">Email:rlw137@georgetown.edu</li>
 <li class="fragment">Office Hours:
 <ul>
-<li class="fragment">Every Wednesdays, from 1pm to 2pm.</li>
-</ul></li>
-</ul></li>
-<li class="fragment">Shirui Zhou (DSPP Alumni)
-<ul>
-<li class="fragment">Email: sz614@georgetown.edu</li>
-<li class="fragment">Office Hours:
-<ul>
-<li class="fragment">Every Monday, from 1pm to 2pm</li>
+<li class="fragment">in person: Every Monday 2pm, McCourt, Room 602</li>
+<li class="fragment">virtual: Every Tuesday 7pm. <a href="https://georgetown.zoom.us/j/94242889689">Zoom link</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -644,7 +747,7 @@ Professor: Tiago Ventura
 <section id="final-project" class="slide level2 center">
 <h2>Final Project</h2>
 <ul>
-<li class="fragment"><p><span class="red">You will work on <strong>randomly assigned groups!</strong></span></p></li>
+<li class="fragment"><p><span class="red">You will work on <strong>groups!</strong></span></p></li>
 <li class="fragment"><p>The project is composed of three parts:</p>
 <ul>
 <li class="fragment">a 2 page project proposal: (which should be discussed and approved by me)</li>
@@ -673,27 +776,27 @@ Professor: Tiago Ventura
 </tr>
 <tr class="even">
 <td>Presentation</td>
-<td>December 10</td>
+<td>December 09</td>
 <td>10-15 minutes</td>
 <td>10%</td>
 </tr>
 <tr class="odd">
 <td>Project Report</td>
-<td>December 17</td>
+<td>December 16</td>
 <td>10 pages</td>
 <td>25%</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="chatgpt" class="slide level2 center">
-<h2>ChatGPT</h2>
-<p>You are allowed to use ChatGPT as you would use google in this class. This means:</p>
+<section id="genai" class="slide level2 center">
+<h2>GenAI</h2>
+<p>You are allowed to use GenAI as you would use google in this class. This means:</p>
 <ul>
-<li class="fragment"><p>Do not copy the responses from chatgpt – a lot of them are wrong or will just not run on your computer</p></li>
-<li class="fragment"><p>Use chatgpt as a auxiliary source.</p></li>
-<li class="fragment"><p>If your entire homework comes straight from chatgpt, I will consider it plagiarism.</p></li>
-<li class="fragment"><p>If you use chatgpt, I ask you to mention on your code how chatgpt worked for you.</p></li>
+<li class="fragment"><p>Do not copy the responses from GenAI Chatbots – a lot of them are wrong or will just not run on your computer</p></li>
+<li class="fragment"><p>Use GenAI Chatbots as a auxiliary source.</p></li>
+<li class="fragment"><p>If your entire homework comes straight from GenAI Chatbots, I will consider it plagiarism.</p></li>
+<li class="fragment"><p>If you use GenAI Chatbots, I ask you to mention on your code how chatgpt worked for you.</p></li>
 </ul>
 </section></section>
 <section id="be-mature-and-make-smart-decisions.-you-will-not-be-able-to-cheat-on-a-coding-interview-remember-you-are-a-master-student-now" class="title-slide slide level1 center">
@@ -705,7 +808,7 @@ Professor: Tiago Ventura
 <h1>Let’s take a break!</h1>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_bfc3affa" data-update-every="1" tabindex="0" style="top:0;right:0;left:0;margin:10%;padding:100px;font-size:6em;">
+<div class="countdown" id="timer_7ee4310f" data-update-every="1" tabindex="0" style="top:0;right:0;left:0;margin:10%;padding:100px;font-size:6em;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -721,12 +824,12 @@ Professor: Tiago Ventura
 <section id="summary-of-the-survey" class="slide level2 center">
 <h2>Summary of the survey</h2>
 <ul>
-<li class="fragment"><p>72% of you have <span class="red">some</span> experience with Python.</p></li>
+<li class="fragment"><p>Most of you have <span class="red">some</span> experience with Python.</p></li>
 <li class="fragment"><p><span class="red">Only three</span> of you were using primarily Python in your work before!</p>
 <ul>
 <li class="fragment">Most others are using R and Excel!</li>
 </ul></li>
-<li class="fragment"><p>You all have Python in your laptops, some still do not have a github account. If you are having issue after today, talk to your TAs.</p></li>
+<li class="fragment"><p>Most of you have Python in your laptops, some still do not have a github account. If you are having issues after today, talk to your TAs.</p></li>
 <li class="fragment"><p>Main Policy Areas:</p>
 <ul>
 <li class="fragment">Social Media/Tech (Talk to me!)</li>
@@ -756,23 +859,31 @@ Professor: Tiago Ventura
 <section id="set-up-your-course-infra-structure" class="slide level2 center">
 <h2>Set up your course infra-structure</h2>
 <p><a href="https://tiagoventura.github.io/ppol5203/lecture_notes/week-01/course_infrastructure.html">See Course Website</a></p>
+<ul>
+<li class="fragment"><p>Install Python</p></li>
+<li class="fragment"><p>Install Jupyter</p></li>
+<li class="fragment"><p>Setup your Git/Github account</p>
+<ul>
+<li class="fragment">Homework: Try to make one successful Git push before class next week.</li>
+</ul></li>
+</ul>
 </section>
 <section id="jupyter" class="slide level2 center">
 <h2>Jupyter:</h2>
-<p><span class="red">See Jupyter Notebook in the Class Website</span></p>
-<p><strong>Note on my approach on Notebooks:</strong> I will go over quite quickly through the notebooks. You shouls run them by yourselves at a later point!</p>
+<p><a href="https://tiagoventura.github.io/ppol5203/weeks/week-01.html">Jupyter Notebook Tutorial in the Class Website</a></p>
+<p><strong>Note on my approach on Notebooks:</strong> I will go over quite quickly through the notebooks. You should run them by yourselves at a later point!</p>
 </section>
 <section id="command-line" class="slide level2 center">
 <h2>Command Line</h2>
-<p><span class="red">See Command Line Tutorial in the Class Website</span></p>
-</section>
-<section id="quarto" class="slide level2 center">
-<h2>Quarto</h2>
-<p><span class="red">See Quarto Notebook in the Class Website</span></p>
+<p><a href="https://tiagoventura.github.io/ppol5203/weeks/week-01.html">Command Line Tutorial in the Class Website</a></p>
 </section>
 <section id="datacamp-course" class="slide level2 center">
 <h2>Datacamp Course</h2>
 <p><a href="https://app.datacamp.com/learn/courses/introduction-to-shell">Introduction to Shell</a></p>
+</section>
+<section id="additional-materials-quarto" class="slide level2 center">
+<h2>Additional Materials: Quarto</h2>
+<p><span class="red">See Quarto Notebook in the Class Website</span></p>
 </section></section>
 <section id="see-you-next-week" class="title-slide slide level1 center">
 <h1>See you next week!</h1>
@@ -960,7 +1071,7 @@ Professor: Tiago Ventura
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1600,
+        width: 1200,
 
         height: 800,
 

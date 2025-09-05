@@ -506,14 +506,14 @@
   {
     "objectID": "slides/week-1.html#plans-for-today",
     "href": "slides/week-1.html#plans-for-today",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "title": "PPOL 5203 - Data Science I: Foundations",
     "section": "Plans for Today",
-    "text": "Plans for Today\n\nMotivating Data Science for Public Policy, or Computational Social Science.\nGoals of the course\nIntroductions\nCourse Logistics\nIDEs\n\nJupyter\nQuarto\n\nIntroduction to commandline"
+    "text": "Plans for Today\n\nMotivating Data Science for Public Policy.\nGoals of the course\nIntroductions\nCourse Logistics\nIDEs\n\nJupyter\n\nIntroduction to commandline"
   },
   {
     "objectID": "slides/week-1.html#rise-of-the-digital-information-age",
     "href": "slides/week-1.html#rise-of-the-digital-information-age",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "title": "PPOL 5203 - Data Science I: Foundations",
     "section": "Rise of the digital information age",
     "text": "Rise of the digital information age\n\n\n\n\n\n\n\n\n\n\n\nhttps://www.washingtonpost.com/wp-dyn/content/graphic/2011/02/11/GR2011021100614.html"
   },
@@ -527,51 +527,51 @@
   {
     "objectID": "slides/week-1.html#as-a-consequence",
     "href": "slides/week-1.html#as-a-consequence",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "title": "PPOL 5203 - Data Science I: Foundations",
     "section": "As a consequence:",
-    "text": "As a consequence:\n\nAbundance of data we can use for research and governments can use to make better decisions\n\nNovel research questions\nNew ways to answer old, long-standing research questions\n\nNew technologies also have social implications and can generate important policy questions.\n\nPrivacy issues\nUse of technology by bad actors.\nUse of technology by governments to censor/monitor citizens.\netc…\n\nPolicy scholars (but pretty much any researcher) need to be equipped to properly deal with these challenges"
+    "text": "As a consequence:\n\nAbundance of data we can use for research and governments can use to make better decisions\n\nNovel research questions\nNew ways to answer old, long-standing research questions\n\nNew technologies also have social implications and can generate important policy questions.\n\nPrivacy issues\nUse of technology by bad actors.\nUse of technology by governments to censor/monitor citizens.\n\nPolicy scholars (but pretty much any researcher) need to be equipped to properly deal with these challenges"
   },
   {
     "objectID": "slides/week-1.html#data-science-for-public-policy",
     "href": "slides/week-1.html#data-science-for-public-policy",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "title": "PPOL 5203 - Data Science I: Foundations",
     "section": "Data Science for Public Policy",
-    "text": "Data Science for Public Policy\nData Scientist for Public Policy focuses on computational approaches to solve/understand Policy Problems.\n\nPart of a larger and new field called computational social sciente\nBut with a more policy-focus.\nWhat is social science? It refers to a domain of study - social phenomena:\n\nEncompasses many scales: human psychology, language, economic behavior, political systems, policy problems\nInvolve many approaches: qualitative interviews, statistical analysis, simulations\n\nWhat is Data Science?:\n\nUse often large-scale data + algorithms to answer questions"
+    "text": "Data Science for Public Policy\nData Scientist for Public Policy focuses on computational approaches to solve/understand policy problems.\n\nPart of a larger and new field called computational social science\nSocial science\n\nUnderstands human behavior: human psychology, language, economic behavior, political systems, policy problems\nInvolve many approaches: qualitative interviews, statistical analysis, simulations\n\nData Science:\n\nTools to work with large-scale data + learning models + novel data sources"
   },
   {
     "objectID": "slides/week-1.html#an-example-data-donation-whatsapp-groups",
     "href": "slides/week-1.html#an-example-data-donation-whatsapp-groups",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "title": "PPOL 5203 - Data Science I: Foundations",
     "section": "An example: Data Donation WhatsApp Groups",
     "text": "An example: Data Donation WhatsApp Groups"
   },
   {
     "objectID": "slides/week-1.html#all-the-steps-tools-....-so-far-...",
     "href": "slides/week-1.html#all-the-steps-tools-....-so-far-...",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "title": "PPOL 5203 - Data Science I: Foundations",
     "section": "All the steps + Tools .... so far ...",
-    "text": "All the steps + Tools .... so far ...\n\nStep 1: Recruiting participants online\n\nOnline Panels + Facebook Ads\n\nStep 2: Running online surveys\n\nQualtrics + R\n\nStep 3: Development of data donation pipeline (with MDI)\n\nJavaScript (JS) + Python\n\nStep 4: Analyze the data\n\nSQL + Python + R"
+    "text": "All the steps + Tools .... so far ...\n\nStep 1: Recruiting participants online (SS)\n\nOnline Panels + Facebook Ads\n\nStep 2: Running online surveys (SS)\n\nQualtrics + R\n\nStep 3: Development of data donation pipeline (with MDI) (DS/CS)\n\nJavaScript (JS) + Python\n\nStep 4: Analyze the data (SS/DS)\n\nSQL + Python + R"
   },
   {
     "objectID": "slides/week-1.html#readings-for-this-week",
     "href": "slides/week-1.html#readings-for-this-week",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "title": "PPOL 5203 - Data Science I: Foundations",
     "section": "Readings for this week",
-    "text": "Readings for this week\n\nBit by Bit: Social Research in the Digital Age By Mathew Salganik\nIntroduction\nObserving Behavior\nTraining Computational Social Science PhD Students for Academic and Non-Academic Careers - Written by me and some colleagues in academia, industry and non-profits"
+    "text": "Readings for this week\n\nBit by Bit: Social Research in the Digital Age By Mathew Salganik\n\nIntroduction\nObserving Behavior\n\nTraining Computational Social Science PhD Students for Academic and Non-Academic Careers - Written by me and some colleagues in academia, industry and non-profits"
   },
   {
     "objectID": "slides/week-1.html#goals-of-the-course",
     "href": "slides/week-1.html#goals-of-the-course",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "title": "PPOL 5203 - Data Science I: Foundations",
     "section": "Goals of the course",
-    "text": "Goals of the course\n\nThe goal of this course is to teach you:\n\nComputational thinking: how to approach problems and devise solutions from a computational perspective.\nGet you started on Python and a bit of SQL for applied data science; lay the foundations for the remainder of the core sequence\nWorkflows and tools: Git/Github + Commandline."
+    "text": "Goals of the course\n\nThe goal of this course is to teach you:\n\nComputational thinking: how to approach problems and devise solutions from a computational perspective.\nGet you started on Python, introduce some useful tools (scrapping, text analysis and API applications of GenAI models), and bit of SQL for applied data science; lay the foundations for the remainder of the core DS sequence\nWorkflows and tools: Git/Github + Commandline."
   },
   {
     "objectID": "slides/week-1.html#course-schedule",
     "href": "slides/week-1.html#course-schedule",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "title": "PPOL 5203 - Data Science I: Foundations",
     "section": "Course Schedule",
-    "text": "Course Schedule"
+    "text": "Course Schedule\n\n\n\n\n\n\n\n\nWeek\nTopic\nDate\n\n\n\n\nWeek 01\nIntroduction, Installations, IDEs, Command line\nSeptember 09, 2025\n\n\nWeek 02\nVersion Control, Workflow and Reproducibility: Or a bit of Git & GitHub\nSeptember 16, 2025\n\n\nWeek 03\nIntro to Python - OOP, Data Types, Control Statements and Functions\nSeptember 23, 2025\n\n\nWeek 04\nIntro to Python II: Scaling up your code - Iteration, Comprehension and Functions\nSeptember 30, 2025\n\n\nWeek 05\nFrom Nested lists to Dataframes: Numpy and Intro to Pandas\nOctober 07, 2025\n\n\nWeek 06\nPandas II: Data Wrangling\nOctober 14, 2025\n\n\nWeek 07\nJoining, Tidying and Visualizing Data\nOctober 21, 2025\n\n\nWeek 08\nScraping + APIs\nOctober 28, 2025\n\n\nWeek 09\nStatistical Learning\nNovember 04, 2025\n\n\nWeek 10\nText as Data I: Discovery and Topics\nNovember 11, 2023\n\n\nWeek 11\nText as Data II: Supervised Learning\nNovember 18, 2025\n\n\nWeek 12\nGenerative AI: Classification, Surveys and Prompting (Invited Speaker - Dr. Patrick Wu, American University)\nNovember 25, 2025\n\n\nWeek 13\nSQL\nDecember 03, 2024\n\n\nWeek 14\nPresentations of Final Projects\nDecember 09, 2023"
   },
   {
     "objectID": "slides/week-1.html#about-me",
@@ -583,30 +583,30 @@
   {
     "objectID": "slides/week-1.html#quiz",
     "href": "slides/week-1.html#quiz",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "title": "PPOL 5203 - Data Science I: Foundations",
     "section": "Quiz!",
     "text": "Quiz!\nWhich programming language did I use the most at?\n\nPhD\nPostdoc\nTwitter\nAs a Faculty"
   },
   {
     "objectID": "slides/week-1.html#a-comment-from-the-pre-course-survey-from-last-year",
     "href": "slides/week-1.html#a-comment-from-the-pre-course-survey-from-last-year",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "title": "PPOL 5203 - Data Science I: Foundations",
     "section": "A comment from the pre-course survey (from last year)",
     "text": "A comment from the pre-course survey (from last year)\n\nHi professor Ventura! I noticed that we gonna learn multiple data analysis tool this semester and I am definitely a novice of data science. I am little worried about how can I master all of them without being confused, because some commands might be very similar."
   },
   {
     "objectID": "slides/week-1.html#your-turn",
     "href": "slides/week-1.html#your-turn",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "title": "PPOL 5203 - Data Science I: Foundations",
     "section": "Your turn!",
     "text": "Your turn!\n\nName\n(Briefly) what you were up to prior to the DSPP\nIf you could have any data source at your disposal, what would it be?"
   },
   {
     "objectID": "slides/week-1.html#logistics",
     "href": "slides/week-1.html#logistics",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "title": "PPOL 5203 - Data Science I: Foundations",
     "section": "Logistics",
-    "text": "Logistics\n\n\nCommunication: via slack. Join the workspace!\nAll materials: hosted on the class website: https://tiagoventura.github.io/ppol5203/\nSyllabus: also on the website.\nMy Office Hours: Every tuesday from 4 to 6pm. Just stop by!\nCanvas: Only for official communication! Materials will be hosted in the website!\nDatacamp: Additional exercises! I will assign modules for you! Access our free account here\n\n\n\n\n−+\n05:00"
+    "text": "Logistics\n\n\nCommunication: via slack. Join the workspace!\nAll materials: hosted on the class website: https://tiagoventura.github.io/ppol5203/\nSyllabus: also on the website.\nMy Office Hours: Every tuesday from 4 to 5pm. Just stop by!\nCanvas: Only for official communication! Materials will be hosted in the website!\nDatacamp: Additional exercises! Access our free account here\n\n\n\n\n−+\n05:00"
   },
   {
     "objectID": "slides/week-1.html#tas",
@@ -618,30 +618,30 @@
   {
     "objectID": "slides/week-1.html#evaluation",
     "href": "slides/week-1.html#evaluation",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "title": "PPOL 5203 - Data Science I: Foundations",
     "section": "Evaluation",
     "text": "Evaluation\n\n\n\nAssignment\nPercentage of Grade\n\n\n\n\nParticipation/Attendance\n5%\n\n\nCoding Discussion\n5%\n\n\nProblem sets\n50%\n\n\nFinal Project\n40%"
   },
   {
     "objectID": "slides/week-1.html#problem-sets",
     "href": "slides/week-1.html#problem-sets",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "title": "PPOL 5203 - Data Science I: Foundations",
     "section": "Problem Sets",
     "text": "Problem Sets\nIndividual submission through GitHub.\n\n\n\nAssignment\nDate Assigned\nDate Due\n\n\n\n\nNo. 1\nWeek 2\nBefore EOD of Friday of Week 3\n\n\nNo. 2\nWeek 4\nBefore EOD of Friday of Week 5\n\n\nNo. 3\nWeek 6\nBefore EOD of Friday of Week 7\n\n\nNo. 4\nweek 8\nBefore EOD of Friday of Week 9\n\n\nNo. 5\nNovember 10\nBefore EOD of Friday of Week 111"
   },
   {
     "objectID": "slides/week-1.html#final-project",
     "href": "slides/week-1.html#final-project",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "title": "PPOL 5203 - Data Science I: Foundations",
     "section": "Final Project",
-    "text": "Final Project\n\nYou will work on randomly assigned groups!\nThe project is composed of three parts:\n\na 2 page project proposal: (which should be discussed and approved by me)\nan in-class presentation,\nA 10-page project report."
+    "text": "Final Project\n\nYou will work on groups!\nThe project is composed of three parts:\n\na 2 page project proposal: (which should be discussed and approved by me)\nan in-class presentation,\nA 10-page project report."
   },
   {
     "objectID": "slides/week-1.html#due-dates-and-points",
     "href": "slides/week-1.html#due-dates-and-points",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "title": "PPOL 5203 - Data Science I: Foundations",
     "section": "Due dates and Points:",
-    "text": "Due dates and Points:\n\n\n\nRequirement\nDue\nLength\nPercentage\n\n\n\n\nProject Proposal\nOctober 31\n2 pages\n5%\n\n\nPresentation\nDecember 10\n10-15 minutes\n10%\n\n\nProject Report\nDecember 17\n10 pages\n25%"
+    "text": "Due dates and Points:\n\n\n\nRequirement\nDue\nLength\nPercentage\n\n\n\n\nProject Proposal\nOctober 31\n2 pages\n5%\n\n\nPresentation\nDecember 09\n10-15 minutes\n10%\n\n\nProject Report\nDecember 16\n10 pages\n25%"
   },
   {
     "objectID": "slides/week-1.html#chatgpt",
@@ -653,37 +653,37 @@
   {
     "objectID": "slides/week-1.html#summary-of-the-survey",
     "href": "slides/week-1.html#summary-of-the-survey",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "title": "PPOL 5203 - Data Science I: Foundations",
     "section": "Summary of the survey",
-    "text": "Summary of the survey\n\n72% of you have some experience with Python.\nOnly three of you were using primarily Python in your work before!\n\nMost others are using R and Excel!\n\nYou all have Python in your laptops, some still do not have a github account. If you are having issue after today, talk to your TAs.\nMain Policy Areas:\n\nSocial Media/Tech (Talk to me!)\nElection (aha! great timing for it!)\nEducation (Talk with Professor Johnson)"
+    "text": "Summary of the survey\n\nMost of you have some experience with Python.\nOnly three of you were using primarily Python in your work before!\n\nMost others are using R and Excel!\n\nMost of you have Python in your laptops, some still do not have a github account. If you are having issues after today, talk to your TAs.\nMain Policy Areas:\n\nSocial Media/Tech (Talk to me!)\nElection (aha! great timing for it!)\nEducation (Talk with Professor Johnson)"
   },
   {
     "objectID": "slides/week-1.html#open-ended",
     "href": "slides/week-1.html#open-ended",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "title": "PPOL 5203 - Data Science I: Foundations",
     "section": "Open Ended",
     "text": "Open Ended\n\nMost of you are worried, slightly anxious Python is hard, and you will not be able to keep up.\n\n\n\nPython is definitely harder than excel and stata.\nBut you will be fine!\nOur approach: We start slow, cover the basics, and move fast!"
   },
   {
     "objectID": "slides/week-1.html#set-up-your-course-infra-structure",
     "href": "slides/week-1.html#set-up-your-course-infra-structure",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "title": "PPOL 5203 - Data Science I: Foundations",
     "section": "Set up your course infra-structure",
-    "text": "Set up your course infra-structure\nSee Course Website"
+    "text": "Set up your course infra-structure\nSee Course Website\n\nInstall Python\nInstall Jupyter\nSetup your Git/Github account\n\nHomework: Try to make one successful Git push before class next week."
   },
   {
     "objectID": "slides/week-1.html#jupyter",
     "href": "slides/week-1.html#jupyter",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "title": "PPOL 5203 - Data Science I: Foundations",
     "section": "Jupyter:",
-    "text": "Jupyter:\nSee Jupyter Notebook in the Class Website\nNote on my approach on Notebooks: I will go over quite quickly through the notebooks. You shouls run them by yourselves at a later point!"
+    "text": "Jupyter:\nJupyter Notebook Tutorial in the Class Website\nNote on my approach on Notebooks: I will go over quite quickly through the notebooks. You should run them by yourselves at a later point!"
   },
   {
     "objectID": "slides/week-1.html#command-line",
     "href": "slides/week-1.html#command-line",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "title": "PPOL 5203 - Data Science I: Foundations",
     "section": "Command Line",
-    "text": "Command Line\nSee Command Line Tutorial in the Class Website"
+    "text": "Command Line\nCommand Line Tutorial in the Class Website"
   },
   {
     "objectID": "slides/week-1.html#quarto",
@@ -695,7 +695,7 @@
   {
     "objectID": "slides/week-1.html#datacamp-course",
     "href": "slides/week-1.html#datacamp-course",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "title": "PPOL 5203 - Data Science I: Foundations",
     "section": "Datacamp Course",
     "text": "Datacamp Course\nIntroduction to Shell"
   },
@@ -789,5 +789,89 @@
     "title": "Syllabus: PPOL 5203 - Data Science I: Foundations",
     "section": "Georgetown Policies",
     "text": "Georgetown Policies\n\nDisability\nIf you believe you have a disability, then you should contact the Academic Resource Center (arc@georgetown.edu) for further information. The Center is located in the Leavey Center, Suite 335 (202-687-8354). The Academic Resource Center is the campus office responsible for reviewing documentation provided by students with disabilities and for determining reasonable accommodations in accordance with the Americans with Disabilities Act (ASA) and University policies. For more information, go to http://academicsupport.georgetown.edu/disability/\n\n\nImportant Academic Policies and Academic Integrity\nMcCourt School students are expected to uphold the academic policies set forth by Georgetown University and the Graduate School of Arts and Sciences. Students should therefore familiarize themselves with all the rules, regulations, and procedures relevant to their pursuit of a Graduate School degree. The policies are located at: http://grad.georgetown.edu/academics/policies/\nApplied to this course, while I encourage collaboration on assignments and use of resources like StackOverflow, the problem sets will ask you to list who you worked on the problem set with and cite StackOverflow if it is the direct source of a code snippet.\n\n\nStatement on Sexual Misconduct\nGeorgetown University and its faculty are committed to supporting survivors and those impacted by sexual misconduct, which includes sexual assault, sexual harassment, relationship violence, and stalking. Georgetown requires faculty members, unless otherwise designated as confidential, to report all disclosures of sexual misconduct to the University Title IX Coordinator or a Deputy Title IX Coordinator. If you disclose an incident of sexual misconduct to a professor in or outside of the classroom (with the exception of disclosures in papers), that faculty member must report the incident to the Title IX Coordinator, or Deputy Title IX Coordinator. The coordinator will, in turn, reach out to the student to provide support, resources, and the option to meet. [Please note that the student is not required to meet with the Title IX coordinator.]. More information about reporting options and resources can be found on the Sexual Misconduct\nWebsite: https://sexualassault.georgetown.edu/resourcecenter\nIf you would prefer to speak to someone confidentially, Georgetown has a number of fully confidential professional resources that can provide support and assistance. These resources include: Health Education Services for Sexual Assault Response and Prevention: confidential email: sarp[at]georgetown.edu\nCounseling and Psychiatric Services (CAPS): 202.687.6985 or after hours, call (833) 960-3006 to reach Fonemed, a telehealth service; individuals may ask for the on-call CAPS clinician\nMore information about reporting options and resources can be found on the Sexual Misconduct Website.\n\n\nProvost’s Policy on Religious Observances\nGeorgetown University promotes respect for all religions. Any student who is unable to attend classes or to participate in any examination, presentation, or assignment on a given day because of the observance of a major religious holiday or related travel shall be excused and provided with the opportunity to make up, without unreasonable burden, any work that has been missed for this reason and shall not in any other way be penalized for the absence or rescheduled work. Students will remain responsible for all assigned work. Students should notify professors in writing at the beginning of the semester of religious observances that conflict with their classes. The Office of the Provost, in consultation with Campus Ministry and the Registrar, will publish, before classes begin for a given term, a list of major religious holidays likely to affect Georgetown students. The Provost and the Main Campus Executive Faculty encourage faculty to accommodate students whose bona fide religious observances in other ways impede normal participation in a course. Students who cannot be accommodated should discuss the matter with an advising dean."
+  },
+  {
+    "objectID": "slides/week-1.html#powerful-and-cheap-computing-power",
+    "href": "slides/week-1.html#powerful-and-cheap-computing-power",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "Powerful and Cheap Computing Power",
+    "text": "Powerful and Cheap Computing Power"
+  },
+  {
+    "objectID": "slides/week-1.html#between-text-as-data-i-and-ii-i-might-have-some-updates",
+    "href": "slides/week-1.html#between-text-as-data-i-and-ii-i-might-have-some-updates",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "Between Text-as-Data I and II… I might have some updates…",
+    "text": "Between Text-as-Data I and II… I might have some updates…"
+  },
+  {
+    "objectID": "slides/week-1.html#section",
+    "href": "slides/week-1.html#section",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "",
+    "text": "https://www.washingtonpost.com/wp-dyn/content/graphic/2011/02/11/GR2011021100614.html"
+  },
+  {
+    "objectID": "slides/week-1.html#ta",
+    "href": "slides/week-1.html#ta",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "TA",
+    "text": "TA\n\nRebecca Wagner (DSPP Second-Year Student)\n\nEmail:rlw137@georgetown.edu\nOffice Hours:\n\nin person: Every Monday 2pm, McCourt, Room 602\nvirtual: Every Tuesday 7pm. Zoom link"
+  },
+  {
+    "objectID": "slides/week-1.html#genai",
+    "href": "slides/week-1.html#genai",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "GenAI",
+    "text": "GenAI\nYou are allowed to use GenAI as you would use google in this class. This means:\n\nDo not copy the responses from GenAI Chatbots – a lot of them are wrong or will just not run on your computer\nUse GenAI Chatbots as a auxiliary source.\nIf your entire homework comes straight from GenAI Chatbots, I will consider it plagiarism.\nIf you use GenAI Chatbots, I ask you to mention on your code how chatgpt worked for you."
+  },
+  {
+    "objectID": "slides/week-1.html#additional-materials-quarto",
+    "href": "slides/week-1.html#additional-materials-quarto",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "Additional Materials: Quarto",
+    "text": "Additional Materials: Quarto\nSee Quarto Notebook in the Class Website"
+  },
+  {
+    "objectID": "slides/week-1.html#world-of-generative-ai-models",
+    "href": "slides/week-1.html#world-of-generative-ai-models",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "World of Generative AI Models",
+    "text": "World of Generative AI Models\n\n\nError in knitr::include_graphics(\"week1_figs/gpt.png\"): Cannot find the file(s): \"week1_figs/gpt.png\""
+  },
+  {
+    "objectID": "slides/week-1.html#as-a-consequence-we-live-in-a-world",
+    "href": "slides/week-1.html#as-a-consequence-we-live-in-a-world",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "As a consequence, we live in a world:",
+    "text": "As a consequence, we live in a world:\n\nWith abundance of data we can use for research and policy decisions:\n\nInternet data, social media, geo-tracking tools, etc…\n\nWith easily available technologies to analyze this data at scale\n\nYour laptops, cloud computing, ChatBots…\n\nBut with new technologies that also have novel social implications:\n\nPrivacy issues\nUse of technology by bad actors.\nUse of technology by governments to censor/monitor citizens.\n\nPolicy scholars (but pretty much any researcher) need to be equipped to properly work with this data and understand the effects of these news technologies"
+  },
+  {
+    "objectID": "slides/week-1.html#section-1",
+    "href": "slides/week-1.html#section-1",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "",
+    "text": "Professor Tiago Ventura (he/him)\n\nAssistant Professor at McCourt School.\nPolitical Science PhD\nPostdoc at Center for Social Media and Politics - NYU.\nResearcher at Twitter.\n\n\n\nMy Research: Effects of technology in politics + applications of computational models to social science:\n\nGlobal Social Media Deactivation.\nDeveloping a data donation pipeline for WhatsApp data.\nMeasuring Humanness vs AI-Generated Content on Social Media.\nUsing LLMs to augment web-browsing data with synthetic data\n\n\n\nOutside of work, I enjoy watching soccer, reading sci-fi and running"
+  },
+  {
+    "objectID": "slides/week-1.html#digital-information-age",
+    "href": "slides/week-1.html#digital-information-age",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "Digital information age",
+    "text": "Digital information age\n\n\n\n\n\n\n\n\n\n\n\nhttps://www.washingtonpost.com/wp-dyn/content/graphic/2011/02/11/GR2011021100614.html"
+  },
+  {
+    "objectID": "slides/week-1.html#misinformation-on-whatsapp",
+    "href": "slides/week-1.html#misinformation-on-whatsapp",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "Misinformation on WhatsApp",
+    "text": "Misinformation on WhatsApp"
+  },
+  {
+    "objectID": "slides/week-1.html#data-donation-whatsapp-groups",
+    "href": "slides/week-1.html#data-donation-whatsapp-groups",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "Data Donation WhatsApp Groups",
+    "text": "Data Donation WhatsApp Groups"
   }
 ]

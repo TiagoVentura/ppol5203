@@ -45,7 +45,7 @@ After completing this course, the students will be able to:
 ## Teaching Assistants:
 
 -   Rebecca Wagner (DSPP Second-Year Student)
-    -   Email:rlw137@georgetown.edu
+    -   Email:rlw137\@georgetown.edu
     -   Office Hours:
         -   in person: Every Monday 2pm, McCourt, Room 602
         -   virtual: Every Tuesday 7pm. [Zoom link](https://georgetown.zoom.us/j/94242889689)
