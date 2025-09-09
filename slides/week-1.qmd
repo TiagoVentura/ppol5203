@@ -9,8 +9,8 @@ format:
   revealjs: 
     transition: slide
     background-transition: fade
-    width: 1200 #1050
-    height: 800 #700
+    width: 1300 #1050
+    height: 900 #700
     center: true
     slide-number: true
     incremental: true
