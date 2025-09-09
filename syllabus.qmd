@@ -1,20 +1,6 @@
 ---
 title: "Syllabus: PPOL 5203 - Data Science I: Foundations "
 subtitle: "Data Science and Public Policy, McCourt School for Public Polcy, Georgetown University"
-listing:
-  - id: schedule
-    contents:
-      - weeks/week-*.qmd
-    type: table
-    fields: [title, subtitle, date]
-    field-display-names:
-      title: "Week"
-      description: "Dates"
-      subtitle: "Topic"
-    date-format: "MMMM DD, YYYY"
-    sort: [filename]
-    sort-ui: false
-    filter-ui: false
 ---
 
 ## Course Description

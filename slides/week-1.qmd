@@ -40,9 +40,9 @@ format:
 
 -   Introduction to commandline
 
-# Motivation:Digital Information Age {background-color="#447099"}
+# Motivation: Digital Information Age {background-color="#447099"}
 
-## 
+## Abundance of data
 
 ```{r  echo=FALSE, out.width = "80%", fig.align="center"}
 knitr::include_graphics("week1_figs/digital.jpeg") 
@@ -54,23 +54,29 @@ knitr::include_graphics("week1_figs/digital.jpeg")
 knitr::include_graphics("week1_figs/collab.png") 
 ```
 
-
 ## World of Generative AI Models
 
 ```{r  echo=FALSE, out.width = "80%", fig.align="center"}
-knitr::include_graphics("week1_figs/gpt.png") 
+knitr::include_graphics("https://diplo-media.s3.eu-central-1.amazonaws.com/2025/03/openai-chatgpt-surge-deepseek.jpg") 
 ```
 
 ## As a consequence, we live in a world:
 
--  **With** abundance of data we can use for research and policy decisions:
+::: nonincremental
+
+:::fragment
+-  **With** abundance of data we can use for research and to recommend policy decisions:
    
    - Internet data, social media, geo-tracking tools, etc...
-   
+:::
+
+:::fragment
 -  **With** easily available technologies to analyze this data at scale
 
    - Your laptops, cloud computing, ChatBots...
-   
+:::
+
+:::fragment
 -  **But** with new technologies that also have novel social implications:
 
     -   Privacy issues
@@ -78,23 +84,33 @@ knitr::include_graphics("week1_figs/gpt.png")
     -   Use of technology by bad actors.
 
     -   Use of technology by governments to censor/monitor citizens.
+:::
 
+:::fragment
 -   Policy scholars (but pretty much any researcher) need to be equipped to properly **work** with this data  and **understand** the effects of these news technologies
-
+:::
+:::
 ## Data Science for Public Policy
 
 [Data Scientist for Public Policy]{.red} focuses on **computational approaches** to solve/understand **policy problems**.
 
--   Part of a larger and new field called [computational social science](https://en.wikipedia.org/wiki/Computational_social_science)
+-   It is part of a larger and new field called [computational social science](https://en.wikipedia.org/wiki/Computational_social_science)
 
+:::nonincremental
+
+:::fragment
 -   **Social science** 
 
     -   Understands human behavior: human psychology, language, economic behavior, political systems, policy problems
     -   Involve many **approaches**: qualitative interviews, statistical analysis, simulations
+:::
 
+:::fragment
 -   **Data Science**:
 
     -   Tools to work with large-scale data + learning models + novel data sources
+:::    
+:::
     
 
 # Computational Social Science in Practice
@@ -245,7 +261,7 @@ knitr::include_graphics("../baby.jpeg")
 
 -   **Canvas**: Only for official communication! Materials will be hosted in the website!
 
--   **Datacamp**: Additional exercises! Access our free account [here](https://www.datacamp.com/groups/shared_links/30765dd1c783b864ab9ad885cb08a129b7113054664cddb1446f4e3d46b4605d)
+-   **Datacamp**: Additional exercises! Access our free account [here](https://www.datacamp.com/groups/shared_links/0cd82dc4f5a0c59ebb098f26fb7f36a57274d17b315e0dcf27a023fe189a0161)
 
 ```{r}
 library(countdown)
@@ -336,7 +352,7 @@ countdown(minutes = 10, seconds = 0,
 
 -   Most of you have [some]{.red} experience with Python.
 
--   [Only three]{.red} of you were using primarily Python in your work before!
+-   [Very few]{.red} of you were using primarily Python in your work before!
 
     -   Most others are using R and Excel!
 
@@ -345,20 +361,33 @@ countdown(minutes = 10, seconds = 0,
 -   Main Policy Areas:
 
     -   Social Media/Tech (Talk to me!)
-    -   Election (aha! great timing for it!)
+    -   Election (Talk to Professor Warshaw, Bailey or Ladd)
     -   Education (Talk with Professor Johnson)
 
 ## Open Ended
 
--   Most of you are worried, slightly anxious Python is hard, and you will not be able to keep up.
+- this is a big group of international students, and some are concerned about not having english as you first language!
+  
+    - THIS IS FINE ! I hope my non-native and strongly accented English will encourage you to participate in class and speak up!
+
+::: fragment
+>"That's just what translation is, I think. That's all speaking is. Listening to the other and trying to see past your own biases to glimpse what they're trying to say. Showing yourself to the world, and hoping someone else understands."
+- R.F. Kuang, Babel
+:::
+
+
+
+## Open Ended
+
+Some of you are slightly anxious about Python and the pace of the class
 
 ::: incremental
 
--   Python is definitely harder than excel and stata.
+   -   Python is definitely harder than excel and stata.
 
--   But you will be fine!
+   -   But you will be fine!
 
--   **Our approach**: We start slow, cover the basics, and move fast!
+   -   **Our approach**: We start slow, cover the basics, and move fast!
 :::
 
 # `r fontawesome::fa("laptop-code")` Transiton: Coding!
@@ -388,7 +417,9 @@ countdown(minutes = 10, seconds = 0,
 
 ## Datacamp Course
 
-[Introduction to Shell](https://app.datacamp.com/learn/courses/introduction-to-shell)
+
+- join 
+- [Introduction to Shell](https://app.datacamp.com/learn/courses/introduction-to-shell)
 
 ## Additional Materials: Quarto
 

@@ -13116,8 +13116,8 @@ Tiago Ventura </center><h1></p>
 <li>machine learning (some!!), </li>
 <li>And much more. </li>
 </ul>
-<p><strong>What doesn't go on a Jupyter Notebook?</strong></p>
-<p>When running time and computational intensive models, particulrly making you of cloud-computing, you will often test your code on a notebook, but submit for running as a .py file.</p>
+<p><strong>What doesn't go well on a Jupyter Notebook?</strong></p>
+<p>When running time and computational intensive models, particularly making use of cloud-computing, you will often test your code on a notebook, but submit for running as a .py file.</p>
 <h3 id=".ipynb-is-really-a-JSON-file"><code>.ipynb</code> is really a <code>JSON</code> file<a class="anchor-link" href="#.ipynb-is-really-a-JSON-file">&#182;</a></h3><p>At it's core, an Jupyter notebook is a <a href="https://en.wikipedia.org/wiki/JSON">JSON (JavaScript Object Notation) file</a>.</p>
 <p>Open a notebook with a text editor and you will see it!</p>
 
@@ -13210,7 +13210,7 @@ Tiago Ventura </center><h1></p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Usage">Usage<a class="anchor-link" href="#Usage">&#182;</a></h1><h2 id="Code-Chunks">Code Chunks<a class="anchor-link" href="#Code-Chunks">&#182;</a></h2><p>Code chunks are what we use to execute Python (or whatever kernel we have running) code. In addition, we can write prose in a code chunk by altering the metadata regarding how the code should be run.</p>
+<h1 id="Usage">Usage<a class="anchor-link" href="#Usage">&#182;</a></h1><h2 id="Code-Chunks">Code Chunks<a class="anchor-link" href="#Code-Chunks">&#182;</a></h2><p>Code chunks are what we use to execute Python -- or whatever kernel we have running code. In addition, we can write prose in a code chunk by altering the metadata regarding how the code should be run.</p>
 <p>There are <strong>two states</strong> of a code chunk:</p>
 <ul>
 <li><strong>Edit Mode</strong>: Edit mode is indicated by a <font color ="green">green cell border</font> and a prompt showing in the editor area. When a cell is in edit mode, you can type into the cell, like a normal text editor. Enter edit mode by pressing Enter or using the mouse to click on a cell's editor area.</li>
@@ -13218,11 +13218,11 @@ Tiago Ventura </center><h1></p>
 <ul>
 <li><strong>Command Mode</strong>: Command mode is indicated by a grey cell border with a <font color = "blue">blue left margin</font>. When you are in command mode, you are able to edit the notebook as a whole, but not type into individual cells. Most importantly, in command mode, the keyboard is mapped to a set of shortcuts that let you perform notebook and cell actions efficiently. For example, if you are in command mode and you press c, you will copy the current cell - no modifier is needed. Don't try to type into a cell in command mode. Enter command mode by pressing <code>Esc</code> or using the mouse to click outside a cell's editor area.</li>
 </ul>
-<h4 id="We-to-switch-between-Markdown-and-Code-chunks-?">We to <strong>switch between Markdown and Code chunks</strong> ?<a class="anchor-link" href="#We-to-switch-between-Markdown-and-Code-chunks-?">&#182;</a></h4><ul>
-<li>By using the <strong><em>drop down menu</em></strong> in the tool bar (in either mode)</li>
-</ul>
+<h4 id="How-to-switch-between-Markdown-and-Code-chunks-?">How to <strong>switch between Markdown and Code chunks</strong> ?<a class="anchor-link" href="#How-to-switch-between-Markdown-and-Code-chunks-?">&#182;</a></h4><ul>
+<li><p>By using the <strong><em>drop down menu</em></strong> in the tool bar (in either mode)</p>
+</li>
+<li><p>By using the <strong><em>shortcut</em></strong>:</p>
 <ul>
-<li>By using the <strong><em>shortcut</em></strong>:<ul>
 <li>Press <code>y</code> when on the cell in Command Mode to switch to a code chunk.</li>
 <li>Press <code>m</code> when on the cell in Command Mode to switch to a markdown chunk</li>
 </ul>
@@ -13254,6 +13254,19 @@ Tiago Ventura </center><h1></p>
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13269,6 +13282,13 @@ Tiago Ventura </center><h1></p>
 <li><code>shift</code> + <code>m</code>: merge cells (when more than one cell is highlighted)</li>
 <li><code>dd</code>: delete cell.</li>
 </ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>Important ones while in Edit Mode:</p>
 <ul>
 <li><code>shit</code> + <code>ctrl</code> + <code>minus</code>: split cell</li>
@@ -13294,7 +13314,7 @@ Tiago Ventura </center><h1></p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">lsmagic</span>
@@ -13310,7 +13330,7 @@ Tiago Ventura </center><h1></p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[1]:</div>
+    <div class="prompt output_prompt">Out[2]:</div>
 
 
 
@@ -13398,7 +13418,7 @@ Automagic is ON, % prefix IS NOT needed for line magics.</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">cd</span> ~/Dropbox
@@ -13429,7 +13449,7 @@ Automagic is ON, % prefix IS NOT needed for line magics.</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">pwd</span>
@@ -13445,7 +13465,7 @@ Automagic is ON, % prefix IS NOT needed for line magics.</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[22]:</div>
+    <div class="prompt output_prompt">Out[6]:</div>
 
 
 
@@ -13470,7 +13490,7 @@ Automagic is ON, % prefix IS NOT needed for line magics.</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">cd</span> -b Home
@@ -13502,7 +13522,7 @@ Automagic is ON, % prefix IS NOT needed for line magics.</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">pwd</span>
@@ -13518,7 +13538,7 @@ Automagic is ON, % prefix IS NOT needed for line magics.</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[24]:</div>
+    <div class="prompt output_prompt">Out[8]:</div>
 
 
 
@@ -13543,7 +13563,7 @@ Automagic is ON, % prefix IS NOT needed for line magics.</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%writefile</span> my_fib_func.py
@@ -13585,10 +13605,10 @@ Automagic is ON, % prefix IS NOT needed for line magics.</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">ls</span> # list files ( see our function)
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">ls</span> # list files (see our function)
 </pre></div>
 
     </div>
@@ -13607,9 +13627,9 @@ Automagic is ON, % prefix IS NOT needed for line magics.</pre>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>_basics_of_cmd.html             _using-jupyter-notebooks.ipynb
 _basics_of_cmd.ipynb            course_infrastructure.qmd
+<span class="ansi-blue-fg">_minimal_example_python_files</span>/  <span class="ansi-blue-fg">intro-to-quarto_files</span>/
 _minimal_example_python.html    intro-to-quarto.qmd
-_minimal_example_python.qmd     <span class="ansi-blue-fg">intro-to-quarto_files</span>/
-<span class="ansi-blue-fg">_minimal_example_python_files</span>/  my_fib_func.py
+_minimal_example_python.qmd     my_fib_func.py
 _using-jupyter-notebooks.html
 </pre>
 </div>
@@ -13628,7 +13648,7 @@ _using-jupyter-notebooks.html
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># %load my_fib_func.py</span>
@@ -13659,7 +13679,7 @@ _using-jupyter-notebooks.html
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">run</span> my_fib_func.py
@@ -13771,7 +13791,7 @@ Wall time: 28.1 µs
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">main_dat</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
@@ -13843,7 +13863,7 @@ Wall time: 28.1 µs
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">psearch</span> <span class="n">main</span><span class="o">*</span>
@@ -13856,7 +13876,7 @@ Wall time: 28.1 µs
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pwd</span>
@@ -13872,7 +13892,7 @@ Wall time: 28.1 µs
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[40]:</div>
+    <div class="prompt output_prompt">Out[7]:</div>
 
 
 
@@ -13889,7 +13909,7 @@ Wall time: 28.1 µs
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">timeit</span> <span class="n">fib</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -13909,7 +13929,7 @@ Wall time: 28.1 µs
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>682 ns ± 9.24 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
+<pre>679 ns ± 3.22 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
 </pre>
 </div>
 </div>
@@ -13921,7 +13941,8 @@ Wall time: 28.1 µs
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>answer:</strong> actually no. You can use the magin</p>
+<p><strong>Answer:</strong> actually no. You can use the magic comands without the % signal. This is because most recent versions of Jupyter Notebooks actually incorporated these as default functions. those are called "AutoMagic" feature.</p>
+<p><strong>But it is good to know you are calling a special function, and not something programmed in python</strong></p>
 
 </div>
 </div>
@@ -13958,7 +13979,7 @@ jupyter nbextensions_configurator enable --user</code></pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter<span class="w"> </span>nbconvert<span class="w"> </span>_using-jupyter-notebooks.ipynb<span class="w"> </span>--to<span class="w"> </span>html<span class="w"> </span>--template<span class="w"> </span>classic
@@ -13979,7 +14000,7 @@ jupyter nbextensions_configurator enable --user</code></pre>
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[NbConvertApp] Converting notebook _using-jupyter-notebooks.ipynb to html
-[NbConvertApp] Writing 309206 bytes to _using-jupyter-notebooks.html
+[NbConvertApp] Writing 308849 bytes to _using-jupyter-notebooks.html
 </pre>
 </div>
 </div>
