@@ -263,6 +263,8 @@ knitr::include_graphics("../baby.jpeg")
 
 -   **Datacamp**: Additional exercises! Access our free account [here](https://www.datacamp.com/groups/shared_links/0cd82dc4f5a0c59ebb098f26fb7f36a57274d17b315e0dcf27a023fe189a0161)
 
+- **Task:** go on slack and send me a message about the data source you choose in the last answer, and if you feel comfortable add a picture to your profile
+
 ```{r}
 library(countdown)
 countdown(minutes = 5, seconds = 0, 
