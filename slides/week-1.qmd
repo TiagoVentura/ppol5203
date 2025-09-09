@@ -169,7 +169,7 @@ The goal of this course is to teach you:
 
 # PPOL 5203 - Data Science I: Foundations {background-color="#447099"}
 
-## Course Schedule{style="font-size: .8em;"}
+## Course Schedule{style="font-size: .7em;"}
 
 | Week | Topic | Date |
 |---------------|----------------------------------------|-----------------|
