@@ -81,4 +81,6 @@ Link for practice exercise: https://classroom.github.com/a/epMgGVTy
 
 **Video about authentication**
 
-- [Using Personal Access Tokens with GIT and GitHub](https://www.youtube.com/watch?v=kHkQnuYzwoo)
+- [Using Personal Access Tokens with GIT and GitHub](https://www.youtube.com/watch?v=kHkQnuYzwoo)\
+
+- [Medium post](https://medium.com/@chiemekaifemegbulem/step-by-step-guide-to-updating-github-token-on-linux-terminal-a97c7117ed4b)
