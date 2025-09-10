@@ -36,7 +36,7 @@ tbl-colwidths: [10,50,40]
 
 # Lecture Notes
 
--   Version Control, Workflow and Reproducibility: Or a bit of Git & GitHub: [html](/lecture_notes/week-02/_version_control_git.html), <a href="/lecture_notes/week-02/_version_control_git.ipynb" download> notebook </a>
+-   Version Control, Workflow and Reproducibility: Git & GitHub. [html](/lecture_notes/week-02/_version_control_git.html), <a href="/lecture_notes/week-02/_version_control_git.ipynb" download> notebook </a>
 
 # Slides
 
