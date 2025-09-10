@@ -887,5 +887,306 @@
     "title": "PPOL 5203 - Data Science I: Foundations",
     "section": "Open Ended",
     "text": "Open Ended\nSome of you are slightly anxious about Python and the pace of the class\n\n\nPython is definitely harder than excel and stata.\nBut you will be fine!\nOur approach: We start slow, cover the basics, and move fast!"
+  },
+  {
+    "objectID": "slides/week-2.html",
+    "href": "slides/week-2.html",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "",
+    "text": "Best Practices for Data Science Workflow and Reproducibility\nVersion Control (Git and Github)\nIn-Class Exercise\nYour first homework\n\n\n\nthis lecture draws on materials from Simon Munzert Intro to Data Science + previous iterations of PPOL 5203."
+  },
+  {
+    "objectID": "slides/week-2.html#plans-for-today",
+    "href": "slides/week-2.html#plans-for-today",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Plans for Today",
+    "text": "Plans for Today\n\n\nBest Practices for Data Science Workflow and Reproducibility\nVersion Control (Git and Github)\nIn-Class Exercise\nYour first homework\n\n\n\n\nthis lecture draws on materials from Simon Munzert Intro to Data Science + previous iterations of PPOL 5203."
+  },
+  {
+    "objectID": "slides/week-2.html#readings-for-the-week",
+    "href": "slides/week-2.html#readings-for-the-week",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Readings for the Week",
+    "text": "Readings for the Week\n\nThe Plain Person’s Guide to Plain Text Social Science - Kieran Healy\nPro Git - Chacon & Straub\nLecture Notes"
+  },
+  {
+    "objectID": "slides/week-2.html#thats-what-we-generally-look-for-as-data-scientists",
+    "href": "slides/week-2.html#thats-what-we-generally-look-for-as-data-scientists",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "That’s what we generally look for as data scientists",
+    "text": "That’s what we generally look for as data scientists"
+  },
+  {
+    "objectID": "slides/week-2.html#but-we-often-dont-teach-students-how-to-organize-the-mess-behind-it.",
+    "href": "slides/week-2.html#but-we-often-dont-teach-students-how-to-organize-the-mess-behind-it.",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "But we often don’t teach students how to organize the mess behind it.",
+    "text": "But we often don’t teach students how to organize the mess behind it."
+  },
+  {
+    "objectID": "slides/week-2.html#we-often-assume-we-are-capable-of-keeping-track-our-own-work",
+    "href": "slides/week-2.html#we-often-assume-we-are-capable-of-keeping-track-our-own-work",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "We often assume we are capable of keeping track our own work",
+    "text": "We often assume we are capable of keeping track our own work"
+  },
+  {
+    "objectID": "slides/week-2.html#but-this-assumption-will-set-you-up-to-fail",
+    "href": "slides/week-2.html#but-this-assumption-will-set-you-up-to-fail",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "But this assumption will set you up to fail",
+    "text": "But this assumption will set you up to fail\n\nAs you advance on your career as a data scientist:\n\nYour projects will grow.\nYou will start collaborating with other colleagues (DS is fundamentally collaborative)\nYou will juggle through multiple project from now and from the past!\nProjects will come and go.\nYou will re-use code A LOT!"
+  },
+  {
+    "objectID": "slides/week-2.html#section",
+    "href": "slides/week-2.html#section",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "",
+    "text": "You need to set up a system to keep track of your work\n\nnot you.\nthe system!"
+  },
+  {
+    "objectID": "slides/week-2.html#reproducibility",
+    "href": "slides/week-2.html#reproducibility",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Reproducibility",
+    "text": "Reproducibility\n\nReproducibility is fundamental for any scientific project.\n\nIf your scientific findings cannot be replicated, it is not science, and you will be in trouble.\n\nIn practice, this means your projects need to be:\n\nfully replicated by others (that’s science)\nreplicable by you (that’s the practical reality)"
+  },
+  {
+    "objectID": "slides/week-2.html#best-practices-the-system",
+    "href": "slides/week-2.html#best-practices-the-system",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Best Practices (the system)",
+    "text": "Best Practices (the system)\n\nSelf Contained Projects\nDocumentation\nReadability\nNaming\nPortability\nVersion Control"
+  },
+  {
+    "objectID": "slides/week-2.html#self-contained-projects",
+    "href": "slides/week-2.html#self-contained-projects",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Self-Contained Projects",
+    "text": "Self-Contained Projects\nAlways consider your work in terms of projects.\n\nA project is a self-contained unit of data science work that can be shared and replicated\nA self-contained project has:\n\ncontent: data, code, outputs, literature, text\nmetadata: readme for the project and each folder, information about the tools you are running"
+  },
+  {
+    "objectID": "slides/week-2.html#example-of-project-setup",
+    "href": "slides/week-2.html#example-of-project-setup",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Example of Project Setup",
+    "text": "Example of Project Setup\n├── /data\n│   ├── /raw      \n│   ├── /processed  \n├── /docs \n├── /code\n|   |── 01_clean_xxx.py\n|   |── 01_analysis_xxx.py\n\n├── /literature      \n\n├── /output      \n│   ├── /tables      \n│   ├── /figures  \n├── /misc \n└── readme.txt"
+  },
+  {
+    "objectID": "slides/week-2.html#documentation",
+    "href": "slides/week-2.html#documentation",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Documentation",
+    "text": "Documentation\nUse # to describe every single step of your code\n\ndef distance_tree(geom, geo_neigh, n):\n    \"\"\"\"\n    function to calculate the closest point and get their index using scipy\n    geom: geo pandas data frame with the reference points\n    geo_neigh: geo pandas data frame the neighbors location point\n    n: str,  number of closest neighboors\n    \"\"\"\n\n    # convert geometries to numpy\n    n_geom = np.array(list(geom.geometry.apply(lambda x: (x.x, x.y))))\n    n_geo_neigh = np.array(list(geo_neigh.geometry.apply(lambda x: (x.x, x.y))))\n\n    # estimate the trees\n    btree = cKDTree(n_geo_neigh) # btreee neighbors\n\n    # captures distances and indexes\n    dist, idx = btree.query(n_geom, n)\n\nvs\n\ndef distance_tree(geom, geo_neigh, n):\n    n_geom = np.array(list(geom.geometry.apply(lambda x: (x.x, x.y))))\n    n_geo_neigh = np.array(list(geo_neigh.geometry.apply(lambda x: (x.x, x.y))))\n    btree = cKDTree(n_geo_neigh)\n    dist, idx = btree.query(n_geom, n)"
+  },
+  {
+    "objectID": "slides/week-2.html#readability",
+    "href": "slides/week-2.html#readability",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Readability",
+    "text": "Readability\nMake you code readable in plain english. This usually mean giving names to your variables and functions that fully describe what your intents are.\n\nAvoid:\n\nAbbreviation\nGeneric Names\nMisleading names\nCapitalization"
+  },
+  {
+    "objectID": "slides/week-2.html#naming",
+    "href": "slides/week-2.html#naming",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Naming",
+    "text": "Naming\nUse meaningful names for your code/data/notebooks.\n\nFile names should be meaningful\nDO NOT USE SPACES. Use snake case (_) style for you files and code\nAlso allows you to avoid capitalization (FileName → file_name)\n\n\n\n\ndata analysis 2.py → data_analysis_2.py\n\n\n\n\n\nmodel_analysis.py → model_analysis_het_treatment_effects_main_paper.py"
+  },
+  {
+    "objectID": "slides/week-2.html#portability",
+    "href": "slides/week-2.html#portability",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Portability",
+    "text": "Portability\n\nUse computational environments for your projects. (pyenv or conda)\nAvoid absolute file paths\n\nGood Examples: “preprocessing.py” “figures/model-1.png” ” /data/survey.csv”\nTerrible examples: “/Users/me/ppol5203/data.csv” - only exists in your machine!!!"
+  },
+  {
+    "objectID": "slides/week-2.html#quiz",
+    "href": "slides/week-2.html#quiz",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Quiz",
+    "text": "Quiz\n\nTake five minutes to talk to your colleague at your side. Discuss:\n\nWhat you do on your day to day work that is definitely not a best practice?\nWhat is the best practice for you code that you are most proud of?"
+  },
+  {
+    "objectID": "slides/week-2.html#what-is-version-control",
+    "href": "slides/week-2.html#what-is-version-control",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "What is version control?",
+    "text": "What is version control?\n\nVersion control is a system that records changes to a file or set of files over time so that you can recall specific versions later. (pro git)"
+  },
+  {
+    "objectID": "slides/week-2.html#why-version-control-in-theory",
+    "href": "slides/week-2.html#why-version-control-in-theory",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Why version control (in theory)?",
+    "text": "Why version control (in theory)?\n\n\n\n\n\n\n\n\n\n\n\nphdcomics.com"
+  },
+  {
+    "objectID": "slides/week-2.html#why-version-control-in-practice",
+    "href": "slides/week-2.html#why-version-control-in-practice",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Why version control (in practice)?",
+    "text": "Why version control (in practice)?\n\nAllows you to “rewind the tape” to earlier incarnations of your notes, drafts, papers and code\nIt is like Microsoft Word track changes but for your entire project\nEasily handle collaboration (contribute to other people’s work)\nAllows you to review, comment, and analyze other people’s codes\nHeavily adopted in the data science community"
+  },
+  {
+    "objectID": "slides/week-2.html#version-control-in-theory",
+    "href": "slides/week-2.html#version-control-in-theory",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Version Control in Theory",
+    "text": "Version Control in Theory\nKey concepts we will cover:\n\nGit and Github\nGit: snapshot + distributed VCS\nThree stages of git\nTime travel\nRemotes with Github"
+  },
+  {
+    "objectID": "slides/week-2.html#git-vs-github",
+    "href": "slides/week-2.html#git-vs-github",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Git vs Github",
+    "text": "Git vs Github\n\nGit: one of many options for version control in data science. Distributed system\nGit: is a commandline tool. That’s why we started with commandline last week.\nGithub: is a public remote host for Git repositories. A web-based platform to store git repos\n\nIt has much more features, for example, github actions, pages. We will go through some today\n\nTLDR: you will use git locally, and share and collaborate with others using Github remotely.\n\nCrucial to realize those two are different!"
+  },
+  {
+    "objectID": "slides/week-2.html#our-working-directory",
+    "href": "slides/week-2.html#our-working-directory",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Our Working Directory",
+    "text": "Our Working Directory"
+  },
+  {
+    "objectID": "slides/week-2.html#git-a-distributed-version-control-system",
+    "href": "slides/week-2.html#git-a-distributed-version-control-system",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Git: a distributed version control system",
+    "text": "Git: a distributed version control system\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis is the git system.\nit is distributed.\nExists in your local machine\n\n\n\n\n\n\nSource: pro git"
+  },
+  {
+    "objectID": "slides/week-2.html#the-three-stages-of-git",
+    "href": "slides/week-2.html#the-three-stages-of-git",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "The three stages of Git",
+    "text": "The three stages of Git"
+  },
+  {
+    "objectID": "slides/week-2.html#time-travel-in-git",
+    "href": "slides/week-2.html#time-travel-in-git",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Time travel in Git",
+    "text": "Time travel in Git"
+  },
+  {
+    "objectID": "slides/week-2.html#github-remote-git-repositories",
+    "href": "slides/week-2.html#github-remote-git-repositories",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Github (Remote Git Repositories)",
+    "text": "Github (Remote Git Repositories)"
+  },
+  {
+    "objectID": "slides/week-2.html#create-your-first-repository",
+    "href": "slides/week-2.html#create-your-first-repository",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Create your first repository",
+    "text": "Create your first repository\nCreate an empty directory to be our git walkthrough\n\n# check where you are\npwd \n# create dir\nmkdir gitwalkthrough\n# change cd\ncd gitwalkthrough\n\nCheck if you have a git\n\ngit status\n\nStart a repository\n\ngit init\n\nTracking and staging new files: make any changes you want locally on this repo. Then stage your changes\n\ngit add &lt;file name&gt;\n\nFirst commit\n\ngit commit -m \"add a tag\""
+  },
+  {
+    "objectID": "slides/week-2.html#git-in-practice-ii-time-travel",
+    "href": "slides/week-2.html#git-in-practice-ii-time-travel",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Git in Practice II: Time Travel",
+    "text": "Git in Practice II: Time Travel\nReturning to a previous snapshot:\n\nMake some more changes locally\nThen stage your changes\n\ngit add . #track and stage\ngit commit -m 'second commit' #second commit\n\nCheck your log\n\ngit log\n\nTime travel with checkout\n\ngit checkout &lt;hash&gt; #to move to a past different snapshot\n\nCheck your directory\n\nls"
+  },
+  {
+    "objectID": "slides/week-2.html#exercise.",
+    "href": "slides/week-2.html#exercise.",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": " Exercise.",
+    "text": "Exercise.\nIt is time for you to practice. Try on your own, ask for help if needed. You should:\n\nOpen your commandline\nCreate a new folder\nInitialize a git in this folder\nAdd some content to the folder\nStage and Commit your modify folder"
+  },
+  {
+    "objectID": "slides/week-2.html#git-branching",
+    "href": "slides/week-2.html#git-branching",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Git Branching",
+    "text": "Git Branching\n\nBranching allows us to work on different paths in Git. It follows the same logic of checking out across different commits.\nIt is very useful for two purposes:\n\nExperimenting with code\nCollaborating with colleagues.\n\nBasic Commands\n\ngit branch &lt;branch-name&gt; To create a new branch\ngit checkout &lt;branch-name&gt; To move to your new branch\ngit merge &lt;branch-name&gt; To merge your newm branch into your main branch"
+  },
+  {
+    "objectID": "slides/week-2.html#git-branching-in-practice",
+    "href": "slides/week-2.html#git-branching-in-practice",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Git Branching in Practice",
+    "text": "Git Branching in Practice\n\nCreate a new branch\n\ngit checkout -b &lt;branch-name&gt;\n\nWrite code or create new files\n\nvim test4.txt\n\nStage and commit\n\ngit add .\ngit commit -m \" hello from alternative world\"\n\nCheck status across different branches\n\nls  # test4.txt should be here\ngit checkout master #move back to the master branch*\nls  #no test4.txt\n\nThen we can merge our branches. Here we are doing a fast-forward merge, moving our master to keep up with the alternative branch\n\ngit merge [new branch]"
+  },
+  {
+    "objectID": "slides/week-2.html#visualize-git",
+    "href": "slides/week-2.html#visualize-git",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Visualize Git",
+    "text": "Visualize Git\n\nVisualize with Visualize Git tool"
+  },
+  {
+    "objectID": "slides/week-2.html#git-conflicts",
+    "href": "slides/week-2.html#git-conflicts",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Git conflicts",
+    "text": "Git conflicts\nWhen merging across different branches, sometimes there are conflicts between branches.\n&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD\nADD EXAMPLE FROM class\n=======\nADD EXAMPLE FROM CLASS\n&gt;&gt;&gt;&gt;&gt;&gt;&gt; new-branch\n\nOpen your text editor and navigate to the file that has merge conflicts.\nSolve the conflict (which may incorporate changes from both branches) and delete the conflict markers\nStage your changes (git add)\nCommit your changes (git commit)"
+  },
+  {
+    "objectID": "slides/week-2.html#git-in-practice-conflicts",
+    "href": "slides/week-2.html#git-in-practice-conflicts",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Git in Practice: Conflicts",
+    "text": "Git in Practice: Conflicts\n\nCreate a new branch, change an file, and commit\n\ngit checkout -b \"new\" # create a branch call new, checkout directly\nvim test1.txt # make some modification\ngit add test1.txt\ngit commit -m \"new file 1\" # commit your changes\n\nDo the same in the master branch\n\ngit checkout master # checkout to master branch\nvim test1.txt #make some modification and\n              #see that the old modification is not here\ngit add test1.txt # stage\ngit commit -m \"new file 1 from master\"  # commit your changes\n\nMerge and solve conflict\n\ngit merge new"
+  },
+  {
+    "objectID": "slides/week-2.html#section-1",
+    "href": "slides/week-2.html#section-1",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "",
+    "text": "Solve the conflict\n\nvim test1.txt \ngit add test1.txt\ngit commit -m \"fixed conflict\" ## commit your changes\ngit log ## to see your merge complete"
+  },
+  {
+    "objectID": "slides/week-2.html#git-remotes-git-github.",
+    "href": "slides/week-2.html#git-remotes-git-github.",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Git Remotes: Git + Github.",
+    "text": "Git Remotes: Git + Github.\nMost times, you will use git integrated with Github. Github allows multiple researchers to write and share code at the same time.\nThis is my workflow for github.\n\nStarting a New Project. Before you write any code:\n\nGo to your github, and create a new repository\nOpen your terminal, and clone the project\n\n\n\n\n# clone\ngit clone &lt;url&gt;\n\n#Move your working directory to this new folder\ncd &lt;project-directory&gt;\n\n#Write code!"
+  },
+  {
+    "objectID": "slides/week-2.html#section-2",
+    "href": "slides/week-2.html#section-2",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "",
+    "text": "Track your changes:\n\ngit add . \n\nCommit:\n\ngit commit -m 'describe your commit'\n\nPush the changes in your local repository to GitHub:\n\ngit push \n# or with branch\ngit push -u origin [branch-name]"
+  },
+  {
+    "objectID": "slides/week-2.html#can-anybody-push-to-my-repository",
+    "href": "slides/week-2.html#can-anybody-push-to-my-repository",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Can anybody push to my repository?",
+    "text": "Can anybody push to my repository?\n\nNo, all repositories are read-only for anonymous users. By default only the owner of the repository has write access. If you can push to your own repo, it’s because you are using one of the supported authentification methods (HTTPS, SSH, …).\n\n\nIf you want to grant someone else privileges to push to your repo, you would need to configure that access in the project settings.\n\n\nTo contribute to projects in which you don’t have push access, you push to your own copy of the repo, then ask for a pull-request. Linux is not a good example for that, because the kernel developers do not use GitHub pull requests.\n\n\n\nsource: https://stackoverflow.com/questions/17442930/can-anybody-push-to-my-project-on-github"
+  },
+  {
+    "objectID": "slides/week-2.html#pull-from-remotes",
+    "href": "slides/week-2.html#pull-from-remotes",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Pull from Remotes",
+    "text": "Pull from Remotes\nTo keep up with your colleague work, you need to first pull their updates from the git repo.\n\n# go to your repo\ncd &lt;gitrepo&gt;\n\n# pull the changes\ngit pull\n\nSee this tutorial"
+  },
+  {
+    "objectID": "slides/week-2.html#some-additional-tasks",
+    "href": "slides/week-2.html#some-additional-tasks",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Some additional tasks:",
+    "text": "Some additional tasks:\n\ncheck the discussion about .gitignore in the lecture notes.\nyou might need to set up an personal token to push things on github, see here\nplay around with gitub: readme, directories, and issues."
+  },
+  {
+    "objectID": "slides/week-2.html#practice",
+    "href": "slides/week-2.html#practice",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": " Practice!",
+    "text": "Practice!\nClick here to setup your github classroom and do the in-class exercise for you to practice."
+  },
+  {
+    "objectID": "slides/week-2.html#homework.",
+    "href": "slides/week-2.html#homework.",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Homework.",
+    "text": "Homework.\nYour homework will be posted today on slack and canvas.\n\nSame structure of the in-class exercise.\nDeadline: September 27, midnight EST.\nQuestions? Come to the office hour or ask on slack.\n\n\n\nData science I: Foundations"
   }
 ]

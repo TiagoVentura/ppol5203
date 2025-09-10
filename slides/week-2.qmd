@@ -1,0 +1,728 @@
+---
+title: "<span style = 'font-size: 80%;'> PPOL 5203 - Data Science I: Foundations </span>"
+subtitle: "<span style = 'font-size: 100%;'> Week 2: Version Control, Workflow and Reproducibility: Or a bit of Git & GitHub </span>"
+author: "Professor: Tiago Ventura"
+date: "09/17/2024"
+execute: 
+  echo: true
+format:
+  revealjs: 
+    transition: slide
+    background-transition: fade
+    width: 1600 #1050
+    height: 600 #700
+    center: true
+    slide-number: true
+    incremental: false
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    #logo: images/quarto.png
+    footer: "Data science I: Foundations"
+    theme: [simple,custom.scss]
+---
+## Plans for Today
+
+::: {.nonincremental}
+
+-   Best Practices for Data Science Workflow and Reproducibility
+
+-   Version Control (Git and Github)
+
+-   In-Class Exercise
+
+-   Your first homework
+
+
+
+:::aside
+*this lecture draws on materials from Simon Munzert [Intro to Data Science](https://github.com/intro-to-data-science-21/lectures/tree/main) + previous iterations of PPOL 5203.*
+:::
+
+:::
+
+## Readings for the Week
+
+- [The Plain Person's Guide to Plain Text Social Science](http://plain-text.co/) - Kieran Healy
+
+- [Pro Git](https://git-scm.com/book/en/v2) - Chacon & Straub
+
+- [Lecture Notes](https://tiagoventura.github.io/ppol5203/weeks/week-02.html)
+
+# Workflow and Reproducibility {background-color="#447099"}
+
+## That's what we generally look for as data scientists
+
+<br>
+
+```{r  echo=FALSE, out.width = "80%", fig.align="center"}
+knitr::include_graphics("week1_figs/resl2.png") 
+```
+
+## But we often don't teach students how to organize the mess behind it. {.centered}
+
+<br>
+
+```{r  echo=FALSE, out.width = "80%", fig.align="center"}
+knitr::include_graphics("week2_figs/folder.png") 
+```
+
+## We often assume we are capable of keeping track our own work {.centered}
+
+<br>
+
+```{r  echo=FALSE, out.width = "80%", fig.align="center"}
+knitr::include_graphics("https://media.giphy.com/media/kbz6iLCGXDLgI/giphy.gif") 
+```
+
+## But this assumption will set you up to fail
+
+
+<br>
+
+As you advance on your career as a data scientist:
+
+-   Your projects will grow.
+
+-   You will start collaborating with other colleagues (DS is fundamentally collaborative)
+
+-   You will juggle through multiple project from now and from the past!
+
+-   Projects will come and go.
+
+-   You will re-use code A LOT!
+
+
+## {}
+
+### You need to set up a system to keep track of your work 
+
+- not you.
+
+- [the system!]{.red}
+
+## Reproducibility
+
+- Reproducibility is fundamental for any scientific project. 
+  
+  - If your scientific findings cannot be replicated, it is not science, and you will be in trouble.
+
+- In practice, this means your projects need to be:
+
+    -   fully replicated by others (that's science)
+
+    -   replicable by you (that's the practical reality)
+
+## Best Practices (the system)
+
+-   Self Contained Projects
+
+-   Documentation
+
+-   Readability
+
+-   Naming
+
+-   Portability
+
+-   Version Control
+
+## Self-Contained Projects
+
+Always consider your work in terms of projects.
+
+- *A project is a self-contained unit of data science work that can be shared and replicated*
+
+- A self-contained project has:
+
+    -   content: data, code, outputs, literature, text
+    -   metadata: readme for the project and each folder, information about the tools you are running
+
+
+## Example of Project Setup
+
+```       
+├── /data
+│   ├── /raw      
+│   ├── /processed  
+├── /docs 
+├── /code
+|   |── 01_clean_xxx.py
+|   |── 01_analysis_xxx.py
+
+├── /literature      
+
+├── /output      
+│   ├── /tables      
+│   ├── /figures  
+├── /misc 
+└── readme.txt            
+```
+
+## Documentation
+
+Use `#` to describe every single step of your code
+
+```{python}
+#| echo: true
+#| eval: false
+def distance_tree(geom, geo_neigh, n):
+    """"
+    function to calculate the closest point and get their index using scipy
+    geom: geo pandas data frame with the reference points
+    geo_neigh: geo pandas data frame the neighbors location point
+    n: str,  number of closest neighboors
+    """
+
+    # convert geometries to numpy
+    n_geom = np.array(list(geom.geometry.apply(lambda x: (x.x, x.y))))
+    n_geo_neigh = np.array(list(geo_neigh.geometry.apply(lambda x: (x.x, x.y))))
+
+    # estimate the trees
+    btree = cKDTree(n_geo_neigh) # btreee neighbors
+
+    # captures distances and indexes
+    dist, idx = btree.query(n_geom, n)
+```
+
+**vs** 
+
+```{python}
+#| eval: false
+#| echo: true
+
+def distance_tree(geom, geo_neigh, n):
+    n_geom = np.array(list(geom.geometry.apply(lambda x: (x.x, x.y))))
+    n_geo_neigh = np.array(list(geo_neigh.geometry.apply(lambda x: (x.x, x.y))))
+    btree = cKDTree(n_geo_neigh)
+    dist, idx = btree.query(n_geom, n)
+```
+
+##  Readability
+
+Make you code readable in plain english. This usually mean giving names to your variables and functions that fully describe what your intents are.
+
+- Avoid:
+
+  - Abbreviation
+  - Generic Names
+  - Misleading names
+  - Capitalization
+
+
+## Naming
+
+Use meaningful names for your code/data/notebooks.
+
+- File names should be meaningful
+
+- DO NOT USE SPACES. Use snake case (_) style for you files and code 
+
+- Also allows you to avoid capitalization (`FileName` &rarr; `file_name`)
+
+<br>
+
+::: {.fragment}
+
+> `data analysis 2.py` &rarr;  `data_analysis_2.py`
+
+:::
+
+<br>
+
+::: {.fragment}
+
+> `model_analysis.py` &rarr; `model_analysis_het_treatment_effects_main_paper.py`
+
+:::
+
+## Portability
+
+- Use computational environments for your projects. (pyenv or conda)
+
+- Avoid absolute file paths
+
+  - Good Examples: "preprocessing.py" "figures/model-1.png" " /data/survey.csv"
+  - Terrible examples: "/Users/me/ppol5203/data.csv" - [only exists in your machine!!!]{.red}
+
+
+## Quiz
+
+- Take five minutes to talk to your colleague at your side. Discuss: 
+
+  - What you do on your day to day work that is definitely not a best practice?
+  
+  - What is the best practice for you code that you are most proud of?
+
+
+
+# Version Control  {background-color="#447099"}
+
+## What is version control?
+
+> Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later. ([pro git](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control))
+
+```{r  echo=FALSE, out.width = "70%", fig.align="center"}
+knitr::include_graphics("week2_figs/wp.png") 
+```
+
+
+
+## Why version control (in theory)?
+
+```{r  echo=FALSE, out.width = "30%", fig.align="center"}
+knitr::include_graphics("week2_figs/final.jpeg") 
+```
+
+:::aside
+[phdcomics.com](http://phdcomics.com/comics/archive.php?comicid=1531&quot;&gt;creativity&lt;/a&gt;.&lt;!--more--&gt;&lt;/p&gt;)
+:::
+
+## Why version control (in practice)?
+
+- Allows you to “rewind the tape” to earlier incarnations of your notes, drafts, papers and code
+
+- It is like Microsoft Word track changes but for your entire project
+
+- Easily handle collaboration (contribute to other people's work)
+
+- Allows you to review, comment, and analyze other people's codes
+
+- Heavily adopted in the data science community
+
+
+## Version Control in Theory
+
+Key concepts we will cover:
+
+- Git and Github
+
+- Git: snapshot + distributed VCS
+
+- Three stages of git
+
+- Time travel
+
+- Remotes with Github
+
+## Git vs Github
+
+- **Git:** one of many options for version control in data science. Distributed system
+
+- **Git:** is a commandline tool. That's why we started with commandline last week.
+
+- **Github**: is a public remote host for Git repositories. A web-based platform to store git repos
+
+    - It has much more features, for example, github actions, pages. We will go through some today
+
+- [TLDR:]{.red} you will use git [locally]{.red}, and share and collaborate with others using [Github remotely]{.red}.
+
+    - Crucial to realize those two are different!
+
+## Our Working Directory
+
+```{r  echo=FALSE, out.width = "50%", fig.align="center"}
+knitr::include_graphics("week2_figs/wp.png") 
+```
+
+## Git: a distributed version control system
+
+:::: {.columns}
+::: {.column width="50%"}
+
+```{r  echo=FALSE, out.width = "100%", fig.align="center"}
+knitr::include_graphics("week2_figs/delta.png") 
+```
+:::
+
+::: {.column width="50%"}
+
+```{r  echo=FALSE, out.width = "100%", fig.align="center"}
+knitr::include_graphics("week2_figs/git.png") 
+```
+
+
+::: {.fragment}
+
+- This is the git system. 
+- it is distributed. 
+- Exists in your local machine
+:::
+
+:::
+
+
+::::
+
+:::aside
+Source: [pro git](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F)
+:::
+
+
+## The three stages of Git
+
+
+```{r  echo=FALSE, out.width = "80%", fig.align="center"}
+knitr::include_graphics("week2_figs/git_stages.png") 
+```
+
+## Time travel in Git
+
+```{r  echo=FALSE, out.width = "80%", fig.align="center"}
+knitr::include_graphics("week2_figs/checkout.png") 
+```
+
+## Github (Remote Git Repositories)
+
+```{r  echo=FALSE, out.width = "80%", fig.align="center"}
+knitr::include_graphics("week2_figs/git_remotes.png") 
+```
+
+# Git in Practice {background-color="#447099"}
+
+## Create your first repository
+
+Create an empty directory to be our git walkthrough 
+
+```{python}
+#| eval: false 
+# check where you are
+pwd 
+# create dir
+mkdir gitwalkthrough
+# change cd
+cd gitwalkthrough
+```
+
+
+Check if you have a git
+
+```{python}
+#| eval: false 
+git status
+```
+
+Start a repository
+
+```{python}
+#| eval: false 
+git init
+```
+
+Tracking and staging new files: make any changes you want locally on this repo. Then stage your changes
+
+```{python}
+#| eval: false 
+git add <file name>
+```
+
+First commit
+
+```{python}
+#| eval: false 
+git commit -m "add a tag"
+```
+
+
+## Git in Practice II: Time Travel
+
+Returning to a previous snapshot: 
+
+:::{.fragment}
+
+Make some more changes locally
+
+Then stage your changes
+
+```{python}
+#| eval: false 
+git add . #track and stage
+git commit -m 'second commit' #second commit
+```
+
+
+Check your log
+
+```{python}
+#| eval: false 
+git log
+```
+
+
+Time travel with checkout
+
+```{python}
+#| eval: false 
+git checkout <hash> #to move to a past different snapshot
+```
+
+Check your directory
+
+```{python}
+#| eval: false 
+ls
+```
+
+:::
+
+
+## `r fontawesome::fa("laptop-code")` Exercise. 
+
+It is time for you to practice. Try on your own, ask for help if needed. You should:
+
+- Open your commandline
+
+- Create a new folder
+
+- Initialize a git in this folder
+
+- Add some content to the folder
+
+- Stage and Commit your modify folder 
+
+
+## Git Branching
+
+- Branching allows us to work on different paths in Git. It follows the same logic of checking out across different commits. 
+
+- It is very useful for two purposes: 
+
+    - Experimenting with code
+
+    - Collaborating with colleagues. 
+    
+- Basic Commands
+
+   - `git branch <branch-name>` To create a new branch
+   - `git checkout <branch-name>` To move to your new branch
+   - `git merge <branch-name>` To merge your newm branch into your main branch
+   
+
+## Git Branching in Practice
+
+
+:::{.fragment}
+
+Create a new branch
+
+```{python}
+#| eval: false 
+git checkout -b <branch-name>
+```
+
+Write code or create new files
+
+```{python}
+#| eval: false
+vim test4.txt
+```    
+
+Stage and commit 
+
+```{python}
+#| eval: false 
+git add .
+git commit -m " hello from alternative world"
+
+```
+
+
+Check status across different branches
+
+```{python}
+#| eval: false 
+ls  # test4.txt should be here
+git checkout master #move back to the master branch*
+ls  #no test4.txt
+```    
+
+Then we can merge our branches. Here we are doing a fast-forward merge, moving our master to keep up with the alternative branch
+
+
+```{python}
+#| eval: false 
+git merge [new branch]
+```
+
+:::
+
+
+## Visualize Git
+
+- Visualize with [Visualize Git tool](https://git-school.github.io/visualizing-git/)
+
+
+## Git conflicts
+
+When merging across different branches, sometimes there are conflicts between branches. 
+
+```
+<<<<<<< HEAD
+ADD EXAMPLE FROM class
+=======
+ADD EXAMPLE FROM CLASS
+>>>>>>> new-branch
+```
+
+- Open your text editor and navigate to the file that has merge conflicts.
+
+- Solve the conflict (which may incorporate changes from both branches) and delete the conflict markers
+
+- Stage your changes (git add)
+
+- Commit your changes (git commit)
+
+## Git in Practice: Conflicts
+
+:::{.fragment}
+
+Create a new branch, change an file, and commit
+
+```{python}
+#| eval: false 
+git checkout -b "new" # create a branch call new, checkout directly
+vim test1.txt # make some modification
+git add test1.txt
+git commit -m "new file 1" # commit your changes
+```
+
+Do the same in the master branch
+
+```{python}
+#| eval: false 
+git checkout master # checkout to master branch
+vim test1.txt #make some modification and
+              #see that the old modification is not here
+git add test1.txt # stage
+git commit -m "new file 1 from master"  # commit your changes
+```
+
+Merge and solve conflict
+
+```{python}
+#| eval: false 
+git merge new
+```
+:::
+
+## {}
+
+Solve the conflict
+
+```{python}
+#| eval: false 
+vim test1.txt 
+git add test1.txt
+git commit -m "fixed conflict" ## commit your changes
+git log ## to see your merge complete
+```
+
+## Git Remotes: Git + Github.
+
+Most times, you will use git integrated with Github. Github allows multiple researchers to write and share code at the same time.
+
+This is my workflow for github.
+
+- Starting a New Project. Before you write any code:
+
+    - Go to your github, and create a new repository
+
+    - Open your terminal, and clone the project
+
+::: {.fragment}
+```{python}
+#| eval: false
+# clone
+git clone <url>
+
+#Move your working directory to this new folder
+cd <project-directory>
+
+#Write code!
+```
+:::
+
+## {}
+
+Track your changes: 
+
+```{python}
+#| eval: false
+git add . 
+```
+
+
+Commit: 
+
+```{python}
+#| eval: false
+git commit -m 'describe your commit'
+```
+
+Push the changes in your local repository to GitHub:
+
+```{python}
+#| eval: false
+git push 
+# or with branch
+git push -u origin [branch-name] 
+```
+
+
+## Can anybody push to my repository?
+
+> No, all repositories are read-only for anonymous users. By default only the owner of the repository has write access. If you can push to your own repo, it's because you are using one of the supported authentification methods (HTTPS, SSH, ...).
+
+> If you want to grant someone else privileges to push to your repo, you would need to configure that access in the project settings.
+
+> To contribute to projects in which you don't have push access, you push to your own copy of the repo, then ask for a pull-request. Linux is not a good example for that, because the kernel developers do not use GitHub pull requests.
+
+
+:::aside
+source: [https://stackoverflow.com/questions/17442930/can-anybody-push-to-my-project-on-github](https://stackoverflow.com/questions/17442930/can-anybody-push-to-my-project-on-github)
+:::
+
+
+## Pull from Remotes
+
+To keep up with your colleague work, you need to first pull their updates from the git repo.
+
+```{python}
+#| eval: false
+
+# go to your repo
+cd <gitrepo>
+
+# pull the changes
+git pull
+
+```
+
+See this [tutorial](https://www.atlassian.com/git/tutorials/syncing/git-pull)
+
+
+## Some additional tasks:
+
+- check the discussion about .gitignore in the lecture notes.
+
+- you might need to set up an personal token to push things on github, see [here](https://docs.github.com/en/enterprise-server@3.6/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
+
+- play around with gitub: readme, directories, and issues. 
+
+## `r fontawesome::fa("laptop-code")` Practice!
+
+Click [here](https://classroom.github.com/a/epMgGVTy) to setup your github classroom and do the in-class exercise for you to practice. 
+
+
+## Homework. 
+
+Your homework will be posted today on slack and canvas. 
+
+- Same structure of the in-class exercise.
+- Deadline: September 27, midnight EST. 
+- Questions? Come to the office hour or ask on slack. 
+
+
+
+
+
