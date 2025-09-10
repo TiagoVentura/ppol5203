@@ -14,60 +14,333 @@
     "text": "Week\nTopic\nDate\n\n\n\n\nWeek 01\nIntroduction, Installations, IDEs, Command line\nSeptember 09, 2025\n\n\nWeek 02\nVersion Control, Workflow and Reproducibility: Or a bit of Git & GitHub\nSeptember 16, 2025\n\n\nWeek 03\nIntro to Python - OOP, Data Types, Control Statements and Functions\nSeptember 23, 2025\n\n\nWeek 04\nIntro to Python II: Scaling up your code - Iteration, Comprehension and Functions\nSeptember 30, 2025\n\n\nWeek 05\nFrom Nested lists to Dataframes: Numpy and Intro to Pandas\nOctober 07, 2025\n\n\nWeek 06\nPandas II: Data Wrangling\nOctober 14, 2025\n\n\nWeek 07\nJoining, Tidying and Visualizing Data\nOctober 21, 2025\n\n\nWeek 08\nScraping + APIs\nOctober 28, 2025\n\n\nWeek 09\nStatistical Learning\nNovember 04, 2025\n\n\nWeek 10\nText as Data I: Discovery and Topics\nNovember 11, 2023\n\n\nWeek 11\nText as Data II: Supervised Learning\nNovember 18, 2025\n\n\nWeek 12\nGenerative AI: Classification, Surveys and Prompting (Invited Speaker - Dr. Patrick Wu, American University)\nNovember 25, 2025\n\n\nWeek 13\nSQL\nDecember 03, 2024\n\n\nWeek 14\nPresentations of Final Projects\nDecember 09, 2023"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
+    "objectID": "slides/week-1.html#plans-for-today",
+    "href": "slides/week-1.html#plans-for-today",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "Plans for Today",
+    "text": "Plans for Today\n\nMotivating Data Science for Public Policy.\nGoals of the course\nIntroductions\nCourse Logistics\nIDEs\n\nJupyter\n\nIntroduction to commandline"
+  },
+  {
+    "objectID": "slides/week-1.html#abundance-of-data",
+    "href": "slides/week-1.html#abundance-of-data",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "Abundance of data",
+    "text": "Abundance of data"
+  },
+  {
+    "objectID": "slides/week-1.html#powerful-and-cheap-computing-power",
+    "href": "slides/week-1.html#powerful-and-cheap-computing-power",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "Powerful and Cheap Computing Power",
+    "text": "Powerful and Cheap Computing Power"
+  },
+  {
+    "objectID": "slides/week-1.html#world-of-generative-ai-models",
+    "href": "slides/week-1.html#world-of-generative-ai-models",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "World of Generative AI Models",
+    "text": "World of Generative AI Models"
+  },
+  {
+    "objectID": "slides/week-1.html#as-a-consequence-we-live-in-a-world",
+    "href": "slides/week-1.html#as-a-consequence-we-live-in-a-world",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "As a consequence, we live in a world:",
+    "text": "As a consequence, we live in a world:\n\n\n\nWith abundance of data we can use for research and to recommend policy decisions:\n\nInternet data, social media, geo-tracking tools, etc…\n\n\n\n\n\nWith easily available technologies to analyze this data at scale\n\nYour laptops, cloud computing, ChatBots…\n\n\n\n\n\nBut with new technologies that also have novel social implications:\n\nPrivacy issues\nUse of technology by bad actors.\nUse of technology by governments to censor/monitor citizens.\n\n\n\n\n\nPolicy scholars (but pretty much any researcher) need to be equipped to properly work with this data and understand the effects of these news technologies"
+  },
+  {
+    "objectID": "slides/week-1.html#data-science-for-public-policy",
+    "href": "slides/week-1.html#data-science-for-public-policy",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "Data Science for Public Policy",
+    "text": "Data Science for Public Policy\nData Scientist for Public Policy focuses on computational approaches to solve/understand policy problems.\n\nIt is part of a larger and new field called computational social science\n\n\n\n\nSocial science\n\nUnderstands human behavior: human psychology, language, economic behavior, political systems, policy problems\nInvolve many approaches: qualitative interviews, statistical analysis, simulations\n\n\n\n\n\nData Science:\n\nTools to work with large-scale data + learning models + novel data sources"
+  },
+  {
+    "objectID": "slides/week-1.html#misinformation-on-whatsapp",
+    "href": "slides/week-1.html#misinformation-on-whatsapp",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "Misinformation on WhatsApp",
+    "text": "Misinformation on WhatsApp"
+  },
+  {
+    "objectID": "slides/week-1.html#data-donation-whatsapp-groups",
+    "href": "slides/week-1.html#data-donation-whatsapp-groups",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "Data Donation WhatsApp Groups",
+    "text": "Data Donation WhatsApp Groups"
+  },
+  {
+    "objectID": "slides/week-1.html#all-the-steps-tools-....-so-far-...",
+    "href": "slides/week-1.html#all-the-steps-tools-....-so-far-...",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "All the steps + Tools .... so far ...",
+    "text": "All the steps + Tools .... so far ...\n\nStep 1: Recruiting participants online (SS)\n\nOnline Panels + Facebook Ads\n\nStep 2: Running online surveys (SS)\n\nQualtrics + R\n\nStep 3: Development of data donation pipeline (with MDI) (DS/CS)\n\nJavaScript (JS) + Python\n\nStep 4: Analyze the data (SS/DS)\n\nSQL + Python + R"
+  },
+  {
+    "objectID": "slides/week-1.html#readings-for-this-week",
+    "href": "slides/week-1.html#readings-for-this-week",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "Readings for this week",
+    "text": "Readings for this week\n\nBit by Bit: Social Research in the Digital Age By Mathew Salganik\n\nIntroduction\nObserving Behavior\n\nTraining Computational Social Science PhD Students for Academic and Non-Academic Careers - Written by me and some colleagues in academia, industry and non-profits"
+  },
+  {
+    "objectID": "slides/week-1.html#goals-of-the-course",
+    "href": "slides/week-1.html#goals-of-the-course",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "Goals of the course",
+    "text": "Goals of the course\n\nThe goal of this course is to teach you:\n\nComputational thinking: how to approach problems and devise solutions from a computational perspective.\nGet you started on Python, introduce some useful tools (scrapping, text analysis and API applications of GenAI models), and bit of SQL for applied data science; lay the foundations for the remainder of the core DS sequence\nWorkflows and tools: Git/Github + Commandline."
+  },
+  {
+    "objectID": "slides/week-1.html#course-schedule",
+    "href": "slides/week-1.html#course-schedule",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "Course Schedule",
+    "text": "Course Schedule\n\n\n\n\n\n\n\n\nWeek\nTopic\nDate\n\n\n\n\nWeek 01\nIntroduction, Installations, IDEs, Command line\nSeptember 09, 2025\n\n\nWeek 02\nVersion Control, Workflow and Reproducibility: Or a bit of Git & GitHub\nSeptember 16, 2025\n\n\nWeek 03\nIntro to Python - OOP, Data Types, Control Statements and Functions\nSeptember 23, 2025\n\n\nWeek 04\nIntro to Python II: Scaling up your code - Iteration, Comprehension and Functions\nSeptember 30, 2025\n\n\nWeek 05\nFrom Nested lists to Dataframes: Numpy and Intro to Pandas\nOctober 07, 2025\n\n\nWeek 06\nPandas II: Data Wrangling\nOctober 14, 2025\n\n\nWeek 07\nJoining, Tidying and Visualizing Data\nOctober 21, 2025\n\n\nWeek 08\nScraping + APIs\nOctober 28, 2025\n\n\nWeek 09\nStatistical Learning\nNovember 04, 2025\n\n\nWeek 10\nText as Data I: Discovery and Topics\nNovember 11, 2023\n\n\nWeek 11\nText as Data II: Supervised Learning\nNovember 18, 2025\n\n\nWeek 12\nGenerative AI: Classification, Surveys and Prompting (Invited Speaker - Dr. Patrick Wu, American University)\nNovember 25, 2025\n\n\nWeek 13\nSQL\nDecember 03, 2024\n\n\nWeek 14\nPresentations of Final Projects\nDecember 09, 2023"
+  },
+  {
+    "objectID": "slides/week-1.html#between-text-as-data-i-and-ii-i-might-have-some-updates",
+    "href": "slides/week-1.html#between-text-as-data-i-and-ii-i-might-have-some-updates",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "Between Text-as-Data I and II… I might have some updates…",
+    "text": "Between Text-as-Data I and II… I might have some updates…"
+  },
+  {
+    "objectID": "slides/week-1.html#section",
+    "href": "slides/week-1.html#section",
     "title": "PPOL 5203 - Data Science I: Foundations",
     "section": "",
-    "text": "This first course in the core data science sequence teaches Data Science for Public Policy (DSPP) students how to synthesize disparate, possibly unstructured data in order to draw meaningful insights. Topics covered include the fundamentals of object-oriented programming in Python; literate programming; an introduction to algorithms and data types; data wrangling, visualization, and extraction; an introduction to machine learning methods, and text analysis. In addition, students will be exposed to Git and Github for version control and reproducible research. The objective of the course is to teach students how to incorporate data into their decision-making and analysis. No prior programming experience is assumed or required.\nThis is not the first time this course is taught at DSPP. For this reason, several of the materials here are borrowed from previous iterations of this course taught by Dr. Rebecca Johnson and Dr. Eric Dunford"
+    "text": "Professor Tiago Ventura (he/him)\n\nAssistant Professor at McCourt School.\nPolitical Science PhD\nPostdoc at Center for Social Media and Politics - NYU.\nResearcher at Twitter.\n\n\n\nMy Research: Effects of technology in politics + applications of computational models to social science:\n\nGlobal Social Media Deactivation.\nDeveloping a data donation pipeline for WhatsApp data.\nMeasuring Humanness vs AI-Generated Content on Social Media.\nUsing LLMs to augment web-browsing data with synthetic data\n\n\n\nOutside of work, I enjoy watching soccer, reading sci-fi and running"
   },
   {
-    "objectID": "index.html#course-description",
-    "href": "index.html#course-description",
+    "objectID": "slides/week-1.html#quiz",
+    "href": "slides/week-1.html#quiz",
     "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "Quiz!",
+    "text": "Quiz!\nWhich programming language did I use the most at?\n\nPhD\nPostdoc\nTwitter\nAs a Faculty"
+  },
+  {
+    "objectID": "slides/week-1.html#a-comment-from-the-pre-course-survey-from-last-year",
+    "href": "slides/week-1.html#a-comment-from-the-pre-course-survey-from-last-year",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "A comment from the pre-course survey (from last year)",
+    "text": "A comment from the pre-course survey (from last year)\n\nHi professor Ventura! I noticed that we gonna learn multiple data analysis tool this semester and I am definitely a novice of data science. I am little worried about how can I master all of them without being confused, because some commands might be very similar."
+  },
+  {
+    "objectID": "slides/week-1.html#your-turn",
+    "href": "slides/week-1.html#your-turn",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "Your turn!",
+    "text": "Your turn!\n\nName\n(Briefly) what you were up to prior to the DSPP\nIf you could have any data source at your disposal, what would it be?"
+  },
+  {
+    "objectID": "slides/week-1.html#logistics",
+    "href": "slides/week-1.html#logistics",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "Logistics",
+    "text": "Logistics\n\n\nCommunication: via slack. Join the workspace!\nAll materials: hosted on the class website: https://tiagoventura.github.io/ppol5203/\nSyllabus: also on the website.\nMy Office Hours: Every tuesday from 4 to 5pm. Just stop by!\nCanvas: Only for official communication! Materials will be hosted in the website!\nDatacamp: Additional exercises! Access our free account here\nTask: go on slack and send me a message about the data source you choose in the last answer, and if you feel comfortable add a picture to your profile\n\n\n\n\n−+\n05:00"
+  },
+  {
+    "objectID": "slides/week-1.html#ta",
+    "href": "slides/week-1.html#ta",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "TA",
+    "text": "TA\n\nRebecca Wagner (DSPP Second-Year Student)\n\nEmail:rlw137@georgetown.edu\nOffice Hours:\n\nin person: Every Monday 2pm, McCourt, Room 602\nvirtual: Every Tuesday 7pm. Zoom link"
+  },
+  {
+    "objectID": "slides/week-1.html#evaluation",
+    "href": "slides/week-1.html#evaluation",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "Evaluation",
+    "text": "Evaluation\n\n\n\nAssignment\nPercentage of Grade\n\n\n\n\nParticipation/Attendance\n5%\n\n\nCoding Discussion\n5%\n\n\nProblem sets\n50%\n\n\nFinal Project\n40%"
+  },
+  {
+    "objectID": "slides/week-1.html#problem-sets",
+    "href": "slides/week-1.html#problem-sets",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "Problem Sets",
+    "text": "Problem Sets\nIndividual submission through GitHub.\n\n\n\nAssignment\nDate Assigned\nDate Due\n\n\n\n\nNo. 1\nWeek 2\nBefore EOD of Friday of Week 3\n\n\nNo. 2\nWeek 4\nBefore EOD of Friday of Week 5\n\n\nNo. 3\nWeek 6\nBefore EOD of Friday of Week 7\n\n\nNo. 4\nweek 8\nBefore EOD of Friday of Week 9\n\n\nNo. 5\nNovember 10\nBefore EOD of Friday of Week 111"
+  },
+  {
+    "objectID": "slides/week-1.html#final-project",
+    "href": "slides/week-1.html#final-project",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "Final Project",
+    "text": "Final Project\n\nYou will work on groups!\nThe project is composed of three parts:\n\na 2 page project proposal: (which should be discussed and approved by me)\nan in-class presentation,\nA 10-page project report."
+  },
+  {
+    "objectID": "slides/week-1.html#due-dates-and-points",
+    "href": "slides/week-1.html#due-dates-and-points",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "Due dates and Points:",
+    "text": "Due dates and Points:\n\n\n\nRequirement\nDue\nLength\nPercentage\n\n\n\n\nProject Proposal\nOctober 31\n2 pages\n5%\n\n\nPresentation\nDecember 09\n10-15 minutes\n10%\n\n\nProject Report\nDecember 16\n10 pages\n25%"
+  },
+  {
+    "objectID": "slides/week-1.html#genai",
+    "href": "slides/week-1.html#genai",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "GenAI",
+    "text": "GenAI\nYou are allowed to use GenAI as you would use google in this class. This means:\n\nDo not copy the responses from GenAI Chatbots – a lot of them are wrong or will just not run on your computer\nUse GenAI Chatbots as a auxiliary source.\nIf your entire homework comes straight from GenAI Chatbots, I will consider it plagiarism.\nIf you use GenAI Chatbots, I ask you to mention on your code how chatgpt worked for you."
+  },
+  {
+    "objectID": "slides/week-1.html#summary-of-the-survey",
+    "href": "slides/week-1.html#summary-of-the-survey",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "Summary of the survey",
+    "text": "Summary of the survey\n\nMost of you have some experience with Python.\nVery few of you were using primarily Python in your work before!\n\nMost others are using R and Excel!\n\nMost of you have Python in your laptops, some still do not have a github account. If you are having issues after today, talk to your TAs.\nMain Policy Areas:\n\nSocial Media/Tech (Talk to me!)\nElection (Talk to Professor Warshaw, Bailey or Ladd)\nEducation (Talk with Professor Johnson)"
+  },
+  {
+    "objectID": "slides/week-1.html#open-ended",
+    "href": "slides/week-1.html#open-ended",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "Open Ended",
+    "text": "Open Ended\n\nthis is a big group of international students, and some are concerned about not having english as you first language!\n\nTHIS IS FINE ! I hope my non-native and strongly accented English will encourage you to participate in class and speak up!\n\n\n\n\n“That’s just what translation is, I think. That’s all speaking is. Listening to the other and trying to see past your own biases to glimpse what they’re trying to say. Showing yourself to the world, and hoping someone else understands.” - R.F. Kuang, Babel"
+  },
+  {
+    "objectID": "slides/week-1.html#open-ended-1",
+    "href": "slides/week-1.html#open-ended-1",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "Open Ended",
+    "text": "Open Ended\nSome of you are slightly anxious about Python and the pace of the class\n\n\nPython is definitely harder than excel and stata.\nBut you will be fine!\nOur approach: We start slow, cover the basics, and move fast!"
+  },
+  {
+    "objectID": "slides/week-1.html#set-up-your-course-infra-structure",
+    "href": "slides/week-1.html#set-up-your-course-infra-structure",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "Set up your course infra-structure",
+    "text": "Set up your course infra-structure\nSee Course Website\n\nInstall Python\nInstall Jupyter\nSetup your Git/Github account\n\nHomework: Try to make one successful Git push before class next week."
+  },
+  {
+    "objectID": "slides/week-1.html#jupyter",
+    "href": "slides/week-1.html#jupyter",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "Jupyter:",
+    "text": "Jupyter:\nJupyter Notebook Tutorial in the Class Website\nNote on my approach on Notebooks: I will go over quite quickly through the notebooks. You should run them by yourselves at a later point!"
+  },
+  {
+    "objectID": "slides/week-1.html#command-line",
+    "href": "slides/week-1.html#command-line",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "Command Line",
+    "text": "Command Line\nCommand Line Tutorial in the Class Website"
+  },
+  {
+    "objectID": "slides/week-1.html#datacamp-course",
+    "href": "slides/week-1.html#datacamp-course",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "Datacamp Course",
+    "text": "Datacamp Course\n\njoin\nIntroduction to Shell"
+  },
+  {
+    "objectID": "slides/week-1.html#additional-materials-quarto",
+    "href": "slides/week-1.html#additional-materials-quarto",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "Additional Materials: Quarto",
+    "text": "Additional Materials: Quarto\nSee Quarto Notebook in the Class Website"
+  },
+  {
+    "objectID": "course_infrastructure.html",
+    "href": "course_infrastructure.html",
+    "title": "Week 1: Course Infrastructure",
     "section": "",
-    "text": "This first course in the core data science sequence teaches Data Science for Public Policy (DSPP) students how to synthesize disparate, possibly unstructured data in order to draw meaningful insights. Topics covered include the fundamentals of object-oriented programming in Python; literate programming; an introduction to algorithms and data types; data wrangling, visualization, and extraction; an introduction to machine learning methods, and text analysis. In addition, students will be exposed to Git and Github for version control and reproducible research. The objective of the course is to teach students how to incorporate data into their decision-making and analysis. No prior programming experience is assumed or required.\nThis is not the first time this course is taught at DSPP. For this reason, several of the materials here are borrowed from previous iterations of this course taught by Dr. Rebecca Johnson and Dr. Eric Dunford"
+    "text": "Throughout the semester, we will use a combination of computational tools. This a summary of the main tools:\n\nCommandLine: primarily to interact with git, install programs and run a few scripts\nPython3: for programming taks\nGit/Github: for version control, reproucibility and for sharing materials\nJupyter Notebooks: as a main IDE to work with Python\nQuarto via RStudio: as a secondary IDE (you can make your primary if you prefer) to coding in Python/R/SQL\nSlack: for communication.\n\nLet’s cover how to set up each of these tools in your local machines.\n\n\n\n\n\n\nWarning\n\n\n\nIf you run into issues, please reach out to the Teaching Assistant for assistance\n\n\n\n\nAt times, we’ll use a unix-based commandline. The commandline will feature into our discussion on using git and also running Python programs. If you use a Mac or a Linux operating system, then a functioning commandline comes with your operating system. For Apple machines, this is the Terminal.\nFor Windows (specifically Windows 10), you can enable Linux Bash shell. The following offers a tutorial on how to do this.\nIf you’re using a version of Windows that pre-dates version 10, then Git Bash offers a program will allow you to use git commands from your windows machine.\nLater in the first class, we will cover some concepts of working with the commandline. You can get a full notebook with a intro to commandline in the materials for week 1\n\n\n\nWe’ll use Python3 throughout this course. Below are instructions for downloading Python3 using commandline packages manager (Homebrew for mac, Chocolatey for windows).\n\nInstalling Python3 using Homebrew on a Mac (Apple)\nInstalling Python3 using Chocolatey on a PC (Windows)\n\nAn alternative way to install Python3 is to download an Anaconda distribution. I will use pip rather than conda in the instruction for downloading Python modules. These are simply two ways of downloading and managing open-source software packages. Choose which ever works best for you\nMost computers already have python3 installed. You can check if that is your case through your commandline\npython3 --version\nOn some versions of Windows, you may need to use py instead of python3:\npy --version\nIn either case, the output of this command should be something like Python 3.8.5\n\n\n\nOnce you have Python3 on your computer, you can install a Jupyter Notebook. If you downloaded Python3 using Anaconda, then Jupyter Notebook comes with the distribution and requires no further installation on your part. If you are not using Anaconda, you can install Jupyter notebook running the following code using your commandline.\n# on your command line\npip install jupyter\nYou can then activate a Jupyter Notebook from the commandline by typing:\n# on your command line\njupyter notebook\n\n\nHere is my workflow to open Jupyter Notebooks using the commandline.\n\nOpen the terminal\nNavigate (using cd) to the folder you want to be the root of your jupyter notebook\nOpen the notebook (jupyter notebook)\n\nIt looks like this if I were to open a notebook in the folder I have for this course\n# open terminal\ncd ppol_5203\njupyter notebook\n\n\n\nIf you installed Python using Anaconda distribution system (here: https://www.anaconda.com/products/individual). You can open Jupyter through a point-and-click system. It take forever, but it works!\nIn the lecture notes, you can also find a Introduction to Jupyter notebook. We will cover this in the first class of the course.\n\n\n\n\nA quick digression of the R vs Python debate\nFor some of your classes in the Data Science and Public Policy Masters, you will be using R. Some data scientists and computational social scientists have strong beleifs as to which langugae is better. I, and the DSPP faculty, do not subscribe to that view. Most techniques that are relevent for applied data science can be done in either language.\nIn my personal opinion, R outperforms Python in data manipulation tasks, visualization and statistical modeling. This is because R started out as a statistical programming environment, and that heritage is still visible. Meanwhile, Python started our a general purpose programming language, which was heavily adopted by computer scientists, which means Python outperforms on abstraction, machine learning tasks, working with more complex data types.\nMost importantly, you will be using more one language compared to the other conditional on your career path and the type of tasks you end up working with. If you end up in a team full of computer scientists, it is more likely Python will be your favored language. If you move to work more with social scientists, R will probably be more heavily used. There is no need to chose now. Learn both and broad your horizons. As general programming languages, learning both requires almost the same amount of effort of learning one in isolation.\nBack to the course infrastructure\nIn your classes that are focused on using R, RStudio will be your main IDE. However, RStudio isn’t just for R. It can handle a number of different languages. We can use Python in RStudio using the reticulate package.\nI create a full notebook to teach you how to use Python in Rstudio. Check the intro do quarto notebook. Let’s cover some of the installation steps here:\nTo install RStudio, download from the following link . reticulate is an R package that allows one run a Python REPL in the R console. In addition, it allows one to read in and use Python code, and pass data between R and and Python. The following provides instructions on installing reticulate.\nWith reticulate, you can use Rstudio as a IDE for Python. Another option is to use Quarto (the next-generation version of R Markdown) as an unified framework to generate notebooks with text + code. If you’re an R Markdown user, you will see how Quarto is just an extension of the capabilities that were previously provided by R Markdown. Now, instead of .rmd files, we have .qmd files. Quarto is already installed with RStudio.\n\n\n\nWe’ll go over more Git/GitHub instructions during the second class session. Before that session:\n\nInstall Git if it’s not installed already\nCreate a GitHub account if you don’t have one already (any email and free subscription is fine)\n\n\n\n\nOur course will make use of Slack for internal communication. Enter in our workspace with this link: (https://join.slack.com/t/ppol5203fall2024/shared_invite/zt-2ou5gm0ww-YJUJfR3vTfzN4IuKcULFDQ).\nWhen should you use slack?\n\nInteract with the TAs\nAsk questions to your colleagues\nShare links that are interesting to the discussions in class.\n\nWhen I should not use slack?\n\nIf you have a question you believe will require a longer conversation, I prefer if you can stop by at my office hours\n\nRemember, you don’t need to let me know you are going to my office hours. Just stop by!\nIf you’re new to Slack, check out this tutorial. In the first class, I’ll send out the invitation for everyone to join Slack and we’ll discuss how to use it."
   },
   {
-    "objectID": "index.html#goals",
-    "href": "index.html#goals",
-    "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "Goals",
-    "text": "Goals\nAfter completing this course, the students will be able to:\n\nGeneral understanding of python’s object oriented programming syntax and data structures.\nCompetency using version control (Git/Github).\nLearn to manipulate and explore data with Pandas and other tools.\nGeneral understanding of analyzing algorithms and data structures.\nLearn to extract and process data from structured and unstructured sources.\nGet some intuition of modeling text data in Python.\nLearn the basics of machine learning as a modeling approach.\nLearn how to use Generative AI for multiple applied tasks.\nLearn basics of using SQL to query databases."
-  },
-  {
-    "objectID": "index.html#instructor",
-    "href": "index.html#instructor",
-    "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "Instructor",
-    "text": "Instructor\n\nProfessor: Dr. Tiago Ventura\nPronouns: He/Him\nEmail: tv186@georgetown.edu\nOffice hours:\n\nTime: Every Tuesday, 4pm - 5pm\nLocation: 125E, Office Number 766\n\n\nYou are all welcome to the office hours at any time. No need to schedule time with me to go to office hours!"
-  },
-  {
-    "objectID": "index.html#teaching-assistants",
-    "href": "index.html#teaching-assistants",
-    "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "Teaching Assistants:",
-    "text": "Teaching Assistants:\n\nRebecca Wagner (DSPP Second-Year Student)\n\nEmail:rlw137@georgetown.edu\nOffice Hours:\n\nin person: Every Monday 2pm, McCourt, Room 602\nvirtual: Every Tuesday 7pm. Zoom link\n\n\n\n\nCourse Infra-structure\nClass Website: A class website https://tiagoventura.github.io/ppol5203 will be used throughout the course and should be checked on a regular basis for lecture materials and required readings.\nClass Slack Channel: The class also has a dedicated slack channel. You can join on clicking here. The channel serves as an open forum to discuss, collaborate, pose problems/questions, and offer solutions. Students are encouraged to pose any questions they have there as this will provide the professor and TA the means of answering the question so that all can see the response. If you’re unfamiliar with, please consult the following start-up tutorial (https://get.slack.help/hc/en-us/articles/218080037-Getting-started-for-new-members). Please follow the invite link to be added to the Slack channel.\nCanvas: A Canvas site (http://canvas.georgetown.edu) will be used throughout the course and should be checked on a regular basis for announcements. ll announcements for the assignments and classes will be posted on Canvas; they will not be distributed in class or by e-mail. Support for Canvas is available at (202) 687-4949\nNOTE: Students are encouraged to run lecture code on their own machines. If you do not have access to a laptop on which you can install python3, please contact the professor and/or TA for assistance. Only python3 will be used in this course.\nDatacamp: As part of this course, you will have access to a DataCamp classroom that you can use to take Datacamp modules for free. Join the classroom here Datacamp courses can be a useful tool for you to practice the concepts we see in class. Although I will not assign specific courses for you,, you can use Datacamp courses to review the topics we cover in class. The lecture notes will cover in details all our in-class discussions. Datacamp courses will be considered additional material."
-  },
-  {
-    "objectID": "lecture_notes/week-01/intro-to-quarto.html",
-    "href": "lecture_notes/week-01/intro-to-quarto.html",
-    "title": "Week 1: Introduction to Quarto for Python",
+    "objectID": "course_infrastructure.html#commandline",
+    "href": "course_infrastructure.html#commandline",
+    "title": "Week 1: Course Infrastructure",
     "section": "",
-    "text": "The purpose of this notebook is to show case the use of Quarto notebooks. It will cover:\n\nBrief introduction to Quarto Notebooks\nRunning R with Quarto Notebooks\nRunning Python with Quarto Notebooks + reticulate\n\nSee Quarto’s website for a more in-depth coverage of the framework."
+    "text": "At times, we’ll use a unix-based commandline. The commandline will feature into our discussion on using git and also running Python programs. If you use a Mac or a Linux operating system, then a functioning commandline comes with your operating system. For Apple machines, this is the Terminal.\nFor Windows (specifically Windows 10), you can enable Linux Bash shell. The following offers a tutorial on how to do this.\nIf you’re using a version of Windows that pre-dates version 10, then Git Bash offers a program will allow you to use git commands from your windows machine.\nLater in the first class, we will cover some concepts of working with the commandline. You can get a full notebook with a intro to commandline in the materials for week 1"
   },
   {
-    "objectID": "lecture_notes/week-01/intro-to-quarto.html#my-personal-tldr-about-quarto",
-    "href": "lecture_notes/week-01/intro-to-quarto.html#my-personal-tldr-about-quarto",
-    "title": "Week 1: Introduction to Quarto for Python",
-    "section": "My personal TLDR about Quarto",
-    "text": "My personal TLDR about Quarto\nQuarto was developed by Posit (the new name of RStudio). It represents the effort of RStudio to become a language agnostic IDE for Data Science.\nQuarto main promise is to allow data scientists to run many different languages using the same notebook structure. For the purpose of our course, we will use mostly Jupyter Notebooks, since those are still dominant among Python developers.\nAs you are learning Python and R at the same time throughout your DSPP courses, I advice you to take a look at Quarto. You might find it a useful tool to run both R and Python."
+    "objectID": "course_infrastructure.html#python3",
+    "href": "course_infrastructure.html#python3",
+    "title": "Week 1: Course Infrastructure",
+    "section": "",
+    "text": "We’ll use Python3 throughout this course. Below are instructions for downloading Python3 using commandline packages manager (Homebrew for mac, Chocolatey for windows).\n\nInstalling Python3 using Homebrew on a Mac (Apple)\nInstalling Python3 using Chocolatey on a PC (Windows)\n\nAn alternative way to install Python3 is to download an Anaconda distribution. I will use pip rather than conda in the instruction for downloading Python modules. These are simply two ways of downloading and managing open-source software packages. Choose which ever works best for you\nMost computers already have python3 installed. You can check if that is your case through your commandline\npython3 --version\nOn some versions of Windows, you may need to use py instead of python3:\npy --version\nIn either case, the output of this command should be something like Python 3.8.5"
   },
   {
-    "objectID": "lecture_notes/week-01/intro-to-quarto.html#quick-tutorial-for-rstudio",
-    "href": "lecture_notes/week-01/intro-to-quarto.html#quick-tutorial-for-rstudio",
-    "title": "Week 1: Introduction to Quarto for Python",
-    "section": "Quick tutorial for RStudio",
-    "text": "Quick tutorial for RStudio\nThis is what RStudio looks like when you open it for the first time.\n\n\n\n\n\nTop left pane (input/script)\nThis is your code editor. Here you enter code in any file type (.py, .r, .qmd) you are working on. If not working with notebooks, this is just gonna be a plain text file but with a extension that run the commands.\nFor example, enter 2 + 2 in your script and run a line of code by pressing command + enter (Mac) or Ctrl + enter (PC). This is a huge advantage of Rstudio over Jupyter. You can run your code line by line, instead of running the entire cell.\nBottom left pane (output/console)\nThis is the console. It is pretty much like when you open Python/R from the Command line.\nIn the console, the prompt &gt; looks like a greater than symbol. If your prompt begins to look like a + symbol by mistake, simply click in your console and press the esc key on your keyboard as many times as necessary to return to the prompt.\nRstudio uses + when code is broken up across multiple lines and is still expecting more code. A line of code does not usually end until Rstudio finds an appropriate stop parameter or punctuation that completes some code such as a closed round parenthesis ), square bracket ], curly brace }, or quotation mark '.\nIf the output in your console gets too messy, you can clear it by pressing control + l on both Mac and PC. This will not erase any saved data - it will simply make your console easier to read.\nTop right pane (global environment)\nThis is your environment pane. All objects you create will be displayed here.\nBottom right pane (files, plots, packages, and help)\nHere you find useful tabs for navigating your file system, displaying plots, installing packages, and viewing help pages. Press the control key and a number (1 through 9) on your keyboard to shortcut between these panes and tabs."
+    "objectID": "course_infrastructure.html#jupyter-notebooks",
+    "href": "course_infrastructure.html#jupyter-notebooks",
+    "title": "Week 1: Course Infrastructure",
+    "section": "",
+    "text": "Once you have Python3 on your computer, you can install a Jupyter Notebook. If you downloaded Python3 using Anaconda, then Jupyter Notebook comes with the distribution and requires no further installation on your part. If you are not using Anaconda, you can install Jupyter notebook running the following code using your commandline.\n# on your command line\npip install jupyter\nYou can then activate a Jupyter Notebook from the commandline by typing:\n# on your command line\njupyter notebook\n\n\nHere is my workflow to open Jupyter Notebooks using the commandline.\n\nOpen the terminal\nNavigate (using cd) to the folder you want to be the root of your jupyter notebook\nOpen the notebook (jupyter notebook)\n\nIt looks like this if I were to open a notebook in the folder I have for this course\n# open terminal\ncd ppol_5203\njupyter notebook\n\n\n\nIf you installed Python using Anaconda distribution system (here: https://www.anaconda.com/products/individual). You can open Jupyter through a point-and-click system. It take forever, but it works!\nIn the lecture notes, you can also find a Introduction to Jupyter notebook. We will cover this in the first class of the course."
+  },
+  {
+    "objectID": "course_infrastructure.html#rstudio-reticulatequarto",
+    "href": "course_infrastructure.html#rstudio-reticulatequarto",
+    "title": "Week 1: Course Infrastructure",
+    "section": "",
+    "text": "A quick digression of the R vs Python debate\nFor some of your classes in the Data Science and Public Policy Masters, you will be using R. Some data scientists and computational social scientists have strong beleifs as to which langugae is better. I, and the DSPP faculty, do not subscribe to that view. Most techniques that are relevent for applied data science can be done in either language.\nIn my personal opinion, R outperforms Python in data manipulation tasks, visualization and statistical modeling. This is because R started out as a statistical programming environment, and that heritage is still visible. Meanwhile, Python started our a general purpose programming language, which was heavily adopted by computer scientists, which means Python outperforms on abstraction, machine learning tasks, working with more complex data types.\nMost importantly, you will be using more one language compared to the other conditional on your career path and the type of tasks you end up working with. If you end up in a team full of computer scientists, it is more likely Python will be your favored language. If you move to work more with social scientists, R will probably be more heavily used. There is no need to chose now. Learn both and broad your horizons. As general programming languages, learning both requires almost the same amount of effort of learning one in isolation.\nBack to the course infrastructure\nIn your classes that are focused on using R, RStudio will be your main IDE. However, RStudio isn’t just for R. It can handle a number of different languages. We can use Python in RStudio using the reticulate package.\nI create a full notebook to teach you how to use Python in Rstudio. Check the intro do quarto notebook. Let’s cover some of the installation steps here:\nTo install RStudio, download from the following link . reticulate is an R package that allows one run a Python REPL in the R console. In addition, it allows one to read in and use Python code, and pass data between R and and Python. The following provides instructions on installing reticulate.\nWith reticulate, you can use Rstudio as a IDE for Python. Another option is to use Quarto (the next-generation version of R Markdown) as an unified framework to generate notebooks with text + code. If you’re an R Markdown user, you will see how Quarto is just an extension of the capabilities that were previously provided by R Markdown. Now, instead of .rmd files, we have .qmd files. Quarto is already installed with RStudio."
+  },
+  {
+    "objectID": "course_infrastructure.html#git",
+    "href": "course_infrastructure.html#git",
+    "title": "Week 1: Course Infrastructure",
+    "section": "",
+    "text": "We’ll go over more Git/GitHub instructions during the second class session. Before that session:\n\nInstall Git if it’s not installed already\nCreate a GitHub account if you don’t have one already (any email and free subscription is fine)"
+  },
+  {
+    "objectID": "course_infrastructure.html#slack",
+    "href": "course_infrastructure.html#slack",
+    "title": "Week 1: Course Infrastructure",
+    "section": "",
+    "text": "Our course will make use of Slack for internal communication. Enter in our workspace with this link: (https://join.slack.com/t/ppol5203fall2024/shared_invite/zt-2ou5gm0ww-YJUJfR3vTfzN4IuKcULFDQ).\nWhen should you use slack?\n\nInteract with the TAs\nAsk questions to your colleagues\nShare links that are interesting to the discussions in class.\n\nWhen I should not use slack?\n\nIf you have a question you believe will require a longer conversation, I prefer if you can stop by at my office hours\n\nRemember, you don’t need to let me know you are going to my office hours. Just stop by!\nIf you’re new to Slack, check out this tutorial. In the first class, I’ll send out the invitation for everyone to join Slack and we’ll discuss how to use it."
+  },
+  {
+    "objectID": "lecture_notes/week-01/course_infrastructure.html",
+    "href": "lecture_notes/week-01/course_infrastructure.html",
+    "title": "Week 1: Course Infrastructure",
+    "section": "",
+    "text": "Throughout the semester, we will use a combination of tools. This a summary of the main tools:\n\nCommandLine: primarily to interact with git, install programs and run a few scripts\nPython3: for programming taks\nGit/Github: for version control, reproucibility and for sharing materials\nJupyter Notebooks: as a main IDE to work with Python\nQuarto via RStudio: as a secondary IDE (you can make your primary if you prefer) to coding in Python/R/SQL\nSlack: for communication.\n\nLet’s cover how to set up each of these tools in your local machines.\n\n\n\n\n\n\nWarning\n\n\n\nIf you run into issues, please reach out to the Teaching Assistant for assistance\n\n\n\n\nAt times, we’ll use a unix-based commandline. The commandline will feature into our discussion on using git and also running Python programs. If you use a Mac or a Linux operating system, then a functioning commandline comes with your operating system. For Apple machines, this is the Terminal.\nFor Windows (specifically Windows 10), you can enable Linux Bash shell. The following offers a tutorial on how to do this.\nIf you’re using a version of Windows that pre-dates version 10, then Git Bash offers a program will allow you to use git commands from your windows machine.\nLater in the first class, we will cover some concepts of working with the commandline. You can get a full notebook with a intro to commandline in the materials for week 1\n\n\n\nWe’ll use Python3 throughout this course. Below are instructions for downloading Python3 using commandline packages manager (Homebrew for mac, Chocolatey for windows).\n\nInstalling Python3 using Homebrew on a Mac (Apple)\nInstalling Python3 using Chocolatey on a PC (Windows)\n\nAn alternative way to install Python3 is to download an Anaconda distribution. I will use pip rather than conda in the instruction for downloading Python modules. These are simply two ways of downloading and managing open-source software packages. Choose which ever works best for you\nMost computers already have python3 installed. You can check if that is your case through your commandline\npython3 --version\nOn some versions of Windows, you may need to use py instead of python3:\npy --version\nIn either case, the output of this command should be something like Python 3.8.5\n\n\n\nOnce you have Python3 on your computer, you can install a Jupyter Notebook. If you downloaded Python3 using Anaconda, then Jupyter Notebook comes with the distribution and requires no further installation on your part. If you are not using Anaconda, you can install Jupyter notebook running the following code using your commandline.\n# on your command line\npip install jupyter\nYou can then activate a Jupyter Notebook from the commandline by typing:\n# on your command line\njupyter notebook\n\n\nHere is my workflow to open Jupyter Notebooks using the commandline.\n\nOpen the terminal\nNavigate (using cd) to the folder you want to be the root of your jupyter notebook\nOpen the notebook (jupyter notebook)\n\nIt looks like this if I were to open a notebook in the folder I have for this course\n# open terminal\ncd ppol_5203\njupyter notebook\n\n\n\nIf you installed Python using Anaconda distribution system (here: https://www.anaconda.com/products/individual). You can open Jupyter through a point-and-click system. It take forever, but it works!\nIn the lecture notes, you can also find a Introduction to Jupyter notebook. We will cover this in the first class of the course.\n\n\n\n\nA quick digression of the R vs Python debate\nFor some of your classes in the Data Science and Public Policy Masters, you will be using R. Some data scientists and computational social scientists have strong beleifs as to which langugae is better. I, and the DSPP faculty, do not subscribe to that view. Most techniques that are relevent for applied data science can be done in either language.\nIn my personal opinion, R outperforms Python in data manipulation tasks, visualization and statistical modeling. This is because R started out as a statistical programming environment, and that heritage is still visible. Meanwhile, Python started our a general purpose programming language, which was heavily adopted by computer scientists, which means Python outperforms on abstraction, machine learning tasks, working with more complex data types.\nMost importantly, you will be using more one language compared to the other conditional on your career path and the type of tasks you end up working with. If you end up in a team full of computer scientists, it is more likely Python will be your favored language. If you move to work more with social scientists, R will probably be more heavily used. There is no need to chose now. Learn both and broad your horizons. As general programming languages, learning both requires almost the same amount of effort of learning one in isolation.\nBack to the course infrastructure\nIn your classes that are focused on using R, RStudio will be your main IDE. However, RStudio isn’t just for R. It can handle a number of different languages. We can use Python in RStudio using the reticulate package.\nI create a full notebook to teach you how to use Python in Rstudio. Check the intro do quarto notebook. Let’s cover some of the installation steps here:\nTo install RStudio, download from the following link . reticulate is an R package that allows one run a Python REPL in the R console. In addition, it allows one to read in and use Python code, and pass data between R and and Python. The following provides instructions on installing reticulate.\nWith reticulate, you can use Rstudio as a IDE for Python. Another option is to use Quarto (the next-generation version of R Markdown) as an unified framework to generate notebooks with text + code. If you’re an R Markdown user, you will see how Quarto is just an extension of the capabilities that were previously provided by R Markdown. Now, instead of .rmd files, we have .qmd files. Quarto is already installed with RStudio.\n\n\n\nWe’ll go over more Git/GitHub instructions during the second class session. Before that session:\n\nInstall Git if it’s not installed already\nCreate a GitHub account if you don’t have one already (any email and free subscription is fine)\n\n\n\n\nOur course will make use of Slack for internal communication. Enter in our workspace with this link: (https://join.slack.com/t/ppol5203fall2024/shared_invite/zt-2ou5gm0ww-YJUJfR3vTfzN4IuKcULFDQ).\nWhen should you use slack?\n\nInteract with the TAs\nAsk questions to your colleagues\nShare links that are interesting to the discussions in class.\n\nWhen I should not use slack?\n\nIf you have a question you believe will require a longer conversation, I prefer if you can stop by at my office hours\n\nRemember, you don’t need to let me know you are going to my office hours. Just stop by!\nIf you’re new to Slack, check out this tutorial. In the first class, I’ll send out the invitation for everyone to join Slack and we’ll discuss how to use it."
+  },
+  {
+    "objectID": "lecture_notes/week-01/course_infrastructure.html#commandline",
+    "href": "lecture_notes/week-01/course_infrastructure.html#commandline",
+    "title": "Week 1: Course Infrastructure",
+    "section": "",
+    "text": "At times, we’ll use a unix-based commandline. The commandline will feature into our discussion on using git and also running Python programs. If you use a Mac or a Linux operating system, then a functioning commandline comes with your operating system. For Apple machines, this is the Terminal.\nFor Windows (specifically Windows 10), you can enable Linux Bash shell. The following offers a tutorial on how to do this.\nIf you’re using a version of Windows that pre-dates version 10, then Git Bash offers a program will allow you to use git commands from your windows machine.\nLater in the first class, we will cover some concepts of working with the commandline. You can get a full notebook with a intro to commandline in the materials for week 1"
+  },
+  {
+    "objectID": "lecture_notes/week-01/course_infrastructure.html#python3",
+    "href": "lecture_notes/week-01/course_infrastructure.html#python3",
+    "title": "Week 1: Course Infrastructure",
+    "section": "",
+    "text": "We’ll use Python3 throughout this course. Below are instructions for downloading Python3 using commandline packages manager (Homebrew for mac, Chocolatey for windows).\n\nInstalling Python3 using Homebrew on a Mac (Apple)\nInstalling Python3 using Chocolatey on a PC (Windows)\n\nAn alternative way to install Python3 is to download an Anaconda distribution. I will use pip rather than conda in the instruction for downloading Python modules. These are simply two ways of downloading and managing open-source software packages. Choose which ever works best for you\nMost computers already have python3 installed. You can check if that is your case through your commandline\npython3 --version\nOn some versions of Windows, you may need to use py instead of python3:\npy --version\nIn either case, the output of this command should be something like Python 3.8.5"
+  },
+  {
+    "objectID": "lecture_notes/week-01/course_infrastructure.html#jupyter-notebooks",
+    "href": "lecture_notes/week-01/course_infrastructure.html#jupyter-notebooks",
+    "title": "Week 1: Course Infrastructure",
+    "section": "",
+    "text": "Once you have Python3 on your computer, you can install a Jupyter Notebook. If you downloaded Python3 using Anaconda, then Jupyter Notebook comes with the distribution and requires no further installation on your part. If you are not using Anaconda, you can install Jupyter notebook running the following code using your commandline.\n# on your command line\npip install jupyter\nYou can then activate a Jupyter Notebook from the commandline by typing:\n# on your command line\njupyter notebook\n\n\nHere is my workflow to open Jupyter Notebooks using the commandline.\n\nOpen the terminal\nNavigate (using cd) to the folder you want to be the root of your jupyter notebook\nOpen the notebook (jupyter notebook)\n\nIt looks like this if I were to open a notebook in the folder I have for this course\n# open terminal\ncd ppol_5203\njupyter notebook\n\n\n\nIf you installed Python using Anaconda distribution system (here: https://www.anaconda.com/products/individual). You can open Jupyter through a point-and-click system. It take forever, but it works!\nIn the lecture notes, you can also find a Introduction to Jupyter notebook. We will cover this in the first class of the course."
+  },
+  {
+    "objectID": "lecture_notes/week-01/course_infrastructure.html#rstudio-reticulatequarto",
+    "href": "lecture_notes/week-01/course_infrastructure.html#rstudio-reticulatequarto",
+    "title": "Week 1: Course Infrastructure",
+    "section": "",
+    "text": "A quick digression of the R vs Python debate\nFor some of your classes in the Data Science and Public Policy Masters, you will be using R. Some data scientists and computational social scientists have strong beleifs as to which langugae is better. I, and the DSPP faculty, do not subscribe to that view. Most techniques that are relevent for applied data science can be done in either language.\nIn my personal opinion, R outperforms Python in data manipulation tasks, visualization and statistical modeling. This is because R started out as a statistical programming environment, and that heritage is still visible. Meanwhile, Python started our a general purpose programming language, which was heavily adopted by computer scientists, which means Python outperforms on abstraction, machine learning tasks, working with more complex data types.\nMost importantly, you will be using more one language compared to the other conditional on your career path and the type of tasks you end up working with. If you end up in a team full of computer scientists, it is more likely Python will be your favored language. If you move to work more with social scientists, R will probably be more heavily used. There is no need to chose now. Learn both and broad your horizons. As general programming languages, learning both requires almost the same amount of effort of learning one in isolation.\nBack to the course infrastructure\nIn your classes that are focused on using R, RStudio will be your main IDE. However, RStudio isn’t just for R. It can handle a number of different languages. We can use Python in RStudio using the reticulate package.\nI create a full notebook to teach you how to use Python in Rstudio. Check the intro do quarto notebook. Let’s cover some of the installation steps here:\nTo install RStudio, download from the following link . reticulate is an R package that allows one run a Python REPL in the R console. In addition, it allows one to read in and use Python code, and pass data between R and and Python. The following provides instructions on installing reticulate.\nWith reticulate, you can use Rstudio as a IDE for Python. Another option is to use Quarto (the next-generation version of R Markdown) as an unified framework to generate notebooks with text + code. If you’re an R Markdown user, you will see how Quarto is just an extension of the capabilities that were previously provided by R Markdown. Now, instead of .rmd files, we have .qmd files. Quarto is already installed with RStudio."
+  },
+  {
+    "objectID": "lecture_notes/week-01/course_infrastructure.html#git",
+    "href": "lecture_notes/week-01/course_infrastructure.html#git",
+    "title": "Week 1: Course Infrastructure",
+    "section": "",
+    "text": "We’ll go over more Git/GitHub instructions during the second class session. Before that session:\n\nInstall Git if it’s not installed already\nCreate a GitHub account if you don’t have one already (any email and free subscription is fine)"
+  },
+  {
+    "objectID": "lecture_notes/week-01/course_infrastructure.html#slack",
+    "href": "lecture_notes/week-01/course_infrastructure.html#slack",
+    "title": "Week 1: Course Infrastructure",
+    "section": "",
+    "text": "Our course will make use of Slack for internal communication. Enter in our workspace with this link: (https://join.slack.com/t/ppol5203fall2024/shared_invite/zt-2ou5gm0ww-YJUJfR3vTfzN4IuKcULFDQ).\nWhen should you use slack?\n\nInteract with the TAs\nAsk questions to your colleagues\nShare links that are interesting to the discussions in class.\n\nWhen I should not use slack?\n\nIf you have a question you believe will require a longer conversation, I prefer if you can stop by at my office hours\n\nRemember, you don’t need to let me know you are going to my office hours. Just stop by!\nIf you’re new to Slack, check out this tutorial. In the first class, I’ll send out the invitation for everyone to join Slack and we’ll discuss how to use it."
+  },
+  {
+    "objectID": "problemset.html",
+    "href": "problemset.html",
+    "title": "Problem Sets",
+    "section": "",
+    "text": "Problem Set\n\n\nContent\n\n\nDate Assigned\n\n\nDue Date\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "finalproject.html",
@@ -399,501 +672,60 @@
     "text": "Additional Code\n\nData Carpentry\n\nPython Fundamentals\nRepeated Actions with Loops\nMaking Choices\nCreating Functions\nStoring Multiple Values in Lists"
   },
   {
-    "objectID": "problemset.html",
-    "href": "problemset.html",
-    "title": "Problem Sets",
+    "objectID": "lecture_notes/week-01/intro-to-quarto.html",
+    "href": "lecture_notes/week-01/intro-to-quarto.html",
+    "title": "Week 1: Introduction to Quarto for Python",
     "section": "",
-    "text": "Problem Set\n\n\nContent\n\n\nDate Assigned\n\n\nDue Date\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "The purpose of this notebook is to show case the use of Quarto notebooks. It will cover:\n\nBrief introduction to Quarto Notebooks\nRunning R with Quarto Notebooks\nRunning Python with Quarto Notebooks + reticulate\n\nSee Quarto’s website for a more in-depth coverage of the framework."
   },
   {
-    "objectID": "lecture_notes/week-01/course_infrastructure.html",
-    "href": "lecture_notes/week-01/course_infrastructure.html",
-    "title": "Week 1: Course Infrastructure",
-    "section": "",
-    "text": "Throughout the semester, we will use a combination of tools. This a summary of the main tools:\n\nCommandLine: primarily to interact with git, install programs and run a few scripts\nPython3: for programming taks\nGit/Github: for version control, reproucibility and for sharing materials\nJupyter Notebooks: as a main IDE to work with Python\nQuarto via RStudio: as a secondary IDE (you can make your primary if you prefer) to coding in Python/R/SQL\nSlack: for communication.\n\nLet’s cover how to set up each of these tools in your local machines.\n\n\n\n\n\n\nWarning\n\n\n\nIf you run into issues, please reach out to the Teaching Assistant for assistance\n\n\n\n\nAt times, we’ll use a unix-based commandline. The commandline will feature into our discussion on using git and also running Python programs. If you use a Mac or a Linux operating system, then a functioning commandline comes with your operating system. For Apple machines, this is the Terminal.\nFor Windows (specifically Windows 10), you can enable Linux Bash shell. The following offers a tutorial on how to do this.\nIf you’re using a version of Windows that pre-dates version 10, then Git Bash offers a program will allow you to use git commands from your windows machine.\nLater in the first class, we will cover some concepts of working with the commandline. You can get a full notebook with a intro to commandline in the materials for week 1\n\n\n\nWe’ll use Python3 throughout this course. Below are instructions for downloading Python3 using commandline packages manager (Homebrew for mac, Chocolatey for windows).\n\nInstalling Python3 using Homebrew on a Mac (Apple)\nInstalling Python3 using Chocolatey on a PC (Windows)\n\nAn alternative way to install Python3 is to download an Anaconda distribution. I will use pip rather than conda in the instruction for downloading Python modules. These are simply two ways of downloading and managing open-source software packages. Choose which ever works best for you\nMost computers already have python3 installed. You can check if that is your case through your commandline\npython3 --version\nOn some versions of Windows, you may need to use py instead of python3:\npy --version\nIn either case, the output of this command should be something like Python 3.8.5\n\n\n\nOnce you have Python3 on your computer, you can install a Jupyter Notebook. If you downloaded Python3 using Anaconda, then Jupyter Notebook comes with the distribution and requires no further installation on your part. If you are not using Anaconda, you can install Jupyter notebook running the following code using your commandline.\n# on your command line\npip install jupyter\nYou can then activate a Jupyter Notebook from the commandline by typing:\n# on your command line\njupyter notebook\n\n\nHere is my workflow to open Jupyter Notebooks using the commandline.\n\nOpen the terminal\nNavigate (using cd) to the folder you want to be the root of your jupyter notebook\nOpen the notebook (jupyter notebook)\n\nIt looks like this if I were to open a notebook in the folder I have for this course\n# open terminal\ncd ppol_5203\njupyter notebook\n\n\n\nIf you installed Python using Anaconda distribution system (here: https://www.anaconda.com/products/individual). You can open Jupyter through a point-and-click system. It take forever, but it works!\nIn the lecture notes, you can also find a Introduction to Jupyter notebook. We will cover this in the first class of the course.\n\n\n\n\nA quick digression of the R vs Python debate\nFor some of your classes in the Data Science and Public Policy Masters, you will be using R. Some data scientists and computational social scientists have strong beleifs as to which langugae is better. I, and the DSPP faculty, do not subscribe to that view. Most techniques that are relevent for applied data science can be done in either language.\nIn my personal opinion, R outperforms Python in data manipulation tasks, visualization and statistical modeling. This is because R started out as a statistical programming environment, and that heritage is still visible. Meanwhile, Python started our a general purpose programming language, which was heavily adopted by computer scientists, which means Python outperforms on abstraction, machine learning tasks, working with more complex data types.\nMost importantly, you will be using more one language compared to the other conditional on your career path and the type of tasks you end up working with. If you end up in a team full of computer scientists, it is more likely Python will be your favored language. If you move to work more with social scientists, R will probably be more heavily used. There is no need to chose now. Learn both and broad your horizons. As general programming languages, learning both requires almost the same amount of effort of learning one in isolation.\nBack to the course infrastructure\nIn your classes that are focused on using R, RStudio will be your main IDE. However, RStudio isn’t just for R. It can handle a number of different languages. We can use Python in RStudio using the reticulate package.\nI create a full notebook to teach you how to use Python in Rstudio. Check the intro do quarto notebook. Let’s cover some of the installation steps here:\nTo install RStudio, download from the following link . reticulate is an R package that allows one run a Python REPL in the R console. In addition, it allows one to read in and use Python code, and pass data between R and and Python. The following provides instructions on installing reticulate.\nWith reticulate, you can use Rstudio as a IDE for Python. Another option is to use Quarto (the next-generation version of R Markdown) as an unified framework to generate notebooks with text + code. If you’re an R Markdown user, you will see how Quarto is just an extension of the capabilities that were previously provided by R Markdown. Now, instead of .rmd files, we have .qmd files. Quarto is already installed with RStudio.\n\n\n\nWe’ll go over more Git/GitHub instructions during the second class session. Before that session:\n\nInstall Git if it’s not installed already\nCreate a GitHub account if you don’t have one already (any email and free subscription is fine)\n\n\n\n\nOur course will make use of Slack for internal communication. Enter in our workspace with this link: (https://join.slack.com/t/ppol5203fall2024/shared_invite/zt-2ou5gm0ww-YJUJfR3vTfzN4IuKcULFDQ).\nWhen should you use slack?\n\nInteract with the TAs\nAsk questions to your colleagues\nShare links that are interesting to the discussions in class.\n\nWhen I should not use slack?\n\nIf you have a question you believe will require a longer conversation, I prefer if you can stop by at my office hours\n\nRemember, you don’t need to let me know you are going to my office hours. Just stop by!\nIf you’re new to Slack, check out this tutorial. In the first class, I’ll send out the invitation for everyone to join Slack and we’ll discuss how to use it."
+    "objectID": "lecture_notes/week-01/intro-to-quarto.html#my-personal-tldr-about-quarto",
+    "href": "lecture_notes/week-01/intro-to-quarto.html#my-personal-tldr-about-quarto",
+    "title": "Week 1: Introduction to Quarto for Python",
+    "section": "My personal TLDR about Quarto",
+    "text": "My personal TLDR about Quarto\nQuarto was developed by Posit (the new name of RStudio). It represents the effort of RStudio to become a language agnostic IDE for Data Science.\nQuarto main promise is to allow data scientists to run many different languages using the same notebook structure. For the purpose of our course, we will use mostly Jupyter Notebooks, since those are still dominant among Python developers.\nAs you are learning Python and R at the same time throughout your DSPP courses, I advice you to take a look at Quarto. You might find it a useful tool to run both R and Python."
   },
   {
-    "objectID": "lecture_notes/week-01/course_infrastructure.html#commandline",
-    "href": "lecture_notes/week-01/course_infrastructure.html#commandline",
-    "title": "Week 1: Course Infrastructure",
-    "section": "",
-    "text": "At times, we’ll use a unix-based commandline. The commandline will feature into our discussion on using git and also running Python programs. If you use a Mac or a Linux operating system, then a functioning commandline comes with your operating system. For Apple machines, this is the Terminal.\nFor Windows (specifically Windows 10), you can enable Linux Bash shell. The following offers a tutorial on how to do this.\nIf you’re using a version of Windows that pre-dates version 10, then Git Bash offers a program will allow you to use git commands from your windows machine.\nLater in the first class, we will cover some concepts of working with the commandline. You can get a full notebook with a intro to commandline in the materials for week 1"
+    "objectID": "lecture_notes/week-01/intro-to-quarto.html#quick-tutorial-for-rstudio",
+    "href": "lecture_notes/week-01/intro-to-quarto.html#quick-tutorial-for-rstudio",
+    "title": "Week 1: Introduction to Quarto for Python",
+    "section": "Quick tutorial for RStudio",
+    "text": "Quick tutorial for RStudio\nThis is what RStudio looks like when you open it for the first time.\n\n\n\n\n\nTop left pane (input/script)\nThis is your code editor. Here you enter code in any file type (.py, .r, .qmd) you are working on. If not working with notebooks, this is just gonna be a plain text file but with a extension that run the commands.\nFor example, enter 2 + 2 in your script and run a line of code by pressing command + enter (Mac) or Ctrl + enter (PC). This is a huge advantage of Rstudio over Jupyter. You can run your code line by line, instead of running the entire cell.\nBottom left pane (output/console)\nThis is the console. It is pretty much like when you open Python/R from the Command line.\nIn the console, the prompt &gt; looks like a greater than symbol. If your prompt begins to look like a + symbol by mistake, simply click in your console and press the esc key on your keyboard as many times as necessary to return to the prompt.\nRstudio uses + when code is broken up across multiple lines and is still expecting more code. A line of code does not usually end until Rstudio finds an appropriate stop parameter or punctuation that completes some code such as a closed round parenthesis ), square bracket ], curly brace }, or quotation mark '.\nIf the output in your console gets too messy, you can clear it by pressing control + l on both Mac and PC. This will not erase any saved data - it will simply make your console easier to read.\nTop right pane (global environment)\nThis is your environment pane. All objects you create will be displayed here.\nBottom right pane (files, plots, packages, and help)\nHere you find useful tabs for navigating your file system, displaying plots, installing packages, and viewing help pages. Press the control key and a number (1 through 9) on your keyboard to shortcut between these panes and tabs."
   },
   {
-    "objectID": "lecture_notes/week-01/course_infrastructure.html#python3",
-    "href": "lecture_notes/week-01/course_infrastructure.html#python3",
-    "title": "Week 1: Course Infrastructure",
-    "section": "",
-    "text": "We’ll use Python3 throughout this course. Below are instructions for downloading Python3 using commandline packages manager (Homebrew for mac, Chocolatey for windows).\n\nInstalling Python3 using Homebrew on a Mac (Apple)\nInstalling Python3 using Chocolatey on a PC (Windows)\n\nAn alternative way to install Python3 is to download an Anaconda distribution. I will use pip rather than conda in the instruction for downloading Python modules. These are simply two ways of downloading and managing open-source software packages. Choose which ever works best for you\nMost computers already have python3 installed. You can check if that is your case through your commandline\npython3 --version\nOn some versions of Windows, you may need to use py instead of python3:\npy --version\nIn either case, the output of this command should be something like Python 3.8.5"
-  },
-  {
-    "objectID": "lecture_notes/week-01/course_infrastructure.html#jupyter-notebooks",
-    "href": "lecture_notes/week-01/course_infrastructure.html#jupyter-notebooks",
-    "title": "Week 1: Course Infrastructure",
-    "section": "",
-    "text": "Once you have Python3 on your computer, you can install a Jupyter Notebook. If you downloaded Python3 using Anaconda, then Jupyter Notebook comes with the distribution and requires no further installation on your part. If you are not using Anaconda, you can install Jupyter notebook running the following code using your commandline.\n# on your command line\npip install jupyter\nYou can then activate a Jupyter Notebook from the commandline by typing:\n# on your command line\njupyter notebook\n\n\nHere is my workflow to open Jupyter Notebooks using the commandline.\n\nOpen the terminal\nNavigate (using cd) to the folder you want to be the root of your jupyter notebook\nOpen the notebook (jupyter notebook)\n\nIt looks like this if I were to open a notebook in the folder I have for this course\n# open terminal\ncd ppol_5203\njupyter notebook\n\n\n\nIf you installed Python using Anaconda distribution system (here: https://www.anaconda.com/products/individual). You can open Jupyter through a point-and-click system. It take forever, but it works!\nIn the lecture notes, you can also find a Introduction to Jupyter notebook. We will cover this in the first class of the course."
-  },
-  {
-    "objectID": "lecture_notes/week-01/course_infrastructure.html#rstudio-reticulatequarto",
-    "href": "lecture_notes/week-01/course_infrastructure.html#rstudio-reticulatequarto",
-    "title": "Week 1: Course Infrastructure",
-    "section": "",
-    "text": "A quick digression of the R vs Python debate\nFor some of your classes in the Data Science and Public Policy Masters, you will be using R. Some data scientists and computational social scientists have strong beleifs as to which langugae is better. I, and the DSPP faculty, do not subscribe to that view. Most techniques that are relevent for applied data science can be done in either language.\nIn my personal opinion, R outperforms Python in data manipulation tasks, visualization and statistical modeling. This is because R started out as a statistical programming environment, and that heritage is still visible. Meanwhile, Python started our a general purpose programming language, which was heavily adopted by computer scientists, which means Python outperforms on abstraction, machine learning tasks, working with more complex data types.\nMost importantly, you will be using more one language compared to the other conditional on your career path and the type of tasks you end up working with. If you end up in a team full of computer scientists, it is more likely Python will be your favored language. If you move to work more with social scientists, R will probably be more heavily used. There is no need to chose now. Learn both and broad your horizons. As general programming languages, learning both requires almost the same amount of effort of learning one in isolation.\nBack to the course infrastructure\nIn your classes that are focused on using R, RStudio will be your main IDE. However, RStudio isn’t just for R. It can handle a number of different languages. We can use Python in RStudio using the reticulate package.\nI create a full notebook to teach you how to use Python in Rstudio. Check the intro do quarto notebook. Let’s cover some of the installation steps here:\nTo install RStudio, download from the following link . reticulate is an R package that allows one run a Python REPL in the R console. In addition, it allows one to read in and use Python code, and pass data between R and and Python. The following provides instructions on installing reticulate.\nWith reticulate, you can use Rstudio as a IDE for Python. Another option is to use Quarto (the next-generation version of R Markdown) as an unified framework to generate notebooks with text + code. If you’re an R Markdown user, you will see how Quarto is just an extension of the capabilities that were previously provided by R Markdown. Now, instead of .rmd files, we have .qmd files. Quarto is already installed with RStudio."
-  },
-  {
-    "objectID": "lecture_notes/week-01/course_infrastructure.html#git",
-    "href": "lecture_notes/week-01/course_infrastructure.html#git",
-    "title": "Week 1: Course Infrastructure",
-    "section": "",
-    "text": "We’ll go over more Git/GitHub instructions during the second class session. Before that session:\n\nInstall Git if it’s not installed already\nCreate a GitHub account if you don’t have one already (any email and free subscription is fine)"
-  },
-  {
-    "objectID": "lecture_notes/week-01/course_infrastructure.html#slack",
-    "href": "lecture_notes/week-01/course_infrastructure.html#slack",
-    "title": "Week 1: Course Infrastructure",
-    "section": "",
-    "text": "Our course will make use of Slack for internal communication. Enter in our workspace with this link: (https://join.slack.com/t/ppol5203fall2024/shared_invite/zt-2ou5gm0ww-YJUJfR3vTfzN4IuKcULFDQ).\nWhen should you use slack?\n\nInteract with the TAs\nAsk questions to your colleagues\nShare links that are interesting to the discussions in class.\n\nWhen I should not use slack?\n\nIf you have a question you believe will require a longer conversation, I prefer if you can stop by at my office hours\n\nRemember, you don’t need to let me know you are going to my office hours. Just stop by!\nIf you’re new to Slack, check out this tutorial. In the first class, I’ll send out the invitation for everyone to join Slack and we’ll discuss how to use it."
-  },
-  {
-    "objectID": "course_infrastructure.html",
-    "href": "course_infrastructure.html",
-    "title": "Week 1: Course Infrastructure",
-    "section": "",
-    "text": "Throughout the semester, we will use a combination of computational tools. This a summary of the main tools:\n\nCommandLine: primarily to interact with git, install programs and run a few scripts\nPython3: for programming taks\nGit/Github: for version control, reproucibility and for sharing materials\nJupyter Notebooks: as a main IDE to work with Python\nQuarto via RStudio: as a secondary IDE (you can make your primary if you prefer) to coding in Python/R/SQL\nSlack: for communication.\n\nLet’s cover how to set up each of these tools in your local machines.\n\n\n\n\n\n\nWarning\n\n\n\nIf you run into issues, please reach out to the Teaching Assistant for assistance\n\n\n\n\nAt times, we’ll use a unix-based commandline. The commandline will feature into our discussion on using git and also running Python programs. If you use a Mac or a Linux operating system, then a functioning commandline comes with your operating system. For Apple machines, this is the Terminal.\nFor Windows (specifically Windows 10), you can enable Linux Bash shell. The following offers a tutorial on how to do this.\nIf you’re using a version of Windows that pre-dates version 10, then Git Bash offers a program will allow you to use git commands from your windows machine.\nLater in the first class, we will cover some concepts of working with the commandline. You can get a full notebook with a intro to commandline in the materials for week 1\n\n\n\nWe’ll use Python3 throughout this course. Below are instructions for downloading Python3 using commandline packages manager (Homebrew for mac, Chocolatey for windows).\n\nInstalling Python3 using Homebrew on a Mac (Apple)\nInstalling Python3 using Chocolatey on a PC (Windows)\n\nAn alternative way to install Python3 is to download an Anaconda distribution. I will use pip rather than conda in the instruction for downloading Python modules. These are simply two ways of downloading and managing open-source software packages. Choose which ever works best for you\nMost computers already have python3 installed. You can check if that is your case through your commandline\npython3 --version\nOn some versions of Windows, you may need to use py instead of python3:\npy --version\nIn either case, the output of this command should be something like Python 3.8.5\n\n\n\nOnce you have Python3 on your computer, you can install a Jupyter Notebook. If you downloaded Python3 using Anaconda, then Jupyter Notebook comes with the distribution and requires no further installation on your part. If you are not using Anaconda, you can install Jupyter notebook running the following code using your commandline.\n# on your command line\npip install jupyter\nYou can then activate a Jupyter Notebook from the commandline by typing:\n# on your command line\njupyter notebook\n\n\nHere is my workflow to open Jupyter Notebooks using the commandline.\n\nOpen the terminal\nNavigate (using cd) to the folder you want to be the root of your jupyter notebook\nOpen the notebook (jupyter notebook)\n\nIt looks like this if I were to open a notebook in the folder I have for this course\n# open terminal\ncd ppol_5203\njupyter notebook\n\n\n\nIf you installed Python using Anaconda distribution system (here: https://www.anaconda.com/products/individual). You can open Jupyter through a point-and-click system. It take forever, but it works!\nIn the lecture notes, you can also find a Introduction to Jupyter notebook. We will cover this in the first class of the course.\n\n\n\n\nA quick digression of the R vs Python debate\nFor some of your classes in the Data Science and Public Policy Masters, you will be using R. Some data scientists and computational social scientists have strong beleifs as to which langugae is better. I, and the DSPP faculty, do not subscribe to that view. Most techniques that are relevent for applied data science can be done in either language.\nIn my personal opinion, R outperforms Python in data manipulation tasks, visualization and statistical modeling. This is because R started out as a statistical programming environment, and that heritage is still visible. Meanwhile, Python started our a general purpose programming language, which was heavily adopted by computer scientists, which means Python outperforms on abstraction, machine learning tasks, working with more complex data types.\nMost importantly, you will be using more one language compared to the other conditional on your career path and the type of tasks you end up working with. If you end up in a team full of computer scientists, it is more likely Python will be your favored language. If you move to work more with social scientists, R will probably be more heavily used. There is no need to chose now. Learn both and broad your horizons. As general programming languages, learning both requires almost the same amount of effort of learning one in isolation.\nBack to the course infrastructure\nIn your classes that are focused on using R, RStudio will be your main IDE. However, RStudio isn’t just for R. It can handle a number of different languages. We can use Python in RStudio using the reticulate package.\nI create a full notebook to teach you how to use Python in Rstudio. Check the intro do quarto notebook. Let’s cover some of the installation steps here:\nTo install RStudio, download from the following link . reticulate is an R package that allows one run a Python REPL in the R console. In addition, it allows one to read in and use Python code, and pass data between R and and Python. The following provides instructions on installing reticulate.\nWith reticulate, you can use Rstudio as a IDE for Python. Another option is to use Quarto (the next-generation version of R Markdown) as an unified framework to generate notebooks with text + code. If you’re an R Markdown user, you will see how Quarto is just an extension of the capabilities that were previously provided by R Markdown. Now, instead of .rmd files, we have .qmd files. Quarto is already installed with RStudio.\n\n\n\nWe’ll go over more Git/GitHub instructions during the second class session. Before that session:\n\nInstall Git if it’s not installed already\nCreate a GitHub account if you don’t have one already (any email and free subscription is fine)\n\n\n\n\nOur course will make use of Slack for internal communication. Enter in our workspace with this link: (https://join.slack.com/t/ppol5203fall2024/shared_invite/zt-2ou5gm0ww-YJUJfR3vTfzN4IuKcULFDQ).\nWhen should you use slack?\n\nInteract with the TAs\nAsk questions to your colleagues\nShare links that are interesting to the discussions in class.\n\nWhen I should not use slack?\n\nIf you have a question you believe will require a longer conversation, I prefer if you can stop by at my office hours\n\nRemember, you don’t need to let me know you are going to my office hours. Just stop by!\nIf you’re new to Slack, check out this tutorial. In the first class, I’ll send out the invitation for everyone to join Slack and we’ll discuss how to use it."
-  },
-  {
-    "objectID": "course_infrastructure.html#commandline",
-    "href": "course_infrastructure.html#commandline",
-    "title": "Week 1: Course Infrastructure",
-    "section": "",
-    "text": "At times, we’ll use a unix-based commandline. The commandline will feature into our discussion on using git and also running Python programs. If you use a Mac or a Linux operating system, then a functioning commandline comes with your operating system. For Apple machines, this is the Terminal.\nFor Windows (specifically Windows 10), you can enable Linux Bash shell. The following offers a tutorial on how to do this.\nIf you’re using a version of Windows that pre-dates version 10, then Git Bash offers a program will allow you to use git commands from your windows machine.\nLater in the first class, we will cover some concepts of working with the commandline. You can get a full notebook with a intro to commandline in the materials for week 1"
-  },
-  {
-    "objectID": "course_infrastructure.html#python3",
-    "href": "course_infrastructure.html#python3",
-    "title": "Week 1: Course Infrastructure",
-    "section": "",
-    "text": "We’ll use Python3 throughout this course. Below are instructions for downloading Python3 using commandline packages manager (Homebrew for mac, Chocolatey for windows).\n\nInstalling Python3 using Homebrew on a Mac (Apple)\nInstalling Python3 using Chocolatey on a PC (Windows)\n\nAn alternative way to install Python3 is to download an Anaconda distribution. I will use pip rather than conda in the instruction for downloading Python modules. These are simply two ways of downloading and managing open-source software packages. Choose which ever works best for you\nMost computers already have python3 installed. You can check if that is your case through your commandline\npython3 --version\nOn some versions of Windows, you may need to use py instead of python3:\npy --version\nIn either case, the output of this command should be something like Python 3.8.5"
-  },
-  {
-    "objectID": "course_infrastructure.html#jupyter-notebooks",
-    "href": "course_infrastructure.html#jupyter-notebooks",
-    "title": "Week 1: Course Infrastructure",
-    "section": "",
-    "text": "Once you have Python3 on your computer, you can install a Jupyter Notebook. If you downloaded Python3 using Anaconda, then Jupyter Notebook comes with the distribution and requires no further installation on your part. If you are not using Anaconda, you can install Jupyter notebook running the following code using your commandline.\n# on your command line\npip install jupyter\nYou can then activate a Jupyter Notebook from the commandline by typing:\n# on your command line\njupyter notebook\n\n\nHere is my workflow to open Jupyter Notebooks using the commandline.\n\nOpen the terminal\nNavigate (using cd) to the folder you want to be the root of your jupyter notebook\nOpen the notebook (jupyter notebook)\n\nIt looks like this if I were to open a notebook in the folder I have for this course\n# open terminal\ncd ppol_5203\njupyter notebook\n\n\n\nIf you installed Python using Anaconda distribution system (here: https://www.anaconda.com/products/individual). You can open Jupyter through a point-and-click system. It take forever, but it works!\nIn the lecture notes, you can also find a Introduction to Jupyter notebook. We will cover this in the first class of the course."
-  },
-  {
-    "objectID": "course_infrastructure.html#rstudio-reticulatequarto",
-    "href": "course_infrastructure.html#rstudio-reticulatequarto",
-    "title": "Week 1: Course Infrastructure",
-    "section": "",
-    "text": "A quick digression of the R vs Python debate\nFor some of your classes in the Data Science and Public Policy Masters, you will be using R. Some data scientists and computational social scientists have strong beleifs as to which langugae is better. I, and the DSPP faculty, do not subscribe to that view. Most techniques that are relevent for applied data science can be done in either language.\nIn my personal opinion, R outperforms Python in data manipulation tasks, visualization and statistical modeling. This is because R started out as a statistical programming environment, and that heritage is still visible. Meanwhile, Python started our a general purpose programming language, which was heavily adopted by computer scientists, which means Python outperforms on abstraction, machine learning tasks, working with more complex data types.\nMost importantly, you will be using more one language compared to the other conditional on your career path and the type of tasks you end up working with. If you end up in a team full of computer scientists, it is more likely Python will be your favored language. If you move to work more with social scientists, R will probably be more heavily used. There is no need to chose now. Learn both and broad your horizons. As general programming languages, learning both requires almost the same amount of effort of learning one in isolation.\nBack to the course infrastructure\nIn your classes that are focused on using R, RStudio will be your main IDE. However, RStudio isn’t just for R. It can handle a number of different languages. We can use Python in RStudio using the reticulate package.\nI create a full notebook to teach you how to use Python in Rstudio. Check the intro do quarto notebook. Let’s cover some of the installation steps here:\nTo install RStudio, download from the following link . reticulate is an R package that allows one run a Python REPL in the R console. In addition, it allows one to read in and use Python code, and pass data between R and and Python. The following provides instructions on installing reticulate.\nWith reticulate, you can use Rstudio as a IDE for Python. Another option is to use Quarto (the next-generation version of R Markdown) as an unified framework to generate notebooks with text + code. If you’re an R Markdown user, you will see how Quarto is just an extension of the capabilities that were previously provided by R Markdown. Now, instead of .rmd files, we have .qmd files. Quarto is already installed with RStudio."
-  },
-  {
-    "objectID": "course_infrastructure.html#git",
-    "href": "course_infrastructure.html#git",
-    "title": "Week 1: Course Infrastructure",
-    "section": "",
-    "text": "We’ll go over more Git/GitHub instructions during the second class session. Before that session:\n\nInstall Git if it’s not installed already\nCreate a GitHub account if you don’t have one already (any email and free subscription is fine)"
-  },
-  {
-    "objectID": "course_infrastructure.html#slack",
-    "href": "course_infrastructure.html#slack",
-    "title": "Week 1: Course Infrastructure",
-    "section": "",
-    "text": "Our course will make use of Slack for internal communication. Enter in our workspace with this link: (https://join.slack.com/t/ppol5203fall2024/shared_invite/zt-2ou5gm0ww-YJUJfR3vTfzN4IuKcULFDQ).\nWhen should you use slack?\n\nInteract with the TAs\nAsk questions to your colleagues\nShare links that are interesting to the discussions in class.\n\nWhen I should not use slack?\n\nIf you have a question you believe will require a longer conversation, I prefer if you can stop by at my office hours\n\nRemember, you don’t need to let me know you are going to my office hours. Just stop by!\nIf you’re new to Slack, check out this tutorial. In the first class, I’ll send out the invitation for everyone to join Slack and we’ll discuss how to use it."
-  },
-  {
-    "objectID": "slides/week-1.html#plans-for-today",
-    "href": "slides/week-1.html#plans-for-today",
-    "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "Plans for Today",
-    "text": "Plans for Today\n\nMotivating Data Science for Public Policy.\nGoals of the course\nIntroductions\nCourse Logistics\nIDEs\n\nJupyter\n\nIntroduction to commandline"
-  },
-  {
-    "objectID": "slides/week-1.html#rise-of-the-digital-information-age",
-    "href": "slides/week-1.html#rise-of-the-digital-information-age",
-    "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "Rise of the digital information age",
-    "text": "Rise of the digital information age\n\n\n\n\n\n\n\n\n\n\n\nhttps://www.washingtonpost.com/wp-dyn/content/graphic/2011/02/11/GR2011021100614.html"
-  },
-  {
-    "objectID": "slides/week-1.html#powerful-and-cheap-computer-power",
-    "href": "slides/week-1.html#powerful-and-cheap-computer-power",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "Powerful and Cheap Computer Power",
-    "text": "Powerful and Cheap Computer Power"
-  },
-  {
-    "objectID": "slides/week-1.html#as-a-consequence",
-    "href": "slides/week-1.html#as-a-consequence",
-    "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "As a consequence:",
-    "text": "As a consequence:\n\nAbundance of data we can use for research and governments can use to make better decisions\n\nNovel research questions\nNew ways to answer old, long-standing research questions\n\nNew technologies also have social implications and can generate important policy questions.\n\nPrivacy issues\nUse of technology by bad actors.\nUse of technology by governments to censor/monitor citizens.\n\nPolicy scholars (but pretty much any researcher) need to be equipped to properly deal with these challenges"
-  },
-  {
-    "objectID": "slides/week-1.html#data-science-for-public-policy",
-    "href": "slides/week-1.html#data-science-for-public-policy",
-    "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "Data Science for Public Policy",
-    "text": "Data Science for Public Policy\nData Scientist for Public Policy focuses on computational approaches to solve/understand policy problems.\n\nIt is part of a larger and new field called computational social science\n\n\n\n\nSocial science\n\nUnderstands human behavior: human psychology, language, economic behavior, political systems, policy problems\nInvolve many approaches: qualitative interviews, statistical analysis, simulations\n\n\n\n\n\nData Science:\n\nTools to work with large-scale data + learning models + novel data sources"
-  },
-  {
-    "objectID": "slides/week-1.html#an-example-data-donation-whatsapp-groups",
-    "href": "slides/week-1.html#an-example-data-donation-whatsapp-groups",
-    "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "An example: Data Donation WhatsApp Groups",
-    "text": "An example: Data Donation WhatsApp Groups"
-  },
-  {
-    "objectID": "slides/week-1.html#all-the-steps-tools-....-so-far-...",
-    "href": "slides/week-1.html#all-the-steps-tools-....-so-far-...",
-    "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "All the steps + Tools .... so far ...",
-    "text": "All the steps + Tools .... so far ...\n\nStep 1: Recruiting participants online (SS)\n\nOnline Panels + Facebook Ads\n\nStep 2: Running online surveys (SS)\n\nQualtrics + R\n\nStep 3: Development of data donation pipeline (with MDI) (DS/CS)\n\nJavaScript (JS) + Python\n\nStep 4: Analyze the data (SS/DS)\n\nSQL + Python + R"
-  },
-  {
-    "objectID": "slides/week-1.html#readings-for-this-week",
-    "href": "slides/week-1.html#readings-for-this-week",
-    "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "Readings for this week",
-    "text": "Readings for this week\n\nBit by Bit: Social Research in the Digital Age By Mathew Salganik\n\nIntroduction\nObserving Behavior\n\nTraining Computational Social Science PhD Students for Academic and Non-Academic Careers - Written by me and some colleagues in academia, industry and non-profits"
-  },
-  {
-    "objectID": "slides/week-1.html#goals-of-the-course",
-    "href": "slides/week-1.html#goals-of-the-course",
-    "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "Goals of the course",
-    "text": "Goals of the course\n\nThe goal of this course is to teach you:\n\nComputational thinking: how to approach problems and devise solutions from a computational perspective.\nGet you started on Python, introduce some useful tools (scrapping, text analysis and API applications of GenAI models), and bit of SQL for applied data science; lay the foundations for the remainder of the core DS sequence\nWorkflows and tools: Git/Github + Commandline."
-  },
-  {
-    "objectID": "slides/week-1.html#course-schedule",
-    "href": "slides/week-1.html#course-schedule",
-    "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "Course Schedule",
-    "text": "Course Schedule\n\n\n\n\n\n\n\n\nWeek\nTopic\nDate\n\n\n\n\nWeek 01\nIntroduction, Installations, IDEs, Command line\nSeptember 09, 2025\n\n\nWeek 02\nVersion Control, Workflow and Reproducibility: Or a bit of Git & GitHub\nSeptember 16, 2025\n\n\nWeek 03\nIntro to Python - OOP, Data Types, Control Statements and Functions\nSeptember 23, 2025\n\n\nWeek 04\nIntro to Python II: Scaling up your code - Iteration, Comprehension and Functions\nSeptember 30, 2025\n\n\nWeek 05\nFrom Nested lists to Dataframes: Numpy and Intro to Pandas\nOctober 07, 2025\n\n\nWeek 06\nPandas II: Data Wrangling\nOctober 14, 2025\n\n\nWeek 07\nJoining, Tidying and Visualizing Data\nOctober 21, 2025\n\n\nWeek 08\nScraping + APIs\nOctober 28, 2025\n\n\nWeek 09\nStatistical Learning\nNovember 04, 2025\n\n\nWeek 10\nText as Data I: Discovery and Topics\nNovember 11, 2023\n\n\nWeek 11\nText as Data II: Supervised Learning\nNovember 18, 2025\n\n\nWeek 12\nGenerative AI: Classification, Surveys and Prompting (Invited Speaker - Dr. Patrick Wu, American University)\nNovember 25, 2025\n\n\nWeek 13\nSQL\nDecember 03, 2024\n\n\nWeek 14\nPresentations of Final Projects\nDecember 09, 2023"
-  },
-  {
-    "objectID": "slides/week-1.html#about-me",
-    "href": "slides/week-1.html#about-me",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "About me",
-    "text": "About me\n\nProfessor Tiago Ventura (he/him)\n\nAssistant Professor at McCourt School.\nPolitical Science Ph.D.\nPostdoc at Center for Social Media and Politics at NYU.\nResearcher at Twitter.\n\nResearch Interests:\n\nSocial media and politics\nComputational methods, NLP and LLMs\nFocus on Global South\n\nOutside of work, I enjoy watching soccer and reading sci-fi.\n\nSometimes I enjoy soccer while working!\nAnd I am from Brazil!"
-  },
-  {
-    "objectID": "slides/week-1.html#quiz",
-    "href": "slides/week-1.html#quiz",
-    "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "Quiz!",
-    "text": "Quiz!\nWhich programming language did I use the most at?\n\nPhD\nPostdoc\nTwitter\nAs a Faculty"
-  },
-  {
-    "objectID": "slides/week-1.html#a-comment-from-the-pre-course-survey-from-last-year",
-    "href": "slides/week-1.html#a-comment-from-the-pre-course-survey-from-last-year",
-    "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "A comment from the pre-course survey (from last year)",
-    "text": "A comment from the pre-course survey (from last year)\n\nHi professor Ventura! I noticed that we gonna learn multiple data analysis tool this semester and I am definitely a novice of data science. I am little worried about how can I master all of them without being confused, because some commands might be very similar."
-  },
-  {
-    "objectID": "slides/week-1.html#your-turn",
-    "href": "slides/week-1.html#your-turn",
-    "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "Your turn!",
-    "text": "Your turn!\n\nName\n(Briefly) what you were up to prior to the DSPP\nIf you could have any data source at your disposal, what would it be?"
-  },
-  {
-    "objectID": "slides/week-1.html#logistics",
-    "href": "slides/week-1.html#logistics",
-    "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "Logistics",
-    "text": "Logistics\n\n\nCommunication: via slack. Join the workspace!\nAll materials: hosted on the class website: https://tiagoventura.github.io/ppol5203/\nSyllabus: also on the website.\nMy Office Hours: Every tuesday from 4 to 5pm. Just stop by!\nCanvas: Only for official communication! Materials will be hosted in the website!\nDatacamp: Additional exercises! Access our free account here\nTask: go on slack and send me a message about the data source you choose in the last answer, and if you feel comfortable add a picture to your profile\n\n\n\n\n−+\n05:00"
-  },
-  {
-    "objectID": "slides/week-1.html#tas",
-    "href": "slides/week-1.html#tas",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "TAs",
-    "text": "TAs\n\nAastha Jha (DSPP Second-Year Student)\n\nEmail: aj935@georgetown.edu\nOffice Hours:\n\nEvery Wednesdays, from 1pm to 2pm.\n\n\nShirui Zhou (DSPP Alumni)\n\nEmail: sz614@georgetown.edu\nOffice Hours:\n\nEvery Monday, from 1pm to 2pm"
-  },
-  {
-    "objectID": "slides/week-1.html#evaluation",
-    "href": "slides/week-1.html#evaluation",
-    "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "Evaluation",
-    "text": "Evaluation\n\n\n\nAssignment\nPercentage of Grade\n\n\n\n\nParticipation/Attendance\n5%\n\n\nCoding Discussion\n5%\n\n\nProblem sets\n50%\n\n\nFinal Project\n40%"
-  },
-  {
-    "objectID": "slides/week-1.html#problem-sets",
-    "href": "slides/week-1.html#problem-sets",
-    "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "Problem Sets",
-    "text": "Problem Sets\nIndividual submission through GitHub.\n\n\n\nAssignment\nDate Assigned\nDate Due\n\n\n\n\nNo. 1\nWeek 2\nBefore EOD of Friday of Week 3\n\n\nNo. 2\nWeek 4\nBefore EOD of Friday of Week 5\n\n\nNo. 3\nWeek 6\nBefore EOD of Friday of Week 7\n\n\nNo. 4\nweek 8\nBefore EOD of Friday of Week 9\n\n\nNo. 5\nNovember 10\nBefore EOD of Friday of Week 111"
-  },
-  {
-    "objectID": "slides/week-1.html#final-project",
-    "href": "slides/week-1.html#final-project",
-    "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "Final Project",
-    "text": "Final Project\n\nYou will work on groups!\nThe project is composed of three parts:\n\na 2 page project proposal: (which should be discussed and approved by me)\nan in-class presentation,\nA 10-page project report."
-  },
-  {
-    "objectID": "slides/week-1.html#due-dates-and-points",
-    "href": "slides/week-1.html#due-dates-and-points",
-    "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "Due dates and Points:",
-    "text": "Due dates and Points:\n\n\n\nRequirement\nDue\nLength\nPercentage\n\n\n\n\nProject Proposal\nOctober 31\n2 pages\n5%\n\n\nPresentation\nDecember 09\n10-15 minutes\n10%\n\n\nProject Report\nDecember 16\n10 pages\n25%"
-  },
-  {
-    "objectID": "slides/week-1.html#chatgpt",
-    "href": "slides/week-1.html#chatgpt",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "ChatGPT",
-    "text": "ChatGPT\nYou are allowed to use ChatGPT as you would use google in this class. This means:\n\nDo not copy the responses from chatgpt – a lot of them are wrong or will just not run on your computer\nUse chatgpt as a auxiliary source.\nIf your entire homework comes straight from chatgpt, I will consider it plagiarism.\nIf you use chatgpt, I ask you to mention on your code how chatgpt worked for you."
-  },
-  {
-    "objectID": "slides/week-1.html#summary-of-the-survey",
-    "href": "slides/week-1.html#summary-of-the-survey",
-    "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "Summary of the survey",
-    "text": "Summary of the survey\n\nMost of you have some experience with Python.\nVery few of you were using primarily Python in your work before!\n\nMost others are using R and Excel!\n\nMost of you have Python in your laptops, some still do not have a github account. If you are having issues after today, talk to your TAs.\nMain Policy Areas:\n\nSocial Media/Tech (Talk to me!)\nElection (Talk to Professor Warshaw, Bailey or Ladd)\nEducation (Talk with Professor Johnson)"
-  },
-  {
-    "objectID": "slides/week-1.html#open-ended",
-    "href": "slides/week-1.html#open-ended",
-    "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "Open Ended",
-    "text": "Open Ended\n\nthis is a big group of international students, and some are concerned about not having english as you first language!\n\nTHIS IS FINE ! I hope my non-native and strongly accented English will encourage you to participate in class and speak up!\n\n\n\n\n“That’s just what translation is, I think. That’s all speaking is. Listening to the other and trying to see past your own biases to glimpse what they’re trying to say. Showing yourself to the world, and hoping someone else understands.” - R.F. Kuang, Babel"
-  },
-  {
-    "objectID": "slides/week-1.html#set-up-your-course-infra-structure",
-    "href": "slides/week-1.html#set-up-your-course-infra-structure",
-    "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "Set up your course infra-structure",
-    "text": "Set up your course infra-structure\nSee Course Website\n\nInstall Python\nInstall Jupyter\nSetup your Git/Github account\n\nHomework: Try to make one successful Git push before class next week."
-  },
-  {
-    "objectID": "slides/week-1.html#jupyter",
-    "href": "slides/week-1.html#jupyter",
-    "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "Jupyter:",
-    "text": "Jupyter:\nJupyter Notebook Tutorial in the Class Website\nNote on my approach on Notebooks: I will go over quite quickly through the notebooks. You should run them by yourselves at a later point!"
-  },
-  {
-    "objectID": "slides/week-1.html#command-line",
-    "href": "slides/week-1.html#command-line",
-    "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "Command Line",
-    "text": "Command Line\nCommand Line Tutorial in the Class Website"
-  },
-  {
-    "objectID": "slides/week-1.html#quarto",
-    "href": "slides/week-1.html#quarto",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "Quarto",
-    "text": "Quarto\nSee Quarto Notebook in the Class Website"
-  },
-  {
-    "objectID": "slides/week-1.html#datacamp-course",
-    "href": "slides/week-1.html#datacamp-course",
-    "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "Datacamp Course",
-    "text": "Datacamp Course\n\njoin\nIntroduction to Shell"
-  },
-  {
-    "objectID": "syllabus.html",
-    "href": "syllabus.html",
-    "title": "Syllabus: PPOL 5203 - Data Science I: Foundations",
-    "section": "",
-    "text": "This first course in the core data science sequence teaches Data Science for Public Policy (DSPP) students how to synthesize disparate, possibly unstructured data in order to draw meaningful insights. Topics covered include the fundamentals of object-oriented programming in Python; literate programming; an introduction to algorithms and data types; data wrangling, visualization, and extraction; an introduction to machine learning methods,text analysis and working with Generative AI Models. In addition, students will be exposed to Git and Github for version control and reproducible research. The objective of the course is to teach students how incorporate data into their decision-making and analysis. No prior programming experience is assumed or required.\nClass Website: https://tiagoventura.github.io/ppol5203"
-  },
-  {
-    "objectID": "syllabus.html#course-description",
-    "href": "syllabus.html#course-description",
-    "title": "Syllabus: PPOL 5203 - Data Science I: Foundations",
-    "section": "",
-    "text": "This first course in the core data science sequence teaches Data Science for Public Policy (DSPP) students how to synthesize disparate, possibly unstructured data in order to draw meaningful insights. Topics covered include the fundamentals of object-oriented programming in Python; literate programming; an introduction to algorithms and data types; data wrangling, visualization, and extraction; an introduction to machine learning methods,text analysis and working with Generative AI Models. In addition, students will be exposed to Git and Github for version control and reproducible research. The objective of the course is to teach students how incorporate data into their decision-making and analysis. No prior programming experience is assumed or required.\nClass Website: https://tiagoventura.github.io/ppol5203"
-  },
-  {
-    "objectID": "syllabus.html#learning-goals",
-    "href": "syllabus.html#learning-goals",
-    "title": "Syllabus: PPOL 5203 - Data Science I: Foundations",
-    "section": "Learning Goals",
-    "text": "Learning Goals\nAfter completing this course, the students will be able to:\n\nGeneral understanding of python’s object oriented programming syntax and data structures.\nCompetency using version control (Git/Github).\nLearn to manipulate and explore data with Pandas and other tools.\nGeneral understanding of analyzing algorithms and data structures.\nLearn to extract and process data from structured and unstructured sources.\nGet some intuition of modeling text data in Python.\nLearn the basics of machine learning as a modeling approach.\nLearn how to build pipelines with Generative AI Models\nLearn basics of using SQL to query databases."
-  },
-  {
-    "objectID": "syllabus.html#instructors-and-tas",
-    "href": "syllabus.html#instructors-and-tas",
-    "title": "Syllabus: PPOL 5203 - Data Science I: Foundations",
-    "section": "Instructors and TAs",
-    "text": "Instructors and TAs\n\nInstructor\n\nProfessor: Dr. Tiago Ventura\nPronouns: He/Him\nEmail: tv186@georgetown.edu\nOffice hours:\n\nTime: Every Tuesday, 4pm - 5pm\nLocation: 125E, Office Number 766\n\n\nYou are all welcome to the office hours at any time. No need to schedule time with me to go to office hours!\n\n\nTeaching Assistant:\n\nRebecca Wagner (DSPP Second-Year Student)\n\nEmail:rlw137@georgetown.edu\nOffice Hours:\n\nin person: Every Monday 2pm, McCourt, Room 602\nvirtual: Every Tuesday 7pm. Zoom link"
-  },
-  {
-    "objectID": "syllabus.html#our-classes",
-    "href": "syllabus.html#our-classes",
-    "title": "Syllabus: PPOL 5203 - Data Science I: Foundations",
-    "section": "Our classes",
-    "text": "Our classes\nClasses will take place at the scheduled class time/place and will involve a combination of lectures, coding walkthrough, breakout group sessions, and questions. We will start our classes with a lecture highlighting what I consider to be the broader substantive and programming concepts covered in the class. From that, we will switch to a mix of coding walk through and breakout group sessions.\nFor every lecture, you will have access to a notebook (.ipynb) covering the topics and code discussed in class. I will upload these materials (which I call lecture notes every day before the class starts). In addition, you will also have access (in at least a week in advance), of required readings (book chapters, articles, blog posts or coding tutorials) for every class. What you will take from this class will be tremendously improved if you work through all these materials.\nNote that this class is scheduled to meet weekly for 2.5 hours. I will do my best to make our meetings dynamic and enjoyable for all parts involved. We will take one or two breaks in each of our lecture."
-  },
-  {
-    "objectID": "syllabus.html#required-materials",
-    "href": "syllabus.html#required-materials",
-    "title": "Syllabus: PPOL 5203 - Data Science I: Foundations",
-    "section": "Required Materials",
-    "text": "Required Materials\nReadings: We will rely primarily on the following textbooks for this course.\n\nMcKinney, W. , 2022. Python for Data Analysis. O’Reilly Media, Inc.(Online version: https://wesmckinney.com/book/).\nVanderplas, J.T., 2016. “Python data science handbook: tools and techniques for developers.” O’Reilly. (Online version: https://jakevdp.github.io/PythonDataScienceHandbook/)\nJames, G., Witten, D., Hastie, T., & Tibshirani, R. (2013). “An Introduction to Statistical Learning: with Applications in R”. New York: springer.\nGrimmer, J., Roberts, M. E., & Stewart, B. M. (2022). Text as data: A new framework for machine learning and the social sciences. Princeton University Press.\nSalganik, M. 2017. Bit by Bit: Social Research in the Digital Age. Princeton, NJ: Princeton University Press.\n\nAdditional readings will be posted for each class and can be found on the course website. Most reading materials are open source and available via a link on the weekly schedule. Otherwise it can be found on Canvas."
-  },
-  {
-    "objectID": "syllabus.html#course-infrastructure",
-    "href": "syllabus.html#course-infrastructure",
-    "title": "Syllabus: PPOL 5203 - Data Science I: Foundations",
-    "section": "Course Infrastructure",
-    "text": "Course Infrastructure\nClass Website: A class website https://tiagoventura.github.io/ppol5203 will be used throughout the course and should be checked on a regular basis for lecture materials and required readings.\nClass Slack Channel: The class also has a dedicated slack channel (https://join.slack.com/t/ppol5203-fall2025/shared_invite/zt-3cmg2zqoz-uFHOG_a9tsxBBBm2wCz~zg). The channel serves as an open forum to discuss, collaborate, pose problems/questions, and offer solutions. Students are encouraged to pose any questions they have there as this will provide the professor and TA the means of answering the question so that all can see the response. If you’re unfamiliar with, please consult the following start-up tutorial (https://get.slack.help/hc/en-us/articles/218080037-Getting-started-for-new-members). Please follow the invite link to be added to the Slack channel.\nCanvas: A Canvas site (http://canvas.georgetown.edu) will be used throughout the course and should be checked on a regular basis for announcements. Support for Canvas is available at (202) 687-4949\nNOTE: Students are encouraged to run lecture code on their own machines. If you do not have access to a laptop on which you can install python3, please contact the professor and/or TA for assistance. Only python3 will be used in this course."
-  },
-  {
-    "objectID": "syllabus.html#weekly-schedule",
-    "href": "syllabus.html#weekly-schedule",
-    "title": "Syllabus: PPOL 5203 - Data Science I: Foundations",
-    "section": "Weekly Schedule",
-    "text": "Weekly Schedule\n\n\n\n\n\n\n\n\nWeek\nTopic\nDate\n\n\n\n\nWeek 01\nIntroduction, Installations, IDEs, Command line\nSeptember 09, 2025\n\n\nWeek 02\nVersion Control, Workflow and Reproducibility: Or a bit of Git & GitHub\nSeptember 16, 2025\n\n\nWeek 03\nIntro to Python - OOP, Data Types, Control Statements and Functions\nSeptember 23, 2025\n\n\nWeek 04\nIntro to Python II: Scaling up your code - Iteration, Comprehension and Functions\nSeptember 30, 2025\n\n\nWeek 05\nFrom Nested lists to Dataframes: Numpy and Intro to Pandas\nOctober 07, 2025\n\n\nWeek 06\nPandas II: Data Wrangling\nOctober 14, 2025\n\n\nWeek 07\nJoining, Tidying and Visualizing Data\nOctober 21, 2025\n\n\nWeek 08\nScraping + APIs\nOctober 28, 2025\n\n\nWeek 09\nStatistical Learning\nNovember 04, 2025\n\n\nWeek 10\nText as Data I: Discovery and Topics\nNovember 11, 2023\n\n\nWeek 11\nText as Data II: Supervised Learning\nNovember 18, 2025\n\n\nWeek 12\nGenerative AI: Classification, Surveys and Prompting (Invited Speaker - Dr. Patrick Wu, American University)\nNovember 25, 2025\n\n\nWeek 13\nSQL\nDecember 03, 2024\n\n\nWeek 14\nPresentations of Final Projects\nDecember 09, 2023"
-  },
-  {
-    "objectID": "syllabus.html#course-requirements",
-    "href": "syllabus.html#course-requirements",
-    "title": "Syllabus: PPOL 5203 - Data Science I: Foundations",
-    "section": "Course Requirements",
-    "text": "Course Requirements\n\n\n\nAssignment\nPercentage of Grade\n\n\n\n\nParticipation/Attendance\n5%\n\n\nCoding Discussion\n5%\n\n\nProblem sets\n50%\n\n\nFinal Project\n40%\n\n\n\nParticipation and Attendance (5%):\nData science is an cooperative endeavor, and it’s crucial to view your fellow classmates as valuable assets rather than rivals. Your performance in the following aspects will be considered when assessing this part of your grade:\n\nActive involvement during class sessions, fostering a dynamic learning environment.\nContributions made to your group’s ultimate project.\nAssisting classmates by addressing problem set queries through GitHub issues. Supporting your peers will enhance your evaluation in terms of teamwork and engagement\nAssisting classmates with slack questions, sharing interesting materials on slack, asking question, and anything that provides healthy contributtions to the course.\n\nCoding Discussion(5%)\nEvery class will involve some lecture time, and some coding time. The coding time will be divided between me showing you things, and you working on small problem sets. These problem sets are purposefully constructed to help you understand the concepts we go through in class. You participation and involvement in these group exercises will also be part of your grade.\nProblem Sets (50%)\nStudents will be assigned five problem sets over the course of the semesters. While you are encouraged to discuss the problem sets with your peers and/or consult online resources, the finished product must be your own work. The goal of the assignment is to reinforce the student’s comprehension of the materials covered in each section.\nThe problems sets will assess your ability to apply the concepts to data that is substantially messier, and problems that are substantially more difficult, than the ones in the coding discussion in class.\nI will distribute the assignment through a mix of canvas and github. The assignments can be in the form of a Jupyter Notebook (.ipynb). Students must submit completed assignments as a rendered .html file and the corresponding source code (.ipynb).\nThe assignments will be graded in accuracy and quality of the programming style. For instance, our grading team will be looking at:\n\n\nall code must run;\n\n\nsolutions should be readable\n\n\nCode should be thoroughly commented (the Professor/TA should be able to understand the codes purpose by reading the comment),\nCoding solutions should be broken up into individual code chunks in Jupyter/R Markdown notebooks, not clumped together into one large code chunk (See examples in class or reach out to the TA/Professor if this is unclear),\nEach student defined function must contain a doc string explaining what the function does, each input argument, and what the function returns;\n\n\nCommentary, responses, and/or solutions should all be written in Markdown and explain sufficiently the outpus.\n\n\nAll solutions must be completed in Python.\n\n\nThe follow schedule lays out when each assignment will be assigned.\n\n\n\nAssignment\nDate Assigned\nDate Due\n\n\n\n\nNo. 1\nWeek 2\nBefore EOD of Friday of Week 3\n\n\nNo. 2\nWeek 4\nBefore EOD of Friday of Week 5\n\n\nNo. 3\nWeek 6\nBefore EOD of Friday of Week 7\n\n\nNo. 4\nWeek 8\nBefore EOD of Friday of Week 10\n\n\nNo. 5\nWeek 10\nBefore EOD of Friday of Week 11\n\n\n\nFinal Project (40%): Data science is an applied field and the DSPP is particularly geared towards providing students the tools to make policy and substantive contributions using data and recent computational developments. In this sense, it is fundamental that you understand how to conduct a complete analysis from collecting data, to cleaning and analyzing it, to presenting your findings. For this reason, a considerable part of your grade will come from a an independent data science project, applying concepts learned throughout the course.\nThe project is composed of three parts:\n\na 2 page project proposal: (which should be discussed and approved by me)\nan in-class presentation,\nA 10-page project report.\n\nDue dates and breakdowns for the project are as follows:\n\n\n\nRequirement\nDue\nLength\nPercentage\n\n\n\n\nProject Proposal\nOctober 31\n2 pages\n5%\n\n\nPresentation\nDecember 09\n10-15 minutes\n10%\n\n\nProject Report\nDecember 16\n10 pages\n25%\n\n\n\nImportant notes about the final project\n\nFor the project proposal, you need to schedule a 30min with me at least a week before the due date. For this meeting, I expect you to send me a draft of your ideas. We will do the group assignment and start scheduling meetings by week 4, I will share with you a calendar invite to organize our meetings.\nFor the presentation, You will have 10-15 minutes in our last class of the semester to present you project.\nTake the final project seriously. After you finish your Masters, in any path you take, you will need to show concrete examples of your portfolio. This is a good opportunity to start building it.\nYour groups will be randomly assigned.\n\nSubmission of the Final Project\nThe end product should be a github repository that contains:\n\nThe raw source data you used for the project. If the data is too large for GitHub, talk with me, and we will find a solution\nYour proposal\nA README for the repository that, for each file, describes in detail:\n\nInputs to the file: e.g., raw data; a file containing credentials needed to access an API\nWhat the file does: describe major transformations.\nOutput: if the file produces any outputs (e.g., a cleaned dataset; a figure or graph).\nA set of code files that transform that data into a form usable to answer the question you have posed in your descriptive research proposal.\nYour final 10 pages report (I will share a template later in the semester)\n\n\nOf course, no commits after the due date will be considered in the assessment."
-  },
-  {
-    "objectID": "syllabus.html#grading",
-    "href": "syllabus.html#grading",
-    "title": "Syllabus: PPOL 5203 - Data Science I: Foundations",
-    "section": "Grading",
-    "text": "Grading\nCourse grades will be determined according to the following scale:\n\n\n\nLetter\nRange\n\n\n\n\nA\n95% – 100%\n\n\nA-\n91% – 94%\n\n\nB+\n87% – 90%\n\n\nB\n84% – 86%\n\n\nB-\n80% – 83%\n\n\nC\n70% – 79%\n\n\nF\n&lt; 70%\n\n\n\nGrades may be curved if there are no students receiving A’s on the non-curved grading scale.\nLate problem sets will be penalized a letter grade down per day."
-  },
-  {
-    "objectID": "syllabus.html#communication",
-    "href": "syllabus.html#communication",
-    "title": "Syllabus: PPOL 5203 - Data Science I: Foundations",
-    "section": "Communication",
-    "text": "Communication\n\nClass-relevant and/or coding-related questions, Slack is the preferred method of communication. Please use the general or the relevant channel for these questions.\nFor private questions concerning the class, email is the preferred method of communication. All email messages must originate from your Georgetown University email account(s). Please use a professional salutation, proper spelling and grammar, and patience in waiting for a response. The professor reserves the right to not respond to emails that are drafted inappropriately. Please email the professor and the TA directly rather than through the Canvas messaging system. Emails sent through CANVAS will be ignored.\nI will try my best to respond to all emails/slack questions within 24 hours of being sent during a weekday. I will not respond to emails/slack sent late Friday (after 5:00 pm) or during the weekend until Monday (9:00 am). Please plan accordingly if you have questions regarding current or upcoming assignments.\nOnly reach out to the professor or teaching assistant regarding a technical question, error, or issue after you made a good faith effort to debugging/isolate your problem prior to reaching out. Learning how to search for help online is a important skill for data scientists.\n\n\nChatGPT and others\nIn the last years, the internet was inundated with popularization of Large Language Models, particularly the easy use of ChatGPT. As a Data Scientist, LLMs will be part of your daily work. I see LLMs as Google on steroids, so I assume LLMs will be part of your daily work in this course, and it is part of my work as a researcher.\nThat being said, LLMs does not replace your training as a data scientist. If you are using LLMs instead of learning, I consider you are cheating in the course. And most importantly, you are wasting your time and resources. So that’s our policy for using LLMs models in class:\n\nDo not copy the responses from LLMs – a lot of them are wrong or will just not run on your computer.\nUse LLMs as a auxiliary source.\nIf your entire homework comes straight from chatgpt, I will consider it plagiarism.\n\nIf you use LLMs, I ask you to mention on your code how they worked for you."
-  },
-  {
-    "objectID": "syllabus.html#electronic-devices",
-    "href": "syllabus.html#electronic-devices",
-    "title": "Syllabus: PPOL 5203 - Data Science I: Foundations",
-    "section": "Electronic Devices",
-    "text": "Electronic Devices\nWhen meeting in-person: the use of laptops, tablets, or other mobile devices is permitted only for class-related work. Audio and video recording is not allowed unless prior approval is given by the professor. Please mute all electronic devices during class."
-  },
-  {
-    "objectID": "syllabus.html#georgetown-policies",
-    "href": "syllabus.html#georgetown-policies",
-    "title": "Syllabus: PPOL 5203 - Data Science I: Foundations",
-    "section": "Georgetown Policies",
-    "text": "Georgetown Policies\n\nDisability\nIf you believe you have a disability, then you should contact the Academic Resource Center (arc@georgetown.edu) for further information. The Center is located in the Leavey Center, Suite 335 (202-687-8354). The Academic Resource Center is the campus office responsible for reviewing documentation provided by students with disabilities and for determining reasonable accommodations in accordance with the Americans with Disabilities Act (ASA) and University policies. For more information, go to http://academicsupport.georgetown.edu/disability/\n\n\nImportant Academic Policies and Academic Integrity\nMcCourt School students are expected to uphold the academic policies set forth by Georgetown University and the Graduate School of Arts and Sciences. Students should therefore familiarize themselves with all the rules, regulations, and procedures relevant to their pursuit of a Graduate School degree. The policies are located at: http://grad.georgetown.edu/academics/policies/\nApplied to this course, while I encourage collaboration on assignments and use of resources like StackOverflow, the problem sets will ask you to list who you worked on the problem set with and cite StackOverflow if it is the direct source of a code snippet.\n\n\nStatement on Sexual Misconduct\nGeorgetown University and its faculty are committed to supporting survivors and those impacted by sexual misconduct, which includes sexual assault, sexual harassment, relationship violence, and stalking. Georgetown requires faculty members, unless otherwise designated as confidential, to report all disclosures of sexual misconduct to the University Title IX Coordinator or a Deputy Title IX Coordinator. If you disclose an incident of sexual misconduct to a professor in or outside of the classroom (with the exception of disclosures in papers), that faculty member must report the incident to the Title IX Coordinator, or Deputy Title IX Coordinator. The coordinator will, in turn, reach out to the student to provide support, resources, and the option to meet. [Please note that the student is not required to meet with the Title IX coordinator.]. More information about reporting options and resources can be found on the Sexual Misconduct\nWebsite: https://sexualassault.georgetown.edu/resourcecenter\nIf you would prefer to speak to someone confidentially, Georgetown has a number of fully confidential professional resources that can provide support and assistance. These resources include: Health Education Services for Sexual Assault Response and Prevention: confidential email: sarp[at]georgetown.edu\nCounseling and Psychiatric Services (CAPS): 202.687.6985 or after hours, call (833) 960-3006 to reach Fonemed, a telehealth service; individuals may ask for the on-call CAPS clinician\nMore information about reporting options and resources can be found on the Sexual Misconduct Website.\n\n\nProvost’s Policy on Religious Observances\nGeorgetown University promotes respect for all religions. Any student who is unable to attend classes or to participate in any examination, presentation, or assignment on a given day because of the observance of a major religious holiday or related travel shall be excused and provided with the opportunity to make up, without unreasonable burden, any work that has been missed for this reason and shall not in any other way be penalized for the absence or rescheduled work. Students will remain responsible for all assigned work. Students should notify professors in writing at the beginning of the semester of religious observances that conflict with their classes. The Office of the Provost, in consultation with Campus Ministry and the Registrar, will publish, before classes begin for a given term, a list of major religious holidays likely to affect Georgetown students. The Provost and the Main Campus Executive Faculty encourage faculty to accommodate students whose bona fide religious observances in other ways impede normal participation in a course. Students who cannot be accommodated should discuss the matter with an advising dean."
-  },
-  {
-    "objectID": "slides/week-1.html#powerful-and-cheap-computing-power",
-    "href": "slides/week-1.html#powerful-and-cheap-computing-power",
-    "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "Powerful and Cheap Computing Power",
-    "text": "Powerful and Cheap Computing Power"
-  },
-  {
-    "objectID": "slides/week-1.html#between-text-as-data-i-and-ii-i-might-have-some-updates",
-    "href": "slides/week-1.html#between-text-as-data-i-and-ii-i-might-have-some-updates",
-    "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "Between Text-as-Data I and II… I might have some updates…",
-    "text": "Between Text-as-Data I and II… I might have some updates…"
-  },
-  {
-    "objectID": "slides/week-1.html#section",
-    "href": "slides/week-1.html#section",
+    "objectID": "index.html",
+    "href": "index.html",
     "title": "PPOL 5203 - Data Science I: Foundations",
     "section": "",
-    "text": "Professor Tiago Ventura (he/him)\n\nAssistant Professor at McCourt School.\nPolitical Science PhD\nPostdoc at Center for Social Media and Politics - NYU.\nResearcher at Twitter.\n\n\n\nMy Research: Effects of technology in politics + applications of computational models to social science:\n\nGlobal Social Media Deactivation.\nDeveloping a data donation pipeline for WhatsApp data.\nMeasuring Humanness vs AI-Generated Content on Social Media.\nUsing LLMs to augment web-browsing data with synthetic data\n\n\n\nOutside of work, I enjoy watching soccer, reading sci-fi and running"
+    "text": "This first course in the core data science sequence teaches Data Science for Public Policy (DSPP) students how to synthesize disparate, possibly unstructured data in order to draw meaningful insights. Topics covered include the fundamentals of object-oriented programming in Python; literate programming; an introduction to algorithms and data types; data wrangling, visualization, and extraction; an introduction to machine learning methods, and text analysis. In addition, students will be exposed to Git and Github for version control and reproducible research. The objective of the course is to teach students how to incorporate data into their decision-making and analysis. No prior programming experience is assumed or required.\nThis is not the first time this course is taught at DSPP. For this reason, several of the materials here are borrowed from previous iterations of this course taught by Dr. Rebecca Johnson and Dr. Eric Dunford"
   },
   {
-    "objectID": "slides/week-1.html#ta",
-    "href": "slides/week-1.html#ta",
-    "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "TA",
-    "text": "TA\n\nRebecca Wagner (DSPP Second-Year Student)\n\nEmail:rlw137@georgetown.edu\nOffice Hours:\n\nin person: Every Monday 2pm, McCourt, Room 602\nvirtual: Every Tuesday 7pm. Zoom link"
-  },
-  {
-    "objectID": "slides/week-1.html#genai",
-    "href": "slides/week-1.html#genai",
-    "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "GenAI",
-    "text": "GenAI\nYou are allowed to use GenAI as you would use google in this class. This means:\n\nDo not copy the responses from GenAI Chatbots – a lot of them are wrong or will just not run on your computer\nUse GenAI Chatbots as a auxiliary source.\nIf your entire homework comes straight from GenAI Chatbots, I will consider it plagiarism.\nIf you use GenAI Chatbots, I ask you to mention on your code how chatgpt worked for you."
-  },
-  {
-    "objectID": "slides/week-1.html#additional-materials-quarto",
-    "href": "slides/week-1.html#additional-materials-quarto",
-    "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "Additional Materials: Quarto",
-    "text": "Additional Materials: Quarto\nSee Quarto Notebook in the Class Website"
-  },
-  {
-    "objectID": "slides/week-1.html#world-of-generative-ai-models",
-    "href": "slides/week-1.html#world-of-generative-ai-models",
-    "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "World of Generative AI Models",
-    "text": "World of Generative AI Models"
-  },
-  {
-    "objectID": "slides/week-1.html#as-a-consequence-we-live-in-a-world",
-    "href": "slides/week-1.html#as-a-consequence-we-live-in-a-world",
-    "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "As a consequence, we live in a world:",
-    "text": "As a consequence, we live in a world:\n\n\n\nWith abundance of data we can use for research and to recommend policy decisions:\n\nInternet data, social media, geo-tracking tools, etc…\n\n\n\n\n\nWith easily available technologies to analyze this data at scale\n\nYour laptops, cloud computing, ChatBots…\n\n\n\n\n\nBut with new technologies that also have novel social implications:\n\nPrivacy issues\nUse of technology by bad actors.\nUse of technology by governments to censor/monitor citizens.\n\n\n\n\n\nPolicy scholars (but pretty much any researcher) need to be equipped to properly work with this data and understand the effects of these news technologies"
-  },
-  {
-    "objectID": "slides/week-1.html#section-1",
-    "href": "slides/week-1.html#section-1",
+    "objectID": "index.html#course-description",
+    "href": "index.html#course-description",
     "title": "PPOL 5203 - Data Science I: Foundations",
     "section": "",
-    "text": "Professor Tiago Ventura (he/him)\n\nAssistant Professor at McCourt School.\nPolitical Science PhD\nPostdoc at Center for Social Media and Politics - NYU.\nResearcher at Twitter.\n\n\n\nMy Research: Effects of technology in politics + applications of computational models to social science:\n\nGlobal Social Media Deactivation.\nDeveloping a data donation pipeline for WhatsApp data.\nMeasuring Humanness vs AI-Generated Content on Social Media.\nUsing LLMs to augment web-browsing data with synthetic data\n\n\n\nOutside of work, I enjoy watching soccer, reading sci-fi and running"
+    "text": "This first course in the core data science sequence teaches Data Science for Public Policy (DSPP) students how to synthesize disparate, possibly unstructured data in order to draw meaningful insights. Topics covered include the fundamentals of object-oriented programming in Python; literate programming; an introduction to algorithms and data types; data wrangling, visualization, and extraction; an introduction to machine learning methods, and text analysis. In addition, students will be exposed to Git and Github for version control and reproducible research. The objective of the course is to teach students how to incorporate data into their decision-making and analysis. No prior programming experience is assumed or required.\nThis is not the first time this course is taught at DSPP. For this reason, several of the materials here are borrowed from previous iterations of this course taught by Dr. Rebecca Johnson and Dr. Eric Dunford"
   },
   {
-    "objectID": "slides/week-1.html#digital-information-age",
-    "href": "slides/week-1.html#digital-information-age",
+    "objectID": "index.html#goals",
+    "href": "index.html#goals",
     "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "Digital information age",
-    "text": "Digital information age\n\n\n\n\n\n\n\n\n\n\n\nhttps://www.washingtonpost.com/wp-dyn/content/graphic/2011/02/11/GR2011021100614.html"
+    "section": "Goals",
+    "text": "Goals\nAfter completing this course, the students will be able to:\n\nGeneral understanding of python’s object oriented programming syntax and data structures.\nCompetency using version control (Git/Github).\nLearn to manipulate and explore data with Pandas and other tools.\nGeneral understanding of analyzing algorithms and data structures.\nLearn to extract and process data from structured and unstructured sources.\nGet some intuition of modeling text data in Python.\nLearn the basics of machine learning as a modeling approach.\nLearn how to use Generative AI for multiple applied tasks.\nLearn basics of using SQL to query databases."
   },
   {
-    "objectID": "slides/week-1.html#misinformation-on-whatsapp",
-    "href": "slides/week-1.html#misinformation-on-whatsapp",
+    "objectID": "index.html#instructor",
+    "href": "index.html#instructor",
     "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "Misinformation on WhatsApp",
-    "text": "Misinformation on WhatsApp"
+    "section": "Instructor",
+    "text": "Instructor\n\nProfessor: Dr. Tiago Ventura\nPronouns: He/Him\nEmail: tv186@georgetown.edu\nOffice hours:\n\nTime: Every Tuesday, 4pm - 5pm\nLocation: 125E, Office Number 766\n\n\nYou are all welcome to the office hours at any time. No need to schedule time with me to go to office hours!"
   },
   {
-    "objectID": "slides/week-1.html#data-donation-whatsapp-groups",
-    "href": "slides/week-1.html#data-donation-whatsapp-groups",
+    "objectID": "index.html#teaching-assistants",
+    "href": "index.html#teaching-assistants",
     "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "Data Donation WhatsApp Groups",
-    "text": "Data Donation WhatsApp Groups"
-  },
-  {
-    "objectID": "slides/week-1.html#abundance-of-data",
-    "href": "slides/week-1.html#abundance-of-data",
-    "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "Abundance of data",
-    "text": "Abundance of data"
-  },
-  {
-    "objectID": "slides/week-1.html#open-ended-1",
-    "href": "slides/week-1.html#open-ended-1",
-    "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "Open Ended",
-    "text": "Open Ended\nSome of you are slightly anxious about Python and the pace of the class\n\n\nPython is definitely harder than excel and stata.\nBut you will be fine!\nOur approach: We start slow, cover the basics, and move fast!"
-  },
-  {
-    "objectID": "slides/week-2.html",
-    "href": "slides/week-2.html",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "",
-    "text": "Best Practices for Data Science Workflow and Reproducibility\nVersion Control (Git and Github)\nIn-Class Exercise\nYour first homework\n\n\n\nthis lecture draws on materials from Simon Munzert Intro to Data Science + previous iterations of PPOL 5203."
+    "section": "Teaching Assistants:",
+    "text": "Teaching Assistants:\n\nRebecca Wagner (DSPP Second-Year Student)\n\nEmail:rlw137@georgetown.edu\nOffice Hours:\n\nin person: Every Monday 2pm, McCourt, Room 602\nvirtual: Every Tuesday 7pm. Zoom link\n\n\n\n\nCourse Infra-structure\nClass Website: A class website https://tiagoventura.github.io/ppol5203 will be used throughout the course and should be checked on a regular basis for lecture materials and required readings.\nClass Slack Channel: The class also has a dedicated slack channel. You can join on clicking here. The channel serves as an open forum to discuss, collaborate, pose problems/questions, and offer solutions. Students are encouraged to pose any questions they have there as this will provide the professor and TA the means of answering the question so that all can see the response. If you’re unfamiliar with, please consult the following start-up tutorial (https://get.slack.help/hc/en-us/articles/218080037-Getting-started-for-new-members). Please follow the invite link to be added to the Slack channel.\nCanvas: A Canvas site (http://canvas.georgetown.edu) will be used throughout the course and should be checked on a regular basis for announcements. ll announcements for the assignments and classes will be posted on Canvas; they will not be distributed in class or by e-mail. Support for Canvas is available at (202) 687-4949\nNOTE: Students are encouraged to run lecture code on their own machines. If you do not have access to a laptop on which you can install python3, please contact the professor and/or TA for assistance. Only python3 will be used in this course.\nDatacamp: As part of this course, you will have access to a DataCamp classroom that you can use to take Datacamp modules for free. Join the classroom here Datacamp courses can be a useful tool for you to practice the concepts we see in class. Although I will not assign specific courses for you,, you can use Datacamp courses to review the topics we cover in class. The lecture notes will cover in details all our in-class discussions. Datacamp courses will be considered additional material."
   },
   {
     "objectID": "slides/week-2.html#plans-for-today",
@@ -1188,5 +1020,96 @@
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "Homework.",
     "text": "Homework.\nYour homework will be posted today on slack and canvas.\n\nSame structure of the in-class exercise.\nDeadline: September 27, midnight EST.\nQuestions? Come to the office hour or ask on slack.\n\n\n\nData science I: Foundations"
+  },
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "Syllabus: PPOL 5203 - Data Science I: Foundations",
+    "section": "",
+    "text": "This first course in the core data science sequence teaches Data Science for Public Policy (DSPP) students how to synthesize disparate, possibly unstructured data in order to draw meaningful insights. Topics covered include the fundamentals of object-oriented programming in Python; literate programming; an introduction to algorithms and data types; data wrangling, visualization, and extraction; an introduction to machine learning methods,text analysis and working with Generative AI Models. In addition, students will be exposed to Git and Github for version control and reproducible research. The objective of the course is to teach students how incorporate data into their decision-making and analysis. No prior programming experience is assumed or required.\nClass Website: https://tiagoventura.github.io/ppol5203"
+  },
+  {
+    "objectID": "syllabus.html#course-description",
+    "href": "syllabus.html#course-description",
+    "title": "Syllabus: PPOL 5203 - Data Science I: Foundations",
+    "section": "",
+    "text": "This first course in the core data science sequence teaches Data Science for Public Policy (DSPP) students how to synthesize disparate, possibly unstructured data in order to draw meaningful insights. Topics covered include the fundamentals of object-oriented programming in Python; literate programming; an introduction to algorithms and data types; data wrangling, visualization, and extraction; an introduction to machine learning methods,text analysis and working with Generative AI Models. In addition, students will be exposed to Git and Github for version control and reproducible research. The objective of the course is to teach students how incorporate data into their decision-making and analysis. No prior programming experience is assumed or required.\nClass Website: https://tiagoventura.github.io/ppol5203"
+  },
+  {
+    "objectID": "syllabus.html#learning-goals",
+    "href": "syllabus.html#learning-goals",
+    "title": "Syllabus: PPOL 5203 - Data Science I: Foundations",
+    "section": "Learning Goals",
+    "text": "Learning Goals\nAfter completing this course, the students will be able to:\n\nGeneral understanding of python’s object oriented programming syntax and data structures.\nCompetency using version control (Git/Github).\nLearn to manipulate and explore data with Pandas and other tools.\nGeneral understanding of analyzing algorithms and data structures.\nLearn to extract and process data from structured and unstructured sources.\nGet some intuition of modeling text data in Python.\nLearn the basics of machine learning as a modeling approach.\nLearn how to build pipelines with Generative AI Models\nLearn basics of using SQL to query databases."
+  },
+  {
+    "objectID": "syllabus.html#instructors-and-tas",
+    "href": "syllabus.html#instructors-and-tas",
+    "title": "Syllabus: PPOL 5203 - Data Science I: Foundations",
+    "section": "Instructors and TAs",
+    "text": "Instructors and TAs\n\nInstructor\n\nProfessor: Dr. Tiago Ventura\nPronouns: He/Him\nEmail: tv186@georgetown.edu\nOffice hours:\n\nTime: Every Tuesday, 4pm - 5pm\nLocation: 125E, Office Number 766\n\n\nYou are all welcome to the office hours at any time. No need to schedule time with me to go to office hours!\n\n\nTeaching Assistant:\n\nRebecca Wagner (DSPP Second-Year Student)\n\nEmail:rlw137@georgetown.edu\nOffice Hours:\n\nin person: Every Monday 2pm, McCourt, Room 602\nvirtual: Every Tuesday 7pm. Zoom link"
+  },
+  {
+    "objectID": "syllabus.html#our-classes",
+    "href": "syllabus.html#our-classes",
+    "title": "Syllabus: PPOL 5203 - Data Science I: Foundations",
+    "section": "Our classes",
+    "text": "Our classes\nClasses will take place at the scheduled class time/place and will involve a combination of lectures, coding walkthrough, breakout group sessions, and questions. We will start our classes with a lecture highlighting what I consider to be the broader substantive and programming concepts covered in the class. From that, we will switch to a mix of coding walk through and breakout group sessions.\nFor every lecture, you will have access to a notebook (.ipynb) covering the topics and code discussed in class. I will upload these materials (which I call lecture notes every day before the class starts). In addition, you will also have access (in at least a week in advance), of required readings (book chapters, articles, blog posts or coding tutorials) for every class. What you will take from this class will be tremendously improved if you work through all these materials.\nNote that this class is scheduled to meet weekly for 2.5 hours. I will do my best to make our meetings dynamic and enjoyable for all parts involved. We will take one or two breaks in each of our lecture."
+  },
+  {
+    "objectID": "syllabus.html#required-materials",
+    "href": "syllabus.html#required-materials",
+    "title": "Syllabus: PPOL 5203 - Data Science I: Foundations",
+    "section": "Required Materials",
+    "text": "Required Materials\nReadings: We will rely primarily on the following textbooks for this course.\n\nMcKinney, W. , 2022. Python for Data Analysis. O’Reilly Media, Inc.(Online version: https://wesmckinney.com/book/).\nVanderplas, J.T., 2016. “Python data science handbook: tools and techniques for developers.” O’Reilly. (Online version: https://jakevdp.github.io/PythonDataScienceHandbook/)\nJames, G., Witten, D., Hastie, T., & Tibshirani, R. (2013). “An Introduction to Statistical Learning: with Applications in R”. New York: springer.\nGrimmer, J., Roberts, M. E., & Stewart, B. M. (2022). Text as data: A new framework for machine learning and the social sciences. Princeton University Press.\nSalganik, M. 2017. Bit by Bit: Social Research in the Digital Age. Princeton, NJ: Princeton University Press.\n\nAdditional readings will be posted for each class and can be found on the course website. Most reading materials are open source and available via a link on the weekly schedule. Otherwise it can be found on Canvas."
+  },
+  {
+    "objectID": "syllabus.html#course-infrastructure",
+    "href": "syllabus.html#course-infrastructure",
+    "title": "Syllabus: PPOL 5203 - Data Science I: Foundations",
+    "section": "Course Infrastructure",
+    "text": "Course Infrastructure\nClass Website: A class website https://tiagoventura.github.io/ppol5203 will be used throughout the course and should be checked on a regular basis for lecture materials and required readings.\nClass Slack Channel: The class also has a dedicated slack channel (https://join.slack.com/t/ppol5203-fall2025/shared_invite/zt-3cmg2zqoz-uFHOG_a9tsxBBBm2wCz~zg). The channel serves as an open forum to discuss, collaborate, pose problems/questions, and offer solutions. Students are encouraged to pose any questions they have there as this will provide the professor and TA the means of answering the question so that all can see the response. If you’re unfamiliar with, please consult the following start-up tutorial (https://get.slack.help/hc/en-us/articles/218080037-Getting-started-for-new-members). Please follow the invite link to be added to the Slack channel.\nCanvas: A Canvas site (http://canvas.georgetown.edu) will be used throughout the course and should be checked on a regular basis for announcements. Support for Canvas is available at (202) 687-4949\nNOTE: Students are encouraged to run lecture code on their own machines. If you do not have access to a laptop on which you can install python3, please contact the professor and/or TA for assistance. Only python3 will be used in this course."
+  },
+  {
+    "objectID": "syllabus.html#weekly-schedule",
+    "href": "syllabus.html#weekly-schedule",
+    "title": "Syllabus: PPOL 5203 - Data Science I: Foundations",
+    "section": "Weekly Schedule",
+    "text": "Weekly Schedule\n\n\n\n\n\n\n\n\nWeek\nTopic\nDate\n\n\n\n\nWeek 01\nIntroduction, Installations, IDEs, Command line\nSeptember 09, 2025\n\n\nWeek 02\nVersion Control, Workflow and Reproducibility: Or a bit of Git & GitHub\nSeptember 16, 2025\n\n\nWeek 03\nIntro to Python - OOP, Data Types, Control Statements and Functions\nSeptember 23, 2025\n\n\nWeek 04\nIntro to Python II: Scaling up your code - Iteration, Comprehension and Functions\nSeptember 30, 2025\n\n\nWeek 05\nFrom Nested lists to Dataframes: Numpy and Intro to Pandas\nOctober 07, 2025\n\n\nWeek 06\nPandas II: Data Wrangling\nOctober 14, 2025\n\n\nWeek 07\nJoining, Tidying and Visualizing Data\nOctober 21, 2025\n\n\nWeek 08\nScraping + APIs\nOctober 28, 2025\n\n\nWeek 09\nStatistical Learning\nNovember 04, 2025\n\n\nWeek 10\nText as Data I: Discovery and Topics\nNovember 11, 2023\n\n\nWeek 11\nText as Data II: Supervised Learning\nNovember 18, 2025\n\n\nWeek 12\nGenerative AI: Classification, Surveys and Prompting (Invited Speaker - Dr. Patrick Wu, American University)\nNovember 25, 2025\n\n\nWeek 13\nSQL\nDecember 03, 2024\n\n\nWeek 14\nPresentations of Final Projects\nDecember 09, 2023"
+  },
+  {
+    "objectID": "syllabus.html#course-requirements",
+    "href": "syllabus.html#course-requirements",
+    "title": "Syllabus: PPOL 5203 - Data Science I: Foundations",
+    "section": "Course Requirements",
+    "text": "Course Requirements\n\n\n\nAssignment\nPercentage of Grade\n\n\n\n\nParticipation/Attendance\n5%\n\n\nCoding Discussion\n5%\n\n\nProblem sets\n50%\n\n\nFinal Project\n40%\n\n\n\nParticipation and Attendance (5%):\nData science is an cooperative endeavor, and it’s crucial to view your fellow classmates as valuable assets rather than rivals. Your performance in the following aspects will be considered when assessing this part of your grade:\n\nActive involvement during class sessions, fostering a dynamic learning environment.\nContributions made to your group’s ultimate project.\nAssisting classmates by addressing problem set queries through GitHub issues. Supporting your peers will enhance your evaluation in terms of teamwork and engagement\nAssisting classmates with slack questions, sharing interesting materials on slack, asking question, and anything that provides healthy contributtions to the course.\n\nCoding Discussion(5%)\nEvery class will involve some lecture time, and some coding time. The coding time will be divided between me showing you things, and you working on small problem sets. These problem sets are purposefully constructed to help you understand the concepts we go through in class. You participation and involvement in these group exercises will also be part of your grade.\nProblem Sets (50%)\nStudents will be assigned five problem sets over the course of the semesters. While you are encouraged to discuss the problem sets with your peers and/or consult online resources, the finished product must be your own work. The goal of the assignment is to reinforce the student’s comprehension of the materials covered in each section.\nThe problems sets will assess your ability to apply the concepts to data that is substantially messier, and problems that are substantially more difficult, than the ones in the coding discussion in class.\nI will distribute the assignment through a mix of canvas and github. The assignments can be in the form of a Jupyter Notebook (.ipynb). Students must submit completed assignments as a rendered .html file and the corresponding source code (.ipynb).\nThe assignments will be graded in accuracy and quality of the programming style. For instance, our grading team will be looking at:\n\n\nall code must run;\n\n\nsolutions should be readable\n\n\nCode should be thoroughly commented (the Professor/TA should be able to understand the codes purpose by reading the comment),\nCoding solutions should be broken up into individual code chunks in Jupyter/R Markdown notebooks, not clumped together into one large code chunk (See examples in class or reach out to the TA/Professor if this is unclear),\nEach student defined function must contain a doc string explaining what the function does, each input argument, and what the function returns;\n\n\nCommentary, responses, and/or solutions should all be written in Markdown and explain sufficiently the outpus.\n\n\nAll solutions must be completed in Python.\n\n\nThe follow schedule lays out when each assignment will be assigned.\n\n\n\nAssignment\nDate Assigned\nDate Due\n\n\n\n\nNo. 1\nWeek 2\nBefore EOD of Friday of Week 3\n\n\nNo. 2\nWeek 4\nBefore EOD of Friday of Week 5\n\n\nNo. 3\nWeek 6\nBefore EOD of Friday of Week 7\n\n\nNo. 4\nWeek 8\nBefore EOD of Friday of Week 10\n\n\nNo. 5\nWeek 10\nBefore EOD of Friday of Week 11\n\n\n\nFinal Project (40%): Data science is an applied field and the DSPP is particularly geared towards providing students the tools to make policy and substantive contributions using data and recent computational developments. In this sense, it is fundamental that you understand how to conduct a complete analysis from collecting data, to cleaning and analyzing it, to presenting your findings. For this reason, a considerable part of your grade will come from a an independent data science project, applying concepts learned throughout the course.\nThe project is composed of three parts:\n\na 2 page project proposal: (which should be discussed and approved by me)\nan in-class presentation,\nA 10-page project report.\n\nDue dates and breakdowns for the project are as follows:\n\n\n\nRequirement\nDue\nLength\nPercentage\n\n\n\n\nProject Proposal\nOctober 31\n2 pages\n5%\n\n\nPresentation\nDecember 09\n10-15 minutes\n10%\n\n\nProject Report\nDecember 16\n10 pages\n25%\n\n\n\nImportant notes about the final project\n\nFor the project proposal, you need to schedule a 30min with me at least a week before the due date. For this meeting, I expect you to send me a draft of your ideas. We will do the group assignment and start scheduling meetings by week 4, I will share with you a calendar invite to organize our meetings.\nFor the presentation, You will have 10-15 minutes in our last class of the semester to present you project.\nTake the final project seriously. After you finish your Masters, in any path you take, you will need to show concrete examples of your portfolio. This is a good opportunity to start building it.\nYour groups will be randomly assigned.\n\nSubmission of the Final Project\nThe end product should be a github repository that contains:\n\nThe raw source data you used for the project. If the data is too large for GitHub, talk with me, and we will find a solution\nYour proposal\nA README for the repository that, for each file, describes in detail:\n\nInputs to the file: e.g., raw data; a file containing credentials needed to access an API\nWhat the file does: describe major transformations.\nOutput: if the file produces any outputs (e.g., a cleaned dataset; a figure or graph).\nA set of code files that transform that data into a form usable to answer the question you have posed in your descriptive research proposal.\nYour final 10 pages report (I will share a template later in the semester)\n\n\nOf course, no commits after the due date will be considered in the assessment."
+  },
+  {
+    "objectID": "syllabus.html#grading",
+    "href": "syllabus.html#grading",
+    "title": "Syllabus: PPOL 5203 - Data Science I: Foundations",
+    "section": "Grading",
+    "text": "Grading\nCourse grades will be determined according to the following scale:\n\n\n\nLetter\nRange\n\n\n\n\nA\n95% – 100%\n\n\nA-\n91% – 94%\n\n\nB+\n87% – 90%\n\n\nB\n84% – 86%\n\n\nB-\n80% – 83%\n\n\nC\n70% – 79%\n\n\nF\n&lt; 70%\n\n\n\nGrades may be curved if there are no students receiving A’s on the non-curved grading scale.\nLate problem sets will be penalized a letter grade down per day."
+  },
+  {
+    "objectID": "syllabus.html#communication",
+    "href": "syllabus.html#communication",
+    "title": "Syllabus: PPOL 5203 - Data Science I: Foundations",
+    "section": "Communication",
+    "text": "Communication\n\nClass-relevant and/or coding-related questions, Slack is the preferred method of communication. Please use the general or the relevant channel for these questions.\nFor private questions concerning the class, email is the preferred method of communication. All email messages must originate from your Georgetown University email account(s). Please use a professional salutation, proper spelling and grammar, and patience in waiting for a response. The professor reserves the right to not respond to emails that are drafted inappropriately. Please email the professor and the TA directly rather than through the Canvas messaging system. Emails sent through CANVAS will be ignored.\nI will try my best to respond to all emails/slack questions within 24 hours of being sent during a weekday. I will not respond to emails/slack sent late Friday (after 5:00 pm) or during the weekend until Monday (9:00 am). Please plan accordingly if you have questions regarding current or upcoming assignments.\nOnly reach out to the professor or teaching assistant regarding a technical question, error, or issue after you made a good faith effort to debugging/isolate your problem prior to reaching out. Learning how to search for help online is a important skill for data scientists.\n\n\nChatGPT and others\nIn the last years, the internet was inundated with popularization of Large Language Models, particularly the easy use of ChatGPT. As a Data Scientist, LLMs will be part of your daily work. I see LLMs as Google on steroids, so I assume LLMs will be part of your daily work in this course, and it is part of my work as a researcher.\nThat being said, LLMs does not replace your training as a data scientist. If you are using LLMs instead of learning, I consider you are cheating in the course. And most importantly, you are wasting your time and resources. So that’s our policy for using LLMs models in class:\n\nDo not copy the responses from LLMs – a lot of them are wrong or will just not run on your computer.\nUse LLMs as a auxiliary source.\nIf your entire homework comes straight from chatgpt, I will consider it plagiarism.\n\nIf you use LLMs, I ask you to mention on your code how they worked for you."
+  },
+  {
+    "objectID": "syllabus.html#electronic-devices",
+    "href": "syllabus.html#electronic-devices",
+    "title": "Syllabus: PPOL 5203 - Data Science I: Foundations",
+    "section": "Electronic Devices",
+    "text": "Electronic Devices\nWhen meeting in-person: the use of laptops, tablets, or other mobile devices is permitted only for class-related work. Audio and video recording is not allowed unless prior approval is given by the professor. Please mute all electronic devices during class."
+  },
+  {
+    "objectID": "syllabus.html#georgetown-policies",
+    "href": "syllabus.html#georgetown-policies",
+    "title": "Syllabus: PPOL 5203 - Data Science I: Foundations",
+    "section": "Georgetown Policies",
+    "text": "Georgetown Policies\n\nDisability\nIf you believe you have a disability, then you should contact the Academic Resource Center (arc@georgetown.edu) for further information. The Center is located in the Leavey Center, Suite 335 (202-687-8354). The Academic Resource Center is the campus office responsible for reviewing documentation provided by students with disabilities and for determining reasonable accommodations in accordance with the Americans with Disabilities Act (ASA) and University policies. For more information, go to http://academicsupport.georgetown.edu/disability/\n\n\nImportant Academic Policies and Academic Integrity\nMcCourt School students are expected to uphold the academic policies set forth by Georgetown University and the Graduate School of Arts and Sciences. Students should therefore familiarize themselves with all the rules, regulations, and procedures relevant to their pursuit of a Graduate School degree. The policies are located at: http://grad.georgetown.edu/academics/policies/\nApplied to this course, while I encourage collaboration on assignments and use of resources like StackOverflow, the problem sets will ask you to list who you worked on the problem set with and cite StackOverflow if it is the direct source of a code snippet.\n\n\nStatement on Sexual Misconduct\nGeorgetown University and its faculty are committed to supporting survivors and those impacted by sexual misconduct, which includes sexual assault, sexual harassment, relationship violence, and stalking. Georgetown requires faculty members, unless otherwise designated as confidential, to report all disclosures of sexual misconduct to the University Title IX Coordinator or a Deputy Title IX Coordinator. If you disclose an incident of sexual misconduct to a professor in or outside of the classroom (with the exception of disclosures in papers), that faculty member must report the incident to the Title IX Coordinator, or Deputy Title IX Coordinator. The coordinator will, in turn, reach out to the student to provide support, resources, and the option to meet. [Please note that the student is not required to meet with the Title IX coordinator.]. More information about reporting options and resources can be found on the Sexual Misconduct\nWebsite: https://sexualassault.georgetown.edu/resourcecenter\nIf you would prefer to speak to someone confidentially, Georgetown has a number of fully confidential professional resources that can provide support and assistance. These resources include: Health Education Services for Sexual Assault Response and Prevention: confidential email: sarp[at]georgetown.edu\nCounseling and Psychiatric Services (CAPS): 202.687.6985 or after hours, call (833) 960-3006 to reach Fonemed, a telehealth service; individuals may ask for the on-call CAPS clinician\nMore information about reporting options and resources can be found on the Sexual Misconduct Website.\n\n\nProvost’s Policy on Religious Observances\nGeorgetown University promotes respect for all religions. Any student who is unable to attend classes or to participate in any examination, presentation, or assignment on a given day because of the observance of a major religious holiday or related travel shall be excused and provided with the opportunity to make up, without unreasonable burden, any work that has been missed for this reason and shall not in any other way be penalized for the absence or rescheduled work. Students will remain responsible for all assigned work. Students should notify professors in writing at the beginning of the semester of religious observances that conflict with their classes. The Office of the Provost, in consultation with Campus Ministry and the Registrar, will publish, before classes begin for a given term, a list of major religious holidays likely to affect Georgetown students. The Provost and the Main Campus Executive Faculty encourage faculty to accommodate students whose bona fide religious observances in other ways impede normal participation in a course. Students who cannot be accommodated should discuss the matter with an advising dean."
   }
 ]
