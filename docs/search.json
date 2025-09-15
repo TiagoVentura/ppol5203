@@ -17,8 +17,8 @@
     "objectID": "slides/week-1.html#plans-for-today",
     "href": "slides/week-1.html#plans-for-today",
     "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "Plans for Today",
-    "text": "Plans for Today\n\nMotivating Data Science for Public Policy.\nGoals of the course\nIntroductions\nCourse Logistics\nIDEs\n\nJupyter\n\nIntroduction to commandline"
+    "section": "",
+    "text": "Motivating Data Science for Public Policy.\nGoals of the course\nIntroductions\nCourse Logistics\nIDEs\n\nJupyter\n\nIntroduction to commandline"
   },
   {
     "objectID": "slides/week-1.html#abundance-of-data",
@@ -116,7 +116,7 @@
     "href": "slides/week-1.html#quiz",
     "title": "PPOL 5203 - Data Science I: Foundations",
     "section": "Quiz!",
-    "text": "Quiz!\nWhich programming language did I use the most at?\n\nPhD\nPostdoc\nTwitter\nAs a Faculty"
+    "text": "Quiz!\n\nWhich programming language did I use the most at?\n\nPhD\nPostdoc\nTwitter\nAs a Faculty"
   },
   {
     "objectID": "slides/week-1.html#a-comment-from-the-pre-course-survey-from-last-year",
@@ -1012,14 +1012,14 @@
     "href": "slides/week-2.html#practice",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": " Practice!",
-    "text": "Practice!\nClick here to setup your github classroom and do the in-class exercise for you to practice.\nIf you are connecting to GitHub for the first time, please read on Git Remotes: Git + Github. on the lecture notes."
+    "text": "Practice!\nClick here to setup your github classroom and do the in-class exercise for you to practice.\n\nIf you are connecting to GitHub for the first time, please read on Git Remotes: Git + Github on the lecture notes."
   },
   {
     "objectID": "slides/week-2.html#homework.",
     "href": "slides/week-2.html#homework.",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "Homework.",
-    "text": "Homework.\nYour homework will be posted today on slack and canvas.\n\nSame structure of the in-class exercise.\nDeadline: September 27, midnight EST.\nQuestions? Come to the office hour or ask on slack.\n\n\n\nData science I: Foundations"
+    "text": "Homework.\nYour homework will be posted today on slack and canvas.\n\nSame structure of the in-class exercise.\nDeadline: September 26, 23:59 EST.\nQuestions? Come to the office hour or ask on slack.\n\n\n\nData science I: Foundations"
   },
   {
     "objectID": "syllabus.html",
@@ -1111,5 +1111,12 @@
     "title": "Syllabus: PPOL 5203 - Data Science I: Foundations",
     "section": "Georgetown Policies",
     "text": "Georgetown Policies\n\nDisability\nIf you believe you have a disability, then you should contact the Academic Resource Center (arc@georgetown.edu) for further information. The Center is located in the Leavey Center, Suite 335 (202-687-8354). The Academic Resource Center is the campus office responsible for reviewing documentation provided by students with disabilities and for determining reasonable accommodations in accordance with the Americans with Disabilities Act (ASA) and University policies. For more information, go to http://academicsupport.georgetown.edu/disability/\n\n\nImportant Academic Policies and Academic Integrity\nMcCourt School students are expected to uphold the academic policies set forth by Georgetown University and the Graduate School of Arts and Sciences. Students should therefore familiarize themselves with all the rules, regulations, and procedures relevant to their pursuit of a Graduate School degree. The policies are located at: http://grad.georgetown.edu/academics/policies/\nApplied to this course, while I encourage collaboration on assignments and use of resources like StackOverflow, the problem sets will ask you to list who you worked on the problem set with and cite StackOverflow if it is the direct source of a code snippet.\n\n\nStatement on Sexual Misconduct\nGeorgetown University and its faculty are committed to supporting survivors and those impacted by sexual misconduct, which includes sexual assault, sexual harassment, relationship violence, and stalking. Georgetown requires faculty members, unless otherwise designated as confidential, to report all disclosures of sexual misconduct to the University Title IX Coordinator or a Deputy Title IX Coordinator. If you disclose an incident of sexual misconduct to a professor in or outside of the classroom (with the exception of disclosures in papers), that faculty member must report the incident to the Title IX Coordinator, or Deputy Title IX Coordinator. The coordinator will, in turn, reach out to the student to provide support, resources, and the option to meet. [Please note that the student is not required to meet with the Title IX coordinator.]. More information about reporting options and resources can be found on the Sexual Misconduct\nWebsite: https://sexualassault.georgetown.edu/resourcecenter\nIf you would prefer to speak to someone confidentially, Georgetown has a number of fully confidential professional resources that can provide support and assistance. These resources include: Health Education Services for Sexual Assault Response and Prevention: confidential email: sarp[at]georgetown.edu\nCounseling and Psychiatric Services (CAPS): 202.687.6985 or after hours, call (833) 960-3006 to reach Fonemed, a telehealth service; individuals may ask for the on-call CAPS clinician\nMore information about reporting options and resources can be found on the Sexual Misconduct Website.\n\n\nProvost’s Policy on Religious Observances\nGeorgetown University promotes respect for all religions. Any student who is unable to attend classes or to participate in any examination, presentation, or assignment on a given day because of the observance of a major religious holiday or related travel shall be excused and provided with the opportunity to make up, without unreasonable burden, any work that has been missed for this reason and shall not in any other way be penalized for the absence or rescheduled work. Students will remain responsible for all assigned work. Students should notify professors in writing at the beginning of the semester of religious observances that conflict with their classes. The Office of the Provost, in consultation with Campus Ministry and the Registrar, will publish, before classes begin for a given term, a list of major religious holidays likely to affect Georgetown students. The Provost and the Main Campus Executive Faculty encourage faculty to accommodate students whose bona fide religious observances in other ways impede normal participation in a course. Students who cannot be accommodated should discuss the matter with an advising dean."
+  },
+  {
+    "objectID": "slides/week-1.html",
+    "href": "slides/week-1.html",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "",
+    "text": "Motivating Data Science for Public Policy.\nGoals of the course\nIntroductions\nCourse Logistics\nIDEs\n\nJupyter\n\nIntroduction to commandline"
   }
 ]

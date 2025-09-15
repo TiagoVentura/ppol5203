@@ -722,7 +722,7 @@ git log ## to see your merge complete
 
 Click [here](https://classroom.github.com/a/j0zuG5Wd) to setup your github classroom and do the in-class exercise for you to practice. 
 
-If you are connecting to GitHub for the first time, please read on `Git Remotes: Git + Github.` on the lecture notes.  
+- If you are connecting to GitHub for the first time, please read on **Git Remotes: Git + Github** on the lecture notes.  
 
 
 
@@ -731,7 +731,7 @@ If you are connecting to GitHub for the first time, please read on `Git Remotes:
 Your homework will be posted today on slack and canvas. 
 
 - Same structure of the in-class exercise.
-- Deadline: September 27, midnight EST. 
+- Deadline: September 26, 23:59 EST. 
 - Questions? Come to the office hour or ask on slack. 
 
 

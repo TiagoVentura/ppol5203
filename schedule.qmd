@@ -6,7 +6,7 @@ editor: visual
 ## Weekly Schedule
 
 | Week | Topic | Date |
-|---------------|----------------------------------------|-----------------|
+|----|----|----|
 | Week 01 | Introduction, Installations, IDEs, Command line | September 09, 2025 |
 | Week 02 | Version Control, Workflow and Reproducibility: Or a bit of Git & GitHub | September 16, 2025 |
 | Week 03 | Intro to Python - OOP, Data Types, Control Statements and Functions | September 23, 2025 |
