@@ -62,22 +62,21 @@ knitr::include_graphics("https://diplo-media.s3.eu-central-1.amazonaws.com/2025/
 
 ## As a consequence, we live in a world:
 
-::: nonincremental
+::::::: nonincremental
+::: fragment
+-   **With** abundance of data we can use for research and to recommend policy decisions:
 
-:::fragment
--  **With** abundance of data we can use for research and to recommend policy decisions:
-   
-   - Internet data, social media, geo-tracking tools, etc...
+    -   Internet data, social media, geo-tracking tools, etc...
 :::
 
-:::fragment
--  **With** easily available technologies to analyze this data at scale
+::: fragment
+-   **With** easily available technologies to analyze this data at scale
 
-   - Your laptops, cloud computing, ChatBots...
+    -   Your laptops, cloud computing, ChatBots...
 :::
 
-:::fragment
--  **But** with new technologies that also have novel social implications:
+::: fragment
+-   **But** with new technologies that also have novel social implications:
 
     -   Privacy issues
 
@@ -86,32 +85,31 @@ knitr::include_graphics("https://diplo-media.s3.eu-central-1.amazonaws.com/2025/
     -   Use of technology by governments to censor/monitor citizens.
 :::
 
-:::fragment
--   Policy scholars (but pretty much any researcher) need to be equipped to properly **work** with this data  and **understand** the effects of these news technologies
+::: fragment
+-   Policy scholars (but pretty much any researcher) need to be equipped to properly **work** with this data and **understand** the effects of these news technologies
 :::
-:::
+:::::::
+
 ## Data Science for Public Policy
 
 [Data Scientist for Public Policy]{.red} focuses on **computational approaches** to solve/understand **policy problems**.
 
 -   It is part of a larger and new field called [computational social science](https://en.wikipedia.org/wiki/Computational_social_science)
 
-:::nonincremental
-
-:::fragment
--   **Social science** 
+::::: nonincremental
+::: fragment
+-   **Social science**
 
     -   Understands human behavior: human psychology, language, economic behavior, political systems, policy problems
     -   Involve many **approaches**: qualitative interviews, statistical analysis, simulations
 :::
 
-:::fragment
+::: fragment
 -   **Data Science**:
 
     -   Tools to work with large-scale data + learning models + novel data sources
-:::    
 :::
-    
+:::::
 
 # Computational Social Science in Practice
 
@@ -149,9 +147,9 @@ knitr::include_graphics("week1_figs/wpp.png")
 
 -   Bit by Bit: Social Research in the Digital Age By Mathew Salganik
 
-     -   [Introduction](https://www.bitbybitbook.com/en/1st-ed/introduction/)
+    -   [Introduction](https://www.bitbybitbook.com/en/1st-ed/introduction/)
 
-     -   [Observing Behavior](https://www.bitbybitbook.com/en/1st-ed/observing-behavior/)
+    -   [Observing Behavior](https://www.bitbybitbook.com/en/1st-ed/observing-behavior/)
 
 -   [Training Computational Social Science PhD Students for Academic and Non-Academic Careers](https://www.cambridge.org/core/journals/ps-political-science-and-politics/article/training-computational-social-science-phd-students-for-academic-and-nonacademic-careers/1455690939833B9FFCAC664D4E412057) - Written by me and some colleagues in academia, industry and non-profits
 
@@ -169,10 +167,10 @@ The goal of this course is to teach you:
 
 # PPOL 5203 - Data Science I: Foundations {background-color="#447099"}
 
-## Course Schedule{style="font-size: .7em;"}
+## Course Schedule {style="font-size: .7em;"}
 
 | Week | Topic | Date |
-|---------------|----------------------------------------|-----------------|
+|----|----|----|
 | Week 01 | Introduction, Installations, IDEs, Command line | September 09, 2025 |
 | Week 02 | Version Control, Workflow and Reproducibility: Or a bit of Git & GitHub | September 16, 2025 |
 | Week 03 | Intro to Python - OOP, Data Types, Control Statements and Functions | September 23, 2025 |
@@ -199,8 +197,8 @@ knitr::include_graphics("../baby.jpeg")
 # Introductions
 
 ## 
-::: nonincremental
 
+:::::: nonincremental
 ::: fragment
 **Professor Tiago Ventura (he/him)**
 
@@ -222,8 +220,8 @@ knitr::include_graphics("../baby.jpeg")
 ::: fragment
 **Outside of work, I enjoy [watching soccer, reading sci-fi and running]{.red}**
 :::
+::::::
 
-:::
 ## Quiz! {background-color="#447099"}
 
 ### Which programming language did I use the most at?
@@ -263,7 +261,7 @@ knitr::include_graphics("../baby.jpeg")
 
 -   **Datacamp**: Additional exercises! Access our free account [here](https://www.datacamp.com/groups/shared_links/0cd82dc4f5a0c59ebb098f26fb7f36a57274d17b315e0dcf27a023fe189a0161)
 
-- **Task:** go on slack and send me a message about the data source you choose in the last answer, and if you feel comfortable add a picture to your profile
+-   **Task:** go on slack and send me a message about the data source you choose in the last answer, and if you feel comfortable add a picture to your profile
 
 ```{r}
 library(countdown)
@@ -368,28 +366,24 @@ countdown(minutes = 10, seconds = 0,
 
 ## Open Ended
 
-- this is a big group of international students, and some are concerned about not having english as you first language!
-  
-    - THIS IS FINE ! I hope my non-native and strongly accented English will encourage you to participate in class and speak up!
+-   this is a big group of international students, and some are concerned about not having english as you first language!
+
+    -   THIS IS FINE ! I hope my non-native and strongly accented English will encourage you to participate in class and speak up!
 
 ::: fragment
->"That's just what translation is, I think. That's all speaking is. Listening to the other and trying to see past your own biases to glimpse what they're trying to say. Showing yourself to the world, and hoping someone else understands."
-- R.F. Kuang, Babel
+> "That's just what translation is, I think. That's all speaking is. Listening to the other and trying to see past your own biases to glimpse what they're trying to say. Showing yourself to the world, and hoping someone else understands." - R.F. Kuang, Babel
 :::
-
-
 
 ## Open Ended
 
 Some of you are slightly anxious about Python and the pace of the class
 
 ::: incremental
+-   Python is definitely harder than excel and stata.
 
-   -   Python is definitely harder than excel and stata.
+-   But you will be fine!
 
-   -   But you will be fine!
-
-   -   **Our approach**: We start slow, cover the basics, and move fast!
+-   **Our approach**: We start slow, cover the basics, and move fast!
 :::
 
 # `r fontawesome::fa("laptop-code")` Transiton: Coding!
@@ -398,13 +392,13 @@ Some of you are slightly anxious about Python and the pace of the class
 
 [See Course Website](https://tiagoventura.github.io/ppol5203/lecture_notes/week-01/course_infrastructure.html)
 
-- Install Python
+-   Install Python
 
-- Install Jupyter
+-   Install Jupyter
 
-- Setup your Git/Github account 
+-   Setup your Git/Github account
 
-   - Homework: Try to make one successful Git push before class next week. 
+    -   Homework: Try to make one successful Git push before class next week.
 
 ## Jupyter:
 
@@ -416,16 +410,13 @@ Some of you are slightly anxious about Python and the pace of the class
 
 [Command Line Tutorial in the Class Website](https://tiagoventura.github.io/ppol5203/weeks/week-01.html)
 
-
 ## Datacamp Course
 
-
-- join 
-- [Introduction to Shell](https://app.datacamp.com/learn/courses/introduction-to-shell)
+-   join
+-   [Introduction to Shell](https://app.datacamp.com/learn/courses/introduction-to-shell)
 
 ## Additional Materials: Quarto
 
 [See Quarto Notebook in the Class Website]{.red}
-
 
 # See you next week!

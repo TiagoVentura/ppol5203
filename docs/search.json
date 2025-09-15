@@ -921,7 +921,7 @@
     "href": "slides/week-2.html#git-in-practice-ii-time-travel",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "Git in Practice II: Time Travel",
-    "text": "Git in Practice II: Time Travel\nReturning to a previous snapshot:\n\nMake some more changes locally\nThen stage your changes\n\ngit add . #track and stage\ngit commit -m 'second commit' #second commit\n\nCheck your log\n\ngit log\n\nTime travel with checkout\n\ngit checkout &lt;hash&gt; #to move to a past different snapshot\n\nCheck your directory\n\nls"
+    "text": "Git in Practice II: Time Travel\nReturning to a previous snapshot:\n\nMake some more changes locally\nThen stage your changes\n\ngit add . #track and stage\ngit commit -m 'second commit' #second commit\n\nCheck your log\n\ngit log\n\nTime travel with checkout\n\ngit checkout &lt;hash&gt; #to move to a past different snapshot\n\nCheck your directory\n\nls\n\nCheck all your commits\n\ngit reflog"
   },
   {
     "objectID": "slides/week-2.html#exercise.",
@@ -935,14 +935,14 @@
     "href": "slides/week-2.html#git-branching",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "Git Branching",
-    "text": "Git Branching\n\nBranching allows us to work on different paths in Git. It follows the same logic of checking out across different commits.\nIt is very useful for two purposes:\n\nExperimenting with code\nCollaborating with colleagues.\n\nBasic Commands\n\ngit branch &lt;branch-name&gt; To create a new branch\ngit checkout &lt;branch-name&gt; To move to your new branch\ngit merge &lt;branch-name&gt; To merge your newm branch into your main branch"
+    "text": "Git Branching\n\nBranching allows us to work on different paths in Git. It follows the same logic of checking out across different commits.\nIt is very useful for two purposes:\n\nExperimenting with code\nCollaborating with colleagues.\n\nBasic Commands\n\ngit branch &lt;branch-name&gt; To create a new branch\ngit checkout &lt;branch-name&gt; To move to your new branch\ngit merge &lt;branch-name&gt; To merge your new branch into your main branch"
   },
   {
     "objectID": "slides/week-2.html#git-branching-in-practice",
     "href": "slides/week-2.html#git-branching-in-practice",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "Git Branching in Practice",
-    "text": "Git Branching in Practice\n\nCreate a new branch\n\ngit checkout -b &lt;branch-name&gt;\n\nWrite code or create new files\n\nvim test4.txt\n\nStage and commit\n\ngit add .\ngit commit -m \" hello from alternative world\"\n\nCheck status across different branches\n\nls  # test4.txt should be here\ngit checkout master #move back to the master branch*\nls  #no test4.txt\n\nThen we can merge our branches. Here we are doing a fast-forward merge, moving our master to keep up with the alternative branch\n\ngit merge [new branch]"
+    "text": "Git Branching in Practice\n\nCreate a new branch\n\ngit checkout -b &lt;branch-name&gt;\n\nWrite code or create new files\n\nvim test4.txt\n\nStage and commit\n\ngit add .\ngit commit -m \" hello from alternative world\"\n\nCheck status across different branches\n\nls  # test4.txt should be here\ngit checkout master #move back to the master branch*\nls  #no test4.txt\n\nThen we can merge our branches. Here we are doing a fast-forward merge, moving our master to keep up with the alternative branch\n\ngit merge &lt;new branch&gt;"
   },
   {
     "objectID": "slides/week-2.html#visualize-git",
@@ -970,7 +970,7 @@
     "href": "slides/week-2.html#section-1",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "",
-    "text": "Solve the conflict\n\nvim test1.txt \ngit add test1.txt\ngit commit -m \"fixed conflict\" ## commit your changes\ngit log ## to see your merge complete"
+    "text": "Track your changes:\n\ngit add . \n\nCommit:\n\ngit commit -m 'describe your commit'\n\nPush the changes in your local repository to GitHub:\n\ngit push \n# or with branch\ngit push -u origin [branch-name]"
   },
   {
     "objectID": "slides/week-2.html#git-remotes-git-github.",
@@ -984,7 +984,7 @@
     "href": "slides/week-2.html#section-2",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "",
-    "text": "Track your changes:\n\ngit add . \n\nCommit:\n\ngit commit -m 'describe your commit'\n\nPush the changes in your local repository to GitHub:\n\ngit push \n# or with branch\ngit push -u origin [branch-name]"
+    "text": "Solve the conflict\n\nvim test1.txt \ngit add test1.txt\ngit commit -m \"fixed conflict\" ## commit your changes\ngit log ## to see your merge complete"
   },
   {
     "objectID": "slides/week-2.html#can-anybody-push-to-my-repository",
@@ -1012,7 +1012,7 @@
     "href": "slides/week-2.html#practice",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": " Practice!",
-    "text": "Practice!\nClick here to setup your github classroom and do the in-class exercise for you to practice."
+    "text": "Practice!\nClick here to setup your github classroom and do the in-class exercise for you to practice.\nIf you are connecting to GitHub for the first time, please read on Git Remotes: Git + Github. on the lecture notes."
   },
   {
     "objectID": "slides/week-2.html#homework.",

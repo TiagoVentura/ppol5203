@@ -1,16 +1,15 @@
 ---
-title: "<span style = 'font-size: 80%;'> PPOL 5203 - Data Science I: Foundations </span>"
-subtitle: "<span style = 'font-size: 100%;'> Week 2: Version Control, Workflow and Reproducibility: Or a bit of Git & GitHub </span>"
+title: "<span style = 'font-size: 120%;'> PPOL 5203 - Data Science I: Foundations </span>"
+subtitle: "<span style = 'font-size: 120%;'> Week 2: Version Control, Workflow and Reproducibility: Or a bit of Git & GitHub </span>"
 author: "Professor: Tiago Ventura"
-date: "09/17/2024"
 execute: 
   echo: true
 format:
   revealjs: 
     transition: slide
     background-transition: fade
-    width: 1600 #1050
-    height: 600 #700
+    width: 1300 #1050
+    height: 900 #700
     center: true
     slide-number: true
     incremental: false
@@ -246,6 +245,8 @@ Use meaningful names for your code/data/notebooks.
   - Terrible examples: "/Users/me/ppol5203/data.csv" - [only exists in your machine!!!]{.red}
 
 
+# Let' me navigate you into one of my projects. 
+
 ## Quiz
 
 - Take five minutes to talk to your colleague at your side. Discuss: 
@@ -253,7 +254,6 @@ Use meaningful names for your code/data/notebooks.
   - What you do on your day to day work that is definitely not a best practice?
   
   - What is the best practice for you code that you are most proud of?
-
 
 
 # Version Control  {background-color="#447099"}
@@ -463,6 +463,14 @@ Check your directory
 ls
 ```
 
+Check all your commits
+
+```{python}
+#| eval: false 
+git reflog
+```
+
+
 :::
 
 
@@ -495,7 +503,7 @@ It is time for you to practice. Try on your own, ask for help if needed. You sho
 
    - `git branch <branch-name>` To create a new branch
    - `git checkout <branch-name>` To move to your new branch
-   - `git merge <branch-name>` To merge your newm branch into your main branch
+   - `git merge <branch-name>` To merge your new branch into your main branch
    
 
 ## Git Branching in Practice
@@ -541,7 +549,7 @@ Then we can merge our branches. Here we are doing a fast-forward merge, moving o
 
 ```{python}
 #| eval: false 
-git merge [new branch]
+git merge <new branch>
 ```
 
 :::
@@ -551,71 +559,6 @@ git merge [new branch]
 
 - Visualize with [Visualize Git tool](https://git-school.github.io/visualizing-git/)
 
-
-## Git conflicts
-
-When merging across different branches, sometimes there are conflicts between branches. 
-
-```
-<<<<<<< HEAD
-ADD EXAMPLE FROM class
-=======
-ADD EXAMPLE FROM CLASS
->>>>>>> new-branch
-```
-
-- Open your text editor and navigate to the file that has merge conflicts.
-
-- Solve the conflict (which may incorporate changes from both branches) and delete the conflict markers
-
-- Stage your changes (git add)
-
-- Commit your changes (git commit)
-
-## Git in Practice: Conflicts
-
-:::{.fragment}
-
-Create a new branch, change an file, and commit
-
-```{python}
-#| eval: false 
-git checkout -b "new" # create a branch call new, checkout directly
-vim test1.txt # make some modification
-git add test1.txt
-git commit -m "new file 1" # commit your changes
-```
-
-Do the same in the master branch
-
-```{python}
-#| eval: false 
-git checkout master # checkout to master branch
-vim test1.txt #make some modification and
-              #see that the old modification is not here
-git add test1.txt # stage
-git commit -m "new file 1 from master"  # commit your changes
-```
-
-Merge and solve conflict
-
-```{python}
-#| eval: false 
-git merge new
-```
-:::
-
-## {}
-
-Solve the conflict
-
-```{python}
-#| eval: false 
-vim test1.txt 
-git add test1.txt
-git commit -m "fixed conflict" ## commit your changes
-git log ## to see your merge complete
-```
 
 ## Git Remotes: Git + Github.
 
@@ -701,6 +644,72 @@ git pull
 See this [tutorial](https://www.atlassian.com/git/tutorials/syncing/git-pull)
 
 
+## Git conflicts
+
+When merging across different branches, sometimes there are conflicts between branches. 
+
+```
+<<<<<<< HEAD
+ADD EXAMPLE FROM class
+=======
+ADD EXAMPLE FROM CLASS
+>>>>>>> new-branch
+```
+
+- Open your text editor and navigate to the file that has merge conflicts.
+
+- Solve the conflict (which may incorporate changes from both branches) and delete the conflict markers
+
+- Stage your changes (git add)
+
+- Commit your changes (git commit)
+
+## Git in Practice: Conflicts
+
+:::{.fragment}
+
+Create a new branch, change an file, and commit
+
+```{python}
+#| eval: false 
+git checkout -b "new" # create a branch call new, checkout directly
+vim test1.txt # make some modification
+git add test1.txt
+git commit -m "new file 1" # commit your changes
+```
+
+Do the same in the master branch
+
+```{python}
+#| eval: false 
+git checkout master # checkout to master branch
+vim test1.txt #make some modification and
+              #see that the old modification is not here
+git add test1.txt # stage
+git commit -m "new file 1 from master"  # commit your changes
+```
+
+Merge and solve conflict
+
+```{python}
+#| eval: false 
+git merge new
+```
+:::
+
+## {}
+
+Solve the conflict
+
+```{python}
+#| eval: false 
+vim test1.txt 
+git add test1.txt
+git commit -m "fixed conflict" ## commit your changes
+git log ## to see your merge complete
+```
+
+
 ## Some additional tasks:
 
 - check the discussion about .gitignore in the lecture notes.
@@ -711,7 +720,10 @@ See this [tutorial](https://www.atlassian.com/git/tutorials/syncing/git-pull)
 
 ## `r fontawesome::fa("laptop-code")` Practice!
 
-Click [here](https://classroom.github.com/a/epMgGVTy) to setup your github classroom and do the in-class exercise for you to practice. 
+Click [here](https://classroom.github.com/a/j0zuG5Wd) to setup your github classroom and do the in-class exercise for you to practice. 
+
+If you are connecting to GitHub for the first time, please read on `Git Remotes: Git + Github.` on the lecture notes.  
+
 
 
 ## Homework. 
