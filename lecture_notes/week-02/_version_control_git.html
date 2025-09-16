@@ -13406,17 +13406,17 @@ Tiago Ventura </center> <h1></p>
 <li><p>Check status across different branches</p>
 <ul>
 <li><code>ls</code>  <em>test4.txt should be here</em></li>
-<li><code>git checkout master</code> <em>move back to the master branch</em></li>
+<li><code>git checkout main</code> <em>move back to the main branch</em></li>
 <li><code>ls</code> *no test4.txt</li>
 </ul>
 </li>
-<li><p>Then we can merge our branches. Here we are doing a fast-forward merge, moving our master to keep up with the alternative branch</p>
+<li><p>Then we can merge our branches. Here we are doing a fast-forward merge, moving our main to keep up with the alternative branch</p>
 <ul>
 <li><code>git merge new branch</code></li>
 </ul>
 </li>
 </ul>
-<p>In general, at this stage, you would use <code>git push</code> to merge your local branch into your remote reposity (usually on github), and <code>git pull</code> to bring your remote to your local branch. You can understand <code>git push</code>| <code>git pull</code> as a merging step of your branch into the remote master branch.</p>
+<p>In general, at this stage, you would use <code>git push</code> to merge your local branch into your remote reposity (usually on github), and <code>git pull</code> to bring your remote to your local branch. You can understand <code>git push</code>| <code>git pull</code> as a merging step of your branch into the remote main branch.</p>
 
 </div>
 </div>
@@ -13528,15 +13528,15 @@ ADD EXAMPLE FROM CLASS
 <li><code>git add test1.txt</code></li>
 <li><code>git commit -m "new file 1"</code>: commit your changes</li>
 </ul>
-<h4 id="2)-Now,-let's-do-the-same-in-the-master-branch">2) Now, let's do the same in the master branch<a class="anchor-link" href="#2)-Now,-let's-do-the-same-in-the-master-branch">&#182;</a></h4><ul>
-<li><code>git checkout "master"</code> : move back to master</li>
+<h4 id="2)-Now,-let's-do-the-same-in-the-main-branch">2) Now, let's do the same in the main branch<a class="anchor-link" href="#2)-Now,-let's-do-the-same-in-the-main-branch">&#182;</a></h4><ul>
+<li><code>git checkout "main"</code> : move back to main</li>
 <li><code>vim test1.txt</code>: make some modification and see that the old modification is not here</li>
 <li><code>git add test1.txt</code></li>
-<li><code>git commit -m "new file 1"</code> from master commit your changes</li>
+<li><code>git commit -m "new file 1"</code> from main commit your changes</li>
 </ul>
-<h4 id="3)-Merge-and-solve-conflict">3) Merge and solve conflict<a class="anchor-link" href="#3)-Merge-and-solve-conflict">&#182;</a></h4><p>Because we are at the master branch, we just need to merge the new branch to the master</p>
+<h4 id="3)-Merge-and-solve-conflict">3) Merge and solve conflict<a class="anchor-link" href="#3)-Merge-and-solve-conflict">&#182;</a></h4><p>Because we are at the main branch, we just need to merge the new branch to the main</p>
 <ul>
-<li><code>git merge new</code>: this merges new to the master. if we wanted to do the opposite, then we would need to checkout to new, and use <code>git merge master</code></li>
+<li><code>git merge new</code>: this merges new to the main. if we wanted to do the opposite, then we would need to checkout to new, and use <code>git merge main</code></li>
 </ul>
 <p><strong>We got an error. each branch has a difference in the same file</strong></p>
 <p>See the error:</p>
@@ -13613,7 +13613,7 @@ ADD EXAMPLE FROM CLASS
 <li><code>git checkout &lt;commit-hash&gt;</code>: Move to prior snapshots of the project</li>
 <li><code>git revert &lt;commit-hash&gt;</code>: Revert the project to a prior point</li>
 </ul>
-<p><strong>Branching</strong>: A branch in <code>git</code> is a lightweight, movable pointer to a commit. Default branch is named "<em>master</em>"</p>
+<p><strong>Branching</strong>: A branch in <code>git</code> is a lightweight, movable pointer to a commit. Default branch is named "<em>main</em>"</p>
 <ul>
 <li><code>git branch &lt;name-of-new-branch&gt;</code>: create a new branch</li>
 <li><code>git checkout &lt;name-of-branch&gt;</code>: checkout a branch</li>
@@ -13650,7 +13650,7 @@ ADD EXAMPLE FROM CLASS
 <p><strong>Pushing changes to the remote</strong></p>
 <ul>
 <li><code>git push -u &lt;remote&gt; &lt;branch&gt;</code>: telling it which remote we are pushing to.</li>
-<li><code>git push -u origin master</code>: telling it which remote we are pushing to.</li>
+<li><code>git push -u origin main</code>: telling it which remote we are pushing to.</li>
 </ul>
 <p><strong>Inspecting Remotes</strong></p>
 <ul>
@@ -13692,7 +13692,7 @@ ADD EXAMPLE FROM CLASS
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[NbConvertApp] Converting notebook _version_control_git.ipynb to html
-[NbConvertApp] Writing 305211 bytes to _version_control_git.html
+[NbConvertApp] Writing 305265 bytes to _version_control_git.html
 </pre>
 </div>
 </div>

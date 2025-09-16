@@ -893,7 +893,7 @@
     "href": "slides/week-2.html#the-three-stages-of-git",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "The three stages of Git",
-    "text": "The three stages of Git"
+    "text": "The three stages of Git\n\nmodified: local changes\nstage: tell git to keep track of these files\ncommit: take a snapshot"
   },
   {
     "objectID": "slides/week-2.html#time-travel-in-git",
@@ -942,7 +942,7 @@
     "href": "slides/week-2.html#git-branching-in-practice",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "Git Branching in Practice",
-    "text": "Git Branching in Practice\n\nCreate a new branch\n\ngit checkout -b &lt;branch-name&gt;\n\nWrite code or create new files\n\nvim test4.txt\n\nStage and commit\n\ngit add .\ngit commit -m \" hello from alternative world\"\n\nCheck status across different branches\n\nls  # test4.txt should be here\ngit checkout master #move back to the master branch*\nls  #no test4.txt\n\nThen we can merge our branches. Here we are doing a fast-forward merge, moving our master to keep up with the alternative branch\n\ngit merge &lt;new branch&gt;"
+    "text": "Git Branching in Practice\n\nCreate a new branch\n\ngit checkout -b &lt;branch-name&gt;\n\nWrite code or create new files\n\nvim test4.txt\n\nStage and commit\n\ngit add .\ngit commit -m \" hello from alternative world\"\n\nCheck status across different branches\n\nls  # test4.txt should be here\ngit checkout main #move back to the main branch*\nls  #no test4.txt\n\nThen we can merge our branches. Here we are doing a fast-forward merge, moving our main to keep up with the alternative branch\n\ngit merge &lt;new branch&gt;"
   },
   {
     "objectID": "slides/week-2.html#visualize-git",
@@ -963,7 +963,7 @@
     "href": "slides/week-2.html#git-in-practice-conflicts",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "Git in Practice: Conflicts",
-    "text": "Git in Practice: Conflicts\n\nCreate a new branch, change an file, and commit\n\ngit checkout -b \"new\" # create a branch call new, checkout directly\nvim test1.txt # make some modification\ngit add test1.txt\ngit commit -m \"new file 1\" # commit your changes\n\nDo the same in the master branch\n\ngit checkout master # checkout to master branch\nvim test1.txt #make some modification and\n              #see that the old modification is not here\ngit add test1.txt # stage\ngit commit -m \"new file 1 from master\"  # commit your changes\n\nMerge and solve conflict\n\ngit merge new"
+    "text": "Git in Practice: Conflicts\n\nCreate a new branch, change an file, and commit\n\ngit checkout -b \"new\" # create a branch call new, checkout directly\nvim test1.txt # make some modification\ngit add test1.txt\ngit commit -m \"new file 1\" # commit your changes\n\nDo the same in the main branch\n\ngit checkout main # checkout to main branch\nvim test1.txt #make some modification and\n              #see that the old modification is not here\ngit add test1.txt # stage\ngit commit -m \"new file 1 from main\"  # commit your changes\n\nMerge and solve conflict\n\ngit merge new"
   },
   {
     "objectID": "slides/week-2.html#section-1",
@@ -1118,5 +1118,19 @@
     "title": "PPOL 5203 - Data Science I: Foundations",
     "section": "",
     "text": "Motivating Data Science for Public Policy.\nGoals of the course\nIntroductions\nCourse Logistics\nIDEs\n\nJupyter\n\nIntroduction to commandline"
+  },
+  {
+    "objectID": "slides/week-2.html#most-common-version-control-systems",
+    "href": "slides/week-2.html#most-common-version-control-systems",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Most common version control systems",
+    "text": "Most common version control systems"
+  },
+  {
+    "objectID": "slides/week-2.html#git-distributed-systems",
+    "href": "slides/week-2.html#git-distributed-systems",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Git: Distributed systems",
+    "text": "Git: Distributed systems\n\n\n\n\n\n\n\n\n\n\n\nSource: pro git"
   }
 ]

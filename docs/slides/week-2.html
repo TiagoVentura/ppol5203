@@ -675,39 +675,18 @@ Professor: Tiago Ventura
 </ul></li>
 </ul>
 </section>
-<section id="our-working-directory" class="slide level2 center">
-<h2>Our Working Directory</h2>
+<section id="most-common-version-control-systems" class="slide level2 center">
+<h2>Most common version control systems</h2>
 
-<img data-src="week2_figs/wp.png" style="width:50.0%" class="r-stretch quarto-figure-center"></section>
-<section id="git-a-distributed-version-control-system" class="slide level2 center">
-<h2>Git: a distributed version control system</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
+<img data-src="week2_figs/delta.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section>
+<section id="git-distributed-systems" class="slide level2 center">
+<h2>Git: Distributed systems</h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="week2_figs/delta.png" style="width:100.0%"></p>
+<p><img data-src="week2_figs/git.png" style="width:80.0%"></p>
 </figure>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="week2_figs/git.png" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="fragment">
-<ul>
-<li>This is the git system.</li>
-<li>it is distributed.</li>
-<li>Exists in your local machine</li>
-</ul>
 </div>
 </div>
 </div>
@@ -717,6 +696,11 @@ Professor: Tiago Ventura
 </div></aside></section>
 <section id="the-three-stages-of-git" class="slide level2 center">
 <h2>The three stages of Git</h2>
+<ul>
+<li><p>modified: local changes</p></li>
+<li><p>stage: tell git to keep track of these files</p></li>
+<li><p>commit: take a snapshot</p></li>
+</ul>
 
 <img data-src="week2_figs/git_stages.png" style="width:80.0%" class="r-stretch quarto-figure-center"></section>
 <section id="time-travel-in-git" class="slide level2 center">
@@ -835,10 +819,10 @@ Professor: Tiago Ventura
 <p>Check status across different branches</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a>ls  <span class="co"># test4.txt should be here</span></span>
-<span id="cb17-2"><a href="#cb17-2"></a>git checkout master <span class="co">#move back to the master branch*</span></span>
+<span id="cb17-2"><a href="#cb17-2"></a>git checkout main <span class="co">#move back to the main branch*</span></span>
 <span id="cb17-3"><a href="#cb17-3"></a>ls  <span class="co">#no test4.txt</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Then we can merge our branches. Here we are doing a fast-forward merge, moving our master to keep up with the alternative branch</p>
+<p>Then we can merge our branches. Here we are doing a fast-forward merge, moving our main to keep up with the alternative branch</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a>git merge <span class="op">&lt;</span>new branch<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -942,13 +926,13 @@ ADD EXAMPLE FROM CLASS
 <span id="cb25-3"><a href="#cb25-3"></a>git add test1.txt</span>
 <span id="cb25-4"><a href="#cb25-4"></a>git commit <span class="op">-</span>m <span class="st">"new file 1"</span> <span class="co"># commit your changes</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Do the same in the master branch</p>
+<p>Do the same in the main branch</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1"></a>git checkout master <span class="co"># checkout to master branch</span></span>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1"></a>git checkout main <span class="co"># checkout to main branch</span></span>
 <span id="cb26-2"><a href="#cb26-2"></a>vim test1.txt <span class="co">#make some modification and</span></span>
 <span id="cb26-3"><a href="#cb26-3"></a>              <span class="co">#see that the old modification is not here</span></span>
 <span id="cb26-4"><a href="#cb26-4"></a>git add test1.txt <span class="co"># stage</span></span>
-<span id="cb26-5"><a href="#cb26-5"></a>git commit <span class="op">-</span>m <span class="st">"new file 1 from master"</span>  <span class="co"># commit your changes</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb26-5"><a href="#cb26-5"></a>git commit <span class="op">-</span>m <span class="st">"new file 1 from main"</span>  <span class="co"># commit your changes</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Merge and solve conflict</p>
 <div class="cell">

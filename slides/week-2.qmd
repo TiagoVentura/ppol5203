@@ -319,40 +319,21 @@ Key concepts we will cover:
 
     - Crucial to realize those two are different!
 
-## Our Working Directory
 
-```{r  echo=FALSE, out.width = "50%", fig.align="center"}
-knitr::include_graphics("week2_figs/wp.png") 
-```
-
-## Git: a distributed version control system
-
-:::: {.columns}
-::: {.column width="50%"}
+## Most common version control systems
 
 ```{r  echo=FALSE, out.width = "100%", fig.align="center"}
 knitr::include_graphics("week2_figs/delta.png") 
 ```
-:::
 
-::: {.column width="50%"}
 
-```{r  echo=FALSE, out.width = "100%", fig.align="center"}
+## Git: Distributed systems
+
+```{r  echo=FALSE, out.width = "80%", fig.align="center"}
 knitr::include_graphics("week2_figs/git.png") 
 ```
 
 
-::: {.fragment}
-
-- This is the git system. 
-- it is distributed. 
-- Exists in your local machine
-:::
-
-:::
-
-
-::::
 
 :::aside
 Source: [pro git](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F)
@@ -361,6 +342,11 @@ Source: [pro git](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F)
 
 ## The three stages of Git
 
+- modified: local changes
+
+- stage: tell git to keep track of these files
+
+- commit: take a snapshot
 
 ```{r  echo=FALSE, out.width = "80%", fig.align="center"}
 knitr::include_graphics("week2_figs/git_stages.png") 
@@ -540,11 +526,11 @@ Check status across different branches
 ```{python}
 #| eval: false 
 ls  # test4.txt should be here
-git checkout master #move back to the master branch*
+git checkout main #move back to the main branch*
 ls  #no test4.txt
 ```    
 
-Then we can merge our branches. Here we are doing a fast-forward merge, moving our master to keep up with the alternative branch
+Then we can merge our branches. Here we are doing a fast-forward merge, moving our main to keep up with the alternative branch
 
 
 ```{python}
@@ -678,15 +664,15 @@ git add test1.txt
 git commit -m "new file 1" # commit your changes
 ```
 
-Do the same in the master branch
+Do the same in the main branch
 
 ```{python}
 #| eval: false 
-git checkout master # checkout to master branch
+git checkout main # checkout to main branch
 vim test1.txt #make some modification and
               #see that the old modification is not here
 git add test1.txt # stage
-git commit -m "new file 1 from master"  # commit your changes
+git commit -m "new file 1 from main"  # commit your changes
 ```
 
 Merge and solve conflict
