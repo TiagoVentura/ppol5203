@@ -1,7 +1,7 @@
 ---
-title: "<span style = 'font-size: 100%;'> PPOL 5203 - Data Science I: Foundations </span>"
-subtitle: "<span style = 'font-size: 100%;'> Week 3: Intro to Python - OOP, Data Types, Control Statements and Functions </span>"
-author: "Professor: Tiago Ventura"
+title: "<span style = 'font-size: 120%;'> PPOL 5203 - Data Science I: Foundations </span>"
+subtitle: "<span style = 'font-size: 150%;'> Week 3: Intro to Python - OOP, Data Types, Control Statements and Functions </span>"
+author: "<span style = 'font-size: 150%;'>Professor: Tiago Ventura</span>"
 execute: 
   echo: true
 format:
@@ -114,6 +114,10 @@ git config --global user.name "Your Name"
 git config --global user.email "your-email@example.com"
 ```
 
+Git will ask: 
+
+- username
+- password: **THIS IS YOUR TOKEN. SEE LECTURE NOTES**
 
 ## Pull from Remotes
 
@@ -188,7 +192,7 @@ In most Python introductions out there, you would start with:
 -   Objects
 
 ::: fragment
-**We will take a different route starting with a deeper understanding of Object-oriented programming**
+**We will take a different route starting with a deeper understanding of object-oriented programming**
 :::
 
 ## Object-oriented programming (OOP) vs Functional Programming Language
@@ -341,7 +345,9 @@ me.hello()
 
 # `r fontawesome::fa("laptop-code")` Coding
 
-# Data types: Native Classes in Python
+# Data types
+
+# Quizz: What are data types? {background-color="#447099"}
 
 ## Data Type
 
