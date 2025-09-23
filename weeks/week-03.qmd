@@ -74,12 +74,12 @@ From Wes McKinney, Python for Data Analysis
 
 -   Data Carpentry
 
-    -   [Python Fundamentals](https://swcarpentry.github.io/python-novice-inflammation/01-intro/index.html)
+    -   [Python Fundamentals](https://swcarpentry.github.io/python-novice-inflammation/01-intro.html)
 
-    -   [Repeated Actions with Loops](https://swcarpentry.github.io/python-novice-inflammation/04-loop/index.html)
+    -   [Repeated Actions with Loops](https://swcarpentry.github.io/python-novice-inflammation/05-loop.html)
 
-    -   [Making Choices](https://swcarpentry.github.io/python-novice-inflammation/07-cond/index.html)
+    -   [Making Choices](https://swcarpentry.github.io/python-novice-inflammation/07-cond.html)
 
-    -   [Creating Functions](https://swcarpentry.github.io/python-novice-inflammation/08-func/index.html)
+    -   [Creating Functions](https://swcarpentry.github.io/python-novice-inflammation/08-func.html)
 
-    -   [Storing Multiple Values in Lists](https://swcarpentry.github.io/python-novice-inflammation/05-lists/index.html)
+    -   [Storing Multiple Values in Lists](https://swcarpentry.github.io/python-novice-inflammation/04-lists.html)
