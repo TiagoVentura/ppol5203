@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>_version_control_git</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>_week_3_data_types_for_class</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 <style type="text/css">
   pre { line-height: 125%; }
@@ -13090,7 +13090,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><h1><center> PPOL 5203 Data Science I: Foundations <br><br> 
-<font color='grey'>Reproducibility, Version Control, Git/Github <br><br>
+<font color='grey'>Intro do Python: OOP + Data Types <br><br>
 Tiago Ventura </center> <h1></p>
 <hr>
 
@@ -13100,26 +13100,15 @@ Tiago Ventura </center> <h1></p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Learning-goals">Learning goals<a class="anchor-link" href="#Learning-goals">&#182;</a></h2><p>Today we will discuss Version Control, Workflow and Reproducibility in Data Science. It means we will pretty much learn how to incorporate Git and Github to our day-to-day data science workflow.</p>
-<p>These are the main concepts we will learn:</p>
+<h1 id="Learning-Objectives">Learning Objectives<a class="anchor-link" href="#Learning-Objectives">&#182;</a></h1><p>We will start this class with a broader overview of what <strong>Object-Oriented Programming</strong> means. This might sound a bit generic, but it is a super important concept for you to grasp and build a more general understanding of Python.</p>
+<p>After that, we will go more into a classic introduction to Python, with a focus on Data Types and Data Collections</p>
 <ul>
-<li>Reproducibility in Data Science</li>
-<li>Conceptualize what version control and how it works;</li>
-<li>Basics of <code>Git</code> and operating it with command line arguments;</li>
-<li>Generating repositories on <code>Github</code>;</li>
-<li>Linking local repositories with online remotes;</li>
-<li>Dealing with merge conflicts;</li>
-<li>Advanced functionality:<ul>
-<li>Branching</li>
+<li>Get some intuition behind <strong>objects</strong> in Python</li>
+<li>Explore the different built-in <strong>data types</strong>.</li>
+<li>Examine how to look up values in collection data type using an <strong>index</strong> and/or <strong>key</strong></li>
+<li>Learn about the issues that can arise when <strong>copying mutable objects</strong> and how to resolve them.</li>
 </ul>
-</li>
-</ul>
-<p>I will cover some of the concepts here. However, I expect you to do the weekly readings to fully grasp the concepts I will describe here and cover during the lecture</p>
-<h3 id="Cheatsheets">Cheatsheets<a class="anchor-link" href="#Cheatsheets">&#182;</a></h3><p>Note that the purpose of this notebook is to serve as a cheatsheet/reference for future use. Though there are better one out there than what I've outlined here. I've listed a few below for your use.</p>
-<ul>
-<li><a href="https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf"><strong>Github Cheatsheet (A)</strong></a></li>
-<li><a href="https://education.github.com/git-cheat-sheet-education.pdf"><strong>Github Cheatsheet (B)</strong></a></li>
-</ul>
+<p><em>This notebook draws from materials developed by <a href="http://ericdunford.com/">Dr. Eric Dunford</a> for a previous iteration of PPOL 5203</em></p>
 
 </div>
 </div>
@@ -13127,39 +13116,12 @@ Tiago Ventura </center> <h1></p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Reproducibility">Reproducibility<a class="anchor-link" href="#Reproducibility">&#182;</a></h2><p>Your data science workflow will generally involve:</p>
-<ul>
-<li>Think about a research question/data analysis</li>
-<li>Collect data</li>
-<li>Clean the data</li>
-<li>Run models</li>
-<li>Visualize the results</li>
-<li>Explain in plain language the substantive importance of your results. </li>
-</ul>
-<p>Some key challenges will emerge as you evolve in your carreer as a data scientist:</p>
-<ul>
-<li><p>Your projects will grow.</p>
-<ul>
-<li>When projects scale-up,  <strong>you need to keep track of your work</strong>. Sometimes you decide to experiment with a different model, share you code with a colleagues who suggested you to try a different approach, work with some different visualization. All of this, ideally, without altering the previous draft of your results. </li>
-</ul>
-</li>
-<li><p>Data Science is a collaborative field</p>
-<ul>
-<li>Data Science is a new and very collaborative field, both in academia and industry. Most of your projects will be shared with other data scientists, and you will want to be able to work at the same time in the project, pushing your ideas in different directions, without affecting what you have already consolidated. </li>
-</ul>
-</li>
-<li><p>You will be constantly checking you code and others' code.</p>
-<ul>
-<li>To do so, you need codes to be well-documented, transparent, and check how the code changed over time</li>
-</ul>
-</li>
-<li><p>Projects will come and go.</p>
-<ul>
-<li>Sometimes a project will slow down, and you will return to it a few months later. Trust me, you will thank you past self if you code is well documented, transparent, and your steps are fully reproducible. </li>
-</ul>
-</li>
-</ul>
-<p>These challenges will appear across different projects, but, most importantly, you are very likely to repeat these tasks for the different iterations of the same project.  As you do this, you need to make sure your results are <a href="https://en.wikipedia.org/wiki/Reproducibility#:~:text=For%20the%20findings%20of%20a,when%20the%20study%20is%20replicated.">reproducible</a>.</p>
+<h2 id="Notion-of-Object-Oriented-Programming">Notion of Object-Oriented Programming<a class="anchor-link" href="#Notion-of-Object-Oriented-Programming">&#182;</a></h2><p>Python is an <a href="https://en.wikipedia.org/wiki/Object-oriented_programming">object-oriented programming language</a> (OOP) where the object plays a more fundamental role for how we structure a program. Specifically, OOP allows one to bundle properties and behavior into individual objects. In Python, objects can hold both the data and the methods used to manipulate that data.</p>
+<p>As you are progressing in the DSPP, you are also being introduced to R. R, on the other hand, is a functional programming language where functions are objects and data is manipulated using functions.</p>
+<p>At first glance, the distinction is subtle, but the way we build programs in R and Python differs considerably. In practice, the OOP vs. Functional distinction changes how one engages with objects instantiated in the environment.</p>
+<p>In Python, methods (functions) are self-contained in the object; whereas in R functions are external to the object. In other words, while much of the work in R consists on writing functions that are stores outside of classes/objects, in Python, you can borrow from general classes, inherit their methods/functions, or just add new functionalities to objects created by others.</p>
+<p><strong>The core of OOP Languages are the objects. They are also important in R, but not as flexible as in Python</strong></p>
+<p>As an example, see the differences between taking the mean of a vector in R (using a function) and the mean of a pandas series in Python (using a method).</p>
 
 </div>
 </div>
@@ -13167,49 +13129,17 @@ Tiago Ventura </center> <h1></p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Best-Practices-for-Reproducibility-and-Project-Management">Best Practices for Reproducibility and Project Management<a class="anchor-link" href="#Best-Practices-for-Reproducibility-and-Project-Management">&#182;</a></h3><p><strong>Reproducibility is fundamental to the scientific method</strong>. As you publish a article/data report/data analysis you need to make sure others (or even you in the future) would be able to easily keep a record of your actions as in the data (cleaning, measurement choices, models), the presentation of the results, all in a reproducible way.</p>
-<p>Here are some suggestions for you to overcome these challenges will minimal headaches:</p>
-<p><strong>Documentation</strong></p>
-<ul>
-<li>Use <code>#</code> to describe every single step of your code</li>
-</ul>
-<p><strong>Readability</strong></p>
-<ul>
-<li>Make you code readable in plain english. This usually mean giving names to your variables and functions that fully describe what your intents are. </li>
-<li>Avoid: <ul>
-<li>Abbreviation</li>
-<li>Generice Names</li>
-<li>Misleading names</li>
-</ul>
-</li>
-</ul>
-<p><strong>Naming</strong></p>
-<ul>
-<li>Use meaningful names for your code/data/notebooks. <ul>
-<li>File names should be meaningful</li>
-<li>DO NOT USE SPACES. Use <a href="https://en.wikipedia.org/wiki/Snake_case">snake case</a> <code>(_)</code> style for you files and code</li>
-</ul>
-</li>
-</ul>
-<p><strong>Portability</strong></p>
-<ul>
-<li>Use computational environments for your projects. (<a href="https://github.com/pyenv/pyenv#installation">pyenv</a></li>
-<li>Avoid absolute file paths</li>
-<li>Keep track of the version of your package/libraries versions</li>
-</ul>
-<p><strong>Use Self-Contained Projects</strong></p>
-<ul>
-<li>Organize each data analysis into a specific folder on your computer. </li>
-<li>In my case, every project folder has the following subfolders: <ul>
-<li>/code</li>
-<li>/data</li>
-<li>/outputs</li>
-<li>/literature</li>
-<li>/text</li>
-<li>/misc</li>
-</ul>
-</li>
-</ul>
+<h3 id="Python-OOP-in-Practice">Python OOP in Practice<a class="anchor-link" href="#Python-OOP-in-Practice">&#182;</a></h3>
+<pre><code># call library
+import pandas as pd
+
+# Using a Pandas Series method (OOP)
+s = pd.Series([1, 2, 3, 4, 5])
+s.mean()</code></pre>
+<h3 id="R-Function-Programming-in-Practice">R Function Programming in Practice<a class="anchor-link" href="#R-Function-Programming-in-Practice">&#182;</a></h3>
+<pre><code>vec &lt;- c(1, 2, 3, 4, 5)
+mean(vec)</code></pre>
+<p>You access methods and attributes from objects using <code>.</code> function in Python</p>
 
 </div>
 </div>
@@ -13217,454 +13147,7 @@ Tiago Ventura </center> <h1></p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Version-Control">Version Control<a class="anchor-link" href="#Version-Control">&#182;</a></h2><p>Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later. It keeps a complete record of changes to a single file, a folder of material, or a whole project.</p>
-<ul>
-<li><p>Version control avoids: <code>file1.doc, file1_mod.doc, file1_modagain.doc, file1_mod_thelast.doc, etc..</code></p>
-</li>
-<li><p>Easily handle collaboration with co-workers (through GitHub)</p>
-</li>
-<li><p>Avoids version file names</p>
-</li>
-<li><p>Allows you to “rewind the tape” to earlier incarnations of your notes, drafts, papers and code</p>
-</li>
-<li><p>It is like microsoft Word track changes but for your entire project</p>
-</li>
-</ul>
-<p>Version control is the most complex and most important of the best practices described here for reproducibility in data science. It requires us to learn a tool to perform version control. We will use <code>Git</code> to do so.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Git-&amp;-Github">Git &amp; Github<a class="anchor-link" href="#Git-&amp;-Github">&#182;</a></h2><p><strong><code>Git</code></strong>: one of many options for version control in data science. You hardly hear abour other options though as has become the standard for version control</p>
-<p><strong>Github</strong>: is a public remote host for <code>Git</code> repositories. It works as a place where software developers and social scientists make their work available, and where you can contribute to ongoing projects or make public your own.</p>
-<p>In a nutshell, you will <code>git</code> locally, and share and collaborate with others using Github.</p>
-<h3 id="Git-basic-workflow-in-words">Git basic workflow in words<a class="anchor-link" href="#Git-basic-workflow-in-words">&#182;</a></h3><p><code>Git</code> has three main states that your files can reside in:</p>
-<ul>
-<li><strong>Modified</strong> - changed the file but have not committed it to the database yet.</li>
-<li><strong>Staged</strong> - marked a modified file in its current version to go into the next commit snapshot.</li>
-<li><strong>Committed</strong> - data is safely stored in your local database.</li>
-</ul>
-<p>The fundamental <code>Git</code> process can be paraphrased as follows:</p>
-<ul>
-<li><p>You alter files within your working directory.</p>
-</li>
-<li><p>You deliberately choose and stage only the modifications that you plan to include in your upcoming commit, transferring these changes to the staging area.</p>
-</li>
-<li><p>You make a commit, which captures the current state of the files in the staging area and permanently records that version into your Git directory</p>
-</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Basic-Git-commands">Basic Git commands<a class="anchor-link" href="#Basic-Git-commands">&#182;</a></h3><p><strong>Set up your identity</strong></p>
-<ul>
-<li><code>git config --global user.name "myname"</code>: set your user name</li>
-<li><code>git config --global user.email your-email@georgetown.edu</code>: set your email account</li>
-</ul>
-<p><strong>Starting or getting a git repository on your machine</strong></p>
-<ul>
-<li><code>git init</code>: start a new repository from a working directory</li>
-<li><code>git clone &lt;url or location to repository&gt;</code>: clone an existing repository</li>
-<li><code>git status</code>: get the current status of the repository.</li>
-</ul>
-<p><strong>Staging any changes you made</strong></p>
-<ul>
-<li><code>git add &lt;file&gt;</code>: stage a file to be committed </li>
-<li><code>git add .</code>: stage <em>all files</em> to be committed</li>
-<li><code>git reset HEAD &lt;file&gt;</code>: un-stage all files to be committed</li>
-</ul>
-<p><strong>Saving the staged changes</strong></p>
-<ul>
-<li><code>git commit -m "some message"</code>: commit staged changes to repository </li>
-<li><code>git commit</code>: commit staged changes to repository (will be prompted to leave a message)</li>
-</ul>
-<p><strong>Getting current state from the remote (Github) or sending changes to it.</strong></p>
-<ul>
-<li><code>git fetch</code>: download recent changes in the remote repository (but do not explicitly merge with your local version)</li>
-<li><code>git pull</code>: download recent changes in the remote repository and merge with your local version)</li>
-<li><code>git push</code>: push commits to remote (e.g. github repository)</li>
-</ul>
-<p><strong>Getting Help</strong></p>
-<ul>
-<li><code>git help &lt;verb&gt;</code></li>
-<li><code>man git-&lt;verb&gt;</code></li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Git-in-Practice">Git in Practice<a class="anchor-link" href="#Git-in-Practice">&#182;</a></h2><p>The code below covers what we will do  in class. It shows you the basics of using <code>git</code> for local version control.</p>
-<h4 id="1)-Create-an-empty-directory-to-be-our-git-walkthrough">1) Create an empty directory to be our git walkthrough<a class="anchor-link" href="#1)-Create-an-empty-directory-to-be-our-git-walkthrough">&#182;</a></h4><p>Open you command line.</p>
-<p>Check your home directory or where you are when you open your terminal</p>
-<ul>
-<li><code>pwd</code> <em>writes to standard output the full path name of your current directory</em> </li>
-<li><code>mkdir gitwalkthrough</code> <em>creates a new folder</em></li>
-</ul>
-<p>Change working directory</p>
-<ul>
-<li><code>cd gitwalkthrough</code> <em>change working directory</em></li>
-</ul>
-<h4 id="2)-Check-if-you-have-a-git">2) Check if you have a git<a class="anchor-link" href="#2)-Check-if-you-have-a-git">&#182;</a></h4><p>Let's make sure you have a <code>git</code> repository here (you know you do not because you just started this folder)</p>
-<ul>
-<li><code>git status</code> <em>get the current status of the repository</em><ul>
-<li>returns: <code>fatal: not a git repository (or any of the parent directories): .git</code></li>
-</ul>
-</li>
-</ul>
-<p>Create your first <code>git</code> repository. This command creates a local version control for this project. This is different from creating a database in the server, like on github</p>
-<ul>
-<li><code>git init</code> <em>start a new repository from a working directory</em></li>
-</ul>
-<p>If you want to see what is going on behind the hood, this command creates a hidden directory <code>.git</code> in your folder. This directory tracks your version control.</p>
-<h4 id="3)-Tracking-and-staging-new-files">3) Tracking and staging new files<a class="anchor-link" href="#3)-Tracking-and-staging-new-files">&#182;</a></h4><p>Now we have a <code>git</code> repo created, let make our first commit.</p>
-<p>First, let's create some random file using the command line. I will use vim as a text editor here.</p>
-<ul>
-<li><code>vim test1.txt</code> <em>to open and edit the file</em></li>
-</ul>
-<p>Remember, <code>git</code> has three basic states: untracked, tracked and stagged files. To move between these states, we use the add command.</p>
-<ul>
-<li><code>git status</code> <em>gonna tell us we have a new untracked filed.</em></li>
-<li><code>git add test1.txt</code> <em>start tracking/stage the file test1.txt</em></li>
-<li><code>git status</code> <em>see we have tracked and staged our files</em></li>
-</ul>
-<p>Let create a new file and modify our test1.txt</p>
-<ul>
-<li><code>vim test1.txt</code> <em>modify as you wish</em></li>
-<li><code>vim test2.txt</code> <em>create a new file</em></li>
-<li><code>git status</code> *check the output now, you have a new untracked file, and also unstagged changes in the old file</li>
-<li><code>git add test1.txt test2.txt</code> <em>to track and stage all</em></li>
-</ul>
-<h4 id="4)-First-commit">4) First commit<a class="anchor-link" href="#4)-First-commit">&#182;</a></h4><p>With all our changes made, we are ready to make the first commit. Or, in other words, take the first snapshot of our directory</p>
-<ul>
-<li><code>git commit -m 'first commit'</code> <em>make your first commit</em></li>
-<li><code>git log</code> *see the history of your commits</li>
-</ul>
-<h4 id="5)-Returning-to-a-previous-snapshot">5) Returning to a previous snapshot<a class="anchor-link" href="#5)-Returning-to-a-previous-snapshot">&#182;</a></h4><p>Let's see here how we can use to move back and forth at different stages of our project.</p>
-<p>First, create a new test3.txt file</p>
-<ul>
-<li><code>vim test3.txt</code> </li>
-<li><code>git add .</code> <em>track and stage</em></li>
-<li><code>git commit -m 'second commit'</code> *second commit</li>
-</ul>
-<p>Check the log and moving back</p>
-<ul>
-<li><code>git log</code></li>
-<li><code>git checkout &lt;hash&gt;</code> *to move to a past different snapshot</li>
-</ul>
-<p>Where is file 3?</p>
-<ul>
-<li><code>ls</code> *no file test3.txt. we moved bck to our first commit. </li>
-</ul>
-<p>Oh I didn't want miss file 3! No problemo!</p>
-<ul>
-<li><code>git log --reflog</code> *gets the reference log</li>
-<li><code>git checkout &lt;hash&gt;</code></li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Git:-Branchinch-and-Merging.">Git: Branchinch and Merging.<a class="anchor-link" href="#Git:-Branchinch-and-Merging.">&#182;</a></h2><p>Branching allows us to work on different paths in <code>git</code>. It is very useful for two purposes:</p>
-<ul>
-<li><p>Experimenting with code</p>
-</li>
-<li><p>Collaborating with colleagues.</p>
-</li>
-</ul>
-<p>An interesting way to visualize what branching means is by using the <a href="https://git-school.github.io/visualizing-git/">Visualize Git tool</a></p>
-<p>Below you can see basics of the commands to create braches and merge in git.</p>
-<ul>
-<li><p>Create a new branch</p>
-<ul>
-<li><code>git checkout -b &lt;branch-name&gt;</code></li>
-</ul>
-</li>
-<li><p>write code or create new files</p>
-<ul>
-<li><code>vim test4.txt</code></li>
-</ul>
-</li>
-<li><p>Stage and commit</p>
-<ul>
-<li><code>git add .</code> </li>
-<li><code>git commit -m " hello from alternative world"</code></li>
-</ul>
-</li>
-<li><p>Check status across different branches</p>
-<ul>
-<li><code>ls</code>  <em>test4.txt should be here</em></li>
-<li><code>git checkout main</code> <em>move back to the main branch</em></li>
-<li><code>ls</code> *no test4.txt</li>
-</ul>
-</li>
-<li><p>Then we can merge our branches. Here we are doing a fast-forward merge, moving our main to keep up with the alternative branch</p>
-<ul>
-<li><code>git merge new branch</code></li>
-</ul>
-</li>
-</ul>
-<p>In general, at this stage, you would use <code>git push</code> to merge your local branch into your remote reposity (usually on github), and <code>git pull</code> to bring your remote to your local branch. You can understand <code>git push</code>| <code>git pull</code> as a merging step of your branch into the remote main branch.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Git-Remotes:-Git-+-Github.">Git Remotes: Git + Github.<a class="anchor-link" href="#Git-Remotes:-Git-+-Github.">&#182;</a></h2><p>Most times, you will use <code>git</code> integrated with <code>Github</code>. This is because the way <code>git</code> is more useful is by allowing multiple researchers to write and share code at the same time.</p>
-<p>This is the workflow we will go through in class. It is usually how I use <code>git</code> in my day to day work. This is also insipiered by a tutorial we developed at the Center for Social Media and Politics (CSMaP), where I worked as a Postdoctoral Researcher.</p>
-<h3 id="IMPORTANT:-Setting-up-your-Git--%3E-GitHub-connection">IMPORTANT: Setting up your Git -&gt; GitHub connection<a class="anchor-link" href="#IMPORTANT:-Setting-up-your-Git--%3E-GitHub-connection">&#182;</a></h3><p>The first time you try to use GitHub (by sending things from your local git to the remote), you will need to authenticate your connection. Here is a complete tutorial on what to do: <a href="https://docs.github.com/en/get-started/git-basics/set-up-git">https://docs.github.com/en/get-started/git-basics/set-up-git</a></p>
-<p>See below for a summarized version.</p>
-<h4 id="Configure-Git-on-your-computer">Configure Git on your computer<a class="anchor-link" href="#Configure-Git-on-your-computer">&#182;</a></h4><ul>
-<li><code>git config --global user.name "myname"</code>: set your user name as in github</li>
-<li><code>git config --global user.email your-email@georgetown.edu</code>: set your email account as in github</li>
-</ul>
-<p>Check if this is working properly:</p>
-<ul>
-<li><code>git config --list</code></li>
-</ul>
-<h4 id="Create-a-personal-token">Create a personal token<a class="anchor-link" href="#Create-a-personal-token">&#182;</a></h4><ul>
-<li><p>Open your GitHub account. Go to GitHub -&gt; Settings -&gt; Developer settings -&gt; Personal access tokens</p>
-</li>
-<li><p>Choose Fine-grained tokens or Classic token.</p>
-</li>
-<li><p>Give it repo access, and copy the token somewhere to your local machine</p>
-</li>
-<li><p>You will see this token only once. So save it somewhere you can easily find it!</p>
-</li>
-</ul>
-<h4 id="Authenticating">Authenticating<a class="anchor-link" href="#Authenticating">&#182;</a></h4><p>When you do your first clone (or push), github will ask you to authenticate. Here is where things get weird. It will ask for your username and password. But the password <strong>is actually the token you just created</strong></p>
-<ul>
-<li>username: add your github username</li>
-<li>password: paste the token you just created (VERY IMPORTANT!!!!)</li>
-</ul>
-<h4 id="Starting-a-New-Project">Starting a New Project<a class="anchor-link" href="#Starting-a-New-Project">&#182;</a></h4><p>Then, before you write any code:</p>
-<ul>
-<li><p>Go to your github, and create a new repository</p>
-</li>
-<li><p>Open your terminal, and clone the project</p>
-<ul>
-<li><code>git clone &lt;url&gt;</code></li>
-</ul>
-</li>
-<li><p>Move your working directory to this new folder</p>
-<ul>
-<li><code>cd &lt;project-directory&gt;</code></li>
-</ul>
-</li>
-<li><p>Write code!</p>
-</li>
-<li><p>Track your changes: <code>git add .</code></p>
-</li>
-<li><p>Commit your changes <code>git commit -m 'describe your commit'</code></p>
-</li>
-<li><p>Push the changes in your local repository to GitHub:</p>
-<ul>
-<li><code>git push -u origin [branch-name]</code> <em>if this is a branch protected repo, you need to do a PR</em></li>
-</ul>
-</li>
-</ul>
-<h4 id="Storing-Authentication">Storing Authentication<a class="anchor-link" href="#Storing-Authentication">&#182;</a></h4><p>Github might ask you to authenticate again everytime you try to connect. You can avoid this by storing your credentials with:</p>
-<ul>
-<li><code>git config --global credential.helper store</code></li>
-</ul>
-<h3 id="Pulling">Pulling<a class="anchor-link" href="#Pulling">&#182;</a></h3><p>Say now you already have the directory cloned, and you have a colleagues working in the code. Now you want to work on your part of the project. Then you pretty much follow the same sequence as above, but instead of clonning at your first step, you will do a pull from the git repo.</p>
-<ul>
-<li><p><code>cd &lt;gitrepo&gt;</code></p>
-</li>
-<li><p><code>git pull</code></p>
-</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Git:-Conflicts">Git: Conflicts<a class="anchor-link" href="#Git:-Conflicts">&#182;</a></h2><p>When merging across different branches, sometimes there are <strong><em>conflicts</em></strong> between branches or remote versions of a repository. This can happen with you experimenting using different branches, but it is very often when collaboration on large scale projects. Say you changed the some part of a file by deleting a function and a colleague changed the same file by modifying the function. This would be an example of a conflict.</p>
-<p>Git does not know which version is the correct one, so it will <strong>mark the file as having a conflict</strong> using a special delimiter.</p>
-
-<pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-ADD EXAMPLE FROM class
-=======
-ADD EXAMPLE FROM CLASS
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; new-branch</code></pre>
-<p><strong>What these delimiters mean?</strong></p>
-<ul>
-<li><p>the top half is the branch you a merging into</p>
-</li>
-<li><p>the bottom half is from the commit that you are trying to merge in</p>
-</li>
-</ul>
-<p><strong>How to solve a conflict?</strong></p>
-<ul>
-<li><p>Open your text editor and navigate to the file that has merge conflicts.</p>
-</li>
-<li><p>Solve the conflict (which may incorporate changes from both branches) and  delete the conflict markers &lt;&lt;&lt;&lt;&lt;&lt;&lt;, =======, &gt;&gt;&gt;&gt;&gt;&gt;&gt; and make the changes you want in the final merge.</p>
-</li>
-<li><p>Stage your changes (<code>git add</code>)</p>
-</li>
-<li><p>Commit your changes (<code>git commit</code>)</p>
-</li>
-</ul>
-<p>Let's work through an example:</p>
-<h4 id="1)-Create-a-new-branch,--change-an-file,-and-commit">1) Create a new branch,  change an file, and commit<a class="anchor-link" href="#1)-Create-a-new-branch,--change-an-file,-and-commit">&#182;</a></h4><ul>
-<li><code>git checkout -b "new"</code> : create a branch call new, checkout directly</li>
-<li><code>vim test1.txt</code>: make some modification</li>
-<li><code>git add test1.txt</code></li>
-<li><code>git commit -m "new file 1"</code>: commit your changes</li>
-</ul>
-<h4 id="2)-Now,-let's-do-the-same-in-the-main-branch">2) Now, let's do the same in the main branch<a class="anchor-link" href="#2)-Now,-let's-do-the-same-in-the-main-branch">&#182;</a></h4><ul>
-<li><code>git checkout "main"</code> : move back to main</li>
-<li><code>vim test1.txt</code>: make some modification and see that the old modification is not here</li>
-<li><code>git add test1.txt</code></li>
-<li><code>git commit -m "new file 1"</code> from main commit your changes</li>
-</ul>
-<h4 id="3)-Merge-and-solve-conflict">3) Merge and solve conflict<a class="anchor-link" href="#3)-Merge-and-solve-conflict">&#182;</a></h4><p>Because we are at the main branch, we just need to merge the new branch to the main</p>
-<ul>
-<li><code>git merge new</code>: this merges new to the main. if we wanted to do the opposite, then we would need to checkout to new, and use <code>git merge main</code></li>
-</ul>
-<p><strong>We got an error. each branch has a difference in the same file</strong></p>
-<p>See the error:</p>
-<ul>
-<li><p><code>vim test1.txt</code>: see the new file is a combination of each of the different versions of the files in each branch.</p>
-</li>
-<li><p>Fix the issue in your text editor</p>
-</li>
-<li><p><code>git add test1.txt</code></p>
-</li>
-<li><p><code>git commit -m "fixed conflict"</code>: commit your changes</p>
-</li>
-<li><p><code>git log</code>: to see your merge complete</p>
-</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id=".gitignore:-ignoring-specific-files-or-file-types">.gitignore: ignoring specific files or file types<a class="anchor-link" href="#.gitignore:-ignoring-specific-files-or-file-types">&#182;</a></h2><p>Sometimes we do not want to track certain file types.</p>
-<p>For example, <code>Github</code> has an upload rate of 100mb, meaning that we wouldn't want to push really big data sources up to the repository. We might want to avoid uploading <em>any</em> data files to our Github repository for this reason. To do this, we may want to ignore specific file types, such as <code>.csv</code> (comma separated values) or <code>.Rdata</code> (an R data file type). To do this, we need to make a special file that Git reads to tell it which files <em>not</em> to track.</p>
-<p>We can exclude these files by adding a <code>.gitignore</code> file to our project folder.</p>
-
-<pre><code>*.ipynb_checkpoints 
-*.Rdata
-*.csv</code></pre>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Advanced-Git-commands">Advanced Git commands<a class="anchor-link" href="#Advanced-Git-commands">&#182;</a></h2><p><strong>Accessing the logs &rarr; who did what to which file and when?</strong></p>
-<ul>
-<li><code>git log</code>: look at the commit history<ul>
-<li>Useful arguments:<ul>
-<li><code>--oneline</code>: view a condensed summary </li>
-<li><code>--all</code>: view the entire commit history</li>
-<li><code>--graph</code>: view a text graph of the commit sequence</li>
-<li><code>--stat</code>: abbreviated stats for each commit</li>
-<li><code>--since=2.weeks</code>: review commits within some temporal range</li>
-</ul>
-</li>
-<li>Easily format the log<ul>
-<li><code>git log --pretty=format:"%h - %an, %ar : %s"</code></li>
-<li>see <a href="https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History">Git Basics on Viewing the Commit History</a> for more insight into the different possible configurations and customizations</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p><strong>Tracking Differences</strong></p>
-<ul>
-<li><code>git diff</code> : explore the differences between files<ul>
-<li>Use the hash hexidecimal code to compare commits<ul>
-<li>e.g. <code>git diff 44d14b2 2adbea3</code></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><code>git whatchanged</code></li>
-</ul>
-<p><strong>Tracking Movement</strong>: If we were to just rename or move a file, <code>git</code> doesn't necessarily know that it was already tracking that file.</p>
-<ul>
-<li><code>git mv old-file-location new-file-location</code>: Move files around so that the git history is retained</li>
-<li><code>git mv old-file-name new-file-name</code>: Rename files so that the git history is retained</li>
-</ul>
-<p><strong>Time Traveling</strong></p>
-<ul>
-<li><code>git checkout &lt;commit-hash&gt;</code>: Move to prior snapshots of the project</li>
-<li><code>git revert &lt;commit-hash&gt;</code>: Revert the project to a prior point</li>
-</ul>
-<p><strong>Branching</strong>: A branch in <code>git</code> is a lightweight, movable pointer to a commit. Default branch is named "<em>main</em>"</p>
-<ul>
-<li><code>git branch &lt;name-of-new-branch&gt;</code>: create a new branch</li>
-<li><code>git checkout &lt;name-of-branch&gt;</code>: checkout a branch</li>
-<li><code>git checkout -b &lt;name-of-new-branch&gt;</code>: create &amp; checkout a branch simultaneously</li>
-<li><code>git merge &lt;name-of-main-branch&gt; &lt;name-of-branch-to-be-merged&gt;</code>: merging branches</li>
-<li><code>git branch -d &lt;name-of-branch&gt;</code>: deleting branches</li>
-<li><code>git branch -v</code>: seeing the last commit on each branch</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Git-Remotes">Git Remotes<a class="anchor-link" href="#Git-Remotes">&#182;</a></h3><p><strong>Git Remote</strong></p>
-<ul>
-<li><code>git remote add origin https://github.com/user/repo.git</code>: connect a local git repository to a Github repository<ul>
-<li>generic version: <code>git remote add &lt;name-of-our-remote&gt; &lt;REMOTE_URL&gt;</code> </li>
-<li>We can add another remote to say another git repository service, like <a href="https://bitbucket.org/">bitbucket</a>. </li>
-</ul>
-</li>
-</ul>
-<p><strong>Looking at our different remotes</strong></p>
-<ul>
-<li><code>git remote</code>: print available remotes in the console</li>
-<li><code>git ls-remote</code>: Displays references available in a remote repository along with the associated commit IDs.</li>
-<li><code>git remote -v</code>: shows the URL of the remotes</li>
-</ul>
-<p><strong>Fetching from a remote</strong></p>
-<ul>
-<li><code>git fetch &lt;remote-name&gt;</code></li>
-</ul>
-<p><strong>Pushing changes to the remote</strong></p>
-<ul>
-<li><code>git push -u &lt;remote&gt; &lt;branch&gt;</code>: telling it which remote we are pushing to.</li>
-<li><code>git push -u origin main</code>: telling it which remote we are pushing to.</li>
-</ul>
-<p><strong>Inspecting Remotes</strong></p>
-<ul>
-<li><code>git remote show origin</code></li>
-<li><code>git remote show</code></li>
-</ul>
-<p><strong>Renaming Remotes</strong></p>
-<ul>
-<li><code>git remote rename origin my-go-to-remote</code></li>
-</ul>
-<p><strong>Removing Remotes</strong></p>
-<ul>
-<li><code>git remote remove &lt;remote-name&gt;</code></li>
-</ul>
+<h3 id="Creating-object-in-Python">Creating object in Python<a class="anchor-link" href="#Creating-object-in-Python">&#182;</a></h3><p><code>=</code> is the <strong>assignment</strong> operator in Python. Different from R, in which there are multiple assignment operators, in Python, you only have <strong>the</strong> (<code>=</code>) assignment operator</p>
 
 </div>
 </div>
@@ -13674,7 +13157,244 @@ ADD EXAMPLE FROM CLASS
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter<span class="w"> </span>nbconvert<span class="w"> </span>_version_control_git.ipynb<span class="w"> </span>--to<span class="w"> </span>html<span class="w"> </span>--template<span class="w"> </span>classic
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># creating an object in Python</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">4</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This simple act of creating an object in Python comprise three different, and interesting actions.</p>
+<p>1)  When using it, a <strong>reference</strong> is assigned to an object (e.g. below, <code>x</code> references the object <code>4</code> in the statement <code>x = 4</code>). This is the name of the object as it is saved in your environment. But notice this is not how the object is saved in your machine</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># in your machine</span>
+<span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[2]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>4333593600</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In Python, variable names:</p>
+<ul>
+<li>can include letters, digits, and underscores</li>
+<li>cannot start with a digit</li>
+<li>are case sensitive.</li>
+</ul>
+<p><strong>Use names that make sense</strong>. This simple action will make you code much easier to read.</p>
+<p>2)  An <strong><em>objects type</em></strong> is defined at runtime (also known as <a href="https://en.wikipedia.org/wiki/Duck_typing">"duck typing"</a>). Python is a dynamically typed language, which differs from other languages where type must be made explicit (e.g. C++, Java). Type cannot be changed once an object is created (coercing an object into a different type actually creates a new object).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<pre><code># Creating object in C
+int result = 0;</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>3)  Object's class is <em>instantiated</em> upon assignment. An objects <strong><em>class</em></strong> provides a blueprint for object behavior and functionality. We use the pointer <code>.</code> to access an objects methods and attributes.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># what is the class?</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="c1"># Access methods (behaviors) using .</span>
+<span class="n">x</span><span class="o">.</span><span class="n">bit_length</span><span class="p">()</span>
+
+<span class="c1"># see all</span>
+<span class="nb">dir</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[3]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;__abs__&#39;,
+ &#39;__add__&#39;,
+ &#39;__and__&#39;,
+ &#39;__bool__&#39;,
+ &#39;__ceil__&#39;,
+ &#39;__class__&#39;,
+ &#39;__delattr__&#39;,
+ &#39;__dir__&#39;,
+ &#39;__divmod__&#39;,
+ &#39;__doc__&#39;,
+ &#39;__eq__&#39;,
+ &#39;__float__&#39;,
+ &#39;__floor__&#39;,
+ &#39;__floordiv__&#39;,
+ &#39;__format__&#39;,
+ &#39;__ge__&#39;,
+ &#39;__getattribute__&#39;,
+ &#39;__getnewargs__&#39;,
+ &#39;__getstate__&#39;,
+ &#39;__gt__&#39;,
+ &#39;__hash__&#39;,
+ &#39;__index__&#39;,
+ &#39;__init__&#39;,
+ &#39;__init_subclass__&#39;,
+ &#39;__int__&#39;,
+ &#39;__invert__&#39;,
+ &#39;__le__&#39;,
+ &#39;__lshift__&#39;,
+ &#39;__lt__&#39;,
+ &#39;__mod__&#39;,
+ &#39;__mul__&#39;,
+ &#39;__ne__&#39;,
+ &#39;__neg__&#39;,
+ &#39;__new__&#39;,
+ &#39;__or__&#39;,
+ &#39;__pos__&#39;,
+ &#39;__pow__&#39;,
+ &#39;__radd__&#39;,
+ &#39;__rand__&#39;,
+ &#39;__rdivmod__&#39;,
+ &#39;__reduce__&#39;,
+ &#39;__reduce_ex__&#39;,
+ &#39;__repr__&#39;,
+ &#39;__rfloordiv__&#39;,
+ &#39;__rlshift__&#39;,
+ &#39;__rmod__&#39;,
+ &#39;__rmul__&#39;,
+ &#39;__ror__&#39;,
+ &#39;__round__&#39;,
+ &#39;__rpow__&#39;,
+ &#39;__rrshift__&#39;,
+ &#39;__rshift__&#39;,
+ &#39;__rsub__&#39;,
+ &#39;__rtruediv__&#39;,
+ &#39;__rxor__&#39;,
+ &#39;__setattr__&#39;,
+ &#39;__sizeof__&#39;,
+ &#39;__str__&#39;,
+ &#39;__sub__&#39;,
+ &#39;__subclasshook__&#39;,
+ &#39;__truediv__&#39;,
+ &#39;__trunc__&#39;,
+ &#39;__xor__&#39;,
+ &#39;as_integer_ratio&#39;,
+ &#39;bit_count&#39;,
+ &#39;bit_length&#39;,
+ &#39;conjugate&#39;,
+ &#39;denominator&#39;,
+ &#39;from_bytes&#39;,
+ &#39;imag&#39;,
+ &#39;numerator&#39;,
+ &#39;real&#39;,
+ &#39;to_bytes&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="101-on-Python-classes-(or-the-core-of-OOP-in-Python)">101 on Python classes (or the core of OOP in Python)<a class="anchor-link" href="#101-on-Python-classes-(or-the-core-of-OOP-in-Python)">&#182;</a></h3><p>Every time we create an object, this objects inherits a class. This is what we called <strong>instantiating</strong>.</p>
+<p><strong>Classes</strong> are used to create user-defined data structures. A class is a blueprint for how something should be defined.</p>
+<p><strong>An instance</strong> is a realization of a particular class. And this instance inherits the characteristics of its class.</p>
+<p>Imagine we have a class called <code>dog()</code>, every time I use this class to create a new, concrete dog (object), I am capturing a instance, or a realization of this abstract class.</p>
+<p><strong>Classes</strong> have two major components:</p>
+<ul>
+<li><p>Attributes: these are constant features, data, a characteristic of the broader class</p>
+</li>
+<li><p>Methods: these are actions, behaviors of this class.</p>
+</li>
+</ul>
+<p>Both <em>attributes</em> and <em>methods</em> are accessed through <code>.</code> function.</p>
+<p>We will see later how to create our own classes. Most important now is for you to understand that every object in python has a class, and every realization of this class inherits both attributes and methods of the pre-defined class.</p>
+<p>Let's see a quick example here.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># create a class</span>
+<span class="k">class</span> <span class="nc">Example</span><span class="p">():</span>
+  <span class="k">def</span> <span class="fm">__init__</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+  <span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Hi, I am '</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+<span class="c1"># Instatiate</span>
+<span class="n">me</span> <span class="o">=</span> <span class="n">Example</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">"Tiago"</span><span class="p">)</span>
+
+<span class="c1"># Attributes</span>
+<span class="n">me</span><span class="o">.</span><span class="n">name</span>
+
+<span class="c1"># method</span>
+<span class="n">me</span><span class="o">.</span><span class="n">hello</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -13691,12 +13411,2229 @@ ADD EXAMPLE FROM CLASS
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[NbConvertApp] Converting notebook _version_control_git.ipynb to html
-[NbConvertApp] Writing 305265 bytes to _version_control_git.html
+<pre>Hi, I am Tiago
 </pre>
 </div>
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Here we can print out all the different methods using the <code>dir()</code> function (which provides an internal directory of all the methods contained within the class). As we can see, there is a lot going on inside this single <code>set</code> object!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">me</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[5]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;__class__&#39;,
+ &#39;__delattr__&#39;,
+ &#39;__dict__&#39;,
+ &#39;__dir__&#39;,
+ &#39;__doc__&#39;,
+ &#39;__eq__&#39;,
+ &#39;__format__&#39;,
+ &#39;__ge__&#39;,
+ &#39;__getattribute__&#39;,
+ &#39;__getstate__&#39;,
+ &#39;__gt__&#39;,
+ &#39;__hash__&#39;,
+ &#39;__init__&#39;,
+ &#39;__init_subclass__&#39;,
+ &#39;__le__&#39;,
+ &#39;__lt__&#39;,
+ &#39;__module__&#39;,
+ &#39;__ne__&#39;,
+ &#39;__new__&#39;,
+ &#39;__reduce__&#39;,
+ &#39;__reduce_ex__&#39;,
+ &#39;__repr__&#39;,
+ &#39;__setattr__&#39;,
+ &#39;__sizeof__&#39;,
+ &#39;__str__&#39;,
+ &#39;__subclasshook__&#39;,
+ &#39;__weakref__&#39;,
+ &#39;hello&#39;,
+ &#39;name&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Data-Types">Data Types<a class="anchor-link" href="#Data-Types">&#182;</a></h2><p>There are two ways of instantiating a data class in Python:</p>
+<ol>
+<li><strong>Literals</strong>: syntatic representation in Python, e.g. <code>[]</code></li>
+<li><strong>Constructors</strong>: class constructors, e.g. <code>list()</code></li>
+</ol>
+<p>Python comes with a number of built-in data types. When talking about data types, it's useful to differentiate between:</p>
+<ul>
+<li><strong><em>scalar</em></strong> types (data types that hold one piece of information, like a digit) and</li>
+<li><strong><em>collection</em></strong> types (data types that hold multiple pieces of information).</li>
+</ul>
+<p>These built-in data types are the building blocks for more complex data types, like a pandas DataFrame (which we'll cover later).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Scalars">Scalars<a class="anchor-link" href="#Scalars">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong><center>Scalar Data Types</center></strong></p>
+<table>
+<thead><tr>
+<th style="text-align:center"><em>Type</em></th>
+<th style="text-align:left"><em>Description</em></th>
+<th style="text-align:center"><em>Example</em></th>
+<th style="text-align:center"><em>Literal</em></th>
+<th style="text-align:center"><em>Constructor</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>int</code></td>
+<td style="text-align:left">integer types</td>
+<td style="text-align:center"><code>4</code></td>
+<td style="text-align:center"><code>x = 4</code></td>
+<td style="text-align:center"><code>int(4)</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>float</code></td>
+<td style="text-align:left">64-bit floating point numbers</td>
+<td style="text-align:center"><code>4.567</code></td>
+<td style="text-align:center"><code>x = 4.567</code></td>
+<td style="text-align:center"><code>float(4)</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>bool</code></td>
+<td style="text-align:left">boolean logical values</td>
+<td style="text-align:center"><code>True</code></td>
+<td style="text-align:center"><code>x = True</code></td>
+<td style="text-align:center"><code>bool(0)</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>None</code></td>
+<td style="text-align:left">null object (serves as a valuable place holder)</td>
+<td style="text-align:center"><code>None</code></td>
+<td style="text-align:center"><code>x = None</code></td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note two things from the above table:</p>
+<ol>
+<li>the literal occurs through assignment, and</li>
+<li>the constructor can be used to <strong><em>coerce</em></strong> one data type into another.</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Int"><code>Int</code><a class="anchor-link" href="#Int">&#182;</a></h3><p><code>Definition</code>: Int. Int, or integer, is a whole number, positive or negative, without decimals, of unlimited length</p>
+<p>Here we assign an integer (<code>3</code>) to the object <code>x</code> .</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># int</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">x</span>
+<span class="c1"># check type</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[6]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>int</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Float">Float<a class="anchor-link" href="#Float">&#182;</a></h3><p><code>Definition</code>: Floating point numbers are decimal values or fractional numbers</p>
+<p>Now let's coerce the integer to a float using the constructor <code>float()</code>. <code>float</code> represent real numbers with both an integer and fractional component</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># float</span>
+<span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">x</span>
+<span class="c1"># check type</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[7]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>int</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note that behavior of the object being coerced depends both on the initial class and the output class.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#int</span>
+<span class="n">x</span><span class="o">=</span><span class="mi">3</span>
+
+<span class="c1"># add a int + float = float</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mf">3.0</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[8]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>float</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Bool">Bool<a class="anchor-link" href="#Bool">&#182;</a></h4><p>Boolean objects that are equal to True are truthy (<code>True</code>), and those equal to False are falsy (<code>False</code>). Numerically, <code>int</code> values equal to zero are <code>False</code>, and larger than zero are <code>True</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># literal</span>
+<span class="n">x</span><span class="o">=</span><span class="kc">True</span>
+
+<span class="c1"># constructor</span>
+<span class="nb">bool</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[9]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Immutability">Immutability<a class="anchor-link" href="#Immutability">&#182;</a></h2><p>Finally, all scalar data types are <strong>immutable</strong>, meaning they can't be changed after assignment. When we make changes to a data type, say by coercing it to be another type as we do above, we're actually <strong><em>creating a new object</em></strong>. We can see this by looking at the object id.</p>
+<blockquote><p><code>id()</code> tells us the "identity" of an object. That shouldn't mean anything to you. Just know that when an object id is the same, it's referencing the same data in the computer. We'll explore the implications of this when we look at copying.</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[10]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>4333593600</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Here we coerce <code>x</code> to be a <code>float</code> and then look up its <code>id()</code>. As we can see, there is a new number associated with it. This means <code>x</code> is a different object after coercion.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">id</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[11]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>4583855440</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Object-types-determine-behavior">Object types determine behavior<a class="anchor-link" href="#Object-types-determine-behavior">&#182;</a></h3><p>Python knows how to behave given the methods assigned to the object when we create an instance. The methods dictate how different data types deal with similar operations (such as addition, multiplication, comparative evaluations, ect.).</p>
+<p>Using what we learned from OOP, it means that for every class, we have specific methods. These methods can have specific names -- any user-defined function -- or they can same universal names (<a href="https://www.tutorialsteacher.com/python/magic-methods-in-python">Magic or Dunder Methods</a>). See the addition example with int instances.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># create int</span>
+<span class="n">x</span><span class="o">=</span><span class="mi">4</span>
+
+<span class="c1"># add literally</span>
+<span class="n">x</span> <span class="o">+</span> <span class="mi">4</span>
+
+<span class="c1"># what is happening under the hood? </span>
+<span class="n">x</span><span class="o">.</span><span class="fm">__add__</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[12]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>8</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Every class has a self-contained <code>__add__</code> method. For this reason, the output of adding two <code>int</code> or an <code>int</code> and a <code>float</code> are different</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Collections">Collections<a class="anchor-link" href="#Collections">&#182;</a></h3><p><strong>Collection Data Types</strong></p>
+<table>
+<thead><tr>
+<th style="text-align:center"><em>Type</em></th>
+<th style="text-align:left"><em>Description</em></th>
+<th style="text-align:center"><em>Example</em></th>
+<th style="text-align:center"><em>Mutable</em></th>
+<th style="text-align:center"><em>Literal</em></th>
+<th style="text-align:center"><em>Constructor</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>list</code></td>
+<td style="text-align:left">heterogeneous sequences of objects</td>
+<td style="text-align:center"><code>[1,"2",True]</code></td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center"><code>x = ["c","a","t"]</code></td>
+<td style="text-align:center"><code>x = list("cat")</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>str</code></td>
+<td style="text-align:left">sequences of characters</td>
+<td style="text-align:center"><code>"A word"</code></td>
+<td style="text-align:center">✘</td>
+<td style="text-align:center"><code>x = "12345"</code></td>
+<td style="text-align:center"><code>x = str(12345)</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>tuples</code></td>
+<td style="text-align:left">heterogeneous sequence of objects</td>
+<td style="text-align:center"><code>(1,2)</code></td>
+<td style="text-align:center">✘</td>
+<td style="text-align:center"><code>x = (1,2)</code></td>
+<td style="text-align:center"><code>x = tuple([1,2])</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>sets</code></td>
+<td style="text-align:left">unordered collection of <em>distinct</em> objects</td>
+<td style="text-align:center"><code>{1,2}</code></td>
+<td style="text-align:center">✓</td>
+<td style="text-align:center"><code>x = {1,2}</code></td>
+<td style="text-align:center"><code>x = set([1,2])</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>dicts</code></td>
+<td style="text-align:left">associative array of key/value mappings</td>
+<td style="text-align:center"><code>{"a": 1}</code></td>
+<td style="text-align:center">keys ✘<br>values ✓</td>
+<td style="text-align:center"><code>x = {'a':1}</code></td>
+<td style="text-align:center"><code>x = dict(a = 1)</code></td>
+</tr>
+</tbody>
+</table>
+<p>Each built-in collection data type in Python is distinct in important ways. Recall that an object's class defines how the object behaves with operators and its methods. I'll explore some of the differences in behavior for each class type so we can see what this means in practice</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Mutable-vs.-Immutable">Mutable vs. Immutable<a class="anchor-link" href="#Mutable-vs.-Immutable">&#182;</a></h4><p><br></p>
+<p>Note the column referring to <strong>Mutable</strong> and <strong>Immutable</strong> collection types. Simply put, mutable objects can be changed after it is created, immutable objects cannot be changed. <em>All the scalar data types are immutable</em>. Even when we coerced objects into a different class, we aren't changing the existing object, we are creating a new one.</p>
+<p>Some collection types, however, allow us to edit the data values contained within without needing to create a new object. This can allow us to effectively use the computer's memory. It can also create some problems down the line if we aren't careful (see the tab on copies).</p>
+<p>In practice, <strong><em>mutability means we can alter values in the collection on the fly</em></strong>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"sarah"</span><span class="p">,</span><span class="s2">"susan"</span><span class="p">,</span><span class="s2">"ralph"</span><span class="p">,</span><span class="s2">"eddie"</span><span class="p">]</span>
+<span class="nb">id</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[13]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>4584370304</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"josh"</span>
+<span class="n">my_list</span>
+<span class="nb">id</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span> <span class="c1"># Still the same object, even though we changed something in it</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[14]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>4584370304</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Immutability</strong>, on the other hand, means that we <strong><em>cannot alter values after the object is created</em></strong>. Python will throw an error at us if we try.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_tuple</span> <span class="o">=</span><span class="p">(</span><span class="s2">"sarah"</span><span class="p">,</span><span class="s2">"susan"</span><span class="p">,</span><span class="s2">"ralph"</span><span class="p">,</span><span class="s2">"eddie"</span><span class="p">)</span>
+<span class="n">my_tuple</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"josh"</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[15], line 2</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> my_tuple <span style="color: rgb(98,98,98)">=</span>(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">sarah</span><span style="color: rgb(175,0,0)">&#34;</span>,<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">susan</span><span style="color: rgb(175,0,0)">&#34;</span>,<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">ralph</span><span style="color: rgb(175,0,0)">&#34;</span>,<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">eddie</span><span style="color: rgb(175,0,0)">&#34;</span>)
+<span class="ansi-green-fg">----&gt; 2</span> my_tuple[<span style="color: rgb(98,98,98)">1</span>] <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">josh</span><span style="color: rgb(175,0,0)">&#34;</span>
+
+<span class="ansi-red-fg">TypeError</span>: &#39;tuple&#39; object does not support item assignment</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="list"><code>list</code><a class="anchor-link" href="#list">&#182;</a></h4><p><strong>Lists</strong> allow for <em>heterogeneous</em> membership in the various object types. This means one can hold many different data types (even other collection types!). In a list, one can change items contained within the object after creating the instance.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mf">2.2</span><span class="p">,</span> <span class="s2">"str"</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> 
+<span class="n">x</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[16]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[1, 2.2, &#39;str&#39;, True, None]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A list constructor takes in an <strong><em>iterable object</em></strong> as input. (We'll delve more into what makes an object iterable when covering loops, but the key is that the object must have an <code>.__iter__()</code> method.)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="s2">"This"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[17]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;T&#39;, &#39;h&#39;, &#39;i&#39;, &#39;s&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>At it's core, a list is a bucket for collecting different types of information. This makes it useful for collecting data items when one needs to store them. For example, we can store multiple container types in a list.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="c1"># Tuple</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"a"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">"b"</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span> <span class="c1"># Dictionary</span>
+<span class="n">c</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span> <span class="c1"># List</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Combine these different container objects into a single list</span>
+<span class="n">together</span> <span class="o">=</span> <span class="p">[</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">]</span> 
+<span class="n">together</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[22]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[(1, 2, 3, 4), {&#39;a&#39;: 1, &#39;b&#39;: 2}, [1, 2, 3, 4]]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A <code>list</code> class has a range of specific <em>methods</em> geared toward querying, counting, sorting, and adding/removing elements in the container. <a href="https://www.w3schools.com/python/python_ref_list.asp"><strong>For a list of all the <code>list</code> methods, see here.</strong></a></p>
+<p>Let's explore some of the common methods used.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>country_list = ["Russia","Latvia","United States","Nigeria","Mexico","India","Costa Rica"]</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Inserting values</strong></p>
+<p><em>Option 1</em>: use the <code>.append()</code> method.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">country_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"Germany"</span><span class="p">)</span>
+<span class="n">country_list</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[23], line 1</span>
+<span class="ansi-green-fg">----&gt; 1</span> country_list<span style="color: rgb(98,98,98)">.</span>append(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">Germany</span><span style="color: rgb(175,0,0)">&#34;</span>)
+<span class="ansi-green-intense-fg ansi-bold">      2</span> country_list
+
+<span class="ansi-red-fg">NameError</span>: name &#39;country_list&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><em>Option 2</em>: use the <code>+</code> (add) operator.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>country_list = country_list + ['Canada']
+country_list</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><p><strong>Addition means "append"?</strong>: Recall that an objects class dictates how it behaves in place of different operators. A <code>list</code> object has a <code>.__add__()</code> method built into it that provides instructions for what the object should do when it encounters <code>+</code> operator. Likewise, when it encounters a <code>*</code> multiplication operator and so on. This is why it's so important to know the class that you're using. Different object classes == different behavior.</p>
+</blockquote>
+<p>You can also combine list through the reference names</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">more_countries</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Brazil"</span><span class="p">,</span> <span class="s2">"Argentina"</span><span class="p">]</span>
+<span class="n">country_list</span> <span class="o">+</span> <span class="n">more_countries</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[21], line 2</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> more_countries <span style="color: rgb(98,98,98)">=</span> [<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">Brazil</span><span style="color: rgb(175,0,0)">&#34;</span>, <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">Argentina</span><span style="color: rgb(175,0,0)">&#34;</span>]
+<span class="ansi-green-fg">----&gt; 2</span> country_list <span style="color: rgb(98,98,98)">+</span> more_countries
+
+<span class="ansi-red-fg">NameError</span>: name &#39;country_list&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Deleting values</strong></p>
+<p><em>Option 1</em>: use the <code>del</code> operator + index.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Drop Latvia</span>
+<span class="k">del</span> <span class="n">country_list</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">country_list</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><em>Option 2</em>: use the <code>.remove()</code> method</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">country_list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">"Nigeria"</span><span class="p">)</span>
+<span class="n">country_list</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Sorting values</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">country_list</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="n">country_list</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="str"><code>str</code><a class="anchor-link" href="#str">&#182;</a></h4><p><strong><em>Strings are containers too</em></strong>. String elements can be accessed using an index, much like objects in a list (See the tab on indices and keys).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">"This is a string"</span>
+<span class="n">s</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The literal for a string is quotations: <code>''</code> or <code>""</code>. When layering quotations, one needs to opt for the quotation type different than the one used to instantiate the string object.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">'This is a "string"'</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">"This is a 'string'"</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A <strong>Multiline string</strong> can be created using three sets of quotations. This is useful when writing documentation for a function.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s2</span> <span class="o">=</span> <span class="s1">'''</span>
+<span class="s1">This is a long string!</span>
+<span class="s1">    </span>
+<span class="s1">    With many lines</span>
+<span class="s1">    </span>
+<span class="s1">    Many. Lines.</span>
+<span class="s1">print(s2)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>String are quite versatile in Python! In fact, many of the manipulations that we like to perform on strings, such as splitting text up (also known as "tokenizing"), cleaning out punctuation and characters we don't care for, and changing the case (to name a few) are <strong><em>built into the string class method</em></strong>.</p>
+<p>For example, say we wanted to convert a string to upper case.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">str1</span> <span class="o">=</span> <span class="s2">"the professor is here!"</span>
+<span class="n">str1</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Or remove words.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">str1</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"professor"</span><span class="p">,</span><span class="s2">"student"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This is just a taste. The best way to learn what we can do with a string is to use it. We'll deal with strings all the time when dealing with public policy data. So keep in mind that the <code>str</code> data type is a powerful tool in Python. <a href="https://www.w3schools.com/python/python_ref_string.asp"><strong>For a list of all the <code>str</code> methods, see here.</strong></a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="tuple"><code>tuple</code><a class="anchor-link" href="#tuple">&#182;</a></h4><p>Like a <code>list</code>, a <code>tuple</code> allows for <em>heterogeneous</em> membership among the various scalar data types.</p>
+<p>However, unlike a <code>list</code>, a <code>tuple</code> is immutable, meaning you cannot change the object after creating it.</p>
+<p>The <strong>literal</strong> for a <code>tuple</code> is the parentheses <code>()</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s2">"a"</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">my_tuple</span>
+ 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The constructor is <code>tuple()</code>. Like the <code>list</code> constructor, <code>tuple()</code> an <strong><em>iterable object</em></strong> (like a <code>list</code>) as an input.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_tuple</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="s2">"a"</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="kc">True</span><span class="p">])</span>
+<span class="n">my_tuple</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Tuples are valuable if you want a data value to be fixed, such as if it were an index on a data frame, denoting a unit of analysis, or key on a dictionary. Tuples pop up all the time in the wild when dealing with more complex data modules, like Pandas. So we'll see them again and again.</p>
+<p>One nice thing that tuples allow for is <strong><em>unpacking</em></strong>. Unpacking allows one to deconstruct the <code>tuple</code> object into named references (i.e. assign the values in the <code>tuple</code> to their own objects). This allows for flexibility regarding which objects we want when performing sequential operations, like iterating.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Unpacking</span>
+<span class="n">my_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="s2">"A"</span><span class="p">,</span><span class="s2">"B"</span><span class="p">,</span><span class="s2">"C"</span><span class="p">)</span>
+<span class="c1"># Here we're unpacking the three values into their own objects</span>
+<span class="n">obj1</span><span class="p">,</span> <span class="n">obj2</span><span class="p">,</span> <span class="n">obj3</span> <span class="o">=</span> <span class="n">my_tuple</span> 
+
+<span class="c1"># Now let's print each object</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">obj1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">obj2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">obj3</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Also, like a <code>list</code>, a <code>tuple</code> can store different collection data types as well as the scalar types. For example, we can store multiple container types in a <code>tuple</code>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="c1"># Tuple</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"a"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">"b"</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span> <span class="c1"># Dictionary</span>
+<span class="n">c</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span> <span class="c1"># List</span>
+
+<span class="c1"># Combine these different container objects into a single tuple</span>
+<span class="n">together</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+<span class="n">together</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://www.w3schools.com/python/python_ref_tuple.asp"><strong>For a list of all the <code>tuple</code> methods, see here.</strong></a></p>
+<h4 id="set"><code>set</code><a class="anchor-link" href="#set">&#182;</a></h4><p>A <code>set</code> is an unordered collection of unique elements (this just means there can be no duplicates). <code>set</code> is a mutable data type (elements can be added and removed). Moreover, the <code>set</code> methods allow for set algebra. This will come in handy if we want to know something about unique values and membership.</p>
+<p>The <strong>literal</strong> for <code>set</code> is the brackets <code>{}</code>.<sup class="footnote-ref" id="fnref-1"><a href="#fn-1">1</a></sup></p>
+<div class="footnotes">
+<hr>
+<ol><li id="fn-1"><p>Note that this is very similar to the literal for a <code>dict</code>ionary but in that data structure we define a key/value pair (see the <code>dict</code> tab)<a href="#fnref-1" class="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_set</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">}</span>
+<span class="n">my_set</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The <strong>constructor</strong> is <code>set()</code>. As before, it takes an iterable object as an input.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_set1</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+<span class="n">new_set1</span>
+
+<span class="n">new_set2</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="s2">"Georgetown"</span><span class="p">)</span>
+<span class="n">new_set2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In the above, we can see that order isn't a thing for a <code>set</code>.</p>
+<p>We can add elemets to a <code>set</code> using the <code>.add()</code> or <code>.update()</code> methods.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_set</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">my_set</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_set</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="mi">8</span><span class="p">})</span>
+<span class="n">my_set</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Where a <code>set</code> really shines is with the set operations. Say we had a set of country names.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">countries</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"nigeria"</span><span class="p">,</span><span class="s2">"russia"</span><span class="p">,</span><span class="s2">"united states"</span><span class="p">,</span><span class="s2">"canada"</span><span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>And we wanted to see which countries from our set were in another set (say another data set). Not a problem for a set!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">other_data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"nigeria"</span><span class="p">,</span><span class="s2">"netherlands"</span><span class="p">,</span><span class="s2">"united kingdom"</span><span class="p">,</span><span class="s2">"canada"</span><span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Which countries are in both sets?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">countries</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">other_data</span><span class="p">)</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Which countries are in our data but not in the other data?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">countries</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">other_data</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note that <strong><em>values in a set cannot be accessed using an index</em></strong>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_set</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Rather we either <code>.pop()</code> values out of the <code>set.</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_set</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+ 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Or we can <code>.remove()</code> specific values from the <code>set.</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_set</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">my_set</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Finally, note that <strong>sets can contain heterogeneous scalar types, but they cannot contain other <em>mutable</em> container data types</strong>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">set_a</span> <span class="o">=</span> <span class="p">{</span><span class="mf">.5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="s2">"a"</span><span class="p">,</span><span class="kc">None</span><span class="p">}</span>
+<span class="n">set_a</span>
+ 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In <code>set_b</code>, the <code>list</code> object is mutable.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">set_b</span> <span class="o">=</span> <span class="p">{</span><span class="mf">.5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="s2">"a"</span><span class="p">,</span><span class="kc">None</span><span class="p">,[</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>All this is barely scratching the surface of what we can do with sets. <a href="https://www.w3schools.com/python/python_ref_set.asp"><strong>For a list of all the <code>set</code> methods, see here.</strong></a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="dict"><code>dict</code><a class="anchor-link" href="#dict">&#182;</a></h4><p>A dictionary is the true star of the Python data types. <code>dict</code> is an associative array of key-value pairs. That means, we have some data (value) that we can quickly reference by calling its name (key). As we'll see next week, this allows for a very efficient way to look data values, especially when the dictionary is quite large.</p>
+<p>There is no intrinsic ordering to the keys, and keys can't be changed once created (that is, the keys are immutable), but the values can be changed (assuming that the data type occupying the value spot is mutable, like a <code>list</code>). Finally, keys cannot be duplicated. Recall we're going to use the keys to look up data values, so if those keys were the same, it would defeat purpose!</p>
+<p>The <strong>literal</strong> for a <code>dict</code> is <code>{:}</code> as in <code>{&lt;key&gt;:&lt;value&gt;}</code>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'a'</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span> <span class="s1">'c'</span><span class="p">:</span> <span class="mf">9.2</span><span class="p">}</span>
+<span class="n">my_dict</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The <strong>constructor</strong> is <code>dict()</code>. Note the special way we can designate the key value pairing when using the constructor.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">a</span> <span class="o">=</span> <span class="mf">4.23</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mf">6.6</span><span class="p">)</span>
+<span class="n">my_dict</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The <code>dict</code> class has a number of methods geared toward listing the information contained within. To access the <code>dict</code>'s keys, use the <code>.keys()</code> method.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Just want the values? Use <code>.values()</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_dict</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Want both? Use <code>.items()</code>. Note how the data comes back to us --- as <code>tuple</code>s nested in a <code>list</code>! This just goes to show you how intertwined the different data types are in Python.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_dict</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can combine dictionary with other data types (such as a list) to make an efficient and effective data structure.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">grades</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"John"</span><span class="p">:</span> <span class="p">[</span><span class="mi">90</span><span class="p">,</span><span class="mi">88</span><span class="p">,</span><span class="mi">95</span><span class="p">,</span><span class="mi">86</span><span class="p">],</span><span class="s2">"Susan"</span><span class="p">:[</span><span class="mi">87</span><span class="p">,</span><span class="mi">91</span><span class="p">,</span><span class="mi">92</span><span class="p">,</span><span class="mi">89</span><span class="p">],</span><span class="s2">"Chad"</span><span class="p">:[</span><span class="mi">56</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="mi">72</span><span class="p">,</span><span class="mi">77</span><span class="p">]}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can use the keys for efficient look up.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">grades</span><span class="p">[</span><span class="s2">"John"</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can also use the <code>.get()</code> method to get the values that correspond to a specific key.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">grades</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"Susan"</span><span class="p">)</span>
+ 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Updating Dictionaries</strong></p>
+<p>We can add new dictionary data entries using the <code>.update()</code> method.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_entry</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"Wendy"</span><span class="p">:[</span><span class="mi">99</span><span class="p">,</span><span class="mi">98</span><span class="p">,</span><span class="mi">97</span><span class="p">,</span><span class="mi">94</span><span class="p">]}</span> <span class="c1"># Another student dictionary entry with grades</span>
+<span class="n">grades</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">new_entry</span><span class="p">)</span> <span class="c1"># Update the current dictionary </span>
+<span class="n">grades</span>
+ 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In a similar fashion, we can update the dictionary directly by providing a new key entry and storing the data.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">grades</span><span class="p">[</span><span class="s2">"Seth"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">66</span><span class="p">,</span><span class="mi">72</span><span class="p">,</span><span class="mi">79</span><span class="p">,</span><span class="mi">81</span><span class="p">]</span>
+<span class="n">grades</span>
+ 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>One can also <strong>drop</strong> keys by <code>.pop()</code>ing the key value pair out of the collection...</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">grades</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">"Seth"</span><span class="p">)</span>
+ 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>...or deleting the key using the <code>del</code> operator.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">del</span> <span class="n">grades</span><span class="p">[</span><span class="s1">'Wendy'</span><span class="p">]</span>
+<span class="n">grades</span>
+ 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Likewise, one can drop values by:</p>
+<ul>
+<li>overwriting the original data stored in the key</li>
+<li>dropping the key (and thus deleting the data value)</li>
+<li>clearing the dictionary (and deleting <em>all</em> the data values stored within. )</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Example of using .clear()</span>
+<span class="n">grades</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="n">grades</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This is barely scratching the surface. <a href="https://www.w3schools.com/python/python_ref_dictionary.asp"><strong>For a list of all the <code>dict</code> methods and all the things you can do with a dictionary, see here.</strong></a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Indices-&amp;-Keys">Indices &amp; Keys<a class="anchor-link" href="#Indices-&amp;-Keys">&#182;</a></h2><p>Learning how to access the data types is a foundation of your fluency as a data scientist.</p>
+<p>As you transition across different languages, keep track of accessing methods across different data types is actually quite challenging. You will definitely find yourself searching online many times for this. The important issue here is make an effort to understand general rules for acessing elements across languages and data types</p>
+<h4 id="Indices">Indices<a class="anchor-link" href="#Indices">&#182;</a></h4><p>A first way to access elements in collectors is through their index position.</p>
+<blockquote><p>different from R, <strong>Python objects start its index at zero</strong></p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Define a list </span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mf">2.2</span><span class="p">,</span> <span class="s2">"str"</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># first element in python</span>
+<span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># can see how many values are in our container with len()</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Can look up individual data values by referencing its location</span>
+<span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Python throws an error if we reference an index location that doesn't exist</span>
+<span class="n">x</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># We use a negative index to count BACKWARDS in our collection data type.</span>
+<span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+ 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This way to access data using index position is going to be very standard across a range of data type.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># tuples</span>
+<span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">"no"</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># first element</span>
+<span class="n">tup</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Last element</span>
+<span class="n">tup</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Slicing">Slicing<a class="anchor-link" href="#Slicing">&#182;</a></h3><p>We use the : operator to slice (i.e. select ranges of values). This works using the numerical indices we juat learned. Slicing in a nutshell goes like this <start-here>:<go-until-right-before-here></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># To pull out values in position 1 and 2</span>
+<span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># When we leave left or right side blank, Python implicitly goes to the beginning or end</span>
+<span class="n">x</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Using-keys-in-dictionaries">Using keys in dictionaries<a class="anchor-link" href="#Using-keys-in-dictionaries">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Define a dictionary</span>
+<span class="n">grades</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"John"</span><span class="p">:[</span><span class="mi">90</span><span class="p">,</span><span class="mi">88</span><span class="p">,</span><span class="mi">95</span><span class="p">,</span><span class="mi">86</span><span class="p">],</span><span class="s2">"Susan"</span><span class="p">:[</span><span class="mi">87</span><span class="p">,</span><span class="mi">91</span><span class="p">,</span><span class="mi">92</span><span class="p">,</span><span class="mi">89</span><span class="p">],</span><span class="s2">"Chad"</span><span class="p">:[</span><span class="mi">56</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="mi">72</span><span class="p">,</span><span class="mi">77</span><span class="p">]}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Unlike lists/tuples/sets, we use a key to look up a value in a dictionary</span>
+<span class="n">grades</span><span class="p">[</span><span class="s2">"John"</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># We can then index in the data structure housed in that key's value position</span>
+<span class="c1"># as is appropriate for that data object</span>
+<span class="n">grades</span><span class="p">[</span><span class="s2">"John"</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Copies">Copies<a class="anchor-link" href="#Copies">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Copies with mutable objects -----------------------</span>
+<span class="c1"># Create a list object</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"a"</span><span class="p">,</span><span class="s2">"b"</span><span class="p">,</span><span class="s2">"c"</span><span class="p">,</span><span class="s2">"d"</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Dual assignment: when objects reference the same data.</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">y</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> 
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># If we make a change in one</span>
+<span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"goat"</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># That change is reflected in the other</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Because these aren't independent objects</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># We can get around this issue by making **copies**</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="c1"># Here y is a copy of x.</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This duplicates the data in memory, so that y and x are independent.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Three-ways-to-make-a-copy:">Three ways to make a copy:<a class="anchor-link" href="#Three-ways-to-make-a-copy:">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># (1) Use copy method</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># (2) Use constructor</span>
+<span class="n">y</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># (3) Slice it</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="p">[:]</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 

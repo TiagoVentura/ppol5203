@@ -1,0 +1,1003 @@
+---
+title: "Week 3: Intro to Python - OOP, Data Types, and Collectors"
+execute: 
+  error: true
+format:
+  html:
+    code-tools: true
+---
+
+# Learning Objectives
+
+We will start this class with a broader overview of what **Object-Oriented Programming** means. This might sound a bit generic, but it is a super important concept for you to grasp and build a more general understanding of Python.
+
+After that, we will go more into a classic introduction to Python, with a focus on Data Types and Data Collections
+
+-   Get some intuition behind **objects** in Python
+-   Explore the different built-in **data types**.
+-   Examine how to look up values in collection data type using an **index** and/or **key**
+-   Learn about the issues that can arise when **copying mutable objects** and how to resolve them.
+
+After that, we will go over some concepts that are very general over any programming language:
+
+-   Explore iterating through containers using **loops**
+-   Using **logical operators** for comparisons.
+-   Control the behavior of code when iterating using **control statements**.
+-   Defining **functions** to make code more flexible, debuggable, and readable.
+
+## Notion of Object-Oriented Programming
+
+Python is an [object-oriented programming language](https://en.wikipedia.org/wiki/Object-oriented_programming) (OOP) where the object plays a more fundamental role for how we structure a program. Specifically, OOP allows one to bundle properties and behavior into individual objects. In Python, objects can hold both the data and the methods used to manipulate that data.
+
+As you are progressing in the DSPP, you are also being introduced to R. R, one the other hand, is a functional programming language where functions are objects and data is manipulated using functions.
+
+At first glance, the distinction is subtle, but the way we build programs in R and Python differs considerably. In practice, the OOP vs. Functional distinction changes how one engages with objects instantiated in the environment. In Python, methods (functions) are self-contained in the object; whereas in R functions are external to the object. In other words, while much of the work in R consists on writing functions that are stores outside of classes/objects, in Python, you can borrow from general classes, inherit their methods/functions, or just add new functionalities to objects created by others.
+
+**At the core of OOP are the objects. They are also important in R, but not as flexible as in Python**
+
+### Creating object in Python
+
+`=` is the **assignment** operator in Python. Different from R, in which there are multiple assignment operators, in Python, you only have **the** (`=`) assignment operator
+
+```{python}
+x = 4
+```
+
+This simple act of creating an object in Python comprise three different, and interesting actions.
+
+1)  When using it, a **reference** is assigned to an object (e.g. below, `x` references the object `4` in the statement `x = 4`). This is the name of the object as it is saved in your environment. But notice this is not how the object is saved in your machine
+
+```{python}
+# in your machine
+id(x)
+
+```
+
+In Python, variable names:
+
+-   can include letters, digits, and underscores
+-   cannot start with a digit
+-   are case sensitive.
+
+**Use names that make sense**. This simple action will make you code much easier to read.
+
+2)  An ***objects type*** is defined at runtime (also known as ["duck typing"](https://en.wikipedia.org/wiki/Duck_typing)). Python is a dynamically typed language, which differs from other languages where type must be made explicit (e.g. C++, Java). Type cannot be changed once an object is created (coercing an object into a different type actually creates a new object).
+
+```{python}
+#| eval: false
+
+# Creating object in C
+int result = 0;
+```
+
+3)  Objects are *instantiated* upon assignment. An objects ***class*** provides a blueprint for object behavior and functionality. We use the pointer `.` to access an objects methods and attributes.
+
+```{python}
+# what is the class?
+type(x)
+
+# Access methods (behaviors) using .
+x.bit_length()
+
+# see all
+dir(x)
+```
+
+#### 101 on Python classes (or thr core of OOP in Python)
+
+Every time we create an object, this objects inherits a class. This is what we called **instantiating**.
+
+**Classes** are used to create user-defined data structures. A class is a blueprint for how something should be defined. It doesn't actually contain any data. The Dog class specifies that a name and an age are necessary for defining a dog, but it doesn't contain the name or age of any specific dog.
+
+An instance is a realization of a particular class. And this instance inherits the characteristics of its class. Imagine we have a class called `dog()`, every time I use this class to create a new, concrete dog (object), I am capturing a instance, or a realization of this abstract class.
+
+**Classes** have two major components:
+
+-   Attributes: these are constant features, data, a characteristic of the broader class
+
+-   Methods: these are actions, behaviors of this class.
+
+Both *attributes* and *methods* are accessed through `.` function. But
+
+We will see later how to create our own classes. Most important now is for you to understand that every object in python has a class, and every realization of this class inherits both attributes and methods.
+
+Let's see a quick example here.
+
+```{python}
+# create a class
+class Example():
+  def __init__ (self, name):
+    self.name = name
+  def hello(self):
+    print('Hi, I am ' + self.name)
+
+# Instatiate
+me = Example(name="Tiago")
+
+# Attributes
+me.name
+
+# method
+me.hello()
+```
+
+Here we can print out all the different methods using the `dir()` function (which provides an internal directory of all the methods contained within the class). As we can see, there is a lot going on inside this single `set` object!
+
+```{python}
+dir(me)
+```
+
+## Data Types
+
+There are two ways of instantiating a data class in Python:
+
+1.  **Literals**: syntatic representation in Python, e.g. `[]`
+2.  **Constructors**: class constructors, e.g. `list()`
+
+Python comes with a number of built-in data types. When talking about data types, it's useful to differentiate between:
+
+-   ***scalar*** types (data types that hold one piece of information, like a digit) and
+-   ***collection*** types (data types that hold multiple pieces of information).
+
+These built-in data types are the building blocks for more complex data types, like a pandas DataFrame (which we'll cover later).
+
+### Scalars
+
+<center>**Scalar Data Types**</center>
+
+| *Type*  | *Description*                                   | *Example* |  *Literal*  | *Constructor* |
+|:---------:|:---------------------------|:---------:|:---------:|:---------:|
+|  `int`  | integer types                                   |    `4`    |   `x = 4`   |   `int(4)`    |
+| `float` | 64-bit floating point numbers                   |  `4.567`  | `x = 4.567` |  `float(4)`   |
+| `bool`  | boolean logical values                          |  `True`   | `x = True`  |   `bool(0)`   |
+| `None`  | null object (serves as a valuable place holder) |  `None`   | `x = None`  |               |
+
+<br>
+
+Note two things from the above table:
+
+1.  the literal occurs through assignment, and
+2.  the constructor can be used to ***coerce*** one data type into another.
+
+#### Int
+
+Here we assign an integer (`3`) to the object `x` .
+
+```{python}
+# int
+x = 3
+x
+type(x)
+```
+
+#### Float
+
+Now let's coerce the integer to a float using the constructor `float()`. `float` represent real numbers with both an integer and fractional component
+
+```{python}
+# float
+float(x)
+x
+```
+
+Note that behavior of the object being coerced depends both on the initial class and the output class.
+
+```{python}
+#int
+x=3
+
+# add a int + float = float
+type(x+3.0)
+```
+
+#### Bool
+
+Boolean objects that are equal to True are truthy (`True`), and those equal to False are falsy (`False`). Numerically, `int` values equal to zero are `False`, and larger than zero are `True`
+
+```{python}
+# literal
+x=True
+
+#constructor
+bool(0)
+```
+
+#### Immutability
+
+Finally, all scalar data types are **immutable**, meaning they can't be changed after assignment. When we make changes to a data type, say by coercing it to be another type as we do above, we're actually ***creating a new object***. We can see this by looking at the object id.
+
+> `id()` tells us the "identity" of an object. That shouldn't mean anything to you. Just know that when an object id is the same, it's referencing the same data in the computer. We'll explore the implications of this when we look at copying.
+
+```{python}
+x = 4
+id(x) 
+```
+
+Here we coerce `x` to be a `float` and then look up its `id()`. As we can see, there is a new number associated with it. This means `x` is a different object after coercion.
+
+```{python}
+id(float(x))
+```
+
+#### Object types determine behavior
+
+Python knows how to behave given the methods assigned to the object when we create an instance. The methods dictate how different data types deal with similar operations (such as addition, multiplication, comparative evaluations, ect.).
+
+Using what we learned from OOP, it means that for every class, we have specific methods. These methods can have specific names -- any user-defined function -- or they can same universal names ([Magic or Dunder Methods](https://www.tutorialsteacher.com/python/magic-methods-in-python)). See the addition example with int instances.
+
+```{python}
+# create int
+x=4
+
+# add literally
+x + 4
+
+# what is happening under the hood? 
+x.__add__(4)
+```
+
+Every class has a self-contained `__add__` methods. For this reason, the output of adding two `int` or an `int` and a `float` are different
+
+### Collections
+
+**Collection Data Types**
+
+|  *Type*  | *Description*                              |   *Example*    |     *Mutable*      |      *Literal*      |   *Constructor*    |
+|:---------:|:----------------|:---------:|:---------:|:---------:|:---------:|
+|  `list`  | heterogeneous sequences of objects         | `[1,"2",True]` |         ✓          | `x = ["c","a","t"]` | `x = list("cat")`  |
+|  `str`   | sequences of characters                    |   `"A word"`   |         ✘          |    `x = "12345"`    |  `x = str(12345)`  |
+| `tuples` | heterogeneous sequence of objects          |    `(1,2)`     |         ✘          |     `x = (1,2)`     | `x = tuple([1,2])` |
+|  `sets`  | unordered collection of *distinct* objects |    `{1,2}`     |         ✓          |     `x = {1,2}`     |  `x = set([1,2])`  |
+| `dicts`  | associative array of key/value mappings    |   `{"a": 1}`   | keys ✘<br>values ✓ |    `x = {'a':1}`    | `x = dict(a = 1)`  |
+
+Each built-in collection data type in Python is distinct in important ways. Recall that an object's class defines how the object behaves with operators and its methods. I'll explore some of the differences in behavior for each class type so we can see what this means in practice
+
+#### Mutable vs. Immutable
+
+<br>
+
+Note the column referring to **Mutable** and **Immutable** collection types. Simply put, mutable objects can be changed after it is created, immutable objects cannot be changed. *All the scalar data types are immutable*. Even when we coerced objects into a different class, we aren't changing the existing object, we are creating a new one.
+
+Some collection types, however, allow us to edit the data values contained within without needing to create a new object. This can allow us to effectively use the computer's memory. It can also create some problems down the line if we aren't careful (see the tab on copies).
+
+In practice, ***mutability means we can alter values in the collection on the fly***.
+
+```{python}
+my_list = ["sarah","susan","ralph","eddie"]
+id(my_list)
+```
+
+```{python}
+my_list[1] = "josh"
+my_list
+id(my_list) # Still the same object, even though we changed something in it
+```
+
+**Immutability**, on the other hand, means that we ***cannot alter values after the object is created***. Python will throw an error at us if we try.
+
+```{python}
+my_tuple =("sarah","susan","ralph","eddie")
+my_tuple[1] = "josh"
+```
+
+#### `list`
+
+**Lists** allow for *heterogeneous* membership in the various object types. This means one can hold many different data types (even other collection types!). In a list, one can change items contained within the object after creating the instance.
+
+```{python}
+x = [1, 2.2, "str", True, None] 
+x
+```
+
+A list constructor takes in an ***iterable object*** as input. (We'll delve more into what makes an object iterable when covering loops, but the key is that the object must have an `.__iter__()` method.)
+
+```{python}
+list("This")
+```
+
+At it's core, a list is a bucket for collecting different types of information. This makes it useful for collecting data items when one needs to store them. For example, we can store multiple container types in a list.
+
+```{python}
+a = (1,2,3,4) # Tuple
+b = {"a":1,"b":2} # Dictionary
+c = [1,2,3,4] # List
+
+together = [a,b,c] # Combine these different container objects into a single list
+together
+```
+
+A `list` class has a range of specific *methods* geared toward querying, counting, sorting, and adding/removing elements in the container. [**For a list of all the `list` methods, see here.**](https://www.w3schools.com/python/python_ref_list.asp)
+
+Let's explore some of the common methods used.
+
+```{python}
+country_list = ["Russia","Latvia","United States","Nigeria","Mexico","India","Costa Rica"]
+```
+
+**Inserting values**
+
+*Option 1*: use the `.append()` method.
+
+```{python}
+country_list.append("Germany")
+country_list
+```
+
+*Option 2*: use the `+` (add) operator.
+
+```{python}
+country_list = country_list + ['Canada']
+country_list
+```
+
+> **Addition means "append"?**: Recall that an objects class dictates how it behaves in place of different operators. A `list` object has a `.__add__()` method built into it that provides instructions for what the object should do when it encounters `+` operator. Likewise, when it encounters a `*` multiplication operator and so on. This is why it's so important to know the class that you're using. Different object classes == different behavior.
+
+You can also combine list through the reference names
+
+```{python}
+more_countries = ["Brazil", "Argentina"]
+country_list + more_countries
+
+```
+
+**Deleting values**
+
+*Option 1*: use the `del` operator + index.
+
+```{python}
+# Drop Latvia
+del country_list[1]
+country_list
+```
+
+*Option 2*: use the `.remove()` method
+
+```{python}
+country_list.remove("Nigeria")
+country_list
+```
+
+**Sorting values**
+
+```{python}
+country_list.sort()
+country_list
+```
+
+#### `str`
+
+***Strings are containers too***. String elements can be accessed using an index, much like objects in a list (See the tab on indices and keys).
+
+```{python}
+s = "This is a string"
+s[:4]
+```
+
+The literal for a string is quotations: `''` or `""`. When layering quotations, one needs to opt for the quotation type different than the one used to instantiate the string object.
+
+```{python}
+s = 'This is a "string"'
+print(s)
+
+s = "This is a 'string'"
+print(s)
+```
+
+A **Multiline string** can be created using three sets of quotations. This is useful when writing documentation for a function.
+
+```{python}
+s2 = '''
+This is a long string!
+    
+    With many lines
+    
+    Many. Lines.
+'''
+print(s2)
+```
+
+String are quite versatile in Python! In fact, many of the manipulations that we like to perform on strings, such as splitting text up (also known as "tokenizing"), cleaning out punctuation and characters we don't care for, and changing the case (to name a few) are ***built into the string class method***.
+
+For example, say we wanted to convert a string to upper case.
+
+```{python}
+str1 = "the professor is here!"
+str1.upper()
+```
+
+Or remove words.
+
+```{python}
+str1.replace("professor","student")
+```
+
+This is just a taste. The best way to learn what we can do with a string is to use it. We'll deal with strings all the time when dealing with public policy data. So keep in mind that the `str` data type is a powerful tool in Python. [**For a list of all the `str` methods, see here.**](https://www.w3schools.com/python/python_ref_string.asp)
+
+#### `tuple`
+
+Like a `list`, a `tuple` allows for *heterogeneous* membership among the various scalar data types. However, unlike a `list`, a `tuple` is immutable, meaning you cannot change the object after creating it.
+
+The **literal** for a `tuple` is the parentheses `()`
+
+```{python}
+my_tuple = (1,"a",1.2,True)
+my_tuple
+```
+
+The constructor is `tuple()`. Like the `list` constructor, `tuple()` an ***iterable object*** (like a `list`) as an input.
+
+```{python}
+my_tuple = tuple([1,"a",1.2,True])
+my_tuple
+```
+
+Tuples are valuable if you want a data value to be fixed, such as if it were an index on a data frame, denoting a unit of analysis, or key on a dictionary. Tuples pop up all the time in the wild when dealing with more complex data modules, like Pandas. So we'll see them again and again.
+
+One nice thing that tuples allow for is ***unpacking***. Unpacking allows one to deconstruct the `tuple` object into named references (i.e. assign the values in the `tuple` to their own objects). This allows for flexibility regarding which objects we want when performing sequential operations, like iterating.
+
+```{python}
+my_tuple = ("A","B","C")
+
+# Here we're unpacking the three values into their own objects
+obj1, obj2, obj3 = my_tuple 
+
+# Now let's print each object
+print(obj1)
+print(obj2)
+print(obj3)
+```
+
+Also, like a `list`, a `tuple` can store different collection data types as well as the scalar types. For example, we can store multiple container types in a `tuple`.
+
+```{python}
+a = (1,2,3,4) # Tuple
+b = {"a":1,"b":2} # Dictionary
+c = [1,2,3,4] # List
+
+together = (a,b,c) # Combine these different container objects into a single tuple
+together
+```
+
+[**For a list of all the `tuple` methods, see here.**](https://www.w3schools.com/python/python_ref_tuple.asp)
+
+#### `set`
+
+A `set` is an unordered collection of unique elements (this just means there can be no duplicates). `set` is a mutable data type (elements can be added and removed). Moreover, the `set` methods allow for set algebra. This will come in handy if we want to know something about unique values and membership.
+
+The **literal** for `set` is the brackets `{}`.[^1]
+
+[^1]: Note that this is very similar to the literal for a `dict`ionary but in that data structure we define a key/value pair (see the `dict` tab)
+
+```{python}
+my_set = {1,2,3,3,3,4,4,4,5,1}
+my_set
+```
+
+The **constructor** is `set()`. As before, it takes an iterable object as an input.
+
+```{python}
+new_set1 = set([1,2,4,4,5])
+new_set1
+
+new_set2 = set("Georgetown")
+new_set2
+```
+
+In the above, we can see that order isn't a thing for a `set`.
+
+We can add elemets to a `set` using the `.add()` or `.update()` methods.
+
+```{python}
+my_set.add(6)
+my_set
+
+my_set.update({8})
+my_set
+```
+
+Where a `set` really shines is with the set operations. Say we had a set of country names.
+
+```{python}
+countries = {"nigeria","russia","united states","canada"}
+```
+
+And we wanted to see which countries from our set were in another set (say another data set). Not a problem for a set!
+
+```{python}
+other_data = {"nigeria","netherlands","united kingdom","canada"}
+```
+
+Which countries are in both sets?
+
+```{python}
+countries.intersection(other_data)
+```
+
+Which countries are in our data but not in the other data?
+
+```{python}
+countries.difference(other_data)
+```
+
+Note that ***values in a set cannot be accessed using an index***.
+
+```{python}
+my_set[1]
+```
+
+Rather we either `.pop()` values out of the `set.`
+
+```{python}
+my_set.pop()
+```
+
+Or we can `.remove()` specific values from the `set.`
+
+```{python}
+my_set.remove(3)
+my_set
+```
+
+Finally, note that **sets can contain heterogeneous scalar types, but they cannot contain other *mutable* container data types**.
+
+```{python}
+set_a = {.5,6,"a",None}
+set_a
+```
+
+In `set_b`, the `list` object is mutable.
+
+```{python,eval=F}
+set_b = {.5,6,"a",None,[8,5,6]}
+```
+
+All this is barely scratching the surface of what we can do with sets. [**For a list of all the `set` methods, see here.**](https://www.w3schools.com/python/python_ref_set.asp)
+
+#### `dict`
+
+A dictionary is the true star of the Python data types. `dict` is an associative array of key-value pairs. That means, we have some data (value) that we can quickly reference by calling its name (key). As we'll see next week, this allows for a very efficient way to look data values, especially when the dictionary is quite large.
+
+There is no intrinsic ordering to the keys, and keys can't be changed once created (that is, the keys are immutable), but the values can be changed (assuming that the data type occupying the value spot is mutable, like a `list`). Finally, keys cannot be duplicated. Recall we're going to use the keys to look up data values, so if those keys were the same, it would defeat purpose!
+
+The **literal** for a `dict` is `{:}` as in `{<key>:<value>}`.
+
+```{python}
+my_dict = {'a': 4, 'b': 7, 'c': 9.2}
+my_dict
+```
+
+The **constructor** is `dict()`. Note the special way we can designate the key value pairing when using the constructor.
+
+```{python}
+my_dict = dict(a = 4.23, b = 10, c = 6.6)
+my_dict
+```
+
+The `dict` class has a number of methods geared toward listing the information contained within. To access the `dict`'s keys, use the `.keys()` method.
+
+```{python}
+my_dict.keys()
+```
+
+Just want the values? Use `.values()`
+
+```{python}
+my_dict.values()
+```
+
+Want both? Use `.items()`. Note how the data comes back to us --- as `tuple`s nested in a `list`! This just goes to show you how intertwined the different data types are in Python.
+
+```{python}
+my_dict.items()
+```
+
+We can combine dictionary with other data types (such as a list) to make an efficient and effective data structure.
+
+```{python}
+grades = {"John": [90,88,95,86],"Susan":[87,91,92,89],"Chad":[56,None,72,77]}
+```
+
+We can use the keys for efficient look up.
+
+```{python}
+grades["John"]
+```
+
+We can also use the `.get()` method to get the values that correspond to a specific key.
+
+```{python}
+grades.get("Susan")
+```
+
+**Updating Dictionaries**
+
+We can add new dictionary data entries using the `.update()` method.
+
+```{python}
+new_entry = {"Wendy":[99,98,97,94]} # Another student dictionary entry with grades
+grades.update(new_entry) # Update the current dictionary 
+grades
+```
+
+In a similar fashion, we can update the dictionary directly by providing a new key entry and storing the data.
+
+```{python}
+grades["Seth"] = [66,72,79,81]
+grades
+```
+
+One can also **drop** keys by `.pop()`ing the key value pair out of the collection...
+
+```{python}
+grades.pop("Seth")
+```
+
+...or deleting the key using the `del` operator.
+
+```{python}
+del grades['Wendy']
+grades
+```
+
+Likewise, one can drop values by:
+
+-   overwriting the original data stored in the key
+-   dropping the key (and thus deleting the data value)
+-   clearing the dictionary (and deleting *all* the data values stored within. )
+
+```{python}
+# Example of using .clear()
+grades.clear()
+grades
+```
+
+This is barely scratching the surface. [**For a list of all the `dict` methods and all the things you can do with a dictionary, see here.**](https://www.w3schools.com/python/python_ref_dictionary.asp)
+
+## Indices & Keys
+
+Learning how to access the data types is a foundation of your fluency as a data scientist.
+
+As you transition across different languages, keep track of accessing methods across different data types is actually quite challenging. You will definitely find yourself searching online many times for this. The important issue here is make an effort to understand general rules for acessing elements across languages and data types
+
+#### Indices
+
+A first way to access elements in collectors is through their index position.
+
+> different from R, **Python objects start its index at zero**
+
+```{python}
+  # Define a list 
+  x = [1, 2.2, "str", True, None]
+  
+  # first element in python
+  x[0]
+
+  # can see how many values are in our container with len()
+  len(x)
+  
+  # Can look up individual data values by referencing its location
+  x[3]
+  
+  # Python throws an error if we reference an index location that doesn't exist
+  x[7]
+  
+  # We use a negative index to count BACKWARDS in our collection data type.
+  x[-3]
+```
+
+This way to access data using index position is going to be very standard across a range of data type.
+
+```{python}
+# tuples
+tup = (1, 2, "no", True)
+
+# first element
+tup[0]
+
+# Last element
+tup[-1]
+
+```
+
+#### Slicing
+
+We use the : operator to slice (i.e. select ranges of values). This works using the numerical indices we juat learned. Slicing in a nutshell goes like this <start-here>:<go-until-right-before-here>
+
+```{python}
+
+# To pull out values in position 1 and 2
+x[1:3]
+
+# When we leave left or right side blank, Python implicitly goes to the beginning or end
+x[:3]
+x[2:]
+
+# %% Keys -----------------------------------------
+
+  # Define a dictionary
+  grades = {"John":[90,88,95,86],"Susan":[87,91,92,89],"Chad":[56,None,72,77]}
+
+  # Unlike lists/tuples/sets, we use a key to look up a value in a dictionary
+  grades["John"]
+  
+  # We can then index in the data structure housed in that key's value position
+  # as is appropriate for that data object
+  grades["John"][1]
+```
+
+<br>
+
+<hr>
+
+<br>
+
+## Copies
+
+```{python,eval=F}
+# Copies with mutable objects -----------------------
+
+# Create a list object
+x = ["a","b","c","d"]
+
+# Dual assignment: when objects reference the same data.
+x = y
+print(id(x)) 
+print(id(y))
+
+# If we make a change in one
+y[1] = "goat"
+
+# That change is reflected in the other
+print(x)
+
+# Because these aren't independent objects
+
+# We can get around this issue by making **copies**
+y = x.copy() # Here y is a copy of x.
+# This duplicates the data in memory, so that y and x are independent. 
+
+# Three ways to make a copy:
+# (1) Use copy method
+y = x.copy()
+# (2) Use constructor
+y = list(x)
+# (3) Slice it
+y = x[:]
+
+
+# Copies with nested objects -----------------------
+nested_list = [[1,2,3],[4,7,88],[69,21,9.1]]
+
+# Create a shallow copy
+new_list = nested_list.copy()
+
+# This copy only works for the "first layer" in the nested data structure.
+new_list[0][1] = 1000
+print(nested_list)
+
+# Creating a deep copy
+#import copy
+new_list = copy.deepcopy(nested_list)
+```
+
+## Iteration
+
+A basic building block of any program is to be to be able to repeat some code over and over again. Whether it is to collect data for a list of websites, apply some function to a sequence of dataframes, or retrieve information form a set of different models, we are often interested as data scientist in repeating a certain action through a sequence of unit. This process is called **iteration** and it is often performed using a `loop` function.
+
+### for loops
+
+**Iteration** in a basic sense is simply taking one item at a time from a collection. We start at the beginning of the collection and mover through it until we reach the end. Any time we use a loop we are going over each and every item in collection
+
+In python, we can iterator over any non-scaler class with an `iter()` associated method. Examples are:
+
+-   lists
+
+-   strings
+
+-   dictionaries
+
+-   file connections
+
+-   grouped pandas df
+
+#### for loop with lists
+
+```{python}
+# create a list
+my_list = [1, 2, 3, 4, 5]
+
+# iterate
+for m in my_list:
+  print(m)
+```
+
+#### for loop with strings
+
+```{python}
+# create a list
+my_string = "Georgetown"
+
+# iterate
+for letter in my_string:
+  print(letter)
+```
+
+#### for loop with `range()`
+
+Another container with the type of sequences used to express arithmetic progression of integers
+
+```{python}
+# one value 0 to 10
+for i in range(10):
+    print(i)
+```
+
+The instance from a `range()` is just a simple iterator
+
+```{python}
+# create a range
+iter_ = range(10)
+iter_[0]
+iter_[1]
+
+# we can convert to a list to see the object
+list(iter_)
+
+```
+
+#### for loop with `enumerate()`
+
+The enumerate function converts an iterable object in a tuple with a index and the iterator
+
+```{python}
+# create a string
+iterable = "McCourt"
+
+# enumerate
+for index, letter in enumerate(iterable):
+  print(f'index = {index}; value == {letter}')
+
+```
+
+### In-depth understanding of loops
+
+We just learned in practive how loops work. Let's break down a bit more so that we actually grasp what is going on behind the scenes here.
+
+#### Syntax
+
+First, let's fully understand the syntax of a loop. A loop had the following syntax:
+
+    for <var> in <iterable>:
+        <statement(s)>
+
+-   `<iterable>`: is a collection of objects. This is the container through which our loop is navigating element-wise
+-   `<statement(s)>`: this is the juice. It is a sequence of code that describes what is the action our program wants to repeat for each component of the iterable. Notice, `<statements>` in the loop body are denoted by indentation, as with all Python control structures.
+-   `<var>`: it is a local value for every of the next element in <iterable> each time through the loop.
+
+#### Iterator
+
+**iterable** is any object that contains the `__iter__` methods. This method returns an "**iterator**" object. An **iterator** object has a special method called `__next__()`, which summons each item in the collection one at a time.
+
+```{python}
+# create a iterable
+my_list = ["UFPA", "UERJ", "UMD", "NYU", "Georgetown"]
+print(my_list)
+
+# convert to a iterator
+iter(my_list)
+my_list.__iter__()
+
+# iterate over the elements
+iter_my_list = iter(my_list)
+
+# first
+next(iter_my_list)
+
+# first
+next(iter_my_list)
+
+# second
+next(iter_my_list)
+
+# third
+next(iter_my_list)
+
+# fourth
+next(iter_my_list)
+
+# firth: stop iteration
+next(iter_my_list)
+
+```
+
+**So what does a `for` loop do?**
+
+1.  The `for` statement calls `iter()` on the container object (e.g. a list).
+2.  The function returns an iterator object that defines the method `__next__()` which accesses elements in the container *one at a time*.
+3.  When there are no more elements, `__next__()` raises a `StopIteration` exception which tells the `for` loop to terminate.
+
+### While loops
+
+For loops are literally iterations. While loops are all about repetitions. These loops are super useful when we have some target and want to keep our program running up to certain threeshold. For example, while loops are heavily used in maximization functions, in which we keep the algorithm running until our error function is at a minimum/maximum.
+
+```{python}
+x = 0
+while x < 5:
+    print("This")
+    x += 1
+```
+
+**Remember to increment your condition** and avoid an infinite loop.
+
+## Comparison Operators
+
+Comparison operators check whether a relationship holds between two objects. Since the relationship either holds or doesn't hold, these operators always return Boolean values. See below for a list of these operators
+
+| Operator     | Property                |
+|--------------|-------------------------|
+| **`==`**     | (value) equivalence     |
+| **`>`**      | greater than            |
+| **`<`**      | strictly less than      |
+| **`<=`**     | less than or equal      |
+| **`>`**      | strictly greater than   |
+| **`>=`**     | greater than or equal   |
+| **`!=`**     | Not Equals              |
+| **`is`**     | object identity         |
+| **`is not`** | negated object identity |
+| **`in`**     | membership in           |
+| **`not in`** | negated membership in   |
+
+```{python}
+# Some examples
+
+# Comparisons
+x = 7
+y = 6
+
+# simple comparisons
+x >= y
+x > y
+x < y
+x <= y
+
+# "in" for contains
+"d" in ["x","a","v"]
+
+```
+
+### Boolean Comparison
+
+Another type of operators are those that take as input boolen types and return as outputs the data types. These are often super useful when we are working with recoding of multiple variables. See table below:
+
+| Operator | Logical Operation |
+|----------|-------------------|
+| `and`    | Conjunction       |
+| `or`     | Disjunction       |
+| `not`    | Negation          |
+
+```{python}
+# examples
+
+# and
+True and False
+
+# or
+True  or False
+
+```
+
+> All this is barely scratching the surface [**For a in-depth discussion of comparison operators in python, see here.**](https://realpython.com/python-boolean/#boolean-operators)
+
+## Conditional Statements
+
+Any programming language needs statements that controls the sequence of execution of a particular piece of code. These statements are called control statements, and they enable you to write programs that can perform different actions based on different inputs or situations. A `for loop` is a type of of control statement.
+
+The most common control statements are `conditional statements`. The name speaks by itself: these statements control when a program run conditional on meeting a certain criteria. The most popular conditional statements are `if`, `elif`, and `else` statements.
+
+These statements have the following structure:
+
+::: callout-warning
+Notice the indentation in the code blocks of the conditional statements!
+:::
+
+## User Defined Functions

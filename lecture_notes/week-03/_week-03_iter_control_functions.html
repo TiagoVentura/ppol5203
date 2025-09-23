@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>_version_control_git</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>_week-03_iter_control_functions</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 <style type="text/css">
   pre { line-height: 125%; }
@@ -13090,7 +13090,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><h1><center> PPOL 5203 Data Science I: Foundations <br><br> 
-<font color='grey'>Reproducibility, Version Control, Git/Github <br><br>
+<font color='grey'>Intro do Python: Control Statements, Iterations and Functions <br><br>
 Tiago Ventura </center> <h1></p>
 <hr>
 
@@ -13100,581 +13100,90 @@ Tiago Ventura </center> <h1></p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Learning-goals">Learning goals<a class="anchor-link" href="#Learning-goals">&#182;</a></h2><p>Today we will discuss Version Control, Workflow and Reproducibility in Data Science. It means we will pretty much learn how to incorporate Git and Github to our day-to-day data science workflow.</p>
-<p>These are the main concepts we will learn:</p>
-<ul>
-<li>Reproducibility in Data Science</li>
-<li>Conceptualize what version control and how it works;</li>
-<li>Basics of <code>Git</code> and operating it with command line arguments;</li>
-<li>Generating repositories on <code>Github</code>;</li>
-<li>Linking local repositories with online remotes;</li>
-<li>Dealing with merge conflicts;</li>
-<li>Advanced functionality:<ul>
-<li>Branching</li>
-</ul>
-</li>
-</ul>
-<p>I will cover some of the concepts here. However, I expect you to do the weekly readings to fully grasp the concepts I will describe here and cover during the lecture</p>
-<h3 id="Cheatsheets">Cheatsheets<a class="anchor-link" href="#Cheatsheets">&#182;</a></h3><p>Note that the purpose of this notebook is to serve as a cheatsheet/reference for future use. Though there are better one out there than what I've outlined here. I've listed a few below for your use.</p>
-<ul>
-<li><a href="https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf"><strong>Github Cheatsheet (A)</strong></a></li>
-<li><a href="https://education.github.com/git-cheat-sheet-education.pdf"><strong>Github Cheatsheet (B)</strong></a></li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Reproducibility">Reproducibility<a class="anchor-link" href="#Reproducibility">&#182;</a></h2><p>Your data science workflow will generally involve:</p>
-<ul>
-<li>Think about a research question/data analysis</li>
-<li>Collect data</li>
-<li>Clean the data</li>
-<li>Run models</li>
-<li>Visualize the results</li>
-<li>Explain in plain language the substantive importance of your results. </li>
-</ul>
-<p>Some key challenges will emerge as you evolve in your carreer as a data scientist:</p>
-<ul>
-<li><p>Your projects will grow.</p>
-<ul>
-<li>When projects scale-up,  <strong>you need to keep track of your work</strong>. Sometimes you decide to experiment with a different model, share you code with a colleagues who suggested you to try a different approach, work with some different visualization. All of this, ideally, without altering the previous draft of your results. </li>
-</ul>
-</li>
-<li><p>Data Science is a collaborative field</p>
-<ul>
-<li>Data Science is a new and very collaborative field, both in academia and industry. Most of your projects will be shared with other data scientists, and you will want to be able to work at the same time in the project, pushing your ideas in different directions, without affecting what you have already consolidated. </li>
-</ul>
-</li>
-<li><p>You will be constantly checking you code and others' code.</p>
-<ul>
-<li>To do so, you need codes to be well-documented, transparent, and check how the code changed over time</li>
-</ul>
-</li>
-<li><p>Projects will come and go.</p>
-<ul>
-<li>Sometimes a project will slow down, and you will return to it a few months later. Trust me, you will thank you past self if you code is well documented, transparent, and your steps are fully reproducible. </li>
-</ul>
-</li>
-</ul>
-<p>These challenges will appear across different projects, but, most importantly, you are very likely to repeat these tasks for the different iterations of the same project.  As you do this, you need to make sure your results are <a href="https://en.wikipedia.org/wiki/Reproducibility#:~:text=For%20the%20findings%20of%20a,when%20the%20study%20is%20replicated.">reproducible</a>.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Best-Practices-for-Reproducibility-and-Project-Management">Best Practices for Reproducibility and Project Management<a class="anchor-link" href="#Best-Practices-for-Reproducibility-and-Project-Management">&#182;</a></h3><p><strong>Reproducibility is fundamental to the scientific method</strong>. As you publish a article/data report/data analysis you need to make sure others (or even you in the future) would be able to easily keep a record of your actions as in the data (cleaning, measurement choices, models), the presentation of the results, all in a reproducible way.</p>
-<p>Here are some suggestions for you to overcome these challenges will minimal headaches:</p>
-<p><strong>Documentation</strong></p>
-<ul>
-<li>Use <code>#</code> to describe every single step of your code</li>
-</ul>
-<p><strong>Readability</strong></p>
-<ul>
-<li>Make you code readable in plain english. This usually mean giving names to your variables and functions that fully describe what your intents are. </li>
-<li>Avoid: <ul>
-<li>Abbreviation</li>
-<li>Generice Names</li>
-<li>Misleading names</li>
-</ul>
-</li>
-</ul>
-<p><strong>Naming</strong></p>
-<ul>
-<li>Use meaningful names for your code/data/notebooks. <ul>
-<li>File names should be meaningful</li>
-<li>DO NOT USE SPACES. Use <a href="https://en.wikipedia.org/wiki/Snake_case">snake case</a> <code>(_)</code> style for you files and code</li>
-</ul>
-</li>
-</ul>
-<p><strong>Portability</strong></p>
-<ul>
-<li>Use computational environments for your projects. (<a href="https://github.com/pyenv/pyenv#installation">pyenv</a></li>
-<li>Avoid absolute file paths</li>
-<li>Keep track of the version of your package/libraries versions</li>
-</ul>
-<p><strong>Use Self-Contained Projects</strong></p>
-<ul>
-<li>Organize each data analysis into a specific folder on your computer. </li>
-<li>In my case, every project folder has the following subfolders: <ul>
-<li>/code</li>
-<li>/data</li>
-<li>/outputs</li>
-<li>/literature</li>
-<li>/text</li>
-<li>/misc</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Version-Control">Version Control<a class="anchor-link" href="#Version-Control">&#182;</a></h2><p>Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later. It keeps a complete record of changes to a single file, a folder of material, or a whole project.</p>
-<ul>
-<li><p>Version control avoids: <code>file1.doc, file1_mod.doc, file1_modagain.doc, file1_mod_thelast.doc, etc..</code></p>
-</li>
-<li><p>Easily handle collaboration with co-workers (through GitHub)</p>
-</li>
-<li><p>Avoids version file names</p>
-</li>
-<li><p>Allows you to “rewind the tape” to earlier incarnations of your notes, drafts, papers and code</p>
-</li>
-<li><p>It is like microsoft Word track changes but for your entire project</p>
-</li>
-</ul>
-<p>Version control is the most complex and most important of the best practices described here for reproducibility in data science. It requires us to learn a tool to perform version control. We will use <code>Git</code> to do so.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Git-&amp;-Github">Git &amp; Github<a class="anchor-link" href="#Git-&amp;-Github">&#182;</a></h2><p><strong><code>Git</code></strong>: one of many options for version control in data science. You hardly hear abour other options though as has become the standard for version control</p>
-<p><strong>Github</strong>: is a public remote host for <code>Git</code> repositories. It works as a place where software developers and social scientists make their work available, and where you can contribute to ongoing projects or make public your own.</p>
-<p>In a nutshell, you will <code>git</code> locally, and share and collaborate with others using Github.</p>
-<h3 id="Git-basic-workflow-in-words">Git basic workflow in words<a class="anchor-link" href="#Git-basic-workflow-in-words">&#182;</a></h3><p><code>Git</code> has three main states that your files can reside in:</p>
-<ul>
-<li><strong>Modified</strong> - changed the file but have not committed it to the database yet.</li>
-<li><strong>Staged</strong> - marked a modified file in its current version to go into the next commit snapshot.</li>
-<li><strong>Committed</strong> - data is safely stored in your local database.</li>
-</ul>
-<p>The fundamental <code>Git</code> process can be paraphrased as follows:</p>
-<ul>
-<li><p>You alter files within your working directory.</p>
-</li>
-<li><p>You deliberately choose and stage only the modifications that you plan to include in your upcoming commit, transferring these changes to the staging area.</p>
-</li>
-<li><p>You make a commit, which captures the current state of the files in the staging area and permanently records that version into your Git directory</p>
-</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Basic-Git-commands">Basic Git commands<a class="anchor-link" href="#Basic-Git-commands">&#182;</a></h3><p><strong>Set up your identity</strong></p>
-<ul>
-<li><code>git config --global user.name "myname"</code>: set your user name</li>
-<li><code>git config --global user.email your-email@georgetown.edu</code>: set your email account</li>
-</ul>
-<p><strong>Starting or getting a git repository on your machine</strong></p>
-<ul>
-<li><code>git init</code>: start a new repository from a working directory</li>
-<li><code>git clone &lt;url or location to repository&gt;</code>: clone an existing repository</li>
-<li><code>git status</code>: get the current status of the repository.</li>
-</ul>
-<p><strong>Staging any changes you made</strong></p>
-<ul>
-<li><code>git add &lt;file&gt;</code>: stage a file to be committed </li>
-<li><code>git add .</code>: stage <em>all files</em> to be committed</li>
-<li><code>git reset HEAD &lt;file&gt;</code>: un-stage all files to be committed</li>
-</ul>
-<p><strong>Saving the staged changes</strong></p>
-<ul>
-<li><code>git commit -m "some message"</code>: commit staged changes to repository </li>
-<li><code>git commit</code>: commit staged changes to repository (will be prompted to leave a message)</li>
-</ul>
-<p><strong>Getting current state from the remote (Github) or sending changes to it.</strong></p>
-<ul>
-<li><code>git fetch</code>: download recent changes in the remote repository (but do not explicitly merge with your local version)</li>
-<li><code>git pull</code>: download recent changes in the remote repository and merge with your local version)</li>
-<li><code>git push</code>: push commits to remote (e.g. github repository)</li>
-</ul>
-<p><strong>Getting Help</strong></p>
-<ul>
-<li><code>git help &lt;verb&gt;</code></li>
-<li><code>man git-&lt;verb&gt;</code></li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Git-in-Practice">Git in Practice<a class="anchor-link" href="#Git-in-Practice">&#182;</a></h2><p>The code below covers what we will do  in class. It shows you the basics of using <code>git</code> for local version control.</p>
-<h4 id="1)-Create-an-empty-directory-to-be-our-git-walkthrough">1) Create an empty directory to be our git walkthrough<a class="anchor-link" href="#1)-Create-an-empty-directory-to-be-our-git-walkthrough">&#182;</a></h4><p>Open you command line.</p>
-<p>Check your home directory or where you are when you open your terminal</p>
-<ul>
-<li><code>pwd</code> <em>writes to standard output the full path name of your current directory</em> </li>
-<li><code>mkdir gitwalkthrough</code> <em>creates a new folder</em></li>
-</ul>
-<p>Change working directory</p>
-<ul>
-<li><code>cd gitwalkthrough</code> <em>change working directory</em></li>
-</ul>
-<h4 id="2)-Check-if-you-have-a-git">2) Check if you have a git<a class="anchor-link" href="#2)-Check-if-you-have-a-git">&#182;</a></h4><p>Let's make sure you have a <code>git</code> repository here (you know you do not because you just started this folder)</p>
-<ul>
-<li><code>git status</code> <em>get the current status of the repository</em><ul>
-<li>returns: <code>fatal: not a git repository (or any of the parent directories): .git</code></li>
-</ul>
-</li>
-</ul>
-<p>Create your first <code>git</code> repository. This command creates a local version control for this project. This is different from creating a database in the server, like on github</p>
-<ul>
-<li><code>git init</code> <em>start a new repository from a working directory</em></li>
-</ul>
-<p>If you want to see what is going on behind the hood, this command creates a hidden directory <code>.git</code> in your folder. This directory tracks your version control.</p>
-<h4 id="3)-Tracking-and-staging-new-files">3) Tracking and staging new files<a class="anchor-link" href="#3)-Tracking-and-staging-new-files">&#182;</a></h4><p>Now we have a <code>git</code> repo created, let make our first commit.</p>
-<p>First, let's create some random file using the command line. I will use vim as a text editor here.</p>
-<ul>
-<li><code>vim test1.txt</code> <em>to open and edit the file</em></li>
-</ul>
-<p>Remember, <code>git</code> has three basic states: untracked, tracked and stagged files. To move between these states, we use the add command.</p>
-<ul>
-<li><code>git status</code> <em>gonna tell us we have a new untracked filed.</em></li>
-<li><code>git add test1.txt</code> <em>start tracking/stage the file test1.txt</em></li>
-<li><code>git status</code> <em>see we have tracked and staged our files</em></li>
-</ul>
-<p>Let create a new file and modify our test1.txt</p>
-<ul>
-<li><code>vim test1.txt</code> <em>modify as you wish</em></li>
-<li><code>vim test2.txt</code> <em>create a new file</em></li>
-<li><code>git status</code> *check the output now, you have a new untracked file, and also unstagged changes in the old file</li>
-<li><code>git add test1.txt test2.txt</code> <em>to track and stage all</em></li>
-</ul>
-<h4 id="4)-First-commit">4) First commit<a class="anchor-link" href="#4)-First-commit">&#182;</a></h4><p>With all our changes made, we are ready to make the first commit. Or, in other words, take the first snapshot of our directory</p>
-<ul>
-<li><code>git commit -m 'first commit'</code> <em>make your first commit</em></li>
-<li><code>git log</code> *see the history of your commits</li>
-</ul>
-<h4 id="5)-Returning-to-a-previous-snapshot">5) Returning to a previous snapshot<a class="anchor-link" href="#5)-Returning-to-a-previous-snapshot">&#182;</a></h4><p>Let's see here how we can use to move back and forth at different stages of our project.</p>
-<p>First, create a new test3.txt file</p>
-<ul>
-<li><code>vim test3.txt</code> </li>
-<li><code>git add .</code> <em>track and stage</em></li>
-<li><code>git commit -m 'second commit'</code> *second commit</li>
-</ul>
-<p>Check the log and moving back</p>
-<ul>
-<li><code>git log</code></li>
-<li><code>git checkout &lt;hash&gt;</code> *to move to a past different snapshot</li>
-</ul>
-<p>Where is file 3?</p>
-<ul>
-<li><code>ls</code> *no file test3.txt. we moved bck to our first commit. </li>
-</ul>
-<p>Oh I didn't want miss file 3! No problemo!</p>
-<ul>
-<li><code>git log --reflog</code> *gets the reference log</li>
-<li><code>git checkout &lt;hash&gt;</code></li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Git:-Branchinch-and-Merging.">Git: Branchinch and Merging.<a class="anchor-link" href="#Git:-Branchinch-and-Merging.">&#182;</a></h2><p>Branching allows us to work on different paths in <code>git</code>. It is very useful for two purposes:</p>
-<ul>
-<li><p>Experimenting with code</p>
-</li>
-<li><p>Collaborating with colleagues.</p>
-</li>
-</ul>
-<p>An interesting way to visualize what branching means is by using the <a href="https://git-school.github.io/visualizing-git/">Visualize Git tool</a></p>
-<p>Below you can see basics of the commands to create braches and merge in git.</p>
-<ul>
-<li><p>Create a new branch</p>
-<ul>
-<li><code>git checkout -b &lt;branch-name&gt;</code></li>
-</ul>
-</li>
-<li><p>write code or create new files</p>
-<ul>
-<li><code>vim test4.txt</code></li>
-</ul>
-</li>
-<li><p>Stage and commit</p>
-<ul>
-<li><code>git add .</code> </li>
-<li><code>git commit -m " hello from alternative world"</code></li>
-</ul>
-</li>
-<li><p>Check status across different branches</p>
-<ul>
-<li><code>ls</code>  <em>test4.txt should be here</em></li>
-<li><code>git checkout main</code> <em>move back to the main branch</em></li>
-<li><code>ls</code> *no test4.txt</li>
-</ul>
-</li>
-<li><p>Then we can merge our branches. Here we are doing a fast-forward merge, moving our main to keep up with the alternative branch</p>
-<ul>
-<li><code>git merge new branch</code></li>
-</ul>
-</li>
-</ul>
-<p>In general, at this stage, you would use <code>git push</code> to merge your local branch into your remote reposity (usually on github), and <code>git pull</code> to bring your remote to your local branch. You can understand <code>git push</code>| <code>git pull</code> as a merging step of your branch into the remote main branch.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Git-Remotes:-Git-+-Github.">Git Remotes: Git + Github.<a class="anchor-link" href="#Git-Remotes:-Git-+-Github.">&#182;</a></h2><p>Most times, you will use <code>git</code> integrated with <code>Github</code>. This is because the way <code>git</code> is more useful is by allowing multiple researchers to write and share code at the same time.</p>
-<p>This is the workflow we will go through in class. It is usually how I use <code>git</code> in my day to day work. This is also insipiered by a tutorial we developed at the Center for Social Media and Politics (CSMaP), where I worked as a Postdoctoral Researcher.</p>
-<h3 id="IMPORTANT:-Setting-up-your-Git--%3E-GitHub-connection">IMPORTANT: Setting up your Git -&gt; GitHub connection<a class="anchor-link" href="#IMPORTANT:-Setting-up-your-Git--%3E-GitHub-connection">&#182;</a></h3><p>The first time you try to use GitHub (by sending things from your local git to the remote), you will need to authenticate your connection. Here is a complete tutorial on what to do: <a href="https://docs.github.com/en/get-started/git-basics/set-up-git">https://docs.github.com/en/get-started/git-basics/set-up-git</a></p>
-<p>See below for a summarized version.</p>
-<h4 id="Configure-Git-on-your-computer">Configure Git on your computer<a class="anchor-link" href="#Configure-Git-on-your-computer">&#182;</a></h4><ul>
-<li><code>git config --global user.name "myname"</code>: set your user name as in github</li>
-<li><code>git config --global user.email your-email@georgetown.edu</code>: set your email account as in github</li>
-</ul>
-<p>Check if this is working properly:</p>
-<ul>
-<li><code>git config --list</code></li>
-</ul>
-<h4 id="Create-a-personal-token">Create a personal token<a class="anchor-link" href="#Create-a-personal-token">&#182;</a></h4><ul>
-<li><p>Open your GitHub account. Go to GitHub -&gt; Settings -&gt; Developer settings -&gt; Personal access tokens</p>
-</li>
-<li><p>Choose Fine-grained tokens or Classic token.</p>
-</li>
-<li><p>Give it repo access, and copy the token somewhere to your local machine</p>
-</li>
-<li><p>You will see this token only once. So save it somewhere you can easily find it!</p>
-</li>
-</ul>
-<h4 id="Authenticating">Authenticating<a class="anchor-link" href="#Authenticating">&#182;</a></h4><p>When you do your first clone (or push), github will ask you to authenticate. Here is where things get weird. It will ask for your username and password. But the password <strong>is actually the token you just created</strong></p>
-<ul>
-<li>username: add your github username</li>
-<li>password: paste the token you just created (VERY IMPORTANT!!!!)</li>
-</ul>
-<h4 id="Starting-a-New-Project">Starting a New Project<a class="anchor-link" href="#Starting-a-New-Project">&#182;</a></h4><p>Then, before you write any code:</p>
-<ul>
-<li><p>Go to your github, and create a new repository</p>
-</li>
-<li><p>Open your terminal, and clone the project</p>
-<ul>
-<li><code>git clone &lt;url&gt;</code></li>
-</ul>
-</li>
-<li><p>Move your working directory to this new folder</p>
-<ul>
-<li><code>cd &lt;project-directory&gt;</code></li>
-</ul>
-</li>
-<li><p>Write code!</p>
-</li>
-<li><p>Track your changes: <code>git add .</code></p>
-</li>
-<li><p>Commit your changes <code>git commit -m 'describe your commit'</code></p>
-</li>
-<li><p>Push the changes in your local repository to GitHub:</p>
-<ul>
-<li><code>git push -u origin [branch-name]</code> <em>if this is a branch protected repo, you need to do a PR</em></li>
-</ul>
-</li>
-</ul>
-<h4 id="Storing-Authentication">Storing Authentication<a class="anchor-link" href="#Storing-Authentication">&#182;</a></h4><p>Github might ask you to authenticate again everytime you try to connect. You can avoid this by storing your credentials with:</p>
-<ul>
-<li><code>git config --global credential.helper store</code></li>
-</ul>
-<h3 id="Pulling">Pulling<a class="anchor-link" href="#Pulling">&#182;</a></h3><p>Say now you already have the directory cloned, and you have a colleagues working in the code. Now you want to work on your part of the project. Then you pretty much follow the same sequence as above, but instead of clonning at your first step, you will do a pull from the git repo.</p>
-<ul>
-<li><p><code>cd &lt;gitrepo&gt;</code></p>
-</li>
-<li><p><code>git pull</code></p>
-</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Git:-Conflicts">Git: Conflicts<a class="anchor-link" href="#Git:-Conflicts">&#182;</a></h2><p>When merging across different branches, sometimes there are <strong><em>conflicts</em></strong> between branches or remote versions of a repository. This can happen with you experimenting using different branches, but it is very often when collaboration on large scale projects. Say you changed the some part of a file by deleting a function and a colleague changed the same file by modifying the function. This would be an example of a conflict.</p>
-<p>Git does not know which version is the correct one, so it will <strong>mark the file as having a conflict</strong> using a special delimiter.</p>
-
-<pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-ADD EXAMPLE FROM class
-=======
-ADD EXAMPLE FROM CLASS
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; new-branch</code></pre>
-<p><strong>What these delimiters mean?</strong></p>
-<ul>
-<li><p>the top half is the branch you a merging into</p>
-</li>
-<li><p>the bottom half is from the commit that you are trying to merge in</p>
-</li>
-</ul>
-<p><strong>How to solve a conflict?</strong></p>
-<ul>
-<li><p>Open your text editor and navigate to the file that has merge conflicts.</p>
-</li>
-<li><p>Solve the conflict (which may incorporate changes from both branches) and  delete the conflict markers &lt;&lt;&lt;&lt;&lt;&lt;&lt;, =======, &gt;&gt;&gt;&gt;&gt;&gt;&gt; and make the changes you want in the final merge.</p>
-</li>
-<li><p>Stage your changes (<code>git add</code>)</p>
-</li>
-<li><p>Commit your changes (<code>git commit</code>)</p>
-</li>
-</ul>
-<p>Let's work through an example:</p>
-<h4 id="1)-Create-a-new-branch,--change-an-file,-and-commit">1) Create a new branch,  change an file, and commit<a class="anchor-link" href="#1)-Create-a-new-branch,--change-an-file,-and-commit">&#182;</a></h4><ul>
-<li><code>git checkout -b "new"</code> : create a branch call new, checkout directly</li>
-<li><code>vim test1.txt</code>: make some modification</li>
-<li><code>git add test1.txt</code></li>
-<li><code>git commit -m "new file 1"</code>: commit your changes</li>
-</ul>
-<h4 id="2)-Now,-let's-do-the-same-in-the-main-branch">2) Now, let's do the same in the main branch<a class="anchor-link" href="#2)-Now,-let's-do-the-same-in-the-main-branch">&#182;</a></h4><ul>
-<li><code>git checkout "main"</code> : move back to main</li>
-<li><code>vim test1.txt</code>: make some modification and see that the old modification is not here</li>
-<li><code>git add test1.txt</code></li>
-<li><code>git commit -m "new file 1"</code> from main commit your changes</li>
-</ul>
-<h4 id="3)-Merge-and-solve-conflict">3) Merge and solve conflict<a class="anchor-link" href="#3)-Merge-and-solve-conflict">&#182;</a></h4><p>Because we are at the main branch, we just need to merge the new branch to the main</p>
-<ul>
-<li><code>git merge new</code>: this merges new to the main. if we wanted to do the opposite, then we would need to checkout to new, and use <code>git merge main</code></li>
-</ul>
-<p><strong>We got an error. each branch has a difference in the same file</strong></p>
-<p>See the error:</p>
-<ul>
-<li><p><code>vim test1.txt</code>: see the new file is a combination of each of the different versions of the files in each branch.</p>
-</li>
-<li><p>Fix the issue in your text editor</p>
-</li>
-<li><p><code>git add test1.txt</code></p>
-</li>
-<li><p><code>git commit -m "fixed conflict"</code>: commit your changes</p>
-</li>
-<li><p><code>git log</code>: to see your merge complete</p>
-</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id=".gitignore:-ignoring-specific-files-or-file-types">.gitignore: ignoring specific files or file types<a class="anchor-link" href="#.gitignore:-ignoring-specific-files-or-file-types">&#182;</a></h2><p>Sometimes we do not want to track certain file types.</p>
-<p>For example, <code>Github</code> has an upload rate of 100mb, meaning that we wouldn't want to push really big data sources up to the repository. We might want to avoid uploading <em>any</em> data files to our Github repository for this reason. To do this, we may want to ignore specific file types, such as <code>.csv</code> (comma separated values) or <code>.Rdata</code> (an R data file type). To do this, we need to make a special file that Git reads to tell it which files <em>not</em> to track.</p>
-<p>We can exclude these files by adding a <code>.gitignore</code> file to our project folder.</p>
-
-<pre><code>*.ipynb_checkpoints 
-*.Rdata
-*.csv</code></pre>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Advanced-Git-commands">Advanced Git commands<a class="anchor-link" href="#Advanced-Git-commands">&#182;</a></h2><p><strong>Accessing the logs &rarr; who did what to which file and when?</strong></p>
-<ul>
-<li><code>git log</code>: look at the commit history<ul>
-<li>Useful arguments:<ul>
-<li><code>--oneline</code>: view a condensed summary </li>
-<li><code>--all</code>: view the entire commit history</li>
-<li><code>--graph</code>: view a text graph of the commit sequence</li>
-<li><code>--stat</code>: abbreviated stats for each commit</li>
-<li><code>--since=2.weeks</code>: review commits within some temporal range</li>
-</ul>
-</li>
-<li>Easily format the log<ul>
-<li><code>git log --pretty=format:"%h - %an, %ar : %s"</code></li>
-<li>see <a href="https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History">Git Basics on Viewing the Commit History</a> for more insight into the different possible configurations and customizations</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p><strong>Tracking Differences</strong></p>
-<ul>
-<li><code>git diff</code> : explore the differences between files<ul>
-<li>Use the hash hexidecimal code to compare commits<ul>
-<li>e.g. <code>git diff 44d14b2 2adbea3</code></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><code>git whatchanged</code></li>
-</ul>
-<p><strong>Tracking Movement</strong>: If we were to just rename or move a file, <code>git</code> doesn't necessarily know that it was already tracking that file.</p>
-<ul>
-<li><code>git mv old-file-location new-file-location</code>: Move files around so that the git history is retained</li>
-<li><code>git mv old-file-name new-file-name</code>: Rename files so that the git history is retained</li>
-</ul>
-<p><strong>Time Traveling</strong></p>
-<ul>
-<li><code>git checkout &lt;commit-hash&gt;</code>: Move to prior snapshots of the project</li>
-<li><code>git revert &lt;commit-hash&gt;</code>: Revert the project to a prior point</li>
-</ul>
-<p><strong>Branching</strong>: A branch in <code>git</code> is a lightweight, movable pointer to a commit. Default branch is named "<em>main</em>"</p>
-<ul>
-<li><code>git branch &lt;name-of-new-branch&gt;</code>: create a new branch</li>
-<li><code>git checkout &lt;name-of-branch&gt;</code>: checkout a branch</li>
-<li><code>git checkout -b &lt;name-of-new-branch&gt;</code>: create &amp; checkout a branch simultaneously</li>
-<li><code>git merge &lt;name-of-main-branch&gt; &lt;name-of-branch-to-be-merged&gt;</code>: merging branches</li>
-<li><code>git branch -d &lt;name-of-branch&gt;</code>: deleting branches</li>
-<li><code>git branch -v</code>: seeing the last commit on each branch</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Git-Remotes">Git Remotes<a class="anchor-link" href="#Git-Remotes">&#182;</a></h3><p><strong>Git Remote</strong></p>
-<ul>
-<li><code>git remote add origin https://github.com/user/repo.git</code>: connect a local git repository to a Github repository<ul>
-<li>generic version: <code>git remote add &lt;name-of-our-remote&gt; &lt;REMOTE_URL&gt;</code> </li>
-<li>We can add another remote to say another git repository service, like <a href="https://bitbucket.org/">bitbucket</a>. </li>
-</ul>
-</li>
-</ul>
-<p><strong>Looking at our different remotes</strong></p>
-<ul>
-<li><code>git remote</code>: print available remotes in the console</li>
-<li><code>git ls-remote</code>: Displays references available in a remote repository along with the associated commit IDs.</li>
-<li><code>git remote -v</code>: shows the URL of the remotes</li>
-</ul>
-<p><strong>Fetching from a remote</strong></p>
-<ul>
-<li><code>git fetch &lt;remote-name&gt;</code></li>
-</ul>
-<p><strong>Pushing changes to the remote</strong></p>
-<ul>
-<li><code>git push -u &lt;remote&gt; &lt;branch&gt;</code>: telling it which remote we are pushing to.</li>
-<li><code>git push -u origin main</code>: telling it which remote we are pushing to.</li>
-</ul>
-<p><strong>Inspecting Remotes</strong></p>
-<ul>
-<li><code>git remote show origin</code></li>
-<li><code>git remote show</code></li>
-</ul>
-<p><strong>Renaming Remotes</strong></p>
-<ul>
-<li><code>git remote rename origin my-go-to-remote</code></li>
-</ul>
-<p><strong>Removing Remotes</strong></p>
-<ul>
-<li><code>git remote remove &lt;remote-name&gt;</code></li>
-</ul>
+<h2 id="Learning-Objectives">Learning Objectives<a class="anchor-link" href="#Learning-Objectives">&#182;</a></h2><p>For the second half of the week three class, we will go over some concepts that are very general over any programming language. These are:</p>
+<ul>
+<li>Explore iterating through containers using <strong>loops</strong></li>
+<li>Using <strong>logical operators</strong> for comparisons.</li>
+<li>Control the behavior of code when iterating using <strong>control statements</strong>.</li>
+<li>Defining <strong>functions</strong> to make code more flexible, debuggable, and readable.</li>
+</ul>
+<h2 id="Comparison-Operators">Comparison Operators<a class="anchor-link" href="#Comparison-Operators">&#182;</a></h2><p>Comparison operators check whether a relationship holds between two objects. Since the relationship either holds or doesn't hold, these operators always return Boolean values. See below for a list of these operators</p>
+<table>
+<thead><tr>
+<th>Operator</th>
+<th>Property</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>==</code></strong></td>
+<td>(value) equivalence</td>
+</tr>
+<tr>
+<td><strong><code>&gt;</code></strong></td>
+<td>greater than</td>
+</tr>
+<tr>
+<td><strong><code>&lt;</code></strong></td>
+<td>strictly less than</td>
+</tr>
+<tr>
+<td><strong><code>&lt;=</code></strong></td>
+<td>less than or equal</td>
+</tr>
+<tr>
+<td><strong><code>&gt;</code></strong></td>
+<td>strictly greater than</td>
+</tr>
+<tr>
+<td><strong><code>&gt;=</code></strong></td>
+<td>greater than or equal</td>
+</tr>
+<tr>
+<td><strong><code>!=</code></strong></td>
+<td>Not Equals</td>
+</tr>
+<tr>
+<td><strong><code>is</code></strong></td>
+<td>object identity</td>
+</tr>
+<tr>
+<td><strong><code>is not</code></strong></td>
+<td>negated object identity</td>
+</tr>
+<tr>
+<td><strong><code>in</code></strong></td>
+<td>membership in</td>
+</tr>
+<tr>
+<td><strong><code>not in</code></strong></td>
+<td>negated membership in</td>
+</tr>
+</tbody>
+</table>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter<span class="w"> </span>nbconvert<span class="w"> </span>_version_control_git.ipynb<span class="w"> </span>--to<span class="w"> </span>html<span class="w"> </span>--template<span class="w"> </span>classic
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Some examples</span>
+
+<span class="c1"># Comparisons</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">6</span>
+
+<span class="c1"># simple comparisons</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;=</span> <span class="n">y</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># "in" for contains</span>
+<span class="s2">"d"</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">"x"</span><span class="p">,</span><span class="s2">"a"</span><span class="p">,</span><span class="s2">"v"</span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -13691,12 +13200,1464 @@ ADD EXAMPLE FROM CLASS
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[NbConvertApp] Converting notebook _version_control_git.ipynb to html
-[NbConvertApp] Writing 305265 bytes to _version_control_git.html
+<pre>True
+True
+False
+False
 </pre>
 </div>
 </div>
 
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[3]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Boolean-Comparison">Boolean Comparison<a class="anchor-link" href="#Boolean-Comparison">&#182;</a></h3><p>Another type of operators are those that take as input boolen types and return as outputs the data types. These are often super useful when we are working with recoding of multiple variables. See table below:</p>
+<table>
+<thead><tr>
+<th>Operator</th>
+<th>Logical Operation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>and</code></td>
+<td>Conjunction</td>
+</tr>
+<tr>
+<td><code>or</code></td>
+<td>Disjunction</td>
+</tr>
+<tr>
+<td><code>not</code></td>
+<td>Negation</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># examples</span>
+
+<span class="c1"># and</span>
+<span class="nb">print</span><span class="p">(</span><span class="kc">True</span> <span class="ow">and</span> <span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># or</span>
+<span class="nb">print</span><span class="p">(</span><span class="kc">True</span>  <span class="ow">or</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>False
+True
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><p>All this is barely scratching the surface <a href="https://realpython.com/python-boolean/#boolean-operators"><strong>For a in-depth discussion of comparison operators in python, see here.</strong></a></p>
+</blockquote>
+<h2 id="Conditional-Statements">Conditional Statements<a class="anchor-link" href="#Conditional-Statements">&#182;</a></h2><p>Any programming language needs statements that controls the sequence of execution of a particular piece of code. These statements are called control statements, and they enable you to write programs that can perform different actions based on different inputs or situations.</p>
+<p>The most common control statements are <code>conditional statements</code>. The name speaks by itself: these statements control when a program run conditional on meeting a certain criteria. The most popular conditional statements are <code>if</code>, <code>elif</code>, and <code>else</code> statements.</p>
+<p>These statements have the following structure:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#| eval: false</span>
+<span class="k">if</span> <span class="o">&lt;</span><span class="n">logical</span> <span class="n">statement</span><span class="o">&gt;</span><span class="p">:</span>
+  <span class="o">~~~~</span> <span class="n">CODE</span> <span class="o">~~~~</span>
+<span class="k">elif</span> <span class="o">&lt;</span><span class="n">logical</span> <span class="n">statement</span><span class="o">&gt;</span><span class="p">:</span>
+  <span class="o">~~~~</span> <span class="n">CODE</span> <span class="o">~~~~</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="o">~~~~</span> <span class="n">CODE</span> <span class="o">~~~~</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Notice the indentation in the code blocks of the conditional statements!</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="if-statement"><code>if</code> statement<a class="anchor-link" href="#if-statement">&#182;</a></h3><p>The <code>if</code> statement evaluates an expression, and if that expression is <code>True</code>, it then executes the following indented code. If the expression is <code>False</code>, nothing is executed</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># most basic statement</span>
+<span class="k">if</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"This statement is True"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># with a number</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span> <span class="c1"># state some condition</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"High"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="else-statement"><code>else</code> statement<a class="anchor-link" href="#else-statement">&#182;</a></h3><p>The <code>else</code> statement executes only if the evaluation of the <code>if</code> and all the <code>elif</code> expressions are False. It is a negation statement by nature.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># with a number</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span> <span class="c1"># state some condition</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"High"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Low"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Low
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="elif-statement"><code>elif</code> statement<a class="anchor-link" href="#elif-statement">&#182;</a></h3><p><code>elif</code> stands for else if in plain english. It allows the programmer to concatenate multiple conditional statements. Only after the <code>if</code> statement expression is <code>False</code>, the <code>elif</code> statement is evaluated and executed</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="k">if</span> <span class="n">x</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"A"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"B"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">x</span> <span class="o">&gt;</span><span class="mi">10</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"C"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"D"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>D
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Notice you can arrive at the same behavior with nested <code>if</code> statements.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="mi">5</span>
+
+<span class="c1"># same, but uglier version of the control flow above. </span>
+<span class="k">if</span> <span class="n">x</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"A"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"B"</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span><span class="mi">10</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"C"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"D"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>D
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Iteration">Iteration<a class="anchor-link" href="#Iteration">&#182;</a></h2><p>A basic building block of any program is to be to be able to repeat some code over and over again. Whether it is to collect data for a list of websites, apply some function to a sequence of dataframes, or retrieve information form a set of different models, we are often interested as data scientist in repeating a certain action through a sequence of unit. This process is called <strong>iteration</strong> and it is often performed using a <code>loop</code> function.</p>
+<h3 id="for-loops">for loops<a class="anchor-link" href="#for-loops">&#182;</a></h3><p><strong>Iteration</strong> in a basic sense is simply taking one item at a time from a collection. We start at the beginning of the collection and mover through it until we reach the end. Any time we use a loop we are going over each and every item in collection</p>
+<p>In python, we can iterate over any non-scaler class with an <code>iter()</code> associated method. Examples are:</p>
+<ul>
+<li><p>lists</p>
+</li>
+<li><p>strings</p>
+</li>
+<li><p>dictionaries</p>
+</li>
+<li><p>file connections</p>
+</li>
+<li><p>grouped pandas df</p>
+</li>
+</ul>
+<h4 id="for-loop-with-lists">for loop with lists<a class="anchor-link" href="#for-loop-with-lists">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># create a list</span>
+<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+
+<span class="c1"># iterate</span>
+<span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">my_list</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+2
+3
+4
+5
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="for-loop-with-strings">for loop with strings<a class="anchor-link" href="#for-loop-with-strings">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># create a list</span>
+<span class="n">my_string</span> <span class="o">=</span> <span class="s2">"Georgetown"</span>
+
+<span class="c1"># iterate</span>
+<span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">my_string</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>G
+e
+o
+r
+g
+e
+t
+o
+w
+n
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="for-loop-with-range()">for loop with <code>range()</code><a class="anchor-link" href="#for-loop-with-range()">&#182;</a></h4><p>Another container with the type of sequences used to express arithmetic progression of integers</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># one value 0 to 10</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The instance from a <code>range()</code> is just a simple iterator</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># create a range</span>
+<span class="n">iter_</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">iter_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">iter_</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># we can convert to a list to see the object</span>
+<span class="nb">list</span><span class="p">(</span><span class="n">iter_</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[5]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="for-loop-with-enumerate()">for loop with <code>enumerate()</code><a class="anchor-link" href="#for-loop-with-enumerate()">&#182;</a></h4><p>The enumerate function converts an iterable object in a tuple with a index and the iterator</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># create a string</span>
+<span class="n">iterable</span> <span class="o">=</span> <span class="s2">"McCourt"</span>
+
+<span class="c1"># enumerate</span>
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">letter</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">iterable</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'index = </span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s1">; value == </span><span class="si">{</span><span class="n">letter</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>index = 0; value == M
+index = 1; value == c
+index = 2; value == C
+index = 3; value == o
+index = 4; value == u
+index = 5; value == r
+index = 6; value == t
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>A <code>for</code> loop is just another control statement. At its most basic sense, as a programmer, you are asking for a particular program to iterate over a sequence of values.</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="In-depth-understanding-of-loops">In-depth understanding of loops<a class="anchor-link" href="#In-depth-understanding-of-loops">&#182;</a></h3><p>We just learned in practive how loops work. Let's break down a bit more so that we actually grasp what is going on behind the scenes here.</p>
+<h4 id="Syntax">Syntax<a class="anchor-link" href="#Syntax">&#182;</a></h4><p>First, let's fully understand the syntax of a loop. A loop had the following syntax:</p>
+
+<pre><code>for &lt;var&gt; in &lt;iterable&gt;:
+    &lt;statement(s)&gt;</code></pre>
+<ul>
+<li><code>&lt;iterable&gt;</code>: is a collection of objects. This is the container through which our loop is navigating element-wise</li>
+<li><code>&lt;statement(s)&gt;</code>: this is the juice. It is a sequence of code that describes what is the action our program wants to repeat for each component of the iterable. Notice, <code>&lt;statements&gt;</code> in the loop body are denoted by indentation, as with all Python control structures.</li>
+<li><code>&lt;var&gt;</code>: it is a local value for every of the next element in <iterable> each time through the loop.</li>
+</ul>
+<h4 id="Iterator">Iterator<a class="anchor-link" href="#Iterator">&#182;</a></h4><p><strong>iterable</strong> is any object that contains the <code>__iter__</code> methods. This method returns an "<strong>iterator</strong>" object. An <strong>iterator</strong> object has a special method called <code>__next__()</code>, which summons each item in the collection one at a time.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># create a iterable</span>
+<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"UFPA"</span><span class="p">,</span> <span class="s2">"UERJ"</span><span class="p">,</span> <span class="s2">"UMD"</span><span class="p">,</span> <span class="s2">"NYU"</span><span class="p">,</span> <span class="s2">"Georgetown"</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+
+<span class="c1"># See the iterator methods</span>
+<span class="n">my_list</span><span class="o">.</span><span class="fm">__iter__</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;UFPA&#39;, &#39;UERJ&#39;, &#39;UMD&#39;, &#39;NYU&#39;, &#39;Georgetown&#39;]
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[9]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;list_iterator at 0x107e530d0&gt;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># iterate over the elements</span>
+<span class="n">iter_my_list</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+
+<span class="c1"># first</span>
+<span class="nb">next</span><span class="p">(</span><span class="n">iter_my_list</span><span class="p">)</span>
+
+<span class="c1"># first</span>
+<span class="nb">next</span><span class="p">(</span><span class="n">iter_my_list</span><span class="p">)</span>
+
+<span class="c1"># second</span>
+<span class="nb">next</span><span class="p">(</span><span class="n">iter_my_list</span><span class="p">)</span>
+
+<span class="c1"># third</span>
+<span class="nb">next</span><span class="p">(</span><span class="n">iter_my_list</span><span class="p">)</span>
+
+<span class="c1"># fourth</span>
+<span class="nb">next</span><span class="p">(</span><span class="n">iter_my_list</span><span class="p">)</span>
+
+<span class="c1"># firth: stop iteration</span>
+<span class="nb">next</span><span class="p">(</span><span class="n">iter_my_list</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">StopIteration</span>                             Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[10], line 20</span>
+<span class="ansi-green-intense-fg ansi-bold">     17</span> <span style="color: rgb(0,135,0)">next</span>(iter_my_list)
+<span class="ansi-green-intense-fg ansi-bold">     19</span> <span style="color: rgb(95,135,135)"># firth: stop iteration</span>
+<span class="ansi-green-fg">---&gt; 20</span> <span style="color: rgb(0,135,0)">next</span>(iter_my_list)
+
+<span class="ansi-red-fg">StopIteration</span>: </pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>So what does a <code>for</code> loop do?</strong></p>
+<ol>
+<li>The <code>for</code> statement calls <code>iter()</code> on the container object (e.g. a list).</li>
+<li>The function returns an iterator object that defines the method <code>__next__()</code> which accesses elements in the container <em>one at a time</em>.</li>
+<li>When there are no more elements, <code>__next__()</code> raises a <code>StopIteration</code> exception which tells the <code>for</code> loop to terminate.</li>
+</ol>
+<h3 id="While-loops">While loops<a class="anchor-link" href="#While-loops">&#182;</a></h3><p>For loops are literally iterations. While loops are all about repetitions. These loops are super useful when we have some target and want to keep our program running up to certain threeshold. For example, while loops are heavily used in maximization functions, in which we keep the algorithm running until our error function is at a minimum/maximum.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"This"</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>This
+This
+This
+This
+This
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Remember to increment your condition</strong> and avoid an infinite loop.</p>
+<h2 id="User-Defined-Functions">User Defined Functions<a class="anchor-link" href="#User-Defined-Functions">&#182;</a></h2><p>Most often when we start our first steps as data scientists (particularly for those like me coming from a non-computer science background), we learn to write code in two basic steps: write code sequentially to solve your immediate needs, and reuse this code for similar tasks. With that in mind, our code usually becomes unecessarily long, repetitive and hard to read.</p>
+<p><strong>What is the problem of a long and repetitive code?</strong> You can execute the same task with a long, repetitive code than with a modular, function-based implementation. However, a sequential and repetitive code exposes you as a data scientist to errors you want to avoid. These are:</p>
+<ul>
+<li>Lack of general utility.</li>
+<li>Need to edit/copy/paste your code every time you want to <strong>reuse it.</strong></li>
+<li>Need to re-write the code when you need to make small extenstion</li>
+<li><strong>More important</strong>: The more code a program contains, the more chance there is for something to go wrong, and the harder the code is to maintain.</li>
+</ul>
+<p>For this reason, the single best thing you can do to make your code more professional is to encapsulate your code in smaller, independent parts. This is usually refereed as <a href="https://www.kaggle.com/code/rtatman/six-steps-to-more-professional-data-science-code">modularity</a> in programming, and it is achieved by writing your own user-defined functions.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="When-should-I-transform-my-code-into-a-function?">When should I transform my code into a function?<a class="anchor-link" href="#When-should-I-transform-my-code-into-a-function?">&#182;</a></h2><p>Once you find yourself copying the same code more than once or twice, it's time to sink some time into writing a function.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Functions-in-Python.">Functions in Python.<a class="anchor-link" href="#Functions-in-Python.">&#182;</a></h3><p>A function is a chunk of code that performs some operation. Python comes with several built-in functions. These are standard functions (<code>type()</code>, <code>str()</code>, <code>float()</code>, etc..) or methods associated with native python classes (<code>str.capitalize()</code>,<code>list.append()</code>, etc...)</p>
+<p>In addition you can create your own functions through:</p>
+<ul>
+<li><p>function definition with <code>def()</code></p>
+</li>
+<li><p>anonymous functions with <code>lambda functions</code></p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Explicitly-defined-functions">Explicitly defined functions<a class="anchor-link" href="#Explicitly-defined-functions">&#182;</a></h3><h4 id="def()"><code>def()</code><a class="anchor-link" href="#def()">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># create a square function</span>
+<span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span>
+    <span class="k">return</span> <span class="n">y</span>
+
+<span class="c1"># run</span>
+<span class="n">square</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[12]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>100</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The code block above has the following elements:</p>
+<ul>
+<li><p><strong><code>def</code></strong>: keyword for generating a function</p>
+<ul>
+<li><code>def</code> + some_name + <code>()</code> + <code>:</code> to set up a function header</li>
+</ul>
+</li>
+<li><p><strong>Arguments</strong>: things we want to feed into the function and do something to.</p>
+</li>
+<li><p><strong><code>return</code></strong>: keyword for returning a specific value from a function</p>
+</li>
+</ul>
+<h5 id="Docstrings">Docstrings<a class="anchor-link" href="#Docstrings">&#182;</a></h5><p>Help yourself and others who will use your functions in the future. A good practice is to use docstrings to describe your function behavior, inputs, and outputs. Docstrings are strings that occur as the first statement within a named function block.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#| eval: false</span>
+<span class="k">def</span> <span class="nf">function_name</span><span class="p">(</span><span class="nb">input</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">'''</span>
+<span class="sd">    Your docstring goes here.</span>
+<span class="sd">    '''</span>
+    <span class="o">|</span>
+    <span class="o">|</span>
+    <span class="o">|</span> <span class="n">Function</span> <span class="n">block</span>
+    <span class="o">|</span>
+    <span class="o">|</span>
+    <span class="k">return</span> <span class="n">something</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>The goal of the docstring is to tell us what the function <em>does</em>.</strong> We can request a functions docstring using the <code>help()</code> function.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="w">  </span><span class="sd">'''</span>
+<span class="sd">  Takes the square of a number</span>
+<span class="sd">  input: int object</span>
+<span class="sd">  outpur: int object</span>
+<span class="sd">  '''</span>
+  <span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span>
+  <span class="k">return</span> <span class="n">y</span>
+
+<span class="n">help</span><span class="p">(</span><span class="n">square</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Help on function square in module __main__:
+
+square(x)
+    Takes the square of a number
+    input: int object
+    outpur: int object
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Arguments">Arguments<a class="anchor-link" href="#Arguments">&#182;</a></h4><p>Arguments are all the input values that lie inside the parentheses.</p>
+
+<pre><code>`def fun(argument_1,argument_2):`</code></pre>
+<p>We can supply <strong>default values</strong> to one or all arguments; in doing so, we've specified a default argument.</p>
+
+<pre><code>`def fun(argument_1 = "default 1",argument_2 = "default 2"):`</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">fun</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="o">=</span><span class="s2">""</span><span class="p">):</span>
+  <span class="k">pass</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>argument <code>a</code> is called a <strong>positional argument</strong> (<code>*arg</code>). We provide value to it by matching the position in the sequence.</li>
+<li>argument <code>b</code> is called a <strong>keyword argument</strong> (<code>**kwargs</code>). Because we give it a default value.</li>
+</ul>
+<p>Keyword arguments must <strong><em>come after</em></strong> positional arguments, or python will throw a SyntaxError.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Returning-Multiple-Arguments">Returning Multiple Arguments<a class="anchor-link" href="#Returning-Multiple-Arguments">&#182;</a></h4><p>Python function can return multiple arguments. That possibility gives you a lot of flexibility when programming in Python. This is an important difference between Python and R, since R functions don't return multiple objects in the strict sense.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">raise_both</span><span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="n">value2</span><span class="p">):</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="sd">"""Raise value1 to the power of value2</span>
+<span class="sd">      and vice versa."""</span>
+    
+    <span class="n">new_value1</span> <span class="o">=</span> <span class="n">value1</span> <span class="o">**</span> <span class="n">value2</span>
+    <span class="n">new_value2</span> <span class="o">=</span> <span class="n">value2</span> <span class="o">**</span> <span class="n">value1</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">new_value1</span><span class="p">,</span> <span class="n">new_value2</span><span class="p">)</span>
+
+<span class="n">value1</span><span class="p">,</span> <span class="n">value2</span> <span class="o">=</span> <span class="n">raise_both</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">value1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">value2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>8
+9
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Under the hood, you are using a tuple as a return object, and unpacking the tuple in the assignment.</p>
+<h4 id="Scoping">Scoping<a class="anchor-link" href="#Scoping">&#182;</a></h4><p>A scope is part of the program where an object or name may be accessible in Python. Not all objects can be accessed in the same way, and live in the same environment.</p>
+<p>There are two main scopes we are interested :</p>
+<ol>
+<li>Local: name is defined inside the current function</li>
+<li>Global: Any and all names defined at the top level of a module.</li>
+</ol>
+<p><strong>Note that <code>for</code> loops and code blocks *</strong>do not<strong>* introduce new nested scopes. We can alter the rules slightly when need by using the <code>global</code> and <code>local</code> calls</strong></p>
+<p>Let's check this code showing case a local variables</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># new_val is local </span>
+
+<span class="c1">#create function</span>
+<span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Returns the square of a number."""</span>
+    
+    <span class="n">new_val</span> <span class="o">=</span> <span class="n">value</span> <span class="o">**</span> <span class="mi">2</span>
+    <span class="k">return</span> <span class="n">new_val</span>
+
+<span class="c1"># run</span>
+<span class="n">square</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># print new_val</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">new_val</span><span class="p">)</span>
+
+<span class="c1">## What is going on here?</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[32], line 14</span>
+<span class="ansi-green-intense-fg ansi-bold">     11</span> square(<span style="color: rgb(98,98,98)">3</span>)
+<span class="ansi-green-intense-fg ansi-bold">     13</span> <span style="color: rgb(95,135,135)"># print new_val</span>
+<span class="ansi-green-fg">---&gt; 14</span> <span style="color: rgb(0,135,0)">print</span>(new_val)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;new_val&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># create a global variabl</span>
+<span class="n">new_val</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="c1"># write the same function (nor necessary)</span>
+<span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Returns the square of a number.</span>
+<span class="sd">    """</span>
+    
+    <span class="n">new_val</span> <span class="o">=</span> <span class="n">value</span> <span class="o">**</span> <span class="mi">2</span>
+    <span class="k">return</span> <span class="n">new_val</span>
+
+<span class="c1"># run</span>
+<span class="n">square</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># print var</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">new_val</span><span class="p">)</span>
+
+<span class="c1">## Again: what is going on here?</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>10
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>What if we want to access a global variables from a local scope?</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">def</span> <span class="nf">my_function</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="n">my_function</span><span class="p">()</span>
+
+<span class="c1">## How can python access a here?</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">del</span> <span class="n">a</span>
+<span class="n">my_function</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[41], line 2</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-bold" style="color: rgb(0,135,0)">del</span> a
+<span class="ansi-green-fg">----&gt; 2</span> my_function()
+
+Cell <span class="ansi-green-fg">In[40], line 4</span>, in <span class="ansi-cyan-fg">my_function</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span> <span style="color: rgb(0,0,255)">my_function</span>():
+<span class="ansi-green-fg">----&gt; 4</span>     <span style="color: rgb(0,135,0)">print</span>(a)
+
+<span class="ansi-red-fg">NameError</span>: name &#39;a&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>And what about this program?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">def</span> <span class="nf">my_function</span><span class="p">():</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="n">my_function</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>3
+0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>And modify a global variable?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">def</span> <span class="nf">my_function</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">a</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="n">my_function</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>3
+3
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><p>From Python Documentation: it is usually very bad practice to access global variables from inside functions, and even worse practice to modify them. This makes it difficult to arrange our program into logically encapsulated parts which do not affect each other in unexpected ways. If a function needs to access some external value, we should pass the value into the function as a parameter.
+:::</p>
+</blockquote>
+<p>Refer to the python documentation for a more <a href="https://python-textbok.readthedocs.io/en/1.0/Variables_and_Scope.html">detailed outline</a> of scoping conditions in python.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Lambda-functions">Lambda functions<a class="anchor-link" href="#Lambda-functions">&#182;</a></h4><p>In addition to user defined functions, Python also supports the use of <strong>anonymous functions</strong>, or so-called <strong>lambda functions</strong>. These are essentially straightforward functions that comprise only one statement, and the value returned by that statement becomes the function's result. These functions are referred to as anonymous because they lack a formal name or identifier. To define such functions, the lambda keyword is employed, which serves the sole purpose of indicating the declaration of an anonymous function.</p>
+
+<pre><code>  `lambda x: x*2`
+  `lambda args: return value`</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># user-defined</span>
+<span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+<span class="w">  </span><span class="sd">"""Returns the square of a number."""</span>
+  <span class="n">new_val</span> <span class="o">=</span> <span class="n">value</span> <span class="o">**</span> <span class="mi">2</span>
+  <span class="k">return</span> <span class="n">new_val</span>
+
+<span class="c1">#lambda function</span>
+<span class="nb">type</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[44]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>function</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Notice that the output of a lambda function is a function. This function returns the <code>return_value</code> of the lambda functions</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Using-a-lambda-function">Using a lambda function<a class="anchor-link" href="#Using-a-lambda-function">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#create a funnction from a lambda function -- this makes no sense</span>
+<span class="n">square</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">square</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># encapsulating on parenthesis</span>
+<span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>By itself, lambda functions are not super powerful. However, these shortcuts become very handy when combined with higher-order functions, which are functions that take other functions as input. For example, using the <code>map()</code> high-order function that applies a function to ALL elements in the sequence.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">48</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">square_all</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nums</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">square_all</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter<span class="w"> </span>nbconvert<span class="w"> </span>_week-03_iter_control_functions<span class="w"> </span>--to<span class="w"> </span>html<span class="w"> </span>--template<span class="w"> </span>classic
+</pre></div>
+
+    </div>
 </div>
 </div>
 

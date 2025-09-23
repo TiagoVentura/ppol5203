@@ -1,0 +1,590 @@
+---
+title: "Week 3: Intro to Python - Control Statements and Functions"
+execute: 
+  error: true
+format:
+  html:
+    code-tools: true
+editor_options: 
+  chunk_output_type: console
+---
+
+## Learning Objectives
+
+For the second half of the week three class, we will go over some concepts that are very general over any programming language. These are:
+
+-   Explore iterating through containers using **loops**
+-   Using **logical operators** for comparisons.
+-   Control the behavior of code when iterating using **control statements**.
+-   Defining **functions** to make code more flexible, debuggable, and readable.
+
+## Comparison Operators
+
+Comparison operators check whether a relationship holds between two objects. Since the relationship either holds or doesn't hold, these operators always return Boolean values. See below for a list of these operators
+
+| Operator     | Property                |
+|--------------|-------------------------|
+| **`==`**     | (value) equivalence     |
+| **`>`**      | greater than            |
+| **`<`**      | strictly less than      |
+| **`<=`**     | less than or equal      |
+| **`>`**      | strictly greater than   |
+| **`>=`**     | greater than or equal   |
+| **`!=`**     | Not Equals              |
+| **`is`**     | object identity         |
+| **`is not`** | negated object identity |
+| **`in`**     | membership in           |
+| **`not in`** | negated membership in   |
+
+```{python}
+# Some examples
+
+# Comparisons
+x = 7
+y = 6
+
+# simple comparisons
+x >= y
+x > y
+x < y
+x <= y
+
+# "in" for contains
+"d" in ["x","a","v"]
+
+```
+
+### Boolean Comparison
+
+Another type of operators are those that take as input boolen types and return as outputs the data types. These are often super useful when we are working with recoding of multiple variables. See table below:
+
+| Operator | Logical Operation |
+|----------|-------------------|
+| `and`    | Conjunction       |
+| `or`     | Disjunction       |
+| `not`    | Negation          |
+
+```{python}
+# examples
+
+# and
+True and False
+
+# or
+True  or False
+
+```
+
+> All this is barely scratching the surface [**For a in-depth discussion of comparison operators in python, see here.**](https://realpython.com/python-boolean/#boolean-operators)
+
+## Conditional Statements
+
+Any programming language needs statements that controls the sequence of execution of a particular piece of code. These statements are called control statements, and they enable you to write programs that can perform different actions based on different inputs or situations. A `for loop` is a type of of control statement.
+
+The most common control statements are `conditional statements`. The name speaks by itself: these statements control when a program run conditional on meeting a certain criteria. The most popular conditional statements are `if`, `elif`, and `else` statements.
+
+These statements have the following structure:
+
+```{python}
+#| eval: false
+if <logical statement>:
+  ~~~~ CODE ~~~~
+elif <logical statement>:
+  ~~~~ CODE ~~~~
+else:
+  ~~~~ CODE ~~~~
+```
+
+::: callout-warning
+Notice the indentation in the code blocks of the conditional statements!
+:::
+
+### `if` statement
+
+The `if` statement evaluates an expression, and if that expression is `True`, it then executes the following indented code. If the expression is `False`, nothing is executed
+
+```{python}
+# most basic statement
+if True:
+    print("This statement is True")
+```
+
+```{python}
+# with a number
+x = 5
+if x > 10: # state some condition
+    print("High")
+```
+
+### `else` statement
+
+The `else` statement executes only if the evaluation of the `if` and all the `elif` expressions are False. It is a negation statement by nature.
+
+```{python}
+# with a number
+x = 5
+if x > 10: # state some condition
+    print("High")
+else:
+    print("Low")
+
+```
+
+### `elif` statement
+
+`elif` stands for else if in plain english. It allows the programmer to concatenate multiple conditional statements. Only after the `if` statement expression is `False`, the `elif` statement is evaluated and executed
+
+```{python}
+x = 5
+if x is None:
+    print("A")
+elif x < 0:
+    print("B")
+elif x >10:
+    print("C")
+else:
+    print("D")
+```
+
+Notice you can arrive at the same behavior with nested `if` statements.
+
+```{python}
+x=5
+
+# same, but uglier version of the control flow above. 
+if x is none:
+  print("A")
+    if x < 0:
+      print("B")
+        if x >10:
+          print("C")
+else:
+  print("D")
+  
+```
+
+## Iteration
+
+A basic building block of any program is to be to be able to repeat some code over and over again. Whether it is to collect data for a list of websites, apply some function to a sequence of dataframes, or retrieve information form a set of different models, we are often interested as data scientist in repeating a certain action through a sequence of unit. This process is called **iteration** and it is often performed using a `loop` function.
+
+### for loops
+
+**Iteration** in a basic sense is simply taking one item at a time from a collection. We start at the beginning of the collection and mover through it until we reach the end. Any time we use a loop we are going over each and every item in collection
+
+In python, we can iterator over any non-scaler class with an `iter()` associated method. Examples are:
+
+-   lists
+
+-   strings
+
+-   dictionaries
+
+-   file connections
+
+-   grouped pandas df
+
+#### for loop with lists
+
+```{python}
+# create a list
+my_list = [1, 2, 3, 4, 5]
+
+# iterate
+for m in my_list:
+  print(m)
+```
+
+#### for loop with strings
+
+```{python}
+# create a list
+my_string = "Georgetown"
+
+# iterate
+for letter in my_string:
+  print(letter)
+```
+
+#### for loop with `range()`
+
+Another container with the type of sequences used to express arithmetic progression of integers
+
+```{python}
+# one value 0 to 10
+for i in range(10):
+    print(i)
+```
+
+The instance from a `range()` is just a simple iterator
+
+```{python}
+# create a range
+iter_ = range(10)
+iter_[0]
+iter_[1]
+
+# we can convert to a list to see the object
+list(iter_)
+
+```
+
+#### for loop with `enumerate()`
+
+The enumerate function converts an iterable object in a tuple with a index and the iterator
+
+```{python}
+# create a string
+iterable = "McCourt"
+
+# enumerate
+for index, letter in enumerate(iterable):
+  print(f'index = {index}; value == {letter}')
+
+```
+
+::: {callout-note}
+A `for` loop is just another control statement. At its most basic sense, as a programmer, you are asking for a particular program to iterate over a sequence of values.
+:::
+
+### In-depth understanding of loops
+
+We just learned in practive how loops work. Let's break down a bit more so that we actually grasp what is going on behind the scenes here.
+
+#### Syntax
+
+First, let's fully understand the syntax of a loop. A loop had the following syntax:
+
+```         
+for <var> in <iterable>:
+    <statement(s)>
+```
+
+-   `<iterable>`: is a collection of objects. This is the container through which our loop is navigating element-wise
+-   `<statement(s)>`: this is the juice. It is a sequence of code that describes what is the action our program wants to repeat for each component of the iterable. Notice, `<statements>` in the loop body are denoted by indentation, as with all Python control structures.
+-   `<var>`: it is a local value for every of the next element in <iterable> each time through the loop.
+
+#### Iterator
+
+**iterable** is any object that contains the `__iter__` methods. This method returns an "**iterator**" object. An **iterator** object has a special method called `__next__()`, which summons each item in the collection one at a time.
+
+```{python}
+# create a iterable
+my_list = ["UFPA", "UERJ", "UMD", "NYU", "Georgetown"]
+print(my_list)
+
+# convert to a iterator
+iter(my_list)
+my_list.__iter__()
+
+# iterate over the elements
+iter_my_list = iter(my_list)
+
+# first
+next(iter_my_list)
+
+# first
+next(iter_my_list)
+
+# second
+next(iter_my_list)
+
+# third
+next(iter_my_list)
+
+# fourth
+next(iter_my_list)
+
+# firth: stop iteration
+next(iter_my_list)
+
+```
+
+**So what does a `for` loop do?**
+
+1.  The `for` statement calls `iter()` on the container object (e.g. a list).
+2.  The function returns an iterator object that defines the method `__next__()` which accesses elements in the container *one at a time*.
+3.  When there are no more elements, `__next__()` raises a `StopIteration` exception which tells the `for` loop to terminate.
+
+### While loops
+
+For loops are literally iterations. While loops are all about repetitions. These loops are super useful when we have some target and want to keep our program running up to certain threeshold. For example, while loops are heavily used in maximization functions, in which we keep the algorithm running until our error function is at a minimum/maximum.
+
+```{python}
+x = 0
+while x < 5:
+    print("This")
+    x += 1
+```
+
+**Remember to increment your condition** and avoid an infinite loop.
+
+## User Defined Functions
+
+Most often when we start our first steps as data scientists (particularly for those like me coming from a non-computer science background), we learn to write code in two basic steps: write code sequentially to solve your immediate needs, and reuse this code for similar tasks. With that in mind, our code usually becomes unecessarily long, repetitive and hard to read.
+
+**What is the problem of a long and repetitive code?** You can execute the same task with a long, repetitive code than with a modular, function-based implementation. However, a sequential and repetitive code exposes you as a data scientist to errors you want to avoid. These are:
+
+-   Lack of general utility.
+-   Need to edit/copy/paste your code every time you want to **reuse it.**
+-   Need to re-write the code when you need to make small extenstion
+-   **More important**: The more code a program contains, the more chance there is for something to go wrong, and the harder the code is to maintain.
+
+For this reason, the single best thing you can do to make your code more professional is to encapsulate your code in smaller, independent parts. This is usually refereed as [modularity](https://www.kaggle.com/code/rtatman/six-steps-to-more-professional-data-science-code) in programming, and it is achieved by writing your own user-defined functions.
+
+::: callout-warning
+## When should I transform my code into a function?
+
+Once you find yourself copying the same code more than once or twice, it's time to sink some time into writing a function.
+:::
+
+### Functions in Python.
+
+A function is a chunk of code that performs some operation. Python comes with several built-in functions. These are standard functions (`type()`, `str()`, `float()`, etc..) or methods associated with native python classes (`str.capitalize()`,`list.append()`, etc...)
+
+In addition you can create your own functions through:
+
+-   function definition with `def()`
+
+-   anonymous functions with `lambda functions`
+
+#### `def()`
+
+```{python}
+# create a square function
+def square(x):
+    y = x*x
+    return y
+
+# run
+square(10)
+```
+
+The code block above has the following elements:
+
+-   **`def`**: keyword for generating a function
+
+    -   `def` + some_name + `()` + `:` to set up a function header
+
+-   **Arguments**: things we want to feed into the function and do something to.
+
+-   **`return`**: keyword for returning a specific value from a function
+
+##### Docstrings
+
+Help yourself and others who will use your functions in the future. A good practice is to use docstrings to describe your function behavior, inputs, and outputs. Docstrings are strings that occur as the first statement within a named function block.
+
+```{python}
+#| eval: false
+def function_name(input):
+    '''
+    Your docstring goes here.
+    '''
+    |
+    |
+    | Function block
+    |
+    |
+    return something 
+
+```
+
+**The goal of the docstring is to tell us what the function *does*.** We can request a functions docstring using the `help()` function.
+
+```{python}
+def square(x):
+  '''
+  Takes the square of a number
+  input: int object
+  outpur: int object
+  '''
+  y = x*x
+  return y
+
+help(square)
+```
+
+#### Arguments
+
+Arguments are all the input values that lie inside the parentheses.
+
+```         
+`def fun(argument_1,argument_2):`
+```
+
+We can supply **default values** to one or all arguments; in doing so, we've specified a default argument.
+
+```         
+`def fun(argument_1 = "default 1",argument_2 = "default 2"):`
+```
+
+```{python}
+def fun(a,b=""):
+  pass
+```
+
+-   argument `a` is called a **positional argument** (`*arg`). We provide value to it by matching the position in the sequence.
+-   argument `b` is called a **keyword argument** (`**kwargs`). Because we give it a default value.
+
+Keyword arguments must ***come after*** positional arguments, or python will throw a SyntaxError.
+
+::: callout-warning
+What is the `pass` statement in the chunk above?
+:::
+
+#### Returning Multiple Arguments
+
+Python function can return multiple arguments. That possibility gives you a lot of flexibility when programming in Python. This is an important difference between Python and R, since R functions don't return multiple objects in the strict sense.
+
+```{python}
+def raise_both(value1, value2):
+  """Raise value1 to the power of value2
+  and vice versa."""
+  new_value1 = value1 ** value2
+  new_value2 = value2 ** value1
+  return (new_value1, new_value2)
+
+value1, value2 = raise_both(2, 3)
+print(value1)
+print(value2)
+```
+
+Under the hood, you are using a tuple as a return object, and unpacking the tuple in the assignment.
+
+#### Scoping
+
+A scope is part of the program where an object or name may be accessible in Python. Not all objects can be accessed in the same way, and live in the same environment.
+
+There are three main scopes we are interested :
+
+1.  Local: name is defined inside the current function
+2.  Global: Any and all names defined at the top level of a module.
+3.  Built-in: names "built into" python through the builtins module
+
+::: callout-tip
+Note that `for` loops and code blocks ***do not*** introduce new nested scopes. We can alter the rules slightly when need by using the `global` and `local` calls
+:::
+
+Let's check this code showing case a local variables
+
+```{python}
+# new_val is local 
+
+#create function
+def square(value):
+  """Returns the square of a number."""
+  new_val = value ** 2
+  return new_val
+# run
+square(3)
+
+# print new_val
+print(new_val)
+```
+
+```{python}
+# create a global variabl
+new_val = 10
+
+# write the same function (nor necessary)
+def square(value):
+  """Returns the square of a number."""
+  new_val = value ** 2
+  return new_val
+
+# run
+square(3)
+
+# print var
+print(new_val)
+```
+
+**What if we want to access a global variables from a local scope?**
+
+```{python}
+a = 0
+
+def my_function():
+    print(a)
+
+my_function()
+```
+
+And what about this program?
+
+```{python}
+a = 0
+
+def my_function():
+    a = 3
+    print(a)
+
+my_function()
+
+print(a)
+```
+
+And modify a global variable?
+
+```{python}
+a = 0
+
+def my_function():
+    global a
+    a = 3
+    print(a)
+
+my_function()
+
+print(a)
+```
+
+::: callout-warning
+> From Python Documentation: it is usually very bad practice to access global variables from inside functions, and even worse practice to modify them. This makes it difficult to arrange our program into logically encapsulated parts which do not affect each other in unexpected ways. If a function needs to access some external value, we should pass the value into the function as a parameter.
+:::
+
+Refer to the python documentation for a more [detailed outline](https://python-textbok.readthedocs.io/en/1.0/Variables_and_Scope.html) of scoping conditions in python.
+
+#### Lambda functions
+
+In addition to user defined functions, Python also supports the use of **anonymous functions**, or so-called **lambda functions**. These are essentially straightforward functions that comprise only one statement, and the value returned by that statement becomes the function's result. These functions are referred to as anonymous because they lack a formal name or identifier. To define such functions, the lambda keyword is employed, which serves the sole purpose of indicating the declaration of an anonymous function.
+
+```         
+  `lambda x: x*2`
+  `lambda args: return value`
+```
+
+```{python}
+# user-defined
+def square(value):
+  """Returns the square of a number."""
+  new_val = value ** 2
+  return new_val
+
+#lambda function
+type(lambda x: x^2)
+
+```
+
+::: callout-warning
+Notice that the output of a lambda function is a function. This function returns the `return_value` of the lambda functions
+:::
+
+**Using a lambda function**
+
+```{python}
+#create a funnction from a lambda function -- this makes no sense
+square=lambda x: x**2
+square(2)
+
+# encapsulating on parenthesis
+(lambda x: x**2)(2)
+```
+
+By itself, lambda functions are not super powerful. However, these shortcuts become very handy when combined with higher-order functions, which are functions that take other functions as input. For example, using the `map()` high-order function that applies a function to ALL elements in the sequence.
+
+```{python}
+nums = [48, 6, 9, 21, 1]
+square_all = map(lambda x: x ** 2, nums)
+print(list(square_all))
+
+```

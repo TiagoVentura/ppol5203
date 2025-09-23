@@ -410,7 +410,7 @@
     "href": "weeks/week-02.html",
     "title": "Week 02",
     "section": "",
-    "text": "Lecture Notes\n\nVersion Control, Workflow and Reproducibility: Git & GitHub. html,  notebook \n\n\n\nSlides\nVersion Control, Workflow and Reproducibility: Or a bit of Git & GitHub\n\n\n\nReadings\nRequired Readings\n\nThe Plain Person’s Guide to Plain Text Social Science - Healy, Kieran\n\nCh. 1: Introduction;\nCh. 2: Keep a Record;\nCh. 3: Write and Edit;\nCh. 4: Reproduce Work.\n\nPro Git - Chacon & Straub\n\nCh. 1: Getting Started; Read 1.1 - 1.3\nCh. 2: Git Basics; Only read 2.1 - 2.5\nCh. 3: Git Branching\n\n\nAdditional Resources and Suggested Materials\n\nMore on Git/Github in Pro Git:\n\nRead 1.4 - 1.7 for help on installation and commandline\nRead Ch. 6 for more information regarding Git + Github.\n\nCh. 13 Detect Git from RStudio -Happy Git with R - Bryan, Jenny & Jim Hester\n\nVideo about authentication\n\nUsing Personal Access Tokens with GIT and GitHub\n\nMedium post"
+    "text": "Lecture Notes\n\nVersion Control, Workflow and Reproducibility: Git & GitHub. html,  notebook \n\n\n\nSlides\nVersion Control, Workflow and Reproducibility: Or a bit of Git & GitHub\n\n\nPractice Exercises\nLink for practice exercise: https://classroom.github.com/a/j0zuG5Wd\n\n-   [Solutions](/solutions/_week_02_solution.html)\n--&gt;\n\n\nReadings\nRequired Readings\n\nThe Plain Person’s Guide to Plain Text Social Science - Healy, Kieran\n\nCh. 1: Introduction;\nCh. 2: Keep a Record;\nCh. 3: Write and Edit;\nCh. 4: Reproduce Work.\n\nPro Git - Chacon & Straub\n\nCh. 1: Getting Started; Read 1.1 - 1.3\nCh. 2: Git Basics; Only read 2.1 - 2.5\nCh. 3: Git Branching\n\n\nAdditional Resources and Suggested Materials\n\nMore on Git/Github in Pro Git:\n\nRead 1.4 - 1.7 for help on installation and commandline\nRead Ch. 6 for more information regarding Git + Github.\n\nCh. 13 Detect Git from RStudio -Happy Git with R - Bryan, Jenny & Jim Hester\n\nVideo about authentication\n\nUsing Personal Access Tokens with GIT and GitHub\n\nMedium post"
   },
   {
     "objectID": "weeks/week-06.html",
@@ -1132,5 +1132,250 @@
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "Git: Distributed systems",
     "text": "Git: Distributed systems\n\n\n\n\n\n\n\n\n\n\n\nSource: pro git"
+  },
+  {
+    "objectID": "slides/week-3.html#plans-for-today",
+    "href": "slides/week-3.html#plans-for-today",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Plans for Today",
+    "text": "Plans for Today\n\nProblem Set 1\nQuick review of Git and remotes with Github\nIn-class exercise about Git\nIntroduction to Python\n\nPython as an Object-Oriented Programming Language\nData Types in Python\n\nNext week (likely):\n\nControl statements\nFunctions"
+  },
+  {
+    "objectID": "slides/week-3.html#the-three-stages-of-git",
+    "href": "slides/week-3.html#the-three-stages-of-git",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "The three stages of Git",
+    "text": "The three stages of Git"
+  },
+  {
+    "objectID": "slides/week-3.html#github-remote-git-repositories",
+    "href": "slides/week-3.html#github-remote-git-repositories",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Github (Remote Git Repositories)",
+    "text": "Github (Remote Git Repositories)"
+  },
+  {
+    "objectID": "slides/week-3.html#git-remotes-git-github.",
+    "href": "slides/week-3.html#git-remotes-git-github.",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Git Remotes: Git + Github.",
+    "text": "Git Remotes: Git + Github.\n\nMost times, you will use git integrated with Github.\nGithub allows multiple researchers to write and share code at the same time.\nThis is my workflow for github when starting a New Project. Before you write any code:\n\nGo to your github, and create a new repository\nOpen your terminal, and clone the project\ncd intro your new local folder\n\n\n\n\n# clone\ngit clone &lt;url&gt;\n\n#Move your working directory to this new folder\ncd &lt;project-directory&gt;\n\n#Write code!"
+  },
+  {
+    "objectID": "slides/week-3.html#section",
+    "href": "slides/week-3.html#section",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "",
+    "text": "Track your changes:\n\ngit add . \n\nCommit:\n\ngit commit -m 'describe your commit'\n\nPush the changes in your local repository to GitHub:\n\ngit push \n# or with branch\ngit push -u origin [branch-name] \n\nWhen you do this for this first time, you need to set yo your identity\n\ngit config --global user.name \"Your Name\" \ngit config --global user.email \"your-email@example.com\""
+  },
+  {
+    "objectID": "slides/week-3.html#pull-from-remotes",
+    "href": "slides/week-3.html#pull-from-remotes",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Pull from Remotes",
+    "text": "Pull from Remotes\nTo keep up with your colleagues work, you need to first pull their updates from the git repo.\n\n# go to your repo\ncd &lt;gitrepo&gt;\n\n# pull the changes\ngit pull\n\nSee this tutorial"
+  },
+  {
+    "objectID": "slides/week-3.html#some-additional-tasks",
+    "href": "slides/week-3.html#some-additional-tasks",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Some additional tasks:",
+    "text": "Some additional tasks:\n\ncheck the discussion about .gitignore in the lecture notes.\nyou might need to set up an personal token to push things on github, see here\nplay around with gitub: readme, directories, and issues."
+  },
+  {
+    "objectID": "slides/week-3.html#practice",
+    "href": "slides/week-3.html#practice",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": " Practice!",
+    "text": "Practice!\nClick here to setup your github classroom and do the in-class from last week for you to practice."
+  },
+  {
+    "objectID": "slides/week-3.html#any-questions",
+    "href": "slides/week-3.html#any-questions",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Any questions?",
+    "text": "Any questions?\n\nGit should be new for you. Don’t feel desperate if you struggling with git. Most people do.\nGoogle every time you have a question. That’s a big part of being a data scientist.\nCheck the Cheatsheet and you lecture notes\n\nGithub Cheatsheet (A)\nGithub Cheatsheet (B)"
+  },
+  {
+    "objectID": "slides/week-3.html#python-object-oriented-programming-language",
+    "href": "slides/week-3.html#python-object-oriented-programming-language",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Python: Object-Oriented Programming Language",
+    "text": "Python: Object-Oriented Programming Language\nIn most Python introductions out there, you would start with:\n\nPython as a calculator\nData Types in Python\nObjects\n\n\nWe will take a different route starting with a deeper understanding of Object-oriented programming"
+  },
+  {
+    "objectID": "slides/week-3.html#object-oriented-programming-oop-vs-functional-programming-language",
+    "href": "slides/week-3.html#object-oriented-programming-oop-vs-functional-programming-language",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Object-oriented programming (OOP) vs Functional Programming Language",
+    "text": "Object-oriented programming (OOP) vs Functional Programming Language\n\nPython is an object-oriented programming language (OOP).\n\nKey concept: it uses “objects” that contains data and methods (functions).\n\nR is a functional programming language\n\nKey concept: treats functions as the first-class citizens, meaning they can be assigned to variables, passed as arguments, and returned by other functions"
+  },
+  {
+    "objectID": "slides/week-3.html#section-1",
+    "href": "slides/week-3.html#section-1",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "",
+    "text": "Python OOP\n\n# call library\nimport pandas as pd\n\n# Using a Pandas Series method (OOP)\ns = pd.Series([1, 2, 3, 4, 5])\n\n# create a series object. You use a methods from this object to take the mean\ns.mean()\n\n\nR Functional Programming in Practice\n\nvec &lt;- c(1, 2, 3, 4, 5)\nmean(vec)\n\n\nObjects are the core of Python.\nFrom the objects, you will access functions that will make Python work.\nYou can also access data from object."
+  },
+  {
+    "objectID": "slides/week-3.html#section-2",
+    "href": "slides/week-3.html#section-2",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "",
+    "text": "Basics: Creating an object in Python.\n= is the assignment operator in Python. (Different from R)\n\nx = 4"
+  },
+  {
+    "objectID": "slides/week-3.html#what-happens-upon-assignment",
+    "href": "slides/week-3.html#what-happens-upon-assignment",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "What happens upon assignment?",
+    "text": "What happens upon assignment?\n\nAction 1: A reference is assigned to an object, with an id number in memory\n\nid(x)\n\n4800914440"
+  },
+  {
+    "objectID": "slides/week-3.html#section-3",
+    "href": "slides/week-3.html#section-3",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "",
+    "text": "Action 2 An object type (class) is defined at run time\n\ntype(x)\n\n&lt;class 'int'&gt;"
+  },
+  {
+    "objectID": "slides/week-3.html#section-4",
+    "href": "slides/week-3.html#section-4",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "",
+    "text": "Action 3: Object’s class is instantiated upon assignment. An object is an instance of a particular class.\n\n# what is the class?\ntype(x)\n\n&lt;class 'int'&gt;\n\n\n\n# Access methods (behaviors) using .\nx.bit_length()\n\n3\n\n\n\n# see all methods\ndir(x)\n\n['__abs__', '__add__', '__and__', '__bool__', '__ceil__', '__class__', '__delattr__', '__dir__', '__divmod__', '__doc__', '__eq__', '__float__', '__floor__', '__floordiv__', '__format__', '__ge__', '__getattribute__', '__getnewargs__', '__getstate__', '__gt__', '__hash__', '__index__', '__init__', '__init_subclass__', '__int__', '__invert__', '__le__', '__lshift__', '__lt__', '__mod__', '__mul__', '__ne__', '__neg__', '__new__', '__or__', '__pos__', '__pow__', '__radd__', '__rand__', '__rdivmod__', '__reduce__', '__reduce_ex__', '__repr__', '__rfloordiv__', '__rlshift__', '__rmod__', '__rmul__', '__ror__', '__round__', '__rpow__', '__rrshift__', '__rshift__', '__rsub__', '__rtruediv__', '__rxor__', '__setattr__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', '__truediv__', '__trunc__', '__xor__', 'as_integer_ratio', 'bit_count', 'bit_length', 'conjugate', 'denominator', 'from_bytes', 'imag', 'numerator', 'real', 'to_bytes']"
+  },
+  {
+    "objectID": "slides/week-3.html#object-oriented-programming-what-are-these-classes",
+    "href": "slides/week-3.html#object-oriented-programming-what-are-these-classes",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Object-Oriented Programming: What are these classes?",
+    "text": "Object-Oriented Programming: What are these classes?\n\n\nInstantiation: When we create a object, we are creating an instance of this class.\nInheritance: Every time we create an object, the objects inherits a class.\n\nA class is a blueprint holding of the properties of a particular data structure.\nAn instance is a realization of a particular class. This instance inherits the characteristics of its class.\n\nComponents: Classes have two major components:\n\nAttributes: these are constant features, data, a characteristic of the broader class\nMethods: these are actions, behaviors of this class. functions\n\nPolymorphism: Both attributes and methods are accessed through . function, conditional on the class"
+  },
+  {
+    "objectID": "slides/week-3.html#section-5",
+    "href": "slides/week-3.html#section-5",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "",
+    "text": "Create a Class\n\nclass Example():\n  def __init__ (self, name):\n    self.name = name\n  def hello(self):\n    print('Hi, I am ' + self.name)"
+  },
+  {
+    "objectID": "slides/week-3.html#section-6",
+    "href": "slides/week-3.html#section-6",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "",
+    "text": "Instantiate\n\n# Instatiate\nme = Example(name=\"Tiago\")\ntype(me)\n\n&lt;class '__main__.Example'&gt;"
+  },
+  {
+    "objectID": "slides/week-3.html#section-7",
+    "href": "slides/week-3.html#section-7",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "",
+    "text": "Attributes\n\nme.name\n\n'Tiago'"
+  },
+  {
+    "objectID": "slides/week-3.html#section-8",
+    "href": "slides/week-3.html#section-8",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "",
+    "text": "method\n\nme.hello() \n\nHi, I am Tiago"
+  },
+  {
+    "objectID": "slides/week-3.html#data-type",
+    "href": "slides/week-3.html#data-type",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Data Type",
+    "text": "Data Type\nPython comes with a number of built-in data types. Two major data type groups in Python:\n\nScalar types: hold one piece of information, like a digit.\nCollection types: hold multiple pieces of information\n\nThere are two ways of instantiating a data class in Python:\n\nLiterals: syntactic representation in Python, e.g. []\nConstructors: class constructors, e.g. list()"
+  },
+  {
+    "objectID": "slides/week-3.html#scalar",
+    "href": "slides/week-3.html#scalar",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Scalar",
+    "text": "Scalar\n\n\n\n\n\n\n\n\n\n\nType\nDescription\nExample\nLiteral\nConstructor\n\n\n\n\nint\ninteger types\n4\nx = 4\nint(4)\n\n\nfloat\n64-bit floating point numbers\n4.567\nx = 4.567\nfloat(4)\n\n\nbool\nboolean logical values\nTrue\nx = True\nbool(0)\n\n\nNone\nnull object (serves as a valuable place holder)\nNone\nx = None"
+  },
+  {
+    "objectID": "slides/week-3.html#collectors",
+    "href": "slides/week-3.html#collectors",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Collectors",
+    "text": "Collectors\n\n\n\n\n\n\n\n\n\n\n\nType\nDescription\nExample\nMutable\nLiteral\nConstructor\n\n\n\n\nlist\nheterogeneous sequences of objects\n[1,\"2\",True]\n✓\nx = [\"c\",\"a\",\"t\"]\nx = list(\"cat\")\n\n\nstr\nsequences of characters\n\"A word\"\n✘\nx = \"12345\"\nx = str(12345)\n\n\ntuples\nheterogeneous sequence of objects\n(1,2)\n✘\nx = (1,2)\nx = tuple([1,2])\n\n\nsets\nunordered collection of distinct objects\n{1,2}\n✓\nx = {1,2}\nx = set([1,2])\n\n\ndicts\nassociative array of key/value mappings\n{\"a\": 1}\nkeys ✘values ✓\nx = {'a':1}\nx = dict(a = 1)"
+  },
+  {
+    "objectID": "slides/week-3.html#key-concepts",
+    "href": "slides/week-3.html#key-concepts",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Key concepts",
+    "text": "Key concepts\n\n\nWhy, different from R, I should use . to run specific functions, instead of just running the functions on a object function(obj)?\nTuples and Lists are pretty much the same. But tuples are more computationally efficient (storage and speed in accessing it) than lists. Why do you think this is the case?\nAssume I have this dictionary my_dict = {'a': 4, 'b': 7, 'c': 9.2}. If I tried to access the first element of the dictionary with my_dict[0], Python will throw me an error. Why?"
+  },
+  {
+    "objectID": "slides/week-3.html#in-class-exercises",
+    "href": "slides/week-3.html#in-class-exercises",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "In-class exercises",
+    "text": "In-class exercises\n\nTab ATab BTab C\n\n\nLet’s practice with lists first. One way to explore data structures is to learn their methods. Check all the methods of a list by running ‘dir()’ on a list object. Let’s explore these functions using the following list object, by answering the below questions. See here for list methods:\n\n\nlist_exercise = [\"Ramy\", \"Victorie\", \"Letty\", \"Robin\", \"Antoine\", \"Griffin\"] \n\n\n\nAdd “Cathy O’Neil” to the list. Insert “Professor Crast” as the first element of the list\n\n\nRemove “Letty” from the list. Also remove the last element of the list.\n\n\nFind the index of the occurrence of the name “Robin”. Count the number of times None appears in the list.\n\n\nCreate a new list with the names in alphabetical order, copy this list as a new list without changing the values of the original list\n\n\nAdd the string “Lovell” to copied_list and ensure that list_exercise remains unchanged.\n\n\n\nLet’s do a similar exercise with Dictionaries. Consider the dictionary below. See here for dictionary methods:\n\n\ndict_exercise = {\"Ramy\": \"India\",\n                  \"Victorie\":\"Haiti\", \n                  \"Letty\":\"England\", \n                  \"Robin\":\"Canton\", \n                  \"Antoine\":\"Nigeria\", \n                  \"Griffin\":\"China\"}\ndict_exercise\n\n\n\nLook up the keys in the dictionary, and store them in a list object called keys\n\n\nAdd yourself, and two other colleagues in this dictionary. The values are the countries the person in the key was born.\n\n\nRemove “Ramy” from the dictionary, and save as another dictionary\n\n\n\nLet’s now play around with some string methods. See the string below from the book “Babel:An Arcane History”. See here for string methods:\n\nbabel = \"That's just what translation is, I think. That's all speaking is. Listening to the other and trying to see past your own biases to glimpse what they're trying to say. Showing yourself to the world, and hoping someone else understands.\"\n\n\nDetermine if the word “Babel” is present in the string.\n\n\nCount how many times the word “translation” appears\n\n\nConvert the entire string to upper case\n\n\nConvert the pronoum “I” to “We” in the entire text.\n\n\nStrip any punctuation (like commas, exclamation marks, etc.) from the string."
+  },
+  {
+    "objectID": "slides/week-3.html#class-part-ii-control-statements-loops-and-functions",
+    "href": "slides/week-3.html#class-part-ii-control-statements-loops-and-functions",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Class Part II: Control Statements, Loops and Functions",
+    "text": "Class Part II: Control Statements, Loops and Functions\nWe will go over some concepts that are very general over any programming language.\n\n\nUsing logical operators for comparisons.\nControl the behavior of code when iterating using control statements.\nExplore iterating through containers using loops\nDefining functions to make code more flexible, debuggable, and readable. (Probably for next week)"
+  },
+  {
+    "objectID": "slides/week-3.html#comparison-operators",
+    "href": "slides/week-3.html#comparison-operators",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Comparison Operators",
+    "text": "Comparison Operators\n\n\n\nOperator\nProperty\n\n\n\n\n==\n(value) equivalence\n\n\n&gt;\ngreater than\n\n\n&lt;\nstrictly less than\n\n\n&lt;=\nless than or equal\n\n\n&gt;\nstrictly greater than\n\n\n&gt;=\ngreater than or equal\n\n\n!=\nNot Equals\n\n\nis\nobject identity\n\n\nis not\nnegated object identity\n\n\nin\nmembership in\n\n\nnot in\nnegated membership in"
+  },
+  {
+    "objectID": "slides/week-3.html#conditional-statements",
+    "href": "slides/week-3.html#conditional-statements",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Conditional Statements",
+    "text": "Conditional Statements\nAny programming language needs statements that controls the sequence of execution of a particular piece of code.\n\nif-else statements\nfor loops\nwhile loops"
+  },
+  {
+    "objectID": "slides/week-3.html#ifelse-statements",
+    "href": "slides/week-3.html#ifelse-statements",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Ifelse Statements",
+    "text": "Ifelse Statements\nDefinition: Conditional execution.\n\nif &lt;logical statement&gt;:\n \n \n  ~~~~ CODE ~~~~\n\n\nelif &lt;logical statement&gt;:\n\n\n  ~~~~ CODE ~~~~\n\n\nelse:\n\n  ~~~~ CODE ~~~~"
+  },
+  {
+    "objectID": "slides/week-3.html#for-loops",
+    "href": "slides/week-3.html#for-loops",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "For loops",
+    "text": "For loops\nDefinition: Taking one item at a time from a collection. We start at the beginning of the collection and mover through it until we reach the end.\nIn python, we can iterate over:\n\nlists\nstrings\ndictionaries\nfile connections\ngrouped pandas df"
+  },
+  {
+    "objectID": "slides/week-3.html#example",
+    "href": "slides/week-3.html#example",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Example:",
+    "text": "Example:\n\n# create a list\nmy_list = [1, 2, 3, 4, 5]\n\n# iterate with a for loop:\nfor m in my_list:\n  print(m)\n\n1\n2\n3\n4\n5"
+  },
+  {
+    "objectID": "slides/week-3.html#while-loops",
+    "href": "slides/week-3.html#while-loops",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "While Loops",
+    "text": "While Loops\n\nWhile loops are all about repetitions. Instead of a sequence, the operation will repeat up according to the conditional statement in the loop.\n\n\n# while loops\nx = 0\nwhile x &lt; 5:\n    print(\"This\")\n    x += 1\n\nThis\nThis\nThis\nThis\nThis"
+  },
+  {
+    "objectID": "slides/week-3.html",
+    "href": "slides/week-3.html",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "",
+    "text": "Quick review of Git and remotes with Github\nIn-class exercise about Git\nIntroduction to Python\n\nPython as an Object-Oriented Programming Language\nData Types in Python\n\nNext week (likely):\n\nControl statements\nFunctions"
+  },
+  {
+    "objectID": "slides/week-3.html#first-problem-set-assignment-and-datacamp",
+    "href": "slides/week-3.html#first-problem-set-assignment-and-datacamp",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "First Problem Set Assignment and Datacamp",
+    "text": "First Problem Set Assignment and Datacamp"
   }
 ]

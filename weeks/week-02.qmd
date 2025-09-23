@@ -42,12 +42,15 @@ tbl-colwidths: [10,50,40]
 
 [Version Control, Workflow and Reproducibility: Or a bit of Git & GitHub](/slides/week-2.html)
 
-<!--# Practice Exercises
+# Practice Exercises
 
-Link for practice exercise: https://classroom.github.com/a/epMgGVTy
+Link for practice exercise: https://classroom.github.com/a/j0zuG5Wd
+
+```{=html}
 
 -   [Solutions](/solutions/_week_02_solution.html)
 -->
+```
 
 # Readings
 
@@ -81,6 +84,6 @@ Link for practice exercise: https://classroom.github.com/a/epMgGVTy
 
 **Video about authentication**
 
-- [Using Personal Access Tokens with GIT and GitHub](https://www.youtube.com/watch?v=kHkQnuYzwoo)\
+-   [Using Personal Access Tokens with GIT and GitHub](https://www.youtube.com/watch?v=kHkQnuYzwoo)\
 
-- [Medium post](https://medium.com/@chiemekaifemegbulem/step-by-step-guide-to-updating-github-token-on-linux-terminal-a97c7117ed4b)
+-   [Medium post](https://medium.com/@chiemekaifemegbulem/step-by-step-guide-to-updating-github-token-on-linux-terminal-a97c7117ed4b)

@@ -1,0 +1,715 @@
+---
+title: "<span style = 'font-size: 100%;'> PPOL 5203 - Data Science I: Foundations </span>"
+subtitle: "<span style = 'font-size: 100%;'> Week 3: Intro to Python - OOP, Data Types, Control Statements and Functions </span>"
+author: "Professor: Tiago Ventura"
+date: "09/19/2023"
+execute: 
+  echo: true
+format:
+  revealjs: 
+    transition: slide
+    background-transition: fade
+    code-line-numbers: false
+    width: 1300 #1050
+    height: 900 #700
+    center: true
+    slide-number: true
+    incremental: false
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    footer: "Data science I: Foundations"
+    theme: [simple, custom.scss]
+---
+## Plans for Today
+
+-   Problem Set 1
+
+-   Quick review of Git and remotes with Github
+
+-   In-class exercise about Git
+
+-   Introduction to Python
+
+    -   Python as an Object-Oriented Programming Language
+
+    -   Data Types in Python
+
+-   Next week (likely):
+
+    -   Control statements
+
+    -   Functions
+    
+# First Problem Set Assignment and Datacamp {background-color="#447099"}
+
+## The three stages of Git
+
+```{r  echo=FALSE, out.width = "80%", fig.align="center"}
+knitr::include_graphics("week2_figs/git_stages.png") 
+```
+
+## Github (Remote Git Repositories)
+
+```{r  echo=FALSE, out.width = "80%", fig.align="center"}
+knitr::include_graphics("week2_figs/git_remotes.png") 
+```
+
+## Git Remotes: Git + Github.
+
+-   Most times, you will use git integrated with Github.
+
+-   Github allows multiple researchers to write and share code at the same time.
+
+-   This is my workflow for github when starting a New Project. Before you write any code:
+
+    -   Go to your github, and create a new repository
+
+    -   Open your terminal, and clone the project
+
+    -   cd intro your new local folder
+
+::: fragment
+```{python}
+#| eval: false
+# clone
+git clone <url>
+
+#Move your working directory to this new folder
+cd <project-directory>
+
+#Write code!
+```
+:::
+
+## 
+
+Track your changes:
+
+```{python}
+#| eval: false
+git add . 
+```
+
+Commit:
+
+```{python}
+#| eval: false
+git commit -m 'describe your commit'
+```
+
+Push the changes in your local repository to GitHub:
+
+```{python}
+#| eval: false
+git push 
+# or with branch
+git push -u origin [branch-name] 
+```
+
+When you do this for this first time, you need to set yo your identity
+
+```{python}
+#| eval: false
+git config --global user.name "Your Name" 
+git config --global user.email "your-email@example.com"
+```
+
+
+## Pull from Remotes
+
+To keep up with your colleagues work, you need to first pull their updates from the git repo.
+
+```{python}
+#| eval: false
+
+# go to your repo
+cd <gitrepo>
+
+# pull the changes
+git pull
+
+```
+
+See this [tutorial](https://www.atlassian.com/git/tutorials/syncing/git-pull)
+
+## Some additional tasks:
+
+-   check the discussion about .gitignore in the lecture notes.
+
+-   you might need to set up an personal token to push things on github, see [here](https://docs.github.com/en/enterprise-server@3.6/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
+
+-   play around with gitub: readme, directories, and issues.
+
+## `r fontawesome::fa("laptop-code")` Practice!
+
+Click [here](https://classroom.github.com/a/j0zuG5Wd) to setup your github classroom and do the in-class from last week for you to practice.
+
+# Questions? {background-color="#447099"}
+
+# Git in Class Exercise {background-color="#447099"}
+
+```{r}
+#| echo: false
+library(countdown)
+countdown(minutes = 15, seconds = 0, 
+          left = 0, right = 0,
+          top=0,
+          padding = "100px",
+          margin = "10%",
+          font_size = "6em")
+
+
+```
+
+# `r fontawesome::fa("laptop-code")` Solution
+
+## Any questions?
+
+-   Git should be new for you. Don't feel desperate if you struggling with git. Most people do.
+
+-   Google every time you have a question. That's a big part of being a data scientist.
+
+-   Check the Cheatsheet and you lecture notes
+
+    -   [**Github Cheatsheet (A)**](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)
+    -   [**Github Cheatsheet (B)**](https://education.github.com/git-cheat-sheet-education.pdf)
+
+# Introduction to Python {background-color="#447099"}
+
+## Python: Object-Oriented Programming Language
+
+In most Python introductions out there, you would start with:
+
+-   Python as a calculator
+
+-   Data Types in Python
+
+-   Objects
+
+::: fragment
+**We will take a different route starting with a deeper understanding of Object-oriented programming**
+:::
+
+## Object-oriented programming (OOP) vs Functional Programming Language
+
+-   **Python** is an object-oriented programming language (OOP).
+
+    -   Key concept: it uses "objects" that contains data and methods (functions).
+
+-   **R** is a functional programming language
+
+    -   Key concept: treats functions as the first-class citizens, meaning they can be assigned to variables, passed as arguments, and returned by other functions
+
+## 
+
+#### Python OOP
+
+```{python}
+#| eval: false
+
+# call library
+import pandas as pd
+
+# Using a Pandas Series method (OOP)
+s = pd.Series([1, 2, 3, 4, 5])
+
+# create a series object. You use a methods from this object to take the mean
+s.mean()
+
+```
+
+<br>
+
+#### R Functional Programming in Practice
+
+```{python}
+#| eval: false
+vec <- c(1, 2, 3, 4, 5)
+mean(vec)
+```
+
+-   Objects are the core of Python.
+-   From the objects, you will access functions that will make Python work.
+-   You can also access data from object.
+
+## 
+
+### Basics: Creating an object in Python.
+
+`=` is the assignment operator in Python. (Different from R)
+
+```{python}
+x = 4
+```
+
+## What happens upon assignment?
+
+::: fragment
+**Action 1:** A reference is assigned to an object, with an id number in memory
+
+```{python}
+id(x)
+```
+:::
+
+## 
+
+**Action 2** An object type (class) is defined at run time
+
+```{python}
+type(x)
+```
+
+## 
+
+**Action 3:** Object's class is instantiated upon assignment. An object is an **instance** of a particular class.
+
+```{python}
+# what is the class?
+type(x)
+
+```
+
+```{python}
+# Access methods (behaviors) using .
+x.bit_length()
+```
+
+```{python}
+# see all methods
+dir(x)
+```
+
+## Object-Oriented Programming: What are these classes?
+
+::: incremental
+-   **Instantiation:** When we create a object, we are creating an instance of this class.
+
+-   **Inheritance:** Every time we create an object, the objects inherits a class.
+
+    -   **A class** is a blueprint holding of the properties of a particular data structure.
+
+    -   **An instance** is a realization of a particular class. This instance inherits the characteristics of its class.
+
+-   **Components:** Classes have two major components:
+
+    -   **Attributes:** these are constant features, data, a characteristic of the broader class
+
+    -   **Methods:** these are actions, behaviors of this class. functions
+
+-   **Polymorphism:** Both attributes and methods are accessed through `.` function, conditional on the class
+:::
+
+## 
+
+### Create a Class
+
+```{python}
+class Example():
+  def __init__ (self, name):
+    self.name = name
+  def hello(self):
+    print('Hi, I am ' + self.name)
+```
+
+## 
+
+### Instantiate
+
+```{python}
+# Instatiate
+me = Example(name="Tiago")
+type(me)
+```
+
+## 
+
+### Attributes
+
+```{python}
+me.name
+```
+
+## 
+
+### method
+
+```{python}
+me.hello() 
+```
+
+# `r fontawesome::fa("laptop-code")` Coding
+
+# Data types: Native Classes in Python
+
+## Data Type
+
+Python comes with a number of built-in data types. Two major data type groups in Python:
+
+-   **Scalar types**: hold one piece of information, like a digit.
+
+-   **Collection types**: hold multiple pieces of information
+
+There are two ways of instantiating a data class in Python:
+
+-   **Literals:** syntactic representation in Python, e.g. \[\]
+
+-   **Constructors:** class constructors, e.g. list()
+
+## Scalar
+
+| *Type* | *Description* | *Example* | *Literal* | *Constructor* |
+|:-----------:|:---------------------|:-----------:|:-----------:|:-----------:|
+| `int` | integer types | `4` | `x = 4` | `int(4)` |
+| `float` | 64-bit floating point numbers | `4.567` | `x = 4.567` | `float(4)` |
+| `bool` | boolean logical values | `True` | `x = True` | `bool(0)` |
+| `None` | null object (serves as a valuable place holder) | `None` | `x = None` |  |
+
+## Collectors {.smaller}
+
+| *Type* | *Description* | *Example* | *Mutable* | *Literal* | *Constructor* |
+|:----------:|:-----------|:----------:|:----------:|:----------:|:----------:|
+| `list` | heterogeneous sequences of objects | `[1,"2",True]` | ✓ | `x = ["c","a","t"]` | `x = list("cat")` |
+| `str` | sequences of characters | `"A word"` | ✘ | `x = "12345"` | `x = str(12345)` |
+| `tuples` | heterogeneous sequence of objects | `(1,2)` | ✘ | `x = (1,2)` | `x = tuple([1,2])` |
+| `sets` | unordered collection of *distinct* objects | `{1,2}` | ✓ | `x = {1,2}` | `x = set([1,2])` |
+| `dicts` | associative array of key/value mappings | `{"a": 1}` | keys ✘<br>values ✓ | `x = {'a':1}` | `x = dict(a = 1)` |
+
+# `r fontawesome::fa("laptop-code")` Coding
+
+## Key concepts
+
+::: incremental
+-   Why, different from R, I should use <class>.<method> to run specific functions, instead of just running the functions on a object `function(obj)`?
+
+-   Tuples and Lists are pretty much the same. But tuples are more computationally efficient (storage and speed in accessing it) than lists. Why do you think this is the case?
+
+-   Assume I have this dictionary `my_dict = {'a': 4, 'b': 7, 'c': 9.2}`. If I tried to access the first element of the dictionary with `my_dict[0]`, Python will throw me an error. Why?
+:::
+
+## In-class exercises
+
+::: panel-tabset
+### Tab A
+
+Let's practice with lists first. One way to explore data structures is to learn their methods. Check all the methods of a list by running 'dir()' on a list object. Let's explore these functions using the following list object, by answering the below questions. See [here](https://www.w3schools.com/python/python_ref_list.asp) for list methods:
+
+<br>
+
+```{python}
+#| eval: false
+list_exercise = ["Ramy", "Victorie", "Letty", "Robin", "Antoine", "Griffin"] 
+
+```
+
+<br>
+
+1.  Add "Cathy O'Neil" to the list. Insert "Professor Crast" as the first element of the list
+
+```{python}
+#| echo: false
+#| eval: false
+
+#1
+list_exercise.append("Cathy O'neil")
+list_exercise + ["Cathy Oneil"]
+
+#2
+["Professor Crast"] + list_exercise 
+list_exercise.insert(0, "Professor Crast")
+print(list_exercise)
+```
+
+2.  Remove "Letty" from the list. Also remove the last element of the list.
+
+```{python}
+#| echo: false
+#| eval: false
+
+# 1
+list_exercise.remove("Letty")
+print(list_exercise)
+
+# 2
+list_exercise.pop()
+print(list_exercise)
+```
+
+3.  Find the index of the occurrence of the name "Robin". Count the number of times None appears in the list.
+
+```{python}
+#| echo: false
+#| eval: false
+
+# solution
+index_robin = list_exercise.index("Robin")
+print(index_robin)
+
+# solution
+list_exercise.count(None)
+  
+```
+
+4.  Create a new list with the names in alphabetical order, copy this list as a new list without changing the values of the original list
+
+```{python}
+#| echo: false
+#| eval: false
+list_copy = list_exercise.copy()
+list_copy.sort()
+list_copy
+```
+
+5.  Add the string "Lovell" to copied_list and ensure that list_exercise remains unchanged.
+
+```{python}
+#| echo: false
+#| eval: false
+list_copy.append("Lovell")
+list_copy
+```
+
+### Tab B
+
+Let's do a similar exercise with Dictionaries. Consider the dictionary below. See [here](https://www.w3schools.com/python/python_ref_dictionary.asp) for dictionary methods:
+
+<br>
+
+```{python}
+#| eval: false
+
+dict_exercise = {"Ramy": "India",
+                  "Victorie":"Haiti", 
+                  "Letty":"England", 
+                  "Robin":"Canton", 
+                  "Antoine":"Nigeria", 
+                  "Griffin":"China"}
+dict_exercise
+
+```
+
+<br>
+
+1.  Look up the keys in the dictionary, and store them in a list object called keys
+
+```{python}
+#| echo: false
+#| eval: false
+
+keys = list(dict_exercise.keys())
+
+```
+
+2.  Add yourself, and two other colleagues in this dictionary. The values are the countries the person in the key was born.
+
+```{python}
+#| echo: false
+#| eval: false
+
+dict_exercise["tiago"]="Brazil"
+```
+
+3.  Remove "Ramy" from the dictionary, and save as another dictionary
+
+```{python}
+#| echo: false
+#| eval: false
+
+# create new
+dict_new={"Ramy":dict_exercise.get("Ramy")}
+print(dict_new)
+
+# pop
+dict_exercise.pop("Ramy")
+print(dict_exercise)
+
+# del
+del dict_exercise["Robin"]
+print(dict_exercise)
+```
+
+### Tab C
+
+Let's now play around with some string methods. See the string below from the book "Babel:An Arcane History". See [here](https://www.w3schools.com/python/python_ref_string.asp) for string methods:
+
+```{python}
+#| eval: false
+babel = "That's just what translation is, I think. That's all speaking is. Listening to the other and trying to see past your own biases to glimpse what they're trying to say. Showing yourself to the world, and hoping someone else understands."
+
+```
+
+1.  Determine if the word "Babel" is present in the string.
+
+```{python}
+#| echo: false
+#| eval: false
+"Babel" in babel
+```
+
+2.  Count how many times the word "translation" appears
+
+```{python}
+#| echo: false
+#| eval: false
+
+babel.count("translation")
+
+# where
+babel.index("translation")
+
+# see
+babel[17:17+len("translation")]
+
+```
+
+3.  Convert the entire string to upper case
+
+```{python}
+#| echo: false
+#| eval: false
+babel.upper()
+
+```
+
+4.  Convert the pronoum "I" to "We" in the entire text.
+
+```{python}
+#| echo: false
+#| eval: false
+babel.replace("I ", "We ")
+```
+
+5.  Strip any punctuation (like commas, exclamation marks, etc.) from the string.
+
+```{python}
+#| echo: false
+#| eval: false
+
+# Define a string containing some punctuation marks.
+punctuation = ",'.!"
+
+# Iterate over: we will see this later. 
+for char in punctuation:
+    babel = babel.replace(char, "")
+    
+print(babel)    
+```
+:::
+
+# Let's take a break (Until next week!)
+
+```{r}
+#| echo: false
+library(countdown)
+countdown(minutes = 10, seconds = 0, 
+          left = 0, right = 0,
+          top=0,
+          padding = "100px",
+          margin = "10%",
+          font_size = "6em")
+```
+
+## Class Part II: Control Statements, Loops and Functions
+
+We will go over some concepts that are very general over any programming language.
+
+::: incremental
+-   Using logical operators for comparisons.
+
+-   Control the behavior of code when iterating using control statements.
+
+-   Explore iterating through containers using loops
+
+-   Defining functions to make code more flexible, debuggable, and readable. (Probably for next week)
+:::
+
+## Comparison Operators
+
+| Operator     | Property                |
+|--------------|-------------------------|
+| **`==`**     | (value) equivalence     |
+| **`>`**      | greater than            |
+| **`<`**      | strictly less than      |
+| **`<=`**     | less than or equal      |
+| **`>`**      | strictly greater than   |
+| **`>=`**     | greater than or equal   |
+| **`!=`**     | Not Equals              |
+| **`is`**     | object identity         |
+| **`is not`** | negated object identity |
+| **`in`**     | membership in           |
+| **`not in`** | negated membership in   |
+
+## Conditional Statements
+
+Any programming language needs statements that controls the sequence of execution of a particular piece of code.
+
+-   if-else statements
+-   for loops
+-   while loops
+
+## Ifelse Statements
+
+**Definition:** Conditional execution.
+
+```         
+
+if <logical statement>:
+ 
+ 
+  ~~~~ CODE ~~~~
+
+
+elif <logical statement>:
+
+
+  ~~~~ CODE ~~~~
+
+
+else:
+
+  ~~~~ CODE ~~~~
+```
+
+## For loops
+
+**Definition:** Taking one item at a time from a collection. We start at the beginning of the collection and mover through it until we reach the end.
+
+In python, we can iterate over:
+
+-   lists
+
+-   strings
+
+-   dictionaries
+
+-   file connections
+
+-   grouped pandas df
+
+## Example:
+
+```{python}
+# create a list
+my_list = [1, 2, 3, 4, 5]
+
+# iterate with a for loop:
+for m in my_list:
+  print(m)
+
+
+```
+
+## While Loops
+
+-   While loops are all about repetitions. Instead of a sequence, the operation will repeat up according to the conditional statement in the loop.
+
+```{python}
+# while loops
+x = 0
+while x < 5:
+    print("This")
+    x += 1
+```
+
+# `r fontawesome::fa("laptop-code")` Coding
