@@ -2,7 +2,6 @@
 title: "<span style = 'font-size: 100%;'> PPOL 5203 - Data Science I: Foundations </span>"
 subtitle: "<span style = 'font-size: 100%;'> Week 3: Intro to Python - OOP, Data Types, Control Statements and Functions </span>"
 author: "Professor: Tiago Ventura"
-date: "09/19/2023"
 execute: 
   echo: true
 format:
@@ -10,8 +9,8 @@ format:
     transition: slide
     background-transition: fade
     code-line-numbers: false
-    width: 1300 #1050
-    height: 900 #700
+    width: 1600
+    height: 900
     center: true
     slide-number: true
     incremental: false
@@ -141,11 +140,12 @@ See this [tutorial](https://www.atlassian.com/git/tutorials/syncing/git-pull)
 
 -   play around with gitub: readme, directories, and issues.
 
+# Questions? {background-color="#447099"}
+
 ## `r fontawesome::fa("laptop-code")` Practice!
 
 Click [here](https://classroom.github.com/a/j0zuG5Wd) to setup your github classroom and do the in-class from last week for you to practice.
 
-# Questions? {background-color="#447099"}
 
 # Git in Class Exercise {background-color="#447099"}
 
@@ -164,13 +164,13 @@ countdown(minutes = 15, seconds = 0,
 
 # `r fontawesome::fa("laptop-code")` Solution
 
-## Any questions?
+## TLDR -- Don't Panic!
 
 -   Git should be new for you. Don't feel desperate if you struggling with git. Most people do.
 
 -   Google every time you have a question. That's a big part of being a data scientist.
 
--   Check the Cheatsheet and you lecture notes
+-   Check the Cheat sheet and your lecture notes
 
     -   [**Github Cheatsheet (A)**](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)
     -   [**Github Cheatsheet (B)**](https://education.github.com/git-cheat-sheet-education.pdf)
