@@ -39,8 +39,8 @@ website:
             text: "Week 2: Version Control"
           - href: weeks/week-03.qmd
             text: "Week 3: Intro to Python "
-          #- href: weeks/week-04.qmd
-          #  text: "Week 4: Intro to Python II"
+          - href: weeks/week-04.qmd
+            text: "Week 4: Intro to Python II"
           #- href: weeks/week-05.qmd
           #  text: "Week 5: From Nested lists to Dataframes"
           #- href: weeks/week-06.qmd

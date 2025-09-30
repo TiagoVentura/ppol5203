@@ -1,0 +1,742 @@
+---
+title: "<span style = 'font-size: 100%;'> PPOL 5203 - Data Science I: Foundations </span>"
+subtitle: "<span style = 'font-size: 100%;'> Week 4: Intro to Python II: Scaling up your code - Iteration, Comprehension and Functions</span>"
+author: "Professor: Tiago Ventura"
+date: "10/01/2024"
+execute: 
+  echo: true
+  error: true
+format:
+  revealjs: 
+    transition: slide
+    background-transition: fade
+    code-line-numbers: false
+    width: 1600
+    height: 900
+    center: true
+    slide-number: true
+    incremental: false
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    footer: "Data science I: Foundations"
+    theme: [simple, custom.scss]
+---
+```{r setup, echo=FALSE}
+library(reticulate)
+usethis::edit_r_environ()
+use_python("/Users/tb186/anaconda3/bin/python", required = TRUE)
+```
+
+## Problem set 01
+
+You made several mistakes on the first question of the problem set. Unfortunately, you did not really considered this part of the question: 
+
+> Your task: Create a folder in this repository named question-01 that **follows the best practices for project management and reproducibility we discussed in class**.
+
+:::fragment
+:::incremental
+**Mistakes:**
+
+- No README!!! 
+  
+   - Always have a read me explaining what your repository is
+
+- Several files missing. 
+
+   - some are lack of attention on your part
+   
+   - some are because you are not considering the existence of a .gitignore file
+   
+- Several files poorly named (white spaces, no clear explanation of the file, no numbering to order the code structure) 
+
+- No correct folder structure
+:::
+:::
+
+# Example from another year
+
+## Opportunity for extra points
+
+Most of you lost a lot of points in this question. I will give you an opportunity to recover some of these points. 
+
+- Until the **end of the day today**, you can resubmit your **Question 1 of problem set**. Just do another push on github.
+
+- Fix all the issues, and you can earn **up to** 10 extra points. 
+
+    - **Tip 1:** Check the example repo on your notebook to see what your response should look like.
+
+     - **Tip 2:** Create a readme.md file explaining your repository, describing your article, folder, and all the files. The readme should be inside the main folder
+
+     - **Tip 3:** All the files have bad names. Rename them following best practices.
+
+## For the future...
+
+I will not give you these extra point in every problem set. 
+
+- Questions? Ask your TA, ask me, ask on slack. 
+
+- Not clear how to answer the question? Ask your TA, ask me, ask on slack.
+
+- Read the lecture notes. 
+
+- Start solving your problem set early on. 
+
+## Plans for today
+
+-   Start slow with the in-class exercise from last week.
+
+-   Scaling up your python skills:
+
+    -   Control statements (if, for and while loops)
+
+    -   Functions
+
+-   Intro do Python - Part II.
+
+    -   Importing packages in Python
+
+    -   List Comprehension + Generators
+
+    -   File Management
+
+    -   Data as Nested Lists
+
+## In Class-Exercise (Use the Lecture Notes to solve)
+
+::: panel-tabset
+### Tab A
+
+Let's practice with lists first. One way to explore data structures is to learn their methods. Check all the methods of a list by running 'dir()' on a list object. Let's explore these functions using the following list object, by answering the below questions. See [here](https://www.w3schools.com/python/python_ref_list.asp) for list methods:
+
+<br>
+
+```{python}
+#| eval: false
+list_exercise = ["Ramy", "Victorie", "Letty", "Robin", "Antoine", "Griffin"] 
+
+```
+
+<br>
+
+1.  Add "Cathy O'Neil" to the list. Insert "Professor Crast" as the first element of the list
+
+```{python}
+#| echo: false
+#| eval: false
+
+#1
+list_exercise.append("Cathy O'neil")
+list_exercise + ["Cathy Oneil"]
+
+#2
+["Professor Crast"] + list_exercise 
+list_exercise.insert(0, "Professor Crast")
+print(list_exercise)
+```
+
+2.  Remove "Letty" from the list. Also remove the last element of the list.
+
+```{python}
+#| echo: false
+#| eval: false
+
+# 1
+list_exercise.remove("Letty")
+print(list_exercise)
+
+# 2
+list_exercise.pop()
+print(list_exercise)
+```
+
+3.  Find the index of the occurrence of the name "Robin". Count the number of times None appears in the list.
+
+```{python}
+#| echo: false
+#| eval: false
+
+# solution
+index_robin = list_exercise.index("Robin")
+print(index_robin)
+
+# solution
+list_exercise.count(None)
+  
+```
+
+4.  Create a new list with the names in alphabetical order, copy this list as a new list without changing the values of the original list
+
+```{python}
+#| echo: false
+#| eval: false
+list_copy = list_exercise.copy()
+list_copy.sort()
+list_copy
+```
+
+5.  Add the string "Lovell" to copied_list and ensure that list_exercise remains unchanged.
+
+```{python}
+#| echo: false
+#| eval: false
+list_copy.append("Lovell")
+list_copy
+```
+
+### Tab B
+
+Let's do a similar exercise with Dictionaries. Consider the dictionary below. See [here](https://www.w3schools.com/python/python_ref_dictionary.asp) for dictionary methods:
+
+<br>
+
+```{python}
+#| eval: false
+
+dict_exercise = {"Ramy": "India",
+                  "Victorie":"Haiti", 
+                  "Letty":"England", 
+                  "Robin":"Canton", 
+                  "Antoine":"Nigeria", 
+                  "Griffin":"China"}
+dict_exercise
+
+```
+
+<br>
+
+1.  Look up the keys in the dictionary, and store them in a list object called keys
+
+```{python}
+#| echo: false
+#| eval: false
+
+keys = list(dict_exercise.keys())
+
+```
+
+2.  Add yourself, and two other colleagues in this dictionary. The values are the countries the person in the key was born.
+
+```{python}
+#| echo: false
+#| eval: false
+
+dict_exercise["tiago"]="Brazil"
+```
+
+3.  Remove "Ramy" from the dictionary, and save as another dictionary
+
+```{python}
+#| echo: false
+#| eval: false
+
+# create new
+dict_new={"Ramy":dict_exercise.get("Ramy")}
+
+# pop
+dict_exercise.pop("Ramy")
+dict_exercise
+
+# del
+del dict_exercise["Victorie"]
+print(dict_exercise)
+```
+
+### Tab C
+
+Let's now play around with some string methods. See the string below from the book "Babel:An Arcane History". See [here](https://www.w3schools.com/python/python_ref_string.asp) for string methods:
+
+```{python}
+#| eval: false
+babel = "That's just what translation is, I think. That's all speaking is. Listening to the other and trying to see past your own biases to glimpse what they're trying to say. Showing yourself to the world, and hoping someone else understands."
+
+```
+
+1.  Determine if the word "Babel" is present in the string.
+
+```{python}
+#| echo: false
+#| eval: false
+"Babel" in babel
+```
+
+2.  Count how many times the word "translation" appears
+
+```{python}
+#| echo: false
+#| eval: false
+
+babel.count("translation")
+
+# where
+babel.index("translation")
+
+# see
+babel[17:17+len("translation")]
+
+```
+
+3.  Convert the entire string to upper case
+
+```{python}
+#| echo: false
+#| eval: false
+babel.upper()
+
+```
+
+4.  Convert the pronoum "I" to "We" in the entire text.
+
+```{python}
+#| echo: false
+#| eval: false
+babel.replace("I ", "We ")
+```
+
+5.  Strip any punctuation (like commas, exclamation marks, etc.) from the string.
+
+```{python}
+#| echo: false
+#| eval: false
+
+# Define a string containing some punctuation marks.
+punctuation = ",'.!"
+
+# Iterate over: we will see this later. 
+for char in punctuation:
+    babel = babel.replace(char, "")
+    
+print(babel)    
+```
+:::
+
+# Intro do Python II
+
+# Class Website: <https://tiagoventura.github.io/ppol5203/weeks/week-04.html>
+
+## Class Part II: Control Statements, Loops and Functions
+
+We will go over some concepts that are very general for any programming language.
+
+::: incremental
+-   **Logical Operators**: to make comparisons
+
+-   **Control statements**: to control the behavior of your code
+
+-   **Iterations**: repeat, repeat, scale-up!
+
+-   **User-Defined Functions**: to make code more flexible, debuggable, and readable.
+:::
+
+## Comparison Operators
+
+| Operator     | Property                |
+|--------------|-------------------------|
+| **`==`**     | (value) equivalence     |
+| **`>`**      | greater than            |
+| **`<`**      | strictly less than      |
+| **`<=`**     | less than or equal      |
+| **`>`**      | strictly greater than   |
+| **`>=`**     | greater than or equal   |
+| **`!=`**     | Not Equals              |
+| **`is`**     | object identity         |
+| **`is not`** | negated object identity |
+| **`in`**     | membership in           |
+| **`not in`** | negated membership in   |
+
+## Control Statements
+
+Any programming language needs statements that controls the sequence of execution of a particular piece of code. We will see three main types:
+
+-   if-else statements
+-   for loops
+-   while loops
+
+## Ifelse Statements
+
+**Definition:** Conditional execution.
+
+```         
+
+if <logical statement>:
+ 
+ 
+  ~~~~ CODE ~~~~
+
+
+elif <logical statement>:
+
+
+  ~~~~ CODE ~~~~
+
+
+else:
+
+  ~~~~ CODE ~~~~
+```
+
+## For loops
+
+**Definition:** Taking one item at a time from a collection. We start at the beginning of the collection and mover through it until we reach the end.
+
+In python, we can iterate over:
+
+-   lists
+
+-   strings
+
+-   dictionaries items
+
+-   file connections
+
+-   grouped pandas df
+
+## Example:
+
+```{python}
+# create a list
+my_list = [1, 2, 3, 4, 5]
+
+# iterate with a for loop:
+for m in my_list:
+  print(m)
+  
+```
+
+## While Loops
+
+-   While loops are all about repetitions. Instead of a sequence, the operation will repeat up according to the conditional statement in the loop.
+
+```{python}
+# while loops
+x = 0
+while x < 5:
+    print("This")
+    x += 1
+```
+
+# User Defined Functions {background-color="#447099"}
+
+## How do we start coding?
+
+::: incremental
+-   write code sequentially to solve your immediate needs
+
+-   reuse this code for similar tasks.
+
+-   Have very long and repetitive codes
+:::
+
+## Problems with this approach
+
+::: incremental
+-   Lack of general utility.
+-   Need to edit/copy/paste your code every time you want to **reuse it.**
+-   Need to re-write the code when you need to make small extension
+-   Likely to raise errors
+:::
+
+## Functions
+
+```{python}
+#| eval: false
+def square(x):
+  '''
+  Takes the square of a number
+  input: int object
+  outpur: int object
+  '''
+  y = x*x
+  return y
+```
+
+<br>
+
+The code block above has the following elements:
+
+-   [def](): keyword for generating a function
+
+-   [docstring](): to explain your function
+
+-   [arguments](): things we want to feed into the function and do something to.
+
+-   [return](): keyword for returning a specific value from a function
+
+## Comparing Python and R
+
+```{python}
+#| eval: false
+def square(x):
+  '''
+  Takes the square of a number
+  input: int object
+  outpur: int object
+  '''
+  y = x*x
+  return y
+```
+
+<br>
+
+```{r}
+square <- function(x){
+#  Takes the square of a number
+#  input: int object
+#  outpur: int object
+y = x*x
+return(y)
+}
+```
+
+-   In Python, you don't need to assign an object to a function
+
+-   The **indentation blocks your statement**. It replaces the curly braces
+
+## Additional topics on functions
+
+-   Scoping
+
+-   lambda functions
+
+# [Notebook for Control statements and Functions](/lecture_notes/week-03/_week-03_iter_control_functions.html)
+
+# Let's take a break (10min)
+
+```{r}
+#| echo: false
+library(countdown)
+countdown(minutes = 10, seconds = 0, 
+          left = 0, right = 0,
+          top=0,
+          padding = "100px",
+          margin = "10%",
+          font_size = "6em")
+```
+
+## Intro to Python - Part II.
+
+For the second part of this lecture, we will see:
+
+-   Importing libraries in Python
+
+-   Comprehension and Generators
+
+-   File management in Python
+
+-   Data as Nested Lists
+
+## Importing librarys in Python
+
+::: incremental
+
+-   Python allows you to import libraries in a few different ways:
+
+    -   The full library with the original name
+
+    -   The full library with an alias
+
+    -   Some functions from the library
+
+    -   All methods from the library as independent functions
+:::
+
+## The full library and its functions
+
+<br>
+
+```{python}
+# import library
+import math
+
+# access methods from the library
+math.pi
+```
+
+<br>
+
+```{python}
+# this will throw you an error
+pi
+```
+
+## The full library with an alias
+
+<br>
+
+```{python}
+# import library
+import math as m
+
+# access methods from the library
+m.pi
+m.factorial(5)
+
+```
+
+## Some functions from the library
+
+<br>
+
+```{python}
+# import some functions
+from math import pi
+
+# run
+pi
+```
+
+## All methods from the library as independent functions
+
+```{python}
+# all methods as independent functions
+from math import *
+
+# run
+factorial(5)
+```
+
+## Comprehensions
+
+-   Provide a readable and efficient way to construct new sequences (such as lists, sets, dictionaries, etc.) based on a sequence of elements
+
+![](https://python-3-patterns-idioms-test.readthedocs.io/en/latest/_images/listComprehensions.gif)
+
+### Compared to a loop
+
+```{python}
+a_list =[0, 1, 2, 3, 4, "hey"]
+result = []
+for e in a_list:
+    if type(e) == int:  # use int for Python 3
+        result.append(e**2)
+result
+```
+
+## I am already all confused about loops. Why do I need to learn something else?
+
+::: incremental
+-   Elegant and cleaner way to perform iterations. Which means: a lot of people use it!
+
+-   Automatically create new objects -- no need to create a container in the loop
+
+-   Flexible: allows working with lists, dictionaries, and sets
+
+-   Faster than loops (but not much in a way that makes you avoid loops)
+:::
+
+## Generators
+
+Python has this very nice data type called **generators**. We use these functions a lot, but hardly talk about them.
+
+::: incremental
+-   **Purpose:** Generators allow for generating a sequence of values at each time. In other words, it allows you to create iterators in Python.
+
+-   **Main Advantage:** do not have to create the entire sequence at once and allocate memory
+
+-   **Lazy Evaluation:** Returns a value at time. When requested. It is LAZY!!! We love LAZY!
+:::
+
+## Example of Generators
+
+You can build your own generators. That's a bit advanced, and you probably will not need to use for our purposes. But we will see some pre-built "generators" that will be useful for us:
+
+::: incremental
+-   `range()`: generate the corresponding sequence of integers. Commonly used with for loops.
+
+-   `zip()`: syncs two series of numbers up into tuples.
+
+-   `enumerate()`: generates an index and value tuple's pairing
+:::
+
+# [Notebook for Comprehension and Generators](/lecture_notes/week-04/_week_4_comprehension_generators.html)
+
+# Let's take another break (5min)
+
+```{r}
+#| echo: false
+library(countdown)
+countdown(minutes = 10, seconds = 0, 
+          left = 0, right = 0,
+          top=0,
+          padding = "100px",
+          margin = "10%",
+          font_size = "6em")
+```
+
+## File Management in Python
+
+### Main question: how do we read files from our computer in python?
+
+-   connection management: open(), close()
+-   Reading/writing files
+-   using with to manage connections.
+-   Reading .csvs
+
+## TLDR:
+
+-   Most often we will use high-level functions from Pandas to load data into Python objects.
+
+-   Why are we learning these tools then?
+
+    -   Very pythonic
+
+    -   No direct equivalent in R or Stata
+
+    -   Important when working non-tabular data - text, json, images, etc..
+
+-   **Reading:** Check Section 3.3 of [Python for Data Analysis](https://wesmckinney.com/book/python-builtin.html) to learn more about the topics covered in the notebook.
+
+## Summary
+
+-   **open()**: opens a **connection** with files on our system.
+
+    -   **open()** returns a special item type \*\_io.TextIOWrapper\*
+    -   This item is a iterator. We need to go through to convert inputs to a objectin python.
+
+-   **close()**: closes the connection.
+
+-   **write()**: writes files on your system. Also line by line.
+
+-   **with()**: wrapper for open and close that allows alias.
+
+# [Notebook for File Management](/lecture_notes/week-04/_week_4_file_management.html)
+
+# Data as Nested Lists and Numpy (Next week)
+
+## Or motivating Numpy {visibility="hidden"}
+
+So far, all our datatypes are geared towards kind of unidimensional data. We can get over with this using a nested list:
+
+```{python}
+# Read in the gapminder data 
+import csv
+with open("../lecture_notes/week-04/gapminder.csv",mode="rt") as file:
+    data = [row for row in csv.reader(file)]
+
+
+```
+
+## Nested Lists: Bad data structure. Why?{visibility="hidden"}
+
+```{python}
+# let's see the data
+
+print(data)
+
+```
+
+## Here comes numpy ...{visibility="hidden"}
+
+<br>
+
+![](week4_figs/numpy_arrays.png){fig-align="center"}
+
+::: aside
+source: [Python Programming for Data Science](https://www.tomasbeuzen.com/python-programming-for-data-science/README.html)
+:::
+
+## Why should you learn? Holds Python together! {visibility="hidden"}
+
+<br>
+
+![](week4_figs/numpy_dc.png){fig-align="center"}

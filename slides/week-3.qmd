@@ -618,7 +618,7 @@ countdown(minutes = 10, seconds = 0,
 
 ## Class Part II: Control Statements, Loops and Functions
 
-We will go over some concepts that are very general over any programming language.
+We will go over some concepts that are very general for any programming language.
 
 ::: incremental
 -   Using logical operators for comparisons.

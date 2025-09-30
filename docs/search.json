@@ -109,7 +109,7 @@
     "href": "slides/week-3.html#what-happens-upon-assignment",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "What happens upon assignment?",
-    "text": "What happens upon assignment?\n\nAction 1: A reference is assigned to an object, with an id number in memory\n\nid(x)\n\n4769752072"
+    "text": "What happens upon assignment?\n\nAction 1: A reference is assigned to an object, with an id number in memory\n\nid(x)\n\n4534576136"
   },
   {
     "objectID": "slides/week-3.html#section-3",
@@ -1349,5 +1349,250 @@
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "TLDR – Don’t Panic!",
     "text": "TLDR – Don’t Panic!\n\nGit should be new for you. Don’t feel desperate if you struggling with git. Most people do.\nGoogle every time you have a question. That’s a big part of being a data scientist.\nCheck the Cheat sheet and your lecture notes\n\nGithub Cheatsheet (A)\nGithub Cheatsheet (B)"
+  },
+  {
+    "objectID": "slides/week-4.html#where-we-are-.",
+    "href": "slides/week-4.html#where-we-are-.",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Where we are ….",
+    "text": "Where we are ….\n\nWe started with the basics of being a data scientist:\n\nCommandline\nReproducibility + Data Workflow\nVersion Control\n\nNow, we are going over the primitives of Python as your main DS tool:\n\nPython as a OOP language\nNative data types in Python"
+  },
+  {
+    "objectID": "slides/week-4.html#plans-for-today",
+    "href": "slides/week-4.html#plans-for-today",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Plans for today",
+    "text": "Plans for today\n\nStart slow with the in-class exercise from last week.\nScaling up your python skills:\n\nControl statements (if, for and while loops)\nFunctions\n\nIntro do Python - Part II.\n\nImporting packages in Python\nList Comprehension + Generators\nFile Management\nData as Nested Lists"
+  },
+  {
+    "objectID": "slides/week-4.html#in-class-exercise-use-the-lecture-notes-to-solve",
+    "href": "slides/week-4.html#in-class-exercise-use-the-lecture-notes-to-solve",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "In Class-Exercise (Use the Lecture Notes to solve)",
+    "text": "In Class-Exercise (Use the Lecture Notes to solve)\n\nTab ATab BTab C\n\n\nLet’s practice with lists first. One way to explore data structures is to learn their methods. Check all the methods of a list by running ‘dir()’ on a list object. Let’s explore these functions using the following list object, by answering the below questions. See here for list methods:\n\n\nlist_exercise = [\"Ramy\", \"Victorie\", \"Letty\", \"Robin\", \"Antoine\", \"Griffin\"] \n\n\n\nAdd “Cathy O’Neil” to the list. Insert “Professor Crast” as the first element of the list\n\n\nRemove “Letty” from the list. Also remove the last element of the list.\n\n\nFind the index of the occurrence of the name “Robin”. Count the number of times None appears in the list.\n\n\nCreate a new list with the names in alphabetical order, copy this list as a new list without changing the values of the original list\n\n\nAdd the string “Lovell” to copied_list and ensure that list_exercise remains unchanged.\n\n\n\nLet’s do a similar exercise with Dictionaries. Consider the dictionary below. See here for dictionary methods:\n\n\ndict_exercise = {\"Ramy\": \"India\",\n                  \"Victorie\":\"Haiti\", \n                  \"Letty\":\"England\", \n                  \"Robin\":\"Canton\", \n                  \"Antoine\":\"Nigeria\", \n                  \"Griffin\":\"China\"}\ndict_exercise\n\n\n\nLook up the keys in the dictionary, and store them in a list object called keys\n\n\nAdd yourself, and two other colleagues in this dictionary. The values are the countries the person in the key was born.\n\n\nRemove “Ramy” from the dictionary, and save as another dictionary\n\n\n\nLet’s now play around with some string methods. See the string below from the book “Babel:An Arcane History”. See here for string methods:\n\nbabel = \"That's just what translation is, I think. That's all speaking is. Listening to the other and trying to see past your own biases to glimpse what they're trying to say. Showing yourself to the world, and hoping someone else understands.\"\n\n\nDetermine if the word “Babel” is present in the string.\n\n\nCount how many times the word “translation” appears\n\n\nConvert the entire string to upper case\n\n\nConvert the pronoum “I” to “We” in the entire text.\n\n\nStrip any punctuation (like commas, exclamation marks, etc.) from the string."
+  },
+  {
+    "objectID": "slides/week-4.html#class-part-ii-control-statements-loops-and-functions",
+    "href": "slides/week-4.html#class-part-ii-control-statements-loops-and-functions",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Class Part II: Control Statements, Loops and Functions",
+    "text": "Class Part II: Control Statements, Loops and Functions\nWe will go over some concepts that are very general for any programming language.\n\n\nLogical Operators: to make comparisons\nControl statements: to control the behavior of your code\nIterations: repeat, repeat, scale-up!\nUser-Defined Functions: to make code more flexible, debuggable, and readable."
+  },
+  {
+    "objectID": "slides/week-4.html#comparison-operators",
+    "href": "slides/week-4.html#comparison-operators",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Comparison Operators",
+    "text": "Comparison Operators\n\n\n\nOperator\nProperty\n\n\n\n\n==\n(value) equivalence\n\n\n&gt;\ngreater than\n\n\n&lt;\nstrictly less than\n\n\n&lt;=\nless than or equal\n\n\n&gt;\nstrictly greater than\n\n\n&gt;=\ngreater than or equal\n\n\n!=\nNot Equals\n\n\nis\nobject identity\n\n\nis not\nnegated object identity\n\n\nin\nmembership in\n\n\nnot in\nnegated membership in"
+  },
+  {
+    "objectID": "slides/week-4.html#control-statements",
+    "href": "slides/week-4.html#control-statements",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Control Statements",
+    "text": "Control Statements\nAny programming language needs statements that controls the sequence of execution of a particular piece of code. We will see three main types:\n\nif-else statements\nfor loops\nwhile loops"
+  },
+  {
+    "objectID": "slides/week-4.html#ifelse-statements",
+    "href": "slides/week-4.html#ifelse-statements",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Ifelse Statements",
+    "text": "Ifelse Statements\nDefinition: Conditional execution.\n\nif &lt;logical statement&gt;:\n \n \n  ~~~~ CODE ~~~~\n\n\nelif &lt;logical statement&gt;:\n\n\n  ~~~~ CODE ~~~~\n\n\nelse:\n\n  ~~~~ CODE ~~~~"
+  },
+  {
+    "objectID": "slides/week-4.html#for-loops",
+    "href": "slides/week-4.html#for-loops",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "For loops",
+    "text": "For loops\nDefinition: Taking one item at a time from a collection. We start at the beginning of the collection and mover through it until we reach the end.\nIn python, we can iterate over:\n\nlists\nstrings\ndictionaries items\nfile connections\ngrouped pandas df"
+  },
+  {
+    "objectID": "slides/week-4.html#example",
+    "href": "slides/week-4.html#example",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Example:",
+    "text": "Example:\n\n# create a list\nmy_list = [1, 2, 3, 4, 5]\n\n# iterate with a for loop:\nfor m in my_list:\n  print(m)\n\n1\n2\n3\n4\n5"
+  },
+  {
+    "objectID": "slides/week-4.html#while-loops",
+    "href": "slides/week-4.html#while-loops",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "While Loops",
+    "text": "While Loops\n\nWhile loops are all about repetitions. Instead of a sequence, the operation will repeat up according to the conditional statement in the loop.\n\n\n# while loops\nx = 0\nwhile x &lt; 5:\n    print(\"This\")\n    x += 1\n\nThis\nThis\nThis\nThis\nThis"
+  },
+  {
+    "objectID": "slides/week-4.html#how-do-we-start-coding",
+    "href": "slides/week-4.html#how-do-we-start-coding",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "How do we start coding?",
+    "text": "How do we start coding?\n\n\nwrite code sequentially to solve your immediate needs\nreuse this code for similar tasks.\nHave very long and repetitive codes"
+  },
+  {
+    "objectID": "slides/week-4.html#problems-with-this-approach",
+    "href": "slides/week-4.html#problems-with-this-approach",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Problems with this approach",
+    "text": "Problems with this approach\n\n\nLack of general utility.\nNeed to edit/copy/paste your code every time you want to reuse it.\nNeed to re-write the code when you need to make small extension\nLikely to raise errors"
+  },
+  {
+    "objectID": "slides/week-4.html#functions",
+    "href": "slides/week-4.html#functions",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Functions",
+    "text": "Functions\n\ndef square(x):\n  '''\n  Takes the square of a number\n  input: int object\n  outpur: int object\n  '''\n  y = x*x\n  return y\n\n\nThe code block above has the following elements:\n\ndef: keyword for generating a function\ndocstring: to explain your function\narguments: things we want to feed into the function and do something to.\nreturn: keyword for returning a specific value from a function"
+  },
+  {
+    "objectID": "slides/week-4.html#comparing-python-and-r",
+    "href": "slides/week-4.html#comparing-python-and-r",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Comparing Python and R",
+    "text": "Comparing Python and R\n\ndef square(x):\n  '''\n  Takes the square of a number\n  input: int object\n  outpur: int object\n  '''\n  y = x*x\n  return y\n\n\n\nsquare &lt;- function(x){\n#  Takes the square of a number\n#  input: int object\n#  outpur: int object\ny = x*x\nreturn(y)\n}\n\n\nIn Python, you don’t need to assign an object to a function\nThe indentation blocks your statement. It replaces the curly braces"
+  },
+  {
+    "objectID": "slides/week-4.html#additional-topics-on-functions",
+    "href": "slides/week-4.html#additional-topics-on-functions",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Additional topics on functions",
+    "text": "Additional topics on functions\n\nScoping\nlambda functions"
+  },
+  {
+    "objectID": "slides/week-4.html#intro-to-python---part-ii.",
+    "href": "slides/week-4.html#intro-to-python---part-ii.",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Intro to Python - Part II.",
+    "text": "Intro to Python - Part II.\nFor the second part of this lecture, we will see:\n\nImporting libraries in Python\nComprehension and Generators\nFile management in Python\nData as Nested Lists"
+  },
+  {
+    "objectID": "slides/week-4.html#importing-librarys-in-python",
+    "href": "slides/week-4.html#importing-librarys-in-python",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Importing librarys in Python",
+    "text": "Importing librarys in Python\n\n\nPython allows you to import libraries in a few different ways:\n\nThe full library with the original name\nThe full library with an alias\nSome functions from the library\nAll methods from the library as independent functions"
+  },
+  {
+    "objectID": "slides/week-4.html#the-full-library-and-its-functions",
+    "href": "slides/week-4.html#the-full-library-and-its-functions",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "The full library and its functions",
+    "text": "The full library and its functions\n\n\n# import library\nimport math\n\n# access methods from the library\nmath.pi\n\n3.141592653589793\n\n\n\n\n# this will throw you an error\npi\n\nNameError: name 'pi' is not defined"
+  },
+  {
+    "objectID": "slides/week-4.html#the-full-library-with-an-alias",
+    "href": "slides/week-4.html#the-full-library-with-an-alias",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "The full library with an alias",
+    "text": "The full library with an alias\n\n\n# import library\nimport math as m\n\n# access methods from the library\nm.pi\n\n3.141592653589793\n\nm.factorial(5)\n\n120"
+  },
+  {
+    "objectID": "slides/week-4.html#some-functions-from-the-library",
+    "href": "slides/week-4.html#some-functions-from-the-library",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Some functions from the library",
+    "text": "Some functions from the library\n\n\n# import some functions\nfrom math import pi\n\n# run\npi\n\n3.141592653589793"
+  },
+  {
+    "objectID": "slides/week-4.html#all-methods-from-the-library-as-independent-functions",
+    "href": "slides/week-4.html#all-methods-from-the-library-as-independent-functions",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "All methods from the library as independent functions",
+    "text": "All methods from the library as independent functions\n\n# all methods as independent functions\nfrom math import *\n\n# run\nfactorial(5)\n\n120"
+  },
+  {
+    "objectID": "slides/week-4.html#comprehensions",
+    "href": "slides/week-4.html#comprehensions",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Comprehensions",
+    "text": "Comprehensions\n\nProvide a readable and efficient way to construct new sequences (such as lists, sets, dictionaries, etc.) based on a sequence of elements\n\n\nCompared to a loop\n\na_list =[0, 1, 2, 3, 4, \"hey\"]\nresult = []\nfor e in a_list:\n    if type(e) == int:  # use int for Python 3\n        result.append(e**2)\nresult\n\n[0, 1, 4, 9, 16]"
+  },
+  {
+    "objectID": "slides/week-4.html#i-am-already-all-confused-about-loops.-why-do-i-need-to-learn-something-else",
+    "href": "slides/week-4.html#i-am-already-all-confused-about-loops.-why-do-i-need-to-learn-something-else",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "I am already all confused about loops. Why do I need to learn something else?",
+    "text": "I am already all confused about loops. Why do I need to learn something else?\n\n\nElegant and cleaner way to perform iterations. Which means: a lot of people use it!\nAutomatically create new objects – no need to create a container in the loop\nFlexible: allows working with lists, dictionaries, and sets\nFaster than loops (but not much in a way that makes you avoid loops)"
+  },
+  {
+    "objectID": "slides/week-4.html#generators",
+    "href": "slides/week-4.html#generators",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Generators",
+    "text": "Generators\nPython has this very nice data type called generators. We use these functions a lot, but hardly talk about them.\n\n\nPurpose: Generators allow for generating a sequence of values at each time. In other words, it allows you to create iterators in Python.\nMain Advantage: do not have to create the entire sequence at once and allocate memory\nLazy Evaluation: Returns a value at time. When requested. It is LAZY!!! We love LAZY!"
+  },
+  {
+    "objectID": "slides/week-4.html#example-of-generators",
+    "href": "slides/week-4.html#example-of-generators",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Example of Generators",
+    "text": "Example of Generators\nYou can build your own generators. That’s a bit advanced, and you probably will not need to use for our purposes. But we will see some pre-built “generators” that will be useful for us:\n\n\nrange(): generate the corresponding sequence of integers. Commonly used with for loops.\nzip(): syncs two series of numbers up into tuples.\nenumerate(): generates an index and value tuple’s pairing"
+  },
+  {
+    "objectID": "slides/week-4.html#file-management-in-python",
+    "href": "slides/week-4.html#file-management-in-python",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "File Management in Python",
+    "text": "File Management in Python\nMain question: how do we read files from our computer in python?\n\nconnection management: open(), close()\nReading/writing files\nusing with to manage connections.\nReading .csvs"
+  },
+  {
+    "objectID": "slides/week-4.html#tldr",
+    "href": "slides/week-4.html#tldr",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "TLDR:",
+    "text": "TLDR:\n\nMost often we will use high-level functions from Pandas to load data into Python objects.\nWhy are we learning these tools then?\n\nVery pythonic\nNo direct equivalent in R or Stata\nImportant when working non-tabular data - text, json, images, etc..\n\nReading: Check Section 3.3 of Python for Data Analysis to learn more about the topics covered in the notebook."
+  },
+  {
+    "objectID": "slides/week-4.html#summary",
+    "href": "slides/week-4.html#summary",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Summary",
+    "text": "Summary\n\nopen(): opens a connection with files on our system.\n\nopen() returns a special item type *_io.TextIOWrapper*\nThis item is a iterator. We need to go through to convert inputs to a objectin python.\n\nclose(): closes the connection.\nwrite(): writes files on your system. Also line by line.\nwith(): wrapper for open and close that allows alias."
+  },
+  {
+    "objectID": "slides/week-4.html#or-motivating-numpy",
+    "href": "slides/week-4.html#or-motivating-numpy",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Or motivating Numpy",
+    "text": "Or motivating Numpy\nSo far, all our datatypes are geared towards kind of unidimensional data. We can get over with this using a nested list:\n\n# Read in the gapminder data \nimport csv\nwith open(\"../lecture_notes/week-04/gapminder.csv\",mode=\"rt\") as file:\n    data = [row for row in csv.reader(file)]\n\nFileNotFoundError: [Errno 2] No such file or directory: '../lecture_notes/week-04/gapminder.csv'"
+  },
+  {
+    "objectID": "slides/week-4.html#nested-lists-bad-data-structure.-why",
+    "href": "slides/week-4.html#nested-lists-bad-data-structure.-why",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Nested Lists: Bad data structure. Why?",
+    "text": "Nested Lists: Bad data structure. Why?\n\n# let's see the data\n\nprint(data)\n\nNameError: name 'data' is not defined"
+  },
+  {
+    "objectID": "slides/week-4.html#here-comes-numpy",
+    "href": "slides/week-4.html#here-comes-numpy",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Here comes numpy …",
+    "text": "Here comes numpy …\n\n\n\n\n\n\n\n\nsource: Python Programming for Data Science"
+  },
+  {
+    "objectID": "slides/week-4.html#why-should-you-learn-holds-python-together",
+    "href": "slides/week-4.html#why-should-you-learn-holds-python-together",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Why should you learn? Holds Python together!",
+    "text": "Why should you learn? Holds Python together!\n\n\n\n\nData science I: Foundations"
+  },
+  {
+    "objectID": "slides/week-4.html#problem-set-01",
+    "href": "slides/week-4.html#problem-set-01",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Problem set 01",
+    "text": "Problem set 01\nYou made several mistakes on the first question of the problem set. Unfortunately, you did not really considered this part of the question:\n\nYour task: Create a folder in this repository named question-01 that follows the best practices for project management and reproducibility we discussed in class.\n\n\n\nMistakes:\n\nNo README!!!\n\nAlways have a read me explaining what your repository is\n\nSeveral files missing.\n\nsome are lack of attention on your part\nsome are because you are not considering the existence of a .gitignore file\n\nSeveral files poorly named (white spaces, no clear explanation of the file, no numbering to order the code structure)\nNo correct folder structure"
+  },
+  {
+    "objectID": "slides/week-4.html#opportunity-for-extra-points",
+    "href": "slides/week-4.html#opportunity-for-extra-points",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Opportunity for extra points",
+    "text": "Opportunity for extra points\nMost of you lost a lot of points in this question. I will give you an opportunity to recover some of these points.\n\nUntil the end of the day today, you can resubmit your Question 1 of problem set. Just do another push on github.\nFix all the issues, and you can earn up to 10 extra points.\n\nTip 1: Check the example repo on your notebook to see what your response should look like.\nTip 2: Create a readme.md file explaining your repository, describing your article, folder, and all the files. The readme should be inside the main folder\nTip 3: All the files have bad names. Rename them following best practices."
+  },
+  {
+    "objectID": "slides/week-4.html#for-the-future",
+    "href": "slides/week-4.html#for-the-future",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "For the future…",
+    "text": "For the future…\nI will not give you these extra point in every problem set.\n\nQuestions? Ask your TA, ask me, ask on slack.\nNot clear how to answer the question? Ask your TA, ask me, ask on slack.\nRead the lecture notes.\nStart solving your problem set early on."
   }
 ]

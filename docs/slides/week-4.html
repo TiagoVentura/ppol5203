@@ -11,6 +11,7 @@
   <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="Professor: Tiago Ventura">
+  <meta name="dcterms.date" content="2024-10-01">
   <title>PPOL 5203 - Data Science I: Foundations -  PPOL 5203 - Data Science I: Foundations </title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -394,491 +395,92 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title"><span style="font-size: 120%;"> PPOL 5203 - Data Science I: Foundations </span></h1>
-  <p class="subtitle"><span style="font-size: 150%;"> Week 3: Intro to Python - OOP, Data Types, Control Statements and Functions </span></p>
+  <h1 class="title"><span style="font-size: 100%;"> PPOL 5203 - Data Science I: Foundations </span></h1>
+  <p class="subtitle"><span style="font-size: 100%;"> Week 4: Intro to Python II: Scaling up your code - Iteration, Comprehension and Functions</span></p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-<span style="font-size: 150%;">Professor: Tiago Ventura</span> 
+Professor: Tiago Ventura 
 </div>
 </div>
 </div>
 
+  <p class="date">2024-10-01</p>
+</section>
+<section id="problem-set-01" class="slide level2 center">
+<h2>Problem set 01</h2>
+<p>You made several mistakes on the first question of the problem set. Unfortunately, you did not really considered this part of the question:</p>
+<blockquote>
+<p>Your task: Create a folder in this repository named question-01 that <strong>follows the best practices for project management and reproducibility we discussed in class</strong>.</p>
+</blockquote>
+<div class="fragment">
+<div>
+<p><strong>Mistakes:</strong></p>
+<ul>
+<li class="fragment"><p>No README!!!</p>
+<ul>
+<li class="fragment">Always have a read me explaining what your repository is</li>
+</ul></li>
+<li class="fragment"><p>Several files missing.</p>
+<ul>
+<li class="fragment"><p>some are lack of attention on your part</p></li>
+<li class="fragment"><p>some are because you are not considering the existence of a .gitignore file</p></li>
+</ul></li>
+<li class="fragment"><p>Several files poorly named (white spaces, no clear explanation of the file, no numbering to order the code structure)</p></li>
+<li class="fragment"><p>No correct folder structure</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section>
+<section id="example-from-another-year" class="title-slide slide level1 center">
+<h1>Example from another year</h1>
+
+</section>
+<section id="opportunity-for-extra-points" class="slide level2 center">
+<h2>Opportunity for extra points</h2>
+<p>Most of you lost a lot of points in this question. I will give you an opportunity to recover some of these points.</p>
+<ul>
+<li><p>Until the <strong>end of the day today</strong>, you can resubmit your <strong>Question 1 of problem set</strong>. Just do another push on github.</p></li>
+<li><p>Fix all the issues, and you can earn <strong>up to</strong> 10 extra points.</p>
+<ul>
+<li><p><strong>Tip 1:</strong> Check the example repo on your notebook to see what your response should look like.</p></li>
+<li><p><strong>Tip 2:</strong> Create a readme.md file explaining your repository, describing your article, folder, and all the files. The readme should be inside the main folder</p></li>
+<li><p><strong>Tip 3:</strong> All the files have bad names. Rename them following best practices.</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="for-the-future" class="slide level2 center">
+<h2>For the future…</h2>
+<p>I will not give you these extra point in every problem set.</p>
+<ul>
+<li><p>Questions? Ask your TA, ask me, ask on slack.</p></li>
+<li><p>Not clear how to answer the question? Ask your TA, ask me, ask on slack.</p></li>
+<li><p>Read the lecture notes.</p></li>
+<li><p>Start solving your problem set early on.</p></li>
+</ul>
 </section>
 <section id="plans-for-today" class="slide level2 center">
-<h2>Plans for Today</h2>
+<h2>Plans for today</h2>
 <ul>
-<li><p>Problem Set 1</p></li>
-<li><p>Quick review of Git and remotes with Github</p></li>
-<li><p>In-class exercise about Git</p></li>
-<li><p>Introduction to Python</p>
+<li><p>Start slow with the in-class exercise from last week.</p></li>
+<li><p>Scaling up your python skills:</p>
 <ul>
-<li><p>Python as an Object-Oriented Programming Language</p></li>
-<li><p>Data Types in Python</p></li>
-</ul></li>
-<li><p>Next week (likely):</p>
-<ul>
-<li><p>Control statements</p></li>
+<li><p>Control statements (if, for and while loops)</p></li>
 <li><p>Functions</p></li>
 </ul></li>
-</ul>
-</section>
-<section>
-<section id="first-problem-set-assignment-and-datacamp" class="title-slide slide level1 center" data-background-color="#447099">
-<h1>First Problem Set Assignment and Datacamp</h1>
-
-</section>
-<section id="the-three-stages-of-git" class="slide level2 center">
-<h2>The three stages of Git</h2>
-
-<img data-src="week2_figs/git_stages.png" style="width:80.0%" class="r-stretch quarto-figure-center"></section>
-<section id="github-remote-git-repositories" class="slide level2 center">
-<h2>Github (Remote Git Repositories)</h2>
-
-<img data-src="week2_figs/git_remotes.png" style="width:80.0%" class="r-stretch quarto-figure-center"></section>
-<section id="git-remotes-git-github." class="slide level2 center">
-<h2>Git Remotes: Git + Github.</h2>
+<li><p>Intro do Python - Part II.</p>
 <ul>
-<li><p>Most times, you will use git integrated with Github.</p></li>
-<li><p>Github allows multiple researchers to write and share code at the same time.</p></li>
-<li><p>This is my workflow for github when starting a New Project. Before you write any code:</p>
-<ul>
-<li><p>Go to your github, and create a new repository</p></li>
-<li><p>Open your terminal, and clone the project</p></li>
-<li><p>cd intro your new local folder</p></li>
-</ul></li>
-</ul>
-<div class="fragment">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># clone</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>git clone <span class="op">&lt;</span>url<span class="op">&gt;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Move your working directory to this new folder</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>cd <span class="op">&lt;</span>project<span class="op">-</span>directory<span class="op">&gt;</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">#Write code!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-</section>
-<section id="section" class="slide level2 center">
-<h2></h2>
-<p>Track your changes:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>git add . </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Commit:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>git commit <span class="op">-</span>m <span class="st">'describe your commit'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Push the changes in your local repository to GitHub:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>git push </span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># or with branch</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>git push <span class="op">-</span>u origin [branch<span class="op">-</span>name] </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>When you do this for this first time, you need to set yo your identity</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>git config <span class="op">--</span><span class="kw">global</span> user.name <span class="st">"Your Name"</span> </span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>git config <span class="op">--</span><span class="kw">global</span> user.email <span class="st">"your-email@example.com"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Git will ask:</p>
-<ul>
-<li>username</li>
-<li>password: <strong>THIS IS YOUR TOKEN. SEE LECTURE NOTES</strong></li>
-</ul>
-</section>
-<section id="pull-from-remotes" class="slide level2 center">
-<h2>Pull from Remotes</h2>
-<p>To keep up with your colleagues work, you need to first pull their updates from the git repo.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># go to your repo</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>cd <span class="op">&lt;</span>gitrepo<span class="op">&gt;</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># pull the changes</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>git pull</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>See this <a href="https://www.atlassian.com/git/tutorials/syncing/git-pull">tutorial</a></p>
-</section>
-<section id="some-additional-tasks" class="slide level2 center">
-<h2>Some additional tasks:</h2>
-<ul>
-<li><p>check the discussion about .gitignore in the lecture notes.</p></li>
-<li><p>you might need to set up an personal token to push things on github, see <a href="https://docs.github.com/en/enterprise-server@3.6/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens">here</a></p></li>
-<li><p>play around with gitub: readme, directories, and issues.</p></li>
-</ul>
-</section></section>
-<section>
-<section id="questions" class="title-slide slide level1 center" data-background-color="#447099">
-<h1>Questions?</h1>
-
-</section>
-<section id="practice" class="slide level2 center">
-<h2><svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"></path></svg> Practice!</h2>
-<p>Click <a href="https://classroom.github.com/a/j0zuG5Wd">here</a> to setup your github classroom and do the in-class from last week for you to practice.</p>
-</section></section>
-<section id="git-in-class-exercise" class="title-slide slide level1 center" data-background-color="#447099">
-<h1>Git in Class Exercise</h1>
-<div class="cell">
-<div class="cell-output-display">
-<div class="countdown" id="timer_d76f0992" data-update-every="1" tabindex="0" style="top:0;right:0;left:0;margin:10%;padding:100px;font-size:6em;">
-<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-</div>
-</div>
-</section>
-
-<section>
-<section id="solution" class="title-slide slide level1 center">
-<h1><svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"></path></svg> Solution</h1>
-
-</section>
-<section id="tldr-dont-panic" class="slide level2 center">
-<h2>TLDR – Don’t Panic!</h2>
-<ul>
-<li><p>Git should be new for you. Don’t feel desperate if you struggling with git. Most people do.</p></li>
-<li><p>Google every time you have a question. That’s a big part of being a data scientist.</p></li>
-<li><p>Check the Cheat sheet and your lecture notes</p>
-<ul>
-<li><a href="https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf"><strong>Github Cheatsheet (A)</strong></a></li>
-<li><a href="https://education.github.com/git-cheat-sheet-education.pdf"><strong>Github Cheatsheet (B)</strong></a></li>
-</ul></li>
-</ul>
-</section></section>
-<section>
-<section id="introduction-to-python" class="title-slide slide level1 center" data-background-color="#447099">
-<h1>Introduction to Python</h1>
-
-</section>
-<section id="python-object-oriented-programming-language" class="slide level2 center">
-<h2>Python: Object-Oriented Programming Language</h2>
-<p>In most Python introductions out there, you would start with:</p>
-<ul>
-<li><p>Python as a calculator</p></li>
-<li><p>Data Types in Python</p></li>
-<li><p>Objects</p></li>
-</ul>
-<div class="fragment">
-<p><strong>We will take a different route starting with a deeper understanding of object-oriented programming</strong></p>
-</div>
-</section>
-<section id="object-oriented-programming-oop-vs-functional-programming-language" class="slide level2 center">
-<h2>Object-oriented programming (OOP) vs Functional Programming Language</h2>
-<ul>
-<li><p><strong>Python</strong> is an object-oriented programming language (OOP).</p>
-<ul>
-<li>Key concept: it uses “objects” that contains data and methods (functions).</li>
-</ul></li>
-<li><p><strong>R</strong> is a functional programming language</p>
-<ul>
-<li>Key concept: treats functions as the first-class citizens, meaning they can be assigned to variables, passed as arguments, and returned by other functions</li>
+<li><p>Importing packages in Python</p></li>
+<li><p>List Comprehension + Generators</p></li>
+<li><p>File Management</p></li>
+<li><p>Data as Nested Lists</p></li>
 </ul></li>
 </ul>
 </section>
-<section id="section-1" class="slide level2 center">
-<h2></h2>
-<h4 id="python-oop">Python OOP</h4>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># call library</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Using a Pandas Series method (OOP)</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> pd.Series([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>])</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co"># create a series object. You use a methods from this object to take the mean</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>s.mean()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><br></p>
-<h4 id="r-functional-programming-in-practice">R Functional Programming in Practice</h4>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>vec <span class="op">&lt;-</span> c(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>mean(vec)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<ul>
-<li>Objects are the core of Python.</li>
-<li>From the objects, you will access functions that will make Python work.</li>
-<li>You can also access data from object.</li>
-</ul>
-</section>
-<section id="section-2" class="slide level2 center">
-<h2></h2>
-<h3 id="basics-creating-an-object-in-python.">Basics: Creating an object in Python.</h3>
-<p><code>=</code> is the assignment operator in Python. (Different from R)</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="what-happens-upon-assignment" class="slide level2 center">
-<h2>What happens upon assignment?</h2>
-<div class="fragment">
-<p><strong>Action 1:</strong> A reference is assigned to an object, with an id number in memory</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">id</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>4534576136</code></pre>
-</div>
-</div>
-</div>
-</section>
-<section id="section-3" class="slide level2 center">
-<h2></h2>
-<p><strong>Action 2</strong> An object type (class) is defined at run time</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>&lt;class 'int'&gt;</code></pre>
-</div>
-</div>
-</section>
-<section id="section-4" class="slide level2 center">
-<h2></h2>
-<p><strong>Action 3:</strong> Object’s class is instantiated upon assignment. An object is an <strong>instance</strong> of a particular class.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># what is the class?</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>&lt;class 'int'&gt;</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Access methods (behaviors) using .</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>x.bit_length()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>3</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># see all methods</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="bu">dir</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>['__abs__', '__add__', '__and__', '__bool__', '__ceil__', '__class__', '__delattr__', '__dir__', '__divmod__', '__doc__', '__eq__', '__float__', '__floor__', '__floordiv__', '__format__', '__ge__', '__getattribute__', '__getnewargs__', '__getstate__', '__gt__', '__hash__', '__index__', '__init__', '__init_subclass__', '__int__', '__invert__', '__le__', '__lshift__', '__lt__', '__mod__', '__mul__', '__ne__', '__neg__', '__new__', '__or__', '__pos__', '__pow__', '__radd__', '__rand__', '__rdivmod__', '__reduce__', '__reduce_ex__', '__repr__', '__rfloordiv__', '__rlshift__', '__rmod__', '__rmul__', '__ror__', '__round__', '__rpow__', '__rrshift__', '__rshift__', '__rsub__', '__rtruediv__', '__rxor__', '__setattr__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', '__truediv__', '__trunc__', '__xor__', 'as_integer_ratio', 'bit_count', 'bit_length', 'conjugate', 'denominator', 'from_bytes', 'imag', 'numerator', 'real', 'to_bytes']</code></pre>
-</div>
-</div>
-</section>
-<section id="object-oriented-programming-what-are-these-classes" class="slide level2 center">
-<h2>Object-Oriented Programming: What are these classes?</h2>
-<div>
-<ul>
-<li class="fragment"><p><strong>Instantiation:</strong> When we create a object, we are creating an instance of this class.</p></li>
-<li class="fragment"><p><strong>Inheritance:</strong> Every time we create an object, the objects inherits a class.</p>
-<ul>
-<li class="fragment"><p><strong>A class</strong> is a blueprint holding of the properties of a particular data structure.</p></li>
-<li class="fragment"><p><strong>An instance</strong> is a realization of a particular class. This instance inherits the characteristics of its class.</p></li>
-</ul></li>
-<li class="fragment"><p><strong>Components:</strong> Classes have two major components:</p>
-<ul>
-<li class="fragment"><p><strong>Attributes:</strong> these are constant features, data, a characteristic of the broader class</p></li>
-<li class="fragment"><p><strong>Methods:</strong> these are actions, behaviors of this class. functions</p></li>
-</ul></li>
-<li class="fragment"><p><strong>Polymorphism:</strong> Both attributes and methods are accessed through <code>.</code> function, conditional on the class</p></li>
-</ul>
-</div>
-</section>
-<section id="section-5" class="slide level2 center">
-<h2></h2>
-<h3 id="create-a-class">Create a Class</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Example():</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">def</span> <span class="fu">__init__</span> (<span class="va">self</span>, name):</span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>    <span class="va">self</span>.name <span class="op">=</span> name</span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">def</span> hello(<span class="va">self</span>):</span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Hi, I am '</span> <span class="op">+</span> <span class="va">self</span>.name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="section-6" class="slide level2 center">
-<h2></h2>
-<h3 id="instantiate">Instantiate</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Instatiate</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>me <span class="op">=</span> Example(name<span class="op">=</span><span class="st">"Tiago"</span>)</span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(me)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>&lt;class '__main__.Example'&gt;</code></pre>
-</div>
-</div>
-</section>
-<section id="section-7" class="slide level2 center">
-<h2></h2>
-<h3 id="attributes">Attributes</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>me.name</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>'Tiago'</code></pre>
-</div>
-</div>
-</section>
-<section id="section-8" class="slide level2 center">
-<h2></h2>
-<h3 id="method">method</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>me.hello() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Hi, I am Tiago</code></pre>
-</div>
-</div>
-</section></section>
-<section id="coding" class="title-slide slide level1 center">
-<h1><svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"></path></svg> Coding</h1>
-
-</section>
-
-<section id="data-types" class="title-slide slide level1 center">
-<h1>Data types</h1>
-
-</section>
-
-<section>
-<section id="quizz-what-are-data-types" class="title-slide slide level1 center" data-background-color="#447099">
-<h1>Quizz: What are data types?</h1>
-
-</section>
-<section id="data-type" class="slide level2 center">
-<h2>Data Type</h2>
-<p>Python comes with a number of built-in data types. Two major data type groups in Python:</p>
-<ul>
-<li><p><strong>Scalar types</strong>: hold one piece of information, like a digit.</p></li>
-<li><p><strong>Collection types</strong>: hold multiple pieces of information</p></li>
-</ul>
-<p>There are two ways of instantiating a data class in Python:</p>
-<ul>
-<li><p><strong>Literals:</strong> syntactic representation in Python, e.g.&nbsp;[]</p></li>
-<li><p><strong>Constructors:</strong> class constructors, e.g.&nbsp;list()</p></li>
-</ul>
-</section>
-<section id="scalar" class="slide level2 center">
-<h2>Scalar</h2>
-<table>
-<colgroup>
-<col style="width: 17%">
-<col style="width: 29%">
-<col style="width: 17%">
-<col style="width: 17%">
-<col style="width: 17%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;"><em>Type</em></th>
-<th style="text-align: left;"><em>Description</em></th>
-<th style="text-align: center;"><em>Example</em></th>
-<th style="text-align: center;"><em>Literal</em></th>
-<th style="text-align: center;"><em>Constructor</em></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><code>int</code></td>
-<td style="text-align: left;">integer types</td>
-<td style="text-align: center;"><code>4</code></td>
-<td style="text-align: center;"><code>x = 4</code></td>
-<td style="text-align: center;"><code>int(4)</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><code>float</code></td>
-<td style="text-align: left;">64-bit floating point numbers</td>
-<td style="text-align: center;"><code>4.567</code></td>
-<td style="text-align: center;"><code>x = 4.567</code></td>
-<td style="text-align: center;"><code>float(4)</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><code>bool</code></td>
-<td style="text-align: left;">boolean logical values</td>
-<td style="text-align: center;"><code>True</code></td>
-<td style="text-align: center;"><code>x = True</code></td>
-<td style="text-align: center;"><code>bool(0)</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><code>None</code></td>
-<td style="text-align: left;">null object (serves as a valuable place holder)</td>
-<td style="text-align: center;"><code>None</code></td>
-<td style="text-align: center;"><code>x = None</code></td>
-<td style="text-align: center;"></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="collectors" class="slide level2 smaller center">
-<h2>Collectors</h2>
-<table style="width:100%;">
-<colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;"><em>Type</em></th>
-<th style="text-align: left;"><em>Description</em></th>
-<th style="text-align: center;"><em>Example</em></th>
-<th style="text-align: center;"><em>Mutable</em></th>
-<th style="text-align: center;"><em>Literal</em></th>
-<th style="text-align: center;"><em>Constructor</em></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><code>list</code></td>
-<td style="text-align: left;">heterogeneous sequences of objects</td>
-<td style="text-align: center;"><code>[1,"2",True]</code></td>
-<td style="text-align: center;">✓</td>
-<td style="text-align: center;"><code>x = ["c","a","t"]</code></td>
-<td style="text-align: center;"><code>x = list("cat")</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><code>str</code></td>
-<td style="text-align: left;">sequences of characters</td>
-<td style="text-align: center;"><code>"A word"</code></td>
-<td style="text-align: center;">✘</td>
-<td style="text-align: center;"><code>x = "12345"</code></td>
-<td style="text-align: center;"><code>x = str(12345)</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><code>tuples</code></td>
-<td style="text-align: left;">heterogeneous sequence of objects</td>
-<td style="text-align: center;"><code>(1,2)</code></td>
-<td style="text-align: center;">✘</td>
-<td style="text-align: center;"><code>x = (1,2)</code></td>
-<td style="text-align: center;"><code>x = tuple([1,2])</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><code>sets</code></td>
-<td style="text-align: left;">unordered collection of <em>distinct</em> objects</td>
-<td style="text-align: center;"><code>{1,2}</code></td>
-<td style="text-align: center;">✓</td>
-<td style="text-align: center;"><code>x = {1,2}</code></td>
-<td style="text-align: center;"><code>x = set([1,2])</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><code>dicts</code></td>
-<td style="text-align: left;">associative array of key/value mappings</td>
-<td style="text-align: center;"><code>{"a": 1}</code></td>
-<td style="text-align: center;">keys ✘<br>values ✓</td>
-<td style="text-align: center;"><code>x = {'a':1}</code></td>
-<td style="text-align: center;"><code>x = dict(a = 1)</code></td>
-</tr>
-</tbody>
-</table>
-</section></section>
-<section>
-<section id="coding-1" class="title-slide slide level1 center">
-<h1><svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"></path></svg> Coding</h1>
-
-</section>
-<section id="key-concepts" class="slide level2 center">
-<h2>Key concepts</h2>
-<div>
-<ul>
-<li class="fragment"><p>Why, different from R, I should use <class>.<method> to run specific functions, instead of just running the functions on a object <code>function(obj)</code>?</method></class></p></li>
-<li class="fragment"><p>Tuples and Lists are pretty much the same. But tuples are more computationally efficient (storage and speed in accessing it) than lists. Why do you think this is the case?</p></li>
-<li class="fragment"><p>Assume I have this dictionary <code>my_dict = {'a': 4, 'b': 7, 'c': 9.2}</code>. If I tried to access the first element of the dictionary with <code>my_dict[0]</code>, Python will throw me an error. Why?</p></li>
-</ul>
-</div>
-</section>
-<section id="in-class-exercises" class="slide level2 center">
-<h2>In-class exercises</h2>
+<section id="in-class-exercise-use-the-lecture-notes-to-solve" class="slide level2 center">
+<h2>In Class-Exercise (Use the Lecture Notes to solve)</h2>
 <div class="panel-tabset">
 <ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Tab A</a></li><li><a href="#tabset-1-2">Tab B</a></li><li><a href="#tabset-1-3">Tab C</a></li></ul>
 <div class="tab-content">
@@ -886,7 +488,7 @@
 <p>Let’s practice with lists first. One way to explore data structures is to learn their methods. Check all the methods of a list by running ‘dir()’ on a list object. Let’s explore these functions using the following list object, by answering the below questions. See <a href="https://www.w3schools.com/python/python_ref_list.asp">here</a> for list methods:</p>
 <p><br></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>list_exercise <span class="op">=</span> [<span class="st">"Ramy"</span>, <span class="st">"Victorie"</span>, <span class="st">"Letty"</span>, <span class="st">"Robin"</span>, <span class="st">"Antoine"</span>, <span class="st">"Griffin"</span>] </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>list_exercise <span class="op">=</span> [<span class="st">"Ramy"</span>, <span class="st">"Victorie"</span>, <span class="st">"Letty"</span>, <span class="st">"Robin"</span>, <span class="st">"Antoine"</span>, <span class="st">"Griffin"</span>] </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br></p>
 <ol type="1">
@@ -909,13 +511,13 @@
 <p>Let’s do a similar exercise with Dictionaries. Consider the dictionary below. See <a href="https://www.w3schools.com/python/python_ref_dictionary.asp">here</a> for dictionary methods:</p>
 <p><br></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>dict_exercise <span class="op">=</span> {<span class="st">"Ramy"</span>: <span class="st">"India"</span>,</span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>                  <span class="st">"Victorie"</span>:<span class="st">"Haiti"</span>, </span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>                  <span class="st">"Letty"</span>:<span class="st">"England"</span>, </span>
-<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>                  <span class="st">"Robin"</span>:<span class="st">"Canton"</span>, </span>
-<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>                  <span class="st">"Antoine"</span>:<span class="st">"Nigeria"</span>, </span>
-<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>                  <span class="st">"Griffin"</span>:<span class="st">"China"</span>}</span>
-<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>dict_exercise</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>dict_exercise <span class="op">=</span> {<span class="st">"Ramy"</span>: <span class="st">"India"</span>,</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>                  <span class="st">"Victorie"</span>:<span class="st">"Haiti"</span>, </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>                  <span class="st">"Letty"</span>:<span class="st">"England"</span>, </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>                  <span class="st">"Robin"</span>:<span class="st">"Canton"</span>, </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>                  <span class="st">"Antoine"</span>:<span class="st">"Nigeria"</span>, </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>                  <span class="st">"Griffin"</span>:<span class="st">"China"</span>}</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>dict_exercise</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br></p>
 <ol type="1">
@@ -931,7 +533,7 @@
 <div id="tabset-1-3">
 <p>Let’s now play around with some string methods. See the string below from the book “Babel:An Arcane History”. See <a href="https://www.w3schools.com/python/python_ref_string.asp">here</a> for string methods:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>babel <span class="op">=</span> <span class="st">"That's just what translation is, I think. That's all speaking is. Listening to the other and trying to see past your own biases to glimpse what they're trying to say. Showing yourself to the world, and hoping someone else understands."</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>babel <span class="op">=</span> <span class="st">"That's just what translation is, I think. That's all speaking is. Listening to the other and trying to see past your own biases to glimpse what they're trying to say. Showing yourself to the world, and hoping someone else understands."</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol type="1">
 <li>Determine if the word “Babel” is present in the string.</li>
@@ -952,27 +554,25 @@
 </div>
 </div>
 </section></section>
+<section id="intro-do-python-ii" class="title-slide slide level1 center">
+<h1>Intro do Python II</h1>
+
+</section>
+
 <section>
-<section id="lets-take-a-break-until-next-week" class="title-slide slide level1 center">
-<h1>Let’s take a break (Until next week!)</h1>
-<div class="cell">
-<div class="cell-output-display">
-<div class="countdown" id="timer_daccfc77" data-update-every="1" tabindex="0" style="top:0;right:0;left:0;margin:10%;padding:100px;font-size:6em;">
-<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-</div>
-</div>
+<section id="class-website-httpstiagoventura.github.ioppol5203weeksweek-04.html" class="title-slide slide level1 center">
+<h1>Class Website: <a href="https://tiagoventura.github.io/ppol5203/weeks/week-04.html" class="uri">https://tiagoventura.github.io/ppol5203/weeks/week-04.html</a></h1>
+
 </section>
 <section id="class-part-ii-control-statements-loops-and-functions" class="slide level2 center">
 <h2>Class Part II: Control Statements, Loops and Functions</h2>
-<p>We will go over some concepts that are very general over any programming language.</p>
+<p>We will go over some concepts that are very general for any programming language.</p>
 <div>
 <ul>
-<li class="fragment"><p>Using logical operators for comparisons.</p></li>
-<li class="fragment"><p>Control the behavior of code when iterating using control statements.</p></li>
-<li class="fragment"><p>Explore iterating through containers using loops</p></li>
-<li class="fragment"><p>Defining functions to make code more flexible, debuggable, and readable. (Probably for next week)</p></li>
+<li class="fragment"><p><strong>Logical Operators</strong>: to make comparisons</p></li>
+<li class="fragment"><p><strong>Control statements</strong>: to control the behavior of your code</p></li>
+<li class="fragment"><p><strong>Iterations</strong>: repeat, repeat, scale-up!</p></li>
+<li class="fragment"><p><strong>User-Defined Functions</strong>: to make code more flexible, debuggable, and readable.</p></li>
 </ul>
 </div>
 </section>
@@ -1033,9 +633,9 @@
 </tbody>
 </table>
 </section>
-<section id="conditional-statements" class="slide level2 center">
-<h2>Conditional Statements</h2>
-<p>Any programming language needs statements that controls the sequence of execution of a particular piece of code.</p>
+<section id="control-statements" class="slide level2 center">
+<h2>Control Statements</h2>
+<p>Any programming language needs statements that controls the sequence of execution of a particular piece of code. We will see three main types:</p>
 <ul>
 <li>if-else statements</li>
 <li>for loops</li>
@@ -1069,7 +669,7 @@ else:
 <ul>
 <li><p>lists</p></li>
 <li><p>strings</p></li>
-<li><p>dictionaries</p></li>
+<li><p>dictionaries items</p></li>
 <li><p>file connections</p></li>
 <li><p>grouped pandas df</p></li>
 </ul>
@@ -1077,12 +677,12 @@ else:
 <section id="example" class="slide level2 center">
 <h2>Example:</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create a list</span></span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="co"># iterate with a for loop:</span></span>
-<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> m <span class="kw">in</span> my_list:</span>
-<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(m)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create a list</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># iterate with a for loop:</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> m <span class="kw">in</span> my_list:</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(m)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>1
 2
@@ -1098,11 +698,11 @@ else:
 <li>While loops are all about repetitions. Instead of a sequence, the operation will repeat up according to the conditional statement in the loop.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># while loops</span></span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> x <span class="op">&lt;</span> <span class="dv">5</span>:</span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"This"</span>)</span>
-<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>    x <span class="op">+=</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># while loops</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> x <span class="op">&lt;</span> <span class="dv">5</span>:</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"This"</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    x <span class="op">+=</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>This
 This
@@ -1112,12 +712,313 @@ This</code></pre>
 </div>
 </div>
 </section></section>
-<section id="coding-2" class="title-slide slide level1 center">
-<h1><svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"></path></svg> Coding</h1>
+<section>
+<section id="user-defined-functions" class="title-slide slide level1 center" data-background-color="#447099">
+<h1>User Defined Functions</h1>
 
-<div class="footer footer-default">
-<p>Data science I: Foundations</p>
+</section>
+<section id="how-do-we-start-coding" class="slide level2 center">
+<h2>How do we start coding?</h2>
+<div>
+<ul>
+<li class="fragment"><p>write code sequentially to solve your immediate needs</p></li>
+<li class="fragment"><p>reuse this code for similar tasks.</p></li>
+<li class="fragment"><p>Have very long and repetitive codes</p></li>
+</ul>
 </div>
+</section>
+<section id="problems-with-this-approach" class="slide level2 center">
+<h2>Problems with this approach</h2>
+<div>
+<ul>
+<li class="fragment">Lack of general utility.</li>
+<li class="fragment">Need to edit/copy/paste your code every time you want to <strong>reuse it.</strong></li>
+<li class="fragment">Need to re-write the code when you need to make small extension</li>
+<li class="fragment">Likely to raise errors</li>
+</ul>
+</div>
+</section>
+<section id="functions" class="slide level2 center">
+<h2>Functions</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> square(x):</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">'''</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co">  Takes the square of a number</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co">  input: int object</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co">  outpur: int object</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co">  '''</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  y <span class="op">=</span> x<span class="op">*</span>x</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<p>The code block above has the following elements:</p>
+<ul>
+<li><p><a href="">def</a>: keyword for generating a function</p></li>
+<li><p><a href="">docstring</a>: to explain your function</p></li>
+<li><p><a href="">arguments</a>: things we want to feed into the function and do something to.</p></li>
+<li><p><a href="">return</a>: keyword for returning a specific value from a function</p></li>
+</ul>
+</section>
+<section id="comparing-python-and-r" class="slide level2 center">
+<h2>Comparing Python and R</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> square(x):</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">'''</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co">  Takes the square of a number</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co">  input: int object</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co">  outpur: int object</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="co">  '''</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  y <span class="op">=</span> x<span class="op">*</span>x</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>square <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co">#  Takes the square of a number</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co">#  input: int object</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co">#  outpur: int object</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>y <span class="ot">=</span> x<span class="sc">*</span>x</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="fu">return</span>(y)</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li><p>In Python, you don’t need to assign an object to a function</p></li>
+<li><p>The <strong>indentation blocks your statement</strong>. It replaces the curly braces</p></li>
+</ul>
+</section>
+<section id="additional-topics-on-functions" class="slide level2 center">
+<h2>Additional topics on functions</h2>
+<ul>
+<li><p>Scoping</p></li>
+<li><p>lambda functions</p></li>
+</ul>
+</section></section>
+<section id="notebook-for-control-statements-and-functions" class="title-slide slide level1 center">
+<h1><a href="../lecture_notes/week-03/_week-03_iter_control_functions.html">Notebook for Control statements and Functions</a></h1>
+
+</section>
+
+<section>
+<section id="lets-take-a-break-10min" class="title-slide slide level1 center">
+<h1>Let’s take a break (10min)</h1>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_83c70a82" data-update-every="1" tabindex="0" style="top:0;right:0;left:0;margin:10%;padding:100px;font-size:6em;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+</section>
+<section id="intro-to-python---part-ii." class="slide level2 center">
+<h2>Intro to Python - Part II.</h2>
+<p>For the second part of this lecture, we will see:</p>
+<ul>
+<li><p>Importing libraries in Python</p></li>
+<li><p>Comprehension and Generators</p></li>
+<li><p>File management in Python</p></li>
+<li><p>Data as Nested Lists</p></li>
+</ul>
+</section>
+<section id="importing-librarys-in-python" class="slide level2 center">
+<h2>Importing librarys in Python</h2>
+<div>
+<ul>
+<li class="fragment"><p>Python allows you to import libraries in a few different ways:</p>
+<ul>
+<li class="fragment"><p>The full library with the original name</p></li>
+<li class="fragment"><p>The full library with an alias</p></li>
+<li class="fragment"><p>Some functions from the library</p></li>
+<li class="fragment"><p>All methods from the library as independent functions</p></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="the-full-library-and-its-functions" class="slide level2 center">
+<h2>The full library and its functions</h2>
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># import library</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># access methods from the library</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>math.pi</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>3.141592653589793</code></pre>
+</div>
+</div>
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># this will throw you an error</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>pi</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>NameError: name 'pi' is not defined</code></pre>
+</div>
+</div>
+</section>
+<section id="the-full-library-with-an-alias" class="slide level2 center">
+<h2>The full library with an alias</h2>
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># import library</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math <span class="im">as</span> m</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># access methods from the library</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>m.pi</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>3.141592653589793</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>m.factorial(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>120</code></pre>
+</div>
+</div>
+</section>
+<section id="some-functions-from-the-library" class="slide level2 center">
+<h2>Some functions from the library</h2>
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># import some functions</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> pi</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="co"># run</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>pi</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>3.141592653589793</code></pre>
+</div>
+</div>
+</section>
+<section id="all-methods-from-the-library-as-independent-functions" class="slide level2 center">
+<h2>All methods from the library as independent functions</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># all methods as independent functions</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="co"># run</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>factorial(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>120</code></pre>
+</div>
+</div>
+</section>
+<section id="comprehensions" class="slide level2 center">
+<h2>Comprehensions</h2>
+<ul>
+<li>Provide a readable and efficient way to construct new sequences (such as lists, sets, dictionaries, etc.) based on a sequence of elements</li>
+</ul>
+
+<img data-src="https://python-3-patterns-idioms-test.readthedocs.io/en/latest/_images/listComprehensions.gif" class="r-stretch"><h3 id="compared-to-a-loop">Compared to a loop</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>a_list <span class="op">=</span>[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="st">"hey"</span>]</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> []</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> e <span class="kw">in</span> a_list:</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">type</span>(e) <span class="op">==</span> <span class="bu">int</span>:  <span class="co"># use int for Python 3</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>        result.append(e<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>result</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[0, 1, 4, 9, 16]</code></pre>
+</div>
+</div>
+</section>
+<section id="i-am-already-all-confused-about-loops.-why-do-i-need-to-learn-something-else" class="slide level2 center">
+<h2>I am already all confused about loops. Why do I need to learn something else?</h2>
+<div>
+<ul>
+<li class="fragment"><p>Elegant and cleaner way to perform iterations. Which means: a lot of people use it!</p></li>
+<li class="fragment"><p>Automatically create new objects – no need to create a container in the loop</p></li>
+<li class="fragment"><p>Flexible: allows working with lists, dictionaries, and sets</p></li>
+<li class="fragment"><p>Faster than loops (but not much in a way that makes you avoid loops)</p></li>
+</ul>
+</div>
+</section>
+<section id="generators" class="slide level2 center">
+<h2>Generators</h2>
+<p>Python has this very nice data type called <strong>generators</strong>. We use these functions a lot, but hardly talk about them.</p>
+<div>
+<ul>
+<li class="fragment"><p><strong>Purpose:</strong> Generators allow for generating a sequence of values at each time. In other words, it allows you to create iterators in Python.</p></li>
+<li class="fragment"><p><strong>Main Advantage:</strong> do not have to create the entire sequence at once and allocate memory</p></li>
+<li class="fragment"><p><strong>Lazy Evaluation:</strong> Returns a value at time. When requested. It is LAZY!!! We love LAZY!</p></li>
+</ul>
+</div>
+</section>
+<section id="example-of-generators" class="slide level2 center">
+<h2>Example of Generators</h2>
+<p>You can build your own generators. That’s a bit advanced, and you probably will not need to use for our purposes. But we will see some pre-built “generators” that will be useful for us:</p>
+<div>
+<ul>
+<li class="fragment"><p><code>range()</code>: generate the corresponding sequence of integers. Commonly used with for loops.</p></li>
+<li class="fragment"><p><code>zip()</code>: syncs two series of numbers up into tuples.</p></li>
+<li class="fragment"><p><code>enumerate()</code>: generates an index and value tuple’s pairing</p></li>
+</ul>
+</div>
+</section></section>
+<section id="notebook-for-comprehension-and-generators" class="title-slide slide level1 center">
+<h1><a href="../lecture_notes/week-04/_week_4_comprehension_generators.html">Notebook for Comprehension and Generators</a></h1>
+
+</section>
+
+<section>
+<section id="lets-take-another-break-5min" class="title-slide slide level1 center">
+<h1>Let’s take another break (5min)</h1>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_5b8c2cd4" data-update-every="1" tabindex="0" style="top:0;right:0;left:0;margin:10%;padding:100px;font-size:6em;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+</section>
+<section id="file-management-in-python" class="slide level2 center">
+<h2>File Management in Python</h2>
+<h3 id="main-question-how-do-we-read-files-from-our-computer-in-python">Main question: how do we read files from our computer in python?</h3>
+<ul>
+<li>connection management: open(), close()</li>
+<li>Reading/writing files</li>
+<li>using with to manage connections.</li>
+<li>Reading .csvs</li>
+</ul>
+</section>
+<section id="tldr" class="slide level2 center">
+<h2>TLDR:</h2>
+<ul>
+<li><p>Most often we will use high-level functions from Pandas to load data into Python objects.</p></li>
+<li><p>Why are we learning these tools then?</p>
+<ul>
+<li><p>Very pythonic</p></li>
+<li><p>No direct equivalent in R or Stata</p></li>
+<li><p>Important when working non-tabular data - text, json, images, etc..</p></li>
+</ul></li>
+<li><p><strong>Reading:</strong> Check Section 3.3 of <a href="https://wesmckinney.com/book/python-builtin.html">Python for Data Analysis</a> to learn more about the topics covered in the notebook.</p></li>
+</ul>
+</section>
+<section id="summary" class="slide level2 center">
+<h2>Summary</h2>
+<ul>
+<li><p><strong>open()</strong>: opens a <strong>connection</strong> with files on our system.</p>
+<ul>
+<li><strong>open()</strong> returns a special item type *_io.TextIOWrapper*</li>
+<li>This item is a iterator. We need to go through to convert inputs to a objectin python.</li>
+</ul></li>
+<li><p><strong>close()</strong>: closes the connection.</p></li>
+<li><p><strong>write()</strong>: writes files on your system. Also line by line.</p></li>
+<li><p><strong>with()</strong>: wrapper for open and close that allows alias.</p></li>
+</ul>
+</section></section>
+<section id="notebook-for-file-management" class="title-slide slide level1 center">
+<h1><a href="../lecture_notes/week-04/_week_4_file_management.html">Notebook for File Management</a></h1>
+
+</section>
+
+<section>
+<section id="data-as-nested-lists-and-numpy-next-week" class="title-slide slide level1 center">
+<h1>Data as Nested Lists and Numpy (Next week)</h1>
+
+</section>
+
+
+
 </section>
     </div>
   </div>
