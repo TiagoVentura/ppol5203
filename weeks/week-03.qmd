@@ -48,7 +48,7 @@ Intro to Python II - Control Statements and Functions: [html](/lecture_notes/wee
 
 See slides or [notebook for the exercise](/lecture_notes/week-03/_week-03_data_types.html)
 
-<!-- -   [solutions](/solutions_html/_week_03_solution.html) -->
+- [solutions](/solutions/_solution_inclass_python_1.html)
 
 ## Required Readings
 
