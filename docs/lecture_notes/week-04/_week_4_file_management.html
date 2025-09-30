@@ -13403,10 +13403,105 @@ Tiago Ventura </center> <h1></p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"redrising.txt"</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">'rt'</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">'UTF-8'</span><span class="p">)</span>
+<span class="nb">dir</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[1]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;_CHUNK_SIZE&#39;,
+ &#39;__class__&#39;,
+ &#39;__del__&#39;,
+ &#39;__delattr__&#39;,
+ &#39;__dict__&#39;,
+ &#39;__dir__&#39;,
+ &#39;__doc__&#39;,
+ &#39;__enter__&#39;,
+ &#39;__eq__&#39;,
+ &#39;__exit__&#39;,
+ &#39;__format__&#39;,
+ &#39;__ge__&#39;,
+ &#39;__getattribute__&#39;,
+ &#39;__getstate__&#39;,
+ &#39;__gt__&#39;,
+ &#39;__hash__&#39;,
+ &#39;__init__&#39;,
+ &#39;__init_subclass__&#39;,
+ &#39;__iter__&#39;,
+ &#39;__le__&#39;,
+ &#39;__lt__&#39;,
+ &#39;__ne__&#39;,
+ &#39;__new__&#39;,
+ &#39;__next__&#39;,
+ &#39;__reduce__&#39;,
+ &#39;__reduce_ex__&#39;,
+ &#39;__repr__&#39;,
+ &#39;__setattr__&#39;,
+ &#39;__sizeof__&#39;,
+ &#39;__str__&#39;,
+ &#39;__subclasshook__&#39;,
+ &#39;_checkClosed&#39;,
+ &#39;_checkReadable&#39;,
+ &#39;_checkSeekable&#39;,
+ &#39;_checkWritable&#39;,
+ &#39;_finalizing&#39;,
+ &#39;buffer&#39;,
+ &#39;close&#39;,
+ &#39;closed&#39;,
+ &#39;detach&#39;,
+ &#39;encoding&#39;,
+ &#39;errors&#39;,
+ &#39;fileno&#39;,
+ &#39;flush&#39;,
+ &#39;isatty&#39;,
+ &#39;line_buffering&#39;,
+ &#39;mode&#39;,
+ &#39;name&#39;,
+ &#39;newlines&#39;,
+ &#39;read&#39;,
+ &#39;readable&#39;,
+ &#39;readline&#39;,
+ &#39;readlines&#39;,
+ &#39;reconfigure&#39;,
+ &#39;seek&#39;,
+ &#39;seekable&#39;,
+ &#39;tell&#39;,
+ &#39;truncate&#39;,
+ &#39;writable&#39;,
+ &#39;write&#39;,
+ &#39;write_through&#39;,
+ &#39;writelines&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># read line by line</span>
 <span class="n">file</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span> <span class="c1"># convert all items to a list</span>
 </pre></div>
 
@@ -13897,7 +13992,7 @@ Neat!
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># using list comprehension</span>
@@ -14128,7 +14223,7 @@ Neat!
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter<span class="w"> </span>nbconvert<span class="w"> </span>_week_4_file_management.ipynb<span class="w"> </span>--to<span class="w"> </span>html<span class="w"> </span>--template<span class="w"> </span>classic
@@ -14149,7 +14244,7 @@ Neat!
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[NbConvertApp] Converting notebook _week_4_file_management.ipynb to html
-[NbConvertApp] Writing 316362 bytes to _week_4_file_management.html
+[NbConvertApp] Writing 314692 bytes to _week_4_file_management.html
 </pre>
 </div>
 </div>

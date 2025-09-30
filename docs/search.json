@@ -70,11 +70,11 @@
     "text": "Practice!\nClick here to setup your github classroom and do the in-class from last week for you to practice."
   },
   {
-    "objectID": "slides/week-3.html#any-questions",
-    "href": "slides/week-3.html#any-questions",
+    "objectID": "slides/week-3.html#tldr-dont-panic",
+    "href": "slides/week-3.html#tldr-dont-panic",
     "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "Any questions?",
-    "text": "Any questions?\n\nGit should be new for you. Don’t feel desperate if you struggling with git. Most people do.\nGoogle every time you have a question. That’s a big part of being a data scientist.\nCheck the Cheatsheet and you lecture notes\n\nGithub Cheatsheet (A)\nGithub Cheatsheet (B)"
+    "section": "TLDR – Don’t Panic!",
+    "text": "TLDR – Don’t Panic!\n\nGit should be new for you. Don’t feel desperate if you struggling with git. Most people do.\nGoogle every time you have a question. That’s a big part of being a data scientist.\nCheck the Cheat sheet and your lecture notes\n\nGithub Cheatsheet (A)\nGithub Cheatsheet (B)"
   },
   {
     "objectID": "slides/week-3.html#python-object-oriented-programming-language",
@@ -95,7 +95,7 @@
     "href": "slides/week-3.html#section-1",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "",
-    "text": "Python OOP\n\n# call library\nimport pandas as pd\n\n# Using a Pandas Series method (OOP)\ns = pd.Series([1, 2, 3, 4, 5])\n\n# create a series object. You use a methods from this object to take the mean\ns.mean()\n\n\n\n\nR Functional Programming in Practice\n\nvec &lt;- c(1, 2, 3, 4, 5)\nmean(vec)\n\n\nObjects are the core of Python.\nFrom the objects, you will access functions that will make Python work.\nYou can also access data from object."
+    "text": "Python OOP\n\n# call library\nimport pandas as pd\n\n# Using a Pandas Series method (OOP)\ns = pd.Series([1, 2, 3, 4, 5])\n\n# create a series object. You use a methods from this object to take the mean\ns.mean()\n\n\nR Functional Programming in Practice\n\nvec &lt;- c(1, 2, 3, 4, 5)\nmean(vec)\n\n\nObjects are the core of Python.\nFrom the objects, you will access functions that will make Python work.\nYou can also access data from object."
   },
   {
     "objectID": "slides/week-3.html#section-2",
@@ -109,7 +109,7 @@
     "href": "slides/week-3.html#what-happens-upon-assignment",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "What happens upon assignment?",
-    "text": "What happens upon assignment?\n\nAction 1: A reference is assigned to an object, with an id number in memory\n\nid(x)\n\n4794917896"
+    "text": "What happens upon assignment?\n\nAction 1: A reference is assigned to an object, with an id number in memory\n\nid(x)\n\n4390675464"
   },
   {
     "objectID": "slides/week-3.html#section-3",
@@ -245,333 +245,319 @@
     "text": "While Loops\n\nWhile loops are all about repetitions. Instead of a sequence, the operation will repeat up according to the conditional statement in the loop.\n\n\n# while loops\nx = 0\nwhile x &lt; 5:\n    print(\"This\")\n    x += 1\n\nThis\nThis\nThis\nThis\nThis"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "PPOL 5203 - Data Science I: Foundations",
+    "objectID": "slides/week-4.html#problem-set-01",
+    "href": "slides/week-4.html#problem-set-01",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Problem set 01",
+    "text": "Problem set 01\nYou made several mistakes on the first question of the problem set. Unfortunately, you did not really considered this part of the question:\n\nYour task: Create a folder in this repository named question-01 that follows the best practices for project management and reproducibility we discussed in class.\n\n\n\nMistakes:\n\nNo README!!!\n\nAlways have a read me explaining what your repository is\n\nSeveral files missing.\n\nsome are lack of attention on your part\nsome are because you are not considering the existence of a .gitignore file\n\nSeveral files poorly named (white spaces, no clear explanation of the file, no numbering to order the code structure)\nNo correct folder structure"
+  },
+  {
+    "objectID": "slides/week-4.html#opportunity-for-extra-points",
+    "href": "slides/week-4.html#opportunity-for-extra-points",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Opportunity for extra points",
+    "text": "Opportunity for extra points\nMost of you lost a lot of points in this question. I will give you an opportunity to recover some of these points.\n\nUntil the end of the day today, you can resubmit your Question 1 of problem set. Just do another push on github.\nFix all the issues, and you can earn up to 10 extra points.\n\nTip 1: Check the example repo on your notebook to see what your response should look like.\nTip 2: Create a readme.md file explaining your repository, describing your article, folder, and all the files. The readme should be inside the main folder\nTip 3: All the files have bad names. Rename them following best practices."
+  },
+  {
+    "objectID": "slides/week-4.html#for-the-future",
+    "href": "slides/week-4.html#for-the-future",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "For the future…",
+    "text": "For the future…\nI will not give you these extra point in every problem set.\n\nQuestions? Ask your TA, ask me, ask on slack.\nNot clear how to answer the question? Ask your TA, ask me, ask on slack.\nRead the lecture notes.\nStart solving your problem set early on."
+  },
+  {
+    "objectID": "slides/week-4.html#plans-for-today",
+    "href": "slides/week-4.html#plans-for-today",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Plans for today",
+    "text": "Plans for today\n\nStart slow with the in-class exercise from last week.\nScaling up your python skills:\n\nControl statements (if, for and while loops)\nFunctions\n\nIntro do Python - Part II.\n\nImporting packages in Python\nList Comprehension + Generators\nFile Management\nData as Nested Lists"
+  },
+  {
+    "objectID": "slides/week-4.html#in-class-exercise-use-the-lecture-notes-to-solve",
+    "href": "slides/week-4.html#in-class-exercise-use-the-lecture-notes-to-solve",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "In Class-Exercise (Use the Lecture Notes to solve)",
+    "text": "In Class-Exercise (Use the Lecture Notes to solve)\n\nTab ATab BTab C\n\n\nLet’s practice with lists first. One way to explore data structures is to learn their methods. Check all the methods of a list by running ‘dir()’ on a list object. Let’s explore these functions using the following list object, by answering the below questions. See here for list methods:\n\n\nlist_exercise = [\"Ramy\", \"Victorie\", \"Letty\", \"Robin\", \"Antoine\", \"Griffin\"] \n\n\n\nAdd “Cathy O’Neil” to the list. Insert “Professor Crast” as the first element of the list\n\n\nRemove “Letty” from the list. Also remove the last element of the list.\n\n\nFind the index of the occurrence of the name “Robin”. Count the number of times None appears in the list.\n\n\nCreate a new list with the names in alphabetical order, copy this list as a new list without changing the values of the original list\n\n\nAdd the string “Lovell” to copied_list and ensure that list_exercise remains unchanged.\n\n\n\nLet’s do a similar exercise with Dictionaries. Consider the dictionary below. See here for dictionary methods:\n\n\ndict_exercise = {\"Ramy\": \"India\",\n                  \"Victorie\":\"Haiti\", \n                  \"Letty\":\"England\", \n                  \"Robin\":\"Canton\", \n                  \"Antoine\":\"Nigeria\", \n                  \"Griffin\":\"China\"}\ndict_exercise\n\n\n\nLook up the keys in the dictionary, and store them in a list object called keys\n\n\nAdd yourself, and two other colleagues in this dictionary. The values are the countries the person in the key was born.\n\n\nRemove “Ramy” from the dictionary, and save as another dictionary\n\n\n\nLet’s now play around with some string methods. See the string below from the book “Babel:An Arcane History”. See here for string methods:\n\nbabel = \"That's just what translation is, I think. That's all speaking is. Listening to the other and trying to see past your own biases to glimpse what they're trying to say. Showing yourself to the world, and hoping someone else understands.\"\n\n\nDetermine if the word “Babel” is present in the string.\n\n\nCount how many times the word “translation” appears\n\n\nConvert the entire string to upper case\n\n\nConvert the pronoum “I” to “We” in the entire text.\n\n\nStrip any punctuation (like commas, exclamation marks, etc.) from the string."
+  },
+  {
+    "objectID": "slides/week-4.html#class-part-ii-control-statements-loops-and-functions",
+    "href": "slides/week-4.html#class-part-ii-control-statements-loops-and-functions",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Class Part II: Control Statements, Loops and Functions",
+    "text": "Class Part II: Control Statements, Loops and Functions\nWe will go over some concepts that are very general for any programming language.\n\n\nLogical Operators: to make comparisons\nControl statements: to control the behavior of your code\nIterations: repeat, repeat, scale-up!\nUser-Defined Functions: to make code more flexible, debuggable, and readable."
+  },
+  {
+    "objectID": "slides/week-4.html#comparison-operators",
+    "href": "slides/week-4.html#comparison-operators",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Comparison Operators",
+    "text": "Comparison Operators\n\n\n\nOperator\nProperty\n\n\n\n\n==\n(value) equivalence\n\n\n&gt;\ngreater than\n\n\n&lt;\nstrictly less than\n\n\n&lt;=\nless than or equal\n\n\n&gt;\nstrictly greater than\n\n\n&gt;=\ngreater than or equal\n\n\n!=\nNot Equals\n\n\nis\nobject identity\n\n\nis not\nnegated object identity\n\n\nin\nmembership in\n\n\nnot in\nnegated membership in"
+  },
+  {
+    "objectID": "slides/week-4.html#control-statements",
+    "href": "slides/week-4.html#control-statements",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Control Statements",
+    "text": "Control Statements\nAny programming language needs statements that controls the sequence of execution of a particular piece of code. We will see three main types:\n\nif-else statements\nfor loops\nwhile loops"
+  },
+  {
+    "objectID": "slides/week-4.html#ifelse-statements",
+    "href": "slides/week-4.html#ifelse-statements",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Ifelse Statements",
+    "text": "Ifelse Statements\nDefinition: Conditional execution.\n\nif &lt;logical statement&gt;:\n \n \n  ~~~~ CODE ~~~~\n\n\nelif &lt;logical statement&gt;:\n\n\n  ~~~~ CODE ~~~~\n\n\nelse:\n\n  ~~~~ CODE ~~~~"
+  },
+  {
+    "objectID": "slides/week-4.html#for-loops",
+    "href": "slides/week-4.html#for-loops",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "For loops",
+    "text": "For loops\nDefinition: Taking one item at a time from a collection. We start at the beginning of the collection and mover through it until we reach the end.\nIn python, we can iterate over:\n\nlists\nstrings\ndictionaries items\nfile connections\ngrouped pandas df"
+  },
+  {
+    "objectID": "slides/week-4.html#example",
+    "href": "slides/week-4.html#example",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Example:",
+    "text": "Example:\n\n# create a list\nmy_list = [1, 2, 3, 4, 5]\n\n# iterate with a for loop:\nfor m in my_list:\n  print(m)\n\n1\n2\n3\n4\n5"
+  },
+  {
+    "objectID": "slides/week-4.html#while-loops",
+    "href": "slides/week-4.html#while-loops",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "While Loops",
+    "text": "While Loops\n\nWhile loops are all about repetitions. Instead of a sequence, the operation will repeat up according to the conditional statement in the loop.\n\n\n# while loops\nx = 0\nwhile x &lt; 5:\n    print(\"This\")\n    x += 1\n\nThis\nThis\nThis\nThis\nThis"
+  },
+  {
+    "objectID": "slides/week-4.html#how-do-we-start-coding",
+    "href": "slides/week-4.html#how-do-we-start-coding",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "How do we start coding?",
+    "text": "How do we start coding?\n\n\nwrite code sequentially to solve your immediate needs\nreuse this code for similar tasks.\nHave very long and repetitive codes"
+  },
+  {
+    "objectID": "slides/week-4.html#problems-with-this-approach",
+    "href": "slides/week-4.html#problems-with-this-approach",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Problems with this approach",
+    "text": "Problems with this approach\n\n\nLack of general utility.\nNeed to edit/copy/paste your code every time you want to reuse it.\nNeed to re-write the code when you need to make small extension\nLikely to raise errors"
+  },
+  {
+    "objectID": "slides/week-4.html#functions",
+    "href": "slides/week-4.html#functions",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Functions",
+    "text": "Functions\n\ndef square(x):\n  '''\n  Takes the square of a number\n  input: int object\n  outpur: int object\n  '''\n  y = x*x\n  return y\n\n\nThe code block above has the following elements:\n\ndef: keyword for generating a function\ndocstring: to explain your function\narguments: things we want to feed into the function and do something to.\nreturn: keyword for returning a specific value from a function"
+  },
+  {
+    "objectID": "slides/week-4.html#comparing-python-and-r",
+    "href": "slides/week-4.html#comparing-python-and-r",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Comparing Python and R",
+    "text": "Comparing Python and R\n\ndef square(x):\n  '''\n  Takes the square of a number\n  input: int object\n  outpur: int object\n  '''\n  y = x*x\n  return y\n\n\n\nsquare &lt;- function(x){\n#  Takes the square of a number\n#  input: int object\n#  outpur: int object\ny = x*x\nreturn(y)\n}\n\n\nIn Python, you don’t need to assign an object to a function\nThe indentation blocks your statement. It replaces the curly braces"
+  },
+  {
+    "objectID": "slides/week-4.html#additional-topics-on-functions",
+    "href": "slides/week-4.html#additional-topics-on-functions",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Additional topics on functions",
+    "text": "Additional topics on functions\n\nScoping\nlambda functions"
+  },
+  {
+    "objectID": "slides/week-4.html#intro-to-python---part-ii.",
+    "href": "slides/week-4.html#intro-to-python---part-ii.",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Intro to Python - Part II.",
+    "text": "Intro to Python - Part II.\nFor the second part of this lecture, we will see:\n\nImporting libraries in Python\nComprehension and Generators\nFile management in Python\nData as Nested Lists"
+  },
+  {
+    "objectID": "slides/week-4.html#importing-librarys-in-python",
+    "href": "slides/week-4.html#importing-librarys-in-python",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Importing librarys in Python",
+    "text": "Importing librarys in Python\n\n\nPython allows you to import libraries in a few different ways:\n\nThe full library with the original name\nThe full library with an alias\nSome functions from the library\nAll methods from the library as independent functions"
+  },
+  {
+    "objectID": "slides/week-4.html#the-full-library-and-its-functions",
+    "href": "slides/week-4.html#the-full-library-and-its-functions",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "The full library and its functions",
+    "text": "The full library and its functions\n\n\n# import library\nimport math\n\n# access methods from the library\nmath.pi\n\n3.141592653589793\n\n\n\n\n# this will throw you an error\npi\n\nNameError: name 'pi' is not defined"
+  },
+  {
+    "objectID": "slides/week-4.html#the-full-library-with-an-alias",
+    "href": "slides/week-4.html#the-full-library-with-an-alias",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "The full library with an alias",
+    "text": "The full library with an alias\n\n\n# import library\nimport math as m\n\n# access methods from the library\nm.pi\n\n3.141592653589793\n\nm.factorial(5)\n\n120"
+  },
+  {
+    "objectID": "slides/week-4.html#some-functions-from-the-library",
+    "href": "slides/week-4.html#some-functions-from-the-library",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Some functions from the library",
+    "text": "Some functions from the library\n\n\n# import some functions\nfrom math import pi\n\n# run\npi\n\n3.141592653589793"
+  },
+  {
+    "objectID": "slides/week-4.html#all-methods-from-the-library-as-independent-functions",
+    "href": "slides/week-4.html#all-methods-from-the-library-as-independent-functions",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "All methods from the library as independent functions",
+    "text": "All methods from the library as independent functions\n\n# all methods as independent functions\nfrom math import *\n\n# run\nfactorial(5)\n\n120"
+  },
+  {
+    "objectID": "slides/week-4.html#comprehensions",
+    "href": "slides/week-4.html#comprehensions",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Comprehensions",
+    "text": "Comprehensions\n\nProvide a readable and efficient way to construct new sequences (such as lists, sets, dictionaries, etc.) based on a sequence of elements\n\n\nCompared to a loop\n\na_list =[0, 1, 2, 3, 4, \"hey\"]\nresult = []\nfor e in a_list:\n    if type(e) == int:  # use int for Python 3\n        result.append(e**2)\nresult\n\n[0, 1, 4, 9, 16]"
+  },
+  {
+    "objectID": "slides/week-4.html#i-am-already-all-confused-about-loops.-why-do-i-need-to-learn-something-else",
+    "href": "slides/week-4.html#i-am-already-all-confused-about-loops.-why-do-i-need-to-learn-something-else",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "I am already all confused about loops. Why do I need to learn something else?",
+    "text": "I am already all confused about loops. Why do I need to learn something else?\n\n\nElegant and cleaner way to perform iterations. Which means: a lot of people use it!\nAutomatically create new objects – no need to create a container in the loop\nFlexible: allows working with lists, dictionaries, and sets\nFaster than loops (but not much in a way that makes you avoid loops)"
+  },
+  {
+    "objectID": "slides/week-4.html#generators",
+    "href": "slides/week-4.html#generators",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Generators",
+    "text": "Generators\nPython has this very nice data type called generators. We use these functions a lot, but hardly talk about them.\n\n\nPurpose: Generators allow for generating a sequence of values at each time. In other words, it allows you to create iterators in Python.\nMain Advantage: do not have to create the entire sequence at once and allocate memory\nLazy Evaluation: Returns a value at time. When requested. It is LAZY!!! We love LAZY!"
+  },
+  {
+    "objectID": "slides/week-4.html#example-of-generators",
+    "href": "slides/week-4.html#example-of-generators",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Example of Generators",
+    "text": "Example of Generators\nYou can build your own generators. That’s a bit advanced, and you probably will not need to use for our purposes. But we will see some pre-built “generators” that will be useful for us:\n\n\nrange(): generate the corresponding sequence of integers. Commonly used with for loops.\nzip(): syncs two series of numbers up into tuples.\nenumerate(): generates an index and value tuple’s pairing"
+  },
+  {
+    "objectID": "slides/week-4.html#file-management-in-python",
+    "href": "slides/week-4.html#file-management-in-python",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "File Management in Python",
+    "text": "File Management in Python\nMain question: how do we read files from our computer in python?\n\nconnection management: open(), close()\nReading/writing files\nusing with to manage connections.\nReading .csvs"
+  },
+  {
+    "objectID": "slides/week-4.html#tldr",
+    "href": "slides/week-4.html#tldr",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "TLDR:",
+    "text": "TLDR:\n\nMost often we will use high-level functions from Pandas to load data into Python objects.\nWhy are we learning these tools then?\n\nVery pythonic\nNo direct equivalent in R or Stata\nImportant when working non-tabular data - text, json, images, etc..\n\nReading: Check Section 3.3 of Python for Data Analysis to learn more about the topics covered in the notebook."
+  },
+  {
+    "objectID": "slides/week-4.html#summary",
+    "href": "slides/week-4.html#summary",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Summary",
+    "text": "Summary\n\nopen(): opens a connection with files on our system.\n\nopen() returns a special item type *_io.TextIOWrapper*\nThis item is a iterator. We need to go through to convert inputs to a objectin python.\n\nclose(): closes the connection.\nwrite(): writes files on your system. Also line by line.\nwith(): wrapper for open and close that allows alias."
+  },
+  {
+    "objectID": "course_infrastructure.html",
+    "href": "course_infrastructure.html",
+    "title": "Week 1: Course Infrastructure",
     "section": "",
-    "text": "This first course in the core data science sequence teaches Data Science for Public Policy (DSPP) students how to synthesize disparate, possibly unstructured data in order to draw meaningful insights. Topics covered include the fundamentals of object-oriented programming in Python; literate programming; an introduction to algorithms and data types; data wrangling, visualization, and extraction; an introduction to machine learning methods, and text analysis. In addition, students will be exposed to Git and Github for version control and reproducible research. The objective of the course is to teach students how to incorporate data into their decision-making and analysis. No prior programming experience is assumed or required.\nThis is not the first time this course is taught at DSPP. For this reason, several of the materials here are borrowed from previous iterations of this course taught by Dr. Rebecca Johnson and Dr. Eric Dunford"
+    "text": "Throughout the semester, we will use a combination of computational tools. This a summary of the main tools:\n\nCommandLine: primarily to interact with git, install programs and run a few scripts\nPython3: for programming taks\nGit/Github: for version control, reproucibility and for sharing materials\nJupyter Notebooks: as a main IDE to work with Python\nQuarto via RStudio: as a secondary IDE (you can make your primary if you prefer) to coding in Python/R/SQL\nSlack: for communication.\n\nLet’s cover how to set up each of these tools in your local machines.\n\n\n\n\n\n\nWarning\n\n\n\nIf you run into issues, please reach out to the Teaching Assistant for assistance\n\n\n\n\nAt times, we’ll use a unix-based commandline. The commandline will feature into our discussion on using git and also running Python programs. If you use a Mac or a Linux operating system, then a functioning commandline comes with your operating system. For Apple machines, this is the Terminal.\nFor Windows (specifically Windows 10), you can enable Linux Bash shell. The following offers a tutorial on how to do this.\nIf you’re using a version of Windows that pre-dates version 10, then Git Bash offers a program will allow you to use git commands from your windows machine.\nLater in the first class, we will cover some concepts of working with the commandline. You can get a full notebook with a intro to commandline in the materials for week 1\n\n\n\nWe’ll use Python3 throughout this course. Below are instructions for downloading Python3 using commandline packages manager (Homebrew for mac, Chocolatey for windows).\n\nInstalling Python3 using Homebrew on a Mac (Apple)\nInstalling Python3 using Chocolatey on a PC (Windows)\n\nAn alternative way to install Python3 is to download an Anaconda distribution. I will use pip rather than conda in the instruction for downloading Python modules. These are simply two ways of downloading and managing open-source software packages. Choose which ever works best for you\nMost computers already have python3 installed. You can check if that is your case through your commandline\npython3 --version\nOn some versions of Windows, you may need to use py instead of python3:\npy --version\nIn either case, the output of this command should be something like Python 3.8.5\n\n\n\nOnce you have Python3 on your computer, you can install a Jupyter Notebook. If you downloaded Python3 using Anaconda, then Jupyter Notebook comes with the distribution and requires no further installation on your part. If you are not using Anaconda, you can install Jupyter notebook running the following code using your commandline.\n# on your command line\npip install jupyter\nYou can then activate a Jupyter Notebook from the commandline by typing:\n# on your command line\njupyter notebook\n\n\nHere is my workflow to open Jupyter Notebooks using the commandline.\n\nOpen the terminal\nNavigate (using cd) to the folder you want to be the root of your jupyter notebook\nOpen the notebook (jupyter notebook)\n\nIt looks like this if I were to open a notebook in the folder I have for this course\n# open terminal\ncd ppol_5203\njupyter notebook\n\n\n\nIf you installed Python using Anaconda distribution system (here: https://www.anaconda.com/products/individual). You can open Jupyter through a point-and-click system. It take forever, but it works!\nIn the lecture notes, you can also find a Introduction to Jupyter notebook. We will cover this in the first class of the course.\n\n\n\n\nA quick digression of the R vs Python debate\nFor some of your classes in the Data Science and Public Policy Masters, you will be using R. Some data scientists and computational social scientists have strong beleifs as to which langugae is better. I, and the DSPP faculty, do not subscribe to that view. Most techniques that are relevent for applied data science can be done in either language.\nIn my personal opinion, R outperforms Python in data manipulation tasks, visualization and statistical modeling. This is because R started out as a statistical programming environment, and that heritage is still visible. Meanwhile, Python started our a general purpose programming language, which was heavily adopted by computer scientists, which means Python outperforms on abstraction, machine learning tasks, working with more complex data types.\nMost importantly, you will be using more one language compared to the other conditional on your career path and the type of tasks you end up working with. If you end up in a team full of computer scientists, it is more likely Python will be your favored language. If you move to work more with social scientists, R will probably be more heavily used. There is no need to chose now. Learn both and broad your horizons. As general programming languages, learning both requires almost the same amount of effort of learning one in isolation.\nBack to the course infrastructure\nIn your classes that are focused on using R, RStudio will be your main IDE. However, RStudio isn’t just for R. It can handle a number of different languages. We can use Python in RStudio using the reticulate package.\nI create a full notebook to teach you how to use Python in Rstudio. Check the intro do quarto notebook. Let’s cover some of the installation steps here:\nTo install RStudio, download from the following link . reticulate is an R package that allows one run a Python REPL in the R console. In addition, it allows one to read in and use Python code, and pass data between R and and Python. The following provides instructions on installing reticulate.\nWith reticulate, you can use Rstudio as a IDE for Python. Another option is to use Quarto (the next-generation version of R Markdown) as an unified framework to generate notebooks with text + code. If you’re an R Markdown user, you will see how Quarto is just an extension of the capabilities that were previously provided by R Markdown. Now, instead of .rmd files, we have .qmd files. Quarto is already installed with RStudio.\n\n\n\nWe’ll go over more Git/GitHub instructions during the second class session. Before that session:\n\nInstall Git if it’s not installed already\nCreate a GitHub account if you don’t have one already (any email and free subscription is fine)\n\n\n\n\nOur course will make use of Slack for internal communication. Enter in our workspace with this link: (https://join.slack.com/t/ppol5203fall2024/shared_invite/zt-2ou5gm0ww-YJUJfR3vTfzN4IuKcULFDQ).\nWhen should you use slack?\n\nInteract with the TAs\nAsk questions to your colleagues\nShare links that are interesting to the discussions in class.\n\nWhen I should not use slack?\n\nIf you have a question you believe will require a longer conversation, I prefer if you can stop by at my office hours\n\nRemember, you don’t need to let me know you are going to my office hours. Just stop by!\nIf you’re new to Slack, check out this tutorial. In the first class, I’ll send out the invitation for everyone to join Slack and we’ll discuss how to use it."
   },
   {
-    "objectID": "index.html#course-description",
-    "href": "index.html#course-description",
-    "title": "PPOL 5203 - Data Science I: Foundations",
+    "objectID": "course_infrastructure.html#commandline",
+    "href": "course_infrastructure.html#commandline",
+    "title": "Week 1: Course Infrastructure",
     "section": "",
-    "text": "This first course in the core data science sequence teaches Data Science for Public Policy (DSPP) students how to synthesize disparate, possibly unstructured data in order to draw meaningful insights. Topics covered include the fundamentals of object-oriented programming in Python; literate programming; an introduction to algorithms and data types; data wrangling, visualization, and extraction; an introduction to machine learning methods, and text analysis. In addition, students will be exposed to Git and Github for version control and reproducible research. The objective of the course is to teach students how to incorporate data into their decision-making and analysis. No prior programming experience is assumed or required.\nThis is not the first time this course is taught at DSPP. For this reason, several of the materials here are borrowed from previous iterations of this course taught by Dr. Rebecca Johnson and Dr. Eric Dunford"
+    "text": "At times, we’ll use a unix-based commandline. The commandline will feature into our discussion on using git and also running Python programs. If you use a Mac or a Linux operating system, then a functioning commandline comes with your operating system. For Apple machines, this is the Terminal.\nFor Windows (specifically Windows 10), you can enable Linux Bash shell. The following offers a tutorial on how to do this.\nIf you’re using a version of Windows that pre-dates version 10, then Git Bash offers a program will allow you to use git commands from your windows machine.\nLater in the first class, we will cover some concepts of working with the commandline. You can get a full notebook with a intro to commandline in the materials for week 1"
   },
   {
-    "objectID": "index.html#goals",
-    "href": "index.html#goals",
-    "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "Goals",
-    "text": "Goals\nAfter completing this course, the students will be able to:\n\nGeneral understanding of python’s object oriented programming syntax and data structures.\nCompetency using version control (Git/Github).\nLearn to manipulate and explore data with Pandas and other tools.\nGeneral understanding of analyzing algorithms and data structures.\nLearn to extract and process data from structured and unstructured sources.\nGet some intuition of modeling text data in Python.\nLearn the basics of machine learning as a modeling approach.\nLearn how to use Generative AI for multiple applied tasks.\nLearn basics of using SQL to query databases."
-  },
-  {
-    "objectID": "index.html#instructor",
-    "href": "index.html#instructor",
-    "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "Instructor",
-    "text": "Instructor\n\nProfessor: Dr. Tiago Ventura\nPronouns: He/Him\nEmail: tv186@georgetown.edu\nOffice hours:\n\nTime: Every Tuesday, 4pm - 5pm\nLocation: 125E, Office Number 766\n\n\nYou are all welcome to the office hours at any time. No need to schedule time with me to go to office hours!"
-  },
-  {
-    "objectID": "index.html#teaching-assistants",
-    "href": "index.html#teaching-assistants",
-    "title": "PPOL 5203 - Data Science I: Foundations",
-    "section": "Teaching Assistants:",
-    "text": "Teaching Assistants:\n\nRebecca Wagner (DSPP Second-Year Student)\n\nEmail:rlw137@georgetown.edu\nOffice Hours:\n\nin person: Every Monday 2pm, McCourt, Room 602\nvirtual: Every Tuesday 7pm. Zoom link\n\n\n\n\nCourse Infra-structure\nClass Website: A class website https://tiagoventura.github.io/ppol5203 will be used throughout the course and should be checked on a regular basis for lecture materials and required readings.\nClass Slack Channel: The class also has a dedicated slack channel. You can join on clicking here. The channel serves as an open forum to discuss, collaborate, pose problems/questions, and offer solutions. Students are encouraged to pose any questions they have there as this will provide the professor and TA the means of answering the question so that all can see the response. If you’re unfamiliar with, please consult the following start-up tutorial (https://get.slack.help/hc/en-us/articles/218080037-Getting-started-for-new-members). Please follow the invite link to be added to the Slack channel.\nCanvas: A Canvas site (http://canvas.georgetown.edu) will be used throughout the course and should be checked on a regular basis for announcements. ll announcements for the assignments and classes will be posted on Canvas; they will not be distributed in class or by e-mail. Support for Canvas is available at (202) 687-4949\nNOTE: Students are encouraged to run lecture code on their own machines. If you do not have access to a laptop on which you can install python3, please contact the professor and/or TA for assistance. Only python3 will be used in this course.\nDatacamp: As part of this course, you will have access to a DataCamp classroom that you can use to take Datacamp modules for free. Join the classroom here Datacamp courses can be a useful tool for you to practice the concepts we see in class. Although I will not assign specific courses for you,, you can use Datacamp courses to review the topics we cover in class. The lecture notes will cover in details all our in-class discussions. Datacamp courses will be considered additional material."
-  },
-  {
-    "objectID": "lecture_notes/week-01/intro-to-quarto.html",
-    "href": "lecture_notes/week-01/intro-to-quarto.html",
-    "title": "Week 1: Introduction to Quarto for Python",
+    "objectID": "course_infrastructure.html#python3",
+    "href": "course_infrastructure.html#python3",
+    "title": "Week 1: Course Infrastructure",
     "section": "",
-    "text": "The purpose of this notebook is to show case the use of Quarto notebooks. It will cover:\n\nBrief introduction to Quarto Notebooks\nRunning R with Quarto Notebooks\nRunning Python with Quarto Notebooks + reticulate\n\nSee Quarto’s website for a more in-depth coverage of the framework."
+    "text": "We’ll use Python3 throughout this course. Below are instructions for downloading Python3 using commandline packages manager (Homebrew for mac, Chocolatey for windows).\n\nInstalling Python3 using Homebrew on a Mac (Apple)\nInstalling Python3 using Chocolatey on a PC (Windows)\n\nAn alternative way to install Python3 is to download an Anaconda distribution. I will use pip rather than conda in the instruction for downloading Python modules. These are simply two ways of downloading and managing open-source software packages. Choose which ever works best for you\nMost computers already have python3 installed. You can check if that is your case through your commandline\npython3 --version\nOn some versions of Windows, you may need to use py instead of python3:\npy --version\nIn either case, the output of this command should be something like Python 3.8.5"
   },
   {
-    "objectID": "lecture_notes/week-01/intro-to-quarto.html#my-personal-tldr-about-quarto",
-    "href": "lecture_notes/week-01/intro-to-quarto.html#my-personal-tldr-about-quarto",
-    "title": "Week 1: Introduction to Quarto for Python",
-    "section": "My personal TLDR about Quarto",
-    "text": "My personal TLDR about Quarto\nQuarto was developed by Posit (the new name of RStudio). It represents the effort of RStudio to become a language agnostic IDE for Data Science.\nQuarto main promise is to allow data scientists to run many different languages using the same notebook structure. For the purpose of our course, we will use mostly Jupyter Notebooks, since those are still dominant among Python developers.\nAs you are learning Python and R at the same time throughout your DSPP courses, I advice you to take a look at Quarto. You might find it a useful tool to run both R and Python."
-  },
-  {
-    "objectID": "lecture_notes/week-01/intro-to-quarto.html#quick-tutorial-for-rstudio",
-    "href": "lecture_notes/week-01/intro-to-quarto.html#quick-tutorial-for-rstudio",
-    "title": "Week 1: Introduction to Quarto for Python",
-    "section": "Quick tutorial for RStudio",
-    "text": "Quick tutorial for RStudio\nThis is what RStudio looks like when you open it for the first time.\n\n\n\n\n\nTop left pane (input/script)\nThis is your code editor. Here you enter code in any file type (.py, .r, .qmd) you are working on. If not working with notebooks, this is just gonna be a plain text file but with a extension that run the commands.\nFor example, enter 2 + 2 in your script and run a line of code by pressing command + enter (Mac) or Ctrl + enter (PC). This is a huge advantage of Rstudio over Jupyter. You can run your code line by line, instead of running the entire cell.\nBottom left pane (output/console)\nThis is the console. It is pretty much like when you open Python/R from the Command line.\nIn the console, the prompt &gt; looks like a greater than symbol. If your prompt begins to look like a + symbol by mistake, simply click in your console and press the esc key on your keyboard as many times as necessary to return to the prompt.\nRstudio uses + when code is broken up across multiple lines and is still expecting more code. A line of code does not usually end until Rstudio finds an appropriate stop parameter or punctuation that completes some code such as a closed round parenthesis ), square bracket ], curly brace }, or quotation mark '.\nIf the output in your console gets too messy, you can clear it by pressing control + l on both Mac and PC. This will not erase any saved data - it will simply make your console easier to read.\nTop right pane (global environment)\nThis is your environment pane. All objects you create will be displayed here.\nBottom right pane (files, plots, packages, and help)\nHere you find useful tabs for navigating your file system, displaying plots, installing packages, and viewing help pages. Press the control key and a number (1 through 9) on your keyboard to shortcut between these panes and tabs."
-  },
-  {
-    "objectID": "weeks/week-03.html",
-    "href": "weeks/week-03.html",
-    "title": "Week 03",
+    "objectID": "course_infrastructure.html#jupyter-notebooks",
+    "href": "course_infrastructure.html#jupyter-notebooks",
+    "title": "Week 1: Course Infrastructure",
     "section": "",
-    "text": "Intro to Python - OOP, Data Types, and Collectors: html,  Jupyter Notebook \nIntro to Python II - Control Statements and Functions: html,  Jupyter Notebook"
+    "text": "Once you have Python3 on your computer, you can install a Jupyter Notebook. If you downloaded Python3 using Anaconda, then Jupyter Notebook comes with the distribution and requires no further installation on your part. If you are not using Anaconda, you can install Jupyter notebook running the following code using your commandline.\n# on your command line\npip install jupyter\nYou can then activate a Jupyter Notebook from the commandline by typing:\n# on your command line\njupyter notebook\n\n\nHere is my workflow to open Jupyter Notebooks using the commandline.\n\nOpen the terminal\nNavigate (using cd) to the folder you want to be the root of your jupyter notebook\nOpen the notebook (jupyter notebook)\n\nIt looks like this if I were to open a notebook in the folder I have for this course\n# open terminal\ncd ppol_5203\njupyter notebook\n\n\n\nIf you installed Python using Anaconda distribution system (here: https://www.anaconda.com/products/individual). You can open Jupyter through a point-and-click system. It take forever, but it works!\nIn the lecture notes, you can also find a Introduction to Jupyter notebook. We will cover this in the first class of the course."
   },
   {
-    "objectID": "weeks/week-03.html#lectures-notes",
-    "href": "weeks/week-03.html#lectures-notes",
-    "title": "Week 03",
+    "objectID": "course_infrastructure.html#rstudio-reticulatequarto",
+    "href": "course_infrastructure.html#rstudio-reticulatequarto",
+    "title": "Week 1: Course Infrastructure",
     "section": "",
-    "text": "Intro to Python - OOP, Data Types, and Collectors: html,  Jupyter Notebook \nIntro to Python II - Control Statements and Functions: html,  Jupyter Notebook"
+    "text": "A quick digression of the R vs Python debate\nFor some of your classes in the Data Science and Public Policy Masters, you will be using R. Some data scientists and computational social scientists have strong beleifs as to which langugae is better. I, and the DSPP faculty, do not subscribe to that view. Most techniques that are relevent for applied data science can be done in either language.\nIn my personal opinion, R outperforms Python in data manipulation tasks, visualization and statistical modeling. This is because R started out as a statistical programming environment, and that heritage is still visible. Meanwhile, Python started our a general purpose programming language, which was heavily adopted by computer scientists, which means Python outperforms on abstraction, machine learning tasks, working with more complex data types.\nMost importantly, you will be using more one language compared to the other conditional on your career path and the type of tasks you end up working with. If you end up in a team full of computer scientists, it is more likely Python will be your favored language. If you move to work more with social scientists, R will probably be more heavily used. There is no need to chose now. Learn both and broad your horizons. As general programming languages, learning both requires almost the same amount of effort of learning one in isolation.\nBack to the course infrastructure\nIn your classes that are focused on using R, RStudio will be your main IDE. However, RStudio isn’t just for R. It can handle a number of different languages. We can use Python in RStudio using the reticulate package.\nI create a full notebook to teach you how to use Python in Rstudio. Check the intro do quarto notebook. Let’s cover some of the installation steps here:\nTo install RStudio, download from the following link . reticulate is an R package that allows one run a Python REPL in the R console. In addition, it allows one to read in and use Python code, and pass data between R and and Python. The following provides instructions on installing reticulate.\nWith reticulate, you can use Rstudio as a IDE for Python. Another option is to use Quarto (the next-generation version of R Markdown) as an unified framework to generate notebooks with text + code. If you’re an R Markdown user, you will see how Quarto is just an extension of the capabilities that were previously provided by R Markdown. Now, instead of .rmd files, we have .qmd files. Quarto is already installed with RStudio."
   },
   {
-    "objectID": "weeks/week-03.html#slides",
-    "href": "weeks/week-03.html#slides",
-    "title": "Week 03",
-    "section": "Slides",
-    "text": "Slides\nWeek 3 - Intro do Python: OOP, Control Statements and Functions"
-  },
-  {
-    "objectID": "weeks/week-03.html#in-class-exercise",
-    "href": "weeks/week-03.html#in-class-exercise",
-    "title": "Week 03",
-    "section": "In-Class Exercise",
-    "text": "In-Class Exercise\nSee slides or notebook for the exercise"
-  },
-  {
-    "objectID": "weeks/week-03.html#required-readings",
-    "href": "weeks/week-03.html#required-readings",
-    "title": "Week 03",
-    "section": "Required Readings",
-    "text": "Required Readings\nFrom Miller, Brad, and David Ranum, Problem Solving with Algorithms and Data Structures using Python\n\nGetting Started with Data\nControl Structure\nException Handling\nDefining Functions\n\nFrom Wes McKinney, Python for Data Analysis\n\nChapter 2: Python Language Basics, IPython, and Jupyter Notebooks\nChapter 2: Built-In Data Structures, Functions, and Files\n\nMutable vs Immutable Objects in Python - Mohan, Megha"
-  },
-  {
-    "objectID": "weeks/week-03.html#additional-code",
-    "href": "weeks/week-03.html#additional-code",
-    "title": "Week 03",
-    "section": "Additional Code",
-    "text": "Additional Code\n\nData Carpentry\n\nPython Fundamentals\nRepeated Actions with Loops\nMaking Choices\nCreating Functions\nStoring Multiple Values in Lists"
-  },
-  {
-    "objectID": "weeks/week-12.html",
-    "href": "weeks/week-12.html",
-    "title": "Week 11",
+    "objectID": "course_infrastructure.html#git",
+    "href": "course_infrastructure.html#git",
+    "title": "Week 1: Course Infrastructure",
     "section": "",
-    "text": "Text analysis II: Supervised models html –  Jupyter Notebook"
+    "text": "We’ll go over more Git/GitHub instructions during the second class session. Before that session:\n\nInstall Git if it’s not installed already\nCreate a GitHub account if you don’t have one already (any email and free subscription is fine)"
   },
   {
-    "objectID": "weeks/week-12.html#lectures-notes",
-    "href": "weeks/week-12.html#lectures-notes",
-    "title": "Week 11",
+    "objectID": "course_infrastructure.html#slack",
+    "href": "course_infrastructure.html#slack",
+    "title": "Week 1: Course Infrastructure",
     "section": "",
-    "text": "Text analysis II: Supervised models html –  Jupyter Notebook"
+    "text": "Our course will make use of Slack for internal communication. Enter in our workspace with this link: (https://join.slack.com/t/ppol5203fall2024/shared_invite/zt-2ou5gm0ww-YJUJfR3vTfzN4IuKcULFDQ).\nWhen should you use slack?\n\nInteract with the TAs\nAsk questions to your colleagues\nShare links that are interesting to the discussions in class.\n\nWhen I should not use slack?\n\nIf you have a question you believe will require a longer conversation, I prefer if you can stop by at my office hours\n\nRemember, you don’t need to let me know you are going to my office hours. Just stop by!\nIf you’re new to Slack, check out this tutorial. In the first class, I’ll send out the invitation for everyone to join Slack and we’ll discuss how to use it."
   },
   {
-    "objectID": "weeks/week-07.html",
-    "href": "weeks/week-07.html",
-    "title": "Week 07",
+    "objectID": "lecture_notes/week-01/course_infrastructure.html",
+    "href": "lecture_notes/week-01/course_infrastructure.html",
+    "title": "Week 1: Course Infrastructure",
     "section": "",
-    "text": "Pandas - Joining Data : html –  Jupyter Notebook \nData Visualization: html –  Jupyter Notebook"
+    "text": "Throughout the semester, we will use a combination of tools. This a summary of the main tools:\n\nCommandLine: primarily to interact with git, install programs and run a few scripts\nPython3: for programming taks\nGit/Github: for version control, reproucibility and for sharing materials\nJupyter Notebooks: as a main IDE to work with Python\nQuarto via RStudio: as a secondary IDE (you can make your primary if you prefer) to coding in Python/R/SQL\nSlack: for communication.\n\nLet’s cover how to set up each of these tools in your local machines.\n\n\n\n\n\n\nWarning\n\n\n\nIf you run into issues, please reach out to the Teaching Assistant for assistance\n\n\n\n\nAt times, we’ll use a unix-based commandline. The commandline will feature into our discussion on using git and also running Python programs. If you use a Mac or a Linux operating system, then a functioning commandline comes with your operating system. For Apple machines, this is the Terminal.\nFor Windows (specifically Windows 10), you can enable Linux Bash shell. The following offers a tutorial on how to do this.\nIf you’re using a version of Windows that pre-dates version 10, then Git Bash offers a program will allow you to use git commands from your windows machine.\nLater in the first class, we will cover some concepts of working with the commandline. You can get a full notebook with a intro to commandline in the materials for week 1\n\n\n\nWe’ll use Python3 throughout this course. Below are instructions for downloading Python3 using commandline packages manager (Homebrew for mac, Chocolatey for windows).\n\nInstalling Python3 using Homebrew on a Mac (Apple)\nInstalling Python3 using Chocolatey on a PC (Windows)\n\nAn alternative way to install Python3 is to download an Anaconda distribution. I will use pip rather than conda in the instruction for downloading Python modules. These are simply two ways of downloading and managing open-source software packages. Choose which ever works best for you\nMost computers already have python3 installed. You can check if that is your case through your commandline\npython3 --version\nOn some versions of Windows, you may need to use py instead of python3:\npy --version\nIn either case, the output of this command should be something like Python 3.8.5\n\n\n\nOnce you have Python3 on your computer, you can install a Jupyter Notebook. If you downloaded Python3 using Anaconda, then Jupyter Notebook comes with the distribution and requires no further installation on your part. If you are not using Anaconda, you can install Jupyter notebook running the following code using your commandline.\n# on your command line\npip install jupyter\nYou can then activate a Jupyter Notebook from the commandline by typing:\n# on your command line\njupyter notebook\n\n\nHere is my workflow to open Jupyter Notebooks using the commandline.\n\nOpen the terminal\nNavigate (using cd) to the folder you want to be the root of your jupyter notebook\nOpen the notebook (jupyter notebook)\n\nIt looks like this if I were to open a notebook in the folder I have for this course\n# open terminal\ncd ppol_5203\njupyter notebook\n\n\n\nIf you installed Python using Anaconda distribution system (here: https://www.anaconda.com/products/individual). You can open Jupyter through a point-and-click system. It take forever, but it works!\nIn the lecture notes, you can also find a Introduction to Jupyter notebook. We will cover this in the first class of the course.\n\n\n\n\nA quick digression of the R vs Python debate\nFor some of your classes in the Data Science and Public Policy Masters, you will be using R. Some data scientists and computational social scientists have strong beleifs as to which langugae is better. I, and the DSPP faculty, do not subscribe to that view. Most techniques that are relevent for applied data science can be done in either language.\nIn my personal opinion, R outperforms Python in data manipulation tasks, visualization and statistical modeling. This is because R started out as a statistical programming environment, and that heritage is still visible. Meanwhile, Python started our a general purpose programming language, which was heavily adopted by computer scientists, which means Python outperforms on abstraction, machine learning tasks, working with more complex data types.\nMost importantly, you will be using more one language compared to the other conditional on your career path and the type of tasks you end up working with. If you end up in a team full of computer scientists, it is more likely Python will be your favored language. If you move to work more with social scientists, R will probably be more heavily used. There is no need to chose now. Learn both and broad your horizons. As general programming languages, learning both requires almost the same amount of effort of learning one in isolation.\nBack to the course infrastructure\nIn your classes that are focused on using R, RStudio will be your main IDE. However, RStudio isn’t just for R. It can handle a number of different languages. We can use Python in RStudio using the reticulate package.\nI create a full notebook to teach you how to use Python in Rstudio. Check the intro do quarto notebook. Let’s cover some of the installation steps here:\nTo install RStudio, download from the following link . reticulate is an R package that allows one run a Python REPL in the R console. In addition, it allows one to read in and use Python code, and pass data between R and and Python. The following provides instructions on installing reticulate.\nWith reticulate, you can use Rstudio as a IDE for Python. Another option is to use Quarto (the next-generation version of R Markdown) as an unified framework to generate notebooks with text + code. If you’re an R Markdown user, you will see how Quarto is just an extension of the capabilities that were previously provided by R Markdown. Now, instead of .rmd files, we have .qmd files. Quarto is already installed with RStudio.\n\n\n\nWe’ll go over more Git/GitHub instructions during the second class session. Before that session:\n\nInstall Git if it’s not installed already\nCreate a GitHub account if you don’t have one already (any email and free subscription is fine)\n\n\n\n\nOur course will make use of Slack for internal communication. Enter in our workspace with this link: (https://join.slack.com/t/ppol5203fall2024/shared_invite/zt-2ou5gm0ww-YJUJfR3vTfzN4IuKcULFDQ).\nWhen should you use slack?\n\nInteract with the TAs\nAsk questions to your colleagues\nShare links that are interesting to the discussions in class.\n\nWhen I should not use slack?\n\nIf you have a question you believe will require a longer conversation, I prefer if you can stop by at my office hours\n\nRemember, you don’t need to let me know you are going to my office hours. Just stop by!\nIf you’re new to Slack, check out this tutorial. In the first class, I’ll send out the invitation for everyone to join Slack and we’ll discuss how to use it."
   },
   {
-    "objectID": "weeks/week-07.html#lectures-notes",
-    "href": "weeks/week-07.html#lectures-notes",
-    "title": "Week 07",
+    "objectID": "lecture_notes/week-01/course_infrastructure.html#commandline",
+    "href": "lecture_notes/week-01/course_infrastructure.html#commandline",
+    "title": "Week 1: Course Infrastructure",
     "section": "",
-    "text": "Pandas - Joining Data : html –  Jupyter Notebook \nData Visualization: html –  Jupyter Notebook"
+    "text": "At times, we’ll use a unix-based commandline. The commandline will feature into our discussion on using git and also running Python programs. If you use a Mac or a Linux operating system, then a functioning commandline comes with your operating system. For Apple machines, this is the Terminal.\nFor Windows (specifically Windows 10), you can enable Linux Bash shell. The following offers a tutorial on how to do this.\nIf you’re using a version of Windows that pre-dates version 10, then Git Bash offers a program will allow you to use git commands from your windows machine.\nLater in the first class, we will cover some concepts of working with the commandline. You can get a full notebook with a intro to commandline in the materials for week 1"
   },
   {
-    "objectID": "weeks/week-07.html#datasets",
-    "href": "weeks/week-07.html#datasets",
-    "title": "Week 07",
-    "section": "Datasets",
-    "text": "Datasets\nDownload the datasets  here"
-  },
-  {
-    "objectID": "weeks/week-07.html#slides",
-    "href": "weeks/week-07.html#slides",
-    "title": "Week 07",
-    "section": "Slides",
-    "text": "Slides\n\nJoining, Tidying and Visualizing Data"
-  },
-  {
-    "objectID": "weeks/week-05.html",
-    "href": "weeks/week-05.html",
-    "title": "Week 05",
+    "objectID": "lecture_notes/week-01/course_infrastructure.html#python3",
+    "href": "lecture_notes/week-01/course_infrastructure.html#python3",
+    "title": "Week 1: Course Infrastructure",
     "section": "",
-    "text": "Today, we will go over three notebooks:\n\nFile Management: html –  Jupyter Notebook \nData as Nested lists - html –  Jupyter Notebook \nNumpy: html –  Jupyter Notebook \nIntro do Pandas: html –  Jupyter Notebook"
+    "text": "We’ll use Python3 throughout this course. Below are instructions for downloading Python3 using commandline packages manager (Homebrew for mac, Chocolatey for windows).\n\nInstalling Python3 using Homebrew on a Mac (Apple)\nInstalling Python3 using Chocolatey on a PC (Windows)\n\nAn alternative way to install Python3 is to download an Anaconda distribution. I will use pip rather than conda in the instruction for downloading Python modules. These are simply two ways of downloading and managing open-source software packages. Choose which ever works best for you\nMost computers already have python3 installed. You can check if that is your case through your commandline\npython3 --version\nOn some versions of Windows, you may need to use py instead of python3:\npy --version\nIn either case, the output of this command should be something like Python 3.8.5"
   },
   {
-    "objectID": "weeks/week-05.html#lectures-notes",
-    "href": "weeks/week-05.html#lectures-notes",
-    "title": "Week 05",
+    "objectID": "lecture_notes/week-01/course_infrastructure.html#jupyter-notebooks",
+    "href": "lecture_notes/week-01/course_infrastructure.html#jupyter-notebooks",
+    "title": "Week 1: Course Infrastructure",
     "section": "",
-    "text": "Today, we will go over three notebooks:\n\nFile Management: html –  Jupyter Notebook \nData as Nested lists - html –  Jupyter Notebook \nNumpy: html –  Jupyter Notebook \nIntro do Pandas: html –  Jupyter Notebook"
+    "text": "Once you have Python3 on your computer, you can install a Jupyter Notebook. If you downloaded Python3 using Anaconda, then Jupyter Notebook comes with the distribution and requires no further installation on your part. If you are not using Anaconda, you can install Jupyter notebook running the following code using your commandline.\n# on your command line\npip install jupyter\nYou can then activate a Jupyter Notebook from the commandline by typing:\n# on your command line\njupyter notebook\n\n\nHere is my workflow to open Jupyter Notebooks using the commandline.\n\nOpen the terminal\nNavigate (using cd) to the folder you want to be the root of your jupyter notebook\nOpen the notebook (jupyter notebook)\n\nIt looks like this if I were to open a notebook in the folder I have for this course\n# open terminal\ncd ppol_5203\njupyter notebook\n\n\n\nIf you installed Python using Anaconda distribution system (here: https://www.anaconda.com/products/individual). You can open Jupyter through a point-and-click system. It take forever, but it works!\nIn the lecture notes, you can also find a Introduction to Jupyter notebook. We will cover this in the first class of the course."
   },
   {
-    "objectID": "weeks/week-05.html#datasets",
-    "href": "weeks/week-05.html#datasets",
-    "title": "Week 05",
-    "section": "Datasets",
-    "text": "Datasets\nDownload the datasets  here"
-  },
-  {
-    "objectID": "weeks/week-05.html#slides",
-    "href": "weeks/week-05.html#slides",
-    "title": "Week 05",
-    "section": "Slides",
-    "text": "Slides\n\nNumpy and Intro do Pandas"
-  },
-  {
-    "objectID": "weeks/week-05.html#readings",
-    "href": "weeks/week-05.html#readings",
-    "title": "Week 05",
-    "section": "Readings",
-    "text": "Readings\n\nSuggested Reading for Numpy\nPDS VanderPlas\n\nCh. 2: Introduction to Numpy - Python Data Science Handbook - VanderPlas, Jake\n\n\nSuggested Readings for Pandas\n\nPDS VanderPlas\nCh. 4: Data Manipulation with Pandas\nTidy Data in Python\nTidy Data by Hadley Wickham in R\n\nAnd all our lecture notes!\n\nAdditional Resources and Suggested Materials\n\nPython Pandas Tutorial: A Complete Introduction for Beginners\nData Wrangling with Pandas Cheat Sheet - pandas.pydata.org\ndplyr-style Data Manipulation with Pipes in Python - Allen, Akinkunle\nPython Pandas vs. R Dplyr - The Full Cheatsheet - Martin Šiklar\nMethods Chaining in Pandas\n\nExercises in Pandas"
-  },
-  {
-    "objectID": "weeks/week-10.html",
-    "href": "weeks/week-10.html",
-    "title": "Week 9",
+    "objectID": "lecture_notes/week-01/course_infrastructure.html#rstudio-reticulatequarto",
+    "href": "lecture_notes/week-01/course_infrastructure.html#rstudio-reticulatequarto",
+    "title": "Week 1: Course Infrastructure",
     "section": "",
-    "text": "Statistical Learning: inference and predictions html –  Jupyter Notebook"
+    "text": "A quick digression of the R vs Python debate\nFor some of your classes in the Data Science and Public Policy Masters, you will be using R. Some data scientists and computational social scientists have strong beleifs as to which langugae is better. I, and the DSPP faculty, do not subscribe to that view. Most techniques that are relevent for applied data science can be done in either language.\nIn my personal opinion, R outperforms Python in data manipulation tasks, visualization and statistical modeling. This is because R started out as a statistical programming environment, and that heritage is still visible. Meanwhile, Python started our a general purpose programming language, which was heavily adopted by computer scientists, which means Python outperforms on abstraction, machine learning tasks, working with more complex data types.\nMost importantly, you will be using more one language compared to the other conditional on your career path and the type of tasks you end up working with. If you end up in a team full of computer scientists, it is more likely Python will be your favored language. If you move to work more with social scientists, R will probably be more heavily used. There is no need to chose now. Learn both and broad your horizons. As general programming languages, learning both requires almost the same amount of effort of learning one in isolation.\nBack to the course infrastructure\nIn your classes that are focused on using R, RStudio will be your main IDE. However, RStudio isn’t just for R. It can handle a number of different languages. We can use Python in RStudio using the reticulate package.\nI create a full notebook to teach you how to use Python in Rstudio. Check the intro do quarto notebook. Let’s cover some of the installation steps here:\nTo install RStudio, download from the following link . reticulate is an R package that allows one run a Python REPL in the R console. In addition, it allows one to read in and use Python code, and pass data between R and and Python. The following provides instructions on installing reticulate.\nWith reticulate, you can use Rstudio as a IDE for Python. Another option is to use Quarto (the next-generation version of R Markdown) as an unified framework to generate notebooks with text + code. If you’re an R Markdown user, you will see how Quarto is just an extension of the capabilities that were previously provided by R Markdown. Now, instead of .rmd files, we have .qmd files. Quarto is already installed with RStudio."
   },
   {
-    "objectID": "weeks/week-10.html#lecture-notes",
-    "href": "weeks/week-10.html#lecture-notes",
-    "title": "Week 9",
+    "objectID": "lecture_notes/week-01/course_infrastructure.html#git",
+    "href": "lecture_notes/week-01/course_infrastructure.html#git",
+    "title": "Week 1: Course Infrastructure",
     "section": "",
-    "text": "Statistical Learning: inference and predictions html –  Jupyter Notebook"
+    "text": "We’ll go over more Git/GitHub instructions during the second class session. Before that session:\n\nInstall Git if it’s not installed already\nCreate a GitHub account if you don’t have one already (any email and free subscription is fine)"
   },
   {
-    "objectID": "weeks/week-08.html",
-    "href": "weeks/week-08.html",
-    "title": "Week 08",
+    "objectID": "lecture_notes/week-01/course_infrastructure.html#slack",
+    "href": "lecture_notes/week-01/course_infrastructure.html#slack",
+    "title": "Week 1: Course Infrastructure",
     "section": "",
-    "text": "Parsing Unstructured Data: Scraping Static Websites: html –  Jupyter Notebook"
+    "text": "Our course will make use of Slack for internal communication. Enter in our workspace with this link: (https://join.slack.com/t/ppol5203fall2024/shared_invite/zt-2ou5gm0ww-YJUJfR3vTfzN4IuKcULFDQ).\nWhen should you use slack?\n\nInteract with the TAs\nAsk questions to your colleagues\nShare links that are interesting to the discussions in class.\n\nWhen I should not use slack?\n\nIf you have a question you believe will require a longer conversation, I prefer if you can stop by at my office hours\n\nRemember, you don’t need to let me know you are going to my office hours. Just stop by!\nIf you’re new to Slack, check out this tutorial. In the first class, I’ll send out the invitation for everyone to join Slack and we’ll discuss how to use it."
   },
   {
-    "objectID": "weeks/week-08.html#lectures-notes",
-    "href": "weeks/week-08.html#lectures-notes",
-    "title": "Week 08",
+    "objectID": "problemset.html",
+    "href": "problemset.html",
+    "title": "Problem Sets",
     "section": "",
-    "text": "Parsing Unstructured Data: Scraping Static Websites: html –  Jupyter Notebook"
-  },
-  {
-    "objectID": "weeks/week-12_.html",
-    "href": "weeks/week-12_.html",
-    "title": "Week 12",
-    "section": "",
-    "text": "SQL html –  Jupyter Notebook"
-  },
-  {
-    "objectID": "weeks/week-12_.html#lectures-notes",
-    "href": "weeks/week-12_.html#lectures-notes",
-    "title": "Week 12",
-    "section": "",
-    "text": "SQL html –  Jupyter Notebook"
-  },
-  {
-    "objectID": "weeks/week-04.html",
-    "href": "weeks/week-04.html",
-    "title": "Week 04",
-    "section": "",
-    "text": "We will cover these notebooks\nFinish from last week:\n\nIntro to Python II - Control Statements and Functions: html,  Jupyter Notebook \n\nFrom this week:\n\nComprehension and Generators: html –  Jupyter Notebook \nFile Management: html –  Jupyter Notebook \nData as Nested lists - html –  Jupyter Notebook"
-  },
-  {
-    "objectID": "weeks/week-04.html#lectures-notes",
-    "href": "weeks/week-04.html#lectures-notes",
-    "title": "Week 04",
-    "section": "",
-    "text": "We will cover these notebooks\nFinish from last week:\n\nIntro to Python II - Control Statements and Functions: html,  Jupyter Notebook \n\nFrom this week:\n\nComprehension and Generators: html –  Jupyter Notebook \nFile Management: html –  Jupyter Notebook \nData as Nested lists - html –  Jupyter Notebook"
-  },
-  {
-    "objectID": "weeks/week-04.html#datasets",
-    "href": "weeks/week-04.html#datasets",
-    "title": "Week 04",
-    "section": "Datasets",
-    "text": "Datasets\nDownload the datasets  here"
-  },
-  {
-    "objectID": "weeks/week-04.html#slides",
-    "href": "weeks/week-04.html#slides",
-    "title": "Week 04",
-    "section": "Slides",
-    "text": "Slides\n\nControl Statements, Comprehensions, Nested Lists, and Numpy"
-  },
-  {
-    "objectID": "weeks/week-04.html#readings",
-    "href": "weeks/week-04.html#readings",
-    "title": "Week 04",
-    "section": "Readings",
-    "text": "Readings\n\nRequired Readings\nPDS VanderPlas\n\nCh. 2: Introduction to Numpy - Python Data Science Handbook - VanderPlas, Jake\n\nPDA Wes McKinney, Chapter 3\n\nList, Set, and Dictionary Comprehensions\nFile Management System\n\nAdditional Readings\n\nfor-loop-vs-list-comprehension-vs-high-order-functions"
-  },
-  {
-    "objectID": "weeks/week-11.html",
-    "href": "weeks/week-11.html",
-    "title": "Week 10",
-    "section": "",
-    "text": "Text analysis I: Counting, Describing and Fitting Topics html –  Jupyter Notebook"
-  },
-  {
-    "objectID": "weeks/week-11.html#lecture-notes",
-    "href": "weeks/week-11.html#lecture-notes",
-    "title": "Week 10",
-    "section": "",
-    "text": "Text analysis I: Counting, Describing and Fitting Topics html –  Jupyter Notebook"
-  },
-  {
-    "objectID": "weeks/week-13.html",
-    "href": "weeks/week-13.html",
-    "title": "Week 13",
-    "section": "",
-    "text": "SQL html –  Jupyter Notebook"
-  },
-  {
-    "objectID": "weeks/week-13.html#lectures-notes",
-    "href": "weeks/week-13.html#lectures-notes",
-    "title": "Week 13",
-    "section": "",
-    "text": "SQL html –  Jupyter Notebook"
-  },
-  {
-    "objectID": "weeks/week-06.html",
-    "href": "weeks/week-06.html",
-    "title": "Week 06",
-    "section": "",
-    "text": "Today, we will go over three notebooks and you have a additional notebook to work by yourselves:\n\nPandas - data loading: html –  Jupyter Notebook \nPandas - data wrangling: html –  Jupyter Notebook \nPandas - Joining Data : html –  Jupyter Notebook \nPandas Miscellaneous: html –  Jupyter Notebook"
-  },
-  {
-    "objectID": "weeks/week-06.html#lectures-notes",
-    "href": "weeks/week-06.html#lectures-notes",
-    "title": "Week 06",
-    "section": "",
-    "text": "Today, we will go over three notebooks and you have a additional notebook to work by yourselves:\n\nPandas - data loading: html –  Jupyter Notebook \nPandas - data wrangling: html –  Jupyter Notebook \nPandas - Joining Data : html –  Jupyter Notebook \nPandas Miscellaneous: html –  Jupyter Notebook"
-  },
-  {
-    "objectID": "weeks/week-06.html#datasets",
-    "href": "weeks/week-06.html#datasets",
-    "title": "Week 06",
-    "section": "Datasets",
-    "text": "Datasets\nDownload the datasets  here"
-  },
-  {
-    "objectID": "weeks/week-06.html#slides",
-    "href": "weeks/week-06.html#slides",
-    "title": "Week 06",
-    "section": "Slides",
-    "text": "Slides\n\nPandas: Data Wrangling"
-  },
-  {
-    "objectID": "weeks/week-06.html#readings",
-    "href": "weeks/week-06.html#readings",
-    "title": "Week 06",
-    "section": "Readings",
-    "text": "Readings\nSuggested Readings for Pandas\n\nPDS VanderPlas\nCh. 4: Data Manipulation with Pandas\nTidy Data in Python\nTidy Data by Hadley Wickham in R\n\nAnd all our lecture notes!\n\nAdditional Resources and Suggested Materials\n\nPython Pandas Tutorial: A Complete Introduction for Beginners\nData Wrangling with Pandas Cheat Sheet - pandas.pydata.org\ndplyr-style Data Manipulation with Pipes in Python - Allen, Akinkunle\nPython Pandas vs. R Dplyr - The Full Cheatsheet - Martin Šiklar\nMethods Chaining in Pandas\nThe Pandas Assign Method and Chaining\n\nExercises in Pandas"
-  },
-  {
-    "objectID": "weeks/week-02.html",
-    "href": "weeks/week-02.html",
-    "title": "Week 02",
-    "section": "",
-    "text": "Lecture Notes\n\nVersion Control, Workflow and Reproducibility: Git & GitHub. html,  notebook \n\n\n\nSlides\nVersion Control, Workflow and Reproducibility: Or a bit of Git & GitHub\n\n\nPractice Exercises\nLink for practice exercise: https://classroom.github.com/a/j0zuG5Wd\n\nSolutions\n\n\n\nReadings\nRequired Readings\n\nThe Plain Person’s Guide to Plain Text Social Science - Healy, Kieran\n\nCh. 1: Introduction;\nCh. 2: Keep a Record;\nCh. 3: Write and Edit;\nCh. 4: Reproduce Work.\n\nPro Git - Chacon & Straub\n\nCh. 1: Getting Started; Read 1.1 - 1.3\nCh. 2: Git Basics; Only read 2.1 - 2.5\nCh. 3: Git Branching\n\n\nAdditional Resources and Suggested Materials\n\nMore on Git/Github in Pro Git:\n\nRead 1.4 - 1.7 for help on installation and commandline\nRead Ch. 6 for more information regarding Git + Github.\n\nCh. 13 Detect Git from RStudio -Happy Git with R - Bryan, Jenny & Jim Hester\n\nVideo about authentication\n\nUsing Personal Access Tokens with GIT and GitHub\n\nMedium post"
-  },
-  {
-    "objectID": "weeks/week-01.html",
-    "href": "weeks/week-01.html",
-    "title": "Week 01",
-    "section": "",
-    "text": "Lectures Notes:\n\nInstructions for setting up the course infra-structure.\nUsing Jupyter Notebooks: html,  notebook \nUsing Quarto for Python and R html,  notebook \nBasics of Command Line: html,  notebook \n\n\n\nSlides\nWeek 01:Introduction, Installations, IDEs, Command line\n\n\nReadings\nThe readings for this week will cover a more general introduction to data science from a applied perspective (which you can call Data Science and Public Policy, Data Science for Public Good, or Computational Social Science in academic spaces)\nRequired Readings\n\nBit by Bit: Social Research in the Digital Age By Mathew Salganik\nIntroduction\nObserving Behavior\nA Three-Step Guide to Training Computational Social Science Ph.D. Students for Academic and Non-Academic Careers - By Aniket Kesari, Jae Yeon Kim, Sono Shah, Taylor Brown, Tiago Ventura and Tina Law\n\nBest Practices in Programming, IDEs and Files Management:\nRequired Readings\n\nJupyter Notebook for Beginners: A tutorial Pryke, Benjamin - www.dataquest.io\nUsing Python with RStudio and reticulate: here and here\n\nAdditional\n\nMore on RStudio + Reticulate\nR & Python: A Love Story - rstudio.com\nRStudio 1.2 Preview: Reticulated Python\nOn using LaTex to write math in markdown - docx2latex.com"
+    "text": "Problem Set\n\n\nContent\n\n\nDate Assigned\n\n\nDue Date\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "finalproject.html",
@@ -630,109 +616,333 @@
     "text": "Example of final projects from previous DSPP Years\nHere you can download some examples from projects from last year of DSPP students. Those are great projects, and involve both skills students learned in class + skills learned in other classes (like causal inference techniques)\nPPOL 5203 Projects 2022"
   },
   {
-    "objectID": "problemset.html",
-    "href": "problemset.html",
-    "title": "Problem Sets",
+    "objectID": "weeks/week-01.html",
+    "href": "weeks/week-01.html",
+    "title": "Week 01",
     "section": "",
-    "text": "Problem Set\n\n\nContent\n\n\nDate Assigned\n\n\nDue Date\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Lectures Notes:\n\nInstructions for setting up the course infra-structure.\nUsing Jupyter Notebooks: html,  notebook \nUsing Quarto for Python and R html,  notebook \nBasics of Command Line: html,  notebook \n\n\n\nSlides\nWeek 01:Introduction, Installations, IDEs, Command line\n\n\nReadings\nThe readings for this week will cover a more general introduction to data science from a applied perspective (which you can call Data Science and Public Policy, Data Science for Public Good, or Computational Social Science in academic spaces)\nRequired Readings\n\nBit by Bit: Social Research in the Digital Age By Mathew Salganik\nIntroduction\nObserving Behavior\nA Three-Step Guide to Training Computational Social Science Ph.D. Students for Academic and Non-Academic Careers - By Aniket Kesari, Jae Yeon Kim, Sono Shah, Taylor Brown, Tiago Ventura and Tina Law\n\nBest Practices in Programming, IDEs and Files Management:\nRequired Readings\n\nJupyter Notebook for Beginners: A tutorial Pryke, Benjamin - www.dataquest.io\nUsing Python with RStudio and reticulate: here and here\n\nAdditional\n\nMore on RStudio + Reticulate\nR & Python: A Love Story - rstudio.com\nRStudio 1.2 Preview: Reticulated Python\nOn using LaTex to write math in markdown - docx2latex.com"
   },
   {
-    "objectID": "lecture_notes/week-01/course_infrastructure.html",
-    "href": "lecture_notes/week-01/course_infrastructure.html",
-    "title": "Week 1: Course Infrastructure",
+    "objectID": "weeks/week-02.html",
+    "href": "weeks/week-02.html",
+    "title": "Week 02",
     "section": "",
-    "text": "Throughout the semester, we will use a combination of tools. This a summary of the main tools:\n\nCommandLine: primarily to interact with git, install programs and run a few scripts\nPython3: for programming taks\nGit/Github: for version control, reproucibility and for sharing materials\nJupyter Notebooks: as a main IDE to work with Python\nQuarto via RStudio: as a secondary IDE (you can make your primary if you prefer) to coding in Python/R/SQL\nSlack: for communication.\n\nLet’s cover how to set up each of these tools in your local machines.\n\n\n\n\n\n\nWarning\n\n\n\nIf you run into issues, please reach out to the Teaching Assistant for assistance\n\n\n\n\nAt times, we’ll use a unix-based commandline. The commandline will feature into our discussion on using git and also running Python programs. If you use a Mac or a Linux operating system, then a functioning commandline comes with your operating system. For Apple machines, this is the Terminal.\nFor Windows (specifically Windows 10), you can enable Linux Bash shell. The following offers a tutorial on how to do this.\nIf you’re using a version of Windows that pre-dates version 10, then Git Bash offers a program will allow you to use git commands from your windows machine.\nLater in the first class, we will cover some concepts of working with the commandline. You can get a full notebook with a intro to commandline in the materials for week 1\n\n\n\nWe’ll use Python3 throughout this course. Below are instructions for downloading Python3 using commandline packages manager (Homebrew for mac, Chocolatey for windows).\n\nInstalling Python3 using Homebrew on a Mac (Apple)\nInstalling Python3 using Chocolatey on a PC (Windows)\n\nAn alternative way to install Python3 is to download an Anaconda distribution. I will use pip rather than conda in the instruction for downloading Python modules. These are simply two ways of downloading and managing open-source software packages. Choose which ever works best for you\nMost computers already have python3 installed. You can check if that is your case through your commandline\npython3 --version\nOn some versions of Windows, you may need to use py instead of python3:\npy --version\nIn either case, the output of this command should be something like Python 3.8.5\n\n\n\nOnce you have Python3 on your computer, you can install a Jupyter Notebook. If you downloaded Python3 using Anaconda, then Jupyter Notebook comes with the distribution and requires no further installation on your part. If you are not using Anaconda, you can install Jupyter notebook running the following code using your commandline.\n# on your command line\npip install jupyter\nYou can then activate a Jupyter Notebook from the commandline by typing:\n# on your command line\njupyter notebook\n\n\nHere is my workflow to open Jupyter Notebooks using the commandline.\n\nOpen the terminal\nNavigate (using cd) to the folder you want to be the root of your jupyter notebook\nOpen the notebook (jupyter notebook)\n\nIt looks like this if I were to open a notebook in the folder I have for this course\n# open terminal\ncd ppol_5203\njupyter notebook\n\n\n\nIf you installed Python using Anaconda distribution system (here: https://www.anaconda.com/products/individual). You can open Jupyter through a point-and-click system. It take forever, but it works!\nIn the lecture notes, you can also find a Introduction to Jupyter notebook. We will cover this in the first class of the course.\n\n\n\n\nA quick digression of the R vs Python debate\nFor some of your classes in the Data Science and Public Policy Masters, you will be using R. Some data scientists and computational social scientists have strong beleifs as to which langugae is better. I, and the DSPP faculty, do not subscribe to that view. Most techniques that are relevent for applied data science can be done in either language.\nIn my personal opinion, R outperforms Python in data manipulation tasks, visualization and statistical modeling. This is because R started out as a statistical programming environment, and that heritage is still visible. Meanwhile, Python started our a general purpose programming language, which was heavily adopted by computer scientists, which means Python outperforms on abstraction, machine learning tasks, working with more complex data types.\nMost importantly, you will be using more one language compared to the other conditional on your career path and the type of tasks you end up working with. If you end up in a team full of computer scientists, it is more likely Python will be your favored language. If you move to work more with social scientists, R will probably be more heavily used. There is no need to chose now. Learn both and broad your horizons. As general programming languages, learning both requires almost the same amount of effort of learning one in isolation.\nBack to the course infrastructure\nIn your classes that are focused on using R, RStudio will be your main IDE. However, RStudio isn’t just for R. It can handle a number of different languages. We can use Python in RStudio using the reticulate package.\nI create a full notebook to teach you how to use Python in Rstudio. Check the intro do quarto notebook. Let’s cover some of the installation steps here:\nTo install RStudio, download from the following link . reticulate is an R package that allows one run a Python REPL in the R console. In addition, it allows one to read in and use Python code, and pass data between R and and Python. The following provides instructions on installing reticulate.\nWith reticulate, you can use Rstudio as a IDE for Python. Another option is to use Quarto (the next-generation version of R Markdown) as an unified framework to generate notebooks with text + code. If you’re an R Markdown user, you will see how Quarto is just an extension of the capabilities that were previously provided by R Markdown. Now, instead of .rmd files, we have .qmd files. Quarto is already installed with RStudio.\n\n\n\nWe’ll go over more Git/GitHub instructions during the second class session. Before that session:\n\nInstall Git if it’s not installed already\nCreate a GitHub account if you don’t have one already (any email and free subscription is fine)\n\n\n\n\nOur course will make use of Slack for internal communication. Enter in our workspace with this link: (https://join.slack.com/t/ppol5203fall2024/shared_invite/zt-2ou5gm0ww-YJUJfR3vTfzN4IuKcULFDQ).\nWhen should you use slack?\n\nInteract with the TAs\nAsk questions to your colleagues\nShare links that are interesting to the discussions in class.\n\nWhen I should not use slack?\n\nIf you have a question you believe will require a longer conversation, I prefer if you can stop by at my office hours\n\nRemember, you don’t need to let me know you are going to my office hours. Just stop by!\nIf you’re new to Slack, check out this tutorial. In the first class, I’ll send out the invitation for everyone to join Slack and we’ll discuss how to use it."
+    "text": "Lecture Notes\n\nVersion Control, Workflow and Reproducibility: Git & GitHub. html,  notebook \n\n\n\nSlides\nVersion Control, Workflow and Reproducibility: Or a bit of Git & GitHub\n\n\nPractice Exercises\nLink for practice exercise: https://classroom.github.com/a/j0zuG5Wd\n\nSolutions\n\n\n\nReadings\nRequired Readings\n\nThe Plain Person’s Guide to Plain Text Social Science - Healy, Kieran\n\nCh. 1: Introduction;\nCh. 2: Keep a Record;\nCh. 3: Write and Edit;\nCh. 4: Reproduce Work.\n\nPro Git - Chacon & Straub\n\nCh. 1: Getting Started; Read 1.1 - 1.3\nCh. 2: Git Basics; Only read 2.1 - 2.5\nCh. 3: Git Branching\n\n\nAdditional Resources and Suggested Materials\n\nMore on Git/Github in Pro Git:\n\nRead 1.4 - 1.7 for help on installation and commandline\nRead Ch. 6 for more information regarding Git + Github.\n\nCh. 13 Detect Git from RStudio -Happy Git with R - Bryan, Jenny & Jim Hester\n\nVideo about authentication\n\nUsing Personal Access Tokens with GIT and GitHub\n\nMedium post"
   },
   {
-    "objectID": "lecture_notes/week-01/course_infrastructure.html#commandline",
-    "href": "lecture_notes/week-01/course_infrastructure.html#commandline",
-    "title": "Week 1: Course Infrastructure",
+    "objectID": "weeks/week-06.html",
+    "href": "weeks/week-06.html",
+    "title": "Week 06",
     "section": "",
-    "text": "At times, we’ll use a unix-based commandline. The commandline will feature into our discussion on using git and also running Python programs. If you use a Mac or a Linux operating system, then a functioning commandline comes with your operating system. For Apple machines, this is the Terminal.\nFor Windows (specifically Windows 10), you can enable Linux Bash shell. The following offers a tutorial on how to do this.\nIf you’re using a version of Windows that pre-dates version 10, then Git Bash offers a program will allow you to use git commands from your windows machine.\nLater in the first class, we will cover some concepts of working with the commandline. You can get a full notebook with a intro to commandline in the materials for week 1"
+    "text": "Today, we will go over three notebooks and you have a additional notebook to work by yourselves:\n\nPandas - data loading: html –  Jupyter Notebook \nPandas - data wrangling: html –  Jupyter Notebook \nPandas - Joining Data : html –  Jupyter Notebook \nPandas Miscellaneous: html –  Jupyter Notebook"
   },
   {
-    "objectID": "lecture_notes/week-01/course_infrastructure.html#python3",
-    "href": "lecture_notes/week-01/course_infrastructure.html#python3",
-    "title": "Week 1: Course Infrastructure",
+    "objectID": "weeks/week-06.html#lectures-notes",
+    "href": "weeks/week-06.html#lectures-notes",
+    "title": "Week 06",
     "section": "",
-    "text": "We’ll use Python3 throughout this course. Below are instructions for downloading Python3 using commandline packages manager (Homebrew for mac, Chocolatey for windows).\n\nInstalling Python3 using Homebrew on a Mac (Apple)\nInstalling Python3 using Chocolatey on a PC (Windows)\n\nAn alternative way to install Python3 is to download an Anaconda distribution. I will use pip rather than conda in the instruction for downloading Python modules. These are simply two ways of downloading and managing open-source software packages. Choose which ever works best for you\nMost computers already have python3 installed. You can check if that is your case through your commandline\npython3 --version\nOn some versions of Windows, you may need to use py instead of python3:\npy --version\nIn either case, the output of this command should be something like Python 3.8.5"
+    "text": "Today, we will go over three notebooks and you have a additional notebook to work by yourselves:\n\nPandas - data loading: html –  Jupyter Notebook \nPandas - data wrangling: html –  Jupyter Notebook \nPandas - Joining Data : html –  Jupyter Notebook \nPandas Miscellaneous: html –  Jupyter Notebook"
   },
   {
-    "objectID": "lecture_notes/week-01/course_infrastructure.html#jupyter-notebooks",
-    "href": "lecture_notes/week-01/course_infrastructure.html#jupyter-notebooks",
-    "title": "Week 1: Course Infrastructure",
-    "section": "",
-    "text": "Once you have Python3 on your computer, you can install a Jupyter Notebook. If you downloaded Python3 using Anaconda, then Jupyter Notebook comes with the distribution and requires no further installation on your part. If you are not using Anaconda, you can install Jupyter notebook running the following code using your commandline.\n# on your command line\npip install jupyter\nYou can then activate a Jupyter Notebook from the commandline by typing:\n# on your command line\njupyter notebook\n\n\nHere is my workflow to open Jupyter Notebooks using the commandline.\n\nOpen the terminal\nNavigate (using cd) to the folder you want to be the root of your jupyter notebook\nOpen the notebook (jupyter notebook)\n\nIt looks like this if I were to open a notebook in the folder I have for this course\n# open terminal\ncd ppol_5203\njupyter notebook\n\n\n\nIf you installed Python using Anaconda distribution system (here: https://www.anaconda.com/products/individual). You can open Jupyter through a point-and-click system. It take forever, but it works!\nIn the lecture notes, you can also find a Introduction to Jupyter notebook. We will cover this in the first class of the course."
+    "objectID": "weeks/week-06.html#datasets",
+    "href": "weeks/week-06.html#datasets",
+    "title": "Week 06",
+    "section": "Datasets",
+    "text": "Datasets\nDownload the datasets  here"
   },
   {
-    "objectID": "lecture_notes/week-01/course_infrastructure.html#rstudio-reticulatequarto",
-    "href": "lecture_notes/week-01/course_infrastructure.html#rstudio-reticulatequarto",
-    "title": "Week 1: Course Infrastructure",
-    "section": "",
-    "text": "A quick digression of the R vs Python debate\nFor some of your classes in the Data Science and Public Policy Masters, you will be using R. Some data scientists and computational social scientists have strong beleifs as to which langugae is better. I, and the DSPP faculty, do not subscribe to that view. Most techniques that are relevent for applied data science can be done in either language.\nIn my personal opinion, R outperforms Python in data manipulation tasks, visualization and statistical modeling. This is because R started out as a statistical programming environment, and that heritage is still visible. Meanwhile, Python started our a general purpose programming language, which was heavily adopted by computer scientists, which means Python outperforms on abstraction, machine learning tasks, working with more complex data types.\nMost importantly, you will be using more one language compared to the other conditional on your career path and the type of tasks you end up working with. If you end up in a team full of computer scientists, it is more likely Python will be your favored language. If you move to work more with social scientists, R will probably be more heavily used. There is no need to chose now. Learn both and broad your horizons. As general programming languages, learning both requires almost the same amount of effort of learning one in isolation.\nBack to the course infrastructure\nIn your classes that are focused on using R, RStudio will be your main IDE. However, RStudio isn’t just for R. It can handle a number of different languages. We can use Python in RStudio using the reticulate package.\nI create a full notebook to teach you how to use Python in Rstudio. Check the intro do quarto notebook. Let’s cover some of the installation steps here:\nTo install RStudio, download from the following link . reticulate is an R package that allows one run a Python REPL in the R console. In addition, it allows one to read in and use Python code, and pass data between R and and Python. The following provides instructions on installing reticulate.\nWith reticulate, you can use Rstudio as a IDE for Python. Another option is to use Quarto (the next-generation version of R Markdown) as an unified framework to generate notebooks with text + code. If you’re an R Markdown user, you will see how Quarto is just an extension of the capabilities that were previously provided by R Markdown. Now, instead of .rmd files, we have .qmd files. Quarto is already installed with RStudio."
+    "objectID": "weeks/week-06.html#slides",
+    "href": "weeks/week-06.html#slides",
+    "title": "Week 06",
+    "section": "Slides",
+    "text": "Slides\n\nPandas: Data Wrangling"
   },
   {
-    "objectID": "lecture_notes/week-01/course_infrastructure.html#git",
-    "href": "lecture_notes/week-01/course_infrastructure.html#git",
-    "title": "Week 1: Course Infrastructure",
-    "section": "",
-    "text": "We’ll go over more Git/GitHub instructions during the second class session. Before that session:\n\nInstall Git if it’s not installed already\nCreate a GitHub account if you don’t have one already (any email and free subscription is fine)"
+    "objectID": "weeks/week-06.html#readings",
+    "href": "weeks/week-06.html#readings",
+    "title": "Week 06",
+    "section": "Readings",
+    "text": "Readings\nSuggested Readings for Pandas\n\nPDS VanderPlas\nCh. 4: Data Manipulation with Pandas\nTidy Data in Python\nTidy Data by Hadley Wickham in R\n\nAnd all our lecture notes!\n\nAdditional Resources and Suggested Materials\n\nPython Pandas Tutorial: A Complete Introduction for Beginners\nData Wrangling with Pandas Cheat Sheet - pandas.pydata.org\ndplyr-style Data Manipulation with Pipes in Python - Allen, Akinkunle\nPython Pandas vs. R Dplyr - The Full Cheatsheet - Martin Šiklar\nMethods Chaining in Pandas\nThe Pandas Assign Method and Chaining\n\nExercises in Pandas"
   },
   {
-    "objectID": "lecture_notes/week-01/course_infrastructure.html#slack",
-    "href": "lecture_notes/week-01/course_infrastructure.html#slack",
-    "title": "Week 1: Course Infrastructure",
+    "objectID": "weeks/week-13.html",
+    "href": "weeks/week-13.html",
+    "title": "Week 13",
     "section": "",
-    "text": "Our course will make use of Slack for internal communication. Enter in our workspace with this link: (https://join.slack.com/t/ppol5203fall2024/shared_invite/zt-2ou5gm0ww-YJUJfR3vTfzN4IuKcULFDQ).\nWhen should you use slack?\n\nInteract with the TAs\nAsk questions to your colleagues\nShare links that are interesting to the discussions in class.\n\nWhen I should not use slack?\n\nIf you have a question you believe will require a longer conversation, I prefer if you can stop by at my office hours\n\nRemember, you don’t need to let me know you are going to my office hours. Just stop by!\nIf you’re new to Slack, check out this tutorial. In the first class, I’ll send out the invitation for everyone to join Slack and we’ll discuss how to use it."
+    "text": "SQL html –  Jupyter Notebook"
   },
   {
-    "objectID": "course_infrastructure.html",
-    "href": "course_infrastructure.html",
-    "title": "Week 1: Course Infrastructure",
+    "objectID": "weeks/week-13.html#lectures-notes",
+    "href": "weeks/week-13.html#lectures-notes",
+    "title": "Week 13",
     "section": "",
-    "text": "Throughout the semester, we will use a combination of computational tools. This a summary of the main tools:\n\nCommandLine: primarily to interact with git, install programs and run a few scripts\nPython3: for programming taks\nGit/Github: for version control, reproucibility and for sharing materials\nJupyter Notebooks: as a main IDE to work with Python\nQuarto via RStudio: as a secondary IDE (you can make your primary if you prefer) to coding in Python/R/SQL\nSlack: for communication.\n\nLet’s cover how to set up each of these tools in your local machines.\n\n\n\n\n\n\nWarning\n\n\n\nIf you run into issues, please reach out to the Teaching Assistant for assistance\n\n\n\n\nAt times, we’ll use a unix-based commandline. The commandline will feature into our discussion on using git and also running Python programs. If you use a Mac or a Linux operating system, then a functioning commandline comes with your operating system. For Apple machines, this is the Terminal.\nFor Windows (specifically Windows 10), you can enable Linux Bash shell. The following offers a tutorial on how to do this.\nIf you’re using a version of Windows that pre-dates version 10, then Git Bash offers a program will allow you to use git commands from your windows machine.\nLater in the first class, we will cover some concepts of working with the commandline. You can get a full notebook with a intro to commandline in the materials for week 1\n\n\n\nWe’ll use Python3 throughout this course. Below are instructions for downloading Python3 using commandline packages manager (Homebrew for mac, Chocolatey for windows).\n\nInstalling Python3 using Homebrew on a Mac (Apple)\nInstalling Python3 using Chocolatey on a PC (Windows)\n\nAn alternative way to install Python3 is to download an Anaconda distribution. I will use pip rather than conda in the instruction for downloading Python modules. These are simply two ways of downloading and managing open-source software packages. Choose which ever works best for you\nMost computers already have python3 installed. You can check if that is your case through your commandline\npython3 --version\nOn some versions of Windows, you may need to use py instead of python3:\npy --version\nIn either case, the output of this command should be something like Python 3.8.5\n\n\n\nOnce you have Python3 on your computer, you can install a Jupyter Notebook. If you downloaded Python3 using Anaconda, then Jupyter Notebook comes with the distribution and requires no further installation on your part. If you are not using Anaconda, you can install Jupyter notebook running the following code using your commandline.\n# on your command line\npip install jupyter\nYou can then activate a Jupyter Notebook from the commandline by typing:\n# on your command line\njupyter notebook\n\n\nHere is my workflow to open Jupyter Notebooks using the commandline.\n\nOpen the terminal\nNavigate (using cd) to the folder you want to be the root of your jupyter notebook\nOpen the notebook (jupyter notebook)\n\nIt looks like this if I were to open a notebook in the folder I have for this course\n# open terminal\ncd ppol_5203\njupyter notebook\n\n\n\nIf you installed Python using Anaconda distribution system (here: https://www.anaconda.com/products/individual). You can open Jupyter through a point-and-click system. It take forever, but it works!\nIn the lecture notes, you can also find a Introduction to Jupyter notebook. We will cover this in the first class of the course.\n\n\n\n\nA quick digression of the R vs Python debate\nFor some of your classes in the Data Science and Public Policy Masters, you will be using R. Some data scientists and computational social scientists have strong beleifs as to which langugae is better. I, and the DSPP faculty, do not subscribe to that view. Most techniques that are relevent for applied data science can be done in either language.\nIn my personal opinion, R outperforms Python in data manipulation tasks, visualization and statistical modeling. This is because R started out as a statistical programming environment, and that heritage is still visible. Meanwhile, Python started our a general purpose programming language, which was heavily adopted by computer scientists, which means Python outperforms on abstraction, machine learning tasks, working with more complex data types.\nMost importantly, you will be using more one language compared to the other conditional on your career path and the type of tasks you end up working with. If you end up in a team full of computer scientists, it is more likely Python will be your favored language. If you move to work more with social scientists, R will probably be more heavily used. There is no need to chose now. Learn both and broad your horizons. As general programming languages, learning both requires almost the same amount of effort of learning one in isolation.\nBack to the course infrastructure\nIn your classes that are focused on using R, RStudio will be your main IDE. However, RStudio isn’t just for R. It can handle a number of different languages. We can use Python in RStudio using the reticulate package.\nI create a full notebook to teach you how to use Python in Rstudio. Check the intro do quarto notebook. Let’s cover some of the installation steps here:\nTo install RStudio, download from the following link . reticulate is an R package that allows one run a Python REPL in the R console. In addition, it allows one to read in and use Python code, and pass data between R and and Python. The following provides instructions on installing reticulate.\nWith reticulate, you can use Rstudio as a IDE for Python. Another option is to use Quarto (the next-generation version of R Markdown) as an unified framework to generate notebooks with text + code. If you’re an R Markdown user, you will see how Quarto is just an extension of the capabilities that were previously provided by R Markdown. Now, instead of .rmd files, we have .qmd files. Quarto is already installed with RStudio.\n\n\n\nWe’ll go over more Git/GitHub instructions during the second class session. Before that session:\n\nInstall Git if it’s not installed already\nCreate a GitHub account if you don’t have one already (any email and free subscription is fine)\n\n\n\n\nOur course will make use of Slack for internal communication. Enter in our workspace with this link: (https://join.slack.com/t/ppol5203fall2024/shared_invite/zt-2ou5gm0ww-YJUJfR3vTfzN4IuKcULFDQ).\nWhen should you use slack?\n\nInteract with the TAs\nAsk questions to your colleagues\nShare links that are interesting to the discussions in class.\n\nWhen I should not use slack?\n\nIf you have a question you believe will require a longer conversation, I prefer if you can stop by at my office hours\n\nRemember, you don’t need to let me know you are going to my office hours. Just stop by!\nIf you’re new to Slack, check out this tutorial. In the first class, I’ll send out the invitation for everyone to join Slack and we’ll discuss how to use it."
+    "text": "SQL html –  Jupyter Notebook"
   },
   {
-    "objectID": "course_infrastructure.html#commandline",
-    "href": "course_infrastructure.html#commandline",
-    "title": "Week 1: Course Infrastructure",
+    "objectID": "weeks/week-11.html",
+    "href": "weeks/week-11.html",
+    "title": "Week 10",
     "section": "",
-    "text": "At times, we’ll use a unix-based commandline. The commandline will feature into our discussion on using git and also running Python programs. If you use a Mac or a Linux operating system, then a functioning commandline comes with your operating system. For Apple machines, this is the Terminal.\nFor Windows (specifically Windows 10), you can enable Linux Bash shell. The following offers a tutorial on how to do this.\nIf you’re using a version of Windows that pre-dates version 10, then Git Bash offers a program will allow you to use git commands from your windows machine.\nLater in the first class, we will cover some concepts of working with the commandline. You can get a full notebook with a intro to commandline in the materials for week 1"
+    "text": "Text analysis I: Counting, Describing and Fitting Topics html –  Jupyter Notebook"
   },
   {
-    "objectID": "course_infrastructure.html#python3",
-    "href": "course_infrastructure.html#python3",
-    "title": "Week 1: Course Infrastructure",
+    "objectID": "weeks/week-11.html#lecture-notes",
+    "href": "weeks/week-11.html#lecture-notes",
+    "title": "Week 10",
     "section": "",
-    "text": "We’ll use Python3 throughout this course. Below are instructions for downloading Python3 using commandline packages manager (Homebrew for mac, Chocolatey for windows).\n\nInstalling Python3 using Homebrew on a Mac (Apple)\nInstalling Python3 using Chocolatey on a PC (Windows)\n\nAn alternative way to install Python3 is to download an Anaconda distribution. I will use pip rather than conda in the instruction for downloading Python modules. These are simply two ways of downloading and managing open-source software packages. Choose which ever works best for you\nMost computers already have python3 installed. You can check if that is your case through your commandline\npython3 --version\nOn some versions of Windows, you may need to use py instead of python3:\npy --version\nIn either case, the output of this command should be something like Python 3.8.5"
+    "text": "Text analysis I: Counting, Describing and Fitting Topics html –  Jupyter Notebook"
   },
   {
-    "objectID": "course_infrastructure.html#jupyter-notebooks",
-    "href": "course_infrastructure.html#jupyter-notebooks",
-    "title": "Week 1: Course Infrastructure",
+    "objectID": "weeks/week-04.html",
+    "href": "weeks/week-04.html",
+    "title": "Week 04",
     "section": "",
-    "text": "Once you have Python3 on your computer, you can install a Jupyter Notebook. If you downloaded Python3 using Anaconda, then Jupyter Notebook comes with the distribution and requires no further installation on your part. If you are not using Anaconda, you can install Jupyter notebook running the following code using your commandline.\n# on your command line\npip install jupyter\nYou can then activate a Jupyter Notebook from the commandline by typing:\n# on your command line\njupyter notebook\n\n\nHere is my workflow to open Jupyter Notebooks using the commandline.\n\nOpen the terminal\nNavigate (using cd) to the folder you want to be the root of your jupyter notebook\nOpen the notebook (jupyter notebook)\n\nIt looks like this if I were to open a notebook in the folder I have for this course\n# open terminal\ncd ppol_5203\njupyter notebook\n\n\n\nIf you installed Python using Anaconda distribution system (here: https://www.anaconda.com/products/individual). You can open Jupyter through a point-and-click system. It take forever, but it works!\nIn the lecture notes, you can also find a Introduction to Jupyter notebook. We will cover this in the first class of the course."
+    "text": "We will cover these notebooks\nFinish from last week:\n\nIntro to Python II - Control Statements and Functions: html,  Jupyter Notebook \n\nFrom this week:\n\nComprehension and Generators: html –  Jupyter Notebook \nFile Management: html –  Jupyter Notebook \nData as Nested lists - html –  Jupyter Notebook"
   },
   {
-    "objectID": "course_infrastructure.html#rstudio-reticulatequarto",
-    "href": "course_infrastructure.html#rstudio-reticulatequarto",
-    "title": "Week 1: Course Infrastructure",
+    "objectID": "weeks/week-04.html#lectures-notes",
+    "href": "weeks/week-04.html#lectures-notes",
+    "title": "Week 04",
     "section": "",
-    "text": "A quick digression of the R vs Python debate\nFor some of your classes in the Data Science and Public Policy Masters, you will be using R. Some data scientists and computational social scientists have strong beleifs as to which langugae is better. I, and the DSPP faculty, do not subscribe to that view. Most techniques that are relevent for applied data science can be done in either language.\nIn my personal opinion, R outperforms Python in data manipulation tasks, visualization and statistical modeling. This is because R started out as a statistical programming environment, and that heritage is still visible. Meanwhile, Python started our a general purpose programming language, which was heavily adopted by computer scientists, which means Python outperforms on abstraction, machine learning tasks, working with more complex data types.\nMost importantly, you will be using more one language compared to the other conditional on your career path and the type of tasks you end up working with. If you end up in a team full of computer scientists, it is more likely Python will be your favored language. If you move to work more with social scientists, R will probably be more heavily used. There is no need to chose now. Learn both and broad your horizons. As general programming languages, learning both requires almost the same amount of effort of learning one in isolation.\nBack to the course infrastructure\nIn your classes that are focused on using R, RStudio will be your main IDE. However, RStudio isn’t just for R. It can handle a number of different languages. We can use Python in RStudio using the reticulate package.\nI create a full notebook to teach you how to use Python in Rstudio. Check the intro do quarto notebook. Let’s cover some of the installation steps here:\nTo install RStudio, download from the following link . reticulate is an R package that allows one run a Python REPL in the R console. In addition, it allows one to read in and use Python code, and pass data between R and and Python. The following provides instructions on installing reticulate.\nWith reticulate, you can use Rstudio as a IDE for Python. Another option is to use Quarto (the next-generation version of R Markdown) as an unified framework to generate notebooks with text + code. If you’re an R Markdown user, you will see how Quarto is just an extension of the capabilities that were previously provided by R Markdown. Now, instead of .rmd files, we have .qmd files. Quarto is already installed with RStudio."
+    "text": "We will cover these notebooks\nFinish from last week:\n\nIntro to Python II - Control Statements and Functions: html,  Jupyter Notebook \n\nFrom this week:\n\nComprehension and Generators: html –  Jupyter Notebook \nFile Management: html –  Jupyter Notebook \nData as Nested lists - html –  Jupyter Notebook"
   },
   {
-    "objectID": "course_infrastructure.html#git",
-    "href": "course_infrastructure.html#git",
-    "title": "Week 1: Course Infrastructure",
-    "section": "",
-    "text": "We’ll go over more Git/GitHub instructions during the second class session. Before that session:\n\nInstall Git if it’s not installed already\nCreate a GitHub account if you don’t have one already (any email and free subscription is fine)"
+    "objectID": "weeks/week-04.html#datasets",
+    "href": "weeks/week-04.html#datasets",
+    "title": "Week 04",
+    "section": "Datasets",
+    "text": "Datasets\nDownload the datasets  here"
   },
   {
-    "objectID": "course_infrastructure.html#slack",
-    "href": "course_infrastructure.html#slack",
-    "title": "Week 1: Course Infrastructure",
+    "objectID": "weeks/week-04.html#slides",
+    "href": "weeks/week-04.html#slides",
+    "title": "Week 04",
+    "section": "Slides",
+    "text": "Slides\n\nControl Statements, Comprehensions, Nested Lists, and Numpy"
+  },
+  {
+    "objectID": "weeks/week-04.html#readings",
+    "href": "weeks/week-04.html#readings",
+    "title": "Week 04",
+    "section": "Readings",
+    "text": "Readings\n\nRequired Readings\nPDS VanderPlas\n\nCh. 2: Introduction to Numpy - Python Data Science Handbook - VanderPlas, Jake\n\nPDA Wes McKinney, Chapter 3\n\nList, Set, and Dictionary Comprehensions\nFile Management System\n\nAdditional Readings\n\nfor-loop-vs-list-comprehension-vs-high-order-functions"
+  },
+  {
+    "objectID": "weeks/week-12_.html",
+    "href": "weeks/week-12_.html",
+    "title": "Week 12",
     "section": "",
-    "text": "Our course will make use of Slack for internal communication. Enter in our workspace with this link: (https://join.slack.com/t/ppol5203fall2024/shared_invite/zt-2ou5gm0ww-YJUJfR3vTfzN4IuKcULFDQ).\nWhen should you use slack?\n\nInteract with the TAs\nAsk questions to your colleagues\nShare links that are interesting to the discussions in class.\n\nWhen I should not use slack?\n\nIf you have a question you believe will require a longer conversation, I prefer if you can stop by at my office hours\n\nRemember, you don’t need to let me know you are going to my office hours. Just stop by!\nIf you’re new to Slack, check out this tutorial. In the first class, I’ll send out the invitation for everyone to join Slack and we’ll discuss how to use it."
+    "text": "SQL html –  Jupyter Notebook"
+  },
+  {
+    "objectID": "weeks/week-12_.html#lectures-notes",
+    "href": "weeks/week-12_.html#lectures-notes",
+    "title": "Week 12",
+    "section": "",
+    "text": "SQL html –  Jupyter Notebook"
+  },
+  {
+    "objectID": "weeks/week-08.html",
+    "href": "weeks/week-08.html",
+    "title": "Week 08",
+    "section": "",
+    "text": "Parsing Unstructured Data: Scraping Static Websites: html –  Jupyter Notebook"
+  },
+  {
+    "objectID": "weeks/week-08.html#lectures-notes",
+    "href": "weeks/week-08.html#lectures-notes",
+    "title": "Week 08",
+    "section": "",
+    "text": "Parsing Unstructured Data: Scraping Static Websites: html –  Jupyter Notebook"
+  },
+  {
+    "objectID": "weeks/week-10.html",
+    "href": "weeks/week-10.html",
+    "title": "Week 9",
+    "section": "",
+    "text": "Statistical Learning: inference and predictions html –  Jupyter Notebook"
+  },
+  {
+    "objectID": "weeks/week-10.html#lecture-notes",
+    "href": "weeks/week-10.html#lecture-notes",
+    "title": "Week 9",
+    "section": "",
+    "text": "Statistical Learning: inference and predictions html –  Jupyter Notebook"
+  },
+  {
+    "objectID": "weeks/week-05.html",
+    "href": "weeks/week-05.html",
+    "title": "Week 05",
+    "section": "",
+    "text": "Today, we will go over three notebooks:\n\nFile Management: html –  Jupyter Notebook \nData as Nested lists - html –  Jupyter Notebook \nNumpy: html –  Jupyter Notebook \nIntro do Pandas: html –  Jupyter Notebook"
+  },
+  {
+    "objectID": "weeks/week-05.html#lectures-notes",
+    "href": "weeks/week-05.html#lectures-notes",
+    "title": "Week 05",
+    "section": "",
+    "text": "Today, we will go over three notebooks:\n\nFile Management: html –  Jupyter Notebook \nData as Nested lists - html –  Jupyter Notebook \nNumpy: html –  Jupyter Notebook \nIntro do Pandas: html –  Jupyter Notebook"
+  },
+  {
+    "objectID": "weeks/week-05.html#datasets",
+    "href": "weeks/week-05.html#datasets",
+    "title": "Week 05",
+    "section": "Datasets",
+    "text": "Datasets\nDownload the datasets  here"
+  },
+  {
+    "objectID": "weeks/week-05.html#slides",
+    "href": "weeks/week-05.html#slides",
+    "title": "Week 05",
+    "section": "Slides",
+    "text": "Slides\n\nNumpy and Intro do Pandas"
+  },
+  {
+    "objectID": "weeks/week-05.html#readings",
+    "href": "weeks/week-05.html#readings",
+    "title": "Week 05",
+    "section": "Readings",
+    "text": "Readings\n\nSuggested Reading for Numpy\nPDS VanderPlas\n\nCh. 2: Introduction to Numpy - Python Data Science Handbook - VanderPlas, Jake\n\n\nSuggested Readings for Pandas\n\nPDS VanderPlas\nCh. 4: Data Manipulation with Pandas\nTidy Data in Python\nTidy Data by Hadley Wickham in R\n\nAnd all our lecture notes!\n\nAdditional Resources and Suggested Materials\n\nPython Pandas Tutorial: A Complete Introduction for Beginners\nData Wrangling with Pandas Cheat Sheet - pandas.pydata.org\ndplyr-style Data Manipulation with Pipes in Python - Allen, Akinkunle\nPython Pandas vs. R Dplyr - The Full Cheatsheet - Martin Šiklar\nMethods Chaining in Pandas\n\nExercises in Pandas"
+  },
+  {
+    "objectID": "weeks/week-07.html",
+    "href": "weeks/week-07.html",
+    "title": "Week 07",
+    "section": "",
+    "text": "Pandas - Joining Data : html –  Jupyter Notebook \nData Visualization: html –  Jupyter Notebook"
+  },
+  {
+    "objectID": "weeks/week-07.html#lectures-notes",
+    "href": "weeks/week-07.html#lectures-notes",
+    "title": "Week 07",
+    "section": "",
+    "text": "Pandas - Joining Data : html –  Jupyter Notebook \nData Visualization: html –  Jupyter Notebook"
+  },
+  {
+    "objectID": "weeks/week-07.html#datasets",
+    "href": "weeks/week-07.html#datasets",
+    "title": "Week 07",
+    "section": "Datasets",
+    "text": "Datasets\nDownload the datasets  here"
+  },
+  {
+    "objectID": "weeks/week-07.html#slides",
+    "href": "weeks/week-07.html#slides",
+    "title": "Week 07",
+    "section": "Slides",
+    "text": "Slides\n\nJoining, Tidying and Visualizing Data"
+  },
+  {
+    "objectID": "weeks/week-12.html",
+    "href": "weeks/week-12.html",
+    "title": "Week 11",
+    "section": "",
+    "text": "Text analysis II: Supervised models html –  Jupyter Notebook"
+  },
+  {
+    "objectID": "weeks/week-12.html#lectures-notes",
+    "href": "weeks/week-12.html#lectures-notes",
+    "title": "Week 11",
+    "section": "",
+    "text": "Text analysis II: Supervised models html –  Jupyter Notebook"
+  },
+  {
+    "objectID": "weeks/week-03.html",
+    "href": "weeks/week-03.html",
+    "title": "Week 03",
+    "section": "",
+    "text": "Intro to Python - OOP, Data Types, and Collectors: html,  Jupyter Notebook \nIntro to Python II - Control Statements and Functions: html,  Jupyter Notebook"
+  },
+  {
+    "objectID": "weeks/week-03.html#lectures-notes",
+    "href": "weeks/week-03.html#lectures-notes",
+    "title": "Week 03",
+    "section": "",
+    "text": "Intro to Python - OOP, Data Types, and Collectors: html,  Jupyter Notebook \nIntro to Python II - Control Statements and Functions: html,  Jupyter Notebook"
+  },
+  {
+    "objectID": "weeks/week-03.html#slides",
+    "href": "weeks/week-03.html#slides",
+    "title": "Week 03",
+    "section": "Slides",
+    "text": "Slides\nWeek 3 - Intro do Python: OOP, Control Statements and Functions"
+  },
+  {
+    "objectID": "weeks/week-03.html#in-class-exercise",
+    "href": "weeks/week-03.html#in-class-exercise",
+    "title": "Week 03",
+    "section": "In-Class Exercise",
+    "text": "In-Class Exercise\nSee slides or notebook for the exercise"
+  },
+  {
+    "objectID": "weeks/week-03.html#required-readings",
+    "href": "weeks/week-03.html#required-readings",
+    "title": "Week 03",
+    "section": "Required Readings",
+    "text": "Required Readings\nFrom Miller, Brad, and David Ranum, Problem Solving with Algorithms and Data Structures using Python\n\nGetting Started with Data\nControl Structure\nException Handling\nDefining Functions\n\nFrom Wes McKinney, Python for Data Analysis\n\nChapter 2: Python Language Basics, IPython, and Jupyter Notebooks\nChapter 2: Built-In Data Structures, Functions, and Files\n\nMutable vs Immutable Objects in Python - Mohan, Megha"
+  },
+  {
+    "objectID": "weeks/week-03.html#additional-code",
+    "href": "weeks/week-03.html#additional-code",
+    "title": "Week 03",
+    "section": "Additional Code",
+    "text": "Additional Code\n\nData Carpentry\n\nPython Fundamentals\nRepeated Actions with Loops\nMaking Choices\nCreating Functions\nStoring Multiple Values in Lists"
+  },
+  {
+    "objectID": "lecture_notes/week-01/intro-to-quarto.html",
+    "href": "lecture_notes/week-01/intro-to-quarto.html",
+    "title": "Week 1: Introduction to Quarto for Python",
+    "section": "",
+    "text": "The purpose of this notebook is to show case the use of Quarto notebooks. It will cover:\n\nBrief introduction to Quarto Notebooks\nRunning R with Quarto Notebooks\nRunning Python with Quarto Notebooks + reticulate\n\nSee Quarto’s website for a more in-depth coverage of the framework."
+  },
+  {
+    "objectID": "lecture_notes/week-01/intro-to-quarto.html#my-personal-tldr-about-quarto",
+    "href": "lecture_notes/week-01/intro-to-quarto.html#my-personal-tldr-about-quarto",
+    "title": "Week 1: Introduction to Quarto for Python",
+    "section": "My personal TLDR about Quarto",
+    "text": "My personal TLDR about Quarto\nQuarto was developed by Posit (the new name of RStudio). It represents the effort of RStudio to become a language agnostic IDE for Data Science.\nQuarto main promise is to allow data scientists to run many different languages using the same notebook structure. For the purpose of our course, we will use mostly Jupyter Notebooks, since those are still dominant among Python developers.\nAs you are learning Python and R at the same time throughout your DSPP courses, I advice you to take a look at Quarto. You might find it a useful tool to run both R and Python."
+  },
+  {
+    "objectID": "lecture_notes/week-01/intro-to-quarto.html#quick-tutorial-for-rstudio",
+    "href": "lecture_notes/week-01/intro-to-quarto.html#quick-tutorial-for-rstudio",
+    "title": "Week 1: Introduction to Quarto for Python",
+    "section": "Quick tutorial for RStudio",
+    "text": "Quick tutorial for RStudio\nThis is what RStudio looks like when you open it for the first time.\n\n\n\n\n\nTop left pane (input/script)\nThis is your code editor. Here you enter code in any file type (.py, .r, .qmd) you are working on. If not working with notebooks, this is just gonna be a plain text file but with a extension that run the commands.\nFor example, enter 2 + 2 in your script and run a line of code by pressing command + enter (Mac) or Ctrl + enter (PC). This is a huge advantage of Rstudio over Jupyter. You can run your code line by line, instead of running the entire cell.\nBottom left pane (output/console)\nThis is the console. It is pretty much like when you open Python/R from the Command line.\nIn the console, the prompt &gt; looks like a greater than symbol. If your prompt begins to look like a + symbol by mistake, simply click in your console and press the esc key on your keyboard as many times as necessary to return to the prompt.\nRstudio uses + when code is broken up across multiple lines and is still expecting more code. A line of code does not usually end until Rstudio finds an appropriate stop parameter or punctuation that completes some code such as a closed round parenthesis ), square bracket ], curly brace }, or quotation mark '.\nIf the output in your console gets too messy, you can clear it by pressing control + l on both Mac and PC. This will not erase any saved data - it will simply make your console easier to read.\nTop right pane (global environment)\nThis is your environment pane. All objects you create will be displayed here.\nBottom right pane (files, plots, packages, and help)\nHere you find useful tabs for navigating your file system, displaying plots, installing packages, and viewing help pages. Press the control key and a number (1 through 9) on your keyboard to shortcut between these panes and tabs."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "",
+    "text": "This first course in the core data science sequence teaches Data Science for Public Policy (DSPP) students how to synthesize disparate, possibly unstructured data in order to draw meaningful insights. Topics covered include the fundamentals of object-oriented programming in Python; literate programming; an introduction to algorithms and data types; data wrangling, visualization, and extraction; an introduction to machine learning methods, and text analysis. In addition, students will be exposed to Git and Github for version control and reproducible research. The objective of the course is to teach students how to incorporate data into their decision-making and analysis. No prior programming experience is assumed or required.\nThis is not the first time this course is taught at DSPP. For this reason, several of the materials here are borrowed from previous iterations of this course taught by Dr. Rebecca Johnson and Dr. Eric Dunford"
+  },
+  {
+    "objectID": "index.html#course-description",
+    "href": "index.html#course-description",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "",
+    "text": "This first course in the core data science sequence teaches Data Science for Public Policy (DSPP) students how to synthesize disparate, possibly unstructured data in order to draw meaningful insights. Topics covered include the fundamentals of object-oriented programming in Python; literate programming; an introduction to algorithms and data types; data wrangling, visualization, and extraction; an introduction to machine learning methods, and text analysis. In addition, students will be exposed to Git and Github for version control and reproducible research. The objective of the course is to teach students how to incorporate data into their decision-making and analysis. No prior programming experience is assumed or required.\nThis is not the first time this course is taught at DSPP. For this reason, several of the materials here are borrowed from previous iterations of this course taught by Dr. Rebecca Johnson and Dr. Eric Dunford"
+  },
+  {
+    "objectID": "index.html#goals",
+    "href": "index.html#goals",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "Goals",
+    "text": "Goals\nAfter completing this course, the students will be able to:\n\nGeneral understanding of python’s object oriented programming syntax and data structures.\nCompetency using version control (Git/Github).\nLearn to manipulate and explore data with Pandas and other tools.\nGeneral understanding of analyzing algorithms and data structures.\nLearn to extract and process data from structured and unstructured sources.\nGet some intuition of modeling text data in Python.\nLearn the basics of machine learning as a modeling approach.\nLearn how to use Generative AI for multiple applied tasks.\nLearn basics of using SQL to query databases."
+  },
+  {
+    "objectID": "index.html#instructor",
+    "href": "index.html#instructor",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "Instructor",
+    "text": "Instructor\n\nProfessor: Dr. Tiago Ventura\nPronouns: He/Him\nEmail: tv186@georgetown.edu\nOffice hours:\n\nTime: Every Tuesday, 4pm - 5pm\nLocation: 125E, Office Number 766\n\n\nYou are all welcome to the office hours at any time. No need to schedule time with me to go to office hours!"
+  },
+  {
+    "objectID": "index.html#teaching-assistants",
+    "href": "index.html#teaching-assistants",
+    "title": "PPOL 5203 - Data Science I: Foundations",
+    "section": "Teaching Assistants:",
+    "text": "Teaching Assistants:\n\nRebecca Wagner (DSPP Second-Year Student)\n\nEmail:rlw137@georgetown.edu\nOffice Hours:\n\nin person: Every Monday 2pm, McCourt, Room 602\nvirtual: Every Tuesday 7pm. Zoom link\n\n\n\n\nCourse Infra-structure\nClass Website: A class website https://tiagoventura.github.io/ppol5203 will be used throughout the course and should be checked on a regular basis for lecture materials and required readings.\nClass Slack Channel: The class also has a dedicated slack channel. You can join on clicking here. The channel serves as an open forum to discuss, collaborate, pose problems/questions, and offer solutions. Students are encouraged to pose any questions they have there as this will provide the professor and TA the means of answering the question so that all can see the response. If you’re unfamiliar with, please consult the following start-up tutorial (https://get.slack.help/hc/en-us/articles/218080037-Getting-started-for-new-members). Please follow the invite link to be added to the Slack channel.\nCanvas: A Canvas site (http://canvas.georgetown.edu) will be used throughout the course and should be checked on a regular basis for announcements. ll announcements for the assignments and classes will be posted on Canvas; they will not be distributed in class or by e-mail. Support for Canvas is available at (202) 687-4949\nNOTE: Students are encouraged to run lecture code on their own machines. If you do not have access to a laptop on which you can install python3, please contact the professor and/or TA for assistance. Only python3 will be used in this course.\nDatacamp: As part of this course, you will have access to a DataCamp classroom that you can use to take Datacamp modules for free. Join the classroom here Datacamp courses can be a useful tool for you to practice the concepts we see in class. Although I will not assign specific courses for you,, you can use Datacamp courses to review the topics we cover in class. The lecture notes will cover in details all our in-class discussions. Datacamp courses will be considered additional material."
   },
   {
     "objectID": "slides/week-1.html#plans-for-today",
@@ -1342,264 +1552,5 @@
     "title": "Syllabus: PPOL 5203 - Data Science I: Foundations",
     "section": "Georgetown Policies",
     "text": "Georgetown Policies\n\nDisability\nIf you believe you have a disability, then you should contact the Academic Resource Center (arc@georgetown.edu) for further information. The Center is located in the Leavey Center, Suite 335 (202-687-8354). The Academic Resource Center is the campus office responsible for reviewing documentation provided by students with disabilities and for determining reasonable accommodations in accordance with the Americans with Disabilities Act (ASA) and University policies. For more information, go to http://academicsupport.georgetown.edu/disability/\n\n\nImportant Academic Policies and Academic Integrity\nMcCourt School students are expected to uphold the academic policies set forth by Georgetown University and the Graduate School of Arts and Sciences. Students should therefore familiarize themselves with all the rules, regulations, and procedures relevant to their pursuit of a Graduate School degree. The policies are located at: http://grad.georgetown.edu/academics/policies/\nApplied to this course, while I encourage collaboration on assignments and use of resources like StackOverflow, the problem sets will ask you to list who you worked on the problem set with and cite StackOverflow if it is the direct source of a code snippet.\n\n\nStatement on Sexual Misconduct\nGeorgetown University and its faculty are committed to supporting survivors and those impacted by sexual misconduct, which includes sexual assault, sexual harassment, relationship violence, and stalking. Georgetown requires faculty members, unless otherwise designated as confidential, to report all disclosures of sexual misconduct to the University Title IX Coordinator or a Deputy Title IX Coordinator. If you disclose an incident of sexual misconduct to a professor in or outside of the classroom (with the exception of disclosures in papers), that faculty member must report the incident to the Title IX Coordinator, or Deputy Title IX Coordinator. The coordinator will, in turn, reach out to the student to provide support, resources, and the option to meet. [Please note that the student is not required to meet with the Title IX coordinator.]. More information about reporting options and resources can be found on the Sexual Misconduct\nWebsite: https://sexualassault.georgetown.edu/resourcecenter\nIf you would prefer to speak to someone confidentially, Georgetown has a number of fully confidential professional resources that can provide support and assistance. These resources include: Health Education Services for Sexual Assault Response and Prevention: confidential email: sarp[at]georgetown.edu\nCounseling and Psychiatric Services (CAPS): 202.687.6985 or after hours, call (833) 960-3006 to reach Fonemed, a telehealth service; individuals may ask for the on-call CAPS clinician\nMore information about reporting options and resources can be found on the Sexual Misconduct Website.\n\n\nProvost’s Policy on Religious Observances\nGeorgetown University promotes respect for all religions. Any student who is unable to attend classes or to participate in any examination, presentation, or assignment on a given day because of the observance of a major religious holiday or related travel shall be excused and provided with the opportunity to make up, without unreasonable burden, any work that has been missed for this reason and shall not in any other way be penalized for the absence or rescheduled work. Students will remain responsible for all assigned work. Students should notify professors in writing at the beginning of the semester of religious observances that conflict with their classes. The Office of the Provost, in consultation with Campus Ministry and the Registrar, will publish, before classes begin for a given term, a list of major religious holidays likely to affect Georgetown students. The Provost and the Main Campus Executive Faculty encourage faculty to accommodate students whose bona fide religious observances in other ways impede normal participation in a course. Students who cannot be accommodated should discuss the matter with an advising dean."
-  },
-  {
-    "objectID": "slides/week-3.html#tldr-dont-panic",
-    "href": "slides/week-3.html#tldr-dont-panic",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "TLDR – Don’t Panic!",
-    "text": "TLDR – Don’t Panic!\n\nGit should be new for you. Don’t feel desperate if you struggling with git. Most people do.\nGoogle every time you have a question. That’s a big part of being a data scientist.\nCheck the Cheat sheet and your lecture notes\n\nGithub Cheatsheet (A)\nGithub Cheatsheet (B)"
-  },
-  {
-    "objectID": "slides/week-4.html#where-we-are-.",
-    "href": "slides/week-4.html#where-we-are-.",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "Where we are ….",
-    "text": "Where we are ….\n\nWe started with the basics of being a data scientist:\n\nCommandline\nReproducibility + Data Workflow\nVersion Control\n\nNow, we are going over the primitives of Python as your main DS tool:\n\nPython as a OOP language\nNative data types in Python"
-  },
-  {
-    "objectID": "slides/week-4.html#plans-for-today",
-    "href": "slides/week-4.html#plans-for-today",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "Plans for today",
-    "text": "Plans for today\n\nStart slow with the in-class exercise from last week.\nScaling up your python skills:\n\nControl statements (if, for and while loops)\nFunctions\n\nIntro do Python - Part II.\n\nImporting packages in Python\nList Comprehension + Generators\nFile Management\nData as Nested Lists"
-  },
-  {
-    "objectID": "slides/week-4.html#in-class-exercise-use-the-lecture-notes-to-solve",
-    "href": "slides/week-4.html#in-class-exercise-use-the-lecture-notes-to-solve",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "In Class-Exercise (Use the Lecture Notes to solve)",
-    "text": "In Class-Exercise (Use the Lecture Notes to solve)\n\nTab ATab BTab C\n\n\nLet’s practice with lists first. One way to explore data structures is to learn their methods. Check all the methods of a list by running ‘dir()’ on a list object. Let’s explore these functions using the following list object, by answering the below questions. See here for list methods:\n\n\nlist_exercise = [\"Ramy\", \"Victorie\", \"Letty\", \"Robin\", \"Antoine\", \"Griffin\"] \n\n\n\nAdd “Cathy O’Neil” to the list. Insert “Professor Crast” as the first element of the list\n\n\nRemove “Letty” from the list. Also remove the last element of the list.\n\n\nFind the index of the occurrence of the name “Robin”. Count the number of times None appears in the list.\n\n\nCreate a new list with the names in alphabetical order, copy this list as a new list without changing the values of the original list\n\n\nAdd the string “Lovell” to copied_list and ensure that list_exercise remains unchanged.\n\n\n\nLet’s do a similar exercise with Dictionaries. Consider the dictionary below. See here for dictionary methods:\n\n\ndict_exercise = {\"Ramy\": \"India\",\n                  \"Victorie\":\"Haiti\", \n                  \"Letty\":\"England\", \n                  \"Robin\":\"Canton\", \n                  \"Antoine\":\"Nigeria\", \n                  \"Griffin\":\"China\"}\ndict_exercise\n\n\n\nLook up the keys in the dictionary, and store them in a list object called keys\n\n\nAdd yourself, and two other colleagues in this dictionary. The values are the countries the person in the key was born.\n\n\nRemove “Ramy” from the dictionary, and save as another dictionary\n\n\n\nLet’s now play around with some string methods. See the string below from the book “Babel:An Arcane History”. See here for string methods:\n\nbabel = \"That's just what translation is, I think. That's all speaking is. Listening to the other and trying to see past your own biases to glimpse what they're trying to say. Showing yourself to the world, and hoping someone else understands.\"\n\n\nDetermine if the word “Babel” is present in the string.\n\n\nCount how many times the word “translation” appears\n\n\nConvert the entire string to upper case\n\n\nConvert the pronoum “I” to “We” in the entire text.\n\n\nStrip any punctuation (like commas, exclamation marks, etc.) from the string."
-  },
-  {
-    "objectID": "slides/week-4.html#class-part-ii-control-statements-loops-and-functions",
-    "href": "slides/week-4.html#class-part-ii-control-statements-loops-and-functions",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "Class Part II: Control Statements, Loops and Functions",
-    "text": "Class Part II: Control Statements, Loops and Functions\nWe will go over some concepts that are very general for any programming language.\n\n\nLogical Operators: to make comparisons\nControl statements: to control the behavior of your code\nIterations: repeat, repeat, scale-up!\nUser-Defined Functions: to make code more flexible, debuggable, and readable."
-  },
-  {
-    "objectID": "slides/week-4.html#comparison-operators",
-    "href": "slides/week-4.html#comparison-operators",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "Comparison Operators",
-    "text": "Comparison Operators\n\n\n\nOperator\nProperty\n\n\n\n\n==\n(value) equivalence\n\n\n&gt;\ngreater than\n\n\n&lt;\nstrictly less than\n\n\n&lt;=\nless than or equal\n\n\n&gt;\nstrictly greater than\n\n\n&gt;=\ngreater than or equal\n\n\n!=\nNot Equals\n\n\nis\nobject identity\n\n\nis not\nnegated object identity\n\n\nin\nmembership in\n\n\nnot in\nnegated membership in"
-  },
-  {
-    "objectID": "slides/week-4.html#control-statements",
-    "href": "slides/week-4.html#control-statements",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "Control Statements",
-    "text": "Control Statements\nAny programming language needs statements that controls the sequence of execution of a particular piece of code. We will see three main types:\n\nif-else statements\nfor loops\nwhile loops"
-  },
-  {
-    "objectID": "slides/week-4.html#ifelse-statements",
-    "href": "slides/week-4.html#ifelse-statements",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "Ifelse Statements",
-    "text": "Ifelse Statements\nDefinition: Conditional execution.\n\nif &lt;logical statement&gt;:\n \n \n  ~~~~ CODE ~~~~\n\n\nelif &lt;logical statement&gt;:\n\n\n  ~~~~ CODE ~~~~\n\n\nelse:\n\n  ~~~~ CODE ~~~~"
-  },
-  {
-    "objectID": "slides/week-4.html#for-loops",
-    "href": "slides/week-4.html#for-loops",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "For loops",
-    "text": "For loops\nDefinition: Taking one item at a time from a collection. We start at the beginning of the collection and mover through it until we reach the end.\nIn python, we can iterate over:\n\nlists\nstrings\ndictionaries items\nfile connections\ngrouped pandas df"
-  },
-  {
-    "objectID": "slides/week-4.html#example",
-    "href": "slides/week-4.html#example",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "Example:",
-    "text": "Example:\n\n# create a list\nmy_list = [1, 2, 3, 4, 5]\n\n# iterate with a for loop:\nfor m in my_list:\n  print(m)\n\n1\n2\n3\n4\n5"
-  },
-  {
-    "objectID": "slides/week-4.html#while-loops",
-    "href": "slides/week-4.html#while-loops",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "While Loops",
-    "text": "While Loops\n\nWhile loops are all about repetitions. Instead of a sequence, the operation will repeat up according to the conditional statement in the loop.\n\n\n# while loops\nx = 0\nwhile x &lt; 5:\n    print(\"This\")\n    x += 1\n\nThis\nThis\nThis\nThis\nThis"
-  },
-  {
-    "objectID": "slides/week-4.html#how-do-we-start-coding",
-    "href": "slides/week-4.html#how-do-we-start-coding",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "How do we start coding?",
-    "text": "How do we start coding?\n\n\nwrite code sequentially to solve your immediate needs\nreuse this code for similar tasks.\nHave very long and repetitive codes"
-  },
-  {
-    "objectID": "slides/week-4.html#problems-with-this-approach",
-    "href": "slides/week-4.html#problems-with-this-approach",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "Problems with this approach",
-    "text": "Problems with this approach\n\n\nLack of general utility.\nNeed to edit/copy/paste your code every time you want to reuse it.\nNeed to re-write the code when you need to make small extension\nLikely to raise errors"
-  },
-  {
-    "objectID": "slides/week-4.html#functions",
-    "href": "slides/week-4.html#functions",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "Functions",
-    "text": "Functions\n\ndef square(x):\n  '''\n  Takes the square of a number\n  input: int object\n  outpur: int object\n  '''\n  y = x*x\n  return y\n\n\nThe code block above has the following elements:\n\ndef: keyword for generating a function\ndocstring: to explain your function\narguments: things we want to feed into the function and do something to.\nreturn: keyword for returning a specific value from a function"
-  },
-  {
-    "objectID": "slides/week-4.html#comparing-python-and-r",
-    "href": "slides/week-4.html#comparing-python-and-r",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "Comparing Python and R",
-    "text": "Comparing Python and R\n\ndef square(x):\n  '''\n  Takes the square of a number\n  input: int object\n  outpur: int object\n  '''\n  y = x*x\n  return y\n\n\n\nsquare &lt;- function(x){\n#  Takes the square of a number\n#  input: int object\n#  outpur: int object\ny = x*x\nreturn(y)\n}\n\n\nIn Python, you don’t need to assign an object to a function\nThe indentation blocks your statement. It replaces the curly braces"
-  },
-  {
-    "objectID": "slides/week-4.html#additional-topics-on-functions",
-    "href": "slides/week-4.html#additional-topics-on-functions",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "Additional topics on functions",
-    "text": "Additional topics on functions\n\nScoping\nlambda functions"
-  },
-  {
-    "objectID": "slides/week-4.html#intro-to-python---part-ii.",
-    "href": "slides/week-4.html#intro-to-python---part-ii.",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "Intro to Python - Part II.",
-    "text": "Intro to Python - Part II.\nFor the second part of this lecture, we will see:\n\nImporting libraries in Python\nComprehension and Generators\nFile management in Python\nData as Nested Lists"
-  },
-  {
-    "objectID": "slides/week-4.html#importing-librarys-in-python",
-    "href": "slides/week-4.html#importing-librarys-in-python",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "Importing librarys in Python",
-    "text": "Importing librarys in Python\n\n\nPython allows you to import libraries in a few different ways:\n\nThe full library with the original name\nThe full library with an alias\nSome functions from the library\nAll methods from the library as independent functions"
-  },
-  {
-    "objectID": "slides/week-4.html#the-full-library-and-its-functions",
-    "href": "slides/week-4.html#the-full-library-and-its-functions",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "The full library and its functions",
-    "text": "The full library and its functions\n\n\n# import library\nimport math\n\n# access methods from the library\nmath.pi\n\n3.141592653589793\n\n\n\n\n# this will throw you an error\npi\n\nNameError: name 'pi' is not defined"
-  },
-  {
-    "objectID": "slides/week-4.html#the-full-library-with-an-alias",
-    "href": "slides/week-4.html#the-full-library-with-an-alias",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "The full library with an alias",
-    "text": "The full library with an alias\n\n\n# import library\nimport math as m\n\n# access methods from the library\nm.pi\n\n3.141592653589793\n\nm.factorial(5)\n\n120"
-  },
-  {
-    "objectID": "slides/week-4.html#some-functions-from-the-library",
-    "href": "slides/week-4.html#some-functions-from-the-library",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "Some functions from the library",
-    "text": "Some functions from the library\n\n\n# import some functions\nfrom math import pi\n\n# run\npi\n\n3.141592653589793"
-  },
-  {
-    "objectID": "slides/week-4.html#all-methods-from-the-library-as-independent-functions",
-    "href": "slides/week-4.html#all-methods-from-the-library-as-independent-functions",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "All methods from the library as independent functions",
-    "text": "All methods from the library as independent functions\n\n# all methods as independent functions\nfrom math import *\n\n# run\nfactorial(5)\n\n120"
-  },
-  {
-    "objectID": "slides/week-4.html#comprehensions",
-    "href": "slides/week-4.html#comprehensions",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "Comprehensions",
-    "text": "Comprehensions\n\nProvide a readable and efficient way to construct new sequences (such as lists, sets, dictionaries, etc.) based on a sequence of elements\n\n\nCompared to a loop\n\na_list =[0, 1, 2, 3, 4, \"hey\"]\nresult = []\nfor e in a_list:\n    if type(e) == int:  # use int for Python 3\n        result.append(e**2)\nresult\n\n[0, 1, 4, 9, 16]"
-  },
-  {
-    "objectID": "slides/week-4.html#i-am-already-all-confused-about-loops.-why-do-i-need-to-learn-something-else",
-    "href": "slides/week-4.html#i-am-already-all-confused-about-loops.-why-do-i-need-to-learn-something-else",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "I am already all confused about loops. Why do I need to learn something else?",
-    "text": "I am already all confused about loops. Why do I need to learn something else?\n\n\nElegant and cleaner way to perform iterations. Which means: a lot of people use it!\nAutomatically create new objects – no need to create a container in the loop\nFlexible: allows working with lists, dictionaries, and sets\nFaster than loops (but not much in a way that makes you avoid loops)"
-  },
-  {
-    "objectID": "slides/week-4.html#generators",
-    "href": "slides/week-4.html#generators",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "Generators",
-    "text": "Generators\nPython has this very nice data type called generators. We use these functions a lot, but hardly talk about them.\n\n\nPurpose: Generators allow for generating a sequence of values at each time. In other words, it allows you to create iterators in Python.\nMain Advantage: do not have to create the entire sequence at once and allocate memory\nLazy Evaluation: Returns a value at time. When requested. It is LAZY!!! We love LAZY!"
-  },
-  {
-    "objectID": "slides/week-4.html#example-of-generators",
-    "href": "slides/week-4.html#example-of-generators",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "Example of Generators",
-    "text": "Example of Generators\nYou can build your own generators. That’s a bit advanced, and you probably will not need to use for our purposes. But we will see some pre-built “generators” that will be useful for us:\n\n\nrange(): generate the corresponding sequence of integers. Commonly used with for loops.\nzip(): syncs two series of numbers up into tuples.\nenumerate(): generates an index and value tuple’s pairing"
-  },
-  {
-    "objectID": "slides/week-4.html#file-management-in-python",
-    "href": "slides/week-4.html#file-management-in-python",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "File Management in Python",
-    "text": "File Management in Python\nMain question: how do we read files from our computer in python?\n\nconnection management: open(), close()\nReading/writing files\nusing with to manage connections.\nReading .csvs"
-  },
-  {
-    "objectID": "slides/week-4.html#tldr",
-    "href": "slides/week-4.html#tldr",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "TLDR:",
-    "text": "TLDR:\n\nMost often we will use high-level functions from Pandas to load data into Python objects.\nWhy are we learning these tools then?\n\nVery pythonic\nNo direct equivalent in R or Stata\nImportant when working non-tabular data - text, json, images, etc..\n\nReading: Check Section 3.3 of Python for Data Analysis to learn more about the topics covered in the notebook."
-  },
-  {
-    "objectID": "slides/week-4.html#summary",
-    "href": "slides/week-4.html#summary",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "Summary",
-    "text": "Summary\n\nopen(): opens a connection with files on our system.\n\nopen() returns a special item type *_io.TextIOWrapper*\nThis item is a iterator. We need to go through to convert inputs to a objectin python.\n\nclose(): closes the connection.\nwrite(): writes files on your system. Also line by line.\nwith(): wrapper for open and close that allows alias."
-  },
-  {
-    "objectID": "slides/week-4.html#or-motivating-numpy",
-    "href": "slides/week-4.html#or-motivating-numpy",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "Or motivating Numpy",
-    "text": "Or motivating Numpy\nSo far, all our datatypes are geared towards kind of unidimensional data. We can get over with this using a nested list:\n\n# Read in the gapminder data \nimport csv\nwith open(\"../lecture_notes/week-04/gapminder.csv\",mode=\"rt\") as file:\n    data = [row for row in csv.reader(file)]\n\nFileNotFoundError: [Errno 2] No such file or directory: '../lecture_notes/week-04/gapminder.csv'"
-  },
-  {
-    "objectID": "slides/week-4.html#nested-lists-bad-data-structure.-why",
-    "href": "slides/week-4.html#nested-lists-bad-data-structure.-why",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "Nested Lists: Bad data structure. Why?",
-    "text": "Nested Lists: Bad data structure. Why?\n\n# let's see the data\n\nprint(data)\n\nNameError: name 'data' is not defined"
-  },
-  {
-    "objectID": "slides/week-4.html#here-comes-numpy",
-    "href": "slides/week-4.html#here-comes-numpy",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "Here comes numpy …",
-    "text": "Here comes numpy …\n\n\n\n\n\n\n\n\nsource: Python Programming for Data Science"
-  },
-  {
-    "objectID": "slides/week-4.html#why-should-you-learn-holds-python-together",
-    "href": "slides/week-4.html#why-should-you-learn-holds-python-together",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "Why should you learn? Holds Python together!",
-    "text": "Why should you learn? Holds Python together!\n\n\n\n\nData science I: Foundations"
-  },
-  {
-    "objectID": "slides/week-4.html#problem-set-01",
-    "href": "slides/week-4.html#problem-set-01",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "Problem set 01",
-    "text": "Problem set 01\nYou made several mistakes on the first question of the problem set. Unfortunately, you did not really considered this part of the question:\n\nYour task: Create a folder in this repository named question-01 that follows the best practices for project management and reproducibility we discussed in class.\n\n\n\nMistakes:\n\nNo README!!!\n\nAlways have a read me explaining what your repository is\n\nSeveral files missing.\n\nsome are lack of attention on your part\nsome are because you are not considering the existence of a .gitignore file\n\nSeveral files poorly named (white spaces, no clear explanation of the file, no numbering to order the code structure)\nNo correct folder structure"
-  },
-  {
-    "objectID": "slides/week-4.html#opportunity-for-extra-points",
-    "href": "slides/week-4.html#opportunity-for-extra-points",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "Opportunity for extra points",
-    "text": "Opportunity for extra points\nMost of you lost a lot of points in this question. I will give you an opportunity to recover some of these points.\n\nUntil the end of the day today, you can resubmit your Question 1 of problem set. Just do another push on github.\nFix all the issues, and you can earn up to 10 extra points.\n\nTip 1: Check the example repo on your notebook to see what your response should look like.\nTip 2: Create a readme.md file explaining your repository, describing your article, folder, and all the files. The readme should be inside the main folder\nTip 3: All the files have bad names. Rename them following best practices."
-  },
-  {
-    "objectID": "slides/week-4.html#for-the-future",
-    "href": "slides/week-4.html#for-the-future",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "For the future…",
-    "text": "For the future…\nI will not give you these extra point in every problem set.\n\nQuestions? Ask your TA, ask me, ask on slack.\nNot clear how to answer the question? Ask your TA, ask me, ask on slack.\nRead the lecture notes.\nStart solving your problem set early on."
-  },
-  {
-    "objectID": "slides/week-3.html",
-    "href": "slides/week-3.html",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "",
-    "text": "☐ Edit '/Users/tb186/.Renviron'.\n\n\n☐ Restart R for changes to take effect."
   }
 ]
