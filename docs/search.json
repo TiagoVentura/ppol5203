@@ -95,7 +95,7 @@
     "href": "slides/week-3.html#section-1",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "",
-    "text": "Python OOP\n\n# call library\nimport pandas as pd\n\n# Using a Pandas Series method (OOP)\ns = pd.Series([1, 2, 3, 4, 5])\n\n# create a series object. You use a methods from this object to take the mean\ns.mean()\n\n\nR Functional Programming in Practice\n\nvec &lt;- c(1, 2, 3, 4, 5)\nmean(vec)\n\n\nObjects are the core of Python.\nFrom the objects, you will access functions that will make Python work.\nYou can also access data from object."
+    "text": "Python OOP\n\n# call library\nimport pandas as pd\n\n# Using a Pandas Series method (OOP)\ns = pd.Series([1, 2, 3, 4, 5])\n\n# create a series object. You use a methods from this object to take the mean\ns.mean()\n\n\n\n\nR Functional Programming in Practice\n\nvec &lt;- c(1, 2, 3, 4, 5)\nmean(vec)\n\n\nObjects are the core of Python.\nFrom the objects, you will access functions that will make Python work.\nYou can also access data from object."
   },
   {
     "objectID": "slides/week-3.html#section-2",
@@ -109,7 +109,7 @@
     "href": "slides/week-3.html#what-happens-upon-assignment",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "What happens upon assignment?",
-    "text": "What happens upon assignment?\n\nAction 1: A reference is assigned to an object, with an id number in memory\n\nid(x)\n\n4534576136"
+    "text": "What happens upon assignment?\n\nAction 1: A reference is assigned to an object, with an id number in memory\n\nid(x)\n\n4794917896"
   },
   {
     "objectID": "slides/week-3.html#section-3",
@@ -200,7 +200,7 @@
     "href": "slides/week-3.html#class-part-ii-control-statements-loops-and-functions",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "Class Part II: Control Statements, Loops and Functions",
-    "text": "Class Part II: Control Statements, Loops and Functions\nWe will go over some concepts that are very general over any programming language.\n\n\nUsing logical operators for comparisons.\nControl the behavior of code when iterating using control statements.\nExplore iterating through containers using loops\nDefining functions to make code more flexible, debuggable, and readable. (Probably for next week)"
+    "text": "Class Part II: Control Statements, Loops and Functions\nWe will go over some concepts that are very general for any programming language.\n\n\nUsing logical operators for comparisons.\nControl the behavior of code when iterating using control statements.\nExplore iterating through containers using loops\nDefining functions to make code more flexible, debuggable, and readable. (Probably for next week)"
   },
   {
     "objectID": "slides/week-3.html#comparison-operators",
@@ -1594,5 +1594,12 @@
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "For the future…",
     "text": "For the future…\nI will not give you these extra point in every problem set.\n\nQuestions? Ask your TA, ask me, ask on slack.\nNot clear how to answer the question? Ask your TA, ask me, ask on slack.\nRead the lecture notes.\nStart solving your problem set early on."
+  },
+  {
+    "objectID": "slides/week-3.html",
+    "href": "slides/week-3.html",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "",
+    "text": "☐ Edit '/Users/tb186/.Renviron'.\n\n\n☐ Restart R for changes to take effect."
   }
 ]

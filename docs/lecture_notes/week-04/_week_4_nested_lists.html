@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>_week_4_file_management</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>_week_4_nested_lists</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 <style type="text/css">
   pre { line-height: 125%; }
@@ -13089,10 +13089,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><h1><center> PPOL 5203 Data Science I: Foundations <br><br> 
-<font color='grey'>File Management<br><br>
-Tiago Ventura </center> <h1></p>
-<hr>
+<p><h1><center> PPOL564 - Data Science I: Foundations<br><br><font color='grey'> Working with Nested Lists </font> </center><h1></p>
 
 </div>
 </div>
@@ -13102,84 +13099,10 @@ Tiago Ventura </center> <h1></p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Learning-Goals">Learning Goals<a class="anchor-link" href="#Learning-Goals">&#182;</a></h2><p>In this notebook, we will cover:</p>
 <ul>
-<li>connection management: <code>open()</code>, <code>close()</code></li>
-<li>Reading/writing files </li>
-<li>using <code>with</code> to manage connections. </li>
-<li>Reading <code>.csvs</code></li>
+<li>open csv as nested lists</li>
+<li>Working with retangular data as nested lists</li>
 </ul>
-<p><strong>TLDR:</strong> Most often we will use high-level functions from Pandas to load data into Python objects. However, if you are migrating from <code>R</code> or <code>Stata</code> to Python, the use of connection management functions (<code>open()</code>, <code>close()</code> and <code>with()</code>) are very characteristic of writing code in Python, and are not heavily used in other languages. These file handlers are also important when working non-tabular data, in which most often you don't need to (or don't want to) fit into a dataframe.</p>
-<div class="alert alert-block alert-danger"> 
-
-**Working Directory:** Notice that we will read some local files in this notebook. These files need to be in the same working directory as your notebook, or else Python will not know where the files are on your computer. Please download the accompanying files (`news-story.txt` and `student_data.csv`) from the class website, and place into a place you can easily set you python towards. Ideally, on the folder you have for this class!
-
-</div><p><strong>Reading:</strong> Check Section 3.3 of <a href="https://wesmckinney.com/book/python-builtin.html">Python for Data Analysis</a> to learn more about the topics covered in the notebook.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># check my working directory</span>
-<span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[2]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;/Users/tb186/Dropbox/courses/ds-1/ppol5203/lecture_notes/week-04&#39;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Reading-Files">Reading Files<a class="anchor-link" href="#Reading-Files">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="open()"><code>open()</code><a class="anchor-link" href="#open()">&#182;</a></h3><p>The built-in <code>open()</code> function opens files on our system. The function takes the following arguments:</p>
-<ul>
-<li>a file path</li>
-<li>a mode describing how to treat the file (e.g. read the file, write to the file, append to the file, etc.). Default is read mode ("r").</li>
-<li>an encoding. Default is "UTF-8" for most systems.</li>
-</ul>
+<p>This is mostly code I will go over during the lecture.</p>
 
 </div>
 </div>
@@ -13189,7 +13112,18 @@ Tiago Ventura </center> <h1></p>
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"redrising.txt"</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">'r'</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">'UTF-8'</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Batteries included Functions</span>
+<span class="kn">import</span> <span class="nn">csv</span> <span class="c1"># convert a .csv to a nested list</span>
+<span class="kn">import</span> <span class="nn">os</span>  <span class="c1"># library for managing our operating system. </span>
+
+
+<span class="c1"># Read in the gapminder data </span>
+
+<span class="c1"># with to open the connection</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"gapminder.csv"</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s2">"rt"</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="c1"># iterate through the connection with list comprehension</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">row</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">file</span><span class="p">)]</span>
+    <span class="c1"># output: nested list</span>
 </pre></div>
 
     </div>
@@ -13200,8 +13134,7 @@ Tiago Ventura </center> <h1></p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3><span style='color:red'> Alert: </span></h3><p><code>open()</code> returns a special item type <code>_io.TextIOWrapper</code>. It is file-like-object which is just loosely defined in Python.</p>
-
+<h4 id="What-does-the-data-look-like?">What does the data look like?<a class="anchor-link" href="#What-does-the-data-look-like?">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13210,7 +13143,8 @@ Tiago Ventura </center> <h1></p>
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># it is a nested list. </span>
+<span class="n">data</span>
 </pre></div>
 
     </div>
@@ -13229,7 +13163,148 @@ Tiago Ventura </center> <h1></p>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>_io.TextIOWrapper</pre>
+<pre>[[&#39;country&#39;, &#39;lifeExp&#39;, &#39;gdpPercap&#39;],
+ [&#39;Guinea_Bissau&#39;, &#39;39.21&#39;, &#39;652.157&#39;],
+ [&#39;Bolivia&#39;, &#39;52.505&#39;, &#39;2961.229&#39;],
+ [&#39;Austria&#39;, &#39;73.103&#39;, &#39;20411.916&#39;],
+ [&#39;Malawi&#39;, &#39;43.352&#39;, &#39;575.447&#39;],
+ [&#39;Finland&#39;, &#39;72.992&#39;, &#39;17473.723&#39;],
+ [&#39;North_Korea&#39;, &#39;63.607&#39;, &#39;2591.853&#39;],
+ [&#39;Malaysia&#39;, &#39;64.28&#39;, &#39;5406.038&#39;],
+ [&#39;Hungary&#39;, &#39;69.393&#39;, &#39;10888.176&#39;],
+ [&#39;Congo&#39;, &#39;52.502&#39;, &#39;3312.788&#39;],
+ [&#39;Morocco&#39;, &#39;57.609&#39;, &#39;2447.909&#39;],
+ [&#39;Germany&#39;, &#39;73.444&#39;, &#39;20556.684&#39;],
+ [&#39;Ecuador&#39;, &#39;62.817&#39;, &#39;5733.625&#39;],
+ [&#39;Kuwait&#39;, &#39;68.922&#39;, &#39;65332.91&#39;],
+ [&#39;New_Zealand&#39;, &#39;73.989&#39;, &#39;17262.623&#39;],
+ [&#39;Mauritania&#39;, &#39;52.302&#39;, &#39;1356.671&#39;],
+ [&#39;Uganda&#39;, &#39;47.619&#39;, &#39;810.384&#39;],
+ [&#39;Equatorial Guinea&#39;, &#39;42.96&#39;, &#39;2469.167&#39;],
+ [&#39;Croatia&#39;, &#39;70.056&#39;, &#39;9331.712&#39;],
+ [&#39;Indonesia&#39;, &#39;54.336&#39;, &#39;1741.365&#39;],
+ [&#39;Canada&#39;, &#39;74.903&#39;, &#39;22410.746&#39;],
+ [&#39;Comoros&#39;, &#39;52.382&#39;, &#39;1314.38&#39;],
+ [&#39;Montenegro&#39;, &#39;70.299&#39;, &#39;7208.065&#39;],
+ [&#39;Slovenia&#39;, &#39;71.601&#39;, &#39;14074.582&#39;],
+ [&#39;Trinidad and Tobago&#39;, &#39;66.828&#39;, &#39;7866.872&#39;],
+ [&#39;Poland&#39;, &#39;70.177&#39;, &#39;8416.554&#39;],
+ [&#39;Lesotho&#39;, &#39;50.007&#39;, &#39;780.553&#39;],
+ [&#39;Italy&#39;, &#39;74.014&#39;, &#39;16245.209&#39;],
+ [&#39;Tunisia&#39;, &#39;60.721&#39;, &#39;3477.21&#39;],
+ [&#39;Kenya&#39;, &#39;52.681&#39;, &#39;1200.416&#39;],
+ [&#39;Gambia&#39;, &#39;44.401&#39;, &#39;680.133&#39;],
+ [&#39;Bosnia and Herzegovina&#39;, &#39;67.708&#39;, &#39;3484.779&#39;],
+ [&#39;Libya&#39;, &#39;59.304&#39;, &#39;12013.579&#39;],
+ [&#39;Greece&#39;, &#39;73.733&#39;, &#39;13969.037&#39;],
+ [&#39;Ghana&#39;, &#39;52.341&#39;, &#39;1044.582&#39;],
+ [&#39;Peru&#39;, &#39;58.859&#39;, &#39;5613.844&#39;],
+ [&#39;Turkey&#39;, &#39;59.696&#39;, &#39;4469.453&#39;],
+ [&#39;Reunion&#39;, &#39;66.644&#39;, &#39;4898.398&#39;],
+ [&#39;Sri_Lanka&#39;, &#39;66.526&#39;, &#39;1854.731&#39;],
+ [&#39;Cambodia&#39;, &#39;47.903&#39;, &#39;675.368&#39;],
+ [&#39;Bulgaria&#39;, &#39;69.744&#39;, &#39;6384.055&#39;],
+ [&#39;Lebanon&#39;, &#39;65.866&#39;, &#39;7269.216&#39;],
+ [&#39;Togo&#39;, &#39;51.499&#39;, &#39;1153.82&#39;],
+ [&#39;Yemen&#39;, &#39;46.78&#39;, &#39;1569.275&#39;],
+ [&#39;Jamaica&#39;, &#39;68.749&#39;, &#39;6197.645&#39;],
+ [&#39;Swaziland&#39;, &#39;49.002&#39;, &#39;3163.352&#39;],
+ [&#39;Chile&#39;, &#39;67.431&#39;, &#39;6703.289&#39;],
+ [&#39;Israel&#39;, &#39;73.646&#39;, &#39;14160.936&#39;],
+ [&#39;Algeria&#39;, &#39;59.03&#39;, &#39;4426.026&#39;],
+ [&#39;Czech_Republic&#39;, &#39;71.511&#39;, &#39;13920.011&#39;],
+ [&#39;Djibouti&#39;, &#39;46.381&#39;, &#39;2697.833&#39;],
+ [&#39;Singapore&#39;, &#39;71.22&#39;, &#39;17425.382&#39;],
+ [&#39;Nigeria&#39;, &#39;43.581&#39;, &#39;1488.309&#39;],
+ [&#39;Bangladesh&#39;, &#39;49.834&#39;, &#39;817.559&#39;],
+ [&#39;DRC&#39;, &#39;44.544&#39;, &#39;648.343&#39;],
+ [&#39;Cuba&#39;, &#39;71.045&#39;, &#39;6283.259&#39;],
+ [&#39;Namibia&#39;, &#39;53.491&#39;, &#39;3675.582&#39;],
+ [&#39;Sudan&#39;, &#39;48.401&#39;, &#39;1835.01&#39;],
+ [&#39;Syria&#39;, &#39;61.346&#39;, &#39;3009.288&#39;],
+ [&#39;Rwanda&#39;, &#39;41.482&#39;, &#39;675.669&#39;],
+ [&#39;Puerto Rico&#39;, &#39;72.739&#39;, &#39;10863.164&#39;],
+ [&#39;Albania&#39;, &#39;68.433&#39;, &#39;3255.367&#39;],
+ [&#39;Vietnam&#39;, &#39;57.48&#39;, &#39;1017.713&#39;],
+ [&#39;Mozambique&#39;, &#39;40.38&#39;, &#39;542.278&#39;],
+ [&#39;Mali&#39;, &#39;43.413&#39;, &#39;673.093&#39;],
+ [&#39;Saudi Arabia&#39;, &#39;58.679&#39;, &#39;20261.744&#39;],
+ [&#39;Liberia&#39;, &#39;42.476&#39;, &#39;604.814&#39;],
+ [&#39;Madagascar&#39;, &#39;47.771&#39;, &#39;1335.595&#39;],
+ [&#39;Chad&#39;, &#39;46.774&#39;, &#39;1165.454&#39;],
+ [&#39;Gabon&#39;, &#39;51.221&#39;, &#39;11529.865&#39;],
+ [&#39;Mauritius&#39;, &#39;64.953&#39;, &#39;4768.942&#39;],
+ [&#39;Zambia&#39;, &#39;45.996&#39;, &#39;1358.199&#39;],
+ [&#39;Romania&#39;, &#39;68.291&#39;, &#39;7300.17&#39;],
+ [&#39;Dominican Republic&#39;, &#39;61.554&#39;, &#39;2844.856&#39;],
+ [&#39;Egypt&#39;, &#39;56.243&#39;, &#39;3074.031&#39;],
+ [&#39;Senegal&#39;, &#39;50.626&#39;, &#39;1533.122&#39;],
+ [&#39;Oman&#39;, &#39;58.443&#39;, &#39;12138.562&#39;],
+ [&#39;Zimbabwe&#39;, &#39;52.663&#39;, &#39;635.858&#39;],
+ [&#39;Botswana&#39;, &#39;54.598&#39;, &#39;5031.504&#39;],
+ [&#34;Cote d&#39;Ivoire&#34;, &#39;48.436&#39;, &#39;1912.825&#39;],
+ [&#39;Afghanistan&#39;, &#39;37.479&#39;, &#39;802.675&#39;],
+ [&#39;Mexico&#39;, &#39;65.409&#39;, &#39;7724.113&#39;],
+ [&#39;Sao Tome and Principe&#39;, &#39;57.896&#39;, &#39;1382.782&#39;],
+ [&#39;Myanmar&#39;, &#39;53.322&#39;, &#39;439.333&#39;],
+ [&#39;Switzerland&#39;, &#39;75.565&#39;, &#39;27074.334&#39;],
+ [&#39;United Kingdom&#39;, &#39;73.923&#39;, &#39;19380.473&#39;],
+ [&#39;Japan&#39;, &#39;74.827&#39;, &#39;17750.87&#39;],
+ [&#39;El Salvador&#39;, &#39;59.633&#39;, &#39;4431.847&#39;],
+ [&#39;India&#39;, &#39;53.166&#39;, &#39;1057.296&#39;],
+ [&#39;Thailand&#39;, &#39;62.2&#39;, &#39;3045.966&#39;],
+ [&#39;Bahrain&#39;, &#39;65.606&#39;, &#39;18077.664&#39;],
+ [&#39;Australia&#39;, &#39;74.663&#39;, &#39;19980.596&#39;],
+ [&#39;Mongolia&#39;, &#39;55.89&#39;, &#39;1692.805&#39;],
+ [&#39;Nepal&#39;, &#39;48.986&#39;, &#39;782.729&#39;],
+ [&#39;Iran&#39;, &#39;58.637&#39;, &#39;7376.583&#39;],
+ [&#39;Honduras&#39;, &#39;57.921&#39;, &#39;2834.413&#39;],
+ [&#39;Guinea&#39;, &#39;43.24&#39;, &#39;776.067&#39;],
+ [&#39;Venezuela&#39;, &#39;66.581&#39;, &#39;10088.516&#39;],
+ [&#39;Iceland&#39;, &#39;76.511&#39;, &#39;20531.422&#39;],
+ [&#39;Somalia&#39;, &#39;40.989&#39;, &#39;1140.793&#39;],
+ [&#39;Burundi&#39;, &#39;44.817&#39;, &#39;471.663&#39;],
+ [&#39;Panama&#39;, &#39;67.802&#39;, &#39;5754.827&#39;],
+ [&#39;Costa Rica&#39;, &#39;70.181&#39;, &#39;5448.611&#39;],
+ [&#39;Philippines&#39;, &#39;60.967&#39;, &#39;2174.771&#39;],
+ [&#39;Denmark&#39;, &#39;74.37&#39;, &#39;21671.825&#39;],
+ [&#39;Benin&#39;, &#39;48.78&#39;, &#39;1155.395&#39;],
+ [&#39;Eritrea&#39;, &#39;45.999&#39;, &#39;541.003&#39;],
+ [&#39;Belgium&#39;, &#39;73.642&#39;, &#39;19900.758&#39;],
+ [&#39;West Bank and Gaza&#39;, &#39;60.329&#39;, &#39;3759.997&#39;],
+ [&#39;South_Korea&#39;, &#39;65.001&#39;, &#39;8217.318&#39;],
+ [&#39;Ethiopia&#39;, &#39;44.476&#39;, &#39;509.115&#39;],
+ [&#39;Guatemala&#39;, &#39;56.729&#39;, &#39;4015.403&#39;],
+ [&#39;Colombia&#39;, &#39;63.898&#39;, &#39;4195.343&#39;],
+ [&#39;Cameroon&#39;, &#39;48.129&#39;, &#39;1774.634&#39;],
+ [&#39;United States&#39;, &#39;73.478&#39;, &#39;26261.151&#39;],
+ [&#39;Pakistan&#39;, &#39;54.882&#39;, &#39;1439.271&#39;],
+ [&#39;China&#39;, &#39;61.785&#39;, &#39;1488.308&#39;],
+ [&#39;Sierra Leone&#39;, &#39;36.769&#39;, &#39;1072.819&#39;],
+ [&#39;Slovak Republic&#39;, &#39;70.696&#39;, &#39;10415.531&#39;],
+ [&#39;Tanzania&#39;, &#39;47.912&#39;, &#39;849.281&#39;],
+ [&#39;Paraguay&#39;, &#39;66.809&#39;, &#39;3239.607&#39;],
+ [&#39;Argentina&#39;, &#39;69.06&#39;, &#39;8955.554&#39;],
+ [&#39;Spain&#39;, &#39;74.203&#39;, &#39;14029.826&#39;],
+ [&#39;Netherlands&#39;, &#39;75.648&#39;, &#39;21748.852&#39;],
+ [&#39;France&#39;, &#39;74.349&#39;, &#39;18833.57&#39;],
+ [&#39;Niger&#39;, &#39;44.559&#39;, &#39;781.077&#39;],
+ [&#39;Central African Republic&#39;, &#39;43.867&#39;, &#39;958.785&#39;],
+ [&#39;Serbia&#39;, &#39;68.551&#39;, &#39;9305.049&#39;],
+ [&#39;Iraq&#39;, &#39;56.582&#39;, &#39;7811.809&#39;],
+ [&#39;Uruguay&#39;, &#39;70.782&#39;, &#39;7100.133&#39;],
+ [&#39;Angola&#39;, &#39;37.883&#39;, &#39;3607.101&#39;],
+ [&#39;Sweden&#39;, &#39;76.177&#39;, &#39;19943.126&#39;],
+ [&#39;Nicaragua&#39;, &#39;58.349&#39;, &#39;3424.656&#39;],
+ [&#39;South Africa&#39;, &#39;53.993&#39;, &#39;7247.431&#39;],
+ [&#39;Burkina Faso&#39;, &#39;44.694&#39;, &#39;843.991&#39;],
+ [&#39;Haiti&#39;, &#39;50.165&#39;, &#39;1620.739&#39;],
+ [&#39;Norway&#39;, &#39;75.843&#39;, &#39;26747.307&#39;],
+ [&#39;Taiwan&#39;, &#39;70.337&#39;, &#39;10224.807&#39;],
+ [&#39;Portugal&#39;, &#39;70.42&#39;, &#39;11354.092&#39;],
+ [&#39;Jordan&#39;, &#39;59.786&#39;, &#39;3128.121&#39;],
+ [&#39;Ireland&#39;, &#39;73.017&#39;, &#39;15758.606&#39;],
+ [&#39;Brazil&#39;, &#39;62.239&#39;, &#39;5829.317&#39;]]</pre>
 </div>
 
 </div>
@@ -13238,47 +13313,24 @@ Tiago Ventura </center> <h1></p>
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">file_</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<span class="n">file_</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[5]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;1 - Helldiver\n\nThe first thing you should know about me is I am my father’s son. And when they came for him, I did as he asked. \n\nI did not cry. \n\nNot when the Society televised the arrest. \n\nNot when the Golds tried him. Not when the Grays hanged him.\n\nMother hit me for that. \n\nMy brother Kieran was supposed to be the stoic one. He was the elder, I the younger. I was supposed to cry. Instead, Kieran bawled like a girl when Little Eo tucked a haemanthus into Father’s left workboot and ran back to her own father’s side. My sister Leanna murmured a lament beside me. \n\nI just watched and thought it a shame that he died dancing but without his dancing shoes.\n\nOn Mars there is not much gravity. So you have to pull the feet to break the neck. \n\nThey let the loved ones do it.\n\n&#39;</pre>
-</div>
-
-</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Indexing-Nested-Lists">Indexing Nested Lists<a class="anchor-link" href="#Indexing-Nested-Lists">&#182;</a></h2><p>Notice something important here, because we open the data using a iterator, the code doesn't know that the first row is the header of the csv</p>
 
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Once we've read through the items, the file object is empty</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">())</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># accessing the header</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="c1"># For any row &gt; 0, row == 0 is the column names. </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">100</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -13295,7 +13347,8 @@ Tiago Ventura </center> <h1></p>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>
+<pre>[&#39;country&#39;, &#39;lifeExp&#39;, &#39;gdpPercap&#39;]
+[&#39;Burundi&#39;, &#39;44.817&#39;, &#39;471.663&#39;]
 </pre>
 </div>
 </div>
@@ -13307,202 +13360,20 @@ Tiago Ventura </center> <h1></p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<h3 id="close()"><code>close()</code><a class="anchor-link" href="#close()">&#182;</a></h3><p>Once we are done with a file, we need to close it.</p>
-
+<h3 id="Indexing-by-columns">Indexing by columns<a class="anchor-link" href="#Indexing-by-columns">&#182;</a></h3>
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Opening and forgetting to close files can lead to a bunch of issues --- mainly the mismanagement of computational resources on your machine.</p>
-<p>Moreover, <code>close()</code> is necessary for actually writing files to our computer</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<h3 id="Methods-available-when-reading-in-files">Methods available when reading in files<a class="anchor-link" href="#Methods-available-when-reading-in-files">&#182;</a></h3><p><strong><center>Methods in object type `TextIOWrapper`</center></strong></p>
-<table>
-<thead><tr>
-<th style="text-align:center">Method</th>
-<th style="text-align:center">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><strong><code>._CHUNK_SIZE()</code></strong></td>
-<td style="text-align:center">int([x]) -&gt; integer int(x, base=10) -&gt; integer</td>
-</tr>
-<tr>
-<td style="text-align:center"><strong><code>._finalizing()</code></strong></td>
-<td style="text-align:center">bool(x) -&gt; bool</td>
-</tr>
-<tr>
-<td style="text-align:center"><strong><code>.buffer()</code></strong></td>
-<td style="text-align:center">Create a new buffered reader using the given readable raw IO object.</td>
-</tr>
-<tr>
-<td style="text-align:center"><strong><code>.closed()</code></strong></td>
-<td style="text-align:center">bool(x) -&gt; bool</td>
-</tr>
-<tr>
-<td style="text-align:center"><strong><code>.encoding()</code></strong></td>
-<td style="text-align:center">str(object='') -&gt; str str(bytes_or_buffer[, encoding[, errors]]) -&gt; str</td>
-</tr>
-<tr>
-<td style="text-align:center"><strong><code>.errors()</code></strong></td>
-<td style="text-align:center">str(object='') -&gt; str str(bytes_or_buffer[, encoding[, errors]]) -&gt; str</td>
-</tr>
-<tr>
-<td style="text-align:center"><strong><code>.line_buffering()</code></strong></td>
-<td style="text-align:center">bool(x) -&gt; bool</td>
-</tr>
-<tr>
-<td style="text-align:center"><strong><code>.mode()</code></strong></td>
-<td style="text-align:center">str(object='') -&gt; str str(bytes_or_buffer[, encoding[, errors]]) -&gt; str</td>
-</tr>
-<tr>
-<td style="text-align:center"><strong><code>.name()</code></strong></td>
-<td style="text-align:center">str(object='') -&gt; str str(bytes_or_buffer[, encoding[, errors]]) -&gt; str</td>
-</tr>
-<tr>
-<td style="text-align:center"><strong><code>.readlines()</code></strong></td>
-<td style="text-align:center">Return a list of lines from the stream.</td>
-</tr>
-<tr>
-<td style="text-align:center"><strong><code>.reconfigure()</code></strong></td>
-<td style="text-align:center">Reconfigure the text stream with new parameters.</td>
-</tr>
-<tr>
-<td style="text-align:center"><strong><code>.write_through()</code></strong></td>
-<td style="text-align:center">bool(x) -&gt; bool</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"redrising.txt"</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">'rt'</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">'UTF-8'</span><span class="p">)</span>
-<span class="nb">dir</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[1]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[&#39;_CHUNK_SIZE&#39;,
- &#39;__class__&#39;,
- &#39;__del__&#39;,
- &#39;__delattr__&#39;,
- &#39;__dict__&#39;,
- &#39;__dir__&#39;,
- &#39;__doc__&#39;,
- &#39;__enter__&#39;,
- &#39;__eq__&#39;,
- &#39;__exit__&#39;,
- &#39;__format__&#39;,
- &#39;__ge__&#39;,
- &#39;__getattribute__&#39;,
- &#39;__getstate__&#39;,
- &#39;__gt__&#39;,
- &#39;__hash__&#39;,
- &#39;__init__&#39;,
- &#39;__init_subclass__&#39;,
- &#39;__iter__&#39;,
- &#39;__le__&#39;,
- &#39;__lt__&#39;,
- &#39;__ne__&#39;,
- &#39;__new__&#39;,
- &#39;__next__&#39;,
- &#39;__reduce__&#39;,
- &#39;__reduce_ex__&#39;,
- &#39;__repr__&#39;,
- &#39;__setattr__&#39;,
- &#39;__sizeof__&#39;,
- &#39;__str__&#39;,
- &#39;__subclasshook__&#39;,
- &#39;_checkClosed&#39;,
- &#39;_checkReadable&#39;,
- &#39;_checkSeekable&#39;,
- &#39;_checkWritable&#39;,
- &#39;_finalizing&#39;,
- &#39;buffer&#39;,
- &#39;close&#39;,
- &#39;closed&#39;,
- &#39;detach&#39;,
- &#39;encoding&#39;,
- &#39;errors&#39;,
- &#39;fileno&#39;,
- &#39;flush&#39;,
- &#39;isatty&#39;,
- &#39;line_buffering&#39;,
- &#39;mode&#39;,
- &#39;name&#39;,
- &#39;newlines&#39;,
- &#39;read&#39;,
- &#39;readable&#39;,
- &#39;readline&#39;,
- &#39;readlines&#39;,
- &#39;reconfigure&#39;,
- &#39;seek&#39;,
- &#39;seekable&#39;,
- &#39;tell&#39;,
- &#39;truncate&#39;,
- &#39;writable&#39;,
- &#39;write&#39;,
- &#39;write_through&#39;,
- &#39;writelines&#39;]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># read line by line</span>
-<span class="n">file</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span> <span class="c1"># convert all items to a list</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Indexing Columns - Remember this is a nested list</span>
+
+<span class="c1"># Referencing a column data value</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">100</span><span class="p">]</span> <span class="c1"># First select the row</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13515,34 +13386,13 @@ Tiago Ventura </center> <h1></p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[8]:</div>
+    <div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[&#39;1 - Helldiver\n&#39;,
- &#39;\n&#39;,
- &#39;The first thing you should know about me is I am my father’s son. And when they came for him, I did as he asked. \n&#39;,
- &#39;\n&#39;,
- &#39;I did not cry. \n&#39;,
- &#39;\n&#39;,
- &#39;Not when the Society televised the arrest. \n&#39;,
- &#39;\n&#39;,
- &#39;Not when the Golds tried him. Not when the Grays hanged him.\n&#39;,
- &#39;\n&#39;,
- &#39;Mother hit me for that. \n&#39;,
- &#39;\n&#39;,
- &#39;My brother Kieran was supposed to be the stoic one. He was the elder, I the younger. I was supposed to cry. Instead, Kieran bawled like a girl when Little Eo tucked a haemanthus into Father’s left workboot and ran back to her own father’s side. My sister Leanna murmured a lament beside me. \n&#39;,
- &#39;\n&#39;,
- &#39;I just watched and thought it a shame that he died dancing but without his dancing shoes.\n&#39;,
- &#39;\n&#39;,
- &#39;On Mars there is not much gravity. So you have to pull the feet to break the neck. \n&#39;,
- &#39;\n&#39;,
- &#39;They let the loved ones do it.\n&#39;,
- &#39;\n&#39;]</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;Burundi&#39;, &#39;44.817&#39;, &#39;471.663&#39;]
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -13554,8 +13404,8 @@ Tiago Ventura </center> <h1></p>
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Is the file closed?</span>
-<span class="n">file</span><span class="o">.</span><span class="n">closed</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Then reference the colum</span>
+<span class="n">d</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> 
 </pre></div>
 
     </div>
@@ -13574,7 +13424,7 @@ Tiago Ventura </center> <h1></p>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>False</pre>
+<pre>&#39;44.817&#39;</pre>
 </div>
 
 </div>
@@ -13582,71 +13432,14 @@ Tiago Ventura </center> <h1></p>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<h3 id="File-modes">File <code>mode</code>s<a class="anchor-link" href="#File-modes">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<table>
-<thead><tr>
-<th>Mode</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>r</td>
-<td>"open for reading" default</td>
-</tr>
-<tr>
-<td>w</td>
-<td>open for writing</td>
-</tr>
-<tr>
-<td>x</td>
-<td>open for exclusive creation, failing if the file already exists</td>
-</tr>
-<tr>
-<td>a</td>
-<td>open for writing, appending to the end of the file if it exists</td>
-</tr>
-<tr>
-<td>b</td>
-<td>binary mode</td>
-</tr>
-<tr>
-<td>t</td>
-<td>text mode (default)</td>
-</tr>
-</tbody>
-</table>
-<p>Examples,</p>
-<ul>
-<li><code>mode = 'rb'</code> &rarr; "read binary"</li>
-<li><code>mode = 'wt'</code> &rarr; "write text"</li>
-</ul>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'redrising.txt'</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s2">"rt"</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">'utf-8'</span><span class="p">)</span>
-
-<span class="c1"># Print the mode</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>
-
-<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># doing the above all in one step</span>
+<span class="n">data</span><span class="p">[</span><span class="mi">100</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -13659,68 +13452,29 @@ Tiago Ventura </center> <h1></p>
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+    <div class="prompt output_prompt">Out[10]:</div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>rt
-</pre>
-</div>
-</div>
 
-</div>
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;44.817&#39;</pre>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<h3 id="Writing-files">Writing files<a class="anchor-link" href="#Writing-files">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'text_file.txt'</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s2">"wt"</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">'utf-8'</span><span class="p">)</span>
-<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">'This is an example</span><span class="se">\n</span><span class="s1">'</span><span class="p">)</span> 
-<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">'Of writing a file...</span><span class="se">\n</span><span class="s1">'</span><span class="p">)</span>
-<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">'Neat!</span><span class="se">\n</span><span class="s1">'</span><span class="p">)</span>
-<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><p><strong>NOTE that you <em>must</em> <code>close()</code> for your lines to be written to the file</strong></p>
-</blockquote>
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Now, read the file back in in "read mode"</p>
 
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'text_file.txt'</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s2">"rt"</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">'utf-8'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># The key is to keep in mind the column names</span>
+<span class="n">cnames</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cnames</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13737,10 +13491,7 @@ Tiago Ventura </center> <h1></p>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>This is an example
-Of writing a file...
-Neat!
-
+<pre>[&#39;country&#39;, &#39;lifeExp&#39;, &#39;gdpPercap&#39;]
 </pre>
 </div>
 </div>
@@ -13749,19 +13500,45 @@ Neat!
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># We can now reference this column name list to pull out the columns we're interested in.</span>
+<span class="n">ind</span> <span class="o">=</span> <span class="n">cnames</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">"lifeExp"</span><span class="p">)</span> <span class="c1"># Index allows us to "look up" the location of a data value. </span>
+<span class="n">data</span><span class="p">[</span><span class="mi">99</span><span class="p">][</span><span class="n">ind</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[13]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;44.817&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<h3 id="Iterating-over-files">Iterating over files<a class="anchor-link" href="#Iterating-over-files">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Most times we will iterate over to convert our open file to a single list.</p>
-<p>See a few options below:</p>
+<h2 id="Accessing-a-entire-column">Accessing a entire column<a class="anchor-link" href="#Accessing-a-entire-column">&#182;</a></h2><p>If I want to extract all the values of a particular column, I need to loop through all the <em>j</em> element of a sublist.</p>
 
 </div>
 </div>
@@ -13771,12 +13548,10 @@ Neat!
 <div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># with a loop</span>
-<span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"redrising.txt"</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">'rt'</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">'UTF-8'</span><span class="p">)</span>
-<span class="n">text</span><span class="o">=</span><span class="p">[]</span>
-<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
-    <span class="n">text</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
-<span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Looping through each row pulling out the relevant data value</span>
+<span class="n">life_exp</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+    <span class="n">life_exp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="n">ind</span><span class="p">]))</span>
 </pre></div>
 
     </div>
@@ -13789,8 +13564,9 @@ Neat!
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## It is an object in python now</span>
-<span class="n">text</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Same idea, but as a list comprehension </span>
+<span class="n">life_exp</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="n">ind</span><span class="p">])</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">data</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">life_exp</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13803,34 +13579,13 @@ Neat!
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[15]:</div>
+    <div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[&#39;1 - Helldiver\n&#39;,
- &#39;\n&#39;,
- &#39;The first thing you should know about me is I am my father’s son. And when they came for him, I did as he asked. \n&#39;,
- &#39;\n&#39;,
- &#39;I did not cry. \n&#39;,
- &#39;\n&#39;,
- &#39;Not when the Society televised the arrest. \n&#39;,
- &#39;\n&#39;,
- &#39;Not when the Golds tried him. Not when the Grays hanged him.\n&#39;,
- &#39;\n&#39;,
- &#39;Mother hit me for that. \n&#39;,
- &#39;\n&#39;,
- &#39;My brother Kieran was supposed to be the stoic one. He was the elder, I the younger. I was supposed to cry. Instead, Kieran bawled like a girl when Little Eo tucked a haemanthus into Father’s left workboot and ran back to her own father’s side. My sister Leanna murmured a lament beside me. \n&#39;,
- &#39;\n&#39;,
- &#39;I just watched and thought it a shame that he died dancing but without his dancing shoes.\n&#39;,
- &#39;\n&#39;,
- &#39;On Mars there is not much gravity. So you have to pull the feet to break the neck. \n&#39;,
- &#39;\n&#39;,
- &#39;They let the loved ones do it.\n&#39;,
- &#39;\n&#39;]</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[39.21, 52.505, 73.103, 43.352, 72.992, 63.607, 64.28, 69.393, 52.502, 57.609, 73.444, 62.817, 68.922, 73.989, 52.302, 47.619, 42.96, 70.056, 54.336, 74.903, 52.382, 70.299, 71.601, 66.828, 70.177, 50.007, 74.014, 60.721, 52.681, 44.401, 67.708, 59.304, 73.733, 52.341, 58.859, 59.696, 66.644, 66.526, 47.903, 69.744, 65.866, 51.499, 46.78, 68.749, 49.002, 67.431, 73.646, 59.03, 71.511, 46.381, 71.22, 43.581, 49.834, 44.544, 71.045, 53.491, 48.401, 61.346, 41.482, 72.739, 68.433, 57.48, 40.38, 43.413, 58.679, 42.476, 47.771, 46.774, 51.221, 64.953, 45.996, 68.291, 61.554, 56.243, 50.626, 58.443, 52.663, 54.598, 48.436, 37.479, 65.409, 57.896, 53.322, 75.565, 73.923, 74.827, 59.633, 53.166, 62.2, 65.606, 74.663, 55.89, 48.986, 58.637, 57.921, 43.24, 66.581, 76.511, 40.989, 44.817, 67.802, 70.181, 60.967, 74.37, 48.78, 45.999, 73.642, 60.329, 65.001, 44.476, 56.729, 63.898, 48.129, 73.478, 54.882, 61.785, 36.769, 70.696, 47.912, 66.809, 69.06, 74.203, 75.648, 74.349, 44.559, 43.867, 68.551, 56.582, 70.782, 37.883, 76.177, 58.349, 53.993, 44.694, 50.165, 75.843, 70.337, 70.42, 59.786, 73.017, 62.239]
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -13842,43 +13597,12 @@ Neat!
 <div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># with list comprehension</span>
-<span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"redrising.txt"</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">'rt'</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">'UTF-8'</span><span class="p">)</span>
-<span class="n">result</span> <span class="o">=</span> <span class="p">[</span><span class="n">line</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="s2">""</span><span class="p">)</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span> <span class="k">if</span> <span class="n">line</span><span class="o">!=</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">]</span>
-<span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-<span class="n">result</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Make this code more flexible with list comprehensions</span>
+<span class="n">var_name</span> <span class="o">=</span> <span class="s2">"gdpPercap"</span>
+<span class="n">out</span> <span class="o">=</span> <span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="n">cnames</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">var_name</span><span class="p">)]</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">data</span><span class="p">]</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[16]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[&#39;1 - Helldiver&#39;,
- &#39;The first thing you should know about me is I am my father’s son. And when they came for him, I did as he asked. &#39;,
- &#39;I did not cry. &#39;,
- &#39;Not when the Society televised the arrest. &#39;,
- &#39;Not when the Golds tried him. Not when the Grays hanged him.&#39;,
- &#39;Mother hit me for that. &#39;,
- &#39;My brother Kieran was supposed to be the stoic one. He was the elder, I the younger. I was supposed to cry. Instead, Kieran bawled like a girl when Little Eo tucked a haemanthus into Father’s left workboot and ran back to her own father’s side. My sister Leanna murmured a lament beside me. &#39;,
- &#39;I just watched and thought it a shame that he died dancing but without his dancing shoes.&#39;,
- &#39;On Mars there is not much gravity. So you have to pull the feet to break the neck. &#39;,
- &#39;They let the loved ones do it.&#39;]</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -13886,189 +13610,25 @@ Neat!
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Or you can assign the output of <code>.read()</code> to an object:</p>
+<h2 id="Motivating-Numpy">Motivating Numpy<a class="anchor-link" href="#Motivating-Numpy">&#182;</a></h2><p>All of the above seems a little too much for working with retangular data in Python. And it is. So of course, there are more recent, modern and easy to work with strategies to work with data frames in Python.</p>
+<p>A first approach to facilitate working with Data Frames in Python comes through using <code>numpy</code> to convert nested lists in <code>arrays</code>.</p>
+<p><strong>If you coming from R, think about numpy arrays as matrices.</strong></p>
+<p>We will see more of numpy soon. But, let's see briefly how numpy works and the speed boost of using numpy to access data in Python</p>
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"redrising.txt"</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">'rt'</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">'UTF-8'</span><span class="p">)</span>
-<span class="n">result</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<span class="n">result</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[17]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;1 - Helldiver\n\nThe first thing you should know about me is I am my father’s son. And when they came for him, I did as he asked. \n\nI did not cry. \n\nNot when the Society televised the arrest. \n\nNot when the Golds tried him. Not when the Grays hanged him.\n\nMother hit me for that. \n\nMy brother Kieran was supposed to be the stoic one. He was the elder, I the younger. I was supposed to cry. Instead, Kieran bawled like a girl when Little Eo tucked a haemanthus into Father’s left workboot and ran back to her own father’s side. My sister Leanna murmured a lament beside me. \n\nI just watched and thought it a shame that he died dancing but without his dancing shoes.\n\nOn Mars there is not much gravity. So you have to pull the feet to break the neck. \n\nThey let the loved ones do it.\n\n&#39;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Example:-How-many-words-are-in-each-line?">Example: How many words are in each line?<a class="anchor-link" href="#Example:-How-many-words-are-in-each-line?">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"redrising.txt"</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">'rt'</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">'UTF-8'</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">line</span> <span class="o">==</span> <span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="p">:</span>
-        <span class="k">continue</span>
-    <span class="n">n_words_per_line</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">n_words_per_line</span><span class="p">)</span>
-    
-<span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>3
-25
-4
-7
-12
-5
-54
-17
-18
-7
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<h3 id="with:-beyond-opening-and-closing-with-context-managers"><code>with</code>: beyond opening and closing with context managers<a class="anchor-link" href="#with:-beyond-opening-and-closing-with-context-managers">&#182;</a></h3><p>As you'll note, the need to <code>open()</code> and <code>close()</code> files can get a bit redundant after awhile. This issue of closing after opening to deal with resource cleanup is common enough that python has a special protocol for it: the <code>with</code> code block.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># using list comprehension</span>
-<span class="c1"># with open() as alias:</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"redrising.txt"</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">'rt'</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">'UTF-8'</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
-    <span class="n">res</span><span class="o">=</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">())</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span> <span class="k">if</span> <span class="n">line</span><span class="o">!=</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">]</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[3, 25, 4, 7, 12, 5, 54, 17, 18, 7]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<h2 id="Reading-Comma-Separated-Values-(CSV)">Reading Comma Separated Values (CSV)<a class="anchor-link" href="#Reading-Comma-Separated-Values-(CSV)">&#182;</a></h2><p>Here we will pretty much always use <code>pandas.read_csv()</code> to import csv files to Python. In case you want to learn a bit about the <code>csv</code> module, here are some examples.</p>
-<p>See the <a href="https://docs.python.org/2/library/csv.html">python documentation</a> for more on the <code>csv</code> module located in the standard library.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"student_data.csv"</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">'rt'</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Read in the gapminder data </span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"gapminder.csv"</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s2">"rt"</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">row</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">file</span><span class="p">)]</span>
+
+<span class="c1"># lets remove the first list</span>
+<span class="n">data</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14081,13 +13641,193 @@ Neat!
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+    <div class="prompt output_prompt">Out[25]:</div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>&lt;_csv.reader object at 0x110318ac0&gt;
-</pre>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;country&#39;, &#39;lifeExp&#39;, &#39;gdpPercap&#39;]</pre>
 </div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Numpy offers an efficiency boost, especially when indexing</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Convert to a numpy array</span>
+<span class="n">data_np</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">data_np</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[26]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[&#39;Guinea_Bissau&#39;, &#39;39.21&#39;, &#39;652.157&#39;],
+       [&#39;Bolivia&#39;, &#39;52.505&#39;, &#39;2961.229&#39;],
+       [&#39;Austria&#39;, &#39;73.103&#39;, &#39;20411.916&#39;],
+       [&#39;Malawi&#39;, &#39;43.352&#39;, &#39;575.447&#39;],
+       [&#39;Finland&#39;, &#39;72.992&#39;, &#39;17473.723&#39;],
+       [&#39;North_Korea&#39;, &#39;63.607&#39;, &#39;2591.853&#39;],
+       [&#39;Malaysia&#39;, &#39;64.28&#39;, &#39;5406.038&#39;],
+       [&#39;Hungary&#39;, &#39;69.393&#39;, &#39;10888.176&#39;],
+       [&#39;Congo&#39;, &#39;52.502&#39;, &#39;3312.788&#39;],
+       [&#39;Morocco&#39;, &#39;57.609&#39;, &#39;2447.909&#39;],
+       [&#39;Germany&#39;, &#39;73.444&#39;, &#39;20556.684&#39;],
+       [&#39;Ecuador&#39;, &#39;62.817&#39;, &#39;5733.625&#39;],
+       [&#39;Kuwait&#39;, &#39;68.922&#39;, &#39;65332.91&#39;],
+       [&#39;New_Zealand&#39;, &#39;73.989&#39;, &#39;17262.623&#39;],
+       [&#39;Mauritania&#39;, &#39;52.302&#39;, &#39;1356.671&#39;],
+       [&#39;Uganda&#39;, &#39;47.619&#39;, &#39;810.384&#39;],
+       [&#39;Equatorial Guinea&#39;, &#39;42.96&#39;, &#39;2469.167&#39;],
+       [&#39;Croatia&#39;, &#39;70.056&#39;, &#39;9331.712&#39;],
+       [&#39;Indonesia&#39;, &#39;54.336&#39;, &#39;1741.365&#39;],
+       [&#39;Canada&#39;, &#39;74.903&#39;, &#39;22410.746&#39;],
+       [&#39;Comoros&#39;, &#39;52.382&#39;, &#39;1314.38&#39;],
+       [&#39;Montenegro&#39;, &#39;70.299&#39;, &#39;7208.065&#39;],
+       [&#39;Slovenia&#39;, &#39;71.601&#39;, &#39;14074.582&#39;],
+       [&#39;Trinidad and Tobago&#39;, &#39;66.828&#39;, &#39;7866.872&#39;],
+       [&#39;Poland&#39;, &#39;70.177&#39;, &#39;8416.554&#39;],
+       [&#39;Lesotho&#39;, &#39;50.007&#39;, &#39;780.553&#39;],
+       [&#39;Italy&#39;, &#39;74.014&#39;, &#39;16245.209&#39;],
+       [&#39;Tunisia&#39;, &#39;60.721&#39;, &#39;3477.21&#39;],
+       [&#39;Kenya&#39;, &#39;52.681&#39;, &#39;1200.416&#39;],
+       [&#39;Gambia&#39;, &#39;44.401&#39;, &#39;680.133&#39;],
+       [&#39;Bosnia and Herzegovina&#39;, &#39;67.708&#39;, &#39;3484.779&#39;],
+       [&#39;Libya&#39;, &#39;59.304&#39;, &#39;12013.579&#39;],
+       [&#39;Greece&#39;, &#39;73.733&#39;, &#39;13969.037&#39;],
+       [&#39;Ghana&#39;, &#39;52.341&#39;, &#39;1044.582&#39;],
+       [&#39;Peru&#39;, &#39;58.859&#39;, &#39;5613.844&#39;],
+       [&#39;Turkey&#39;, &#39;59.696&#39;, &#39;4469.453&#39;],
+       [&#39;Reunion&#39;, &#39;66.644&#39;, &#39;4898.398&#39;],
+       [&#39;Sri_Lanka&#39;, &#39;66.526&#39;, &#39;1854.731&#39;],
+       [&#39;Cambodia&#39;, &#39;47.903&#39;, &#39;675.368&#39;],
+       [&#39;Bulgaria&#39;, &#39;69.744&#39;, &#39;6384.055&#39;],
+       [&#39;Lebanon&#39;, &#39;65.866&#39;, &#39;7269.216&#39;],
+       [&#39;Togo&#39;, &#39;51.499&#39;, &#39;1153.82&#39;],
+       [&#39;Yemen&#39;, &#39;46.78&#39;, &#39;1569.275&#39;],
+       [&#39;Jamaica&#39;, &#39;68.749&#39;, &#39;6197.645&#39;],
+       [&#39;Swaziland&#39;, &#39;49.002&#39;, &#39;3163.352&#39;],
+       [&#39;Chile&#39;, &#39;67.431&#39;, &#39;6703.289&#39;],
+       [&#39;Israel&#39;, &#39;73.646&#39;, &#39;14160.936&#39;],
+       [&#39;Algeria&#39;, &#39;59.03&#39;, &#39;4426.026&#39;],
+       [&#39;Czech_Republic&#39;, &#39;71.511&#39;, &#39;13920.011&#39;],
+       [&#39;Djibouti&#39;, &#39;46.381&#39;, &#39;2697.833&#39;],
+       [&#39;Singapore&#39;, &#39;71.22&#39;, &#39;17425.382&#39;],
+       [&#39;Nigeria&#39;, &#39;43.581&#39;, &#39;1488.309&#39;],
+       [&#39;Bangladesh&#39;, &#39;49.834&#39;, &#39;817.559&#39;],
+       [&#39;DRC&#39;, &#39;44.544&#39;, &#39;648.343&#39;],
+       [&#39;Cuba&#39;, &#39;71.045&#39;, &#39;6283.259&#39;],
+       [&#39;Namibia&#39;, &#39;53.491&#39;, &#39;3675.582&#39;],
+       [&#39;Sudan&#39;, &#39;48.401&#39;, &#39;1835.01&#39;],
+       [&#39;Syria&#39;, &#39;61.346&#39;, &#39;3009.288&#39;],
+       [&#39;Rwanda&#39;, &#39;41.482&#39;, &#39;675.669&#39;],
+       [&#39;Puerto Rico&#39;, &#39;72.739&#39;, &#39;10863.164&#39;],
+       [&#39;Albania&#39;, &#39;68.433&#39;, &#39;3255.367&#39;],
+       [&#39;Vietnam&#39;, &#39;57.48&#39;, &#39;1017.713&#39;],
+       [&#39;Mozambique&#39;, &#39;40.38&#39;, &#39;542.278&#39;],
+       [&#39;Mali&#39;, &#39;43.413&#39;, &#39;673.093&#39;],
+       [&#39;Saudi Arabia&#39;, &#39;58.679&#39;, &#39;20261.744&#39;],
+       [&#39;Liberia&#39;, &#39;42.476&#39;, &#39;604.814&#39;],
+       [&#39;Madagascar&#39;, &#39;47.771&#39;, &#39;1335.595&#39;],
+       [&#39;Chad&#39;, &#39;46.774&#39;, &#39;1165.454&#39;],
+       [&#39;Gabon&#39;, &#39;51.221&#39;, &#39;11529.865&#39;],
+       [&#39;Mauritius&#39;, &#39;64.953&#39;, &#39;4768.942&#39;],
+       [&#39;Zambia&#39;, &#39;45.996&#39;, &#39;1358.199&#39;],
+       [&#39;Romania&#39;, &#39;68.291&#39;, &#39;7300.17&#39;],
+       [&#39;Dominican Republic&#39;, &#39;61.554&#39;, &#39;2844.856&#39;],
+       [&#39;Egypt&#39;, &#39;56.243&#39;, &#39;3074.031&#39;],
+       [&#39;Senegal&#39;, &#39;50.626&#39;, &#39;1533.122&#39;],
+       [&#39;Oman&#39;, &#39;58.443&#39;, &#39;12138.562&#39;],
+       [&#39;Zimbabwe&#39;, &#39;52.663&#39;, &#39;635.858&#39;],
+       [&#39;Botswana&#39;, &#39;54.598&#39;, &#39;5031.504&#39;],
+       [&#34;Cote d&#39;Ivoire&#34;, &#39;48.436&#39;, &#39;1912.825&#39;],
+       [&#39;Afghanistan&#39;, &#39;37.479&#39;, &#39;802.675&#39;],
+       [&#39;Mexico&#39;, &#39;65.409&#39;, &#39;7724.113&#39;],
+       [&#39;Sao Tome and Principe&#39;, &#39;57.896&#39;, &#39;1382.782&#39;],
+       [&#39;Myanmar&#39;, &#39;53.322&#39;, &#39;439.333&#39;],
+       [&#39;Switzerland&#39;, &#39;75.565&#39;, &#39;27074.334&#39;],
+       [&#39;United Kingdom&#39;, &#39;73.923&#39;, &#39;19380.473&#39;],
+       [&#39;Japan&#39;, &#39;74.827&#39;, &#39;17750.87&#39;],
+       [&#39;El Salvador&#39;, &#39;59.633&#39;, &#39;4431.847&#39;],
+       [&#39;India&#39;, &#39;53.166&#39;, &#39;1057.296&#39;],
+       [&#39;Thailand&#39;, &#39;62.2&#39;, &#39;3045.966&#39;],
+       [&#39;Bahrain&#39;, &#39;65.606&#39;, &#39;18077.664&#39;],
+       [&#39;Australia&#39;, &#39;74.663&#39;, &#39;19980.596&#39;],
+       [&#39;Mongolia&#39;, &#39;55.89&#39;, &#39;1692.805&#39;],
+       [&#39;Nepal&#39;, &#39;48.986&#39;, &#39;782.729&#39;],
+       [&#39;Iran&#39;, &#39;58.637&#39;, &#39;7376.583&#39;],
+       [&#39;Honduras&#39;, &#39;57.921&#39;, &#39;2834.413&#39;],
+       [&#39;Guinea&#39;, &#39;43.24&#39;, &#39;776.067&#39;],
+       [&#39;Venezuela&#39;, &#39;66.581&#39;, &#39;10088.516&#39;],
+       [&#39;Iceland&#39;, &#39;76.511&#39;, &#39;20531.422&#39;],
+       [&#39;Somalia&#39;, &#39;40.989&#39;, &#39;1140.793&#39;],
+       [&#39;Burundi&#39;, &#39;44.817&#39;, &#39;471.663&#39;],
+       [&#39;Panama&#39;, &#39;67.802&#39;, &#39;5754.827&#39;],
+       [&#39;Costa Rica&#39;, &#39;70.181&#39;, &#39;5448.611&#39;],
+       [&#39;Philippines&#39;, &#39;60.967&#39;, &#39;2174.771&#39;],
+       [&#39;Denmark&#39;, &#39;74.37&#39;, &#39;21671.825&#39;],
+       [&#39;Benin&#39;, &#39;48.78&#39;, &#39;1155.395&#39;],
+       [&#39;Eritrea&#39;, &#39;45.999&#39;, &#39;541.003&#39;],
+       [&#39;Belgium&#39;, &#39;73.642&#39;, &#39;19900.758&#39;],
+       [&#39;West Bank and Gaza&#39;, &#39;60.329&#39;, &#39;3759.997&#39;],
+       [&#39;South_Korea&#39;, &#39;65.001&#39;, &#39;8217.318&#39;],
+       [&#39;Ethiopia&#39;, &#39;44.476&#39;, &#39;509.115&#39;],
+       [&#39;Guatemala&#39;, &#39;56.729&#39;, &#39;4015.403&#39;],
+       [&#39;Colombia&#39;, &#39;63.898&#39;, &#39;4195.343&#39;],
+       [&#39;Cameroon&#39;, &#39;48.129&#39;, &#39;1774.634&#39;],
+       [&#39;United States&#39;, &#39;73.478&#39;, &#39;26261.151&#39;],
+       [&#39;Pakistan&#39;, &#39;54.882&#39;, &#39;1439.271&#39;],
+       [&#39;China&#39;, &#39;61.785&#39;, &#39;1488.308&#39;],
+       [&#39;Sierra Leone&#39;, &#39;36.769&#39;, &#39;1072.819&#39;],
+       [&#39;Slovak Republic&#39;, &#39;70.696&#39;, &#39;10415.531&#39;],
+       [&#39;Tanzania&#39;, &#39;47.912&#39;, &#39;849.281&#39;],
+       [&#39;Paraguay&#39;, &#39;66.809&#39;, &#39;3239.607&#39;],
+       [&#39;Argentina&#39;, &#39;69.06&#39;, &#39;8955.554&#39;],
+       [&#39;Spain&#39;, &#39;74.203&#39;, &#39;14029.826&#39;],
+       [&#39;Netherlands&#39;, &#39;75.648&#39;, &#39;21748.852&#39;],
+       [&#39;France&#39;, &#39;74.349&#39;, &#39;18833.57&#39;],
+       [&#39;Niger&#39;, &#39;44.559&#39;, &#39;781.077&#39;],
+       [&#39;Central African Republic&#39;, &#39;43.867&#39;, &#39;958.785&#39;],
+       [&#39;Serbia&#39;, &#39;68.551&#39;, &#39;9305.049&#39;],
+       [&#39;Iraq&#39;, &#39;56.582&#39;, &#39;7811.809&#39;],
+       [&#39;Uruguay&#39;, &#39;70.782&#39;, &#39;7100.133&#39;],
+       [&#39;Angola&#39;, &#39;37.883&#39;, &#39;3607.101&#39;],
+       [&#39;Sweden&#39;, &#39;76.177&#39;, &#39;19943.126&#39;],
+       [&#39;Nicaragua&#39;, &#39;58.349&#39;, &#39;3424.656&#39;],
+       [&#39;South Africa&#39;, &#39;53.993&#39;, &#39;7247.431&#39;],
+       [&#39;Burkina Faso&#39;, &#39;44.694&#39;, &#39;843.991&#39;],
+       [&#39;Haiti&#39;, &#39;50.165&#39;, &#39;1620.739&#39;],
+       [&#39;Norway&#39;, &#39;75.843&#39;, &#39;26747.307&#39;],
+       [&#39;Taiwan&#39;, &#39;70.337&#39;, &#39;10224.807&#39;],
+       [&#39;Portugal&#39;, &#39;70.42&#39;, &#39;11354.092&#39;],
+       [&#39;Jordan&#39;, &#39;59.786&#39;, &#39;3128.121&#39;],
+       [&#39;Ireland&#39;, &#39;73.017&#39;, &#39;15758.606&#39;],
+       [&#39;Brazil&#39;, &#39;62.239&#39;, &#39;5829.317&#39;]], dtype=&#39;&lt;U24&#39;)</pre>
+</div>
+
 </div>
 
 </div>
@@ -14097,58 +13837,18 @@ Neat!
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Reading in .csv data</p>
-
+<h3 id="slicing-data-with-numpy">slicing data with numpy<a class="anchor-link" href="#slicing-data-with-numpy">&#182;</a></h3>
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"student_data.csv"</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">'rt'</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;Student&#39;, &#39;Grade&#39;]
-[&#39;Susan&#39;, &#39;A&#39;]
-[&#39;Sean&#39;, &#39;B-&#39;]
-[&#39;Cody&#39;, &#39;A-&#39;]
-[&#39;Karen&#39;, &#39;B+&#39;]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"student_data.csv"</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">'rt'</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
-    <span class="n">output</span> <span class="o">=</span> <span class="p">[</span><span class="n">row</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">data</span><span class="p">]</span>
-<span class="n">output</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># simple slicing of rows and columns of your 2d array</span>
+<span class="c1"># array[rows, columns]</span>
+<span class="n">data_np</span><span class="p">[:,</span><span class="mi">2</span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -14167,11 +13867,35 @@ Neat!
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[[&#39;Student&#39;, &#39;Grade&#39;],
- [&#39;Susan&#39;, &#39;A&#39;],
- [&#39;Sean&#39;, &#39;B-&#39;],
- [&#39;Cody&#39;, &#39;A-&#39;],
- [&#39;Karen&#39;, &#39;B+&#39;]]</pre>
+<pre>array([&#39;652.157&#39;, &#39;2961.229&#39;, &#39;20411.916&#39;, &#39;575.447&#39;, &#39;17473.723&#39;,
+       &#39;2591.853&#39;, &#39;5406.038&#39;, &#39;10888.176&#39;, &#39;3312.788&#39;, &#39;2447.909&#39;,
+       &#39;20556.684&#39;, &#39;5733.625&#39;, &#39;65332.91&#39;, &#39;17262.623&#39;, &#39;1356.671&#39;,
+       &#39;810.384&#39;, &#39;2469.167&#39;, &#39;9331.712&#39;, &#39;1741.365&#39;, &#39;22410.746&#39;,
+       &#39;1314.38&#39;, &#39;7208.065&#39;, &#39;14074.582&#39;, &#39;7866.872&#39;, &#39;8416.554&#39;,
+       &#39;780.553&#39;, &#39;16245.209&#39;, &#39;3477.21&#39;, &#39;1200.416&#39;, &#39;680.133&#39;,
+       &#39;3484.779&#39;, &#39;12013.579&#39;, &#39;13969.037&#39;, &#39;1044.582&#39;, &#39;5613.844&#39;,
+       &#39;4469.453&#39;, &#39;4898.398&#39;, &#39;1854.731&#39;, &#39;675.368&#39;, &#39;6384.055&#39;,
+       &#39;7269.216&#39;, &#39;1153.82&#39;, &#39;1569.275&#39;, &#39;6197.645&#39;, &#39;3163.352&#39;,
+       &#39;6703.289&#39;, &#39;14160.936&#39;, &#39;4426.026&#39;, &#39;13920.011&#39;, &#39;2697.833&#39;,
+       &#39;17425.382&#39;, &#39;1488.309&#39;, &#39;817.559&#39;, &#39;648.343&#39;, &#39;6283.259&#39;,
+       &#39;3675.582&#39;, &#39;1835.01&#39;, &#39;3009.288&#39;, &#39;675.669&#39;, &#39;10863.164&#39;,
+       &#39;3255.367&#39;, &#39;1017.713&#39;, &#39;542.278&#39;, &#39;673.093&#39;, &#39;20261.744&#39;,
+       &#39;604.814&#39;, &#39;1335.595&#39;, &#39;1165.454&#39;, &#39;11529.865&#39;, &#39;4768.942&#39;,
+       &#39;1358.199&#39;, &#39;7300.17&#39;, &#39;2844.856&#39;, &#39;3074.031&#39;, &#39;1533.122&#39;,
+       &#39;12138.562&#39;, &#39;635.858&#39;, &#39;5031.504&#39;, &#39;1912.825&#39;, &#39;802.675&#39;,
+       &#39;7724.113&#39;, &#39;1382.782&#39;, &#39;439.333&#39;, &#39;27074.334&#39;, &#39;19380.473&#39;,
+       &#39;17750.87&#39;, &#39;4431.847&#39;, &#39;1057.296&#39;, &#39;3045.966&#39;, &#39;18077.664&#39;,
+       &#39;19980.596&#39;, &#39;1692.805&#39;, &#39;782.729&#39;, &#39;7376.583&#39;, &#39;2834.413&#39;,
+       &#39;776.067&#39;, &#39;10088.516&#39;, &#39;20531.422&#39;, &#39;1140.793&#39;, &#39;471.663&#39;,
+       &#39;5754.827&#39;, &#39;5448.611&#39;, &#39;2174.771&#39;, &#39;21671.825&#39;, &#39;1155.395&#39;,
+       &#39;541.003&#39;, &#39;19900.758&#39;, &#39;3759.997&#39;, &#39;8217.318&#39;, &#39;509.115&#39;,
+       &#39;4015.403&#39;, &#39;4195.343&#39;, &#39;1774.634&#39;, &#39;26261.151&#39;, &#39;1439.271&#39;,
+       &#39;1488.308&#39;, &#39;1072.819&#39;, &#39;10415.531&#39;, &#39;849.281&#39;, &#39;3239.607&#39;,
+       &#39;8955.554&#39;, &#39;14029.826&#39;, &#39;21748.852&#39;, &#39;18833.57&#39;, &#39;781.077&#39;,
+       &#39;958.785&#39;, &#39;9305.049&#39;, &#39;7811.809&#39;, &#39;7100.133&#39;, &#39;3607.101&#39;,
+       &#39;19943.126&#39;, &#39;3424.656&#39;, &#39;7247.431&#39;, &#39;843.991&#39;, &#39;1620.739&#39;,
+       &#39;26747.307&#39;, &#39;10224.807&#39;, &#39;11354.092&#39;, &#39;3128.121&#39;, &#39;15758.606&#39;,
+       &#39;5829.317&#39;], dtype=&#39;&lt;U24&#39;)</pre>
 </div>
 
 </div>
@@ -14183,50 +13907,19 @@ Neat!
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Writing-csv-data">Writing csv data<a class="anchor-link" href="#Writing-csv-data">&#182;</a></h3>
+<h3 id="Data-operations-are-easier-and-faster">Data operations are easier and faster<a class="anchor-link" href="#Data-operations-are-easier-and-faster">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Student data as a nested list.</span>
-<span class="n">student_data</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">"Student"</span><span class="p">,</span><span class="s2">"Grade"</span><span class="p">],</span>
-                <span class="p">[</span><span class="s2">"Susan"</span><span class="p">,</span><span class="s2">"A"</span><span class="p">],</span>
-                <span class="p">[</span><span class="s2">"Sean"</span><span class="p">,</span><span class="s2">"B-"</span><span class="p">],</span>
-                <span class="p">[</span><span class="s2">"Cody"</span><span class="p">,</span><span class="s2">"A-"</span><span class="p">],</span>
-                <span class="p">[</span><span class="s2">"Karen"</span><span class="p">,</span><span class="s1">'B+'</span><span class="p">]]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Write the rows with the .writerows() method</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"student_data_write.csv"</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">'w'</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
-    <span class="n">csv_file</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
-    <span class="n">csv_file</span><span class="o">.</span><span class="n">writerows</span><span class="p">(</span><span class="n">student_data</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter<span class="w"> </span>nbconvert<span class="w"> </span>_week_4_file_management.ipynb<span class="w"> </span>--to<span class="w"> </span>html<span class="w"> </span>--template<span class="w"> </span>classic
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>it -r 10 -n 100000
+<span class="n">out1</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+    <span class="n">out1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="n">ind</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -14243,8 +13936,103 @@ Neat!
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[NbConvertApp] Converting notebook _week_4_file_management.ipynb to html
-[NbConvertApp] Writing 314692 bytes to _week_4_file_management.html
+<pre>2.56 µs ± 48.8 ns per loop (mean ± std. dev. of 10 runs, 100,000 loops each)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>it -r 10 -n 100000
+<span class="n">out2</span> <span class="o">=</span> <span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">data</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2.03 µs ± 39.4 ns per loop (mean ± std. dev. of 10 runs, 100,000 loops each)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>it -r 10 -n 100000
+<span class="n">out3</span> <span class="o">=</span> <span class="n">data_np</span><span class="p">[:,</span><span class="n">ind</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>117 ns ± 57.7 ns per loop (mean ± std. dev. of 10 runs, 100,000 loops each)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter<span class="w"> </span>nbconvert<span class="w"> </span>_week_4_nested_lists.ipynb<span class="w"> </span>--to<span class="w"> </span>html<span class="w"> </span>--template<span class="w"> </span>classic
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[NbConvertApp] Converting notebook _week_4_nested_lists.ipynb to html
+[NbConvertApp] Writing 310911 bytes to _week_4_nested_lists.html
 </pre>
 </div>
 </div>
