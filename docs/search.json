@@ -1552,5 +1552,166 @@
     "title": "Syllabus: PPOL 5203 - Data Science I: Foundations",
     "section": "Georgetown Policies",
     "text": "Georgetown Policies\n\nDisability\nIf you believe you have a disability, then you should contact the Academic Resource Center (arc@georgetown.edu) for further information. The Center is located in the Leavey Center, Suite 335 (202-687-8354). The Academic Resource Center is the campus office responsible for reviewing documentation provided by students with disabilities and for determining reasonable accommodations in accordance with the Americans with Disabilities Act (ASA) and University policies. For more information, go to http://academicsupport.georgetown.edu/disability/\n\n\nImportant Academic Policies and Academic Integrity\nMcCourt School students are expected to uphold the academic policies set forth by Georgetown University and the Graduate School of Arts and Sciences. Students should therefore familiarize themselves with all the rules, regulations, and procedures relevant to their pursuit of a Graduate School degree. The policies are located at: http://grad.georgetown.edu/academics/policies/\nApplied to this course, while I encourage collaboration on assignments and use of resources like StackOverflow, the problem sets will ask you to list who you worked on the problem set with and cite StackOverflow if it is the direct source of a code snippet.\n\n\nStatement on Sexual Misconduct\nGeorgetown University and its faculty are committed to supporting survivors and those impacted by sexual misconduct, which includes sexual assault, sexual harassment, relationship violence, and stalking. Georgetown requires faculty members, unless otherwise designated as confidential, to report all disclosures of sexual misconduct to the University Title IX Coordinator or a Deputy Title IX Coordinator. If you disclose an incident of sexual misconduct to a professor in or outside of the classroom (with the exception of disclosures in papers), that faculty member must report the incident to the Title IX Coordinator, or Deputy Title IX Coordinator. The coordinator will, in turn, reach out to the student to provide support, resources, and the option to meet. [Please note that the student is not required to meet with the Title IX coordinator.]. More information about reporting options and resources can be found on the Sexual Misconduct\nWebsite: https://sexualassault.georgetown.edu/resourcecenter\nIf you would prefer to speak to someone confidentially, Georgetown has a number of fully confidential professional resources that can provide support and assistance. These resources include: Health Education Services for Sexual Assault Response and Prevention: confidential email: sarp[at]georgetown.edu\nCounseling and Psychiatric Services (CAPS): 202.687.6985 or after hours, call (833) 960-3006 to reach Fonemed, a telehealth service; individuals may ask for the on-call CAPS clinician\nMore information about reporting options and resources can be found on the Sexual Misconduct Website.\n\n\nProvost’s Policy on Religious Observances\nGeorgetown University promotes respect for all religions. Any student who is unable to attend classes or to participate in any examination, presentation, or assignment on a given day because of the observance of a major religious holiday or related travel shall be excused and provided with the opportunity to make up, without unreasonable burden, any work that has been missed for this reason and shall not in any other way be penalized for the absence or rescheduled work. Students will remain responsible for all assigned work. Students should notify professors in writing at the beginning of the semester of religious observances that conflict with their classes. The Office of the Provost, in consultation with Campus Ministry and the Registrar, will publish, before classes begin for a given term, a list of major religious holidays likely to affect Georgetown students. The Provost and the Main Campus Executive Faculty encourage faculty to accommodate students whose bona fide religious observances in other ways impede normal participation in a course. Students who cannot be accommodated should discuss the matter with an advising dean."
+  },
+  {
+    "objectID": "slides/week-5.html#where-we-are-.",
+    "href": "slides/week-5.html#where-we-are-.",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Where we are ….",
+    "text": "Where we are ….\n\nWe started with the basics of being a data scientist\nThen we moved over to the primitives of Python as your main DS tool:\n\nOOP, Native Data Types in Python\nPython Libraries, Loops, Functions, Generators, Comprehension….\n\nToday we start our journey working with tabular data - a favorite of social scientists!"
+  },
+  {
+    "objectID": "slides/week-5.html#plans-for-today",
+    "href": "slides/week-5.html#plans-for-today",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Plans for Today",
+    "text": "Plans for Today\n\nFile Management in Python (Most pythonic way to load data in Python)\nData as Nested Lists: Motivating Numpy\nNumpy\nIntro do Pandas\n\nSeries\nAcesssing Pandas elements\nCreating DataFrames\n\nDiscuss your final project."
+  },
+  {
+    "objectID": "slides/week-5.html#file-management-how-do-we-read-files-from-our-computer-into-our-python-environment",
+    "href": "slides/week-5.html#file-management-how-do-we-read-files-from-our-computer-into-our-python-environment",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "File Management: How do we read files from our computer into our Python Environment?",
+    "text": "File Management: How do we read files from our computer into our Python Environment?\n\nConnection management functions:\n\nopen(), iterate over, and close()\n\nReading/writing files\nUsing with() to manage connections."
+  },
+  {
+    "objectID": "slides/week-5.html#summary-of-file-management",
+    "href": "slides/week-5.html#summary-of-file-management",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Summary of file management",
+    "text": "Summary of file management\n\nopen(): opens a connection with files on our system.\n\nopen() returns a special item type *_io.TextIOWrapper*\nThis item is a iterator. We need to go through to convert inputs to a object in python.\n\nclose(): closes the connection.\nwrite(): writes files on your system. Also line by line, as in open()\nwith(): wrapper for open and close that allows alias."
+  },
+  {
+    "objectID": "slides/week-5.html#example",
+    "href": "slides/week-5.html#example",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Example:",
+    "text": "Example:\n\n# Load libraries\nimport csv # convert a .csv to a nested list\nimport os  # library for managing our operating system. \n\n# Read in the gapminder data \nwith open(\"gapminder.csv\", mode=\"rt\") as file:\n    data = [row for row in csv.reader(file)]"
+  },
+  {
+    "objectID": "slides/week-5.html#tldr",
+    "href": "slides/week-5.html#tldr",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "TLDR:",
+    "text": "TLDR:\n\nMost often we will use high-level functions from Pandas to load data into Python objects.\nWhy are we learning these tools then?\n\nVery pythonic ~ see in other people’s code\nNo direct equivalent in R or Stata\nImportant when working non-tabular data - text, json, images, etc..\n\nReading: Check Section 3.3 of Python for Data Analysis to learn more about the topics covered in the notebook.\nNotebook for File Management"
+  },
+  {
+    "objectID": "slides/week-5.html#motivating-numpy",
+    "href": "slides/week-5.html#motivating-numpy",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Motivating Numpy",
+    "text": "Motivating Numpy\nSo far, all the data structures we saw are geared towards unidimensional data.\n\nstring: sequence of words\nlist: sequence of heterogeneous elements\ndictionaries: key-value combinations."
+  },
+  {
+    "objectID": "slides/week-5.html#tabular-data",
+    "href": "slides/week-5.html#tabular-data",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Tabular data",
+    "text": "Tabular data"
+  },
+  {
+    "objectID": "slides/week-5.html#nested-lists",
+    "href": "slides/week-5.html#nested-lists",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Nested Lists",
+    "text": "Nested Lists\n\n# Read in the gapminder data \nimport csv\nwith open(\"../lecture_notes/week-04/gapminder.csv\",mode=\"rt\") as file:\n    data = [row for row in csv.reader(file)]"
+  },
+  {
+    "objectID": "slides/week-5.html#quizz",
+    "href": "slides/week-5.html#quizz",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Quizz",
+    "text": "Quizz\nLook at this tabular data organized as Nested List. What is “wrong” here?\n\n# let's see the data\nprint(data)\n\n[['country', 'lifeExp', 'gdpPercap'], ['Guinea_Bissau', '39.21', '652.157'], ['Bolivia', '52.505', '2961.229'], ['Austria', '73.103', '20411.916'], ['Malawi', '43.352', '575.447'], ['Finland', '72.992', '17473.723'], ['North_Korea', '63.607', '2591.853'], ['Malaysia', '64.28', '5406.038'], ['Hungary', '69.393', '10888.176'], ['Congo', '52.502', '3312.788'], ['Morocco', '57.609', '2447.909'], ['Germany', '73.444', '20556.684'], ['Ecuador', '62.817', '5733.625'], ['Kuwait', '68.922', '65332.91'], ['New_Zealand', '73.989', '17262.623'], ['Mauritania', '52.302', '1356.671'], ['Uganda', '47.619', '810.384'], ['Equatorial Guinea', '42.96', '2469.167'], ['Croatia', '70.056', '9331.712'], ['Indonesia', '54.336', '1741.365'], ['Canada', '74.903', '22410.746'], ['Comoros', '52.382', '1314.38'], ['Montenegro', '70.299', '7208.065'], ['Slovenia', '71.601', '14074.582'], ['Trinidad and Tobago', '66.828', '7866.872'], ['Poland', '70.177', '8416.554'], ['Lesotho', '50.007', '780.553'], ['Italy', '74.014', '16245.209'], ['Tunisia', '60.721', '3477.21'], ['Kenya', '52.681', '1200.416'], ['Gambia', '44.401', '680.133'], ['Bosnia and Herzegovina', '67.708', '3484.779'], ['Libya', '59.304', '12013.579'], ['Greece', '73.733', '13969.037'], ['Ghana', '52.341', '1044.582'], ['Peru', '58.859', '5613.844'], ['Turkey', '59.696', '4469.453'], ['Reunion', '66.644', '4898.398'], ['Sri_Lanka', '66.526', '1854.731'], ['Cambodia', '47.903', '675.368'], ['Bulgaria', '69.744', '6384.055'], ['Lebanon', '65.866', '7269.216'], ['Togo', '51.499', '1153.82'], ['Yemen', '46.78', '1569.275'], ['Jamaica', '68.749', '6197.645'], ['Swaziland', '49.002', '3163.352'], ['Chile', '67.431', '6703.289'], ['Israel', '73.646', '14160.936'], ['Algeria', '59.03', '4426.026'], ['Czech_Republic', '71.511', '13920.011'], ['Djibouti', '46.381', '2697.833'], ['Singapore', '71.22', '17425.382'], ['Nigeria', '43.581', '1488.309'], ['Bangladesh', '49.834', '817.559'], ['DRC', '44.544', '648.343'], ['Cuba', '71.045', '6283.259'], ['Namibia', '53.491', '3675.582'], ['Sudan', '48.401', '1835.01'], ['Syria', '61.346', '3009.288'], ['Rwanda', '41.482', '675.669'], ['Puerto Rico', '72.739', '10863.164'], ['Albania', '68.433', '3255.367'], ['Vietnam', '57.48', '1017.713'], ['Mozambique', '40.38', '542.278'], ['Mali', '43.413', '673.093'], ['Saudi Arabia', '58.679', '20261.744'], ['Liberia', '42.476', '604.814'], ['Madagascar', '47.771', '1335.595'], ['Chad', '46.774', '1165.454'], ['Gabon', '51.221', '11529.865'], ['Mauritius', '64.953', '4768.942'], ['Zambia', '45.996', '1358.199'], ['Romania', '68.291', '7300.17'], ['Dominican Republic', '61.554', '2844.856'], ['Egypt', '56.243', '3074.031'], ['Senegal', '50.626', '1533.122'], ['Oman', '58.443', '12138.562'], ['Zimbabwe', '52.663', '635.858'], ['Botswana', '54.598', '5031.504'], [\"Cote d'Ivoire\", '48.436', '1912.825'], ['Afghanistan', '37.479', '802.675'], ['Mexico', '65.409', '7724.113'], ['Sao Tome and Principe', '57.896', '1382.782'], ['Myanmar', '53.322', '439.333'], ['Switzerland', '75.565', '27074.334'], ['United Kingdom', '73.923', '19380.473'], ['Japan', '74.827', '17750.87'], ['El Salvador', '59.633', '4431.847'], ['India', '53.166', '1057.296'], ['Thailand', '62.2', '3045.966'], ['Bahrain', '65.606', '18077.664'], ['Australia', '74.663', '19980.596'], ['Mongolia', '55.89', '1692.805'], ['Nepal', '48.986', '782.729'], ['Iran', '58.637', '7376.583'], ['Honduras', '57.921', '2834.413'], ['Guinea', '43.24', '776.067'], ['Venezuela', '66.581', '10088.516'], ['Iceland', '76.511', '20531.422'], ['Somalia', '40.989', '1140.793'], ['Burundi', '44.817', '471.663'], ['Panama', '67.802', '5754.827'], ['Costa Rica', '70.181', '5448.611'], ['Philippines', '60.967', '2174.771'], ['Denmark', '74.37', '21671.825'], ['Benin', '48.78', '1155.395'], ['Eritrea', '45.999', '541.003'], ['Belgium', '73.642', '19900.758'], ['West Bank and Gaza', '60.329', '3759.997'], ['South_Korea', '65.001', '8217.318'], ['Ethiopia', '44.476', '509.115'], ['Guatemala', '56.729', '4015.403'], ['Colombia', '63.898', '4195.343'], ['Cameroon', '48.129', '1774.634'], ['United States', '73.478', '26261.151'], ['Pakistan', '54.882', '1439.271'], ['China', '61.785', '1488.308'], ['Sierra Leone', '36.769', '1072.819'], ['Slovak Republic', '70.696', '10415.531'], ['Tanzania', '47.912', '849.281'], ['Paraguay', '66.809', '3239.607'], ['Argentina', '69.06', '8955.554'], ['Spain', '74.203', '14029.826'], ['Netherlands', '75.648', '21748.852'], ['France', '74.349', '18833.57'], ['Niger', '44.559', '781.077'], ['Central African Republic', '43.867', '958.785'], ['Serbia', '68.551', '9305.049'], ['Iraq', '56.582', '7811.809'], ['Uruguay', '70.782', '7100.133'], ['Angola', '37.883', '3607.101'], ['Sweden', '76.177', '19943.126'], ['Nicaragua', '58.349', '3424.656'], ['South Africa', '53.993', '7247.431'], ['Burkina Faso', '44.694', '843.991'], ['Haiti', '50.165', '1620.739'], ['Norway', '75.843', '26747.307'], ['Taiwan', '70.337', '10224.807'], ['Portugal', '70.42', '11354.092'], ['Jordan', '59.786', '3128.121'], ['Ireland', '73.017', '15758.606'], ['Brazil', '62.239', '5829.317']]"
+  },
+  {
+    "objectID": "slides/week-5.html#here-comes-numpy",
+    "href": "slides/week-5.html#here-comes-numpy",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Here comes numpy …",
+    "text": "Here comes numpy …\n\nPython has no native data structure to work with tabular data (!!!!).\nNumpy:\n\nIntroduces arrays (numerical matrices) to the Python world.\nOptimizes for mathematical operations with matrices.\n\n\n\n\n\n\n\n\n\nsource: Python Programming for Data Science"
+  },
+  {
+    "objectID": "slides/week-5.html#why-should-you-learn-numpy-holds-python-together",
+    "href": "slides/week-5.html#why-should-you-learn-numpy-holds-python-together",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Why should you learn Numpy? Holds Python together!",
+    "text": "Why should you learn Numpy? Holds Python together!"
+  },
+  {
+    "objectID": "slides/week-5.html#efficiency",
+    "href": "slides/week-5.html#efficiency",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Efficiency",
+    "text": "Efficiency\n\nNumpy leans toward less flexibility and more efficiency.\nLists gives you more flexibility and less efficiency.\nAllows for easy vectorization of functions\nBroadcasting for working with arrays with different dimensions"
+  },
+  {
+    "objectID": "slides/week-5.html#materials",
+    "href": "slides/week-5.html#materials",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Materials",
+    "text": "Materials\n\nNotebook for numpy\nDocumentation\nCheatsheet Numpy"
+  },
+  {
+    "objectID": "slides/week-5.html#coding",
+    "href": "slides/week-5.html#coding",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Coding:",
+    "text": "Coding:\n\nData as Nested lists\nNotebook for Numpy"
+  },
+  {
+    "objectID": "slides/week-5.html#motivation",
+    "href": "slides/week-5.html#motivation",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Motivation",
+    "text": "Motivation\n\n\nNumpy offers a great flexibility and efficiency when dealing with data matrices.\nReally efficient for mathematical operations.\nPretty bad for data wrangling tasks ~&gt; numpy only accepts the same data type\nThe pandas package was designed to solve this limitation by providing data structures to deal with rectangular & heterogeneous data types.\nMain Data Structures: pd.series() and pd.DataFrames()"
+  },
+  {
+    "objectID": "slides/week-5.html#pandas-series",
+    "href": "slides/week-5.html#pandas-series",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Pandas Series",
+    "text": "Pandas Series\nA pandas series is a one-dimensional labeled array.\n\n\nCapable of holding different data types (e.g. integer, boolean, strings, etc.).\nIt holds two key components:\n\nindex: names in the axis\nvalues: values in the series\n\nA pandas series is nothing but a column in an excel sheet or an R data.frame (with an index)"
+  },
+  {
+    "objectID": "slides/week-5.html#pandas-series-constructor",
+    "href": "slides/week-5.html#pandas-series-constructor",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Pandas Series Constructor",
+    "text": "Pandas Series Constructor\n\nimport pandas as pd\n\ns = pd.Series([\"Argentina\", \"France\", \"Germany\",\"Spain\", \"Italy\", \"Brazil\"],\n                 index=[2022, 2018, 2014, 2010, 2006, 2002])\nprint(s)\n\n2022    Argentina\n2018       France\n2014      Germany\n2010        Spain\n2006        Italy\n2002       Brazil\ndtype: object\n\n\n\nYou can feed to the constructor:\n\nlist\ndictionaries\nscalar values\nndarray"
+  },
+  {
+    "objectID": "slides/week-5.html#pandas-dataframes",
+    "href": "slides/week-5.html#pandas-dataframes",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Pandas DataFrames",
+    "text": "Pandas DataFrames\nA pandas DataFrame is a two dimensional, relational data structure with the capacity to handle heterogeneous data types.\n\nrelational: each column value contained within a row entry corresponds with the same observation.\ntwo dimensional: a matrix data structure\nheterogeneous: different data types can be contained across each column series."
+  },
+  {
+    "objectID": "slides/week-5.html#constructor",
+    "href": "slides/week-5.html#constructor",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Constructor",
+    "text": "Constructor\n\nimport pandas as pd\n# create a simple series\nseries = pd.Series([\"Argentina\", \"France\", \"Germany\",\"Spain\", \"Italy\", \"Brazil\"],\n                 index=[2022, 2018, 2014, 2010, 2006, 2002])\n# create the dataframe\ndf = pd.DataFrame(series)\nprint(df)\n\n              0\n2022  Argentina\n2018     France\n2014    Germany\n2010      Spain\n2006      Italy\n2002     Brazil\n\n\n\nWe will discuss:\n\nusing lists of dictionaries to build dataframes row-wise\nusing dictionary of lists dataframes column-wise"
+  },
+  {
+    "objectID": "slides/week-5.html#important-concepts",
+    "href": "slides/week-5.html#important-concepts",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Important concepts:",
+    "text": "Important concepts:\n\nCreating Dataframes\n\nrow-wise: using a list of dictionaries\ncolumn-wise: using a dictionaries of lists\n\nIndexing for accessing Data Frames in Python\n\nNo implicit indexing (d[1,2]) will throw you an error.\n.iloc[] = use the numerical index position to call to locations in the DataFrame.\n.loc[] = use the labels to call to the location in the data frame."
+  },
+  {
+    "objectID": "slides/week-5.html#final-project",
+    "href": "slides/week-5.html#final-project",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Final Project",
+    "text": "Final Project\n\nWhat is it? A data science project, applying concepts learned throughout the course.\nInvolves collecting data, cleaning and analyzing it, and presenting your findings\nThe project is composed of three parts:\n\na 2 page project proposal: (which should be discussed and approved by me)\nan in-class presentation,\nA 10-page project report."
+  },
+  {
+    "objectID": "slides/week-5.html#deadlines-and-logistics",
+    "href": "slides/week-5.html#deadlines-and-logistics",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Deadlines and Logistics",
+    "text": "Deadlines and Logistics\n\n\n\nRequirement\nDue\nLength\nPercentage\n\n\n\n\nProject Proposal\nNovember 15\n2 pages\n5%\n\n\nPresentation\nDecember 10\n10-15 minutes\n10%\n\n\nProject Report\nDecember 17\n10 pages\n25%\n\n\n\n\n\nGroups of three students. You pick your groups.\nBefore November 8, you should have meet with me to discuss your proposal.\nAt lest one hour before our meeting, send me a draft of your proposal.\nSend me an email with your group and when you are going to my office hours.\nOur meeting should be before October 26"
   }
 ]

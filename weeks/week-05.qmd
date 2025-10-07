@@ -38,8 +38,6 @@ tbl-colwidths: [10,50,40]
 
 Today, we will go over three notebooks:
 
--   File Management: [html](/lecture_notes/week-04/_week_4_file_management.html) -- <a href="/lecture_notes/week-04/_week_4_file_management.ipynb" download> Jupyter Notebook </a>
-
 -   Data as Nested lists - [html](/lecture_notes/week-04/_week_4_nested_lists.html) -- <a href="/lecture_notes/week-04/_week_4_nested_lists.ipynb" download> Jupyter Notebook </a>
 
 -   Numpy: [html](/lecture_notes/week-04/_week_5_numpy.html) -- <a href="/lecture_notes/week-05/_week_5_numpy.ipynb" download> Jupyter Notebook </a>
