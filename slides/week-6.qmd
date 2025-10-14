@@ -74,7 +74,7 @@ Read more about all the input/output methods [here](https://pandas.pydata.org/pa
 ## Data Wrangling
 
 | [`pandas`](https://pandas.pydata.org/) | [`dplyr`](https://dplyr.tidyverse.org/)$^\dagger$ | Description |
-|:----------------:|:--------------------:|:-------------------------------|
+|:--:|:--:|:---|
 | `.filter()` | `select()` | select column variables/index |
 | `.drop()` | `select()` | drop selected column variables/index |
 | `.rename()` | `rename()` | rename column variables/index |
@@ -105,24 +105,22 @@ Read more about all the input/output methods [here](https://pandas.pydata.org/pa
 
 ## Deadlines and Logistics
 
-| **Requirement**  | **Due**         | **Length**    | **Percentage** |
-|------------------|-----------------|---------------|----------------|
+| **Requirement**  | **Due**        | **Length**    | **Percentage** |
+|------------------|----------------|---------------|----------------|
 | Project Proposal | **October 31** | 2 pages       | 5%             |
 | Presentation     | December 9     | 10-15 minutes | 10%            |
-| Project Report   | December 16     | 10 pages      | 25%            |
+| Project Report   | December 16    | 10 pages      | 25%            |
 
 ::: incremental
+-   Six groups of three students + Two groups of two . You pick your groups.
 
--   Six groups of three students + Two groups of two . You pick your groups. 
 -   Before October 31, you should have meet with me to discuss your proposal.
 
 -   At lest one hour before our meeting, send me a draft of your proposal.
 
-- Add the info [here](https://docs.google.com/spreadsheets/d/1tXCNbAV-vpCMA96OZ0yy_E1quHUhSPuwSrFZ6_SafDk/edit?gid=0#gid=0)
+-   Add the info [here](https://docs.google.com/spreadsheets/d/1tXCNbAV-vpCMA96OZ0yy_E1quHUhSPuwSrFZ6_SafDk/edit?gid=0#gid=0)
 
-     - Whoever picks last the groups and topics will be split in two groups of two.  
-
-
+    -   Whoever picks last the groups and topics will be split in two groups of two.
 :::
 
 # More information: <https://tiagoventura.github.io/ppol5203/finalproject.html>

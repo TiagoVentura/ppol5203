@@ -31,7 +31,7 @@ Due dates and breakdowns for the project are as follows:
 
 -   You pick your groups.
 
--   Before November 12, your should have met with me to discuss your proposal.
+-   Before October 31, your should have met with me to discuss your proposal.
 
 -   At lest one hour before our meeting, send me a draft of your proposal.
 
@@ -142,10 +142,9 @@ Of course, no commits after the due date will be considered in the assessment.
 
 <!-- NOTE: REMOVE THE PNAS TEMPLATE!!!!-->
 
-Here, I suggest  a few templates for writing your reports. In my experience, writing data science reports using [LaTeX](https://towardsdatascience.com/latex-for-data-scientists-in-under-6-minutes-3815d973c05c) is an gain in productivity in the long-run.
+Here, I suggest a few templates for writing your reports. In my experience, writing data science reports using [LaTeX](https://towardsdatascience.com/latex-for-data-scientists-in-under-6-minutes-3815d973c05c) is an gain in productivity in the long-run.
 
-If you want to experiment with LaTeX via overleaf, 
-you can also use the [Journal of Quantitative Description templates](https://journalqd.org/jqdtemplate) in Word Doc or LaTeX:
+If you want to experiment with LaTeX via overleaf, you can also use the [Journal of Quantitative Description templates](https://journalqd.org/jqdtemplate) in Word Doc or LaTeX:
 
 -   [JQD Word](https://kmunger.github.io/pdfs/JQDWordTemplate2023.docx)
 
@@ -155,7 +154,7 @@ Or, you can use [templates from Quarto](https://quarto.org/docs/journals/) and w
 
 ## Example of final projects from previous DSPP Years
 
-Here you can download some examples from projects from last year of DSPP students. Those are good projects, and involve both skills students learned in class + skills learned in other classes (like causal inference techniques). There are issue with these projects, so take them as references, not as a rubric. 
+Here you can download some examples from projects from last year of DSPP students. Those are good projects, and involve both skills students learned in class + skills learned in other classes (like causal inference techniques). There are issue with these projects, so take them as references, not as a rubric.
 
 [PPOL 5203 Projects 2022](./projects_ppol2022.zip)
 
