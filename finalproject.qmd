@@ -142,13 +142,10 @@ Of course, no commits after the due date will be considered in the assessment.
 
 <!-- NOTE: REMOVE THE PNAS TEMPLATE!!!!-->
 
-Here, I suggest you with a few templates for writing your reports. In my experience, writing data science reports using [LaTeX](https://towardsdatascience.com/latex-for-data-scientists-in-under-6-minutes-3815d973c05c) is an gain in productivity in the long-run.
+Here, I suggest  a few templates for writing your reports. In my experience, writing data science reports using [LaTeX](https://towardsdatascience.com/latex-for-data-scientists-in-under-6-minutes-3815d973c05c) is an gain in productivity in the long-run.
 
-If you want to experiment with LaTeX via overleaf, you should use this template from PNAS (Just remember to switch to a one-column template):
-
--   [PNAS Template](https://www.overleaf.com/latex/templates/template-for-preparing-your-research-report-submission-to-pnas-using-overleaf-2023/whbdryzwztnd)
-
-You can also use the [Journal of Quantitative Description templates](https://journalqd.org/jqdtemplate) in Word Doc or LaTeX:
+If you want to experiment with LaTeX via overleaf, 
+you can also use the [Journal of Quantitative Description templates](https://journalqd.org/jqdtemplate) in Word Doc or LaTeX:
 
 -   [JQD Word](https://kmunger.github.io/pdfs/JQDWordTemplate2023.docx)
 
