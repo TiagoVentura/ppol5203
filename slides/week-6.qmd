@@ -1,0 +1,132 @@
+---
+title: "<span style = 'font-size: 100%;'> PPOL 5203 - Data Science I: Foundations </span>"
+subtitle: "<span style = 'font-size: 100%;'> Week 6: Data Wrangling in Pandas </span>"
+author: "Professor: Tiago Ventura"
+execute: 
+  echo: true
+  error: true
+format:
+  revealjs: 
+    transition: slide
+    background-transition: fade
+    code-line-numbers: false
+    width: 1600
+    height: 1200
+    center: true
+    slide-number: true
+    incremental: false
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    footer: "Data science I: Foundations"
+    theme: [simple, custom.scss]
+---
+
+## Where we are...
+
+-   We started with the basics of being a data scientist
+
+-   We moved over to the primitives of Python as your main DS tool
+
+-   Then we started our journey working with tabular data:
+
+    -   Numpy for matrices
+
+    -   Pandas for heterogeneous dataframes \~ introductions, slicing, constructors
+
+## Plans for Today & Next Week
+
+-   Data Wrangling in Pandas
+
+    -   Loading and Writing Data
+
+    -   Data Processsing: row, columns, and grouped
+
+    -   Tidying and Joining (Next Week + Visualization)
+
+    -   Miscelanneous (Work by yourselves in the notebook)
+
+-   More in class exercises
+
+# Class Website: https://tiagoventura.github.io/ppol5203/weeks/week-06.html
+
+## Loading/Writing Data in Pandas
+
+| Format Type |   Data Description   |      Reader      |     Writer     |
+|:-----------:|:--------------------:|:----------------:|:--------------:|
+|    text     |         CSV          |    `read_csv`    |    `to_csv`    |
+|    text     |         JSON         |   `read_json`    |   `to_json`    |
+|    text     |         HTML         |   `read_html`    |   `to_html`    |
+|    text     |   Local clipboard    | `read_clipboard` | `to_clipboard` |
+|   binary    |       MS Excel       |   `read_excel`   |   `to_excel`   |
+|   binary    |     HDF5 Format      |    `read_hdf`    |    `to_hdf`    |
+|   binary    |    Feather Format    |  `read_feather`  |  `to_feather`  |
+|   binary    |    Parquet Format    |  `read_parquet`  |  `to_parquet`  |
+|   binary    |       Msgpack        |  `read_msgpack`  |  `to_msgpack`  |
+|   binary    |        Stata         |   `read_stata`   |   `to_stata`   |
+|   binary    |         SAS          |    `read_sas`    |                |
+|   binary    | Python Pickle Format |  `read_pickle`   |  `to_pickle`   |
+|     SQL     |         SQL          |    `read_sql`    |    `to_sql`    |
+|     SQL     |   Google Big Query   |    `read_gbq`    |    `to_gbq`    |
+
+Read more about all the input/output methods [here](https://pandas.pydata.org/pandas-docs/stable/user_guide/io.html).
+
+## Data Wrangling
+
+| [`pandas`](https://pandas.pydata.org/) | [`dplyr`](https://dplyr.tidyverse.org/)$^\dagger$ | Description |
+|:----------------:|:--------------------:|:-------------------------------|
+| `.filter()` | `select()` | select column variables/index |
+| `.drop()` | `select()` | drop selected column variables/index |
+| `.rename()` | `rename()` | rename column variables/index |
+| `.query()` | `filter()` | row-wise subset of a data frame by a values of a column variable/index |
+| `.assign()` | `mutate()` | Create a new variable on the existing data frame |
+| `.sort_values()` | `arrange()` | Arrange all data values along a specified (set of) column variable(s)/indices |
+| `.groupby()` | `group_by()` | Index data frame by specific (set of) column variable(s)/index value(s) |
+| `.agg()` | `summarize()` | aggregate data by specific function rules |
+| `.pivot_table()` | `spread()` | cast the data from a "long" to a "wide" format |
+| `pd.melt()` | `gather()` | cast the data from a "wide" to a "long" format |
+| `.()` | `%>%` | piping, fluid programming, or the passing one function output to the next |
+
+## Lecture Notes
+
+## Final Project
+
+-   **What is it?** A data science project, applying concepts learned throughout the course.
+
+-   Involves collecting data, cleaning and analyzing it, and presenting your findings
+
+-   The project is composed of three parts:
+
+    -   a 2 page project proposal: (which should be discussed and approved by me)
+
+    -   an in-class presentation,
+
+    -   A 10-page project report.
+
+## Deadlines and Logistics
+
+| **Requirement**  | **Due**         | **Length**    | **Percentage** |
+|------------------|-----------------|---------------|----------------|
+| Project Proposal | **October 31** | 2 pages       | 5%             |
+| Presentation     | December 9     | 10-15 minutes | 10%            |
+| Project Report   | December 16     | 10 pages      | 25%            |
+
+::: incremental
+
+-   Six groups of three students + Two groups of two . You pick your groups. 
+-   Before October 31, you should have meet with me to discuss your proposal.
+
+-   At lest one hour before our meeting, send me a draft of your proposal.
+
+- Add the info [here](https://docs.google.com/spreadsheets/d/1tXCNbAV-vpCMA96OZ0yy_E1quHUhSPuwSrFZ6_SafDk/edit?gid=0#gid=0)
+
+     - Whoever picks last the groups and topics will be split in two groups of two.  
+
+
+:::
+
+# More information: <https://tiagoventura.github.io/ppol5203/finalproject.html>
+
+## Class mid-semester survey
+
+Help me understand what is working and not working in the course, take the survey here: <https://forms.gle/E584UtfrivXrbruE6>
