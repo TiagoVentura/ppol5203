@@ -21,6 +21,7 @@ format:
     footer: "Data science I: Foundations"
     theme: [simple, custom.scss]
 ---
+
 ```{r setup, echo=FALSE}
 library(reticulate)
 usethis::edit_r_environ()

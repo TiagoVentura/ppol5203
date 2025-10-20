@@ -1769,5 +1769,145 @@
     "title": "Syllabus: PPOL 5203 - Data Science I: Foundations",
     "section": "Georgetown Policies",
     "text": "Georgetown Policies\n\nDisability\nIf you believe you have a disability, then you should contact the Academic Resource Center (arc@georgetown.edu) for further information. The Center is located in the Leavey Center, Suite 335 (202-687-8354). The Academic Resource Center is the campus office responsible for reviewing documentation provided by students with disabilities and for determining reasonable accommodations in accordance with the Americans with Disabilities Act (ASA) and University policies. For more information, go to http://academicsupport.georgetown.edu/disability/\n\n\nImportant Academic Policies and Academic Integrity\nMcCourt School students are expected to uphold the academic policies set forth by Georgetown University and the Graduate School of Arts and Sciences. Students should therefore familiarize themselves with all the rules, regulations, and procedures relevant to their pursuit of a Graduate School degree. The policies are located at: http://grad.georgetown.edu/academics/policies/\nApplied to this course, while I encourage collaboration on assignments and use of resources like StackOverflow, the problem sets will ask you to list who you worked on the problem set with and cite StackOverflow if it is the direct source of a code snippet.\n\n\nStatement on Sexual Misconduct\nGeorgetown University and its faculty are committed to supporting survivors and those impacted by sexual misconduct, which includes sexual assault, sexual harassment, relationship violence, and stalking. Georgetown requires faculty members, unless otherwise designated as confidential, to report all disclosures of sexual misconduct to the University Title IX Coordinator or a Deputy Title IX Coordinator. If you disclose an incident of sexual misconduct to a professor in or outside of the classroom (with the exception of disclosures in papers), that faculty member must report the incident to the Title IX Coordinator, or Deputy Title IX Coordinator. The coordinator will, in turn, reach out to the student to provide support, resources, and the option to meet. [Please note that the student is not required to meet with the Title IX coordinator.]. More information about reporting options and resources can be found on the Sexual Misconduct\nWebsite: https://sexualassault.georgetown.edu/resourcecenter\nIf you would prefer to speak to someone confidentially, Georgetown has a number of fully confidential professional resources that can provide support and assistance. These resources include: Health Education Services for Sexual Assault Response and Prevention: confidential email: sarp[at]georgetown.edu\nCounseling and Psychiatric Services (CAPS): 202.687.6985 or after hours, call (833) 960-3006 to reach Fonemed, a telehealth service; individuals may ask for the on-call CAPS clinician\nMore information about reporting options and resources can be found on the Sexual Misconduct Website.\n\n\nProvost’s Policy on Religious Observances\nGeorgetown University promotes respect for all religions. Any student who is unable to attend classes or to participate in any examination, presentation, or assignment on a given day because of the observance of a major religious holiday or related travel shall be excused and provided with the opportunity to make up, without unreasonable burden, any work that has been missed for this reason and shall not in any other way be penalized for the absence or rescheduled work. Students will remain responsible for all assigned work. Students should notify professors in writing at the beginning of the semester of religious observances that conflict with their classes. The Office of the Provost, in consultation with Campus Ministry and the Registrar, will publish, before classes begin for a given term, a list of major religious holidays likely to affect Georgetown students. The Provost and the Main Campus Executive Faculty encourage faculty to accommodate students whose bona fide religious observances in other ways impede normal participation in a course. Students who cannot be accommodated should discuss the matter with an advising dean."
+  },
+  {
+    "objectID": "slides/week-7.html#plans-for-today",
+    "href": "slides/week-7.html#plans-for-today",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Plans for Today",
+    "text": "Plans for Today\n\nGrouped operations in Pandas\nTidying and Joining Data\nData Visualization: Principles and Practice"
+  },
+  {
+    "objectID": "slides/week-7.html#problem-sets",
+    "href": "slides/week-7.html#problem-sets",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Problem Sets",
+    "text": "Problem Sets"
+  },
+  {
+    "objectID": "slides/week-7.html#grouped-operations-in-pandas",
+    "href": "slides/week-7.html#grouped-operations-in-pandas",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Grouped Operations in Pandas",
+    "text": "Grouped Operations in Pandas\n\nFrom Python Data Science Handbook by Jake VanderPlas"
+  },
+  {
+    "objectID": "slides/week-7.html#tidy-join",
+    "href": "slides/week-7.html#tidy-join",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Tidy + Join",
+    "text": "Tidy + Join\nOn a higher level, we will learn:\n\nConcept of tidy data (Wickham, 2014):\n\nTLDR: a way to standardize your datasets\nEach variable must have its own column.\nEach observation must have its own row.\nEach value must have its own cell.\n\nAdvantages: sits well with grammar of graphics + facilitates split-aply-combine\nJoining Methods: Ways to connect related tables."
+  },
+  {
+    "objectID": "slides/week-7.html#tldr",
+    "href": "slides/week-7.html#tldr",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "TLDR",
+    "text": "TLDR\n\nVisualization matters! A figure is almost always better than a table\nYou have a full-semester ahead of you for Data Visualization\nReadings for this week are very important!!\nWe will cover the basics:\n\nFocus more on grammar of graphics and plotnine - a ggplot2 implementation in Python\nSkim through native Python libraries (matplotlib and seaborn)"
+  },
+  {
+    "objectID": "slides/week-7.html#what-do-you-see",
+    "href": "slides/week-7.html#what-do-you-see",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "What do you see?",
+    "text": "What do you see?\n\n\nHow many variables (data) are mapped in this graph?\nHow are these variables (non-constant) represented in the figure?\nWhat are the non-data (constant) related information presented in the graph?"
+  },
+  {
+    "objectID": "slides/week-7.html#aesthetics",
+    "href": "slides/week-7.html#aesthetics",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Aesthetics",
+    "text": "Aesthetics\nThe key aspect on data visualization is to take data points and convert them visual elements.\n\nAll data visualizations map data values into quantifiable features of the resulting graphic. We refer to these features as aesthetics. Fundamentals of Data Visualization, Claus Wilke"
+  },
+  {
+    "objectID": "slides/week-7.html#cartesian-coordinates-system-2d",
+    "href": "slides/week-7.html#cartesian-coordinates-system-2d",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Cartesian coordinates system: 2d",
+    "text": "Cartesian coordinates system: 2d"
+  },
+  {
+    "objectID": "slides/week-7.html#more-dimensions",
+    "href": "slides/week-7.html#more-dimensions",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "More dimensions",
+    "text": "More dimensions\nWe often want map more variables into the graph. We do this exploring new aesthetics."
+  },
+  {
+    "objectID": "slides/week-7.html#color-aesthetics-to-distinguish",
+    "href": "slides/week-7.html#color-aesthetics-to-distinguish",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Color Aesthetics to Distinguish",
+    "text": "Color Aesthetics to Distinguish"
+  },
+  {
+    "objectID": "slides/week-7.html#color-aesthetics-to-highlight",
+    "href": "slides/week-7.html#color-aesthetics-to-highlight",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Color Aesthetics to Highlight",
+    "text": "Color Aesthetics to Highlight"
+  },
+  {
+    "objectID": "slides/week-7.html#to-represent-visually-a-sequence-of-data-points",
+    "href": "slides/week-7.html#to-represent-visually-a-sequence-of-data-points",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "To represent visually a sequence of data points",
+    "text": "To represent visually a sequence of data points"
+  },
+  {
+    "objectID": "slides/week-7.html#grammar-of-graphics",
+    "href": "slides/week-7.html#grammar-of-graphics",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Grammar of Graphics",
+    "text": "Grammar of Graphics\nGrammar: set of structural rules that dictate how words in a language can be combined to form meaningful sentences.\nGrammar of Graphics: brings a similar effort to establish structural rules to data visualizations\nImplementation:\n\nggplot2 in R\nplotnine in Python"
+  },
+  {
+    "objectID": "slides/week-7.html#major-components-of-the-grammar-of-graphics",
+    "href": "slides/week-7.html#major-components-of-the-grammar-of-graphics",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Major Components of the Grammar of Graphics",
+    "text": "Major Components of the Grammar of Graphics\n\nplotnine/ggplot2 graphs have three key steps\n\nData Step: The raw data that you want to plot.\nGeometries step: The geometric shapes that will represent the data.\nAesthetics &lt;aes()&gt; step: Aesthetics of the geometric and statistical objects, such as position, color, size, shape, and transparency"
+  },
+  {
+    "objectID": "slides/week-7.html#gapminder",
+    "href": "slides/week-7.html#gapminder",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Gapminder",
+    "text": "Gapminder\n\nimport pandas as pd\nimport numpy as np\nfrom plotnine import * # to imitate ggplot\nfrom gapminder import gapminder # bring data\n\nimport warnings\nwarnings.filterwarnings('ignore') # Ignore warnings\n\n# create to new log variables\ngapminder = (gapminder\n       .assign(lngdpPercap = np.log(gapminder[\"gdpPercap\"]), \n               lnpop = np.log(gapminder[\"pop\"]))\n      )"
+  },
+  {
+    "objectID": "slides/week-7.html#section",
+    "href": "slides/week-7.html#section",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "",
+    "text": "ggplot (data = &lt;DATA&gt;)\n+\ngeom_&lt;representation&gt; (aes (&lt;aesthethics&gt;) )"
+  },
+  {
+    "objectID": "slides/week-7.html#section-2",
+    "href": "slides/week-7.html#section-2",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "",
+    "text": "# build in plotnine graph\n\n# step 1: data\n(\nggplot(data=gapminder) + \n\n# step 2: geom\n geom_point(\n\n# step 3: aesthethics\n     aes(x=\"lngdpPercap\", y=\"lifeExp\"))\n)\n\n&lt;Figure Size: (640 x 480)&gt;"
+  },
+  {
+    "objectID": "slides/week-7.html#section-3",
+    "href": "slides/week-7.html#section-3",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "",
+    "text": "ggplot(data = &lt;DATA&gt;)\n+\ngeom_&lt;representation&gt;(aes(&lt;aesthethics&gt;))\n+\ngeom_&lt;representation&gt;(aes(&lt;aesthethics&gt;))\n+\nscale_&lt;aesthetics&gt;()\n+\ntheme_&lt;&gt;\n+\nfacet_&lt;&gt;\n+\nlabels"
+  },
+  {
+    "objectID": "slides/week-7.html#additional-components-of-the-grammar-of-graphics",
+    "href": "slides/week-7.html#additional-components-of-the-grammar-of-graphics",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Additional Components of the Grammar of Graphics:",
+    "text": "Additional Components of the Grammar of Graphics:\n\nFacets: to produce create subplots based on specific variable\nannotations: labels, titles, subtitles, captions.\nCoordinates & Scales: some additional functions to adjust aesthetics you are mapping (change colors, size, alpha, scale of x and y coordinates)\nTheme: Control the finer presentation details like font size, background color, grid line styles, etc."
+  },
+  {
+    "objectID": "slides/week-7.html#section-1",
+    "href": "slides/week-7.html#section-1",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "",
+    "text": "# build in plotnine graph\n\n# step 1: data\n(\nggplot(data=gapminder) + \n\n# step 2: geom\n geom_point(\n\n# step 3: aesthethics\n     aes(x=\"lngdpPercap\", y=\"lifeExp\"))\n)\n\n&lt;Figure Size: (640 x 480)&gt;"
   }
 ]

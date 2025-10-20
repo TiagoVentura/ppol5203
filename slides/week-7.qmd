@@ -1,0 +1,246 @@
+---
+title: "<span style = 'font-size: 100%;'> PPOL 5203 - Data Science I: Foundations </span>"
+subtitle: "<span style = 'font-size: 200%;'> Week 7: Tidying, Joining and Visualizing Data </span>"
+author: "Professor: Tiago Ventura"
+execute: 
+  echo: false
+  error: true
+format:
+  revealjs: 
+    transition: slide
+    background-transition: fade
+    code-line-numbers: false
+    width: 1400
+    height: 900
+    center: true
+    slide-number: true
+    incremental: false
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    footer: "Data science I: Foundations"
+    theme: [simple, custom.scss]
+---
+```{r setup, echo=FALSE}
+library(reticulate)
+usethis::edit_r_environ()
+use_python("/Users/tb186/anaconda3/bin/python", required = TRUE)
+```
+
+## Plans for Today
+
+-   Grouped operations in Pandas
+
+-   Tidying and Joining Data
+
+-   Data Visualization: Principles and Practice
+
+
+# Problem Set 3 is due this week! It is a long problem set! Remember to explain your responses and answer with words!
+
+## Grouped Operations in Pandas
+
+![From Python Data Science Handbook by Jake VanderPlas](https://jakevdp.github.io/PythonDataScienceHandbook/figures/03.08-split-apply-combine.png)
+
+## Tidy + Join
+
+On a higher level, we will learn:
+
+-   Concept of tidy data [(Wickham, 2014)](https://vita.had.co.nz/papers/tidy-data.pdf):
+
+    -   **TLDR:** a way to standardize your datasets
+
+    -   **Each variable must have its own column.**
+
+    -   **Each observation must have its own row.**
+
+    -   **Each value must have its own cell.**
+
+-   Advantages: sits well with grammar of graphics + facilitates split-aply-combine
+
+-   Joining Methods: Ways to connect related tables.
+
+
+
+# Pandas Notebooks: Data Wrangling (Last week) and Join and Tidy
+
+# Data Visualization
+
+## TLDR
+
+-   Visualization matters! A figure is almost always better than a table
+
+-   You have a full-semester ahead of you for Data Visualization
+
+-   Readings for this week are very important!!
+
+-   We will cover the basics:
+
+    -   Focus more on grammar of graphics and `plotnine` - a ggplot2 implementation in Python
+
+    -   Skim through native Python libraries (`matplotlib` and `seaborn`)
+
+## What do you see?
+
+```{r}
+knitr::include_graphics("week7_figs/global_res_no_band.png")
+```
+
+-   How many variables (data) are mapped in this graph?
+
+-   How are these **variables (non-constant)** represented in the figure?
+
+-   What are the non-data (constant) related information presented in the graph?
+
+## Aesthetics
+
+The key aspect on data visualization is **to take data points** and convert them **visual elements**.
+
+> All data visualizations map data values into quantifiable features of the resulting graphic. We refer to these features as aesthetics. *Fundamentals of Data Visualization, Claus Wilke*
+
+```{r}
+knitr::include_graphics("https://clauswilke.com/dataviz/aesthetic_mapping_files/figure-html/common-aesthetics-1.png")
+```
+
+## Cartesian coordinates system: 2d
+
+```{r}
+knitr::include_graphics("https://clauswilke.com/dataviz/coordinate_systems_axes_files/figure-html/cartesian-coord-1.png")
+```
+
+## More dimensions
+
+### We often want map more variables into the graph. We do this exploring new aesthetics.
+
+```{r}
+knitr::include_graphics("week7_figs/global_no_aes.png")
+```
+
+## Color Aesthetics to Distinguish
+
+```{r}
+knitr::include_graphics("week7_figs/global_color_to_distinguish.png")
+```
+
+## Color Aesthetics to Highlight
+
+```{r}
+knitr::include_graphics("week7_figs/global_color_to_highlight.png")
+```
+
+## To represent visually a sequence of data points
+
+```{r}
+knitr::include_graphics("week7_figs/global_color_to_values.png")
+```
+
+## Grammar of Graphics
+
+**Grammar**: set of structural rules that dictate how words in a language can be combined to form meaningful sentences.
+
+**Grammar of Graphics**: brings a similar effort to establish structural rules to data visualizations
+
+**Implementation**:
+
+-   `ggplot2` in R
+
+-   `plotnine` in Python
+
+## Major Components of the Grammar of Graphics 
+
+-   plotnine/ggplot2 graphs have three key steps
+
+    -   Data Step: The raw data that you want to plot.
+
+    -   Geometries step: The geometric shapes that will represent the data.
+
+    -   Aesthetics \<aes()\> step: Aesthetics of the geometric and statistical objects, such as position, color, size, shape, and transparency
+
+## Additional Components of the Grammar of Graphics:
+
+-   Facets: to produce create subplots based on specific variable
+
+-   annotations: labels, titles, subtitles, captions.
+
+-   Coordinates & Scales: some additional functions to adjust aesthetics you are mapping (change colors, size, alpha, scale of x and y coordinates)
+
+-   Theme: Control the finer presentation details like font size, background color, grid line styles, etc.
+
+## Gapminder {visibility="hidden"}
+
+```{python}
+#| echo: true
+
+import pandas as pd
+import numpy as np
+from plotnine import * # to imitate ggplot
+from gapminder import gapminder # bring data
+
+import warnings
+warnings.filterwarnings('ignore') # Ignore warnings
+
+# create to new log variables
+gapminder = (gapminder
+       .assign(lngdpPercap = np.log(gapminder["gdpPercap"]), 
+               lnpop = np.log(gapminder["pop"]))
+      )
+
+```
+
+##  {.centered} {visibility="hidden"}
+
+### `ggplot` (data = `<DATA>`) {.centered}
+
+### `+`{.centered}
+
+### `geom_<representation>` (aes (`<aesthethics>`) ) {.centered}
+
+##  {.centered} {visibility="hidden"}
+
+```{python}
+#| echo: true
+
+# build in plotnine graph
+
+# step 1: data
+(
+ggplot(data=gapminder) + 
+
+# step 2: geom
+ geom_point(
+
+# step 3: aesthethics
+     aes(x="lngdpPercap", y="lifeExp"))
+)
+
+```
+
+##  {.centered} {visibility="hidden"}
+
+### `ggplot`(data = `<DATA>`)
+
+### `+`
+
+### `geom_<representation>`(aes(`<aesthethics>`))
+
+### `+`
+
+### `geom_<representation>`(aes(`<aesthethics>`))
+
+### `+`
+
+### `scale_<aesthetics>`()
+
+### `+`
+
+### `theme_<>`
+
+### `+`
+
+### `facet_<>`
+
+### `+`
+
+### `labels`
+
+# Notebook for Data Viz - Practice!
