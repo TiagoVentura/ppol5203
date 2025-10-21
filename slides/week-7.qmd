@@ -80,7 +80,7 @@ On a higher level, we will learn:
 
     -   Skim through native Python libraries (`matplotlib` and `seaborn`)
 
-## What do you see?
+## Quizz: What do you see?
 
 ```{r}
 knitr::include_graphics("week7_figs/global_res_no_band.png")
@@ -94,9 +94,11 @@ knitr::include_graphics("week7_figs/global_res_no_band.png")
 
 ## Aesthetics
 
-The key aspect on data visualization is **to take data points** and convert them **visual elements**.
 
 > All data visualizations map data values into quantifiable features of the resulting graphic. We refer to these features as aesthetics. *Fundamentals of Data Visualization, Claus Wilke*
+
+**Aesthetics:** visual mappings that connect **data variables** to **visual attributes** of graphical elements
+
 
 ```{r}
 knitr::include_graphics("https://clauswilke.com/dataviz/aesthetic_mapping_files/figure-html/common-aesthetics-1.png")
@@ -120,12 +122,6 @@ knitr::include_graphics("week7_figs/global_no_aes.png")
 
 ```{r}
 knitr::include_graphics("week7_figs/global_color_to_distinguish.png")
-```
-
-## Color Aesthetics to Highlight
-
-```{r}
-knitr::include_graphics("week7_figs/global_color_to_highlight.png")
 ```
 
 ## To represent visually a sequence of data points

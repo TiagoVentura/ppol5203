@@ -1817,7 +1817,7 @@
     "href": "slides/week-7.html#aesthetics",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "Aesthetics",
-    "text": "Aesthetics\nThe key aspect on data visualization is to take data points and convert them visual elements.\n\nAll data visualizations map data values into quantifiable features of the resulting graphic. We refer to these features as aesthetics. Fundamentals of Data Visualization, Claus Wilke"
+    "text": "Aesthetics\n\nAll data visualizations map data values into quantifiable features of the resulting graphic. We refer to these features as aesthetics. Fundamentals of Data Visualization, Claus Wilke\n\nAesthetics: visual mappings that connect data variables to visual attributes of graphical elements"
   },
   {
     "objectID": "slides/week-7.html#cartesian-coordinates-system-2d",
@@ -1909,5 +1909,12 @@
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "",
     "text": "# build in plotnine graph\n\n# step 1: data\n(\nggplot(data=gapminder) + \n\n# step 2: geom\n geom_point(\n\n# step 3: aesthethics\n     aes(x=\"lngdpPercap\", y=\"lifeExp\"))\n)\n\n&lt;Figure Size: (640 x 480)&gt;"
+  },
+  {
+    "objectID": "slides/week-7.html#quizz-what-do-you-see",
+    "href": "slides/week-7.html#quizz-what-do-you-see",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Quizz: What do you see?",
+    "text": "Quizz: What do you see?\n\n\nHow many variables (data) are mapped in this graph?\nHow are these variables (non-constant) represented in the figure?\nWhat are the non-data (constant) related information presented in the graph?"
   }
 ]
