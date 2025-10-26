@@ -1,0 +1,148 @@
+---
+title: "<span style = 'font-size: 100%;'> PPOL 5203 - Data Science I: Foundations </span>"
+subtitle: "<span style = 'font-size: 100%;'> Week 09: Acquiring Digital Data: APIs and Selenium </span>"
+author: "Professor: Tiago Ventura"
+date: "11/05/2024"
+execute: 
+  echo: false
+  error: true
+format:
+  revealjs: 
+    transition: slide
+    background-transition: fade
+    code-line-numbers: false
+    width: 1600
+    height: 1200
+    center: true
+    slide-number: true
+    incremental: false
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    footer: "Data science I: Foundations"
+    theme: [simple, custom.scss]
+---
+
+## Plans for Today
+
+-   Solution from last week in class exercise
+
+-   APIs
+
+    -   A simple API - Trivia API
+
+    -   More complex with Credentials: Yelp
+
+    -   Credentials + Wrapper: Youtube
+
+-   Selenium for Dynamic Websites and Audit Studies
+
+    -   Example of my own research: algorithmic bias in chinese social media websites
+
+# Office hours today: from 3pm to 5pm. <br> Reason? I am too anxious about the election!
+
+# Last week's in-class exercise!
+
+# APIs
+
+## Two ways to access data from the web
+
+-   **Scraping:** grab information available on websites (Last Week)
+
+    -   Leveraging the structure of a website to grab it's contents
+
+    -   Using a programming environment (such as R, Python, Java, etc.) to systematically extract that content.
+
+    -   Accomplishing the above in an "unobtrusive" and legal way.
+
+-   **APIs:** Data transfer portals built by companies to allow people to access data programmatically. (Today)
+
+    -   When available, we will always prefer APIs
+
+## APIs 101
+
+-   **APIs**: Application Programming Interface
+
+-   **How does it work:** online server created to facilitate information exchange between data users and the data holders
+
+-   **Use Cases:**
+
+    -   Access data shared by Companies and NGOs
+    -   Process our data with model developed by third party organizations
+
+-   We will focus today on the first component.
+
+## API Components
+
+An API is just an URL. See the example below:
+
+http://mywebsite.com/endpoint?key&param_1&param_2
+
+-   Main Components:
+
+-   **http://mywebsite.com//**: API root. The domain of your api/
+
+-   **endpoint**: An endpoint is a server route for retrieving specific data from an API
+
+-   **key**: credentials that some websites ask for you to create before you can query the api.
+
+-   **?param_1&param_2**. Those are filters that you can input in apis requests. We call these filters parameters
+
+## Making an API Request
+
+In order to work with APIs, we need tools to access the web. In Python, the most common library for making requests and working with APIs is the `requests` library.
+
+-   `get()`: to receive information from the API
+
+-   `post()`: to send information to the API -- think about the use of ChatGPT for classification of text.
+
+## Step-by-Step
+
+When using an API, our work will often involve the following steps:
+
+-   **Step 1:** Look at the API documentation and endpoints, and construct a query of interest
+-   **Step 2:** Use requests.get(querystring) to call the API
+-   **Step 3:** Examine the response
+-   **Step 4:** Extract your data and save it.
+
+## In-Class Example
+
+We will work with three different types of APIs today:
+
+-   Trivia API: API that does **not** require authentication and does **not** have a wrapper
+
+-   Yelp API: API that **does** require authentication and does **not** have a wrapper
+
+-   Youtube API: API that **does** require authentication and **does** have a wrapper
+
+-   **Wrapper:**a set of functions or methods (full library) that provide a simplified interface to interact with an underlying API.
+
+# [Notebook for APIs](/lecture_notes/week-09/_week-08_selenium.html)
+
+# Selenium
+
+## Static vs Dynamic Websites
+
+-   **Static web pages:** when the browser and the source code content match each other. Collect data via:
+
+    -   string methods and regex
+    -   beautifulsoup
+    -   scrapy
+
+-   **Dynamic web pages:** when the content we are viewing in our browser does not match the content we see in the HTML source code we are retrieving from the site. How to scrape?
+
+    -   Scrape the website as we view it in our browser --- using Python packages capable of executing the JavaScript.
+
+## Selenium
+
+Selenium is an open source tool which is used for automating web browser.
+
+-   works by automating browsers to execute JavaScript to display a web page
+
+-   allow us to interact with web pages programmatically
+
+-   collect data as we see in the web (after running the correspondin java script)
+
+**Drawback:** selenium is a bit of a pain to install. So part of your homework will simply be to go over the selenium setup!
+
+# [Notebook Selenium](/lecture_notes/week-09/_week-08_selenium.html)

@@ -1,0 +1,221 @@
+---
+title: "<span style = 'font-size: 100%;'> PPOL 5203 - Data Science I: Foundations </span>"
+subtitle: "<span style = 'font-size: 150%;'> Week 8: Parsing Unstructured Data: Scraping Static Websites </span>"
+author: "Professor: Tiago Ventura"
+execute: 
+  echo: false
+  error: true
+format:
+  revealjs: 
+    transition: slide
+    background-transition: fade
+    code-line-numbers: false
+    width: 1600
+    height: 1200
+    center: true
+    slide-number: true
+    incremental: false
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    footer: "Data science I: Foundations"
+    theme: [simple, custom.scss]
+---
+
+## Plans for Today
+
+-   Scraping Static Websites
+
+    -   Different strategies to acquire digital data
+    -   Html data structure
+    -   Scrape static websites
+    -   Build a scraper programmatically
+
+- Accessing data via APIs
+
+- Optional: Scraping Dynamic Website with Selenium
+
+# Acquiring Digital Data
+
+## Two ways to access data from the web
+
+-   **Scraping:** grab information available on websites
+
+    -   Leveraging the structure of a website to grab it's contents
+
+    -   Using a programming environment (such as R, Python, Java, etc.) to systematically extract that content.
+
+    -   Accomplishing the above in an "unobtrusive" and legal way.
+
+-   **APIs:** Data transfer portals built by companies to allow people to access data programmatically.
+
+    -   When available, we will always prefer APIs
+
+## Post-Api Era
+
+Consider the following developments from the past years:
+
+-   Elon Musk has eliminated free access to Twitter's API, and [the only academically useful paid tiers far exceed most researchers' budgets](https://www.theverge.com/2023/3/30/23662832/twitter-api-tiers-free-bot-novelty-accounts-basic-enterprice-monthly-price).
+
+-   [Musk has also demanded that Decahose users delete all Twitter data acquired under previous agreements](https://inews.co.uk/news/twitter-researchers-delete-data-unless-pay-2364535)--whether this demand will be extended to Academic API users is currently unknown.
+
+-   [Reddit has denied access to its API for Pushshift](https://www.reddit.com/r/modnews/comments/134tjpe/reddit_data_api_update_changes_to_pushshift_access/), a popular service used by researchers to collect Reddit data. Popular Reddit app Apollo is facing API charges of \$1.7M per month to continue operating.
+
+-   TikTok released a new API for researchers, which among other things requires them ["to regularly refresh TikTok Research API Data at least every fifteen (15) days, and delete data that is not available from the TikTok Research API at the time of each refresh."](https://www.tiktok.com/legal/page/global/terms-of-service-research-api/en)
+
+-   Crowdtangle, Meta's researcher tool for acquiring data from Facebook and Instagram, still exists as of this writing. [But rumors of its imminent demise have been reported in multiple reputable outlets.](https://www.bloomberg.com/news/articles/2022-06-23/meta-pulls-support-for-tool-used-to-keep-misinformation-in-check?leadSource=uverify%20wall)
+
+    -   This was from 2 years ago. 
+    -   Crowdtangle was closed last year.
+
+## What is a website?
+
+A website in general is a combination of HTML, CSS, Javascript and PHP.
+
+-   **HTML** provides the structure of the website.
+
+-   **CSS** makes that structure visually appealing by controlling the design and layout.
+
+-   **JavaScript** adds interactivity and makes the website dynamic on the client side.
+
+-   **PHP** handles server-side tasks like generating dynamic HTML content or interacting with a database.
+
+## A simple example
+
+```         
+<html>
+<head>
+  <title> Michael Cohen's Email </title>
+  <script>
+    var foot = bar;
+  <script>
+</head>
+<body>
+  <div id="payments">
+  <h2>Second heading</h2>
+  <p class='slick'>information about <br/><i>payments</i></p>
+  <p>Just <a href="http://www.google.com">google it!</a></p>
+</body>
+</html>
+```
+
+**We will care mostly about HTMLs and CSSs for static websites.**
+
+# Scraping is all about finding tags and collecting the data associated with them
+
+## Tags + HTML Elements
+
+```{r}
+knitr::include_graphics("https://static.semrush.com/blog/uploads/media/59/fc/59fc528eecc00e43b1a3ed5d9b9933ee/4YA3vCJ_Hw6DucoVZ40FbKFRppAReJVOkLKHcZlDkO-9geydLO6tw9uzFJFZf5nam3QcT7p0hRdpFyL2uPhoDISD8CPZwfPE5GTqgpH53q9M99QWgDVhjgQrCMOlQI9fA1T2dCxJ5T2goCV3k1wo-Jc.webp")
+```
+
+## Most common tags
+
+-   **p** -- paragraphs
+-   **a href** -- links
+-   **div** -- divisions
+-   **h** -- headings
+-   **table** -- tables
+
+See [here for more about html tags](https://betterprogramming.pub/understanding-html-basics-for-web-scraping-ae351ee0b3f9)
+
+## Scraping Routine
+
+Scraping often involves the following routine:
+
+-   **Step 1:** Find a website with information you want to collect
+
+-   **Step 2:** Understand and decipher the website
+
+-   **Step 3:** Write code to collect \*\*one\* realization of the data
+
+-   **Step 4:** Build a scraper -- generalize you code into a function.
+
+We will cover these steps with code!!
+
+## Ethical Challenges on scraping
+
+Webscraping is legal as long as the **scraped data is publicly available** and the scraping activity **does not harm the website and the people from whom information is being scraped.**
+
+Here is a list of good practices for scraping:
+
+-   Don't hit servers too often and on peak hours
+
+-   Slow down your code to the speed humans would manually do
+
+-   Use data responsibly (As academics often do)
+
+-   Respect robots.txt
+
+```{python}
+#| eval: false
+#| echo: true
+
+# Put the system to sleep by that random unit
+import time
+time.sleep(random.uniform(1,5))
+```
+
+# [Notebook on Scraping](/lecture_notes/week-08/_week-07_scraping_static.html)
+
+# APIs
+
+## APIs 101
+
+-   **APIs**: Application Programming Interface
+
+-   **How does it work:** online server created to facilitate information exchange between data users and the data holders
+
+-   **Use Cases:**
+
+    -   Access data shared by Companies and NGOs
+    -   Process our data with model developed by third party organizations
+
+-   We will focus today on the first component.
+
+## API Components
+
+An API is just an URL. See the example below:
+
+http://mywebsite.com/endpoint?key&param_1&param_2
+
+-   Main Components:
+
+-   **http://mywebsite.com//**: API root. The domain of your api/
+
+-   **endpoint**: An endpoint is a server route for retrieving specific data from an API
+
+-   **key**: credentials that some websites ask for you to create before you can query the api.
+
+-   **?param_1&param_2**. Those are filters that you can input in apis requests. We call these filters parameters
+
+## Making an API Request
+
+In order to work with APIs, we need tools to access the web. In Python, the most common library for making requests and working with APIs is the `requests` library.
+
+-   `get()`: to receive information from the API
+
+-   `post()`: to send information to the API -- think about the use of ChatGPT for classification of text.
+
+## Step-by-Step
+
+When using an API, our work will often involve the following steps:
+
+-   **Step 1:** Look at the API documentation and endpoints, and construct a query of interest
+-   **Step 2:** Use requests.get(querystring) to call the API
+-   **Step 3:** Examine the response
+-   **Step 4:** Extract your data and save it.
+
+## In-Class Example
+
+We will work with three different types of APIs today:
+
+-   Trivia API: API that does **not** require authentication and does **not** have a wrapper
+
+-   Yelp API: API that **does** require authentication and does **not** have a wrapper
+
+-   Youtube API: API that **does** require authentication and **does** have a wrapper
+
+-   **Wrapper:** a set of functions or methods (full library) that provide a simplified interface to interact with an underlying API.
+
+# [Notebook for APIs](/lecture_notes/week-09/_week-08_apis.html)

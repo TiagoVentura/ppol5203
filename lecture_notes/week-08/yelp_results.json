@@ -1,0 +1,526 @@
+{
+    "businesses": [
+        {
+            "id": "GlAT_ksg5ftJ87PXwXmoVA",
+            "alias": "fogo-de-chao-brazilian-steakhouse-washington-10",
+            "name": "Fogo de Ch\u00e3o Brazilian Steakhouse",
+            "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/1X06-J7i2bggZpAxuf6kJg/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/fogo-de-chao-brazilian-steakhouse-washington-10?adjust_creative=GJK5eaHUqVE8eGMl0w0Pfg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=GJK5eaHUqVE8eGMl0w0Pfg",
+            "review_count": 2221,
+            "categories": [
+                {
+                    "alias": "brazilian",
+                    "title": "Brazilian"
+                },
+                {
+                    "alias": "steak",
+                    "title": "Steakhouses"
+                }
+            ],
+            "rating": 4.0,
+            "coordinates": {
+                "latitude": 38.895198243773834,
+                "longitude": -77.0273284769837
+            },
+            "transactions": [
+                "delivery",
+                "pickup"
+            ],
+            "price": "$$$",
+            "location": {
+                "address1": "1101 Pennsylvania Ave NW",
+                "address2": "",
+                "address3": "",
+                "city": "Washington Dc",
+                "zip_code": "20004",
+                "country": "US",
+                "state": "DC",
+                "display_address": [
+                    "1101 Pennsylvania Ave NW",
+                    "Washington Dc, DC 20004"
+                ]
+            },
+            "phone": "+12023474668",
+            "display_phone": "(202) 347-4668",
+            "distance": 4458.22945724822
+        },
+        {
+            "id": "WoDJcvo4YRN_ScEbOHNMag",
+            "alias": "the-grill-from-ipanema-washington-2",
+            "name": "The Grill From Ipanema",
+            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/tIU6i32eeZmKG5OJ708xzg/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/the-grill-from-ipanema-washington-2?adjust_creative=GJK5eaHUqVE8eGMl0w0Pfg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=GJK5eaHUqVE8eGMl0w0Pfg",
+            "review_count": 415,
+            "categories": [
+                {
+                    "alias": "brazilian",
+                    "title": "Brazilian"
+                },
+                {
+                    "alias": "tapasmallplates",
+                    "title": "Tapas/Small Plates"
+                },
+                {
+                    "alias": "salad",
+                    "title": "Salad"
+                }
+            ],
+            "rating": 4.0,
+            "coordinates": {
+                "latitude": 38.92095,
+                "longitude": -77.04351
+            },
+            "transactions": [
+                "delivery",
+                "pickup"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "1858 Columbia Rd NW",
+                "address2": "",
+                "address3": "",
+                "city": "Washington, DC",
+                "zip_code": "20009",
+                "country": "US",
+                "state": "DC",
+                "display_address": [
+                    "1858 Columbia Rd NW",
+                    "Washington, DC 20009"
+                ]
+            },
+            "phone": "+12029860757",
+            "display_phone": "(202) 986-0757",
+            "distance": 3062.245878076161
+        },
+        {
+            "id": "BPOES_VaXh4JFZQHSacoBQ",
+            "alias": "bossa-washington",
+            "name": "Bossa",
+            "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/eV1ujkRUTdGHDH9EkK0Veg/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/bossa-washington?adjust_creative=GJK5eaHUqVE8eGMl0w0Pfg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=GJK5eaHUqVE8eGMl0w0Pfg",
+            "review_count": 127,
+            "categories": [
+                {
+                    "alias": "lounges",
+                    "title": "Lounges"
+                },
+                {
+                    "alias": "brazilian",
+                    "title": "Brazilian"
+                }
+            ],
+            "rating": 3.5,
+            "coordinates": {
+                "latitude": 38.9220876263576,
+                "longitude": -77.04225252972181
+            },
+            "transactions": [
+                "delivery",
+                "pickup"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "2463 18th St NW",
+                "address2": "",
+                "address3": "",
+                "city": "Washington, DC",
+                "zip_code": "20009",
+                "country": "US",
+                "state": "DC",
+                "display_address": [
+                    "2463 18th St NW",
+                    "Washington, DC 20009"
+                ]
+            },
+            "phone": "+12026670088",
+            "display_phone": "(202) 667-0088",
+            "distance": 3215.893411510275
+        },
+        {
+            "id": "bB4PHDPtJbWvCFukIL83OA",
+            "alias": "european-foods-import-export-arlington",
+            "name": "European Foods Import Export",
+            "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/U08IpYFBdUTc7aJO6dXe5A/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/european-foods-import-export-arlington?adjust_creative=GJK5eaHUqVE8eGMl0w0Pfg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=GJK5eaHUqVE8eGMl0w0Pfg",
+            "review_count": 44,
+            "categories": [
+                {
+                    "alias": "intlgrocery",
+                    "title": "International Grocery"
+                },
+                {
+                    "alias": "brazilian",
+                    "title": "Brazilian"
+                },
+                {
+                    "alias": "spanish",
+                    "title": "Spanish"
+                }
+            ],
+            "rating": 4.5,
+            "coordinates": {
+                "latitude": 38.88055987547169,
+                "longitude": -77.09060758707929
+            },
+            "transactions": [],
+            "price": "$$",
+            "location": {
+                "address1": "2700 N Pershing Dr",
+                "address2": "",
+                "address3": "",
+                "city": "Arlington",
+                "zip_code": "22201",
+                "country": "US",
+                "state": "VA",
+                "display_address": [
+                    "2700 N Pershing Dr",
+                    "Arlington, VA 22201"
+                ]
+            },
+            "phone": "+17035246800",
+            "display_phone": "(703) 524-6800",
+            "distance": 3447.237039406304
+        },
+        {
+            "id": "1ctsXD-rj0ctn9QCplLVmw",
+            "alias": "medium-rare-arlington-3",
+            "name": "Medium Rare",
+            "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/PZyMMNzb3Ena_3vi-9FqHw/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/medium-rare-arlington-3?adjust_creative=GJK5eaHUqVE8eGMl0w0Pfg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=GJK5eaHUqVE8eGMl0w0Pfg",
+            "review_count": 331,
+            "categories": [
+                {
+                    "alias": "steak",
+                    "title": "Steakhouses"
+                },
+                {
+                    "alias": "breakfast_brunch",
+                    "title": "Breakfast & Brunch"
+                }
+            ],
+            "rating": 3.5,
+            "coordinates": {
+                "latitude": 38.88351,
+                "longitude": -77.103832
+            },
+            "transactions": [
+                "delivery",
+                "pickup"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "3601 Fairfax Dr",
+                "address2": "",
+                "address3": null,
+                "city": "Arlington",
+                "zip_code": "22201",
+                "country": "US",
+                "state": "VA",
+                "display_address": [
+                    "3601 Fairfax Dr",
+                    "Arlington, VA 22201"
+                ]
+            },
+            "phone": "+17032432020",
+            "display_phone": "(703) 243-2020",
+            "distance": 3779.1606298283477
+        },
+        {
+            "id": "QJMhG5YZa422Rqz-m_gXYw",
+            "alias": "chicken-whiskey-washington-4",
+            "name": "Chicken + Whiskey",
+            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/sCplMajnDbqkeK7o25FTPw/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/chicken-whiskey-washington-4?adjust_creative=GJK5eaHUqVE8eGMl0w0Pfg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=GJK5eaHUqVE8eGMl0w0Pfg",
+            "review_count": 628,
+            "categories": [
+                {
+                    "alias": "venezuelan",
+                    "title": "Venezuelan"
+                },
+                {
+                    "alias": "peruvian",
+                    "title": "Peruvian"
+                },
+                {
+                    "alias": "sandwiches",
+                    "title": "Sandwiches"
+                }
+            ],
+            "rating": 4.0,
+            "coordinates": {
+                "latitude": 38.913855,
+                "longitude": -77.032106
+            },
+            "transactions": [
+                "delivery",
+                "pickup"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "1738 14th St NW",
+                "address2": "",
+                "address3": null,
+                "city": "Washington, DC",
+                "zip_code": "20009",
+                "country": "US",
+                "state": "DC",
+                "display_address": [
+                    "1738 14th St NW",
+                    "Washington, DC 20009"
+                ]
+            },
+            "phone": "+12026672456",
+            "display_phone": "(202) 667-2456",
+            "distance": 3795.214542984798
+        },
+        {
+            "id": "IzT4n5qDMzF6fJ33-wwdDw",
+            "alias": "medium-rare-washington",
+            "name": "Medium Rare",
+            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/5j7Z8dM4sJRO0FohDXtQig/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/medium-rare-washington?adjust_creative=GJK5eaHUqVE8eGMl0w0Pfg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=GJK5eaHUqVE8eGMl0w0Pfg",
+            "review_count": 1129,
+            "categories": [
+                {
+                    "alias": "steak",
+                    "title": "Steakhouses"
+                },
+                {
+                    "alias": "newamerican",
+                    "title": "American (New)"
+                },
+                {
+                    "alias": "desserts",
+                    "title": "Desserts"
+                }
+            ],
+            "rating": 4.0,
+            "coordinates": {
+                "latitude": 38.935770888042,
+                "longitude": -77.058927310067
+            },
+            "transactions": [
+                "delivery",
+                "pickup"
+            ],
+            "price": "$$$",
+            "location": {
+                "address1": "3500 Connecticut Ave NW",
+                "address2": "",
+                "address3": "",
+                "city": "Washington, DC",
+                "zip_code": "20008",
+                "country": "US",
+                "state": "DC",
+                "display_address": [
+                    "3500 Connecticut Ave NW",
+                    "Washington, DC 20008"
+                ]
+            },
+            "phone": "+12022371432",
+            "display_phone": "(202) 237-1432",
+            "distance": 3279.927791363549
+        },
+        {
+            "id": "BTOjO-rNIXpb-5OHuHqrHw",
+            "alias": "restaurant-judy-washington",
+            "name": "Restaurant Judy",
+            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/4hI4xks6sCqF2ucrwhCUgQ/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/restaurant-judy-washington?adjust_creative=GJK5eaHUqVE8eGMl0w0Pfg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=GJK5eaHUqVE8eGMl0w0Pfg",
+            "review_count": 280,
+            "categories": [
+                {
+                    "alias": "salvadoran",
+                    "title": "Salvadoran"
+                },
+                {
+                    "alias": "mexican",
+                    "title": "Mexican"
+                }
+            ],
+            "rating": 4.0,
+            "coordinates": {
+                "latitude": 38.91966,
+                "longitude": -77.03229
+            },
+            "transactions": [
+                "delivery"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "2212 14th St NW",
+                "address2": "",
+                "address3": "",
+                "city": "Washington, DC",
+                "zip_code": "20009",
+                "country": "US",
+                "state": "DC",
+                "display_address": [
+                    "2212 14th St NW",
+                    "Washington, DC 20009"
+                ]
+            },
+            "phone": "+12022652519",
+            "display_phone": "(202) 265-2519",
+            "distance": 3921.127627987083
+        },
+        {
+            "id": "8FGizWqfHi9XBL2R6J5uJg",
+            "alias": "lauriol-plaza-washington",
+            "name": "Lauriol Plaza",
+            "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/0rmtkL8dj9JmCQPo2-iwaQ/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/lauriol-plaza-washington?adjust_creative=GJK5eaHUqVE8eGMl0w0Pfg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=GJK5eaHUqVE8eGMl0w0Pfg",
+            "review_count": 2266,
+            "categories": [
+                {
+                    "alias": "mexican",
+                    "title": "Mexican"
+                },
+                {
+                    "alias": "latin",
+                    "title": "Latin American"
+                },
+                {
+                    "alias": "spanish",
+                    "title": "Spanish"
+                }
+            ],
+            "rating": 3.5,
+            "coordinates": {
+                "latitude": 38.91529075296795,
+                "longitude": -77.0414300693839
+            },
+            "transactions": [
+                "delivery",
+                "pickup"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "1835 18th St NW",
+                "address2": "",
+                "address3": "",
+                "city": "Washington, DC",
+                "zip_code": "20009",
+                "country": "US",
+                "state": "DC",
+                "display_address": [
+                    "1835 18th St NW",
+                    "Washington, DC 20009"
+                ]
+            },
+            "phone": "+12023870035",
+            "display_phone": "(202) 387-0035",
+            "distance": 3028.972741608692
+        },
+        {
+            "id": "1ieT14ia0sHQGg6-fK6nAA",
+            "alias": "mortons-the-steakhouse-washington-3",
+            "name": "Morton's The Steakhouse",
+            "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/b0E2u3c79RJlHS-OOG55Lw/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/mortons-the-steakhouse-washington-3?adjust_creative=GJK5eaHUqVE8eGMl0w0Pfg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=GJK5eaHUqVE8eGMl0w0Pfg",
+            "review_count": 313,
+            "categories": [
+                {
+                    "alias": "steak",
+                    "title": "Steakhouses"
+                },
+                {
+                    "alias": "tradamerican",
+                    "title": "American (Traditional)"
+                }
+            ],
+            "rating": 3.5,
+            "coordinates": {
+                "latitude": 38.9032169,
+                "longitude": -77.0401812
+            },
+            "transactions": [
+                "delivery",
+                "pickup"
+            ],
+            "price": "$$$$",
+            "location": {
+                "address1": "1050 Connecticut Ave",
+                "address2": null,
+                "address3": "",
+                "city": "Washington, DC",
+                "zip_code": "20036",
+                "country": "US",
+                "state": "DC",
+                "display_address": [
+                    "1050 Connecticut Ave",
+                    "Washington, DC 20036"
+                ]
+            },
+            "phone": "+12029555997",
+            "display_phone": "(202) 955-5997",
+            "distance": 3135.3843945798844
+        },
+        {
+            "id": "TfpDB-fsA_2HGLHHmQ0JXA",
+            "alias": "caf\u00e9-citron-washington-4",
+            "name": "Caf\u00e9 Citron",
+            "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/3d3oWOgOmWw83yih5yWZPw/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/caf%C3%A9-citron-washington-4?adjust_creative=GJK5eaHUqVE8eGMl0w0Pfg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=GJK5eaHUqVE8eGMl0w0Pfg",
+            "review_count": 563,
+            "categories": [
+                {
+                    "alias": "latin",
+                    "title": "Latin American"
+                },
+                {
+                    "alias": "lounges",
+                    "title": "Lounges"
+                },
+                {
+                    "alias": "musicvenues",
+                    "title": "Music Venues"
+                }
+            ],
+            "rating": 3.5,
+            "coordinates": {
+                "latitude": 38.90844,
+                "longitude": -77.04235
+            },
+            "transactions": [
+                "delivery",
+                "pickup"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "1343 Connecticut Ave NW",
+                "address2": null,
+                "address3": "",
+                "city": "Washington, DC",
+                "zip_code": "20036",
+                "country": "US",
+                "state": "DC",
+                "display_address": [
+                    "1343 Connecticut Ave NW",
+                    "Washington, DC 20036"
+                ]
+            },
+            "phone": "+12025308844",
+            "display_phone": "(202) 530-8844",
+            "distance": 2877.958271970504
+        }
+    ],
+    "total": 11,
+    "region": {
+        "center": {
+            "longitude": -77.07557201385498,
+            "latitude": 38.909268231541304
+        }
+    }
+}

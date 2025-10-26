@@ -1,0 +1,924 @@
+{
+    "businesses": [
+        {
+            "id": "XKOVFGUCK1e0vZBML4ddxw",
+            "alias": "donsak-thai-restaurant-washington",
+            "name": "Donsak Thai Restaurant ",
+            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/btbTD5jafxl-eyTstndhSQ/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/donsak-thai-restaurant-washington?adjust_creative=GJK5eaHUqVE8eGMl0w0Pfg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=GJK5eaHUqVE8eGMl0w0Pfg",
+            "review_count": 97,
+            "categories": [
+                {
+                    "alias": "thai",
+                    "title": "Thai"
+                }
+            ],
+            "rating": 4.4,
+            "coordinates": {
+                "latitude": 38.92398,
+                "longitude": -77.05212
+            },
+            "transactions": [
+                "pickup",
+                "delivery"
+            ],
+            "location": {
+                "address1": "2608 Connecticut Ave NW",
+                "address2": "",
+                "address3": null,
+                "city": "Washington, DC",
+                "zip_code": "20008",
+                "country": "US",
+                "state": "DC",
+                "display_address": [
+                    "2608 Connecticut Ave NW",
+                    "Washington, DC 20008"
+                ]
+            },
+            "phone": "+12025078207",
+            "display_phone": "(202) 507-8207",
+            "distance": 2610.575512747587
+        },
+        {
+            "id": "DB9hhm2cB9Iu88RQw6aqCQ",
+            "alias": "thai-and-time-again-washington-2",
+            "name": "Thai And Time Again",
+            "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/ESUUM3pXZuOxljGo_YjMHA/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/thai-and-time-again-washington-2?adjust_creative=GJK5eaHUqVE8eGMl0w0Pfg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=GJK5eaHUqVE8eGMl0w0Pfg",
+            "review_count": 50,
+            "categories": [
+                {
+                    "alias": "thai",
+                    "title": "Thai"
+                },
+                {
+                    "alias": "noodles",
+                    "title": "Noodles"
+                },
+                {
+                    "alias": "soup",
+                    "title": "Soup"
+                }
+            ],
+            "rating": 4.6,
+            "coordinates": {
+                "latitude": 38.92376109199186,
+                "longitude": -77.05098199999999
+            },
+            "transactions": [
+                "pickup",
+                "delivery"
+            ],
+            "location": {
+                "address1": "2311 Calvert St NW",
+                "address2": null,
+                "address3": "",
+                "city": "Washington, DC",
+                "zip_code": "20748",
+                "country": "US",
+                "state": "DC",
+                "display_address": [
+                    "2311 Calvert St NW",
+                    "Washington, DC 20748"
+                ]
+            },
+            "phone": "+12025061076",
+            "display_phone": "(202) 506-1076",
+            "distance": 2668.901780760328
+        },
+        {
+            "id": "SPWt2Gqb2-alIq78YINs-w",
+            "alias": "toryumon-japanese-house-arlington-2",
+            "name": "Toryumon Japanese House",
+            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/XAoGmtZrTZpIabxbIxnzxQ/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/toryumon-japanese-house-arlington-2?adjust_creative=GJK5eaHUqVE8eGMl0w0Pfg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=GJK5eaHUqVE8eGMl0w0Pfg",
+            "review_count": 234,
+            "categories": [
+                {
+                    "alias": "sushi",
+                    "title": "Sushi Bars"
+                },
+                {
+                    "alias": "ramen",
+                    "title": "Ramen"
+                },
+                {
+                    "alias": "asianfusion",
+                    "title": "Asian Fusion"
+                }
+            ],
+            "rating": 4.3,
+            "coordinates": {
+                "latitude": 38.89405977663849,
+                "longitude": -77.07763317257343
+            },
+            "transactions": [
+                "restaurant_reservation",
+                "pickup",
+                "delivery"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "1650 Wilson Blvd",
+                "address2": "Ste 100B",
+                "address3": "",
+                "city": "Arlington",
+                "zip_code": "22209",
+                "country": "US",
+                "state": "VA",
+                "display_address": [
+                    "1650 Wilson Blvd",
+                    "Ste 100B",
+                    "Arlington, VA 22209"
+                ]
+            },
+            "phone": "+15713571537",
+            "display_phone": "(571) 357-1537",
+            "distance": 1700.4810849971807
+        },
+        {
+            "id": "RiwIUBITUfhn6etk6qVbnQ",
+            "alias": "eerkins-uyghur-cuisine-washington-2",
+            "name": "Eerkin's Uyghur Cuisine",
+            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/GbQu1AtPp5XrzNrKMDgMXg/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/eerkins-uyghur-cuisine-washington-2?adjust_creative=GJK5eaHUqVE8eGMl0w0Pfg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=GJK5eaHUqVE8eGMl0w0Pfg",
+            "review_count": 197,
+            "categories": [
+                {
+                    "alias": "noodles",
+                    "title": "Noodles"
+                },
+                {
+                    "alias": "kebab",
+                    "title": "Kebab"
+                },
+                {
+                    "alias": "tea",
+                    "title": "Tea Rooms"
+                }
+            ],
+            "rating": 4.3,
+            "coordinates": {
+                "latitude": 38.921397,
+                "longitude": -77.072513
+            },
+            "transactions": [
+                "pickup",
+                "delivery"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "2412 Wisconsin Ave NW",
+                "address2": "",
+                "address3": null,
+                "city": "Washington, DC",
+                "zip_code": "20007",
+                "country": "US",
+                "state": "DC",
+                "display_address": [
+                    "2412 Wisconsin Ave NW",
+                    "Washington, DC 20007"
+                ]
+            },
+            "phone": "+12023333600",
+            "display_phone": "(202) 333-3600",
+            "distance": 1372.54495989159
+        },
+        {
+            "id": "eV_87BqGbpvTqUwjOgQO5g",
+            "alias": "reren-washington-3",
+            "name": "Reren",
+            "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/PxQkgCY0DJG8ymZJgRa1Aw/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/reren-washington-3?adjust_creative=GJK5eaHUqVE8eGMl0w0Pfg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=GJK5eaHUqVE8eGMl0w0Pfg",
+            "review_count": 132,
+            "categories": [
+                {
+                    "alias": "asianfusion",
+                    "title": "Asian Fusion"
+                },
+                {
+                    "alias": "ramen",
+                    "title": "Ramen"
+                },
+                {
+                    "alias": "nightlife",
+                    "title": "Nightlife"
+                }
+            ],
+            "rating": 3.9,
+            "coordinates": {
+                "latitude": 38.90468,
+                "longitude": -77.06262
+            },
+            "transactions": [
+                "pickup",
+                "delivery"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "1073 Wisconsin Ave NW",
+                "address2": "2 floor",
+                "address3": "",
+                "city": "Washington, DC",
+                "zip_code": "20007",
+                "country": "US",
+                "state": "DC",
+                "display_address": [
+                    "1073 Wisconsin Ave NW",
+                    "2 floor",
+                    "Washington, DC 20007"
+                ]
+            },
+            "phone": "+12028044962",
+            "display_phone": "(202) 804-4962",
+            "distance": 1231.3769005643042
+        },
+        {
+            "id": "QanUICteMAzlK7jVADa1JA",
+            "alias": "oki-bowl-at-georgetown-washington-2",
+            "name": "OKI bowl at Georgetown",
+            "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/2AaW1GnOKWoEOB0v_5F_4Q/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/oki-bowl-at-georgetown-washington-2?adjust_creative=GJK5eaHUqVE8eGMl0w0Pfg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=GJK5eaHUqVE8eGMl0w0Pfg",
+            "review_count": 290,
+            "categories": [
+                {
+                    "alias": "ramen",
+                    "title": "Ramen"
+                }
+            ],
+            "rating": 3.9,
+            "coordinates": {
+                "latitude": 38.91107,
+                "longitude": -77.06552
+            },
+            "transactions": [
+                "pickup",
+                "delivery"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "1608 Wisconsin Ave NW",
+                "address2": "",
+                "address3": null,
+                "city": "Washington, DC",
+                "zip_code": "20007",
+                "country": "US",
+                "state": "DC",
+                "display_address": [
+                    "1608 Wisconsin Ave NW",
+                    "Washington, DC 20007"
+                ]
+            },
+            "phone": "+12029448660",
+            "display_phone": "(202) 944-8660",
+            "distance": 893.7070290494285
+        },
+        {
+            "id": "iHhrBAMa833_hkYfZ5fDoQ",
+            "alias": "simply-banh-mi-washington-6",
+            "name": "Simply Banh Mi",
+            "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/YPC8j-yKaqSQcveM54qcng/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/simply-banh-mi-washington-6?adjust_creative=GJK5eaHUqVE8eGMl0w0Pfg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=GJK5eaHUqVE8eGMl0w0Pfg",
+            "review_count": 657,
+            "categories": [
+                {
+                    "alias": "vietnamese",
+                    "title": "Vietnamese"
+                },
+                {
+                    "alias": "halal",
+                    "title": "Halal"
+                },
+                {
+                    "alias": "soup",
+                    "title": "Soup"
+                }
+            ],
+            "rating": 4.5,
+            "coordinates": {
+                "latitude": 38.9114651,
+                "longitude": -77.0656503171576
+            },
+            "transactions": [
+                "pickup",
+                "delivery"
+            ],
+            "price": "$",
+            "location": {
+                "address1": "1624 Wisconsin Ave NW",
+                "address2": "",
+                "address3": "",
+                "city": "Washington, DC",
+                "zip_code": "20007",
+                "country": "US",
+                "state": "DC",
+                "display_address": [
+                    "1624 Wisconsin Ave NW",
+                    "Washington, DC 20007"
+                ]
+            },
+            "phone": "+12023335726",
+            "display_phone": "(202) 333-5726",
+            "distance": 892.5436374838213
+        },
+        {
+            "id": "Ek_-kvajIvVJbi3ll4pMww",
+            "alias": "pho-75-arlington",
+            "name": "Pho 75",
+            "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/g-xbssrgCv1z3zCDRTkKPQ/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/pho-75-arlington?adjust_creative=GJK5eaHUqVE8eGMl0w0Pfg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=GJK5eaHUqVE8eGMl0w0Pfg",
+            "review_count": 2098,
+            "categories": [
+                {
+                    "alias": "vietnamese",
+                    "title": "Vietnamese"
+                },
+                {
+                    "alias": "noodles",
+                    "title": "Noodles"
+                }
+            ],
+            "rating": 4.1,
+            "coordinates": {
+                "latitude": 38.8941969403826,
+                "longitude": -77.0788539337479
+            },
+            "transactions": [
+                "delivery"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "1721 Wilson Blvd",
+                "address2": null,
+                "address3": "",
+                "city": "Arlington",
+                "zip_code": "22209",
+                "country": "US",
+                "state": "VA",
+                "display_address": [
+                    "1721 Wilson Blvd",
+                    "Arlington, VA 22209"
+                ]
+            },
+            "phone": "+17035257355",
+            "display_phone": "(703) 525-7355",
+            "distance": 1699.7430086974475
+        },
+        {
+            "id": "M9MhHHorL39Gf-Mz7N9oEA",
+            "alias": "the-happy-eatery-arlington",
+            "name": "The Happy Eatery",
+            "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/G3Q8DWhmqL70_1zy3y9ADg/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/the-happy-eatery-arlington?adjust_creative=GJK5eaHUqVE8eGMl0w0Pfg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=GJK5eaHUqVE8eGMl0w0Pfg",
+            "review_count": 250,
+            "categories": [
+                {
+                    "alias": "vietnamese",
+                    "title": "Vietnamese"
+                },
+                {
+                    "alias": "coffee",
+                    "title": "Coffee & Tea"
+                },
+                {
+                    "alias": "asianfusion",
+                    "title": "Asian Fusion"
+                }
+            ],
+            "rating": 4.1,
+            "coordinates": {
+                "latitude": 38.896769,
+                "longitude": -77.071233
+            },
+            "transactions": [
+                "delivery"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "1800 N Lynn St",
+                "address2": null,
+                "address3": "",
+                "city": "Arlington",
+                "zip_code": "22209",
+                "country": "US",
+                "state": "VA",
+                "display_address": [
+                    "1800 N Lynn St",
+                    "Arlington, VA 22209"
+                ]
+            },
+            "phone": "+15718001881",
+            "display_phone": "(571) 800-1881",
+            "distance": 1454.6734150230877
+        },
+        {
+            "id": "MmgIn8Ufynn8v6lzgLrX-A",
+            "alias": "han-palace-washington-3",
+            "name": "Han Palace",
+            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/Cn_fDw90aeqRCRkaivxd3w/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/han-palace-washington-3?adjust_creative=GJK5eaHUqVE8eGMl0w0Pfg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=GJK5eaHUqVE8eGMl0w0Pfg",
+            "review_count": 28,
+            "categories": [
+                {
+                    "alias": "dimsum",
+                    "title": "Dim Sum"
+                },
+                {
+                    "alias": "cantonese",
+                    "title": "Cantonese"
+                },
+                {
+                    "alias": "buffets",
+                    "title": "Buffets"
+                }
+            ],
+            "rating": 3.6,
+            "coordinates": {
+                "latitude": 38.914425669693635,
+                "longitude": -77.06730374662718
+            },
+            "transactions": [
+                "pickup",
+                "delivery"
+            ],
+            "location": {
+                "address1": "1728 Wisconsin Ave NW",
+                "address2": "",
+                "address3": null,
+                "city": "Washington, DC",
+                "zip_code": "20007",
+                "country": "US",
+                "state": "DC",
+                "display_address": [
+                    "1728 Wisconsin Ave NW",
+                    "Washington, DC 20007"
+                ]
+            },
+            "phone": "+12023556725",
+            "display_phone": "(202) 355-6725",
+            "distance": 916.8751740548753
+        },
+        {
+            "id": "ws2OEuBG41rB5LOq_OE_qg",
+            "alias": "kusshi-glover-park-washington",
+            "name": "Kusshi - Glover Park",
+            "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/LVjCRHER9ye-tlr31F8Z1Q/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/kusshi-glover-park-washington?adjust_creative=GJK5eaHUqVE8eGMl0w0Pfg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=GJK5eaHUqVE8eGMl0w0Pfg",
+            "review_count": 13,
+            "categories": [
+                {
+                    "alias": "sushi",
+                    "title": "Sushi Bars"
+                },
+                {
+                    "alias": "japanese",
+                    "title": "Japanese"
+                }
+            ],
+            "rating": 4.5,
+            "coordinates": {
+                "latitude": 38.920617,
+                "longitude": -77.071394
+            },
+            "transactions": [
+                "pickup",
+                "delivery"
+            ],
+            "location": {
+                "address1": "2309 Wisconsin Ave",
+                "address2": null,
+                "address3": "",
+                "city": "Washington, DC",
+                "zip_code": "20007",
+                "country": "US",
+                "state": "DC",
+                "display_address": [
+                    "2309 Wisconsin Ave",
+                    "Washington, DC 20007"
+                ]
+            },
+            "phone": "+12023333986",
+            "display_phone": "(202) 333-3986",
+            "distance": 1312.4811314043586
+        },
+        {
+            "id": "qGO0rs-uNANLexpMZldTtA",
+            "alias": "momos-cafe-washington",
+            "name": "Momo's Cafe",
+            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/RWajPcG_NmcJ_PbQiCSCzQ/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/momos-cafe-washington?adjust_creative=GJK5eaHUqVE8eGMl0w0Pfg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=GJK5eaHUqVE8eGMl0w0Pfg",
+            "review_count": 201,
+            "categories": [
+                {
+                    "alias": "asianfusion",
+                    "title": "Asian Fusion"
+                },
+                {
+                    "alias": "coffee",
+                    "title": "Coffee & Tea"
+                },
+                {
+                    "alias": "taiwanese",
+                    "title": "Taiwanese"
+                }
+            ],
+            "rating": 4.1,
+            "coordinates": {
+                "latitude": 38.91684,
+                "longitude": -77.0965
+            },
+            "transactions": [
+                "pickup",
+                "delivery"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "4828 MacArthur Blvd NW",
+                "address2": null,
+                "address3": "",
+                "city": "Washington, DC",
+                "zip_code": "20007",
+                "country": "US",
+                "state": "DC",
+                "display_address": [
+                    "4828 MacArthur Blvd NW",
+                    "Washington, DC 20007"
+                ]
+            },
+            "phone": "+12023333675",
+            "display_phone": "(202) 333-3675",
+            "distance": 1996.4432142570759
+        },
+        {
+            "id": "xmVrPFMaJ5ko3o1wxjnIZg",
+            "alias": "han-palace-washington-2",
+            "name": "Han Palace",
+            "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/HCj0TSI6avxGk7wVfnp26A/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/han-palace-washington-2?adjust_creative=GJK5eaHUqVE8eGMl0w0Pfg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=GJK5eaHUqVE8eGMl0w0Pfg",
+            "review_count": 295,
+            "categories": [
+                {
+                    "alias": "dimsum",
+                    "title": "Dim Sum"
+                },
+                {
+                    "alias": "cantonese",
+                    "title": "Cantonese"
+                }
+            ],
+            "rating": 3.9,
+            "coordinates": {
+                "latitude": 38.92497,
+                "longitude": -77.05199
+            },
+            "transactions": [
+                "pickup"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "2649 Connecticut Ave NW",
+                "address2": "",
+                "address3": null,
+                "city": "Washington, DC",
+                "zip_code": "20008",
+                "country": "US",
+                "state": "DC",
+                "display_address": [
+                    "2649 Connecticut Ave NW",
+                    "Washington, DC 20008"
+                ]
+            },
+            "phone": "+12029690018",
+            "display_phone": "(202) 969-0018",
+            "distance": 2687.3966671698704
+        },
+        {
+            "id": "8TcU6v9k3nEKly6WIRMSMA",
+            "alias": "shanghai-lounge-washington",
+            "name": "Shanghai Lounge",
+            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/yXP0RJmqD201g1Jp_pQz1g/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/shanghai-lounge-washington?adjust_creative=GJK5eaHUqVE8eGMl0w0Pfg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=GJK5eaHUqVE8eGMl0w0Pfg",
+            "review_count": 595,
+            "categories": [
+                {
+                    "alias": "asianfusion",
+                    "title": "Asian Fusion"
+                },
+                {
+                    "alias": "shanghainese",
+                    "title": "Shanghainese"
+                }
+            ],
+            "rating": 3.9,
+            "coordinates": {
+                "latitude": 38.914586,
+                "longitude": -77.067402
+            },
+            "transactions": [
+                "pickup",
+                "delivery"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "1734 Wisconsin Ave NW",
+                "address2": "",
+                "address3": "",
+                "city": "Washington, DC",
+                "zip_code": "20007",
+                "country": "US",
+                "state": "DC",
+                "display_address": [
+                    "1734 Wisconsin Ave NW",
+                    "Washington, DC 20007"
+                ]
+            },
+            "phone": "+12023381588",
+            "display_phone": "(202) 338-1588",
+            "distance": 921.5930713262572
+        },
+        {
+            "id": "gwq-QIb-gxNRVAVRuRhLAQ",
+            "alias": "billy-hicks-washington",
+            "name": "Billy Hicks",
+            "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/wcoLkGq_JT-90uRTwmTN6A/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/billy-hicks-washington?adjust_creative=GJK5eaHUqVE8eGMl0w0Pfg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=GJK5eaHUqVE8eGMl0w0Pfg",
+            "review_count": 4,
+            "categories": [
+                {
+                    "alias": "tradamerican",
+                    "title": "American"
+                },
+                {
+                    "alias": "coffee",
+                    "title": "Coffee & Tea"
+                },
+                {
+                    "alias": "beverage_stores",
+                    "title": "Beverage Store"
+                }
+            ],
+            "rating": 4.5,
+            "coordinates": {
+                "latitude": 38.9053016170736,
+                "longitude": -77.0653851
+            },
+            "transactions": [
+                "pickup",
+                "delivery"
+            ],
+            "location": {
+                "address1": "3277 M St NW",
+                "address2": "",
+                "address3": null,
+                "city": "Washington, DC",
+                "zip_code": "20007",
+                "country": "US",
+                "state": "DC",
+                "display_address": [
+                    "3277 M St NW",
+                    "Washington, DC 20007"
+                ]
+            },
+            "phone": "+12027925757",
+            "display_phone": "(202) 792-5757",
+            "distance": 985.6443541150337
+        },
+        {
+            "id": "dIMNqrq_vOHpLcOdcPCVpA",
+            "alias": "saigon-noodles-and-grill-arlington-2",
+            "name": "Saigon Noodles & Grill",
+            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/OiJgHDhsBdSxEr6HyLXiYA/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/saigon-noodles-and-grill-arlington-2?adjust_creative=GJK5eaHUqVE8eGMl0w0Pfg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=GJK5eaHUqVE8eGMl0w0Pfg",
+            "review_count": 193,
+            "categories": [
+                {
+                    "alias": "vietnamese",
+                    "title": "Vietnamese"
+                }
+            ],
+            "rating": 3.8,
+            "coordinates": {
+                "latitude": 38.89396413507029,
+                "longitude": -77.07882922883567
+            },
+            "transactions": [
+                "pickup",
+                "delivery"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "1800 Wilson Blvd",
+                "address2": "",
+                "address3": null,
+                "city": "Arlington",
+                "zip_code": "22201",
+                "country": "US",
+                "state": "VA",
+                "display_address": [
+                    "1800 Wilson Blvd",
+                    "Arlington, VA 22201"
+                ]
+            },
+            "phone": "+17035665940",
+            "display_phone": "(703) 566-5940",
+            "distance": 1724.9207281452616
+        },
+        {
+            "id": "D14Ucgt6SytND1-YwoQVZg",
+            "alias": "seoulspice-arlington",
+            "name": "SeoulSpice",
+            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/0R0uMJAZfoNMUKpY2vm4-w/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/seoulspice-arlington?adjust_creative=GJK5eaHUqVE8eGMl0w0Pfg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=GJK5eaHUqVE8eGMl0w0Pfg",
+            "review_count": 64,
+            "categories": [
+                {
+                    "alias": "korean",
+                    "title": "Korean"
+                },
+                {
+                    "alias": "gluten_free",
+                    "title": "Gluten-Free"
+                },
+                {
+                    "alias": "comfortfood",
+                    "title": "Comfort Food"
+                }
+            ],
+            "rating": 4.4,
+            "coordinates": {
+                "latitude": 38.89580354043643,
+                "longitude": -77.07056576100732
+            },
+            "transactions": [
+                "pickup",
+                "delivery"
+            ],
+            "location": {
+                "address1": "1735 N Lynn St",
+                "address2": "Ste 106",
+                "address3": "",
+                "city": "Arlington",
+                "zip_code": "22209",
+                "country": "US",
+                "state": "VA",
+                "display_address": [
+                    "1735 N Lynn St",
+                    "Ste 106",
+                    "Arlington, VA 22209"
+                ]
+            },
+            "phone": "+17034195868",
+            "display_phone": "(703) 419-5868",
+            "distance": 1558.6175101395754
+        },
+        {
+            "id": "7cGsqMdKLNV-eXItawA6mA",
+            "alias": "reren-lamen-n-bar-washington",
+            "name": "Reren Lamen n Bar",
+            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/PG686Kb10oKrZKdUhcKLPg/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/reren-lamen-n-bar-washington?adjust_creative=GJK5eaHUqVE8eGMl0w0Pfg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=GJK5eaHUqVE8eGMl0w0Pfg",
+            "review_count": 45,
+            "categories": [
+                {
+                    "alias": "ramen",
+                    "title": "Ramen"
+                },
+                {
+                    "alias": "bars",
+                    "title": "Bars"
+                },
+                {
+                    "alias": "noodles",
+                    "title": "Noodles"
+                }
+            ],
+            "rating": 3.8,
+            "coordinates": {
+                "latitude": 38.90468,
+                "longitude": -77.06241
+            },
+            "transactions": [],
+            "location": {
+                "address1": "1073 Wisconsin Ave NW",
+                "address2": "",
+                "address3": null,
+                "city": "Washington, DC",
+                "zip_code": "20007",
+                "country": "US",
+                "state": "DC",
+                "display_address": [
+                    "1073 Wisconsin Ave NW",
+                    "Washington, DC 20007"
+                ]
+            },
+            "phone": "+12024506654",
+            "display_phone": "(202) 450-6654",
+            "distance": 1240.359423212593
+        },
+        {
+            "id": "Lx9N4_5bWxfLTU3f-_8YBw",
+            "alias": "dumplings-and-beyond-washington",
+            "name": "Dumplings & Beyond",
+            "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/SKfeQ9wXJfUM4Zd5pKlIjA/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/dumplings-and-beyond-washington?adjust_creative=GJK5eaHUqVE8eGMl0w0Pfg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=GJK5eaHUqVE8eGMl0w0Pfg",
+            "review_count": 605,
+            "categories": [
+                {
+                    "alias": "chinese",
+                    "title": "Chinese"
+                }
+            ],
+            "rating": 4.1,
+            "coordinates": {
+                "latitude": 38.9211850288095,
+                "longitude": -77.0723823064345
+            },
+            "transactions": [
+                "pickup",
+                "delivery"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "2400 Wisconsin Ave NW",
+                "address2": "Fl 2",
+                "address3": "",
+                "city": "Washington, DC",
+                "zip_code": "20007",
+                "country": "US",
+                "state": "DC",
+                "display_address": [
+                    "2400 Wisconsin Ave NW",
+                    "Fl 2",
+                    "Washington, DC 20007"
+                ]
+            },
+            "phone": "+12023383815",
+            "display_phone": "(202) 338-3815",
+            "distance": 1353.517868694155
+        },
+        {
+            "id": "6MOlZLcCA22fhbGecugyhA",
+            "alias": "kappo-dc-washington",
+            "name": "Kappo DC",
+            "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/JzUKbeameHC4ryn8qaW0tw/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/kappo-dc-washington?adjust_creative=GJK5eaHUqVE8eGMl0w0Pfg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=GJK5eaHUqVE8eGMl0w0Pfg",
+            "review_count": 88,
+            "categories": [
+                {
+                    "alias": "japanese",
+                    "title": "Japanese"
+                }
+            ],
+            "rating": 4.5,
+            "coordinates": {
+                "latitude": 38.91674042257224,
+                "longitude": -77.0963584
+            },
+            "transactions": [],
+            "price": "$$$$",
+            "location": {
+                "address1": "4822 MacArthur Blvd NW",
+                "address2": "",
+                "address3": null,
+                "city": "Washington, DC",
+                "zip_code": "20007",
+                "country": "US",
+                "state": "DC",
+                "display_address": [
+                    "4822 MacArthur Blvd NW",
+                    "Washington, DC 20007"
+                ]
+            },
+            "phone": "+12028859086",
+            "display_phone": "(202) 885-9086",
+            "distance": 1981.1053054242918
+        }
+    ],
+    "total": 117,
+    "region": {
+        "center": {
+            "longitude": -77.07557201385498,
+            "latitude": 38.909268231541304
+        }
+    }
+}

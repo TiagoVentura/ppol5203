@@ -1,0 +1,221 @@
+---
+title: "<span style = 'font-size: 100%;'> PPOL 5203 - Data Science I: Foundations </span>"
+subtitle: "<span style = 'font-size: 100%;'> Week 8: Parsing Unstructured Data: Scraping Static Websites </span>"
+author: "Professor: Tiago Ventura"
+date: "10/29/2024"
+execute: 
+  echo: false
+  error: true
+format:
+  revealjs: 
+    transition: slide
+    background-transition: fade
+    code-line-numbers: false
+    width: 1600
+    height: 1200
+    center: true
+    slide-number: true
+    incremental: false
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    footer: "Data science I: Foundations"
+    theme: [simple, custom.scss]
+---
+
+# Final Project: <https://tiagoventura.github.io/ppol5203/finalproject.html>. <br> Take 2 min to read through.
+
+## You Project Proposal
+
+| **Requirement**  | **Due**         | **Length**    | **Percentage** |
+|------------------|-----------------|---------------|----------------|
+| Project Proposal | **November 15** | 2 pages       | 5%             |
+| Presentation     | December 10     | 10-15 minutes | 10%            |
+| Project Report   | December 17     | 10 pages      | 25%            |
+
+<br>
+
+::: incremental
+-   Groups of three students. You pick your groups. Add your groups here: <https://docs.google.com/spreadsheets/d/1tXCNbAV-vpCMA96OZ0yy_E1quHUhSPuwSrFZ6_SafDk/edit?gid=0#gid=0>
+
+-   You should have meet with me to discuss your proposal.
+
+-   At lest one hour before our meeting, send me a draft of your proposal.
+
+-   Send me an email with your group and when you are going to my office hours.
+
+-   Our meeting should happen before November 12. You have three office hours to go!
+:::
+
+# Questions?
+
+## Where we are...
+
+-   We started with the basics of being a data scientist
+
+-   We moved over to the primitives of Python as your main DS tool
+
+-   Then we started our journey working with tabular data.
+
+-   Now we will learn how to collect/parse with unstructure data sources:
+
+    -   Scrapping websites (today)
+
+    -   Working with APIs and Dynamic Websites (next week)
+
+## Plans for Today
+
+-   Scraping Static Websites
+
+    -   Different strategies to acquire digital data
+    -   Html data structure
+    -   Scrape static websites
+    -   Build a scraper programmatically
+
+# Acquiring Digital Data
+
+## Why? Digital Era
+
+```{r}
+knitr::include_graphics("http://media3.washingtonpost.com/wp-dyn/content/graphic/2011/02/11/GR2011021100614.jpg")
+```
+
+## Two ways to access data from the web
+
+-   **Scraping:** grab information available on websites (Today)
+
+    -   Leveraging the structure of a website to grab it's contents
+
+    -   Using a programming environment (such as R, Python, Java, etc.) to systematically extract that content.
+
+    -   Accomplishing the above in an "unobtrusive" and legal way.
+
+-   **APIs:** Data transfer portals built by companies to allow people to access data programmatically. (Next week)
+
+    -   When available, we will always prefer APIs
+
+## Post-Api Era
+
+Consider the following developments from the past year or so months:
+
+-   Elon Musk has eliminated free access to Twitter's API, and [the only academically useful paid tiers far exceed most researchers' budgets](https://www.theverge.com/2023/3/30/23662832/twitter-api-tiers-free-bot-novelty-accounts-basic-enterprice-monthly-price).
+
+-   [Musk has also demanded that Decahose users delete all Twitter data acquired under previous agreements](https://inews.co.uk/news/twitter-researchers-delete-data-unless-pay-2364535)--whether this demand will be extended to Academic API users is currently unknown.
+
+-   [Reddit has denied access to its API for Pushshift](https://www.reddit.com/r/modnews/comments/134tjpe/reddit_data_api_update_changes_to_pushshift_access/), a popular service used by researchers to collect Reddit data. Popular Reddit app Apollo is facing API charges of \$1.7M per month to continue operating.
+
+-   TikTok released a new API for researchers, which among other things requires them ["to regularly refresh TikTok Research API Data at least every fifteen (15) days, and delete data that is not available from the TikTok Research API at the time of each refresh."](https://www.tiktok.com/legal/page/global/terms-of-service-research-api/en)
+
+-   Crowdtangle, Meta's researcher tool for acquiring data from Facebook and Instagram, still exists as of this writing. [But rumors of its imminent demise have been reported in multiple reputable outlets.](https://www.bloomberg.com/news/articles/2022-06-23/meta-pulls-support-for-tool-used-to-keep-misinformation-in-check?leadSource=uverify%20wall)
+
+    -   This was last year. Crowdtangle has been closed this year.
+
+## What have I scraped?
+
+-   Electoral data from many different countries;
+
+-   Composition of elites around the world;
+
+-   Wikipedia;
+
+-   Toutiao, a news aggregation from China;
+
+-   Political Manifestos in Brazil
+
+-   Fact-Checking News
+
+-   Facebook and Youtube Live Chats.
+
+-   Property Prices from Zillow.
+
+-   News in Latin American
+
+## What is a website?
+
+A website in general is a combination of HTML, CSS, Javascript and PHP.
+
+-   **HTML** provides the structure of the website.
+
+-   **CSS** makes that structure visually appealing by controlling the design and layout.
+
+-   **JavaScript** adds interactivity and makes the website dynamic on the client side.
+
+-   **PHP** handles server-side tasks like generating dynamic HTML content or interacting with a database.
+
+## A simple example
+
+```         
+<html>
+<head>
+  <title> Michael Cohen's Email </title>
+  <script>
+    var foot = bar;
+  <script>
+</head>
+<body>
+  <div id="payments">
+  <h2>Second heading</h2>
+  <p class='slick'>information about <br/><i>payments</i></p>
+  <p>Just <a href="http://www.google.com">google it!</a></p>
+</body>
+</html>
+```
+
+**We will care mostly about HTMLs and CSSs for static websites.**
+
+# Scraping is all about finding tags and collecting the data associated with them
+
+## Tags + HTML Elements
+
+```{r}
+knitr::include_graphics("https://static.semrush.com/blog/uploads/media/59/fc/59fc528eecc00e43b1a3ed5d9b9933ee/4YA3vCJ_Hw6DucoVZ40FbKFRppAReJVOkLKHcZlDkO-9geydLO6tw9uzFJFZf5nam3QcT7p0hRdpFyL2uPhoDISD8CPZwfPE5GTqgpH53q9M99QWgDVhjgQrCMOlQI9fA1T2dCxJ5T2goCV3k1wo-Jc.webp")
+```
+
+## Most common tags
+
+-   **p** -- paragraphs
+-   **a href** -- links
+-   **div** -- divisions
+-   **h** -- headings
+-   **table** -- tables
+
+See [here for more about html tags](https://betterprogramming.pub/understanding-html-basics-for-web-scraping-ae351ee0b3f9)
+
+## Scraping Routine
+
+Scraping often involves the following routine:
+
+-   **Step 1:** Find a website with information you want to collect
+
+-   **Step 2:** Understand and decipher the website
+
+-   **Step 3:** Write code to collect \*\*one\* realization of the data
+
+-   **Step 4:** Build a scraper -- generalize you code into a function.
+
+We will cover these steps with code!!
+
+## Ethical Challenges on scraping
+
+Webscraping is legal as long as the **scraped data is publicly available** and the scraping activity **does not harm the website and the people from whom information is being scraped.**
+
+Here is a list of good practices for scraping:
+
+-   Don't hit servers too often and on peak hours
+
+-   Slow down your code to the speed humans would manually do
+
+-   Use data responsibly (As academics often do)
+
+-   Respect robots.txt
+
+```{python}
+#| eval: false
+#| echo: true
+
+# Put the system to sleep by that random unit
+import time
+time.sleep(random.uniform(1,5))
+```
+
+# [Notebook on Scraping](/lecture_notes/week-08/_week-07_scraping_static.html)

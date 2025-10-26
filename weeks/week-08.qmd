@@ -38,9 +38,14 @@ tbl-colwidths: [10,50,40]
 
 -   Parsing Unstructured Data: Scraping Static Websites: [html](/lecture_notes/week-08/_week-07_scraping_static.html) -- <a href="/lecture_notes/week-08/_week-07_scraping_static.ipynb" download> Jupyter Notebook </a>
 
+-   APIs [html](/lecture_notes/week-09/_week-08_apis.html) -- <a href="/lecture_notes/week-09/_week-08_apis.ipynb" download> Jupyter Notebook </a>
+
+-   OPTIONAL: Selenium [html](/lecture_notes/week-09/_week-08_selenium.html) -- <a href="/lecture_notes/week-09/_week-08_selenium.ipynb" download> Jupyter Notebook </a>
+
+
 # Slides
 
--   [Parsing Unstructured Data: Scraping Static Websites](/slides/week-8.html)
+-   [Parsing Unstructured Data: Scraping Static Websites](/slides/week-8-9.html)
 
 # Readings
 
@@ -75,10 +80,24 @@ tbl-colwidths: [10,50,40]
 
     -   https://www.bloomberg.com/news/articles/2022-06-23/meta-pulls-support-for-tool-used-to-keep-misinformation-in-check?leadSource=uverify%20wall
 
-<!-- https://www.varonis.com/blog/what-is-oauth -->
 
-<!-- https://dl.acm.org/doi/pdf/10.1145/3290605.3300683 -->
+**APIs**
 
-<!-- https://dl.acm.org/doi/pdf/10.1145/3290605.3300683 -->
+-   Nice overview about APIs from Chris Bail [here](https://cbail.github.io/textasdata/apis/rmarkdown/Application_Programming_interfaces.html). (it is in R, so pay more attention to the concepts)
 
-<!-- https://arxiv.org/abs/2203.10666 -->
+**Selenium**
+
+-   [Tutorial Webscrapping using Selenium](https://iqss.github.io/dss-webscrape/index.html)
+
+-   Set up your selenium environment: <https://selenium-python.readthedocs.io/installation.html>
+
+-   Web Driver Manager library in Python: <https://pypi.org/project/webdriver-manager/>
+
+-   Locating elements in Selenium: <https://selenium-python.readthedocs.io/locating-elements.html>
+
+**Applied Research**
+
+-   [Trielli, Daniel, and Nicholas Diakopoulos. "Search as news curator: The role of Google in shaping attention to news information." In Proceedings of the 2019 CHI Conference on human factors in computing systems, pp. 1-15. 2019.](https://dl.acm.org/doi/pdf/10.1145/3290605.3300683)
+
+-   [Haroon, Muhammad, Anshuman Chhabra, Xin Liu, Prasant Mohapatra, Zubair Shafiq, and Magdalena Wojcieszak. "YouTube, the great radicalizer? Auditing and mitigating ideological biases in YouTube recommendations." arXiv preprint arXiv:2203.10666 (2022).](https://arxiv.org/abs/2203.10666)
+
