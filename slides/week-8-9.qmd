@@ -24,16 +24,16 @@ format:
 
 ## Plans for Today
 
--   Scraping Static Websites
+-   Scraping Static Websites (Lecture Notes 1)
 
     -   Different strategies to acquire digital data
     -   Html data structure
     -   Scrape static websites
     -   Build a scraper programmatically
 
-- Accessing data via APIs
+- Accessing data via APIs (Lecture Notes 2)
 
-- Optional: Scraping Dynamic Website with Selenium
+- Optional: Scraping Dynamic Website with Selenium (Lecture Notes 3)
 
 # Acquiring Digital Data
 
@@ -52,8 +52,6 @@ format:
     -   When available, we will always prefer APIs
 
 ## Post-Api Era
-
-Consider the following developments from the past years:
 
 -   Elon Musk has eliminated free access to Twitter's API, and [the only academically useful paid tiers far exceed most researchers' budgets](https://www.theverge.com/2023/3/30/23662832/twitter-api-tiers-free-bot-novelty-accounts-basic-enterprice-monthly-price).
 
@@ -145,8 +143,6 @@ Here is a list of good practices for scraping:
 
 -   Use data responsibly (As academics often do)
 
--   Respect robots.txt
-
 ```{python}
 #| eval: false
 #| echo: true
@@ -171,7 +167,7 @@ time.sleep(random.uniform(1,5))
     -   Access data shared by Companies and NGOs
     -   Process our data with model developed by third party organizations
 
--   We will focus today on the first component.
+-   We will focus today on the first component. We will see the second later when we do LLMs
 
 ## API Components
 

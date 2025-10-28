@@ -14,25 +14,11 @@
     "text": "Week\nTopic\nDate\n\n\n\n\nWeek 01\nIntroduction, Installations, IDEs, Command line\nSeptember 09, 2025\n\n\nWeek 02\nVersion Control, Workflow and Reproducibility: Or a bit of Git & GitHub\nSeptember 16, 2025\n\n\nWeek 03\nIntro to Python - OOP, Data Types, Control Statements and Functions\nSeptember 23, 2025\n\n\nWeek 04\nIntro to Python II: Scaling up your code - Iteration, Comprehension and Functions\nSeptember 30, 2025\n\n\nWeek 05\nFrom Nested lists to Dataframes: Numpy and Intro to Pandas\nOctober 07, 2025\n\n\nWeek 06\nPandas II: Data Wrangling\nOctober 14, 2025\n\n\nWeek 07\nJoining, Tidying and Visualizing Data\nOctober 21, 2025\n\n\nWeek 08\nScraping + APIs\nOctober 28, 2025\n\n\nWeek 09\nStatistical Learning\nNovember 04, 2025\n\n\nWeek 10\nText as Data I: Discovery and Topics\nNovember 11, 2023\n\n\nWeek 11\nText as Data II: Supervised Learning\nNovember 18, 2025\n\n\nWeek 12\nGenerative AI: Classification, Surveys and Prompting (Invited Speaker - Dr. Patrick Wu, American University)\nNovember 25, 2025\n\n\nWeek 13\nSQL\nDecember 03, 2024\n\n\nWeek 14\nPresentations of Final Projects\nDecember 09, 2023"
   },
   {
-    "objectID": "slides/week-8-9.html#you-project-proposal",
-    "href": "slides/week-8-9.html#you-project-proposal",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "You Project Proposal",
-    "text": "You Project Proposal\n\n\n\nRequirement\nDue\nLength\nPercentage\n\n\n\n\nProject Proposal\nNovember 15\n2 pages\n5%\n\n\nPresentation\nDecember 10\n10-15 minutes\n10%\n\n\nProject Report\nDecember 17\n10 pages\n25%\n\n\n\n\n\n\nGroups of three students. You pick your groups. Add your groups here: https://docs.google.com/spreadsheets/d/1tXCNbAV-vpCMA96OZ0yy_E1quHUhSPuwSrFZ6_SafDk/edit?gid=0#gid=0\nYou should have meet with me to discuss your proposal.\nAt lest one hour before our meeting, send me a draft of your proposal.\nSend me an email with your group and when you are going to my office hours.\nOur meeting should happen before November 12. You have three office hours to go!"
-  },
-  {
-    "objectID": "slides/week-8-9.html#where-we-are",
-    "href": "slides/week-8-9.html#where-we-are",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "Where we are…",
-    "text": "Where we are…\n\nWe started with the basics of being a data scientist\nWe moved over to the primitives of Python as your main DS tool\nThen we started our journey working with tabular data.\nNow we will learn how to collect/parse with unstructure data sources:\n\nScrapping websites (today)\nWorking with APIs and Dynamic Websites (next week)"
-  },
-  {
     "objectID": "slides/week-8-9.html#plans-for-today",
     "href": "slides/week-8-9.html#plans-for-today",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "Plans for Today",
-    "text": "Plans for Today\n\nScraping Static Websites\n\nDifferent strategies to acquire digital data\nHtml data structure\nScrape static websites\nBuild a scraper programmatically\n\nAccessing data via APIs\nOptional: Scraping Dynamic Website with Selenium"
+    "text": "Plans for Today\n\nScraping Static Websites (Lecture Notes 1)\n\nDifferent strategies to acquire digital data\nHtml data structure\nScrape static websites\nBuild a scraper programmatically\n\nAccessing data via APIs (Lecture Notes 2)\nOptional: Scraping Dynamic Website with Selenium (Lecture Notes 3)"
   },
   {
     "objectID": "slides/week-8-9.html#two-ways-to-access-data-from-the-web",
@@ -46,7 +32,7 @@
     "href": "slides/week-8-9.html#post-api-era",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "Post-Api Era",
-    "text": "Post-Api Era\nConsider the following developments from the past years:\n\nElon Musk has eliminated free access to Twitter’s API, and the only academically useful paid tiers far exceed most researchers’ budgets.\nMusk has also demanded that Decahose users delete all Twitter data acquired under previous agreements–whether this demand will be extended to Academic API users is currently unknown.\nReddit has denied access to its API for Pushshift, a popular service used by researchers to collect Reddit data. Popular Reddit app Apollo is facing API charges of $1.7M per month to continue operating.\nTikTok released a new API for researchers, which among other things requires them “to regularly refresh TikTok Research API Data at least every fifteen (15) days, and delete data that is not available from the TikTok Research API at the time of each refresh.”\nCrowdtangle, Meta’s researcher tool for acquiring data from Facebook and Instagram, still exists as of this writing. But rumors of its imminent demise have been reported in multiple reputable outlets.\n\nThis was from 2 years ago.\nCrowdtangle was closed last year."
+    "text": "Post-Api Era\n\nElon Musk has eliminated free access to Twitter’s API, and the only academically useful paid tiers far exceed most researchers’ budgets.\nMusk has also demanded that Decahose users delete all Twitter data acquired under previous agreements–whether this demand will be extended to Academic API users is currently unknown.\nReddit has denied access to its API for Pushshift, a popular service used by researchers to collect Reddit data. Popular Reddit app Apollo is facing API charges of $1.7M per month to continue operating.\nTikTok released a new API for researchers, which among other things requires them “to regularly refresh TikTok Research API Data at least every fifteen (15) days, and delete data that is not available from the TikTok Research API at the time of each refresh.”\nCrowdtangle, Meta’s researcher tool for acquiring data from Facebook and Instagram, still exists as of this writing. But rumors of its imminent demise have been reported in multiple reputable outlets.\n\nThis was from 2 years ago.\nCrowdtangle was closed last year."
   },
   {
     "objectID": "slides/week-8-9.html#what-is-a-website",
@@ -88,14 +74,14 @@
     "href": "slides/week-8-9.html#ethical-challenges-on-scraping",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "Ethical Challenges on scraping",
-    "text": "Ethical Challenges on scraping\nWebscraping is legal as long as the scraped data is publicly available and the scraping activity does not harm the website and the people from whom information is being scraped.\nHere is a list of good practices for scraping:\n\nDon’t hit servers too often and on peak hours\nSlow down your code to the speed humans would manually do\nUse data responsibly (As academics often do)\nRespect robots.txt\n\n\n# Put the system to sleep by that random unit\nimport time\ntime.sleep(random.uniform(1,5))"
+    "text": "Ethical Challenges on scraping\nWebscraping is legal as long as the scraped data is publicly available and the scraping activity does not harm the website and the people from whom information is being scraped.\nHere is a list of good practices for scraping:\n\nDon’t hit servers too often and on peak hours\nSlow down your code to the speed humans would manually do\nUse data responsibly (As academics often do)\n\n\n# Put the system to sleep by that random unit\nimport time\ntime.sleep(random.uniform(1,5))"
   },
   {
     "objectID": "slides/week-8-9.html#apis-101",
     "href": "slides/week-8-9.html#apis-101",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "APIs 101",
-    "text": "APIs 101\n\nAPIs: Application Programming Interface\nHow does it work: online server created to facilitate information exchange between data users and the data holders\nUse Cases:\n\nAccess data shared by Companies and NGOs\nProcess our data with model developed by third party organizations\n\nWe will focus today on the first component."
+    "text": "APIs 101\n\nAPIs: Application Programming Interface\nHow does it work: online server created to facilitate information exchange between data users and the data holders\nUse Cases:\n\nAccess data shared by Companies and NGOs\nProcess our data with model developed by third party organizations\n\nWe will focus today on the first component. We will see the second later when we do LLMs"
   },
   {
     "objectID": "slides/week-8-9.html#api-components",
@@ -1754,7 +1740,7 @@
     "href": "slides/week-3.html#what-happens-upon-assignment",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "What happens upon assignment?",
-    "text": "What happens upon assignment?\n\nAction 1: A reference is assigned to an object, with an id number in memory\n\nid(x)\n\n4859634696"
+    "text": "What happens upon assignment?\n\nAction 1: A reference is assigned to an object, with an id number in memory\n\nid(x)\n\n4868023304"
   },
   {
     "objectID": "slides/week-3.html#section-3",
