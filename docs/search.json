@@ -2119,5 +2119,222 @@
     "title": "Syllabus: PPOL 5203 - Data Science I: Foundations",
     "section": "Georgetown Policies",
     "text": "Georgetown Policies\n\nDisability\nIf you believe you have a disability, then you should contact the Academic Resource Center (arc@georgetown.edu) for further information. The Center is located in the Leavey Center, Suite 335 (202-687-8354). The Academic Resource Center is the campus office responsible for reviewing documentation provided by students with disabilities and for determining reasonable accommodations in accordance with the Americans with Disabilities Act (ASA) and University policies. For more information, go to http://academicsupport.georgetown.edu/disability/\n\n\nImportant Academic Policies and Academic Integrity\nMcCourt School students are expected to uphold the academic policies set forth by Georgetown University and the Graduate School of Arts and Sciences. Students should therefore familiarize themselves with all the rules, regulations, and procedures relevant to their pursuit of a Graduate School degree. The policies are located at: http://grad.georgetown.edu/academics/policies/\nApplied to this course, while I encourage collaboration on assignments and use of resources like StackOverflow, the problem sets will ask you to list who you worked on the problem set with and cite StackOverflow if it is the direct source of a code snippet.\n\n\nStatement on Sexual Misconduct\nGeorgetown University and its faculty are committed to supporting survivors and those impacted by sexual misconduct, which includes sexual assault, sexual harassment, relationship violence, and stalking. Georgetown requires faculty members, unless otherwise designated as confidential, to report all disclosures of sexual misconduct to the University Title IX Coordinator or a Deputy Title IX Coordinator. If you disclose an incident of sexual misconduct to a professor in or outside of the classroom (with the exception of disclosures in papers), that faculty member must report the incident to the Title IX Coordinator, or Deputy Title IX Coordinator. The coordinator will, in turn, reach out to the student to provide support, resources, and the option to meet. [Please note that the student is not required to meet with the Title IX coordinator.]. More information about reporting options and resources can be found on the Sexual Misconduct\nWebsite: https://sexualassault.georgetown.edu/resourcecenter\nIf you would prefer to speak to someone confidentially, Georgetown has a number of fully confidential professional resources that can provide support and assistance. These resources include: Health Education Services for Sexual Assault Response and Prevention: confidential email: sarp[at]georgetown.edu\nCounseling and Psychiatric Services (CAPS): 202.687.6985 or after hours, call (833) 960-3006 to reach Fonemed, a telehealth service; individuals may ask for the on-call CAPS clinician\nMore information about reporting options and resources can be found on the Sexual Misconduct Website.\n\n\nProvost’s Policy on Religious Observances\nGeorgetown University promotes respect for all religions. Any student who is unable to attend classes or to participate in any examination, presentation, or assignment on a given day because of the observance of a major religious holiday or related travel shall be excused and provided with the opportunity to make up, without unreasonable burden, any work that has been missed for this reason and shall not in any other way be penalized for the absence or rescheduled work. Students will remain responsible for all assigned work. Students should notify professors in writing at the beginning of the semester of religious observances that conflict with their classes. The Office of the Provost, in consultation with Campus Ministry and the Registrar, will publish, before classes begin for a given term, a list of major religious holidays likely to affect Georgetown students. The Provost and the Main Campus Executive Faculty encourage faculty to accommodate students whose bona fide religious observances in other ways impede normal participation in a course. Students who cannot be accommodated should discuss the matter with an advising dean."
+  },
+  {
+    "objectID": "slides/week-10.html#where-we-are",
+    "href": "slides/week-10.html#where-we-are",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Where we are…",
+    "text": "Where we are…\n\n\nWe started data science workflow (git) and best practices\nWe moved over to the primitives of Python as your main DS tool\nLearned how to work with tabular data using Numpy, Pandas and plotnine\nThen we moved to unestructured data sources:\n\nCollect/parse digital data (website, Apis, and dynamic websites)\n\nToday: we will learn how to build statistical models in Python.\n\nIntro to DS II.\nFoundational DS Knowledge.\nBasis for the last two lecture on working with textual data."
+  },
+  {
+    "objectID": "slides/week-10.html#plans-for-today",
+    "href": "slides/week-10.html#plans-for-today",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Plans for Today",
+    "text": "Plans for Today\n\n\nIntroduction to Machine Learning\n\nStatistical Learning\nInferential Models vs Predictive Models\nMachine Learning:\n\nSupervised vs Unsupervised\nTraining models\nBias and Variance Trade-off\n\nCoding"
+  },
+  {
+    "objectID": "slides/week-10.html#logistics",
+    "href": "slides/week-10.html#logistics",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Logistics",
+    "text": "Logistics\n\n\nYour problem set 3 has been graded. We will post the grades today.\nWe detected some unmoderated usage of LLMs in the problem set, and some penalties were applied on it.\n\nRemember: Use LLMs as a learning tool, not to replace you. the latter is plagiarism.\n\nProject Proposal: Received. No written feedback. Come to my office hours to talk about it."
+  },
+  {
+    "objectID": "slides/week-10.html#what-is-a-model",
+    "href": "slides/week-10.html#what-is-a-model",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "What is a Model?",
+    "text": "What is a Model?\n\nAs social scientists, we are often interested in answering complex questions about human behavior. To answer them, we build models (theoretical and statistical).\n\n\nA model is “a simplified representation of the reality created to serve a purpose.” (Provost & Fawcett 2013)\n\n\nBy definition:\n\nModels are always a simplification of reality.\n\nWe simplify so that we can understand and generalize a complex social process.\n\nModels’ components come from assumptions we make about the world.\nModels are all wrong, but some are useful."
+  },
+  {
+    "objectID": "slides/week-10.html#an-statistical-model",
+    "href": "slides/week-10.html#an-statistical-model",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "An Statistical Model",
+    "text": "An Statistical Model\nThe aim of statistical models is to estimate the relationship between the outcome and some set of variables:\n\\[ y = f(X) + \\epsilon\\]\nWhere:\n\n\\(y\\) is the outcome/dependent/response variable\n\\(X\\) is a matrix of predictors/features/independent variables\n\\(f()\\) is some fixed but unknown function mapping X to y. The “signal” in the data\n\\(\\epsilon\\) is some random error term. The “noise” in the data"
+  },
+  {
+    "objectID": "slides/week-10.html#statistical-learning",
+    "href": "slides/week-10.html#statistical-learning",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Statistical Learning",
+    "text": "Statistical Learning\nStatistical learning refers to a set of methods/approaches for estimating \\(f(.)\\)\n\\[ \\hat{y} = \\hat{f}(X)\\]\n\nWhere \\(\\hat{f}(X)\\) is an approximation of the “true” functional form, \\(f(X)\\)\n\\(\\hat{y}\\) is the predicted value of a true value y."
+  },
+  {
+    "objectID": "slides/week-10.html#reducible-vs.-irreducible-error",
+    "href": "slides/week-10.html#reducible-vs.-irreducible-error",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Reducible vs. Irreducible Error",
+    "text": "Reducible vs. Irreducible Error\n\nWhen we build models, the aim is to find a \\(\\hat{f}(X)\\) that minimizes the error in the model.\n\n\n\\[E(y - \\hat{y})^2\\] \\[E[f(X) + \\epsilon -  \\hat{f}(X) ]^2\\]\n\\[\\underbrace{E[f(X) -\\hat{f}(X)]^2}_{\\text{Reducible}} + \\underbrace{var(\\epsilon)}_{\\text{Irreducible}}\\]\n\n\nThe “reducible” error is the systematic signal. We can reduce this error by using different functional forms, better data, or a mixture of those two.\nThe “irreducible” error is associated with the random noise around \\(y\\).\nStatistical learning is concerned with minimizing the reducible error.\nOur predictions will never be perfect given the irreducible error."
+  },
+  {
+    "objectID": "slides/week-10.html#inference-social-science-vs-prediction-machine-learning",
+    "href": "slides/week-10.html#inference-social-science-vs-prediction-machine-learning",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Inference (Social Science) vs Prediction (Machine Learning)",
+    "text": "Inference (Social Science) vs Prediction (Machine Learning)\nTwo reasons we want to estimate \\(f(\\cdot)\\):\n\nInference\n\nGoal is interpretation\n\nWhich predictors are associated with the response?\nWhat is the relationship (parameters) between the response and the predictors?\nIs the relationship causal?\n\n Key limitation:\n\nusing functional forms that are easy to interpret (e.g. lines) might be far away from the true function form of \\(f(X)\\).\n\nClassic Social Science Approach:\n\nExample: Which socio and demographic features correlates with voting turnout? Education? Gender? Age?\n\n\n\n\n\\[ y_i = \\beta_1*education_i + beta_2*gender_i + \\sigma_i \\]"
+  },
+  {
+    "objectID": "slides/week-10.html#inference-social-science-vs-prediction-machine-learning-1",
+    "href": "slides/week-10.html#inference-social-science-vs-prediction-machine-learning-1",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Inference (Social Science) vs Prediction (Machine Learning)",
+    "text": "Inference (Social Science) vs Prediction (Machine Learning)\n\nPrediction\n\nGoal is to predict values of the outcome, \\(\\hat{y}\\)\n\\(\\hat{f}(X)\\) is treated as a black box\n\nmodel doesn’t need to be interpretable as long as it provides an accurate prediction of \\(y\\).\n\n Key limitation:\n\nInterpretation: it is difficult to know which variables are doing the heavy lifting and the exact influence of \\(x\\) on \\(y\\).\n\nExample: giving a k number of features, and all possible interactions between them,how likely is each voter i to turnout?\nThis is the machine learning tradition/predictive modeling/AI\n\n\n\n\\[ y_i = \\hat{f}(X) + \\sigma_i \\]"
+  },
+  {
+    "objectID": "slides/week-10.html#supervised-and-unsupervised-learning",
+    "href": "slides/week-10.html#supervised-and-unsupervised-learning",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Supervised and Unsupervised Learning",
+    "text": "Supervised and Unsupervised Learning\n\nUnsupervised Learning (DS III)\n\nwe observe a vector of measurements \\(x_i\\) but no associated response \\(y_i\\).\n“unsupervised” because we lack a response variable that can supervise our analysis."
+  },
+  {
+    "objectID": "slides/week-10.html#supervised-and-unsupervised-learning-1",
+    "href": "slides/week-10.html#supervised-and-unsupervised-learning-1",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Supervised and Unsupervised Learning",
+    "text": "Supervised and Unsupervised Learning\n\nSupervised Learning (DS II)\n\nfor each observation of the predictor measurement \\(x_i\\) there is an associated response measurement \\(y_i\\). In essence, there is an outcome we are aiming to accurately predict or understand.\nQuantitative outcome: Regression Models ~ linear, penalization, generalized additive models\nQualitative Outcomes: Classification methods ~ logistic regression, naive Bayes, support vector machines, neural networks"
+  },
+  {
+    "objectID": "slides/week-10.html#types-of-models",
+    "href": "slides/week-10.html#types-of-models",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Types of Models",
+    "text": "Types of Models"
+  },
+  {
+    "objectID": "slides/week-10.html#machine-learning-what-does-learning-mean",
+    "href": "slides/week-10.html#machine-learning-what-does-learning-mean",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Machine Learning: what does learning mean?",
+    "text": "Machine Learning: what does learning mean?\nFor inferential work (in your stats class), you get some data, and you estimate a model using the entire data. This is not what we do in machine learning.\n\nMain objective: predict responses (from new data) accurately by learning from previously seen data\nGoal:\n\ncapture signal in the best way possible \\(f(X)\\)\nIgnore noise (irreducible error)\n\nWhere learning happens?\n\nModel type\nFeatures (variables)\nHyper-Parameters"
+  },
+  {
+    "objectID": "slides/week-10.html#a-machine-learning-pipeline",
+    "href": "slides/week-10.html#a-machine-learning-pipeline",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "A Machine Learning Pipeline",
+    "text": "A Machine Learning Pipeline\nThe purpose of training the model is to capture signal and ignore noise.\nTo do so:\n\nDefine a accuracy metric:\n\nIn the regression setting, the most common accuracy metric is mean squared error (MSE).\nMean Squared Error = \\(\\frac{\\sum^N_{i=1} (y_i - \\hat{f}(X_i))^2}{N}\\)\n\nTrain-Test Split\n\nSplit your data between training and test\nTraining data: find the best model and tune the parameters of these models\nTest data: assess the accuracy of your model.\n\nSelect the model based on smaller out of sample predictive accuracy, using UNSEEN data."
+  },
+  {
+    "objectID": "slides/week-10.html#workflow-inference-vs-ml",
+    "href": "slides/week-10.html#workflow-inference-vs-ml",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Workflow: Inference vs ML",
+    "text": "Workflow: Inference vs ML\n\n\n\n\n\n\n\nsource: https://cimentadaj.github.io/ml_socsci/"
+  },
+  {
+    "objectID": "slides/week-10.html#bias-and-variance-trade-off",
+    "href": "slides/week-10.html#bias-and-variance-trade-off",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Bias and Variance Trade-off",
+    "text": "Bias and Variance Trade-off\n\n\nTrade-off: as we reduce bias, we risk overfiting. Training properly is key to find a middle-of-the-road solution."
+  },
+  {
+    "objectID": "slides/week-10.html#bias-and-variance-trade-off-1",
+    "href": "slides/week-10.html#bias-and-variance-trade-off-1",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Bias and Variance Trade-off",
+    "text": "Bias and Variance Trade-off\n\n\nTrade-off: as we reduce bias, we risk overfiting. Training properly is key to find a middle-of-the-road solution."
+  },
+  {
+    "objectID": "slides/week-10.html#challenge-avoid-overfitting-the-data",
+    "href": "slides/week-10.html#challenge-avoid-overfitting-the-data",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Challenge: avoid overfitting the data",
+    "text": "Challenge: avoid overfitting the data"
+  },
+  {
+    "objectID": "slides/week-10.html#mse-training-data",
+    "href": "slides/week-10.html#mse-training-data",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "MSE Training Data",
+    "text": "MSE Training Data"
+  },
+  {
+    "objectID": "slides/week-10.html#model-accuracy-out-sample-prediction",
+    "href": "slides/week-10.html#model-accuracy-out-sample-prediction",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Model Accuracy: Out-Sample Prediction",
+    "text": "Model Accuracy: Out-Sample Prediction"
+  },
+  {
+    "objectID": "slides/week-10.html#cross-validation",
+    "href": "slides/week-10.html#cross-validation",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Cross-Validation",
+    "text": "Cross-Validation\n\nIf you go back and forth between training and test to decide which model to use, you might also be over-fitting. This is concept known as data leakage.\n\nWe can use re-sampling techniques to generate estimates for the test error.\n“Re-sampling” involves repeatedly drawing samples from a training set and refitting a model of interest on each sample in order to obtain additional information about the fitted model.\nWe can use re-sampling techniques to generate estimates for the test error."
+  },
+  {
+    "objectID": "slides/week-10.html#k-fold-cross-validation",
+    "href": "slides/week-10.html#k-fold-cross-validation",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "K-Fold Cross Validation",
+    "text": "K-Fold Cross Validation\n\nK-Fold Cross Validation involves randomly dividing the data into \\(k\\) groups (or folds). Model is trained on \\(k-1\\) folds, then test on the remaining fold.\nProcess is repeated \\(k\\) times, each time using a new fold.\nOffers \\(k\\) estimates of the test error, which we average to calculate the error"
+  },
+  {
+    "objectID": "slides/week-10.html#important-concepts",
+    "href": "slides/week-10.html#important-concepts",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Important Concepts",
+    "text": "Important Concepts\n\nInference vs Prediction\nPrediction: black-box function, highly flexible to reduce error.\nLearning: train the model in seen data. Test and calculate metrics in seen\nAvoid overfitting and data leakage by using resampling methods."
+  },
+  {
+    "objectID": "slides/week-10.html#coding",
+    "href": "slides/week-10.html#coding",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Coding!",
+    "text": "Coding!\nhttps://tiagoventura.github.io/ppol5203/weeks/week-10.html\n\n\nData science I: Foundations"
+  },
+  {
+    "objectID": "slides/week-10.html#what-can-go-wrong-bias-and-variance-trade-off",
+    "href": "slides/week-10.html#what-can-go-wrong-bias-and-variance-trade-off",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "What can go wrong? Bias and Variance Trade-off",
+    "text": "What can go wrong? Bias and Variance Trade-off\nExpected prediction error for a data point:\n\\[\nE\\big[(\\hat{y} - y)^2\\big] = (\\text{Bias}^2) + \\text{Variance} + \\text{Irreducible Error}\n\\]\n\nBias: Difference between the expected prediction of the model and the true value.\n\\[\\text{Bias}(\\hat{f}(x)) = E[\\hat{f}(x)] - f(x)\\]\n\n\nVariance: How much do the model’s predictions fluctuate for different training sets?\n\\[\n\\text{Var}(\\hat{f}(x)) = E\\Big[\\big(\\hat{f}(x) - E[\\hat{f}(x)]\\big)^2\\Big]\n\\]\n\n\nBias and Variance Tradeoff:\n\nCan fit a very complicated model to our training set perfectly\n\nBias ↓, Variance ↑\n\n\n\n\n\nCan be more relaxed about the performance in the training set\n\nBias ↑, Variance ↓"
+  },
+  {
+    "objectID": "slides/week-10.html#train-validation-test",
+    "href": "slides/week-10.html#train-validation-test",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Train-Validation-Test",
+    "text": "Train-Validation-Test\n\nTraining Set\n\nLargest portion (60-80% of the data)\nTo train the model\n\n\n\nValidation Set\n\nSmaller portion (10-20% of data)\nCheck different models\nTo tune hyperparameters and evaluate model during training\nParameters that we set before training begins (e.g. learning rate, number of neural networks layers, strength of regularization)\n\n\n\nTest Set - Smaller portion (10-20% of data) - To assess final model performance"
+  },
+  {
+    "objectID": "slides/week-10.html#training-the-model-cross-validation",
+    "href": "slides/week-10.html#training-the-model-cross-validation",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Training the Model: Cross-Validation",
+    "text": "Training the Model: Cross-Validation\n\nIf you go back and forth between training and test to decide which model to use, you might also be over-fitting. This is concept known as data leakage.\n\nWe can use re-sampling techniques to generate estimates for the test error.\n“Re-sampling” involves repeatedly drawing samples from a training set and refitting a model of interest on each sample in order to obtain additional information about the fitted model.\nWe can use re-sampling techniques to generate estimates for the test error."
+  },
+  {
+    "objectID": "slides/week-10.html#quizz",
+    "href": "slides/week-10.html#quizz",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Quizz:",
+    "text": "Quizz:\n\nWhich model will perform worse if we are to throw some unseen data?"
+  },
+  {
+    "objectID": "slides/week-10.html#quizz-1",
+    "href": "slides/week-10.html#quizz-1",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Quizz:",
+    "text": "Quizz:\n\nWhat is the difference between inferential models vs predictive modelling? In which one do you care about unbiased estimators?\nCan I use an OLS model for a predictive task? If so, will an OLS model show lean torward high bias and low variance or low bias and high variance?\nWhat happens if I make decisions about which model to fit by ALWAYS looking at the error in the test set?"
+  },
+  {
+    "objectID": "lecture_notes/week-10/solution_in_class.html",
+    "href": "lecture_notes/week-10/solution_in_class.html",
+    "title": "Practice",
+    "section": "",
+    "text": "import matplotlib.pyplot as plt\nmodel_ols_int2= smf.ols(formula='target ~ age + sex + bmi + bp + age*bmi + age*sex', data=diabetes).fit()\nprint(\"R2: \", model_ols_int2.rsquared)\n\ndiabetes[\"ols_pred\"] = model_ols_int2.fittedvalues\n\n# plot\n(ggplot(diabetes, aes(y=\"ols_pred\", x=\"target\")) +\n geom_point() +\n geom_abline(intercept = 0, slope = 1, size = 0.5) +\n ylim(0,350) +\n xlim(0,350)\n)\n\nNameError: name 'smf' is not defined\nIn groups, read the sklearn documentation or check the slide with models I show you in class.\nPick a additional model from the sklearn. Compare this model with the three models I showed you in this notebook\nFeel free to copy and paste the code above, and add your new model and compare the results."
+  },
+  {
+    "objectID": "lecture_notes/week-10/solution_in_class.html#add-your-code",
+    "href": "lecture_notes/week-10/solution_in_class.html#add-your-code",
+    "title": "Practice",
+    "section": "add your code",
+    "text": "add your code"
   }
 ]

@@ -1,0 +1,613 @@
+---
+title: "<span style = 'font-size: 100%;'> PPOL 5203 - Data Science I: Foundations </span>"
+subtitle: "<span style = 'font-size: 100%;'> Week 10: Introduction to Models and Statistical Learning </span>"
+author: "Professor: Tiago Ventura"
+execute: 
+  echo: false
+  error: true
+format:
+  revealjs: 
+    transition: slide
+    background-transition: fade
+    code-line-numbers: false
+    width: 1600
+    height: 1200
+    center: true
+    slide-number: true
+    incremental: true
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    footer: "Data science I: Foundations"
+    theme: [simple, custom.scss]
+    html-math-method:
+      method: mathjax
+      url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+---
+## Plans for Today
+
+::: nonincremental
+-   Introduction to Machine Learning
+
+    -   Statistical Learning
+
+    -   Inferential Models vs Predictive Models
+
+    -   Machine Learning:
+
+        -   Supervised vs Unsupervised
+        -   Training models
+        -   Bias and Variance Trade-off
+
+    -   Coding
+:::
+
+## Logistics 
+
+::: nonincremental
+-   Your problem set 3 has been graded. We will post the grades today. 
+
+-   We detected some unmoderated usage of LLMs in the problem set, and some penalties were applied on it. 
+
+    -  Remember: Use LLMs as a learning tool, not to replace you. the latter is plagiarism. 
+
+- Project Proposal: Received. No written feedback. Come to my office hours to talk about it. 
+
+:::
+
+# Introduction to Machine Learning
+
+## What is a Model?
+
+-   As social scientists, we are often interested in answering **complex** questions about human behavior. To answer them, we build models (theoretical and statistical).
+
+> A model is "a simplified representation of the reality created to serve a purpose." (Provost & Fawcett 2013)
+
+
+-   By definition:
+
+    -   Models are always a simplification of reality.
+
+        -   We simplify so that we can understand and generalize a complex social process.
+
+    -   Models' components come from assumptions we make about the world.
+
+    -   Models are all wrong, but some are useful.
+
+## An Statistical Model
+
+The aim of statistical models is to estimate the relationship between the outcome and some set of variables:
+
+$$ y = f(X) + \epsilon$$
+
+**Where:**
+
+-   $y$ is the outcome/dependent/response variable
+
+-   $X$ is a matrix of predictors/features/independent variables
+
+-   $f()$ is some fixed but unknown function mapping X to y. The "signal" in the data
+
+-   $\epsilon$ is some random error term. The "noise" in the data
+
+## Statistical Learning
+
+Statistical learning refers to a set of methods/approaches for estimating $f(.)$
+
+$$ \hat{y} = \hat{f}(X)$$
+
+-   Where $\hat{f}(X)$ is an approximation of the "true" functional form, $f(X)$
+
+-   $\hat{y}$ is the predicted value of a true value y.
+
+## Reducible vs. Irreducible Error {visibility="hidden"}
+
+-   When we build models, the aim is to find a $\hat{f}(X)$ that minimizes the error in the model.
+
+::: fragment
+$$E(y - \hat{y})^2$$ $$E[f(X) + \epsilon -  \hat{f}(X) ]^2$$
+
+$$\underbrace{E[f(X) -\hat{f}(X)]^2}_{\text{Reducible}} + \underbrace{var(\epsilon)}_{\text{Irreducible}}$$
+:::
+
+-   The **"reducible" error** is the systematic **signal**. We can reduce this error by using different functional forms, better data, or a mixture of those two.
+
+-   The **"irreducible" error** is associated with the random **noise** around $y$.
+
+-   Statistical learning is concerned with minimizing the reducible error.
+
+-   Our predictions will never be perfect given the irreducible error.
+
+## Inference (Social Science) vs Prediction (Machine Learning)
+
+Two reasons we want to estimate $f(\cdot)$:
+
+-   **Inference**
+
+    -   Goal is ***interpretation***
+
+        -   *Which predictors are associated with the response?*
+        -   *What is the relationship (parameters) between the response and the predictors?*
+        -   *Is the relationship causal?*
+
+    -   <font color = "darkred"> Key limitation</font>:
+
+        -   using functional forms that are easy to interpret (e.g. lines) might be far away from the true function form of $f(X)$.
+
+    -   <font color = "darkred">Classic Social Science Approach</font>:
+
+        -   Example: Which socio and demographic features correlates with voting turnout? Education? Gender? Age?
+
+::: fragment
+$$ y_i = \beta_1*education_i + beta_2*gender_i + \sigma_i $$
+:::
+
+## Inference (Social Science) vs Prediction (Machine Learning)
+
+-   **Prediction**
+
+    -   Goal is to ***predict*** values of the outcome, $\hat{y}$
+
+    -   $\hat{f}(X)$ is treated as a ***black box***
+
+        -   model doesn't need to be interpretable as long as it provides an accurate prediction of $y$.
+
+    -   <font color = "darkred"> Key limitation</font>:
+
+        -   *Interpretation*: it is difficult to know which variables are doing the heavy lifting and the exact influence of $x$ on $y$.
+
+    -   Example: giving a k number of features, and all possible interactions between them,how likely is each voter i to turnout?
+
+    -   **This is the machine learning tradition/predictive modeling/AI**
+
+::: fragment
+$$ y_i = \hat{f}(X) + \sigma_i $$
+:::
+
+# Machine Learning
+
+## Supervised and Unsupervised Learning
+
+-   <u>**Unsupervised Learning (DS III)**</u>
+
+    -   we observe a vector of measurements $x_i$ but *no* associated response $y_i$.
+
+    -   "unsupervised" because we lack a response variable that can supervise our analysis.
+
+::: fragment
+```{r,echo=F,fig.align="center",fig.width=12}
+require(tidyverse)
+require(caret)
+require(recipes)
+set.seed(123)
+n = 50
+sigma = matrix(c(1,0,0,1),ncol=2,nrow=2)
+x1 <- MASS::mvrnorm(n,c(0,0),Sigma = sigma) %>% as_tibble() %>% mutate(group=1)
+x2 <- MASS::mvrnorm(n,c(-3,-3),Sigma = sigma) %>% as_tibble() %>% mutate(group=2)
+x3 <- MASS::mvrnorm(n,c(-3,3),Sigma = sigma) %>% as_tibble() %>% mutate(group=3)
+bind_rows(x1,x2,x3) %>% 
+  ggplot(aes(V1,V2,color=factor(group),pch=factor(group))) +
+  geom_point(size=3) +
+  theme_minimal() +
+  theme(legend.position = "none",
+        axis.title = element_text(size=18))
+```
+:::
+
+## Supervised and Unsupervised Learning
+
+-   <u>**Supervised Learning (DS II)**</u>
+
+    -   for each observation of the predictor measurement $x_i$ there is an associated response measurement $y_i$. In essence, there is an *outcome* we are aiming to accurately predict or understand.
+
+    -   **Quantitative** outcome: Regression Models \~ linear, penalization, generalized additive models
+
+    -   **Qualitative Outcomes**: Classification methods \~ logistic regression, naive Bayes, support vector machines, neural networks
+
+::: fragment
+```{r,echo=F,fig.align="center",fig.width=12}
+require(tidyverse)
+require(caret)
+require(recipes)
+set.seed(123)
+x <- rnorm(150)
+y = 1 + 2*x + rnorm(150)
+tibble(x,y) %>% 
+  ggplot(aes(x,y)) +
+  geom_point(size=3,color="grey30") +
+  geom_smooth(method="lm",se=F,size=2) +
+  theme_minimal() +
+  theme(legend.position = "none",
+        axis.title = element_text(size=18))
+```
+:::
+
+```{=html}
+<!-- ## Supervised Learning: Regression
+
+*Outcomes* come in many forms. How the outcome are distributed will determine the methods we use.
+
+-   **Quantitative** outcome
+
+    -   a continuous/interval-based outcome: e.g. housing price, number of bills passed, stock market prices, etc.
+
+    -   Regression Methods: linear, penalization, generalized additive models (GAMs)
+
+    -   Both parametric and non-parametric ways of approximating $f(\cdot)$
+
+------------------------------------------------------------------------
+
+## Supervised Learning: Classification
+
+*Outcomes* come in many forms. How the outcome is distributed will determine the methods we use.
+
+-   **Qualitative** outcome
+
+    -   a discrete outcome
+
+        -   *Binary*: War/No War; Sick/Not Sick
+
+        -   *Ordered*: Don't Support, Neutral, Support
+
+        -   *Categorical*: Cat, Dog, Bus, ...
+
+    -   Classification Methods: logistic regression, naive Bayes, support vector machines, neural networks
+
+-   Some methods can be used on either outcome type
+
+    -   K nearest neighbors
+    -   tree-based methods (random forest, gradient boosting)
+
+-   Every model has specific **tuning parameters** that we can use to optimize performance.
+
+-->
+```
+
+## Types of Models
+
+```{r out.width="100%"}
+knitr::include_graphics("week10_figs/interpret-vs-flexible.png")
+```
+
+## Machine Learning: what does learning mean?
+
+For inferential work (in your stats class), you get some data, and you estimate a model using the entire data. This is not what we do in machine learning.
+
+-   **Main objective:** predict responses (**from new data**) accurately by learning from **previously seen** data
+
+-   **Goal:**
+
+    -   capture signal in the best way possible $f(X)$
+
+    -   Ignore noise (irreducible error)
+
+-   **Where learning happens?**
+
+    -   Model type
+
+    -   Features (variables)
+
+    -   Hyper-Parameters
+
+## A Machine Learning Pipeline
+
+The purpose of training the model is to **capture signal** and **ignore noise**.
+
+To do so:
+
+-   Define a accuracy metric:
+
+    -   In the regression setting, the most common accuracy metric is *mean squared error* (MSE).
+    -   Mean Squared Error = $\frac{\sum^N_{i=1} (y_i - \hat{f}(X_i))^2}{N}$
+
+-   Train-Test Split
+
+    -   Split your data between training and test
+
+    -   Training data: find the best model and tune the parameters of these models
+
+    -   Test data: assess the accuracy of your model.
+
+-   Select the model based on smaller **out of sample predictive accuracy**, using **UNSEEN** data.
+
+## Workflow: Inference vs ML
+
+```{r}
+knitr::include_graphics("https://cimentadaj.github.io/ml_socsci/img/socsci_wflow3_smaller.svg")
+```
+
+::: aside
+source: https://cimentadaj.github.io/ml_socsci/
+:::
+
+
+## What can go wrong? Bias and Variance Trade-off
+
+Expected prediction error for a data point:
+
+$$
+E\big[(\hat{y} - y)^2\big] = (\text{Bias}^2) + \text{Variance} + \text{Irreducible Error}
+$$
+
+::: fragment
+**Bias:** Difference between the expected prediction of the model and the true value.
+
+$$\text{Bias}(\hat{f}(x)) = E[\hat{f}(x)] - f(x)$$
+:::
+
+::: fragment
+**Variance:** How much do the model’s predictions fluctuate for different training sets?
+
+$$ 
+\text{Var}(\hat{f}(x)) = E\Big[\big(\hat{f}(x) - E[\hat{f}(x)]\big)^2\Big]
+$$
+
+:::
+
+::: fragment
+**Bias and Variance Tradeoff:**
+
+-   Can fit a very complicated model to our training set perfectly
+
+    -   **Bias ↓, Variance ↑**
+:::
+
+::: fragment
+-   Can be more relaxed about the performance in the training set
+
+    -   **Bias ↑, Variance ↓**
+:::
+
+## Bias and Variance Trade-off
+
+```{r out.width="60%"}
+knitr::include_graphics("week10_figs/interpret-vs-flexible.png")
+```
+
+-   **Trade-off**: as we reduce bias, we risk overfiting. Training properly is key to find a middle-of-the-road solution.
+
+## Challenge: avoid overfitting the data
+
+```{r}
+library(ggplot2)
+library(patchwork)
+library(scales)
+
+## Data creation
+set.seed(2313)
+n <- 500
+x <- rnorm(n)
+y <- x^3 + rnorm(n, sd = 3)
+age <- rescale(x, to = c(0, 100))
+income <- rescale(y, to = c(0, 5000))
+age_inc <- data.frame(age = age, income = income)
+## Data creation
+
+y_axis <- scale_y_continuous(labels = dollar_format(suffix = "€", prefix = ""),
+                             limits = c(0, 5000),
+                             name = "Income")
+
+x_axis <- scale_x_continuous(name = "Age")
+
+bad_fit <-
+  ggplot(age_inc, aes(age, income)) +
+  geom_point(alpha=.2) +
+  geom_smooth(method = "lm") +
+  y_axis +
+  x_axis +  
+  ggtitle("Underfit") +
+  theme_minimal()
+
+overfit <-
+  ggplot(age_inc, aes(age, income)) +
+  geom_point(alpha=.2) +
+  geom_smooth(method = "loess", span = 0.015) +
+  y_axis +
+  x_axis +  
+  ggtitle("Overfit") +
+  theme_minimal() 
+
+goodfit <-
+  ggplot(age_inc, aes(age, income)) +
+  geom_point(alpha=.2) +
+  geom_smooth(method = "loess", span = 0.9, color="red") +
+  y_axis +
+  x_axis +  
+  ggtitle("Ideal fit") +
+  theme_minimal() +
+  theme(plot.title = element_text(colour = "red", face = "bold"))
+
+
+bad_fit + overfit + goodfit
+```
+
+
+## MSE Training Data
+
+```{r}
+library(tidyverse)
+set.seed(123)
+N = 100
+x <- rnorm(N)
+X <- splines::bs(x,degree=7)
+B <- runif(7,-5,5) 
+y <- X%*%B + rnorm(N,mean = 0,.2)
+D = tibble(x,y = as.numeric(y))
+
+
+modA = lm(y ~ x,data = D)
+D$yhatA = predict(modA,D)
+modD = lm(y ~ poly(x,21),data = D)
+D$yhatD = predict(modD,D)
+modB = lm(y ~ poly(x,2),data = D)
+D$yhatB = predict(modB,D)
+modC = lm(y ~ poly(x,5),data = D)
+D$yhatC = predict(modC,D)
+mse = function(y,yh) { mean((y-yh)^2) }
+
+D %>% 
+  gather(mod,yh,-y,-x) %>% 
+  mutate(mod = str_remove(mod,"yhat")) %>% 
+  group_by(mod) %>% 
+  mutate(mse =mean((y-yh)^2),
+         mse_txt = str_glue("Model {mod}\nMSE = {round(mse,3)}")) %>% 
+  ggplot(aes(x,y)) +
+  geom_point(alpha=.7,size=3,color="grey30") +
+  geom_line(aes(x,yh),color="blue",size=2,alpha=.6) +
+  theme_bw() +
+  facet_wrap(~mse_txt) +
+  theme(legend.position = "none",
+        axis.title = element_text(size=18),
+        axis.text = element_text(size=20),
+        strip.text = element_text(size=24),
+        text = element_text(family="serif"))
+
+
+```
+
+## Quizz:
+
+- Which model will perform worse if we are to throw some unseen data? 
+
+## Model Accuracy: Out-Sample Prediction
+
+```{r}
+set.seed(321)
+N = 100
+x <- rnorm(N)
+X <- splines::bs(x,degree=7)
+# Use the same betas
+y <- X%*%B + rnorm(N,mean = 0,.5)
+D2 = tibble(x,y = as.numeric(y))
+
+D2$yhatA = predict(modA,D2)
+D2$yhatB = predict(modB,D2)
+D2$yhatC = predict(modC,D2)
+D2$yhatD = predict(modD,D2)
+
+# Define Sets
+D$set = "Training Set"
+D2$set = "Test Set"
+
+D2 %>% 
+  gather(mod,yh,-y,-x,-set) %>% 
+  mutate(mod = str_remove(mod,"yhat")) %>% 
+  group_by(mod) %>% 
+  mutate(mse =mean((y-yh)^2),
+         mse_txt = str_glue("Model {mod}\nMSE = {round(mse,3)}")) %>% 
+  ggplot(aes(x,y)) +
+  geom_point(alpha=.7,size=3,color='forestgreen') +
+  geom_line(aes(x,yh),color="blue",size=2,alpha=.6) +
+  theme_bw() +
+  facet_wrap(~mse_txt,scale="free") +
+  # ylim(-5,5) +
+  theme(legend.position = "none",
+        axis.title = element_text(size=18),
+        axis.text = element_text(size=20),
+        strip.text = element_text(size=24),
+        text = element_text(family="serif"))
+
+
+```
+
+
+## Train-Validation-Test
+
+::: fragment
+Training Set
+
+-   Largest portion (60-80% of the data)
+-   To train the model
+:::
+
+::: fragment
+Validation Set
+
+-   Smaller portion (10-20% of data)
+-   Check different models
+-   To tune hyperparameters and evaluate model during training
+-   Parameters that we set before training begins (e.g. learning rate, number of neural networks layers, strength of regularization)
+:::
+
+::: fragment
+Test Set - Smaller portion (10-20% of data) - To assess final model performance
+:::
+
+
+## Training the Model: Cross-Validation
+
+-   If you go back and forth between training and test to decide which model to use, you might also be over-fitting. This is concept known as **data leakage**.
+
+    -   We can use re-sampling techniques to generate estimates for the test error.
+
+    -   "Re-sampling" involves repeatedly drawing samples from a training set and refitting a model of interest on each sample in order to obtain additional information about the fitted model.
+
+    -   We can use re-sampling techniques to generate estimates for the test error.
+
+## K-Fold Cross Validation
+
+-   K-Fold Cross Validation involves randomly dividing the data into $k$ groups (or folds). Model is trained on $k-1$ folds, then test on the remaining fold.
+
+-   Process is repeated $k$ times, each time using a new fold.
+
+-   Offers $k$ estimates of the test error, which we average to calculate the error
+
+::: fragment
+```{r out.width="100%"}
+knitr::include_graphics("week10_figs/KfoldCV.gif")
+```
+:::
+
+
+## Measures of Accuracy for Classification tasks {visibility="hidden"}
+
+|            |       |     Predicted      |                    |       |
+|------------|-------|:------------------:|:------------------:|------:|
+|            |       |         J          |         ¬J         | Total |
+| **Actual** | J     | a (True Positive)  | b (False Negative) |   a+b |
+|            | ¬J    | c (False Positive) | d (True Negative)  |   c+d |
+|            | Total |        a+c         |        b+d         |     N |
+
+::: incremental
+-   **Accuracy**: number correctly classified/total number of cases = (a+d)/(a+b+c+d)
+
+-   **Precision** : number of TP / (number of TP+number of FP) = a/(a+c) .
+
+    -   Fraction of the documents predicted to be J, that were in fact J.
+    -   Think as a measure for the estimator (Very precise estimate)
+
+-   **Recall**: (number of TP) / (number of TP + number of FN) = a /(a+b)
+
+    -   Fraction of the documents that were in fact J, that method predicted were J.
+    -   Think as a measure for the data (Covers most of the cases in the data)
+
+-   **F** : 2 precision\*recall / precision+recall
+
+    -   Harmonic mean of precision and recall.
+:::
+
+
+## Quizz: 
+
+
+- What is the difference between inferential models vs predictive modelling? In which one do you care about unbiased estimators?
+
+- Can I use an OLS model for a predictive task? If so, will an OLS model show lean torward high bias and low variance or low bias and high variance?
+
+- What happens if I make decisions about which model to fit by ALWAYS looking at the error in the test set?
+
+
+
+## Important Concepts{visibility="hidden"}
+
+-   Inference vs Prediction
+
+-   Prediction: black-box function, highly flexible to reduce error.
+
+-   Learning: train the model in seen data. Test and calculate metrics in seen
+
+-   Avoid overfitting and data leakage by using resampling methods.
+
+## Coding!
+
+<https://tiagoventura.github.io/ppol5203/weeks/week-10.html>
