@@ -2146,7 +2146,7 @@
     "href": "slides/week-10.html#what-is-a-model",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "What is a Model?",
-    "text": "What is a Model?\n\nAs social scientists, we are often interested in answering complex questions about human behavior. To answer them, we build models (theoretical and statistical).\n\n\nA model is “a simplified representation of the reality created to serve a purpose.” (Provost & Fawcett 2013)\n\n\nBy definition:\n\nModels are always a simplification of reality.\n\nWe simplify so that we can understand and generalize a complex social process.\n\nModels’ components come from assumptions we make about the world.\nModels are all wrong, but some are useful."
+    "text": "What is a Model?\n\nAs social scientists, we are often interested in answering complex questions about human behavior. To answer them, we build models (theoretical and statistical).\n\n\n\nA model is “a simplified representation of the reality created to serve a purpose.” (Provost & Fawcett 2013)\n\n\n\nBy definition:\n\nModels are always a simplification of reality.\n\nWe simplify so that we can understand and generalize a complex social process.\n\nModels’ components come from assumptions we make about the world.\nModels are all wrong, but some are useful."
   },
   {
     "objectID": "slides/week-10.html#an-statistical-model",
@@ -2167,7 +2167,7 @@
     "href": "slides/week-10.html#reducible-vs.-irreducible-error",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "Reducible vs. Irreducible Error",
-    "text": "Reducible vs. Irreducible Error\n\nWhen we build models, the aim is to find a \\(\\hat{f}(X)\\) that minimizes the error in the model.\n\n\n\\[E(y - \\hat{y})^2\\] \\[E[f(X) + \\epsilon -  \\hat{f}(X) ]^2\\]\n\\[\\underbrace{E[f(X) -\\hat{f}(X)]^2}_{\\text{Reducible}} + \\underbrace{var(\\epsilon)}_{\\text{Irreducible}}\\]\n\n\nThe “reducible” error is the systematic signal. We can reduce this error by using different functional forms, better data, or a mixture of those two.\nThe “irreducible” error is associated with the random noise around \\(y\\).\nStatistical learning is concerned with minimizing the reducible error.\nOur predictions will never be perfect given the irreducible error."
+    "text": "Reducible vs. Irreducible Error\n\nWhen we build models, the aim is to find a \\(\\hat{f}(X)\\) that minimizes the error in the model.\n\n\n\\[\\text{total error} = E(y - \\hat{y})^2\\] \\[ = E[f(X) + \\epsilon -  \\hat{f}(X) ]^2\\]\n\\[= \\underbrace{E[f(X) -\\hat{f}(X)]^2}_{\\text{Reducible}} + \\underbrace{var(\\epsilon)}_{\\text{Irreducible}}\\]\n\n\nThe “reducible” error is the systematic signal. We can reduce this error by using different functional forms, better data, or a mixture of those two.\nThe “irreducible” error is associated with the random noise around \\(y\\).\nStatistical learning is concerned with minimizing the reducible error.\nOur predictions will never be perfect given the irreducible error."
   },
   {
     "objectID": "slides/week-10.html#inference-social-science-vs-prediction-machine-learning",
@@ -2181,14 +2181,14 @@
     "href": "slides/week-10.html#inference-social-science-vs-prediction-machine-learning-1",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "Inference (Social Science) vs Prediction (Machine Learning)",
-    "text": "Inference (Social Science) vs Prediction (Machine Learning)\n\nPrediction\n\nGoal is to predict values of the outcome, \\(\\hat{y}\\)\n\\(\\hat{f}(X)\\) is treated as a black box\n\nmodel doesn’t need to be interpretable as long as it provides an accurate prediction of \\(y\\).\n\n Key limitation:\n\nInterpretation: it is difficult to know which variables are doing the heavy lifting and the exact influence of \\(x\\) on \\(y\\).\n\nExample: giving a k number of features, and all possible interactions between them,how likely is each voter i to turnout?\nThis is the machine learning tradition/predictive modeling/AI\n\n\n\n\\[ y_i = \\hat{f}(X) + \\sigma_i \\]"
+    "text": "Inference (Social Science) vs Prediction (Machine Learning)\n\nPrediction\n\nGoal is to predict values of the outcome, \\(\\hat{y}\\)\n\\(\\hat{f}(X)\\) is treated as a black box\n\nmodel doesn’t need to be interpretable as long as it provides an accurate prediction of \\(y\\).\n\n Key limitation:\n\nInterpretation: it is difficult to know which variables are doing the heavy lifting and the exact influence of \\(x\\) on \\(y\\).\n\nExample: giving a k number of features, and all possible interactions between them,how likely is each voter i to turnout?\nThis is the machine learning tradition/predictive modeling/AI"
   },
   {
     "objectID": "slides/week-10.html#supervised-and-unsupervised-learning",
     "href": "slides/week-10.html#supervised-and-unsupervised-learning",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "Supervised and Unsupervised Learning",
-    "text": "Supervised and Unsupervised Learning\n\nUnsupervised Learning (DS III)\n\nwe observe a vector of measurements \\(x_i\\) but no associated response \\(y_i\\).\n“unsupervised” because we lack a response variable that can supervise our analysis."
+    "text": "Supervised and Unsupervised Learning\n\nSupervised Learning (DS II)\n\nfor each observation of the predictor measurement \\(x_i\\) there is an associated response measurement \\(y_i\\). In essence, there is an outcome we are aiming to accurately predict or understand.\nQuantitative outcome: Regression Models ~ linear, penalization, generalized additive models\nQualitative Outcomes: Classification methods ~ logistic regression, naive Bayes, support vector machines, neural networks"
   },
   {
     "objectID": "slides/week-10.html#supervised-and-unsupervised-learning-1",
@@ -2293,7 +2293,7 @@
     "href": "slides/week-10.html#what-can-go-wrong-bias-and-variance-trade-off",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "What can go wrong? Bias and Variance Trade-off",
-    "text": "What can go wrong? Bias and Variance Trade-off\nExpected prediction error for a data point:\n\\[\nE\\big[(\\hat{y} - y)^2\\big] = (\\text{Bias}^2) + \\text{Variance} + \\text{Irreducible Error}\n\\]\n\nBias: Difference between the expected prediction of the model and the true value.\n\\[\\text{Bias}(\\hat{f}(x)) = E[\\hat{f}(x)] - f(x)\\]\n\n\nVariance: How much do the model’s predictions fluctuate for different training sets?\n\\[\n\\text{Var}(\\hat{f}(x)) = E\\Big[\\big(\\hat{f}(x) - E[\\hat{f}(x)]\\big)^2\\Big]\n\\]\n\n\nBias and Variance Tradeoff:\n\nCan fit a very complicated model to our training set perfectly\n\nBias ↓, Variance ↑\n\n\n\n\n\nCan be more relaxed about the performance in the training set\n\nBias ↑, Variance ↓"
+    "text": "What can go wrong? Bias and Variance Trade-off\nExpected prediction error for a data point:\n\\[\nE\\big[(\\hat{y} - y)^2\\big] = (E[\\hat{f}(x)] - f(x))^2 + E\\Big[\\big(\\hat{f}(x) - E[\\hat{f}(x)]\\big)^2\\Big] + \\epsilon\n\\]\n\nBias: Difference between the expected prediction of the model and the true value.\n\\[\\text{Bias}(\\hat{f}(x)) = E[\\hat{f}(x)] - f(x)\\]\n\n\nVariance: How much do the model’s predictions fluctuate for different training sets?\n\\[\n\\text{Var}(\\hat{f}(x)) = E\\Big[\\big(\\hat{f}(x) - E[\\hat{f}(x)]\\big)^2\\Big]\n\\]\n\n\nBias and Variance Tradeoff:\n\nCan fit a very complicated model to our training set perfectly\n\nBias ↓, Variance ↑\n\n\n\n\n\nCan be more relaxed about the performance in the training set\n\nBias ↑, Variance ↓"
   },
   {
     "objectID": "slides/week-10.html#train-validation-test",
@@ -2336,5 +2336,12 @@
     "title": "Practice",
     "section": "add your code",
     "text": "add your code"
+  },
+  {
+    "objectID": "slides/week-10.html#supervised-and-unsupervised-machine-learning",
+    "href": "slides/week-10.html#supervised-and-unsupervised-machine-learning",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Supervised and Unsupervised Machine Learning",
+    "text": "Supervised and Unsupervised Machine Learning\n\nUnsupervised Learning (DS III)\n\nwe observe a vector of measurements \\(x_i\\) but no associated response \\(y_i\\).\n“unsupervised” because we lack a response variable that can supervise our analysis."
   }
 ]

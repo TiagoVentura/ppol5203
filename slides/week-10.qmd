@@ -61,8 +61,10 @@ format:
 
 -   As social scientists, we are often interested in answering **complex** questions about human behavior. To answer them, we build models (theoretical and statistical).
 
-> A model is "a simplified representation of the reality created to serve a purpose." (Provost & Fawcett 2013)
 
+:::fragment
+> A model is "a simplified representation of the reality created to serve a purpose." (Provost & Fawcett 2013)
+:::
 
 -   By definition:
 
@@ -100,23 +102,6 @@ $$ \hat{y} = \hat{f}(X)$$
 
 -   $\hat{y}$ is the predicted value of a true value y.
 
-## Reducible vs. Irreducible Error {visibility="hidden"}
-
--   When we build models, the aim is to find a $\hat{f}(X)$ that minimizes the error in the model.
-
-::: fragment
-$$E(y - \hat{y})^2$$ $$E[f(X) + \epsilon -  \hat{f}(X) ]^2$$
-
-$$\underbrace{E[f(X) -\hat{f}(X)]^2}_{\text{Reducible}} + \underbrace{var(\epsilon)}_{\text{Irreducible}}$$
-:::
-
--   The **"reducible" error** is the systematic **signal**. We can reduce this error by using different functional forms, better data, or a mixture of those two.
-
--   The **"irreducible" error** is associated with the random **noise** around $y$.
-
--   Statistical learning is concerned with minimizing the reducible error.
-
--   Our predictions will never be perfect given the irreducible error.
 
 ## Inference (Social Science) vs Prediction (Machine Learning)
 
@@ -160,13 +145,26 @@ $$ y_i = \beta_1*education_i + beta_2*gender_i + \sigma_i $$
 
     -   **This is the machine learning tradition/predictive modeling/AI**
 
+## Reducible vs. Irreducible Error
+
+-   When we build models, the aim is to find a $\hat{f}(X)$ that minimizes the error in the model.
+
 ::: fragment
-$$ y_i = \hat{f}(X) + \sigma_i $$
+$$\text{total error} = E(y - \hat{y})^2$$ 
+$$ = E[f(X) + \epsilon -  \hat{f}(X) ]^2$$
+
+$$= \underbrace{E[f(X) -\hat{f}(X)]^2}_{\text{Reducible}} + \underbrace{var(\epsilon)}_{\text{Irreducible}}$$
 :::
 
-# Machine Learning
+-   The **"reducible" error** is the systematic **signal**. We can reduce this error by using different functional forms, better data, or a mixture of those two.
 
-## Supervised and Unsupervised Learning
+-   The **"irreducible" error** is associated with the random **noise** around $y$.
+
+-   Statistical learning is concerned with minimizing the reducible error.
+
+-   Our predictions will never be perfect given the irreducible error.
+
+## Supervised and Unsupervised Machine Learning
 
 -   <u>**Unsupervised Learning (DS III)**</u>
 
@@ -326,7 +324,7 @@ source: https://cimentadaj.github.io/ml_socsci/
 Expected prediction error for a data point:
 
 $$
-E\big[(\hat{y} - y)^2\big] = (\text{Bias}^2) + \text{Variance} + \text{Irreducible Error}
+E\big[(\hat{y} - y)^2\big] = (E[\hat{f}(x)] - f(x))^2 + E\Big[\big(\hat{f}(x) - E[\hat{f}(x)]\big)^2\Big] + \epsilon 
 $$
 
 ::: fragment

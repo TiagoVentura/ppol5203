@@ -381,9 +381,11 @@ Professor: Tiago Ventura
 <ul>
 <li class="fragment">As social scientists, we are often interested in answering <strong>complex</strong> questions about human behavior. To answer them, we build models (theoretical and statistical).</li>
 </ul>
+<div class="fragment">
 <blockquote>
 <p>A model is “a simplified representation of the reality created to serve a purpose.” (Provost &amp; Fawcett 2013)</p>
 </blockquote>
+</div>
 <ul>
 <li class="fragment"><p>By definition:</p>
 <ul>
@@ -417,7 +419,6 @@ Professor: Tiago Ventura
 <li class="fragment"><p><span class="math inline">\(\hat{y}\)</span> is the predicted value of a true value y.</p></li>
 </ul>
 </section>
-
 <section id="inference-social-science-vs-prediction-machine-learning" class="slide level2 center">
 <h2>Inference (Social Science) vs Prediction (Machine Learning)</h2>
 <p>Two reasons we want to estimate <span class="math inline">\(f(\cdot)\)</span>:</p>
@@ -462,17 +463,25 @@ Professor: Tiago Ventura
 <li class="fragment"><p><strong>This is the machine learning tradition/predictive modeling/AI</strong></p></li>
 </ul></li>
 </ul>
-<div class="fragment">
-<p><span class="math display">\[ y_i = \hat{f}(X) + \sigma_i \]</span></p>
-</div>
-</section></section>
-<section>
-<section id="machine-learning" class="title-slide slide level1 center">
-<h1>Machine Learning</h1>
-
 </section>
-<section id="supervised-and-unsupervised-learning" class="slide level2 center">
-<h2>Supervised and Unsupervised Learning</h2>
+<section id="reducible-vs.-irreducible-error" class="slide level2 center">
+<h2>Reducible vs.&nbsp;Irreducible Error</h2>
+<ul>
+<li class="fragment">When we build models, the aim is to find a <span class="math inline">\(\hat{f}(X)\)</span> that minimizes the error in the model.</li>
+</ul>
+<div class="fragment">
+<p><span class="math display">\[\text{total error} = E(y - \hat{y})^2\]</span> <span class="math display">\[ = E[f(X) + \epsilon -  \hat{f}(X) ]^2\]</span></p>
+<p><span class="math display">\[= \underbrace{E[f(X) -\hat{f}(X)]^2}_{\text{Reducible}} + \underbrace{var(\epsilon)}_{\text{Irreducible}}\]</span></p>
+</div>
+<ul>
+<li class="fragment"><p>The <strong>“reducible” error</strong> is the systematic <strong>signal</strong>. We can reduce this error by using different functional forms, better data, or a mixture of those two.</p></li>
+<li class="fragment"><p>The <strong>“irreducible” error</strong> is associated with the random <strong>noise</strong> around <span class="math inline">\(y\)</span>.</p></li>
+<li class="fragment"><p>Statistical learning is concerned with minimizing the reducible error.</p></li>
+<li class="fragment"><p>Our predictions will never be perfect given the irreducible error.</p></li>
+</ul>
+</section>
+<section id="supervised-and-unsupervised-machine-learning" class="slide level2 center">
+<h2>Supervised and Unsupervised Machine Learning</h2>
 <ul>
 <li class="fragment"><p><u><strong>Unsupervised Learning (DS III)</strong></u></p>
 <ul>
@@ -492,7 +501,7 @@ Professor: Tiago Ventura
 </div>
 </div>
 </section>
-<section id="supervised-and-unsupervised-learning-1" class="slide level2 center">
+<section id="supervised-and-unsupervised-learning" class="slide level2 center">
 <h2>Supervised and Unsupervised Learning</h2>
 <ul>
 <li class="fragment"><p><u><strong>Supervised Learning (DS II)</strong></u></p>
@@ -608,7 +617,7 @@ Professor: Tiago Ventura
 <h2>What can go wrong? Bias and Variance Trade-off</h2>
 <p>Expected prediction error for a data point:</p>
 <p><span class="math display">\[
-E\big[(\hat{y} - y)^2\big] = (\text{Bias}^2) + \text{Variance} + \text{Irreducible Error}
+E\big[(\hat{y} - y)^2\big] = (E[\hat{f}(x)] - f(x))^2 + E\Big[\big(\hat{f}(x) - E[\hat{f}(x)]\big)^2\Big] + \epsilon
 \]</span></p>
 <div class="fragment">
 <p><strong>Bias:</strong> Difference between the expected prediction of the model and the true value.</p>
