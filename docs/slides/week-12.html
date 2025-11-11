@@ -10,8 +10,9 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.450">
 
-  <meta name="author" content=" Professor: Tiago Ventura ">
-  <title>PPOL 5203 - Data Science I: Foundations</title>
+  <meta name="author" content="Professor: Tiago Ventura">
+  <meta name="dcterms.date" content="2023-11-26">
+  <title>PPOL 5203 - Data Science I: Foundations -  PPOL 5203 - Data Science I: Foundations </title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -321,610 +322,270 @@
       margin-right: 0; 
     }
   </style>
-  <link href="../site_libs/countdown-0.4.0/countdown.css" rel="stylesheet">
-  <script src="../site_libs/countdown-0.4.0/countdown.js"></script>
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">PPOL 5203 - Data Science I: Foundations</h1>
-  <p class="subtitle"><span style="font-size: 200%;"> <br>Week 1: Introductions, Installations, IDEs, Command line </span></p>
+  <h1 class="title"><span style="font-size: 100%;"> PPOL 5203 - Data Science I: Foundations </span></h1>
+  <p class="subtitle"><span style="font-size: 100%;"> Week 11: Text-As-Data II: Classification </span></p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-<span style="font-size: 150%;"> Professor: Tiago Ventura </span> 
+Professor: Tiago Ventura 
 </div>
 </div>
 </div>
 
-</section>
-<section>
-<section id="welcome-to-data-science-i" class="title-slide slide level1 center" data-background-color="#447099">
-<h1>Welcome to Data Science I</h1>
-
+  <p class="date">2023-11-26</p>
 </section>
 <section id="plans-for-today" class="slide level2 center">
 <h2>Plans for Today</h2>
+<p><strong>Introduction to Text Analysis/Natural Language Processing</strong></p>
 <ul>
-<li class="fragment"><p>Motivating <span class="blue">Data Science for Public Policy</span>.</p></li>
-<li class="fragment"><p>Goals of the course</p></li>
-<li class="fragment"><p>Introductions</p></li>
-<li class="fragment"><p>Course Logistics</p></li>
-<li class="fragment"><p>IDEs</p>
+<li class="fragment">Supervised Learning with Text
 <ul>
-<li class="fragment">Jupyter</li>
+<li class="fragment">Dictionary Methods</li>
+<li class="fragment">Machine Learning Pre-Trained Models</li>
+<li class="fragment">Applications of LLMs (Large Languague models)</li>
 </ul></li>
-<li class="fragment"><p>Introduction to commandline</p></li>
 </ul>
-</section></section>
+</section>
+<section id="in-two-weeks-project-presentations.-your-final-project-in-slides" class="title-slide slide level1 center" data-background-color="red">
+<h1>In two weeks: Project Presentations. Your final project in slides!</h1>
+
+</section>
+
 <section>
-<section id="motivation-digital-information-age" class="title-slide slide level1 center" data-background-color="#447099">
-<h1>Motivation: Digital Information Age</h1>
+<section id="next-class-sql-time-for-you-to-talk-to-me-about-your-projects." class="title-slide slide level1 center">
+<h1>Next Class: SQL + time for you to talk to me about your projects.</h1>
 
 </section>
-<section id="abundance-of-data" class="slide level2 center">
-<h2>Abundance of data</h2>
-
-<img data-src="week1_figs/digital.jpeg" style="width:80.0%" class="r-stretch quarto-figure-center"></section>
-<section id="powerful-and-cheap-computing-power" class="slide level2 center">
-<h2>Powerful and Cheap Computing Power</h2>
-
-<img data-src="week1_figs/collab.png" style="width:80.0%" class="r-stretch quarto-figure-center"></section>
-<section id="world-of-generative-ai-models" class="slide level2 center">
-<h2>World of Generative AI Models</h2>
-
-<img data-src="https://diplo-media.s3.eu-central-1.amazonaws.com/2025/03/openai-chatgpt-surge-deepseek.jpg" style="width:80.0%" class="r-stretch quarto-figure-center"></section>
-<section id="as-a-consequence-we-live-in-a-world" class="slide level2 center">
-<h2>As a consequence, we live in a world:</h2>
-<div>
-<div class="fragment">
+<section id="supervised-learning-with-text" class="slide level2 center">
+<h2>Supervised Learning with Text</h2>
+<p>When doing supervised learning with text, we have three basic pieces of the puzzle:</p>
 <ul>
-<li><p><strong>With</strong> abundance of data we can use for research and to recommend policy decisions:</p>
+<li class="fragment"><p><strong>Outcome</strong>: the content you want to classify.</p>
 <ul>
-<li>Internet data, social media, geo-tracking tools, etc…</li>
+<li class="fragment">Examples:
+<ul>
+<li class="fragment">Tone, Emotion, Topic, Misinformation, Quality… Anything you know what you want to classify</li>
 </ul></li>
-</ul>
-</div>
-<div class="fragment">
-<ul>
-<li><p><strong>With</strong> easily available technologies to analyze this data at scale</p>
-<ul>
-<li>Your laptops, cloud computing, ChatBots…</li>
 </ul></li>
+<li class="fragment"><p><strong>Input</strong>: this is your text. Often this will come from converting you text to a numerical representation. As we learned last week, most times this numerical representation will be a document feature matrix.</p></li>
+<li class="fragment"><p><strong>Model</strong>: An transformation function connecting your words with the outcome you want to predict.</p></li>
 </ul>
-</div>
-<div class="fragment">
-<ul>
-<li><p><strong>But</strong> with new technologies that also have novel social implications:</p>
-<ul>
-<li><p>Privacy issues</p></li>
-<li><p>Use of technology by bad actors.</p></li>
-<li><p>Use of technology by governments to censor/monitor citizens.</p></li>
-</ul></li>
-</ul>
-</div>
-<div class="fragment">
-<ul>
-<li>Policy scholars (but pretty much any researcher) need to be equipped to properly <strong>work</strong> with this data and <strong>understand</strong> the effects of these news technologies</li>
-</ul>
-</div>
-</div>
 </section>
-<section id="data-science-for-public-policy" class="slide level2 center">
-<h2>Data Science for Public Policy</h2>
-<p><span class="red">Data Scientist for Public Policy</span> focuses on <strong>computational approaches</strong> to solve/understand <strong>policy problems</strong>.</p>
+<section id="three-types-of-supervised-learning-with-text" class="slide level2 center">
+<h2>Three types of Supervised Learning with Text</h2>
+<p>In class, we will see three distinct types of approaches to do supervised learning with text.</p>
 <ul>
-<li class="fragment">It is part of a larger and new field called <a href="https://en.wikipedia.org/wiki/Computational_social_science">computational social science</a></li>
+<li class="fragment"><p>Dictionary Models.</p></li>
+<li class="fragment"><p>Classic Machine Learning with bag-of-words assumption.</p></li>
+<li class="fragment"><p>Pre-Trained Models Deep Learning Models.</p></li>
 </ul>
-<div>
-<div class="fragment">
+</section>
+<section id="dictionary-models" class="slide level2 center">
+<h2>Dictionary Models</h2>
 <ul>
-<li><p><strong>Social science</strong></p>
+<li class="fragment"><p>Use a set of pre-defined words that allow us to classify documents automatically, quickly and accurately.</p></li>
+<li class="fragment"><p>Instead of optimizing a transformation function using statistical assumption and seen data, in dictionaries we have a <span class="red">pre-assumed recipe</span> for the transformation function.</p></li>
+<li class="fragment"><p>A dictionary contains:</p>
 <ul>
-<li>Understands human behavior: human psychology, language, economic behavior, political systems, policy problems</li>
-<li>Involve many <strong>approaches</strong>: qualitative interviews, statistical analysis, simulations</li>
+<li class="fragment">a list of words that corresponds to each category
+<ul>
+<li class="fragment"><span class="midgray">positive and negative for sentiment</span></li>
+<li class="fragment"><span class="midgray">Sexism, homophobia, xenophobia, racism for hate speech</span></li>
 </ul></li>
-</ul>
-</div>
-<div class="fragment">
-<ul>
-<li><p><strong>Data Science</strong>:</p>
-<ul>
-<li>Tools to work with large-scale data + learning models + novel data sources</li>
 </ul></li>
+<li class="fragment"><p>Weights given to each word ~ same for all words or some continuous variation.</p></li>
 </ul>
-</div>
+</section>
+<section id="more-specifically" class="slide level2 center">
+<h2>More specifically…</h2>
+<p>We have a set of <span class="red">key words</span> with weights,</p>
+<ul>
+<li class="fragment"><p>e.g.&nbsp;for sentiment analysis: <strong>horrible</strong> is scored as <span class="math inline">\(-1\)</span> and <strong>beautiful</strong> as <span class="math inline">\(+1\)</span></p></li>
+<li class="fragment"><p>the relative rate of occurrence of these terms tells us about the overall tone or category that the document should be placed in.</p></li>
+</ul>
+<div class="fragment">
+<p>For document <span class="math inline">\(i\)</span> and words <span class="math inline">\(m=1,\ldots, M\)</span> in the dictionary,</p>
+<p><span class="math display">\[\text{tone of document $i$}= \sum^M_{m=1} \frac{s_m w_{im}}{N_i}\]</span></p>
+<p>Where:</p>
+<ul>
+<li class="fragment"><span class="math inline">\(s_m\)</span> is the score of word <span class="math inline">\(m\)</span></li>
+<li class="fragment"><span class="math inline">\(w_{im}\)</span> is the number of occurrences of the <span class="math inline">\(m_{th}\)</span> dictionary word in the document <span class="math inline">\(i\)</span></li>
+<li class="fragment"><span class="math inline">\(N_i\)</span> is the total number of all dictionary words in the document</li>
+</ul>
 </div>
 </section></section>
 <section>
-<section id="computational-social-science-in-practice" class="title-slide slide level1 center">
-<h1>Computational Social Science in Practice</h1>
+<section id="quizz.-advantages-and-disadvantages-of-dictionaries" class="title-slide slide level1 center">
+<h1>Quizz. Advantages and Disadvantages of dictionaries?</h1>
 
 </section>
-<section id="misinformation-on-whatsapp" class="slide level2 center">
-<h2>Misinformation on WhatsApp</h2>
-
-<img data-src="week1_figs/whatsappmotivation.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section>
-<section id="data-donation-whatsapp-groups" class="slide level2 center">
-<h2>Data Donation WhatsApp Groups</h2>
-
-<img data-src="week1_figs/wpp.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section>
-<section id="all-the-steps-tools-....-so-far-..." class="slide level2 center">
-<h2>All the steps + Tools <code>....</code> so far <code>...</code></h2>
+<section id="classic-machine-learning-with-bag-of-words-assumption." class="slide level2 center">
+<h2>Classic Machine Learning with bag-of-words assumption.</h2>
+<p><strong>Pipeline:</strong></p>
 <ul>
-<li class="fragment"><p><span class="blue">Step 1</span>: Recruiting participants online (SS)</p>
-<ul>
-<li class="fragment">Online Panels + Facebook Ads</li>
-</ul></li>
-<li class="fragment"><p><span class="blue">Step 2</span>: Running online surveys (SS)</p>
-<ul>
-<li class="fragment">Qualtrics + R</li>
-</ul></li>
-<li class="fragment"><p><span class="blue">Step 3</span>: Development of data donation pipeline (with MDI) (DS/CS)</p>
-<ul>
-<li class="fragment">JavaScript (JS) + Python</li>
-</ul></li>
-<li class="fragment"><p><span class="blue">Step 4</span>: Analyze the data (SS/DS)</p>
-<ul>
-<li class="fragment">SQL + Python + R</li>
-</ul></li>
+<li class="fragment"><p>Step 1: label some examples of the concept of we want to measure (output)</p></li>
+<li class="fragment"><p>Step 2: convert your data to a document-feature matrix (input)</p></li>
+<li class="fragment"><p>Step 3: train a statistical model on these set of label data using the document-feature matrix.</p></li>
+<li class="fragment"><p>Step 4: use the classifier - some f(x) - to predict unseen documents</p></li>
 </ul>
 </section>
-<section id="readings-for-this-week" class="slide level2 center">
-<h2>Readings for this week</h2>
-<ul>
-<li class="fragment"><p>Bit by Bit: Social Research in the Digital Age By Mathew Salganik</p>
-<ul>
-<li class="fragment"><p><a href="https://www.bitbybitbook.com/en/1st-ed/introduction/">Introduction</a></p></li>
-<li class="fragment"><p><a href="https://www.bitbybitbook.com/en/1st-ed/observing-behavior/">Observing Behavior</a></p></li>
-</ul></li>
-<li class="fragment"><p><a href="https://www.cambridge.org/core/journals/ps-political-science-and-politics/article/training-computational-social-science-phd-students-for-academic-and-nonacademic-careers/1455690939833B9FFCAC664D4E412057">Training Computational Social Science PhD Students for Academic and Non-Academic Careers</a> - Written by me and some colleagues in academia, industry and non-profits</p></li>
-</ul>
-</section>
-<section id="goals-of-the-course" class="slide level2 center">
-<h2>Goals of the course</h2>
-<p><br></p>
-<p>The goal of this course is to teach you:</p>
-<ul>
-<li class="fragment"><p><strong>Computational thinking</strong>: how to approach problems and devise solutions from a computational perspective.</p></li>
-<li class="fragment"><p>Get you started on <strong>Python</strong>, introduce some useful tools (scrapping, text analysis and API applications of GenAI models), and bit of <strong>SQL</strong> for applied data science; lay the foundations for the remainder of the core DS sequence</p></li>
-<li class="fragment"><p><strong>Workflows and tools:</strong> Git/Github + Commandline.</p></li>
-</ul>
-</section></section>
-<section>
-<section id="ppol-5203---data-science-i-foundations" class="title-slide slide level1 center" data-background-color="#447099">
-<h1>PPOL 5203 - Data Science I: Foundations</h1>
-
-</section>
-<section id="course-schedule" class="slide level2 center" style="font-size: .7em;">
-<h2>Course Schedule</h2>
+<section id="evaluating-the-performance" class="slide level2 center">
+<h2>Evaluating the Performance</h2>
 <table>
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
-<th>Week</th>
-<th>Topic</th>
-<th>Date</th>
+<th></th>
+<th></th>
+<th style="text-align: center;">Predicted</th>
+<th style="text-align: center;"></th>
+<th style="text-align: right;"></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Week 01</td>
-<td>Introduction, Installations, IDEs, Command line</td>
-<td>September 09, 2025</td>
+<td></td>
+<td></td>
+<td style="text-align: center;">J</td>
+<td style="text-align: center;">¬J</td>
+<td style="text-align: right;">Total</td>
 </tr>
 <tr class="even">
-<td>Week 02</td>
-<td>Version Control, Workflow and Reproducibility: Or a bit of Git &amp; GitHub</td>
-<td>September 16, 2025</td>
+<td><strong>Actual</strong></td>
+<td>J</td>
+<td style="text-align: center;">a (TP)</td>
+<td style="text-align: center;">b (FN)</td>
+<td style="text-align: right;">a+b</td>
 </tr>
 <tr class="odd">
-<td>Week 03</td>
-<td>Intro to Python - OOP, Data Types, Control Statements and Functions</td>
-<td>September 23, 2025</td>
+<td></td>
+<td>¬J</td>
+<td style="text-align: center;">c (FP)</td>
+<td style="text-align: center;">d (TN)</td>
+<td style="text-align: right;">c+d</td>
 </tr>
 <tr class="even">
-<td>Week 04</td>
-<td>Intro to Python II: Scaling up your code - Iteration, Comprehension and Functions</td>
-<td>September 30, 2025</td>
-</tr>
-<tr class="odd">
-<td>Week 05</td>
-<td>From Nested lists to Dataframes: Numpy and Intro to Pandas</td>
-<td>October 07, 2025</td>
-</tr>
-<tr class="even">
-<td>Week 06</td>
-<td>Pandas II: Data Wrangling</td>
-<td>October 14, 2025</td>
-</tr>
-<tr class="odd">
-<td>Week 07</td>
-<td>Joining, Tidying and Visualizing Data</td>
-<td>October 21, 2025</td>
-</tr>
-<tr class="even">
-<td>Week 08</td>
-<td>Scraping + APIs</td>
-<td>October 28, 2025</td>
-</tr>
-<tr class="odd">
-<td>Week 09</td>
-<td>Statistical Learning</td>
-<td>November 04, 2025</td>
-</tr>
-<tr class="even">
-<td>Week 10</td>
-<td>Text as Data I: Discovery and Topics</td>
-<td>November 11, 2023</td>
-</tr>
-<tr class="odd">
-<td>Week 11</td>
-<td>Text as Data II: Supervised Learning</td>
-<td>November 18, 2025</td>
-</tr>
-<tr class="even">
-<td>Week 12</td>
-<td>Generative AI: Classification, Surveys and Prompting (Invited Speaker - Dr.&nbsp;Patrick Wu, American University)</td>
-<td>November 25, 2025</td>
-</tr>
-<tr class="odd">
-<td>Week 13</td>
-<td>SQL</td>
-<td>December 03, 2024</td>
-</tr>
-<tr class="even">
-<td>Week 14</td>
-<td>Presentations of Final Projects</td>
-<td>December 09, 2023</td>
+<td></td>
+<td>Total</td>
+<td style="text-align: center;">a+c</td>
+<td style="text-align: center;">b+d</td>
+<td style="text-align: right;">N</td>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="between-text-as-data-i-and-ii-i-might-have-some-updates" class="slide level2 center">
-<h2>Between Text-as-Data I and II… I might have some updates…</h2>
-<div class="fragment">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../baby.jpeg" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</section></section>
-<section>
-<section id="introductions" class="title-slide slide level1 center">
-<h1>Introductions</h1>
-
-</section>
-<section id="section" class="slide level2 center">
-<h2></h2>
-<div>
-<div class="fragment">
-<p><strong>Professor Tiago Ventura (he/him)</strong></p>
-<ul>
-<li>Assistant Professor at McCourt School.</li>
-<li>Political Science PhD</li>
-<li>Postdoc at Center for Social Media and Politics - NYU.</li>
-<li>Researcher at Twitter.</li>
-</ul>
-</div>
-<div class="fragment">
-<p><strong>My Research: Effects of technology in politics + applications of computational models to social science:</strong></p>
-<ul>
-<li>Global Social Media Deactivation.</li>
-<li>Developing a data donation pipeline for WhatsApp data.</li>
-<li>Measuring Humanness vs AI-Generated Content on Social Media.</li>
-<li>Using LLMs to augment web-browsing data with synthetic data</li>
-</ul>
-</div>
-<div class="fragment">
-<p><strong>Outside of work, I enjoy <span class="red">watching soccer, reading sci-fi and running</span></strong></p>
-</div>
-</div>
-</section>
-<section id="quiz" class="slide level2 center" data-background-color="#447099">
-<h2>Quiz!</h2>
-<h3 id="which-programming-language-did-i-use-the-most-at">Which programming language did I use the most at?</h3>
-<ul>
-<li class="fragment"><p>PhD</p></li>
-<li class="fragment"><p>Postdoc</p></li>
-<li class="fragment"><p>Twitter</p></li>
-<li class="fragment"><p>As a Faculty</p></li>
-</ul>
-</section>
-<section id="a-comment-from-the-pre-course-survey-from-last-year" class="slide level2 center">
-<h2>A comment from the pre-course survey (from last year)</h2>
-<blockquote>
-<p>Hi professor Ventura! I noticed that we gonna learn multiple data analysis tool this semester and I am definitely a novice of data science. I am little worried about how can I master all of them without being confused, because some commands might be very similar.</p>
-</blockquote>
-</section>
-<section id="your-turn" class="slide level2 center">
-<h2>Your turn!</h2>
-<ul>
-<li class="fragment"><p>Name</p></li>
-<li class="fragment"><p>(Briefly) what you were up to prior to the DSPP</p></li>
-<li class="fragment"><p>If you could have any data source at your disposal, what would it be?</p></li>
-</ul>
-</section>
-<section id="logistics" class="slide level2 center">
-<h2>Logistics</h2>
 <div>
 <ul>
-<li class="fragment"><p><strong>Communication</strong>: via slack. Join the <a href="https://join.slack.com/t/ppol5203-fall2025/shared_invite/zt-3cmg2zqoz-uFHOG_a9tsxBBBm2wCz~zg">workspace!</a></p></li>
-<li class="fragment"><p><strong>All materials</strong>: hosted on the class website: <a href="https://tiagoventura.github.io/ppol5203/" class="uri">https://tiagoventura.github.io/ppol5203/</a></p></li>
-<li class="fragment"><p><strong>Syllabus</strong>: also on the website.</p></li>
-<li class="fragment"><p><strong>My Office Hours</strong>: Every tuesday from 4 to 5pm. Just stop by!</p></li>
-<li class="fragment"><p><strong>Canvas</strong>: Only for official communication! Materials will be hosted in the website!</p></li>
-<li class="fragment"><p><strong>Datacamp</strong>: Additional exercises! Access our free account <a href="https://www.datacamp.com/groups/shared_links/0cd82dc4f5a0c59ebb098f26fb7f36a57274d17b315e0dcf27a023fe189a0161">here</a></p></li>
-<li class="fragment"><p><strong>Task:</strong> go on slack and send me a message about the data source you choose in the last answer, and if you feel comfortable add a picture to your profile</p></li>
-</ul>
-<div class="cell">
-<div class="cell-output-display">
-<div class="countdown" id="timer_234fa03a" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:2em;">
-<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="ta" class="slide level2 center">
-<h2>TA</h2>
+<li class="fragment"><p><strong>Accuracy</strong>: number correctly classified/total number of cases = (a+d)/(a+b+c+d)</p></li>
+<li class="fragment"><p><strong>Precision</strong> : number of TP / (number of TP+number of FP) = a/(a+c) .</p>
 <ul>
-<li class="fragment">Rebecca Wagner (DSPP Second-Year Student)
-<ul>
-<li class="fragment">Email:rlw137@georgetown.edu</li>
-<li class="fragment">Office Hours:
-<ul>
-<li class="fragment">in person: Every Monday 2pm, McCourt, Room 602</li>
-<li class="fragment">virtual: Every Tuesday 7pm. <a href="https://georgetown.zoom.us/j/94242889689">Zoom link</a></li>
+<li class="fragment">Fraction of the documents predicted to be J, that were in fact J.</li>
+<li class="fragment">Think as a measure for the estimator</li>
 </ul></li>
+<li class="fragment"><p><strong>Recall</strong>: (number of TP) / (number of TP + number of FN) = a /(a+b)</p>
+<ul>
+<li class="fragment">Fraction of the documents that were in fact J, that method predicted were J.</li>
+<li class="fragment">Think as a measure for the data</li>
+</ul></li>
+<li class="fragment"><p><strong>F</strong> : 2 precision*recall / precision+recall</p>
+<ul>
+<li class="fragment">Harmonic mean of precision and recall.</li>
 </ul></li>
 </ul>
-</section>
-<section id="evaluation" class="slide level2 center">
-<h2>Evaluation</h2>
-<table>
-<thead>
-<tr class="header">
-<th><strong>Assignment</strong></th>
-<th style="text-align: center;"><strong>Percentage of Grade</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Participation/Attendance</td>
-<td style="text-align: center;">5%</td>
-</tr>
-<tr class="even">
-<td>Coding Discussion</td>
-<td style="text-align: center;">5%</td>
-</tr>
-<tr class="odd">
-<td>Problem sets</td>
-<td style="text-align: center;">50%</td>
-</tr>
-<tr class="even">
-<td>Final Project</td>
-<td style="text-align: center;">40%</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="problem-sets" class="slide level2 center">
-<h2>Problem Sets</h2>
-<p>Individual submission through GitHub.</p>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Assignment</th>
-<th style="text-align: center;">Date Assigned</th>
-<th style="text-align: center;">Date Due</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">No.&nbsp;1</td>
-<td style="text-align: center;">Week 2</td>
-<td style="text-align: center;">Before EOD of Friday of Week 3</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">No.&nbsp;2</td>
-<td style="text-align: center;">Week 4</td>
-<td style="text-align: center;">Before EOD of Friday of Week 5</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">No.&nbsp;3</td>
-<td style="text-align: center;">Week 6</td>
-<td style="text-align: center;">Before EOD of Friday of Week 7</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">No.&nbsp;4</td>
-<td style="text-align: center;">week 8</td>
-<td style="text-align: center;">Before EOD of Friday of Week 9</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">No.&nbsp;5</td>
-<td style="text-align: center;">November 10</td>
-<td style="text-align: center;">Before EOD of Friday of Week 111</td>
-</tr>
-</tbody>
-</table>
+</div>
 </section></section>
 <section>
-<section id="eod-1159pm" class="title-slide slide level1 center">
-<h1><span class="red">EOD = 11:59pm!</span></h1>
+<section id="quizz.-advantages-and-disadvantages-of-classic-ml" class="title-slide slide level1 center">
+<h1>Quizz. Advantages and Disadvantages of Classic ML?</h1>
 
 </section>
-<section id="final-project" class="slide level2 center">
-<h2>Final Project</h2>
+<section id="pre-trained-deep-learning-models" class="slide level2 center">
+<h2>Pre-Trained Deep Learning Models</h2>
+<p>In recent years, text-as-data/nlp tasks have been dominated by the use of deep learning models. Let’s try to understand a bit what these models are.</p>
 <ul>
-<li class="fragment"><p><span class="red">You will work on <strong>groups!</strong></span></p></li>
-<li class="fragment"><p>The project is composed of three parts:</p>
+<li class="fragment"><p><span class="red">Components:</span> These text-based deep learning models have two major components</p>
 <ul>
-<li class="fragment">a 2 page project proposal: (which should be discussed and approved by me)</li>
-<li class="fragment">an in-class presentation,</li>
-<li class="fragment">A 10-page project report.</li>
+<li class="fragment">A dense representation of words (no bag of words!).
+<ul>
+<li class="fragment">Every word becomes a vector now</li>
+</ul></li>
+<li class="fragment">A deep architecture for model predictions ~ neural network</li>
+</ul></li>
+<li class="fragment"><p><span class="red">Definition:</span> Deep Learning Models are designed for general-purpose classification tasks or just simple next-word prediction tasks</p>
+<ul>
+<li class="fragment">In general those are models built on TONS of data and optimized for a particular task</li>
+</ul></li>
+<li class="fragment"><p><span class="red">Key Features:</span></p>
+<ul>
+<li class="fragment">Available for use, adaptation and experimentation</li>
+<li class="fragment">Ready to use</li>
+<li class="fragment">Low to zero cost</li>
+<li class="fragment">Deep ML architectures ~ High accuracy</li>
+<li class="fragment">Can be fine-tuned for your specific task</li>
 </ul></li>
 </ul>
 </section>
-<section id="due-dates-and-points" class="slide level2 center">
-<h2>Due dates and Points:</h2>
-<table>
-<thead>
-<tr class="header">
-<th><strong>Requirement</strong></th>
-<th><strong>Due</strong></th>
-<th><strong>Length</strong></th>
-<th><strong>Percentage</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Project Proposal</td>
-<td>October 31</td>
-<td>2 pages</td>
-<td>5%</td>
-</tr>
-<tr class="even">
-<td>Presentation</td>
-<td>December 09</td>
-<td>10-15 minutes</td>
-<td>10%</td>
-</tr>
-<tr class="odd">
-<td>Project Report</td>
-<td>December 16</td>
-<td>10 pages</td>
-<td>25%</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="genai" class="slide level2 center">
-<h2>GenAI</h2>
-<p>You are allowed to use GenAI as you would use google in this class. This means:</p>
+<section id="dense-vector-representation" class="slide level2 center">
+<h2>Dense Vector Representation</h2>
+<p>In the vector space model, we learned:</p>
 <ul>
-<li class="fragment"><p>Do not copy the responses from GenAI Chatbots – a lot of them are wrong or will just not run on your computer</p></li>
-<li class="fragment"><p>Use GenAI Chatbots as a auxiliary source.</p></li>
-<li class="fragment"><p>If your entire homework comes straight from GenAI Chatbots, I will consider it plagiarism.</p></li>
-<li class="fragment"><p>If you use GenAI Chatbots, I ask you to mention on your code how chatgpt worked for you.</p></li>
-</ul>
-</section></section>
-<section id="be-mature-and-make-smart-decisions.-you-will-not-be-able-to-cheat-on-a-coding-interview-remember-you-are-a-master-student-now" class="title-slide slide level1 center">
-<h1><span class="red">Be mature and make smart decisions. You will not be able to cheat on a coding interview, remember you are a master student now!</span></h1>
-
-</section>
-
-<section id="lets-take-a-break" class="title-slide slide level1 center">
-<h1>Let’s take a break!</h1>
-<div class="cell">
-<div class="cell-output-display">
-<div class="countdown" id="timer_866b6871" data-update-every="1" tabindex="0" style="top:0;right:0;left:0;margin:10%;padding:100px;font-size:6em;">
-<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-</div>
-</div>
-</section>
-
-<section>
-<section id="survey-results" class="title-slide slide level1 center">
-<h1><svg aria-hidden="true" role="img" viewbox="0 0 576 512" style="height:1em;width:1.12em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32C93.5 32 46.3 45.3 18.1 56.1C6.8 60.5 0 71.7 0 83.8V454.1c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6c11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6c-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"></path></svg> Survey Results</h1>
-
-</section>
-<section id="summary-of-the-survey" class="slide level2 center">
-<h2>Summary of the survey</h2>
-<ul>
-<li class="fragment"><p>Most of you have <span class="red">some</span> experience with Python.</p></li>
-<li class="fragment"><p><span class="red">Very few</span> of you were using primarily Python in your work before!</p>
-<ul>
-<li class="fragment">Most others are using R and Excel!</li>
-</ul></li>
-<li class="fragment"><p>Most of you have Python in your laptops, some still do not have a github account. If you are having issues after today, talk to your TAs.</p></li>
-<li class="fragment"><p>Main Policy Areas:</p>
-<ul>
-<li class="fragment">Social Media/Tech (Talk to me!)</li>
-<li class="fragment">Election (Talk to Professor Warshaw, Bailey or Ladd)</li>
-<li class="fragment">Education (Talk with Professor Johnson)</li>
-</ul></li>
-</ul>
-</section>
-<section id="open-ended" class="slide level2 center">
-<h2>Open Ended</h2>
-<ul>
-<li class="fragment"><p>this is a big group of international students, and some are concerned about not having english as you first language!</p>
-<ul>
-<li class="fragment">THIS IS FINE ! I hope my non-native and strongly accented English will encourage you to participate in class and speak up!</li>
-</ul></li>
+<li class="fragment"><p>A document <span class="math inline">\(D_i\)</span> is represented as a collection of features <span class="math inline">\(W\)</span> (words, tokens, n-grams..)</p></li>
+<li class="fragment"><p>Each feature <span class="math inline">\(w_i\)</span> can be place in a real line, then a document <span class="math inline">\(D_i\)</span> is a point in a <span class="math inline">\(W\)</span> dimensional space.</p></li>
 </ul>
 <div class="fragment">
-<blockquote>
-<p>“That’s just what translation is, I think. That’s all speaking is. Listening to the other and trying to see past your own biases to glimpse what they’re trying to say. Showing yourself to the world, and hoping someone else understands.” - R.F. Kuang, Babel</p>
-</blockquote>
-</div>
-</section>
-<section id="open-ended-1" class="slide level2 center">
-<h2>Open Ended</h2>
-<p>Some of you are slightly anxious about Python and the pace of the class</p>
-<div>
+<p>Embedded in this model, there is the idea we represent <span class="red">words</span> as a <span class="red">one-hot encoding</span>.</p>
 <ul>
-<li class="fragment"><p>Python is definitely harder than excel and stata.</p></li>
-<li class="fragment"><p>But you will be fine!</p></li>
-<li class="fragment"><p><strong>Our approach</strong>: We start slow, cover the basics, and move fast!</p></li>
+<li class="fragment">“cat”: [0,0, 0, 0, 0, 0, 1, 0, ….., V] , on a V dimensional vector</li>
+<li class="fragment">“dog”: [0,0, 0, 0, 0, 0, 0, 1, …., V], on a V dimensional vector</li>
 </ul>
 </div>
-</section></section>
-<section>
-<section id="transiton-coding" class="title-slide slide level1 center">
-<h1><svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"></path></svg> Transiton: Coding!</h1>
+</section>
+<section id="sparse-vs-dense-vectors" class="slide level2 center">
+<h2>Sparse vs Dense Vectors</h2>
+<p><strong>One-hot encoding / Sparse Representation:</strong></p>
+<ul>
+<li class="fragment"><p>cat = <span class="math inline">\(\begin{bmatrix} 0,0, 0, 0, 0, 0, 1, 0, 0 \end{bmatrix}\)</span></p></li>
+<li class="fragment"><p>dog = <span class="math inline">\(\begin{bmatrix} 0,0, 0, 0, 0, 1, 0, 0, 0 \end{bmatrix}\)</span></p></li>
+</ul>
+<div class="fragment">
+<p><strong>Word Embedding / Dense Representation:</strong></p>
+<ul>
+<li class="fragment"><p>cat = <span class="math inline">\(\begin{bmatrix} 0.25, -0.75, 0.90, 0.12, -0.50, 0.33, 0.66, -0.88, 0.10, -0.45 \end{bmatrix}\)</span></p></li>
+<li class="fragment"><p>dog = <span class="math inline">\(\begin{bmatrix} 0.25, 1.75, 0.90, 0.12, -0.50, 0.33, 0.66, -0.88, 0.10, -0.45 \end{bmatrix}\)</span></p></li>
+<li class="fragment"><p>Dense representations are behind all recent advancements on NLP, including ChatGPT</p></li>
+</ul>
+</div>
+</section>
+<section id="embeddings-with-self-supervision" class="slide level2 center">
+<h2>Embeddings with Self-Supervision</h2>
 
+<img data-src="skipgram_0.png" style="width:100.0%" class="r-stretch"><p>Source: <a href="https://web.stanford.edu/class/cs224n/index.html#schedule">CS224N</a></p>
 </section>
-<section id="set-up-your-course-infra-structure" class="slide level2 center">
-<h2>Set up your course infra-structure</h2>
-<p><a href="https://tiagoventura.github.io/ppol5203/lecture_notes/week-01/course_infrastructure.html">See Course Website</a></p>
+<section id="transformers-architecture" class="slide level2 center">
+<h2>Transformers Architecture</h2>
+
+<img data-src="trans.png" style="width:100.0%" class="r-stretch"></section>
+<section id="neural-networks-with-dense-vectors." class="slide level2 center">
+<h2>Neural Networks with Dense Vectors.</h2>
+
+<img data-src="full_nn_transformers.png" style="width:100.0%" class="r-stretch"></section>
+<section id="how-do-i-use-these-sophisticated-models" class="slide level2 center">
+<h2>How do I use these sophisticated models?</h2>
+<p>If you have enough computing power and knowledge of working with these models, you can train your own LLM models. It takes a LOT of data, time and money.</p>
+<p>Most people will:</p>
 <ul>
-<li class="fragment"><p>Install Python</p></li>
-<li class="fragment"><p>Install Jupyter</p></li>
-<li class="fragment"><p>Setup your Git/Github account</p>
-<ul>
-<li class="fragment">Homework: Try to make one successful Git push before class next week.</li>
-</ul></li>
+<li class="fragment"><p>use pre-trained models (transfer learning) available on the web.</p></li>
+<li class="fragment"><p>use pre-trained word embeddings, fine tune the model (retrain with new data), and improve the performance</p></li>
+<li class="fragment"><p>outsource tasks for generative models through prompting via APIs.</p></li>
 </ul>
-</section>
-<section id="jupyter" class="slide level2 center">
-<h2>Jupyter:</h2>
-<p><a href="https://tiagoventura.github.io/ppol5203/weeks/week-01.html">Jupyter Notebook Tutorial in the Class Website</a></p>
-<p><strong>Note on my approach on Notebooks:</strong> I will go over quite quickly through the notebooks. You should run them by yourselves at a later point!</p>
-</section>
-<section id="command-line" class="slide level2 center">
-<h2>Command Line</h2>
-<p><a href="https://tiagoventura.github.io/ppol5203/weeks/week-01.html">Command Line Tutorial in the Class Website</a></p>
-</section>
-<section id="datacamp-course" class="slide level2 center">
-<h2>Datacamp Course</h2>
-<ul>
-<li class="fragment">join</li>
-<li class="fragment"><a href="https://app.datacamp.com/learn/courses/introduction-to-shell">Introduction to Shell</a></li>
-</ul>
-</section>
-<section id="additional-materials-quarto" class="slide level2 center">
-<h2>Additional Materials: Quarto</h2>
-<p><span class="red">See Quarto Notebook in the Class Website</span></p>
 </section></section>
-<section id="see-you-next-week" class="title-slide slide level1 center">
-<h1>See you next week!</h1>
+<section id="notebook-for-text-analysis" class="title-slide slide level1 center">
+<h1><a href="">Notebook for Text Analysis</a></h1>
 
 <div class="footer footer-default">
 <p>Data science I: Foundations</p>
@@ -1109,9 +770,9 @@
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1300,
+        width: 1600,
 
-        height: 900,
+        height: 1200,
 
         // Factor of the display size that should remain empty around the content
         margin: 0.1,
