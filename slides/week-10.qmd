@@ -24,6 +24,7 @@ format:
       method: mathjax
       url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
 ---
+
 ## Plans for Today
 
 ::: nonincremental
@@ -42,17 +43,16 @@ format:
     -   Coding
 :::
 
-## Logistics 
+## Logistics
 
 ::: nonincremental
--   Your problem set 3 has been graded. We will post the grades today. 
+-   Your problem set 3 has been graded. We will post the grades today.
 
--   We detected some unmoderated usage of LLMs in the problem set, and some penalties were applied on it. 
+-   We detected some unmoderated usage of LLMs in the problem set, and some penalties were applied on it.
 
-    -  Remember: Use LLMs as a learning tool, not to replace you. the latter is plagiarism. 
+    -   Remember: Use LLMs as a learning tool, not to replace you. the latter is plagiarism.
 
-- Project Proposal: Received. No written feedback. Come to my office hours to talk about it. 
-
+-   Project Proposal: Received. No written feedback. Come to my office hours to talk about it.
 :::
 
 # Introduction to Machine Learning
@@ -61,8 +61,7 @@ format:
 
 -   As social scientists, we are often interested in answering **complex** questions about human behavior. To answer them, we build models (theoretical and statistical).
 
-
-:::fragment
+::: fragment
 > A model is "a simplified representation of the reality created to serve a purpose." (Provost & Fawcett 2013)
 :::
 
@@ -101,7 +100,6 @@ $$ \hat{y} = \hat{f}(X)$$
 -   Where $\hat{f}(X)$ is an approximation of the "true" functional form, $f(X)$
 
 -   $\hat{y}$ is the predicted value of a true value y.
-
 
 ## Inference (Social Science) vs Prediction (Machine Learning)
 
@@ -150,8 +148,7 @@ $$ y_i = \beta_1*education_i + beta_2*gender_i + \sigma_i $$
 -   When we build models, the aim is to find a $\hat{f}(X)$ that minimizes the error in the model.
 
 ::: fragment
-$$\text{total error} = E(y - \hat{y})^2$$ 
-$$ = E[f(X) + \epsilon -  \hat{f}(X) ]^2$$
+$$\text{total error} = E(y - \hat{y})^2$$ $$ = E[f(X) + \epsilon -  \hat{f}(X) ]^2$$
 
 $$= \underbrace{E[f(X) -\hat{f}(X)]^2}_{\text{Reducible}} + \underbrace{var(\epsilon)}_{\text{Irreducible}}$$
 :::
@@ -318,7 +315,6 @@ knitr::include_graphics("https://cimentadaj.github.io/ml_socsci/img/socsci_wflow
 source: https://cimentadaj.github.io/ml_socsci/
 :::
 
-
 ## What can go wrong? Bias and Variance Trade-off
 
 Expected prediction error for a data point:
@@ -339,7 +335,6 @@ $$\text{Bias}(\hat{f}(x)) = E[\hat{f}(x)] - f(x)$$
 $$ 
 \text{Var}(\hat{f}(x)) = E\Big[\big(\hat{f}(x) - E[\hat{f}(x)]\big)^2\Big]
 $$
-
 :::
 
 ::: fragment
@@ -419,7 +414,6 @@ goodfit <-
 bad_fit + overfit + goodfit
 ```
 
-
 ## MSE Training Data
 
 ```{r}
@@ -465,7 +459,7 @@ D %>%
 
 ## Quizz:
 
-- Which model will perform worse if we are to throw some unseen data? 
+-   Which model will perform worse if we are to throw some unseen data?
 
 ## Model Accuracy: Out-Sample Prediction
 
@@ -508,7 +502,6 @@ D2 %>%
 
 ```
 
-
 ## Train-Validation-Test
 
 ::: fragment
@@ -530,7 +523,6 @@ Validation Set
 ::: fragment
 Test Set - Smaller portion (10-20% of data) - To assess final model performance
 :::
-
 
 ## Training the Model: Cross-Validation
 
@@ -555,7 +547,6 @@ Test Set - Smaller portion (10-20% of data) - To assess final model performance
 knitr::include_graphics("week10_figs/KfoldCV.gif")
 ```
 :::
-
 
 ## Measures of Accuracy for Classification tasks {visibility="hidden"}
 
@@ -584,19 +575,15 @@ knitr::include_graphics("week10_figs/KfoldCV.gif")
     -   Harmonic mean of precision and recall.
 :::
 
+## Quizz:
 
-## Quizz: 
+-   What is the difference between inferential models vs predictive modelling? In which one do you care about unbiased estimators?
 
+-   Can I use an OLS model for a predictive task? If so, will an OLS model show lean torward high bias and low variance or low bias and high variance?
 
-- What is the difference between inferential models vs predictive modelling? In which one do you care about unbiased estimators?
+-   What happens if I make decisions about which model to fit by ALWAYS looking at the error in the test set?
 
-- Can I use an OLS model for a predictive task? If so, will an OLS model show lean torward high bias and low variance or low bias and high variance?
-
-- What happens if I make decisions about which model to fit by ALWAYS looking at the error in the test set?
-
-
-
-## Important Concepts{visibility="hidden"}
+## Important Concepts {visibility="hidden"}
 
 -   Inference vs Prediction
 

@@ -355,46 +355,46 @@ Professor: Tiago Ventura
 <h2>Why do we need models to analyze text data?</h2>
 <p><strong>Scalability</strong> and <strong>Dimensionality Reduction</strong></p>
 <ul>
-<li class="fragment"><p>Humans are great at understanding the meaning of a sentence or a document in-depth</p></li>
-<li class="fragment"><p>Computers are better at understanding patterns, classify and describe content across millions of subjects</p></li>
-<li class="fragment"><p>Computational Text analysis augments humans – does not replace us</p></li>
-<li class="fragment"><p>Statistical models + Powerful Computers allows us to process data at scale and understand common patterns</p></li>
-<li class="fragment"><p>We know “All text models are wrong” – This is particularly true with text!</p></li>
+<li><p>Humans are great at understanding the meaning of a sentence or a document in-depth</p></li>
+<li><p>Computers are better at understanding patterns, classify and describe content across millions of subjects</p></li>
+<li><p>Computational Text analysis augments humans – does not replace us</p></li>
+<li><p>Statistical models + Powerful Computers allows us to process data at scale and understand common patterns</p></li>
+<li><p>We know “All text models are wrong” – This is particularly true with text!</p></li>
 </ul>
 </section>
 <section id="workflow" class="slide level2 center">
 <h2>Workflow</h2>
 <ul>
-<li class="fragment"><p><strong>Acquire textual data:</strong></p>
+<li><p><strong>Acquire textual data:</strong></p>
 <ul>
-<li class="fragment">Existing corpora; scraped data; digitized text</li>
+<li>Existing corpora; scraped data; digitized text</li>
 </ul></li>
-<li class="fragment"><p><strong>Preprocess the data:</strong></p>
+<li><p><strong>Preprocess the data:</strong></p>
 <ul>
-<li class="fragment">Bag-of-words</li>
-<li class="fragment">Reduce noise, capture signal</li>
+<li>Bag-of-words</li>
+<li>Reduce noise, capture signal</li>
 </ul></li>
 </ul>
 </section>
 <section id="workflow-1" class="slide level2 center">
 <h2>Workflow</h2>
 <ul>
-<li class="fragment"><p><strong>Apply method appropriate to research goal:</strong></p>
+<li><p><strong>Apply method appropriate to research goal:</strong></p>
 <ul>
-<li class="fragment">Descriptive Analysis:
+<li>Descriptive Analysis:
 <ul>
-<li class="fragment">Count Words, Readability; similarity;</li>
+<li>Count Words, Readability; similarity;</li>
 </ul></li>
-<li class="fragment">Classify documents into unknown categories
+<li>Classify documents into unknown categories
 <ul>
-<li class="fragment">Document clustering</li>
-<li class="fragment">Topic models</li>
+<li>Document clustering</li>
+<li>Topic models</li>
 </ul></li>
-<li class="fragment">Classify documents into known categories
+<li>Classify documents into known categories
 <ul>
-<li class="fragment">Dictionary methods</li>
-<li class="fragment">Supervised machine learning</li>
-<li class="fragment">Transfer-Learning - use models trained in text for other purposes</li>
+<li>Dictionary methods</li>
+<li>Supervised machine learning</li>
+<li>Transfer-Learning - use models trained in text for other purposes</li>
 </ul></li>
 </ul></li>
 </ul>
@@ -402,30 +402,30 @@ Professor: Tiago Ventura
 <section id="already-did-it" class="slide level2 center">
 <h2>Already did it!</h2>
 <ul>
-<li class="fragment"><strong>Acquire textual data:</strong>
+<li><strong>Acquire textual data:</strong>
 <ul>
-<li class="fragment">Existing corpora; scraped data; digitized text</li>
+<li>Existing corpora; scraped data; digitized text</li>
 </ul></li>
 </ul>
 </section>
 <section id="today" class="slide level2 center">
 <h2>Today:</h2>
 <ul>
-<li class="fragment"><p><strong>Preprocess the data:</strong></p>
+<li><p><strong>Preprocess the data:</strong></p>
 <ul>
-<li class="fragment">Convert text to numbers.</li>
-<li class="fragment">Use the Bag-of-words assumption.</li>
-<li class="fragment">Reduce noise, capture signal</li>
+<li>Convert text to numbers.</li>
+<li>Use the Bag-of-words assumption.</li>
+<li>Reduce noise, capture signal</li>
 </ul></li>
-<li class="fragment"><p><strong>Apply methods appropriate to research goal:</strong></p>
+<li><p><strong>Apply methods appropriate to research goal:</strong></p>
 <ul>
-<li class="fragment">Descriptive Analysis:
+<li>Descriptive Analysis:
 <ul>
-<li class="fragment">Count Words, Readability; similarity;</li>
+<li>Count Words, Readability; similarity;</li>
 </ul></li>
-<li class="fragment">Classify documents into unknown categories
+<li>Classify documents into unknown categories
 <ul>
-<li class="fragment">Topic models</li>
+<li>Topic models</li>
 </ul></li>
 </ul></li>
 </ul>
@@ -433,11 +433,11 @@ Professor: Tiago Ventura
 <section id="next-week" class="slide level2 center">
 <h2>Next Week:</h2>
 <ul>
-<li class="fragment">Classify documents into known categories
+<li>Classify documents into known categories
 <ul>
-<li class="fragment">Dictionary methods</li>
-<li class="fragment">Supervised machine learning</li>
-<li class="fragment">Transfer-Learning - use models trained in text for other purposes</li>
+<li>Dictionary methods</li>
+<li>Supervised machine learning</li>
+<li>Transfer-Learning - use models trained in text for other purposes</li>
 </ul></li>
 </ul>
 </section></section>
@@ -450,24 +450,24 @@ Professor: Tiago Ventura
 <h2>From Text-to-Numbers: Representing Texts as Data.</h2>
 <p>When working with text, we have two critical challenges:</p>
 <ul>
-<li class="fragment"><p>Reduce Textual Complexity (Think about every word as a variable. This is huge matrix!!)</p>
+<li><p>Reduce Textual Complexity (Think about every word as a variable. This is huge matrix!!)</p>
 <ul>
-<li class="fragment">Pre-Processing steps</li>
+<li>Pre-Processing steps</li>
 </ul></li>
-<li class="fragment"><p>Convert unstructured text to numbers ~ that we can feed in to a statistical model</p>
+<li><p>Convert unstructured text to numbers ~ that we can feed in to a statistical model</p>
 <ul>
-<li class="fragment">Document Feature Matrix/Bag-of-Words</li>
+<li>Document Feature Matrix/Bag-of-Words</li>
 </ul></li>
 </ul>
 </section>
 <section id="reducing-complexity-pre-processing-steps" class="slide level2 center">
 <h2>Reducing Complexity: Pre-Processing Steps</h2>
 <ul>
-<li class="fragment"><p><strong>Tokenize:</strong> break out larger chunks of text in words (unigram) or n-grams</p></li>
-<li class="fragment"><p><strong>Lowercase:</strong> convert all to lower case</p></li>
-<li class="fragment"><p><strong>Remove Noise:</strong> stopwords, numbers, punctuation, function words</p></li>
-<li class="fragment"><p><strong>Stemming:</strong> chops off the ends of words</p></li>
-<li class="fragment"><p><strong>Lemmatization:</strong> doing things properly with the use of a vocabulary and morphological analysis of words</p></li>
+<li><p><strong>Tokenize:</strong> break out larger chunks of text in words (unigram) or n-grams</p></li>
+<li><p><strong>Lowercase:</strong> convert all to lower case</p></li>
+<li><p><strong>Remove Noise:</strong> stopwords, numbers, punctuation, function words</p></li>
+<li><p><strong>Stemming:</strong> chops off the ends of words</p></li>
+<li><p><strong>Lemmatization:</strong> doing things properly with the use of a vocabulary and morphological analysis of words</p></li>
 </ul>
 </section>
 <section id="example" class="slide level2 center">
@@ -498,26 +498,26 @@ Professor: Tiago Ventura
 <section id="text-representation" class="slide level2 center">
 <h2>Text Representation</h2>
 <ul>
-<li class="fragment"><p>Represent text as an <strong>unordered</strong> set of tokens in a document. <span class="red">Bag-of-Words Assumption</span></p></li>
-<li class="fragment"><p>While order is ignored, frequency matters!</p></li>
-<li class="fragment"><p>To represent documents as numbers, we will use the <span class="red">vector space model representation</span>:</p>
+<li><p>Represent text as an <strong>unordered</strong> set of tokens in a document. <span class="red">Bag-of-Words Assumption</span></p></li>
+<li><p>While order is ignored, frequency matters!</p></li>
+<li><p>To represent documents as numbers, we will use the <span class="red">vector space model representation</span>:</p>
 <ul>
-<li class="fragment"><p>A document <span class="math inline">\(D_i\)</span> is represented as a collection of features <span class="math inline">\(W\)</span> (words, tokens, n-grams..)</p></li>
-<li class="fragment"><p>Each feature <span class="math inline">\(w_i\)</span> can be placed in a real line, then a document <span class="math inline">\(D_i\)</span> is a vector with <span class="math inline">\(W\)</span> dimensions</p></li>
+<li><p>A document <span class="math inline">\(D_i\)</span> is represented as a collection of features <span class="math inline">\(W\)</span> (words, tokens, n-grams..)</p></li>
+<li><p>Each feature <span class="math inline">\(w_i\)</span> can be placed in a real line, then a document <span class="math inline">\(D_i\)</span> is a vector with <span class="math inline">\(W\)</span> dimensions</p></li>
 </ul></li>
 </ul>
 <div class="fragment">
 <p>Imagine the sentence below: <em>“If that is a joke, I love it. If not, can’t wait to unpack that with you later.”</em></p>
 <ul>
-<li class="fragment"><p><strong>Sorted Vocabulary</strong> =(a, can’t, i, if, is, it, joke, later, love, not, that, to, unpack, wait, with, you”)</p></li>
-<li class="fragment"><p><strong>Feature Representation</strong> = (1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1)</p></li>
-<li class="fragment"><p>Features will typically be the n-gram (mostly unigram) <span class="red">frequencies</span> of the tokens in the document, or some <span class="red">function</span> of those frequencies</p></li>
+<li><p><strong>Sorted Vocabulary</strong> =(a, can’t, i, if, is, it, joke, later, love, not, that, to, unpack, wait, with, you”)</p></li>
+<li><p><strong>Feature Representation</strong> = (1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1)</p></li>
+<li><p>Features will typically be the n-gram (mostly unigram) <span class="red">frequencies</span> of the tokens in the document, or some <span class="red">function</span> of those frequencies</p></li>
 </ul>
 </div>
 <div class="fragment">
 <p>Each document becomes a numerical vector (vector space model)</p>
 <ul>
-<li class="fragment">stacking these vectors will give you our workhose representation for text: <span class="red"><strong>Document Feature Matrix</strong></span></li>
+<li>stacking these vectors will give you our workhose representation for text: <span class="red"><strong>Document Feature Matrix</strong></span></li>
 </ul>
 </div>
 </section>
@@ -540,10 +540,12 @@ Professor: Tiago Ventura
 <h2>From Text to Numbers: Bag-of-Words &amp; Document-Feature Matrix</h2>
 
 <img data-src="https://www.mzes.uni-mannheim.de/socialsciencedatalab/article/advancing-text-mining/figures/dfm.png" style="width:80.0%" class="r-stretch quarto-figure-center"></section>
-<section id="text-as-data-methods" class="slide level2 center">
-<h2>Text-as-Data methods</h2>
-<h4 id="comparingdescribing-documents">Comparing/Describing Documents</h4>
-<h4 id="topic-models-finding-hidden-structures-in-a-corpus">Topic Models: Finding hidden structures in a corpus</h4>
+<section id="text-as-data-methods-today" class="slide level2 center">
+<h2>Text-as-Data methods today</h2>
+<ul>
+<li><p>Comparing/Describing Documents</p></li>
+<li><p>Topic Models: Finding hidden structures in a corpus</p></li>
+</ul>
 </section>
 <section id="comparing-documents-how-far-is-document-a-from-document-b" class="slide level2 center">
 <h2>Comparing Documents: How `far’ is document a from document b?</h2>
@@ -622,9 +624,9 @@ For vectors i and j, with distance $s_{ij}$:
 </div>
 </div>
 <ul>
-<li class="fragment"><p><span class="math inline">\(y_a\)</span> = [0, 2.51, 3.6, 0] and <span class="math inline">\(y_b\)</span> = [0, 2.3, 3.1, 9.2]</p></li>
-<li class="fragment"><p><span class="math inline">\(\sum_{j=1}^j (y_a - y_b)^2\)</span> = <span class="math inline">\((0-0)^2 + (2.51-2.3)^2 + (3.6-3.1)^2 + (9-0)^2\)</span> = <span class="math inline">\(84.9341\)</span></p></li>
-<li class="fragment"><p><span class="math inline">\(\sqrt{\sum_{j=1}^j (y_a - y_b)^2}\)</span> = 9.21</p></li>
+<li><p><span class="math inline">\(y_a\)</span> = [0, 2.51, 3.6, 0] and <span class="math inline">\(y_b\)</span> = [0, 2.3, 3.1, 9.2]</p></li>
+<li><p><span class="math inline">\(\sum_{j=1}^j (y_a - y_b)^2\)</span> = <span class="math inline">\((0-0)^2 + (2.51-2.3)^2 + (3.6-3.1)^2 + (9-0)^2\)</span> = <span class="math inline">\(84.9341\)</span></p></li>
+<li><p><span class="math inline">\(\sqrt{\sum_{j=1}^j (y_a - y_b)^2}\)</span> = 9.21</p></li>
 </ul>
 </section>
 <section id="exercise" class="slide level2 center">
@@ -655,10 +657,10 @@ For vectors i and j, with distance $s_{ij}$:
 </div><div class="column" style="width:50%;">
 <p><br><br></p>
 <ul>
-<li class="fragment">Which documents will the euclidean distance place closer together?</li>
-<li class="fragment">Does it look like a good measure for similarity?
+<li>Which documents will the euclidean distance place closer together?</li>
+<li>Does it look like a good measure for similarity?
 <ul>
-<li class="fragment">Doc C = Doc A * 3</li>
+<li>Doc C = Doc A * 3</li>
 </ul></li>
 </ul>
 </div>
@@ -671,24 +673,24 @@ For vectors i and j, with distance $s_{ij}$:
 \text{cosine similarity}(\mathbf{y_a}, \mathbf{y_b}) = \frac{\mathbf{y_a} \cdot \mathbf{y_b}}{\|\mathbf{y_a}\| \|\mathbf{y_b}\|}
 \]</span></p>
 <ul>
-<li class="fragment"><p><span class="math inline">\(U \cdot V\)</span> ~ dot product between vectors</p>
+<li><p><span class="math inline">\(U \cdot V\)</span> ~ dot product between vectors</p>
 <ul>
-<li class="fragment">it is a projection of one vector into another</li>
-<li class="fragment">Works as a measure of similarity</li>
-<li class="fragment">But rewards magnitude</li>
+<li>it is a projection of one vector into another</li>
+<li>Works as a measure of similarity</li>
+<li>But rewards magnitude</li>
 </ul></li>
-<li class="fragment"><p><span class="math inline">\(||\mathbf{U}||\)</span> ~ vector magnitude, length ~ <span class="math inline">\(\sqrt{\sum{u_{i}^2}}\)</span></p>
+<li><p><span class="math inline">\(||\mathbf{U}||\)</span> ~ vector magnitude, length ~ <span class="math inline">\(\sqrt{\sum{u_{i}^2}}\)</span></p>
 <ul>
-<li class="fragment">normalizes a vector projection of documents’ by their lengths</li>
+<li>normalizes a vector projection of documents’ by their lengths</li>
 </ul></li>
-<li class="fragment"><p>cosine similarity captures some notion of relative <em>direction</em> controlling for different magnitudes.</p></li>
+<li><p>cosine similarity captures some notion of relative <em>direction</em> controlling for different magnitudes.</p></li>
 </ul>
 </section>
 <section id="cosine-similarity-1" class="slide level2 center">
 <h2>Cosine Similarity</h2>
 <p>Cosine function has a range between -1 and 1.</p>
 <ul>
-<li class="fragment">Consider: cos (0) = 1, cos (90) = 0, cos (180) = -1</li>
+<li>Consider: cos (0) = 1, cos (90) = 0, cos (180) = -1</li>
 </ul>
 
 <img data-src="week-11_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section></section>
@@ -700,15 +702,15 @@ For vectors i and j, with distance $s_{ij}$:
 <section id="topic-models-intuition" class="slide level2 center">
 <h2>Topic Models: Intuition</h2>
 <ul>
-<li class="fragment"><p><strong>Problem:</strong> Once we start with docs, we do not know what topics exist, what words belong to which topics, what topic proportions each document has</p></li>
-<li class="fragment"><p><strong>Probabilistic Model:</strong> Make assumptions about how language work, and how topics emerge. Then check if this matches with word co-occurrence in each document</p></li>
-<li class="fragment"><p><strong>Documents:</strong> formed from probability distribution of topics</p>
+<li><p><strong>Problem:</strong> Once we start with docs, we do not know what topics exist, what words belong to which topics, what topic proportions each document has</p></li>
+<li><p><strong>Probabilistic Model:</strong> Make assumptions about how language work, and how topics emerge. Then check if this matches with word co-occurrence in each document</p></li>
+<li><p><strong>Documents:</strong> formed from probability distribution of topics</p>
 <ul>
-<li class="fragment"><span class="midgray">a speech can be 40% about trade, 30% about sports, 10% about health, and 20% spread across topics you don’t think make much sense</span></li>
+<li><span class="midgray">a speech can be 40% about trade, 30% about sports, 10% about health, and 20% spread across topics you don’t think make much sense</span></li>
 </ul></li>
-<li class="fragment"><p><strong>Topics:</strong> formed from probability distribution over words</p>
+<li><p><strong>Topics:</strong> formed from probability distribution over words</p>
 <ul>
-<li class="fragment"><span class="midgray">the topic health will have words like hospital, clinic, dr., sick, cancer</span></li>
+<li><span class="midgray">the topic health will have words like hospital, clinic, dr., sick, cancer</span></li>
 </ul></li>
 </ul>
 </section>
@@ -719,18 +721,18 @@ For vectors i and j, with distance $s_{ij}$:
 <section id="intuition-language-model" class="slide level2 center">
 <h2>Intuition: Language Model</h2>
 <ul>
-<li class="fragment"><p><strong>Step 1: For each <span class="red">document</span>:</strong></p>
+<li><p><strong>Step 1: For each <span class="red">document</span>:</strong></p>
 <ul>
-<li class="fragment">Randomly choose a <span class="red">distribution</span> over topics. That is, choose one of many multinomial distributions, each which mixes the topics in different proportions.</li>
+<li>Randomly choose a <span class="red">distribution</span> over topics. That is, choose one of many multinomial distributions, each which mixes the topics in different proportions.</li>
 </ul></li>
-<li class="fragment"><p><strong>Step 2: For each topic</strong></p>
+<li><p><strong>Step 2: For each topic</strong></p>
 <ul>
-<li class="fragment">Randomly choose a <strong>distribution</strong> of words, also from one of many multinomial distributions., each with mixes words in different proportions</li>
+<li>Randomly choose a <strong>distribution</strong> of words, also from one of many multinomial distributions., each with mixes words in different proportions</li>
 </ul></li>
-<li class="fragment"><p><strong>Step 3: Then, for every <span class="red">word</span> in the document</strong></p>
+<li><p><strong>Step 3: Then, for every <span class="red">word</span> in the document</strong></p>
 <ul>
-<li class="fragment">Randomly choose a <span class="red">topic</span> from the distribution over topics from step 1.</li>
-<li class="fragment">Randomly choose a <span class="red">word</span> from the distribution over the vocabulary that the topic implies.</li>
+<li>Randomly choose a <span class="red">topic</span> from the distribution over topics from step 1.</li>
+<li>Randomly choose a <span class="red">word</span> from the distribution over the vocabulary that the topic implies.</li>
 </ul></li>
 </ul>
 </section>
@@ -747,8 +749,8 @@ p(\beta_{1:K}, \theta_{1:D}, z_{1:D}|w_{1:D})=\frac{p(\beta_{1:K}, \theta_{1:D},
 \]</span></p>
 <p><strong>Estimation:</strong> Use Gibbs Sampling (Bayesian Stats) to reverse-engineer this</p>
 <ul>
-<li class="fragment"><p>Start at random for all parameters, compare with word co-occurrence within docs, and update</p></li>
-<li class="fragment"><p>Why it works: The model wants a topic to contain as few words as possible, but a document to contain as few topics as possible. This tension is what makes the model work.</p></li>
+<li><p>Start at random for all parameters, compare with word co-occurrence within docs, and update</p></li>
+<li><p>Why it works: The model wants a topic to contain as few words as possible, but a document to contain as few topics as possible. This tension is what makes the model work.</p></li>
 </ul>
 </section>
 <section id="show-me-results" class="slide level2 center">
@@ -758,10 +760,10 @@ p(\beta_{1:K}, \theta_{1:D}, z_{1:D}|w_{1:D})=\frac{p(\beta_{1:K}, \theta_{1:D},
 <section id="many-different-types-of-topic-models" class="slide level2 center">
 <h2>Many different types of topic models</h2>
 <ul>
-<li class="fragment"><p><strong>Structural topic model:</strong> allow (1) topic prevalence, (2) topic content to vary as a function of document-level covariates (e.g., how do topics vary over time or documents produced in 1990 talk about something differently than documents produced in 2020?); implemented in stm in R (Roberts, Stewart, Tingley, Benoit)</p></li>
-<li class="fragment"><p><strong>Correlated topic model:</strong> way to explore between-topic relationships (Blei and Lafferty, 2017); implemented in topicmodels in R; possibly somewhere in Python as well!</p></li>
-<li class="fragment"><p><strong>Keyword-assisted topic model:</strong> seed topic model with keywords to try to increase the face validity of topics to what you’re trying to measure; implemented in keyATM in R (Eshima, Imai, Sasaki, 2019)</p></li>
-<li class="fragment"><p><strong>BertTopic:</strong> BERTopic is a topic modeling technique that leverages transformers and TF-IDF to create dense clusters of words.</p></li>
+<li><p><strong>Structural topic model:</strong> allow (1) topic prevalence, (2) topic content to vary as a function of document-level covariates (e.g., how do topics vary over time or documents produced in 1990 talk about something differently than documents produced in 2020?); implemented in stm in R (Roberts, Stewart, Tingley, Benoit)</p></li>
+<li><p><strong>Correlated topic model:</strong> way to explore between-topic relationships (Blei and Lafferty, 2017); implemented in topicmodels in R; possibly somewhere in Python as well!</p></li>
+<li><p><strong>Keyword-assisted topic model:</strong> seed topic model with keywords to try to increase the face validity of topics to what you’re trying to measure; implemented in keyATM in R (Eshima, Imai, Sasaki, 2019)</p></li>
+<li><p><strong>BertTopic:</strong> BERTopic is a topic modeling technique that leverages transformers and TF-IDF to create dense clusters of words.</p></li>
 </ul>
 </section></section>
 <section id="notebooks" class="title-slide slide level1 center">

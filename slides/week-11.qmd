@@ -14,7 +14,7 @@ format:
     height: 1000
     center: true
     slide-number: true
-    incremental: true
+    incremental: false
     chalkboard: 
       buttons: false
     preview-links: auto
@@ -233,11 +233,11 @@ ggplot(df, aes(x = no, y = yes, label = document)) +
 knitr::include_graphics("https://www.mzes.uni-mannheim.de/socialsciencedatalab/article/advancing-text-mining/figures/dfm.png") 
 ```
 
-## Text-as-Data methods
+## Text-as-Data methods today
 
-#### Comparing/Describing Documents
+- Comparing/Describing Documents
 
-#### Topic Models: Finding hidden structures in a corpus
+- Topic Models: Finding hidden structures in a corpus
 
 ## Comparing Documents: How \`far' is document a from document b?
 
@@ -521,11 +521,9 @@ $$
 
 **Estimation:** Use Gibbs Sampling (Bayesian Stats) to reverse-engineer this
 
-- Start at random for all parameters, compare with word co-occurrence within docs, and update
+-   Start at random for all parameters, compare with word co-occurrence within docs, and update
 
-- Why it works: The model wants a topic to contain as few words as possible, but a
-document to contain as few topics as possible. This tension is what
-makes the model work.
+-   Why it works: The model wants a topic to contain as few words as possible, but a document to contain as few topics as possible. This tension is what makes the model work.
 
 ## Show me results!
 
