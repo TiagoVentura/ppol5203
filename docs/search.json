@@ -2343,5 +2343,208 @@
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "Supervised and Unsupervised Machine Learning",
     "text": "Supervised and Unsupervised Machine Learning\n\nUnsupervised Learning (DS III)\n\nwe observe a vector of measurements \\(x_i\\) but no associated response \\(y_i\\).\n“unsupervised” because we lack a response variable that can supervise our analysis."
+  },
+  {
+    "objectID": "slides/week-11.html#a-significant-part-of-how-we-produce-and-store-data-is-textual",
+    "href": "slides/week-11.html#a-significant-part-of-how-we-produce-and-store-data-is-textual",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "A significant part of how we produce and store data is textual",
+    "text": "A significant part of how we produce and store data is textual"
+  },
+  {
+    "objectID": "slides/week-11.html#official-documents-congressional-speeches-bills-press-releases-transcripts-from-all-over-the-world",
+    "href": "slides/week-11.html#official-documents-congressional-speeches-bills-press-releases-transcripts-from-all-over-the-world",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Official Documents: Congressional Speeches, Bills, Press Releases, Transcripts, from all over the world!!",
+    "text": "Official Documents: Congressional Speeches, Bills, Press Releases, Transcripts, from all over the world!!"
+  },
+  {
+    "objectID": "slides/week-11.html#social-media",
+    "href": "slides/week-11.html#social-media",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Social Media",
+    "text": "Social Media"
+  },
+  {
+    "objectID": "slides/week-11.html#online-media-news-comments-blogs-etc",
+    "href": "slides/week-11.html#online-media-news-comments-blogs-etc",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Online Media: News, Comments, Blogs, etc…",
+    "text": "Online Media: News, Comments, Blogs, etc…"
+  },
+  {
+    "objectID": "slides/week-11.html#why-do-we-need-models-to-analyze-text-data",
+    "href": "slides/week-11.html#why-do-we-need-models-to-analyze-text-data",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Why do we need models to analyze text data?",
+    "text": "Why do we need models to analyze text data?\nScalability and Dimensionality Reduction\n\nHumans are great at understanding the meaning of a sentence or a document in-depth\nComputers are better at understanding patterns, classify and describe content across millions of subjects\nComputational Text analysis augments humans – does not replace us\nStatistical models + Powerful Computers allows us to process data at scale and understand common patterns\nWe know “All text models are wrong” – This is particularly true with text!"
+  },
+  {
+    "objectID": "slides/week-11.html#workflow",
+    "href": "slides/week-11.html#workflow",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Workflow",
+    "text": "Workflow\n\nAcquire textual data:\n\nExisting corpora; scraped data; digitized text\n\nPreprocess the data:\n\nBag-of-words\nReduce noise, capture signal"
+  },
+  {
+    "objectID": "slides/week-11.html#workflow-1",
+    "href": "slides/week-11.html#workflow-1",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Workflow",
+    "text": "Workflow\n\nApply method appropriate to research goal:\n\nDescriptive Analysis:\n\nCount Words, Readability; similarity;\n\nClassify documents into unknown categories\n\nDocument clustering\nTopic models\n\nClassify documents into known categories\n\nDictionary methods\nSupervised machine learning\nTransfer-Learning - use models trained in text for other purposes"
+  },
+  {
+    "objectID": "slides/week-11.html#already-did-it",
+    "href": "slides/week-11.html#already-did-it",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Already did it!",
+    "text": "Already did it!\n\nAcquire textual data:\n\nExisting corpora; scraped data; digitized text"
+  },
+  {
+    "objectID": "slides/week-11.html#today",
+    "href": "slides/week-11.html#today",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Today:",
+    "text": "Today:\n\nPreprocess the data:\n\nConvert text to numbers.\nUse the Bag-of-words assumption.\nReduce noise, capture signal\n\nApply methods appropriate to research goal:\n\nDescriptive Analysis:\n\nCount Words, Readability; similarity;\n\nClassify documents into unknown categories\n\nTopic models"
+  },
+  {
+    "objectID": "slides/week-11.html#next-week",
+    "href": "slides/week-11.html#next-week",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Next Week:",
+    "text": "Next Week:\n\nClassify documents into known categories\n\nDictionary methods\nSupervised machine learning\nTransfer-Learning - use models trained in text for other purposes"
+  },
+  {
+    "objectID": "slides/week-11.html#from-text-to-numbers-representing-texts-as-data.",
+    "href": "slides/week-11.html#from-text-to-numbers-representing-texts-as-data.",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "From Text-to-Numbers: Representing Texts as Data.",
+    "text": "From Text-to-Numbers: Representing Texts as Data.\nWhen working with text, we have two critical challenges:\n\nReduce Textual Complexity (Think about every word as a variable. This is huge matrix!!)\n\nPre-Processing steps\n\nConvert unstructured text to numbers ~ that we can feed in to a statistical model\n\nDocument Feature Matrix/Bag-of-Words"
+  },
+  {
+    "objectID": "slides/week-11.html#reducing-complexity-pre-processing-steps",
+    "href": "slides/week-11.html#reducing-complexity-pre-processing-steps",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Reducing Complexity: Pre-Processing Steps",
+    "text": "Reducing Complexity: Pre-Processing Steps\n\nTokenize: break out larger chunks of text in words (unigram) or n-grams\nLowercase: convert all to lower case\nRemove Noise: stopwords, numbers, punctuation, function words\nStemming: chops off the ends of words\nLemmatization: doing things properly with the use of a vocabulary and morphological analysis of words"
+  },
+  {
+    "objectID": "slides/week-11.html#example",
+    "href": "slides/week-11.html#example",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Example",
+    "text": "Example\n\n\n\nText\n\n\nWe use a new dataset containing nearly 50 million historical newspaper pages from 2,700 local US newspapers over the years 1877–1977. We define and discuss a measure of power we develop based on observed word frequencies, and we validate it through a series of analyses. Overall, we find that the relative coverage of political actors and of political offices is a strong indicator of political power for the cases we study\n\n\n\n\n\n\n\nAfter pre-processing\n\n\nuse new dataset contain near 50 million historical newspaper pag 2700 local u newspaper year 18771977 define discus measure power develop bas observ word frequenc validate ser analys overall find relat coverage political actor political offic strong indicator political power cas study"
+  },
+  {
+    "objectID": "slides/week-11.html#text-representation",
+    "href": "slides/week-11.html#text-representation",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Text Representation",
+    "text": "Text Representation\n\nRepresent text as an unordered set of tokens in a document. Bag-of-Words Assumption\nWhile order is ignored, frequency matters!\nTo represent documents as numbers, we will use the vector space model representation:\n\nA document \\(D_i\\) is represented as a collection of features \\(W\\) (words, tokens, n-grams..)\nEach feature \\(w_i\\) can be placed in a real line, then a document \\(D_i\\) is a vector with \\(W\\) dimensions\n\n\n\nImagine the sentence below: “If that is a joke, I love it. If not, can’t wait to unpack that with you later.”\n\nSorted Vocabulary =(a, can’t, i, if, is, it, joke, later, love, not, that, to, unpack, wait, with, you”)\nFeature Representation = (1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1)\nFeatures will typically be the n-gram (mostly unigram) frequencies of the tokens in the document, or some function of those frequencies\n\n\n\nEach document becomes a numerical vector (vector space model)\n\nstacking these vectors will give you our workhose representation for text: Document Feature Matrix"
+  },
+  {
+    "objectID": "slides/week-11.html#visualizing-vector-space-model",
+    "href": "slides/week-11.html#visualizing-vector-space-model",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Visualizing Vector Space Model",
+    "text": "Visualizing Vector Space Model\n\n\n\nDocuments\n\n\nDocument 1 = “yes yes yes no no no”\nDocument 2 = “yes yes yes yes yes yes”"
+  },
+  {
+    "objectID": "slides/week-11.html#from-text-to-numbers-bag-of-words-document-feature-matrix",
+    "href": "slides/week-11.html#from-text-to-numbers-bag-of-words-document-feature-matrix",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "From Text to Numbers: Bag-of-Words & Document-Feature Matrix",
+    "text": "From Text to Numbers: Bag-of-Words & Document-Feature Matrix"
+  },
+  {
+    "objectID": "slides/week-11.html#text-as-data-methods",
+    "href": "slides/week-11.html#text-as-data-methods",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Text-as-Data methods",
+    "text": "Text-as-Data methods\nComparing/Describing Documents\nTopic Models: Finding hidden structures in a corpus"
+  },
+  {
+    "objectID": "slides/week-11.html#comparing-documents-how-far-is-document-a-from-document-b",
+    "href": "slides/week-11.html#comparing-documents-how-far-is-document-a-from-document-b",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Comparing Documents: How `far’ is document a from document b?",
+    "text": "Comparing Documents: How `far’ is document a from document b?\nUsing the vector space, we can use notions of geometry to build well-defined comparison/similarity measures between the documents.\n\n\nin multiple dimensions!!"
+  },
+  {
+    "objectID": "slides/week-11.html#euclidean-distance",
+    "href": "slides/week-11.html#euclidean-distance",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Euclidean Distance",
+    "text": "Euclidean Distance\nThe ordinary, straight line distance between two points in space. Using document vectors \\(y_a\\) and \\(y_b\\) with \\(j\\) dimensions\n\n\n\nEuclidean Distance\n\n\n\\[\n||y_a - y_b|| = \\sqrt{\\sum^{j}(y_{aj} - y_{bj})^2}\n\\]\n\n\n\nCan be performed for any number of features J ~ has nice mathematical properties\n\nno negative distances: sij   0 2 distance between documents is zero () documents are identical 3 distance between documents is symmetric: sij = sji 4 measures satisfy triangle inequality. sik   sij + sjk"
+  },
+  {
+    "objectID": "slides/week-11.html#euclidean-distance-example",
+    "href": "slides/week-11.html#euclidean-distance-example",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Euclidean Distance, example",
+    "text": "Euclidean Distance, example\n\n\n\nEuclidean Distance\n\n\n\\[\n||y_a - y_b|| = \\sqrt{\\sum^{j}(y_{aj} - y_{bj})^2}\n\\]\n\n\n\n\n\\(y_a\\) = [0, 2.51, 3.6, 0] and \\(y_b\\) = [0, 2.3, 3.1, 9.2]\n\\(\\sum_{j=1}^j (y_a - y_b)^2\\) = \\((0-0)^2 + (2.51-2.3)^2 + (3.6-3.1)^2 + (9-0)^2\\) = \\(84.9341\\)\n\\(\\sqrt{\\sum_{j=1}^j (y_a - y_b)^2}\\) = 9.21"
+  },
+  {
+    "objectID": "slides/week-11.html#exercise",
+    "href": "slides/week-11.html#exercise",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Exercise",
+    "text": "Exercise\n\n\n\nDocuments, W=3 {yes, no}\n\n\nDocument 1 = “yes yes yes no no no” (3, 3)\nDocument 2 = “yes yes yes yes yes yes” (6,0)\nDocument 3= “yes yes yes no no no yes yes yes no no no yes yes yes no no no yes yes yes no no no” (12, 12)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhich documents will the euclidean distance place closer together?\nDoes it look like a good measure for similarity?\n\nDoc C = Doc A * 3"
+  },
+  {
+    "objectID": "slides/week-11.html#cosine-similarity",
+    "href": "slides/week-11.html#cosine-similarity",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Cosine Similarity",
+    "text": "Cosine Similarity\nEuclidean distance rewards magnitude, rather than direction\n\\[\n\\text{cosine similarity}(\\mathbf{y_a}, \\mathbf{y_b}) = \\frac{\\mathbf{y_a} \\cdot \\mathbf{y_b}}{\\|\\mathbf{y_a}\\| \\|\\mathbf{y_b}\\|}\n\\]\n\n\\(U \\cdot V\\) ~ dot product between vectors\n\nit is a projection of one vector into another\nWorks as a measure of similarity\nBut rewards magnitude\n\n\\(||\\mathbf{U}||\\) ~ vector magnitude, length ~ \\(\\sqrt{\\sum{u_{i}^2}}\\)\n\nnormalizes a vector projection of documents’ by their lengths\n\ncosine similarity captures some notion of relative direction controlling for different magnitudes."
+  },
+  {
+    "objectID": "slides/week-11.html#cosine-similarity-1",
+    "href": "slides/week-11.html#cosine-similarity-1",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Cosine Similarity",
+    "text": "Cosine Similarity\nCosine function has a range between -1 and 1.\n\nConsider: cos (0) = 1, cos (90) = 0, cos (180) = -1"
+  },
+  {
+    "objectID": "slides/week-11.html#topic-models-intuition",
+    "href": "slides/week-11.html#topic-models-intuition",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Topic Models: Intuition",
+    "text": "Topic Models: Intuition\n\nProblem: Once we start with docs, we do not know what topics exist, what words belong to which topics, what topic proportions each document has\nProbabilistic Model: Make assumptions about how language work, and how topics emerge. Then check if this matches with word co-occurrence in each document\nDocuments: formed from probability distribution of topics\n\na speech can be 40% about trade, 30% about sports, 10% about health, and 20% spread across topics you don’t think make much sense\n\nTopics: formed from probability distribution over words\n\nthe topic health will have words like hospital, clinic, dr., sick, cancer"
+  },
+  {
+    "objectID": "slides/week-11.html#blei-2012",
+    "href": "slides/week-11.html#blei-2012",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Blei, 2012,",
+    "text": "Blei, 2012,"
+  },
+  {
+    "objectID": "slides/week-11.html#intuition-language-model",
+    "href": "slides/week-11.html#intuition-language-model",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Intuition: Language Model",
+    "text": "Intuition: Language Model\n\nStep 1: For each document:\n\nRandomly choose a distribution over topics. That is, choose one of many multinomial distributions, each which mixes the topics in different proportions.\n\nStep 2: For each topic\n\nRandomly choose a distribution of words, also from one of many multinomial distributions., each with mixes words in different proportions\n\nStep 3: Then, for every word in the document\n\nRandomly choose a topic from the distribution over topics from step 1.\nRandomly choose a word from the distribution over the vocabulary that the topic implies."
+  },
+  {
+    "objectID": "slides/week-11.html#inference-how-to-estimate-all-these-parameters",
+    "href": "slides/week-11.html#inference-how-to-estimate-all-these-parameters",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Inference: How to estimate all these parameters?",
+    "text": "Inference: How to estimate all these parameters?\nInference: Use the observed data, the words, to make an inference about the latent parameters: the \\(\\beta\\)s, and the \\(\\theta\\)s.\nComplicate Math: Using the observed data, the words, we can estimate latent parameters. We start with the joint distribution implied by our language model (Blei, 2012):\n\\[\np(\\beta_{1:K}, \\theta_{1:D}, z_{1:D}, w_{1:D})= \\prod_{K}^{i=1}p(\\beta_i)\\prod_{D}^{d=1}p(\\theta_d)(\\prod_{N}^{n=1}p(z_{d,n}|\\theta_d)p(w_{d,n}|\\beta_{1:K},z_{d,n})\n\\]\nTo get to this conditional:\n\\[\np(\\beta_{1:K}, \\theta_{1:D}, z_{1:D}|w_{1:D})=\\frac{p(\\beta_{1:K}, \\theta_{1:D}, z_{1:D}, w_{1:D})}{p(w_{1:D})}\n\\]\nEstimation: Use Gibbs Sampling (Bayesian Stats) to reverse-engineer this\n\nStart at random for all parameters, compare with word co-occurrence within docs, and update\nWhy it works: The model wants a topic to contain as few words as possible, but a document to contain as few topics as possible. This tension is what makes the model work."
+  },
+  {
+    "objectID": "slides/week-11.html#show-me-results",
+    "href": "slides/week-11.html#show-me-results",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Show me results!",
+    "text": "Show me results!"
+  },
+  {
+    "objectID": "slides/week-11.html#many-different-types-of-topic-models",
+    "href": "slides/week-11.html#many-different-types-of-topic-models",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Many different types of topic models",
+    "text": "Many different types of topic models\n\nStructural topic model: allow (1) topic prevalence, (2) topic content to vary as a function of document-level covariates (e.g., how do topics vary over time or documents produced in 1990 talk about something differently than documents produced in 2020?); implemented in stm in R (Roberts, Stewart, Tingley, Benoit)\nCorrelated topic model: way to explore between-topic relationships (Blei and Lafferty, 2017); implemented in topicmodels in R; possibly somewhere in Python as well!\nKeyword-assisted topic model: seed topic model with keywords to try to increase the face validity of topics to what you’re trying to measure; implemented in keyATM in R (Eshima, Imai, Sasaki, 2019)\nBertTopic: BERTopic is a topic modeling technique that leverages transformers and TF-IDF to create dense clusters of words."
   }
 ]
