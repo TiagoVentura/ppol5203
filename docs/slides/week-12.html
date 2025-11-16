@@ -353,14 +353,9 @@ Professor: Tiago Ventura
 </ul></li>
 </ul>
 </section>
-<section id="in-two-weeks-project-presentations.-your-final-project-in-slides" class="title-slide slide level1 center" data-background-color="red">
-<h1>In two weeks: Project Presentations. Your final project in slides!</h1>
-
-</section>
-
 <section>
-<section id="next-class-sql-time-for-you-to-talk-to-me-about-your-projects." class="title-slide slide level1 center">
-<h1>Next Class: SQL + time for you to talk to me about your projects.</h1>
+<section id="in-three-weeks-project-presentations.-your-final-project-in-slides" class="title-slide slide level1 center" data-background-color="red">
+<h1>In three weeks: Project Presentations. Your final project in slides!</h1>
 
 </section>
 <section id="supervised-learning-with-text" class="slide level2 center">
@@ -385,6 +380,7 @@ Professor: Tiago Ventura
 <li class="fragment"><p>Dictionary Models.</p></li>
 <li class="fragment"><p>Classic Machine Learning with bag-of-words assumption.</p></li>
 <li class="fragment"><p>Pre-Trained Models Deep Learning Models.</p></li>
+<li class="fragment"><p><strong>Plus:</strong> Prompting Large Language Models (Full class next week)</p></li>
 </ul>
 </section>
 <section id="dictionary-models" class="slide level2 center">
@@ -566,26 +562,44 @@ Professor: Tiago Ventura
 
 <img data-src="skipgram_0.png" style="width:100.0%" class="r-stretch"><p>Source: <a href="https://web.stanford.edu/class/cs224n/index.html#schedule">CS224N</a></p>
 </section>
-<section id="transformers-architecture" class="slide level2 center">
-<h2>Transformers Architecture</h2>
 
-<img data-src="trans.png" style="width:100.0%" class="r-stretch"></section>
-<section id="neural-networks-with-dense-vectors." class="slide level2 center">
-<h2>Neural Networks with Dense Vectors.</h2>
+<section id="transformer-architeture" class="slide level2 center">
+<h2>Transformer architeture</h2>
 
-<img data-src="full_nn_transformers.png" style="width:100.0%" class="r-stretch"></section>
+<img data-src="trans.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section>
+<section id="transformer-history" class="slide level2 center">
+<h2>Transformer History</h2>
+<p>The transformer architecture was introduced only in 2017!! This paper revolutionized many natural language processing task, particularly, machine translation and language modelling. All famous models of today are based in the transformers framework</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="transformers_chrono.svg" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+
+<aside><div>
+<p>source: https://huggingface.co/learn/llm-course/chapter1/4</p>
+</div></aside></section>
 <section id="how-do-i-use-these-sophisticated-models" class="slide level2 center">
 <h2>How do I use these sophisticated models?</h2>
-<p>If you have enough computing power and knowledge of working with these models, you can train your own LLM models. It takes a LOT of data, time and money.</p>
-<p>Most people will:</p>
+<p>If you have enough computing power and knowledge of working with these models, you can train your own LLM models. It takes a LOT of data, time and money. Only big tech companies can actually do this</p>
+<p>So, you will ver likely:</p>
 <ul>
-<li class="fragment"><p>use pre-trained models (transfer learning) available on the web.</p></li>
-<li class="fragment"><p>use pre-trained word embeddings, fine tune the model (retrain with new data), and improve the performance</p></li>
-<li class="fragment"><p>outsource tasks for generative models through prompting via APIs.</p></li>
+<li class="fragment"><p>use pre-trained models available on the web.</p></li>
+<li class="fragment"><p>use pre-trained transformers, fine tune the model (retrain with new data), and improve the performance of the models</p></li>
+<li class="fragment"><p>Or outsource tasks for generative models through prompting via APIs.</p></li>
 </ul>
-</section></section>
-<section id="notebook-for-text-analysis" class="title-slide slide level1 center">
-<h1><a href="">Notebook for Text Analysis</a></h1>
+</section>
+<section id="hugging-face-for-transformers" class="slide level2 center">
+<h2>Hugging Face for Transformers</h2>
+<p>Hugging Face’s Model Hub: centralized repository for sharing and discovering pre-trained models [https://huggingface.co]</p>
+
+<img data-src="transformers.png" style="width:80.0%" class="r-stretch quarto-figure-center"></section></section>
+<section id="coding" class="title-slide slide level1 center">
+<h1>Coding!</h1>
 
 <div class="footer footer-default">
 <p>Data science I: Foundations</p>

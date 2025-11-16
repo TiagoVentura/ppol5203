@@ -130,7 +130,7 @@
     "href": "slides/week-12.html#three-types-of-supervised-learning-with-text",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "Three types of Supervised Learning with Text",
-    "text": "Three types of Supervised Learning with Text\nIn class, we will see three distinct types of approaches to do supervised learning with text.\n\nDictionary Models.\nClassic Machine Learning with bag-of-words assumption.\nPre-Trained Models Deep Learning Models."
+    "text": "Three types of Supervised Learning with Text\nIn class, we will see three distinct types of approaches to do supervised learning with text.\n\nDictionary Models.\nClassic Machine Learning with bag-of-words assumption.\nPre-Trained Models Deep Learning Models.\nPlus: Prompting Large Language Models (Full class next week)"
   },
   {
     "objectID": "slides/week-12.html#dictionary-models",
@@ -207,14 +207,14 @@
     "href": "slides/week-12.html#how-do-i-use-these-sophisticated-models",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "How do I use these sophisticated models?",
-    "text": "How do I use these sophisticated models?\nIf you have enough computing power and knowledge of working with these models, you can train your own LLM models. It takes a LOT of data, time and money.\nMost people will:\n\nuse pre-trained models (transfer learning) available on the web.\nuse pre-trained word embeddings, fine tune the model (retrain with new data), and improve the performance\noutsource tasks for generative models through prompting via APIs."
+    "text": "How do I use these sophisticated models?\nIf you have enough computing power and knowledge of working with these models, you can train your own LLM models. It takes a LOT of data, time and money. Only big tech companies can actually do this\nSo, you will ver likely:\n\nuse pre-trained models available on the web.\nuse pre-trained transformers, fine tune the model (retrain with new data), and improve the performance of the models\nOr outsource tasks for generative models through prompting via APIs."
   },
   {
     "objectID": "slides/week-10.html#plans-for-today",
     "href": "slides/week-10.html#plans-for-today",
     "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "Plans for Today",
-    "text": "Plans for Today\n\n\nIntroduction to Machine Learning\n\nStatistical Learning\nInferential Models vs Predictive Models\nMachine Learning:\n\nSupervised vs Unsupervised\nTraining models\nBias and Variance Trade-off\n\nCoding"
+    "section": "",
+    "text": "Introduction to Machine Learning\n\nStatistical Learning\nInferential Models vs Predictive Models\nMachine Learning:\n\nSupervised vs Unsupervised\nTraining models\nBias and Variance Trade-off\n\nCoding"
   },
   {
     "objectID": "slides/week-10.html#logistics",
@@ -270,14 +270,14 @@
     "href": "slides/week-10.html#supervised-and-unsupervised-machine-learning",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "Supervised and Unsupervised Machine Learning",
-    "text": "Supervised and Unsupervised Machine Learning\n\nUnsupervised Learning (DS III)\n\nwe observe a vector of measurements \\(x_i\\) but no associated response \\(y_i\\).\n“unsupervised” because we lack a response variable that can supervise our analysis."
+    "text": "Supervised and Unsupervised Machine Learning\n\nUnsupervised Learning (DS III)\n\nwe observe a vector of measurements \\(x_i\\) but no associated response \\(y_i\\).\n“unsupervised” because we lack a response variable that can supervise our analysis.\n\n\n\n\n\nLoading required package: tidyverse\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.1.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\nLoading required package: caret\n\nLoading required package: lattice\n\n\nAttaching package: 'caret'\n\n\nThe following object is masked from 'package:purrr':\n\n    lift\n\n\nLoading required package: recipes\n\n\nAttaching package: 'recipes'\n\n\nThe following object is masked from 'package:stringr':\n\n    fixed\n\n\nThe following object is masked from 'package:stats':\n\n    step\n\n\nWarning: The `x` argument of `as_tibble.matrix()` must have unique column names if\n`.name_repair` is omitted as of tibble 2.0.0.\nℹ Using compatibility `.name_repair`."
   },
   {
     "objectID": "slides/week-10.html#supervised-and-unsupervised-learning",
     "href": "slides/week-10.html#supervised-and-unsupervised-learning",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "Supervised and Unsupervised Learning",
-    "text": "Supervised and Unsupervised Learning\n\nSupervised Learning (DS II)\n\nfor each observation of the predictor measurement \\(x_i\\) there is an associated response measurement \\(y_i\\). In essence, there is an outcome we are aiming to accurately predict or understand.\nQuantitative outcome: Regression Models ~ linear, penalization, generalized additive models\nQualitative Outcomes: Classification methods ~ logistic regression, naive Bayes, support vector machines, neural networks"
+    "text": "Supervised and Unsupervised Learning\n\nSupervised Learning (DS II)\n\nfor each observation of the predictor measurement \\(x_i\\) there is an associated response measurement \\(y_i\\). In essence, there is an outcome we are aiming to accurately predict or understand.\nQuantitative outcome: Regression Models ~ linear, penalization, generalized additive models\nQualitative Outcomes: Classification methods ~ logistic regression, naive Bayes, support vector machines, neural networks\n\n\n\n\n\nWarning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.\nℹ Please use `linewidth` instead.\n\n\n`geom_smooth()` using formula = 'y ~ x'"
   },
   {
     "objectID": "slides/week-10.html#types-of-models",
@@ -319,14 +319,14 @@
     "href": "slides/week-10.html#bias-and-variance-trade-off",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "Bias and Variance Trade-off",
-    "text": "Bias and Variance Trade-off\n\n\nTrade-off: as we reduce bias, we risk overfiting. Training properly is key to find a middle-of-the-road solution."
+    "text": "Bias and Variance Trade-off\n\n\n\n\n\n\nTrade-off: as we reduce bias, we risk overfiting. Training properly is key to find a middle-of-the-road solution."
   },
   {
     "objectID": "slides/week-10.html#challenge-avoid-overfitting-the-data",
     "href": "slides/week-10.html#challenge-avoid-overfitting-the-data",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "Challenge: avoid overfitting the data",
-    "text": "Challenge: avoid overfitting the data"
+    "text": "Challenge: avoid overfitting the data\n\n\n\nAttaching package: 'scales'\n\n\nThe following object is masked from 'package:purrr':\n\n    discard\n\n\nThe following object is masked from 'package:readr':\n\n    col_factor\n\n\n`geom_smooth()` using formula = 'y ~ x'\n`geom_smooth()` using formula = 'y ~ x'\n\n\nWarning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,\n: k-d tree limited by memory. ncmax= 500\n\n\nWarning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x\nelse if (is.data.frame(newdata))\nas.matrix(model.frame(delete.response(terms(object)), : k-d tree limited by\nmemory. ncmax= 500\n\n\n`geom_smooth()` using formula = 'y ~ x'"
   },
   {
     "objectID": "slides/week-10.html#mse-training-data",
@@ -382,7 +382,7 @@
     "href": "slides/week-10.html#coding",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "Coding!",
-    "text": "Coding!\nhttps://tiagoventura.github.io/ppol5203/weeks/week-10.html\n\n\nData science I: Foundations"
+    "text": "Coding!\nhttps://tiagoventura.github.io/ppol5203/weeks/week-10.html"
   },
   {
     "objectID": "slides/week-3.html#plans-for-today",
@@ -2595,5 +2595,61 @@
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "Text-as-Data methods today",
     "text": "Text-as-Data methods today\n\nComparing/Describing Documents\nTopic Models: Finding hidden structures in a corpus"
+  },
+  {
+    "objectID": "slides/week-12.html#transformers-neural-networks-with-dense-vectors.",
+    "href": "slides/week-12.html#transformers-neural-networks-with-dense-vectors.",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "TransformerS: Neural Networks with Dense Vectors.",
+    "text": "TransformerS: Neural Networks with Dense Vectors."
+  },
+  {
+    "objectID": "slides/week-12.html#hugging-face-for-transformers",
+    "href": "slides/week-12.html#hugging-face-for-transformers",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Hugging Face for Transformers",
+    "text": "Hugging Face for Transformers\nHugging Face’s Model Hub: centralized repository for sharing and discovering pre-trained models [https://huggingface.co]"
+  },
+  {
+    "objectID": "slides/week-12.html#a-peak-on-a-transformer-architeture",
+    "href": "slides/week-12.html#a-peak-on-a-transformer-architeture",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "A peak on a transformer architeture",
+    "text": "A peak on a transformer architeture"
+  },
+  {
+    "objectID": "slides/week-10.html",
+    "href": "slides/week-10.html",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "",
+    "text": "Introduction to Machine Learning\n\nStatistical Learning\nInferential Models vs Predictive Models\nMachine Learning:\n\nSupervised vs Unsupervised\nTraining models\nBias and Variance Trade-off\n\nCoding"
+  },
+  {
+    "objectID": "slides/week-10.html#measures-of-accuracy-for-classification-tasks",
+    "href": "slides/week-10.html#measures-of-accuracy-for-classification-tasks",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Measures of Accuracy for Classification tasks",
+    "text": "Measures of Accuracy for Classification tasks\n\n\n\n\n\nPredicted\n\n\n\n\n\n\n\n\nJ\n¬J\nTotal\n\n\nActual\nJ\na (True Positive)\nb (False Negative)\na+b\n\n\n\n¬J\nc (False Positive)\nd (True Negative)\nc+d\n\n\n\nTotal\na+c\nb+d\nN\n\n\n\n\n\nAccuracy: number correctly classified/total number of cases = (a+d)/(a+b+c+d)\nPrecision : number of TP / (number of TP+number of FP) = a/(a+c) .\n\nFraction of the documents predicted to be J, that were in fact J.\nThink as a measure for the estimator (Very precise estimate)\n\nRecall: (number of TP) / (number of TP + number of FN) = a /(a+b)\n\nFraction of the documents that were in fact J, that method predicted were J.\nThink as a measure for the data (Covers most of the cases in the data)\n\nF : 2 precision*recall / precision+recall\n\nHarmonic mean of precision and recall."
+  },
+  {
+    "objectID": "slides/week-10.html#important-concepts",
+    "href": "slides/week-10.html#important-concepts",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Important Concepts",
+    "text": "Important Concepts\n\nInference vs Prediction\nPrediction: black-box function, highly flexible to reduce error.\nLearning: train the model in seen data. Test and calculate metrics in seen\nAvoid overfitting and data leakage by using resampling methods."
+  },
+  {
+    "objectID": "slides/week-12.html#transformer-architeture",
+    "href": "slides/week-12.html#transformer-architeture",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Transformer architeture",
+    "text": "Transformer architeture"
+  },
+  {
+    "objectID": "slides/week-12.html#transformer-history",
+    "href": "slides/week-12.html#transformer-history",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Transformer History",
+    "text": "Transformer History\nThe transformer architecture was introduced only in 2017!! This paper revolutionized many natural language processing task, particularly, machine translation and language modelling. All famous models of today are based in the transformers framework\n\n\n\n\n\n\n\n\n\n\n\nsource: https://huggingface.co/learn/llm-course/chapter1/4"
   }
 ]

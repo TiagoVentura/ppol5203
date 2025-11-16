@@ -1,6 +1,6 @@
 ---
 title: "<span style = 'font-size: 100%;'> PPOL 5203 - Data Science I: Foundations </span>"
-subtitle: "<span style = 'font-size: 150%;'> Week 11: Text-As-Data I: Description and Topics </span>"
+subtitle: "<span style = 'font-size: 150%;'> Week 10: Text-As-Data I: Description and Topics </span>"
 author: "Professor: Tiago Ventura"
 execute: 
   echo: false
@@ -235,9 +235,9 @@ knitr::include_graphics("https://www.mzes.uni-mannheim.de/socialsciencedatalab/a
 
 ## Text-as-Data methods today
 
-- Comparing/Describing Documents
+-   Comparing/Describing Documents
 
-- Topic Models: Finding hidden structures in a corpus
+-   Topic Models: Finding hidden structures in a corpus
 
 ## Comparing Documents: How \`far' is document a from document b?
 

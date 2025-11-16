@@ -32,32 +32,32 @@ format:
     -   Machine Learning Pre-Trained Models
     -   Applications of LLMs (Large Languague models)
 
-# In two weeks: Project Presentations. Your final project in slides! {background-color="red"}
-
-# Next Class: SQL + time for you to talk to me about your projects. 
+# In three weeks: Project Presentations. Your final project in slides! {background-color="red"}
 
 ## Supervised Learning with Text
 
 When doing supervised learning with text, we have three basic pieces of the puzzle:
 
-- **Outcome**: the content you want to classify. 
-   - Examples: 
-       - Tone, Emotion, Topic, Misinformation, Quality... Anything you know what you want to classify
+-   **Outcome**: the content you want to classify.
 
-- **Input**: this is your text. Often this will come from converting you text to a numerical representation. As we learned last week, most times this numerical representation will be a document feature matrix.
+    -   Examples:
+        -   Tone, Emotion, Topic, Misinformation, Quality... Anything you know what you want to classify
 
-- **Model**: An transformation function connecting your words with the outcome you want to predict. 
+-   **Input**: this is your text. Often this will come from converting you text to a numerical representation. As we learned last week, most times this numerical representation will be a document feature matrix.
 
+-   **Model**: An transformation function connecting your words with the outcome you want to predict.
 
 ## Three types of Supervised Learning with Text
 
-In class, we will see three distinct types of approaches to do supervised learning with text. 
+In class, we will see three distinct types of approaches to do supervised learning with text.
 
-- Dictionary Models.
+-   Dictionary Models.
 
-- Classic Machine Learning with bag-of-words assumption.
+-   Classic Machine Learning with bag-of-words assumption.
 
-- Pre-Trained Models Deep Learning Models.
+-   Pre-Trained Models Deep Learning Models.
+
+-  **Plus:** Prompting Large Language Models (Full class next week)
 
 ## Dictionary Models
 
@@ -93,8 +93,7 @@ Where:
 -   $N_i$ is the total number of all dictionary words in the document
 :::
 
-# Quizz.  Advantages and Disadvantages of dictionaries? 
-
+# Quizz. Advantages and Disadvantages of dictionaries?
 
 ## Classic Machine Learning with bag-of-words assumption.
 
@@ -107,7 +106,6 @@ Where:
 -   Step 3: train a statistical model on these set of label data using the document-feature matrix.
 
 -   Step 4: use the classifier - some f(x) - to predict unseen documents
-
 
 ## Evaluating the Performance
 
@@ -136,32 +134,29 @@ Where:
     -   Harmonic mean of precision and recall.
 :::
 
-# Quizz.  Advantages and Disadvantages of Classic ML? 
+# Quizz. Advantages and Disadvantages of Classic ML?
 
-## Pre-Trained Deep Learning Models 
+## Pre-Trained Deep Learning Models
 
-In recent years, text-as-data/nlp tasks have been dominated by the use of deep learning models. Let's try to understand a bit what these models are. 
+In recent years, text-as-data/nlp tasks have been dominated by the use of deep learning models. Let's try to understand a bit what these models are.
 
-- [Components:]{.red} These text-based deep learning models have two major components
+-   [Components:]{.red} These text-based deep learning models have two major components
 
-    - A dense representation of words (no bag of words!). 
-       - Every word becomes a vector now
-       
-    - A deep architecture for model predictions ~ neural network
-
+    -   A dense representation of words (no bag of words!).
+        -   Every word becomes a vector now
+    -   A deep architecture for model predictions \~ neural network
 
 -   [Definition:]{.red} Deep Learning Models are designed for general-purpose classification tasks or just simple next-word prediction tasks
 
     -   In general those are models built on TONS of data and optimized for a particular task
-    
+
 -   [Key Features:]{.red}
-    
+
     -   Available for use, adaptation and experimentation
     -   Ready to use
     -   Low to zero cost
     -   Deep ML architectures \~ High accuracy
     -   Can be fine-tuned for your specific task
-
 
 ## Dense Vector Representation
 
@@ -171,12 +166,11 @@ In the vector space model, we learned:
 
 -   Each feature $w_i$ can be place in a real line, then a document $D_i$ is a point in a $W$ dimensional space.
 
-:::fragment
+::: fragment
 Embedded in this model, there is the idea we represent [words]{.red} as a [one-hot encoding]{.red}.
 
 -   "cat": \[0,0, 0, 0, 0, 0, 1, 0, ....., V\] , on a V dimensional vector
 -   "dog": \[0,0, 0, 0, 0, 0, 0, 1, ...., V\], on a V dimensional vector
-
 :::
 
 ## Sparse vs Dense Vectors
@@ -187,16 +181,14 @@ Embedded in this model, there is the idea we represent [words]{.red} as a [one-h
 
 -   dog = $\begin{bmatrix} 0,0, 0, 0, 0, 1, 0, 0, 0 \end{bmatrix}$
 
-:::fragment
-
+::: fragment
 **Word Embedding / Dense Representation:**
 
 -   cat = $\begin{bmatrix} 0.25, -0.75, 0.90, 0.12, -0.50, 0.33, 0.66, -0.88, 0.10, -0.45 \end{bmatrix}$
 
 -   dog = $\begin{bmatrix} 0.25, 1.75, 0.90, 0.12, -0.50, 0.33, 0.66, -0.88, 0.10, -0.45 \end{bmatrix}$
 
-- Dense representations are behind all recent advancements on NLP, including ChatGPT
-
+-   Dense representations are behind all recent advancements on NLP, including ChatGPT
 :::
 
 ## Embeddings with Self-Supervision
@@ -207,28 +199,49 @@ knitr::include_graphics("skipgram_0.png")
 
 Source: [CS224N](https://web.stanford.edu/class/cs224n/index.html#schedule)
 
-## Transformers Architecture
-
-```{r echo=FALSE, out.width = "100%"}
-knitr::include_graphics("trans.png") 
-```
-
-## Neural Networks with Dense Vectors.
+## Neural Networks with Dense Vectors.{visibility="hidden"}
 
 ```{r echo=FALSE, out.width = "100%"}
 knitr::include_graphics("full_nn_transformers.png") 
 ```
 
+## Transformer architeture 
+
+```{r echo=FALSE, out.width = "100%", fig.align='center'}
+knitr::include_graphics("trans.png") 
+```
+
+## Transformer History
+
+The transformer architecture was introduced only in 2017!! This paper revolutionized many natural language processing task, particularly, machine translation and language modelling. All famous models of today are based in the transformers framework
+
+```{r echo=FALSE, out.width = "100%", fig.align='center'}
+knitr::include_graphics("transformers_chrono.svg") 
+```
+:::aside
+source: https://huggingface.co/learn/llm-course/chapter1/4
+:::
+
+
 ## How do I use these sophisticated models?
 
-If you have enough computing power and knowledge of working with these models, you can train your own LLM models. It takes a LOT of data, time and money. 
+If you have enough computing power and knowledge of working with these models, you can train your own LLM models. It takes a LOT of data, time and money. Only big tech companies can actually do this
 
-Most people will: 
+So, you will ver likely:
 
-- use pre-trained models (transfer learning) available on the web.
+-   use pre-trained models available on the web.
 
-- use pre-trained word embeddings, fine tune the model (retrain with new data), and improve the performance
+-   use pre-trained transformers, fine tune the model (retrain with new data), and improve the performance of the models
 
-- outsource tasks for generative models through prompting via APIs.
+-   Or outsource tasks for generative models through prompting via APIs.
 
-# [Notebook for Text Analysis]()
+## Hugging Face for Transformers
+
+Hugging Face’s Model Hub: centralized repository for sharing and discovering pre-trained models \[https://huggingface.co\]
+
+```{r echo=FALSE, out.width = "80%", fig.align="center"}
+knitr::include_graphics("transformers.png") 
+```
+
+
+# Coding!
