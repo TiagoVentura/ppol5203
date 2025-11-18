@@ -2,7 +2,6 @@
 title: "<span style = 'font-size: 100%;'> PPOL 5203 - Data Science I: Foundations </span>"
 subtitle: "<span style = 'font-size: 100%;'> Week 11: Text-As-Data II: Classification </span>"
 author: "Professor: Tiago Ventura"
-date: "11/26/2023"
 execute: 
   echo: false
   error: true
@@ -11,7 +10,7 @@ format:
     transition: slide
     background-transition: fade
     code-line-numbers: false
-    width: 1400
+    width: 1500
     height: 1000
     center: true
     slide-number: true
