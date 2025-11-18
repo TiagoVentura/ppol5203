@@ -26,16 +26,15 @@ format:
 
 -   Supervised Learning with Text
     -   Dictionary Methods
-    -   Machine Learning 
+    -   Machine Learning
     -   Transformers: Pre-Trained Models
-
-- Coding
-   - Topics Models
-   - Supervised learning
+-   Coding
+    -   Topics Models
+    -   Supervised learning
 
 # In three weeks: Project Presentations. Your final project in slides! {background-color="red"}
 
-# Supervised Learning 
+# Supervised Learning
 
 ## What is Supervised Learning?
 
@@ -74,7 +73,7 @@ In class, we will see three distinct types of approaches to do supervised learni
 
 -   Pre-Trained Models Deep Learning Models.
 
--  **Plus:** Prompting Large Language Models (Full class next week)
+-   **Plus:** Prompting Large Language Models (Full class next week)
 
 ## Dictionary Models
 
@@ -142,7 +141,6 @@ Where:
     -   [Wisdom of Crowds:]{.red} the idea that large groups of non-expert people are collectively smarter than individual experts when it comes to problem-solving
 :::
 
-
 ## Evaluating the Performance
 
 |            |       |     Predicted      |                    |       |
@@ -169,8 +167,6 @@ Where:
 
     -   Harmonic mean of precision and recall.
 :::
-
-
 
 # Quizz. Advantages and Disadvantages of Classic ML?
 
@@ -237,13 +233,13 @@ knitr::include_graphics("skipgram_0.png")
 
 Source: [CS224N](https://web.stanford.edu/class/cs224n/index.html#schedule)
 
-## Neural Networks with Dense Vectors.{visibility="hidden"}
+## Neural Networks with Dense Vectors. {visibility="hidden"}
 
 ```{r echo=FALSE, out.width = "100%"}
 knitr::include_graphics("full_nn_transformers.png") 
 ```
 
-## Transformer architeture 
+## Transformer architeture
 
 ```{r echo=FALSE, out.width = "100%", fig.align='center'}
 knitr::include_graphics("trans.png") 
@@ -256,10 +252,10 @@ The transformer architecture was introduced only in 2017!! This paper revolution
 ```{r echo=FALSE, out.width = "100%", fig.align='center'}
 knitr::include_graphics("transformers_chrono.svg") 
 ```
-:::aside
+
+::: aside
 source: https://huggingface.co/learn/llm-course/chapter1/4
 :::
-
 
 ## How do I use these sophisticated models?
 
@@ -280,6 +276,5 @@ Hugging Face’s Model Hub: centralized repository for sharing and discovering p
 ```{r echo=FALSE, out.width = "80%", fig.align="center"}
 knitr::include_graphics("transformers.png") 
 ```
-
 
 # Coding!
