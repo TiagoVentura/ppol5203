@@ -116,14 +116,14 @@
     "href": "slides/week-12.html#plans-for-today",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "Plans for Today",
-    "text": "Plans for Today\nIntroduction to Text Analysis/Natural Language Processing\n\nSupervised Learning with Text\n\nDictionary Methods\nMachine Learning Pre-Trained Models\nApplications of LLMs (Large Languague models)"
+    "text": "Plans for Today\n\nSupervised Learning with Text\n\nDictionary Methods\nMachine Learning\nTransformers: Pre-Trained Models\n\nCoding\n\nTopics Models\nSupervised learning"
   },
   {
     "objectID": "slides/week-12.html#supervised-learning-with-text",
     "href": "slides/week-12.html#supervised-learning-with-text",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "Supervised Learning with Text",
-    "text": "Supervised Learning with Text\nWhen doing supervised learning with text, we have three basic pieces of the puzzle:\n\nOutcome: the content you want to classify.\n\nExamples:\n\nTone, Emotion, Topic, Misinformation, Quality… Anything you know what you want to classify\n\n\nInput: this is your text. Often this will come from converting you text to a numerical representation. As we learned last week, most times this numerical representation will be a document feature matrix.\nModel: An transformation function connecting your words with the outcome you want to predict."
+    "text": "Supervised Learning with Text\nWhen doing supervised learning with text, we have three basic pieces of the puzzle:\n\nOutcome: the class you want to classify.\n\nExamples:\n\nTone, Emotion, Topic, Misinformation, Quality… Anything you know what you want to classify\n\n\nInput: this is your text. Often as a Document Feature Matrix.\nModel: An transformation function connecting your words with the outcome you want to predict."
   },
   {
     "objectID": "slides/week-12.html#three-types-of-supervised-learning-with-text",
@@ -158,14 +158,14 @@
     "href": "slides/week-12.html#evaluating-the-performance",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "Evaluating the Performance",
-    "text": "Evaluating the Performance\n\n\n\n\n\nPredicted\n\n\n\n\n\n\n\n\nJ\n¬J\nTotal\n\n\nActual\nJ\na (TP)\nb (FN)\na+b\n\n\n\n¬J\nc (FP)\nd (TN)\nc+d\n\n\n\nTotal\na+c\nb+d\nN\n\n\n\n\n\nAccuracy: number correctly classified/total number of cases = (a+d)/(a+b+c+d)\nPrecision : number of TP / (number of TP+number of FP) = a/(a+c) .\n\nFraction of the documents predicted to be J, that were in fact J.\nThink as a measure for the estimator\n\nRecall: (number of TP) / (number of TP + number of FN) = a /(a+b)\n\nFraction of the documents that were in fact J, that method predicted were J.\nThink as a measure for the data\n\nF : 2 precision*recall / precision+recall\n\nHarmonic mean of precision and recall."
+    "text": "Evaluating the Performance\n\n\n\n\n\nPredicted\n\n\n\n\n\n\n\n\nJ\n¬J\nTotal\n\n\nActual\nJ\na (True Positive)\nb (False Negative)\na+b\n\n\n\n¬J\nc (False Positive)\nd (True Negative)\nc+d\n\n\n\nTotal\na+c\nb+d\nN\n\n\n\n\n\nAccuracy: number correctly classified/total number of cases = (a+d)/(a+b+c+d)\nPrecision : number of TP / (number of TP+number of FP) = a/(a+c) .\n\nFraction of the documents predicted to be J, that were in fact J.\nThink as a measure for the estimator (Very precise estimate)\n\nRecall: (number of TP) / (number of TP + number of FN) = a /(a+b)\n\nFraction of the documents that were in fact J, that method predicted were J.\nThink as a measure for the data (Covers most of the cases in the data)\n\nF : 2 precision*recall / precision+recall\n\nHarmonic mean of precision and recall."
   },
   {
     "objectID": "slides/week-12.html#pre-trained-deep-learning-models",
     "href": "slides/week-12.html#pre-trained-deep-learning-models",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "Pre-Trained Deep Learning Models",
-    "text": "Pre-Trained Deep Learning Models\nIn recent years, text-as-data/nlp tasks have been dominated by the use of deep learning models. Let’s try to understand a bit what these models are.\n\nComponents: These text-based deep learning models have two major components\n\nA dense representation of words (no bag of words!).\n\nEvery word becomes a vector now\n\nA deep architecture for model predictions ~ neural network\n\nDefinition: Deep Learning Models are designed for general-purpose classification tasks or just simple next-word prediction tasks\n\nIn general those are models built on TONS of data and optimized for a particular task\n\nKey Features:\n\nAvailable for use, adaptation and experimentation\nReady to use\nLow to zero cost\nDeep ML architectures ~ High accuracy\nCan be fine-tuned for your specific task"
+    "text": "Pre-Trained Deep Learning Models\nIn recent years, text-as-data/nlp tasks have been dominated by the use of deep learning models. Let’s try to understand a bit what these models are.\n\nComponents: These deep learning models have two major components\n\nA dense representation of words (no bag of words!).\n\nEvery word becomes a vector now\n\nA deep architecture for model predictions ~ neural network\n\nDefinition: Deep Learning Models are designed for general-purpose classification tasks or just simple next-word prediction tasks (language modelling)\n\nIn general those are models built on TONS of data and optimized for a particular task\n\nKey Features:\n\nAvailable for use, adaptation and experimentation\nReady to use\nLow to zero cost\nDeep ML architectures ~ High accuracy\nCan be fine-tuned for your specific task"
   },
   {
     "objectID": "slides/week-12.html#dense-vector-representation",
@@ -189,32 +189,39 @@
     "text": "Embeddings with Self-Supervision\n\nSource: CS224N"
   },
   {
-    "objectID": "slides/week-12.html#transformers-architecture",
-    "href": "slides/week-12.html#transformers-architecture",
+    "objectID": "slides/week-12.html#transformer-architeture",
+    "href": "slides/week-12.html#transformer-architeture",
     "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "Transformers Architecture",
-    "text": "Transformers Architecture"
+    "section": "Transformer architeture",
+    "text": "Transformer architeture"
   },
   {
-    "objectID": "slides/week-12.html#neural-networks-with-dense-vectors.",
-    "href": "slides/week-12.html#neural-networks-with-dense-vectors.",
+    "objectID": "slides/week-12.html#transformer-history",
+    "href": "slides/week-12.html#transformer-history",
     "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "Neural Networks with Dense Vectors.",
-    "text": "Neural Networks with Dense Vectors."
+    "section": "Transformer History",
+    "text": "Transformer History\nThe transformer architecture was introduced only in 2017!! This paper revolutionized many natural language processing tasks, particularly, machine translation and language modelling. All famous models LLMs of today are based in the transformers framework\n\n\n\n\n\n\n\n\n\n\n\nsource: https://huggingface.co/learn/llm-course/chapter1/4"
   },
   {
     "objectID": "slides/week-12.html#how-do-i-use-these-sophisticated-models",
     "href": "slides/week-12.html#how-do-i-use-these-sophisticated-models",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "How do I use these sophisticated models?",
-    "text": "How do I use these sophisticated models?\nIf you have enough computing power and knowledge of working with these models, you can train your own LLM models. It takes a LOT of data, time and money. Only big tech companies can actually do this\nSo, you will ver likely:\n\nuse pre-trained models available on the web.\nuse pre-trained transformers, fine tune the model (retrain with new data), and improve the performance of the models\nOr outsource tasks for generative models through prompting via APIs."
+    "text": "How do I use these sophisticated models?\nIf you have enough computing power and knowledge of working with these models, you can train your own LLM models. It takes a LOT of data, time and money. Only big tech companies can actually do this\nSo, you will very likely:\n\nuse pre-trained models available on the web (Google Perspective)\nuse pre-trained transformers, fine tune the model (retrain with new data), and improve the performance of the models\nOr outsource tasks for generative models through prompting via APIs."
+  },
+  {
+    "objectID": "slides/week-12.html#hugging-face-for-transformers",
+    "href": "slides/week-12.html#hugging-face-for-transformers",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Hugging Face for Transformers",
+    "text": "Hugging Face for Transformers\nHugging Face’s Model Hub: centralized repository for sharing and discovering pre-trained models [https://huggingface.co]"
   },
   {
     "objectID": "slides/week-10.html#plans-for-today",
     "href": "slides/week-10.html#plans-for-today",
     "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "",
-    "text": "Introduction to Machine Learning\n\nStatistical Learning\nInferential Models vs Predictive Models\nMachine Learning:\n\nSupervised vs Unsupervised\nTraining models\nBias and Variance Trade-off\n\nCoding"
+    "section": "Plans for Today",
+    "text": "Plans for Today\n\n\nIntroduction to Machine Learning\n\nStatistical Learning\nInferential Models vs Predictive Models\nMachine Learning:\n\nSupervised vs Unsupervised\nTraining models\nBias and Variance Trade-off\n\nCoding"
   },
   {
     "objectID": "slides/week-10.html#logistics",
@@ -270,14 +277,14 @@
     "href": "slides/week-10.html#supervised-and-unsupervised-machine-learning",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "Supervised and Unsupervised Machine Learning",
-    "text": "Supervised and Unsupervised Machine Learning\n\nUnsupervised Learning (DS III)\n\nwe observe a vector of measurements \\(x_i\\) but no associated response \\(y_i\\).\n“unsupervised” because we lack a response variable that can supervise our analysis.\n\n\n\n\n\nLoading required package: tidyverse\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.1.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\nLoading required package: caret\n\nLoading required package: lattice\n\n\nAttaching package: 'caret'\n\n\nThe following object is masked from 'package:purrr':\n\n    lift\n\n\nLoading required package: recipes\n\n\nAttaching package: 'recipes'\n\n\nThe following object is masked from 'package:stringr':\n\n    fixed\n\n\nThe following object is masked from 'package:stats':\n\n    step\n\n\nWarning: The `x` argument of `as_tibble.matrix()` must have unique column names if\n`.name_repair` is omitted as of tibble 2.0.0.\nℹ Using compatibility `.name_repair`."
+    "text": "Supervised and Unsupervised Machine Learning\n\nUnsupervised Learning (DS III)\n\nwe observe a vector of measurements \\(x_i\\) but no associated response \\(y_i\\).\n“unsupervised” because we lack a response variable that can supervise our analysis."
   },
   {
     "objectID": "slides/week-10.html#supervised-and-unsupervised-learning",
     "href": "slides/week-10.html#supervised-and-unsupervised-learning",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "Supervised and Unsupervised Learning",
-    "text": "Supervised and Unsupervised Learning\n\nSupervised Learning (DS II)\n\nfor each observation of the predictor measurement \\(x_i\\) there is an associated response measurement \\(y_i\\). In essence, there is an outcome we are aiming to accurately predict or understand.\nQuantitative outcome: Regression Models ~ linear, penalization, generalized additive models\nQualitative Outcomes: Classification methods ~ logistic regression, naive Bayes, support vector machines, neural networks\n\n\n\n\n\nWarning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.\nℹ Please use `linewidth` instead.\n\n\n`geom_smooth()` using formula = 'y ~ x'"
+    "text": "Supervised and Unsupervised Learning\n\nSupervised Learning (DS II)\n\nfor each observation of the predictor measurement \\(x_i\\) there is an associated response measurement \\(y_i\\). In essence, there is an outcome we are aiming to accurately predict or understand.\nQuantitative outcome: Regression Models ~ linear, penalization, generalized additive models\nQualitative Outcomes: Classification methods ~ logistic regression, naive Bayes, support vector machines, neural networks"
   },
   {
     "objectID": "slides/week-10.html#types-of-models",
@@ -319,14 +326,14 @@
     "href": "slides/week-10.html#bias-and-variance-trade-off",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "Bias and Variance Trade-off",
-    "text": "Bias and Variance Trade-off\n\n\n\n\n\n\nTrade-off: as we reduce bias, we risk overfiting. Training properly is key to find a middle-of-the-road solution."
+    "text": "Bias and Variance Trade-off\n\n\nTrade-off: as we reduce bias, we risk overfiting. Training properly is key to find a middle-of-the-road solution."
   },
   {
     "objectID": "slides/week-10.html#challenge-avoid-overfitting-the-data",
     "href": "slides/week-10.html#challenge-avoid-overfitting-the-data",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "Challenge: avoid overfitting the data",
-    "text": "Challenge: avoid overfitting the data\n\n\n\nAttaching package: 'scales'\n\n\nThe following object is masked from 'package:purrr':\n\n    discard\n\n\nThe following object is masked from 'package:readr':\n\n    col_factor\n\n\n`geom_smooth()` using formula = 'y ~ x'\n`geom_smooth()` using formula = 'y ~ x'\n\n\nWarning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,\n: k-d tree limited by memory. ncmax= 500\n\n\nWarning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x\nelse if (is.data.frame(newdata))\nas.matrix(model.frame(delete.response(terms(object)), : k-d tree limited by\nmemory. ncmax= 500\n\n\n`geom_smooth()` using formula = 'y ~ x'"
+    "text": "Challenge: avoid overfitting the data"
   },
   {
     "objectID": "slides/week-10.html#mse-training-data",
@@ -382,7 +389,7 @@
     "href": "slides/week-10.html#coding",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "Coding!",
-    "text": "Coding!\nhttps://tiagoventura.github.io/ppol5203/weeks/week-10.html"
+    "text": "Coding!\nhttps://tiagoventura.github.io/ppol5203/weeks/week-10.html\n\n\nData science I: Foundations"
   },
   {
     "objectID": "slides/week-3.html#plans-for-today",
@@ -480,7 +487,7 @@
     "href": "slides/week-3.html#what-happens-upon-assignment",
     "title": " PPOL 5203 - Data Science I: Foundations ",
     "section": "What happens upon assignment?",
-    "text": "What happens upon assignment?\n\nAction 1: A reference is assigned to an object, with an id number in memory\n\nid(x)\n\n5916599304"
+    "text": "What happens upon assignment?\n\nAction 1: A reference is assigned to an object, with an id number in memory\n\nid(x)\n\n5094515720"
   },
   {
     "objectID": "slides/week-3.html#section-3",
@@ -2254,11 +2261,11 @@
     "text": "From Text to Numbers: Bag-of-Words & Document-Feature Matrix"
   },
   {
-    "objectID": "slides/week-11.html#text-as-data-methods",
-    "href": "slides/week-11.html#text-as-data-methods",
+    "objectID": "slides/week-11.html#text-as-data-methods-today",
+    "href": "slides/week-11.html#text-as-data-methods-today",
     "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "Text-as-Data methods",
-    "text": "Text-as-Data methods\nComparing/Describing Documents\nTopic Models: Finding hidden structures in a corpus"
+    "section": "Text-as-Data methods today",
+    "text": "Text-as-Data methods today\n\nComparing/Describing Documents\nTopic Models: Finding hidden structures in a corpus"
   },
   {
     "objectID": "slides/week-11.html#comparing-documents-how-far-is-document-a-from-document-b",
@@ -2590,66 +2597,24 @@
     "text": "Georgetown Policies\n\nDisability\nIf you believe you have a disability, then you should contact the Academic Resource Center (arc@georgetown.edu) for further information. The Center is located in the Leavey Center, Suite 335 (202-687-8354). The Academic Resource Center is the campus office responsible for reviewing documentation provided by students with disabilities and for determining reasonable accommodations in accordance with the Americans with Disabilities Act (ASA) and University policies. For more information, go to http://academicsupport.georgetown.edu/disability/\n\n\nImportant Academic Policies and Academic Integrity\nMcCourt School students are expected to uphold the academic policies set forth by Georgetown University and the Graduate School of Arts and Sciences. Students should therefore familiarize themselves with all the rules, regulations, and procedures relevant to their pursuit of a Graduate School degree. The policies are located at: http://grad.georgetown.edu/academics/policies/\nApplied to this course, while I encourage collaboration on assignments and use of resources like StackOverflow, the problem sets will ask you to list who you worked on the problem set with and cite StackOverflow if it is the direct source of a code snippet.\n\n\nStatement on Sexual Misconduct\nGeorgetown University and its faculty are committed to supporting survivors and those impacted by sexual misconduct, which includes sexual assault, sexual harassment, relationship violence, and stalking. Georgetown requires faculty members, unless otherwise designated as confidential, to report all disclosures of sexual misconduct to the University Title IX Coordinator or a Deputy Title IX Coordinator. If you disclose an incident of sexual misconduct to a professor in or outside of the classroom (with the exception of disclosures in papers), that faculty member must report the incident to the Title IX Coordinator, or Deputy Title IX Coordinator. The coordinator will, in turn, reach out to the student to provide support, resources, and the option to meet. [Please note that the student is not required to meet with the Title IX coordinator.]. More information about reporting options and resources can be found on the Sexual Misconduct\nWebsite: https://sexualassault.georgetown.edu/resourcecenter\nIf you would prefer to speak to someone confidentially, Georgetown has a number of fully confidential professional resources that can provide support and assistance. These resources include: Health Education Services for Sexual Assault Response and Prevention: confidential email: sarp[at]georgetown.edu\nCounseling and Psychiatric Services (CAPS): 202.687.6985 or after hours, call (833) 960-3006 to reach Fonemed, a telehealth service; individuals may ask for the on-call CAPS clinician\nMore information about reporting options and resources can be found on the Sexual Misconduct Website.\n\n\nProvost’s Policy on Religious Observances\nGeorgetown University promotes respect for all religions. Any student who is unable to attend classes or to participate in any examination, presentation, or assignment on a given day because of the observance of a major religious holiday or related travel shall be excused and provided with the opportunity to make up, without unreasonable burden, any work that has been missed for this reason and shall not in any other way be penalized for the absence or rescheduled work. Students will remain responsible for all assigned work. Students should notify professors in writing at the beginning of the semester of religious observances that conflict with their classes. The Office of the Provost, in consultation with Campus Ministry and the Registrar, will publish, before classes begin for a given term, a list of major religious holidays likely to affect Georgetown students. The Provost and the Main Campus Executive Faculty encourage faculty to accommodate students whose bona fide religious observances in other ways impede normal participation in a course. Students who cannot be accommodated should discuss the matter with an advising dean."
   },
   {
-    "objectID": "slides/week-11.html#text-as-data-methods-today",
-    "href": "slides/week-11.html#text-as-data-methods-today",
+    "objectID": "slides/week-12.html#supervised-learning",
+    "href": "slides/week-12.html#supervised-learning",
     "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "Text-as-Data methods today",
-    "text": "Text-as-Data methods today\n\nComparing/Describing Documents\nTopic Models: Finding hidden structures in a corpus"
+    "section": "Supervised Learning",
+    "text": "Supervised Learning"
   },
   {
-    "objectID": "slides/week-12.html#transformers-neural-networks-with-dense-vectors.",
-    "href": "slides/week-12.html#transformers-neural-networks-with-dense-vectors.",
+    "objectID": "slides/week-12.html#what-is-supervised-learning",
+    "href": "slides/week-12.html#what-is-supervised-learning",
     "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "TransformerS: Neural Networks with Dense Vectors.",
-    "text": "TransformerS: Neural Networks with Dense Vectors."
+    "section": "What is Supervised Learning?",
+    "text": "What is Supervised Learning?\nDef: machine learning algorithm type that requires labeled input data to understand the mapping function from the input to the output\n\nSUPERVISED: The true labels y act as a “supervisor” for the learning process\n\nModel predicts ˆy for each input x\nCompare predictions ˆy to true labels y\nAdjust model to minimize errors\n\nLEARNING: the process by which a machine/model improves its performance on a specific task"
   },
   {
-    "objectID": "slides/week-12.html#hugging-face-for-transformers",
-    "href": "slides/week-12.html#hugging-face-for-transformers",
+    "objectID": "slides/week-12.html#how-to-obtain-a-training-labeled-dataset",
+    "href": "slides/week-12.html#how-to-obtain-a-training-labeled-dataset",
     "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "Hugging Face for Transformers",
-    "text": "Hugging Face for Transformers\nHugging Face’s Model Hub: centralized repository for sharing and discovering pre-trained models [https://huggingface.co]"
-  },
-  {
-    "objectID": "slides/week-12.html#a-peak-on-a-transformer-architeture",
-    "href": "slides/week-12.html#a-peak-on-a-transformer-architeture",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "A peak on a transformer architeture",
-    "text": "A peak on a transformer architeture"
-  },
-  {
-    "objectID": "slides/week-10.html",
-    "href": "slides/week-10.html",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "",
-    "text": "Introduction to Machine Learning\n\nStatistical Learning\nInferential Models vs Predictive Models\nMachine Learning:\n\nSupervised vs Unsupervised\nTraining models\nBias and Variance Trade-off\n\nCoding"
-  },
-  {
-    "objectID": "slides/week-10.html#measures-of-accuracy-for-classification-tasks",
-    "href": "slides/week-10.html#measures-of-accuracy-for-classification-tasks",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "Measures of Accuracy for Classification tasks",
-    "text": "Measures of Accuracy for Classification tasks\n\n\n\n\n\nPredicted\n\n\n\n\n\n\n\n\nJ\n¬J\nTotal\n\n\nActual\nJ\na (True Positive)\nb (False Negative)\na+b\n\n\n\n¬J\nc (False Positive)\nd (True Negative)\nc+d\n\n\n\nTotal\na+c\nb+d\nN\n\n\n\n\n\nAccuracy: number correctly classified/total number of cases = (a+d)/(a+b+c+d)\nPrecision : number of TP / (number of TP+number of FP) = a/(a+c) .\n\nFraction of the documents predicted to be J, that were in fact J.\nThink as a measure for the estimator (Very precise estimate)\n\nRecall: (number of TP) / (number of TP + number of FN) = a /(a+b)\n\nFraction of the documents that were in fact J, that method predicted were J.\nThink as a measure for the data (Covers most of the cases in the data)\n\nF : 2 precision*recall / precision+recall\n\nHarmonic mean of precision and recall."
-  },
-  {
-    "objectID": "slides/week-10.html#important-concepts",
-    "href": "slides/week-10.html#important-concepts",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "Important Concepts",
-    "text": "Important Concepts\n\nInference vs Prediction\nPrediction: black-box function, highly flexible to reduce error.\nLearning: train the model in seen data. Test and calculate metrics in seen\nAvoid overfitting and data leakage by using resampling methods."
-  },
-  {
-    "objectID": "slides/week-12.html#transformer-architeture",
-    "href": "slides/week-12.html#transformer-architeture",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "Transformer architeture",
-    "text": "Transformer architeture"
-  },
-  {
-    "objectID": "slides/week-12.html#transformer-history",
-    "href": "slides/week-12.html#transformer-history",
-    "title": " PPOL 5203 - Data Science I: Foundations ",
-    "section": "Transformer History",
-    "text": "Transformer History\nThe transformer architecture was introduced only in 2017!! This paper revolutionized many natural language processing task, particularly, machine translation and language modelling. All famous models of today are based in the transformers framework\n\n\n\n\n\n\n\n\n\n\n\nsource: https://huggingface.co/learn/llm-course/chapter1/4"
+    "section": "How to obtain a training labeled dataset?",
+    "text": "How to obtain a training labeled dataset?\n\n\nExternal Source of Annotation: Someone else labelled the data for you\n\nFederalist papers\nMetadata from text\nManifestos from Parties with well-developed dictionaries\n\nExpert annotation:\n\nmostly undergrads ~ that you train to be experts\n\nCrowd-sourced coding: digital labor markets\n\nWisdom of Crowds: the idea that large groups of non-expert people are collectively smarter than individual experts when it comes to problem-solving"
   }
 ]

@@ -343,77 +343,99 @@ Professor: Tiago Ventura
 </section>
 <section id="plans-for-today" class="slide level2 center">
 <h2>Plans for Today</h2>
-<p><strong>Introduction to Text Analysis/Natural Language Processing</strong></p>
 <ul>
-<li class="fragment">Supervised Learning with Text
+<li>Supervised Learning with Text
 <ul>
-<li class="fragment">Dictionary Methods</li>
-<li class="fragment">Machine Learning Pre-Trained Models</li>
-<li class="fragment">Applications of LLMs (Large Languague models)</li>
+<li>Dictionary Methods</li>
+<li>Machine Learning</li>
+<li>Transformers: Pre-Trained Models</li>
+</ul></li>
+<li>Coding
+<ul>
+<li>Topics Models</li>
+<li>Supervised learning</li>
 </ul></li>
 </ul>
 </section>
-<section>
 <section id="in-three-weeks-project-presentations.-your-final-project-in-slides" class="title-slide slide level1 center" data-background-color="red">
 <h1>In three weeks: Project Presentations. Your final project in slides!</h1>
 
+</section>
+
+<section>
+<section id="supervised-learning" class="title-slide slide level1 center">
+<h1>Supervised Learning</h1>
+
+</section>
+<section id="what-is-supervised-learning" class="slide level2 center">
+<h2>What is Supervised Learning?</h2>
+<p><strong>Def:</strong> machine learning algorithm type that requires <strong>labeled input</strong> data to understand the mapping function from the input to the output</p>
+<div class="fragment">
+<p><strong>SUPERVISED:</strong> The true labels y act as a “supervisor” for the learning process</p>
+<ul>
+<li>Model predicts ˆy for each input x</li>
+<li>Compare predictions ˆy to true labels y</li>
+<li>Adjust model to minimize errors</li>
+</ul>
+<p><strong>LEARNING:</strong> the process by which a machine/model improves its performance on a specific task</p>
+</div>
 </section>
 <section id="supervised-learning-with-text" class="slide level2 center">
 <h2>Supervised Learning with Text</h2>
 <p>When doing supervised learning with text, we have three basic pieces of the puzzle:</p>
 <ul>
-<li class="fragment"><p><strong>Outcome</strong>: the content you want to classify.</p>
+<li><p><strong>Outcome</strong>: the class you want to classify.</p>
 <ul>
-<li class="fragment">Examples:
+<li>Examples:
 <ul>
-<li class="fragment">Tone, Emotion, Topic, Misinformation, Quality… Anything you know what you want to classify</li>
+<li>Tone, Emotion, Topic, Misinformation, Quality… Anything you know what you want to classify</li>
 </ul></li>
 </ul></li>
-<li class="fragment"><p><strong>Input</strong>: this is your text. Often this will come from converting you text to a numerical representation. As we learned last week, most times this numerical representation will be a document feature matrix.</p></li>
-<li class="fragment"><p><strong>Model</strong>: An transformation function connecting your words with the outcome you want to predict.</p></li>
+<li><p><strong>Input</strong>: this is your text. Often as a Document Feature Matrix.</p></li>
+<li><p><strong>Model</strong>: An transformation function connecting your words with the outcome you want to predict.</p></li>
 </ul>
 </section>
 <section id="three-types-of-supervised-learning-with-text" class="slide level2 center">
 <h2>Three types of Supervised Learning with Text</h2>
 <p>In class, we will see three distinct types of approaches to do supervised learning with text.</p>
 <ul>
-<li class="fragment"><p>Dictionary Models.</p></li>
-<li class="fragment"><p>Classic Machine Learning with bag-of-words assumption.</p></li>
-<li class="fragment"><p>Pre-Trained Models Deep Learning Models.</p></li>
-<li class="fragment"><p><strong>Plus:</strong> Prompting Large Language Models (Full class next week)</p></li>
+<li><p>Dictionary Models.</p></li>
+<li><p>Classic Machine Learning with bag-of-words assumption.</p></li>
+<li><p>Pre-Trained Models Deep Learning Models.</p></li>
+<li><p><strong>Plus:</strong> Prompting Large Language Models (Full class next week)</p></li>
 </ul>
 </section>
 <section id="dictionary-models" class="slide level2 center">
 <h2>Dictionary Models</h2>
 <ul>
-<li class="fragment"><p>Use a set of pre-defined words that allow us to classify documents automatically, quickly and accurately.</p></li>
-<li class="fragment"><p>Instead of optimizing a transformation function using statistical assumption and seen data, in dictionaries we have a <span class="red">pre-assumed recipe</span> for the transformation function.</p></li>
-<li class="fragment"><p>A dictionary contains:</p>
+<li><p>Use a set of pre-defined words that allow us to classify documents automatically, quickly and accurately.</p></li>
+<li><p>Instead of optimizing a transformation function using statistical assumption and seen data, in dictionaries we have a <span class="red">pre-assumed recipe</span> for the transformation function.</p></li>
+<li><p>A dictionary contains:</p>
 <ul>
-<li class="fragment">a list of words that corresponds to each category
+<li>a list of words that corresponds to each category
 <ul>
-<li class="fragment"><span class="midgray">positive and negative for sentiment</span></li>
-<li class="fragment"><span class="midgray">Sexism, homophobia, xenophobia, racism for hate speech</span></li>
+<li><span class="midgray">positive and negative for sentiment</span></li>
+<li><span class="midgray">Sexism, homophobia, xenophobia, racism for hate speech</span></li>
 </ul></li>
 </ul></li>
-<li class="fragment"><p>Weights given to each word ~ same for all words or some continuous variation.</p></li>
+<li><p>Weights given to each word ~ same for all words or some continuous variation.</p></li>
 </ul>
 </section>
 <section id="more-specifically" class="slide level2 center">
 <h2>More specifically…</h2>
 <p>We have a set of <span class="red">key words</span> with weights,</p>
 <ul>
-<li class="fragment"><p>e.g.&nbsp;for sentiment analysis: <strong>horrible</strong> is scored as <span class="math inline">\(-1\)</span> and <strong>beautiful</strong> as <span class="math inline">\(+1\)</span></p></li>
-<li class="fragment"><p>the relative rate of occurrence of these terms tells us about the overall tone or category that the document should be placed in.</p></li>
+<li><p>e.g.&nbsp;for sentiment analysis: <strong>horrible</strong> is scored as <span class="math inline">\(-1\)</span> and <strong>beautiful</strong> as <span class="math inline">\(+1\)</span></p></li>
+<li><p>the relative rate of occurrence of these terms tells us about the overall tone or category that the document should be placed in.</p></li>
 </ul>
 <div class="fragment">
 <p>For document <span class="math inline">\(i\)</span> and words <span class="math inline">\(m=1,\ldots, M\)</span> in the dictionary,</p>
 <p><span class="math display">\[\text{tone of document $i$}= \sum^M_{m=1} \frac{s_m w_{im}}{N_i}\]</span></p>
 <p>Where:</p>
 <ul>
-<li class="fragment"><span class="math inline">\(s_m\)</span> is the score of word <span class="math inline">\(m\)</span></li>
-<li class="fragment"><span class="math inline">\(w_{im}\)</span> is the number of occurrences of the <span class="math inline">\(m_{th}\)</span> dictionary word in the document <span class="math inline">\(i\)</span></li>
-<li class="fragment"><span class="math inline">\(N_i\)</span> is the total number of all dictionary words in the document</li>
+<li><span class="math inline">\(s_m\)</span> is the score of word <span class="math inline">\(m\)</span></li>
+<li><span class="math inline">\(w_{im}\)</span> is the number of occurrences of the <span class="math inline">\(m_{th}\)</span> dictionary word in the document <span class="math inline">\(i\)</span></li>
+<li><span class="math inline">\(N_i\)</span> is the total number of all dictionary words in the document</li>
 </ul>
 </div>
 </section></section>
@@ -426,11 +448,32 @@ Professor: Tiago Ventura
 <h2>Classic Machine Learning with bag-of-words assumption.</h2>
 <p><strong>Pipeline:</strong></p>
 <ul>
-<li class="fragment"><p>Step 1: label some examples of the concept of we want to measure (output)</p></li>
-<li class="fragment"><p>Step 2: convert your data to a document-feature matrix (input)</p></li>
-<li class="fragment"><p>Step 3: train a statistical model on these set of label data using the document-feature matrix.</p></li>
-<li class="fragment"><p>Step 4: use the classifier - some f(x) - to predict unseen documents</p></li>
+<li><p>Step 1: label some examples of the concept of we want to measure (output)</p></li>
+<li><p>Step 2: convert your data to a document-feature matrix (input)</p></li>
+<li><p>Step 3: train a statistical model on these set of label data using the document-feature matrix.</p></li>
+<li><p>Step 4: use the classifier - some f(x) - to predict unseen documents</p></li>
 </ul>
+</section>
+<section id="how-to-obtain-a-training-labeled-dataset" class="slide level2 center">
+<h2>How to obtain a training labeled dataset?</h2>
+<div>
+<ul>
+<li class="fragment"><p><strong>External Source of Annotation:</strong> Someone else labelled the data for you</p>
+<ul>
+<li class="fragment">Federalist papers</li>
+<li class="fragment">Metadata from text</li>
+<li class="fragment">Manifestos from Parties with well-developed dictionaries</li>
+</ul></li>
+<li class="fragment"><p><strong>Expert annotation:</strong></p>
+<ul>
+<li class="fragment">mostly undergrads ~ that you train to be experts</li>
+</ul></li>
+<li class="fragment"><p><strong>Crowd-sourced coding:</strong> digital labor markets</p>
+<ul>
+<li class="fragment"><span class="red">Wisdom of Crowds:</span> the idea that large groups of non-expert people are collectively smarter than individual experts when it comes to problem-solving</li>
+</ul></li>
+</ul>
+</div>
 </section>
 <section id="evaluating-the-performance" class="slide level2 center">
 <h2>Evaluating the Performance</h2>
@@ -455,15 +498,15 @@ Professor: Tiago Ventura
 <tr class="even">
 <td><strong>Actual</strong></td>
 <td>J</td>
-<td style="text-align: center;">a (TP)</td>
-<td style="text-align: center;">b (FN)</td>
+<td style="text-align: center;">a (True Positive)</td>
+<td style="text-align: center;">b (False Negative)</td>
 <td style="text-align: right;">a+b</td>
 </tr>
 <tr class="odd">
 <td></td>
 <td>¬J</td>
-<td style="text-align: center;">c (FP)</td>
-<td style="text-align: center;">d (TN)</td>
+<td style="text-align: center;">c (False Positive)</td>
+<td style="text-align: center;">d (True Negative)</td>
 <td style="text-align: right;">c+d</td>
 </tr>
 <tr class="even">
@@ -481,12 +524,12 @@ Professor: Tiago Ventura
 <li class="fragment"><p><strong>Precision</strong> : number of TP / (number of TP+number of FP) = a/(a+c) .</p>
 <ul>
 <li class="fragment">Fraction of the documents predicted to be J, that were in fact J.</li>
-<li class="fragment">Think as a measure for the estimator</li>
+<li class="fragment">Think as a measure for the estimator (Very precise estimate)</li>
 </ul></li>
 <li class="fragment"><p><strong>Recall</strong>: (number of TP) / (number of TP + number of FN) = a /(a+b)</p>
 <ul>
 <li class="fragment">Fraction of the documents that were in fact J, that method predicted were J.</li>
-<li class="fragment">Think as a measure for the data</li>
+<li class="fragment">Think as a measure for the data (Covers most of the cases in the data)</li>
 </ul></li>
 <li class="fragment"><p><strong>F</strong> : 2 precision*recall / precision+recall</p>
 <ul>
@@ -504,25 +547,25 @@ Professor: Tiago Ventura
 <h2>Pre-Trained Deep Learning Models</h2>
 <p>In recent years, text-as-data/nlp tasks have been dominated by the use of deep learning models. Let’s try to understand a bit what these models are.</p>
 <ul>
-<li class="fragment"><p><span class="red">Components:</span> These text-based deep learning models have two major components</p>
+<li><p><span class="red">Components:</span> These deep learning models have two major components</p>
 <ul>
-<li class="fragment">A dense representation of words (no bag of words!).
+<li>A dense representation of words (no bag of words!).
 <ul>
-<li class="fragment">Every word becomes a vector now</li>
+<li>Every word becomes a vector now</li>
 </ul></li>
-<li class="fragment">A deep architecture for model predictions ~ neural network</li>
+<li>A deep architecture for model predictions ~ neural network</li>
 </ul></li>
-<li class="fragment"><p><span class="red">Definition:</span> Deep Learning Models are designed for general-purpose classification tasks or just simple next-word prediction tasks</p>
+<li><p><span class="red">Definition:</span> Deep Learning Models are designed for general-purpose classification tasks or just simple next-word prediction tasks (language modelling)</p>
 <ul>
-<li class="fragment">In general those are models built on TONS of data and optimized for a particular task</li>
+<li>In general those are models built on TONS of data and optimized for a particular task</li>
 </ul></li>
-<li class="fragment"><p><span class="red">Key Features:</span></p>
+<li><p><span class="red">Key Features:</span></p>
 <ul>
-<li class="fragment">Available for use, adaptation and experimentation</li>
-<li class="fragment">Ready to use</li>
-<li class="fragment">Low to zero cost</li>
-<li class="fragment">Deep ML architectures ~ High accuracy</li>
-<li class="fragment">Can be fine-tuned for your specific task</li>
+<li>Available for use, adaptation and experimentation</li>
+<li>Ready to use</li>
+<li>Low to zero cost</li>
+<li>Deep ML architectures ~ High accuracy</li>
+<li>Can be fine-tuned for your specific task</li>
 </ul></li>
 </ul>
 </section>
@@ -530,14 +573,14 @@ Professor: Tiago Ventura
 <h2>Dense Vector Representation</h2>
 <p>In the vector space model, we learned:</p>
 <ul>
-<li class="fragment"><p>A document <span class="math inline">\(D_i\)</span> is represented as a collection of features <span class="math inline">\(W\)</span> (words, tokens, n-grams..)</p></li>
-<li class="fragment"><p>Each feature <span class="math inline">\(w_i\)</span> can be place in a real line, then a document <span class="math inline">\(D_i\)</span> is a point in a <span class="math inline">\(W\)</span> dimensional space.</p></li>
+<li><p>A document <span class="math inline">\(D_i\)</span> is represented as a collection of features <span class="math inline">\(W\)</span> (words, tokens, n-grams..)</p></li>
+<li><p>Each feature <span class="math inline">\(w_i\)</span> can be place in a real line, then a document <span class="math inline">\(D_i\)</span> is a point in a <span class="math inline">\(W\)</span> dimensional space.</p></li>
 </ul>
 <div class="fragment">
 <p>Embedded in this model, there is the idea we represent <span class="red">words</span> as a <span class="red">one-hot encoding</span>.</p>
 <ul>
-<li class="fragment">“cat”: [0,0, 0, 0, 0, 0, 1, 0, ….., V] , on a V dimensional vector</li>
-<li class="fragment">“dog”: [0,0, 0, 0, 0, 0, 0, 1, …., V], on a V dimensional vector</li>
+<li>“cat”: [0,0, 0, 0, 0, 0, 1, 0, ….., V] , on a V dimensional vector</li>
+<li>“dog”: [0,0, 0, 0, 0, 0, 0, 1, …., V], on a V dimensional vector</li>
 </ul>
 </div>
 </section>
@@ -545,15 +588,15 @@ Professor: Tiago Ventura
 <h2>Sparse vs Dense Vectors</h2>
 <p><strong>One-hot encoding / Sparse Representation:</strong></p>
 <ul>
-<li class="fragment"><p>cat = <span class="math inline">\(\begin{bmatrix} 0,0, 0, 0, 0, 0, 1, 0, 0 \end{bmatrix}\)</span></p></li>
-<li class="fragment"><p>dog = <span class="math inline">\(\begin{bmatrix} 0,0, 0, 0, 0, 1, 0, 0, 0 \end{bmatrix}\)</span></p></li>
+<li><p>cat = <span class="math inline">\(\begin{bmatrix} 0,0, 0, 0, 0, 0, 1, 0, 0 \end{bmatrix}\)</span></p></li>
+<li><p>dog = <span class="math inline">\(\begin{bmatrix} 0,0, 0, 0, 0, 1, 0, 0, 0 \end{bmatrix}\)</span></p></li>
 </ul>
 <div class="fragment">
 <p><strong>Word Embedding / Dense Representation:</strong></p>
 <ul>
-<li class="fragment"><p>cat = <span class="math inline">\(\begin{bmatrix} 0.25, -0.75, 0.90, 0.12, -0.50, 0.33, 0.66, -0.88, 0.10, -0.45 \end{bmatrix}\)</span></p></li>
-<li class="fragment"><p>dog = <span class="math inline">\(\begin{bmatrix} 0.25, 1.75, 0.90, 0.12, -0.50, 0.33, 0.66, -0.88, 0.10, -0.45 \end{bmatrix}\)</span></p></li>
-<li class="fragment"><p>Dense representations are behind all recent advancements on NLP, including ChatGPT</p></li>
+<li><p>cat = <span class="math inline">\(\begin{bmatrix} 0.25, -0.75, 0.90, 0.12, -0.50, 0.33, 0.66, -0.88, 0.10, -0.45 \end{bmatrix}\)</span></p></li>
+<li><p>dog = <span class="math inline">\(\begin{bmatrix} 0.25, 1.75, 0.90, 0.12, -0.50, 0.33, 0.66, -0.88, 0.10, -0.45 \end{bmatrix}\)</span></p></li>
+<li><p>Dense representations are behind all recent advancements on NLP, including ChatGPT</p></li>
 </ul>
 </div>
 </section>
@@ -569,7 +612,7 @@ Professor: Tiago Ventura
 <img data-src="trans.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section>
 <section id="transformer-history" class="slide level2 center">
 <h2>Transformer History</h2>
-<p>The transformer architecture was introduced only in 2017!! This paper revolutionized many natural language processing task, particularly, machine translation and language modelling. All famous models of today are based in the transformers framework</p>
+<p>The transformer architecture was introduced only in 2017!! This paper revolutionized many natural language processing tasks, particularly, machine translation and language modelling. All famous models LLMs of today are based in the transformers framework</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -586,11 +629,11 @@ Professor: Tiago Ventura
 <section id="how-do-i-use-these-sophisticated-models" class="slide level2 center">
 <h2>How do I use these sophisticated models?</h2>
 <p>If you have enough computing power and knowledge of working with these models, you can train your own LLM models. It takes a LOT of data, time and money. Only big tech companies can actually do this</p>
-<p>So, you will ver likely:</p>
+<p>So, you will very likely:</p>
 <ul>
-<li class="fragment"><p>use pre-trained models available on the web.</p></li>
-<li class="fragment"><p>use pre-trained transformers, fine tune the model (retrain with new data), and improve the performance of the models</p></li>
-<li class="fragment"><p>Or outsource tasks for generative models through prompting via APIs.</p></li>
+<li><p>use pre-trained models available on the web (Google Perspective)</p></li>
+<li><p>use pre-trained transformers, fine tune the model (retrain with new data), and improve the performance of the models</p></li>
+<li><p>Or outsource tasks for generative models through prompting via APIs.</p></li>
 </ul>
 </section>
 <section id="hugging-face-for-transformers" class="slide level2 center">
@@ -784,9 +827,9 @@ Professor: Tiago Ventura
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1600,
+        width: 1400,
 
-        height: 1200,
+        height: 1000,
 
         // Factor of the display size that should remain empty around the content
         margin: 0.1,

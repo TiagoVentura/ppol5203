@@ -11,11 +11,11 @@ format:
     transition: slide
     background-transition: fade
     code-line-numbers: false
-    width: 1600
-    height: 1200
+    width: 1400
+    height: 1000
     center: true
     slide-number: true
-    incremental: true
+    incremental: false
     chalkboard: 
       buttons: false
     preview-links: auto
@@ -25,25 +25,43 @@ format:
 
 ## Plans for Today
 
-**Introduction to Text Analysis/Natural Language Processing**
-
 -   Supervised Learning with Text
     -   Dictionary Methods
-    -   Machine Learning Pre-Trained Models
-    -   Applications of LLMs (Large Languague models)
+    -   Machine Learning 
+    -   Transformers: Pre-Trained Models
+
+- Coding
+   - Topics Models
+   - Supervised learning
 
 # In three weeks: Project Presentations. Your final project in slides! {background-color="red"}
+
+# Supervised Learning 
+
+## What is Supervised Learning?
+
+**Def:** machine learning algorithm type that requires **labeled input** data to understand the mapping function from the input to the output
+
+::: fragment
+**SUPERVISED:** The true labels y act as a “supervisor” for the learning process
+
+-   Model predicts ˆy for each input x
+-   Compare predictions ˆy to true labels y
+-   Adjust model to minimize errors
+
+**LEARNING:** the process by which a machine/model improves its performance on a specific task
+:::
 
 ## Supervised Learning with Text
 
 When doing supervised learning with text, we have three basic pieces of the puzzle:
 
--   **Outcome**: the content you want to classify.
+-   **Outcome**: the class you want to classify.
 
     -   Examples:
         -   Tone, Emotion, Topic, Misinformation, Quality... Anything you know what you want to classify
 
--   **Input**: this is your text. Often this will come from converting you text to a numerical representation. As we learned last week, most times this numerical representation will be a document feature matrix.
+-   **Input**: this is your text. Often as a Document Feature Matrix.
 
 -   **Model**: An transformation function connecting your words with the outcome you want to predict.
 
@@ -107,14 +125,33 @@ Where:
 
 -   Step 4: use the classifier - some f(x) - to predict unseen documents
 
+## How to obtain a training labeled dataset?
+
+::: incremental
+-   **External Source of Annotation:** Someone else labelled the data for you
+
+    -   Federalist papers
+    -   Metadata from text
+    -   Manifestos from Parties with well-developed dictionaries
+
+-   **Expert annotation:**
+
+    -   mostly undergrads \~ that you train to be experts
+
+-   **Crowd-sourced coding:** digital labor markets
+
+    -   [Wisdom of Crowds:]{.red} the idea that large groups of non-expert people are collectively smarter than individual experts when it comes to problem-solving
+:::
+
+
 ## Evaluating the Performance
 
-|            |       | Predicted |        |       |
-|------------|-------|:---------:|:------:|------:|
-|            |       |     J     |   ¬J   | Total |
-| **Actual** | J     |  a (TP)   | b (FN) |   a+b |
-|            | ¬J    |  c (FP)   | d (TN) |   c+d |
-|            | Total |    a+c    |  b+d   |     N |
+|            |       |     Predicted      |                    |       |
+|------------|-------|:------------------:|:------------------:|------:|
+|            |       |         J          |         ¬J         | Total |
+| **Actual** | J     | a (True Positive)  | b (False Negative) |   a+b |
+|            | ¬J    | c (False Positive) | d (True Negative)  |   c+d |
+|            | Total |        a+c         |        b+d         |     N |
 
 ::: incremental
 -   **Accuracy**: number correctly classified/total number of cases = (a+d)/(a+b+c+d)
@@ -122,17 +159,19 @@ Where:
 -   **Precision** : number of TP / (number of TP+number of FP) = a/(a+c) .
 
     -   Fraction of the documents predicted to be J, that were in fact J.
-    -   Think as a measure for the estimator
+    -   Think as a measure for the estimator (Very precise estimate)
 
 -   **Recall**: (number of TP) / (number of TP + number of FN) = a /(a+b)
 
     -   Fraction of the documents that were in fact J, that method predicted were J.
-    -   Think as a measure for the data
+    -   Think as a measure for the data (Covers most of the cases in the data)
 
 -   **F** : 2 precision\*recall / precision+recall
 
     -   Harmonic mean of precision and recall.
 :::
+
+
 
 # Quizz. Advantages and Disadvantages of Classic ML?
 
@@ -140,13 +179,13 @@ Where:
 
 In recent years, text-as-data/nlp tasks have been dominated by the use of deep learning models. Let's try to understand a bit what these models are.
 
--   [Components:]{.red} These text-based deep learning models have two major components
+-   [Components:]{.red} These deep learning models have two major components
 
     -   A dense representation of words (no bag of words!).
         -   Every word becomes a vector now
     -   A deep architecture for model predictions \~ neural network
 
--   [Definition:]{.red} Deep Learning Models are designed for general-purpose classification tasks or just simple next-word prediction tasks
+-   [Definition:]{.red} Deep Learning Models are designed for general-purpose classification tasks or just simple next-word prediction tasks (language modelling)
 
     -   In general those are models built on TONS of data and optimized for a particular task
 
@@ -213,7 +252,7 @@ knitr::include_graphics("trans.png")
 
 ## Transformer History
 
-The transformer architecture was introduced only in 2017!! This paper revolutionized many natural language processing task, particularly, machine translation and language modelling. All famous models of today are based in the transformers framework
+The transformer architecture was introduced only in 2017!! This paper revolutionized many natural language processing tasks, particularly, machine translation and language modelling. All famous models LLMs of today are based in the transformers framework
 
 ```{r echo=FALSE, out.width = "100%", fig.align='center'}
 knitr::include_graphics("transformers_chrono.svg") 
@@ -227,9 +266,9 @@ source: https://huggingface.co/learn/llm-course/chapter1/4
 
 If you have enough computing power and knowledge of working with these models, you can train your own LLM models. It takes a LOT of data, time and money. Only big tech companies can actually do this
 
-So, you will ver likely:
+So, you will very likely:
 
--   use pre-trained models available on the web.
+-   use pre-trained models available on the web (Google Perspective)
 
 -   use pre-trained transformers, fine tune the model (retrain with new data), and improve the performance of the models
 
