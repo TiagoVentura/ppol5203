@@ -1,6 +1,6 @@
 ---
 title: "Week 12"
-subtitle: "Generative AI: Classification, Surveys and Prompting (Invited Speaker  - Dr. Patrick Wu, American University)"
+subtitle: "Generative AI: Classification, Surveys and Prompting"
 description: ""
 author: "Tiago Ventura"
 date: "11/25/2025"
@@ -36,32 +36,24 @@ tbl-colwidths: [10,50,40]
 
 ## Lectures Notes:
 
--   SQL [html](/lecture_notes/week-13/_week_13_sql.html) -- <a href="/lecture_notes/week-13/_week_13_sql.ipynb" download> Jupyter Notebook </a>
+
+- [R Code](https://www.dropbox.com/scl/fi/93boxkzsz76sfv7nmb3bl/llms.R?rlkey=bbv1dbusqneyc8q4007qw8yif&dl=0)
+
+- Python Code:  <a href="/lecture_notes/_week13_llms.ipynb" download> Week 13 - Large Language Models - Applications </a>
 
 # Slides
 
--   [SQL](/slides/week-13.html)
+-   [LLMs](/slides/week-llm.html)
 
 # Readings
 
-There are all references for you to learn more about SQL in the future
+- [Speech, Language and Processing, Chapter 7](https://stanford.edu/~jurafsky/slp3/7.pdf)
 
--   Beaulieu, A. (2009). Learning SQL: Master SQL Fundamentals.O'Reilly Media, Inc.
+-   [Wu, Patrick Y., Joshua A. Tucker, Jonathan Nagler, and Solomon Messing. "Large language models can be used to estimate the ideologies of politicians in a zero-shot learning setting." arXiv preprint arXiv:2303.12057 (2023)](https://arxiv.org/abs/2303.12057).
 
--   Stephens, R., Plew, R., & Jones, A. D. (2009). Sams teach yourself SQL in one hour a day.</a> Sams Publishing.
+- [Rathje, Steve, Dan-Mircea Mirea, Ilia Sucholutsky, Raja Marjieh, Claire Robertson, and Jay J. Van Bavel. GPT is an effective tool for multilingual psychological text analysis. (2023)](https://www.pnas.org/doi/10.1073/pnas.2308950121).
 
--   Google BigQuery: Legacy SQL Functions and Operators.</a>
+- [Davidson, Thomas: Start Generating: Harnessing Generative Artificial Intelligence for Sociological Research, PrePrint](https://osf.io/preprints/socarxiv/u9nft)
 
-    </p>
+- [Bisbee, James, Joshua Clinton, Cassy Dorff, Brenton Kenkel, and Jennifer Larson. 2023. “Synthetic Replacements for Human Survey Data? the Perils of Large Language Models.” SocArXiv. May 4.](https://osf.io/preprints/socarxiv/5ecfa) 
 
-    </li>
-
-# Datacamp Courses
-
-Since we only did a brief intro to SQL, I strongly suggest you to complete these three datacamp courses:
-
--   [Introduction to SQL](https://app.datacamp.com/learn/courses/introduction-to-sql)
-
--   [Intermediate SQL](https://app.datacamp.com/learn/courses/intermediate-sql)
-
--   [Joining Data on SQL](https://app.datacamp.com/learn/courses/joining-data-in-sql)
