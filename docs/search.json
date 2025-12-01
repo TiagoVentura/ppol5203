@@ -2791,5 +2791,96 @@
     "title": "Syllabus: PPOL 5203 - Data Science I: Foundations",
     "section": "Georgetown Policies",
     "text": "Georgetown Policies\n\nDisability\nIf you believe you have a disability, then you should contact the Academic Resource Center (arc@georgetown.edu) for further information. The Center is located in the Leavey Center, Suite 335 (202-687-8354). The Academic Resource Center is the campus office responsible for reviewing documentation provided by students with disabilities and for determining reasonable accommodations in accordance with the Americans with Disabilities Act (ASA) and University policies. For more information, go to http://academicsupport.georgetown.edu/disability/\n\n\nImportant Academic Policies and Academic Integrity\nMcCourt School students are expected to uphold the academic policies set forth by Georgetown University and the Graduate School of Arts and Sciences. Students should therefore familiarize themselves with all the rules, regulations, and procedures relevant to their pursuit of a Graduate School degree. The policies are located at: http://grad.georgetown.edu/academics/policies/\nApplied to this course, while I encourage collaboration on assignments and use of resources like StackOverflow, the problem sets will ask you to list who you worked on the problem set with and cite StackOverflow if it is the direct source of a code snippet.\n\n\nStatement on Sexual Misconduct\nGeorgetown University and its faculty are committed to supporting survivors and those impacted by sexual misconduct, which includes sexual assault, sexual harassment, relationship violence, and stalking. Georgetown requires faculty members, unless otherwise designated as confidential, to report all disclosures of sexual misconduct to the University Title IX Coordinator or a Deputy Title IX Coordinator. If you disclose an incident of sexual misconduct to a professor in or outside of the classroom (with the exception of disclosures in papers), that faculty member must report the incident to the Title IX Coordinator, or Deputy Title IX Coordinator. The coordinator will, in turn, reach out to the student to provide support, resources, and the option to meet. [Please note that the student is not required to meet with the Title IX coordinator.]. More information about reporting options and resources can be found on the Sexual Misconduct\nWebsite: https://sexualassault.georgetown.edu/resourcecenter\nIf you would prefer to speak to someone confidentially, Georgetown has a number of fully confidential professional resources that can provide support and assistance. These resources include: Health Education Services for Sexual Assault Response and Prevention: confidential email: sarp[at]georgetown.edu\nCounseling and Psychiatric Services (CAPS): 202.687.6985 or after hours, call (833) 960-3006 to reach Fonemed, a telehealth service; individuals may ask for the on-call CAPS clinician\nMore information about reporting options and resources can be found on the Sexual Misconduct Website.\n\n\nProvost’s Policy on Religious Observances\nGeorgetown University promotes respect for all religions. Any student who is unable to attend classes or to participate in any examination, presentation, or assignment on a given day because of the observance of a major religious holiday or related travel shall be excused and provided with the opportunity to make up, without unreasonable burden, any work that has been missed for this reason and shall not in any other way be penalized for the absence or rescheduled work. Students will remain responsible for all assigned work. Students should notify professors in writing at the beginning of the semester of religious observances that conflict with their classes. The Office of the Provost, in consultation with Campus Ministry and the Registrar, will publish, before classes begin for a given term, a list of major religious holidays likely to affect Georgetown students. The Provost and the Main Campus Executive Faculty encourage faculty to accommodate students whose bona fide religious observances in other ways impede normal participation in a course. Students who cannot be accommodated should discuss the matter with an advising dean."
+  },
+  {
+    "objectID": "slides/week-13.html#plans-for-today",
+    "href": "slides/week-13.html#plans-for-today",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Plans for Today",
+    "text": "Plans for Today\n\nBrief Discussion about your Presentations\nIntroduction to SQL\n\nMotivation\nWays to use SQL\nOverview of main functions\n\nDiscuss your projects"
+  },
+  {
+    "objectID": "slides/week-13.html#project-presentation",
+    "href": "slides/week-13.html#project-presentation",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Project Presentation",
+    "text": "Project Presentation\nYou should prepare a 10-12 minutes presentation. It should cover:\n\nMotivation or problem statement (THE LEAST IMPORTANT)\nData collection\nMethods\nResults (THE MOST IMPORTANT)\nLessons learned and next steps"
+  },
+  {
+    "objectID": "slides/week-13.html#database-systems-motivation",
+    "href": "slides/week-13.html#database-systems-motivation",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Database Systems: Motivation",
+    "text": "Database Systems: Motivation\nAssume you are starting a company collecting daily a high volume of data, you can:\n\nUse a file system to store data as daily csvs, jsons, etc..\nOR build a structured, secured and efficient system to store and access the data\n\n\nWhile the first works at small scale (your computer and your DS final projects), if you have a large scale data collection, OR continous insertion of data, thinking og a secured system is often the way to go.\n\nStructured Data Storage: Decide which variables to store.\nEnable Relationships: Build ids for your variables\nDefine types: pre-specify which types each columns is\nValidation Rules: define a set of rules to guarantee integrity of your data"
+  },
+  {
+    "objectID": "slides/week-13.html#database-definitions",
+    "href": "slides/week-13.html#database-definitions",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Database: Definitions",
+    "text": "Database: Definitions\n\nDatabase A database is a structured collection of data designed to store, manage, and retrieve information efficiently.\nDatabase Management System serves as an interface between the database and its users or the application programs (MySQL, SQLite, Hive, BigQuery (Google), Presto (Meta), Redshift (Amazon) are all different DBMS.)"
+  },
+  {
+    "objectID": "slides/week-13.html#why-databases",
+    "href": "slides/week-13.html#why-databases",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Why Databases?",
+    "text": "Why Databases?\nAs Data Scientists, we will often use Databases, instead of building them. For our purposes, two main advantages:\n\nMemory efficient (relational component)\nRelies on Hard Drive memory for storage, not RAM!!!\nDatabases are optimized to reduce the dependency on RAM when querying your data.\nDBMS enforces rules to maintain data integrity and consistency (stop you of adding corrupt data)"
+  },
+  {
+    "objectID": "slides/week-13.html#relational-databases",
+    "href": "slides/week-13.html#relational-databases",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Relational Databases",
+    "text": "Relational Databases\n\nRelational Databases are a type of database where data is represented as tables linked based on common keys (to avoid redundancy)"
+  },
+  {
+    "objectID": "slides/week-13.html#sql",
+    "href": "slides/week-13.html#sql",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "SQL",
+    "text": "SQL\n\nSQL (pronounced S-Q-L or SEQUEL) is a language designed to query relational databases\nWhile relatively uncommon in academia, many companies / governments expect data scientists to be able to write SQL queries\nThe result of an SQL query is always a table\nIt’s a nonprocedural language: define inputs and outputs; how the statement is executed is left to the optimizer\nSQL is a language that works with many types of relational database systems. Nearly identical syntax but some small differences on the margins"
+  },
+  {
+    "objectID": "slides/week-13.html#how-to-interact-with-sql-ides",
+    "href": "slides/week-13.html#how-to-interact-with-sql-ides",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "How to interact with SQL: IDEs",
+    "text": "How to interact with SQL: IDEs"
+  },
+  {
+    "objectID": "slides/week-13.html#how-to-interact-with-sql-pythonr",
+    "href": "slides/week-13.html#how-to-interact-with-sql-pythonr",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "How to interact with SQL: Python/R",
+    "text": "How to interact with SQL: Python/R\n\nUse an R or Python package that helps you connect with a specific type of database (sqlite3 library in Python)\nEstablish a connection between your local computer and the database\nWrite a SQL query\nExecute the query\nPull the result and work with the result in that language"
+  },
+  {
+    "objectID": "slides/week-13.html#sql-query-example",
+    "href": "slides/week-13.html#sql-query-example",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "SQL Query: Example",
+    "text": "SQL Query: Example\n\n\nselect \n    country, \n    ccode, \n    year, \n    riots\nfrom conflict"
+  },
+  {
+    "objectID": "slides/week-13.html#sql-query-main-components",
+    "href": "slides/week-13.html#sql-query-main-components",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "SQL Query: Main Components",
+    "text": "SQL Query: Main Components\n\nSELECT columns\nFROM a table in a database\nWHERE rows meet a condition\nGROUP BY values of a column\nORDER BY values of a column when displaying results\nLIMIT to only X number of rows in resulting table\nAlways required: SELECT and FROM. Rest are optional."
+  },
+  {
+    "objectID": "slides/week-13.html#aggregate-functions",
+    "href": "slides/week-13.html#aggregate-functions",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Aggregate Functions",
+    "text": "Aggregate Functions\nSELECT can be combined with functions such as SUM, COUNT, AVG… including when using GROUP BY\n\nselect \n    country,  \n    year, \n    sum(riots) as riots,\n    sum(protests) as protests\nfrom conflict \ngroup by country, year"
+  },
+  {
+    "objectID": "slides/week-13.html#joins",
+    "href": "slides/week-13.html#joins",
+    "title": " PPOL 5203 - Data Science I: Foundations ",
+    "section": "Joins",
+    "text": "Joins\nRelational databases are all about joins. SQL offers the same type of joins as we saw in pandas\n\ninner join (default)\nleft join\nouter join\nUse join + on to define which column to join."
   }
 ]

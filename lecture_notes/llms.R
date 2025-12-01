@@ -84,7 +84,7 @@ d %>% View()
 prompt <- "As an expert annotator, 
 you will be asked to annotate a sample of social media posts \n
 I would like you to determine if the post can be considered uncivil, toxic or an attack to other people \n
-Return a number with 1 when you consider the post uncivil, toxicy or an atack, 0 otherwise. Here are the posts"
+Return a number with 1 when you consider the post uncivil, toxicy or an atack, 0 otherwise. Here are the posts:"
 
 # write a generic function to query the open ai api
 payload <- list(
@@ -151,7 +151,7 @@ payload <- list(
     )
   ),
   # notice here
-  functions=list(output_structure),
+  functions = list(output_structure),
   function_call = list(name = output_structure$name),
   max_tokens = 4000)
 
@@ -222,7 +222,7 @@ print(i)
 }
 
 # check results
-output %>% bind_rows() %>% pull(reasoning)
+output %>% bind_rows() %>% view()
 
 
 # Example Reasoning -------------------------------------------------------
@@ -248,7 +248,7 @@ reasons = output %>% bind_rows() %>% pull(reasoning)
 reasons = paste(reasons, collapse = ";")
 
 reason_ai <- query_open_ai(prompt, reasons, output_structure)
-
+reason_ai$text
 
 
 # Example 2: Another Annotation task  -------------------------------------------
@@ -259,8 +259,8 @@ reason_ai <- query_open_ai(prompt, reasons, output_structure)
 # 2 - load dataset --------------------------------------------------------
 links_df <- read_csv("~/Dropbox/artigos/VVW_LLMs_urls/data/data_nyhan/sample_voter_fraud.csv") %>% clean_names()
 
-# 3 -  Classify ----------------------------------------------------------------
 
+# 3 -  Classify ----------------------------------------------------------------
 prompt <- "As an expert annotator, you will be asked to annotate a sample of news articles about U.S. politics
 to determine (1) if they discuss election fraud or not and (2) if they include a statement questioning
 or contradicting claims that election fraud is widespread or could change the outcome of one or
@@ -300,19 +300,19 @@ output_structure <- list(
 
 
 # query api
-response=list()
 
 links_df$body_clean[[1]]
+response <- list()
 
-for(i in 1:2){
+for(i in 1:10){
   # query    
   response[[i]] = query_open_ai(prompt, links_df$body_clean[[i]],output_structure)
   print(i)
 }
 
 response %>% 
-  bind_rows() %>%
-  bind_cols(links_df[1:2,"body_clean"]) %>% view()
+  bind_rows() %>% 
+  bind_cols(links_df[1:10,"body_clean"]) %>% view()
 
 
 # Example 3: Synthethic data with Large Language Models ---------------------------------------------------------
@@ -439,7 +439,8 @@ audit_data <- expand.grid(age = c(20,35,50,65),
                           pid = c('Republican','Democrat','Independent'),
                           stringsAsFactors = F) %>%
   as_tibble()
-dim(audit_data)
+
+audit_data %>% View()
 
 # output
 function_info <- list(

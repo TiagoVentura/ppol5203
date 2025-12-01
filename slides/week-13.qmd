@@ -1,0 +1,188 @@
+---
+title: "<span style = 'font-size: 100%;'> PPOL 5203 - Data Science I: Foundations </span>"
+subtitle: "<span style = 'font-size: 100%;'> Week 13: SQL </span>"
+author: "Professor: Tiago Ventura"
+execute: 
+  echo: false
+  error: true
+format:
+  revealjs: 
+    transition: slide
+    background-transition: fade
+    code-line-numbers: false
+    width: 1600
+    height: 1200
+    center: TRUE
+    slide-number: true
+    incremental: false
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    footer: "Data science I: Foundations"
+    theme: [simple, custom.scss]
+---
+
+## Plans for Today
+
+-   Brief Discussion about your Presentations
+
+-   **Introduction to SQL**
+
+    -   Motivation
+
+    -   Ways to use SQL
+
+    -   Overview of main functions
+
+-   **Discuss your projects**
+
+## Project Presentation
+
+You should prepare a 10-12 minutes presentation. It should cover:
+
+-   Motivation or problem statement **(THE LEAST IMPORTANT)**
+
+-   Data collection
+
+-   Methods
+
+-   Results **(THE MOST IMPORTANT)**
+
+-   Lessons learned and next steps
+
+# Introduction to SQL
+
+## Database Systems: Motivation
+
+Assume you are starting a company collecting daily a high volume of data, you can:
+
+-   Use a file system to store data as daily csvs, jsons, etc..
+
+-   **OR** build a structured, secured and efficient system to store and access the data
+
+::: fragment
+While the first works at small scale (your computer and your DS final projects), if you have a large scale data collection, OR continous insertion of data, thinking og a secured system is often the way to go.
+
+-   Structured Data Storage: Decide which variables to store.
+
+-   Enable Relationships: Build ids for your variables
+
+-   Define types: pre-specify which types each columns is
+
+-   Validation Rules: define a set of rules to guarantee integrity of your data
+:::
+
+## Database: Definitions
+
+-   [Database]{.blue} A database is a structured collection of data designed to store, manage, and retrieve information efficiently.
+
+-   [Database Management System]{.blue} serves as an interface between the database and its users or the application programs (MySQL, SQLite, Hive, BigQuery (Google), Presto (Meta), Redshift (Amazon) are all different DBMS.)
+
+## Why Databases?
+
+As Data Scientists, we will often use Databases, instead of building them. For our purposes, two main advantages:
+
+-   Memory efficient (relational component)
+
+-   Relies on Hard Drive memory for storage, not RAM!!!
+
+-   Databases are optimized to reduce the dependency on RAM when querying your data.
+
+-   DBMS enforces rules to maintain data integrity and consistency (stop you of adding corrupt data)
+
+## Relational Databases
+
+-   [Relational Databases]{.blue} are a type of database where data is represented as tables linked based on common keys (to avoid redundancy)
+
+```{r}
+knitr::include_graphics("https://assets-global.website-files.com/620d42e86cb8ec4d0839e59d/620d42e96cb8ec659e39f462_99bf70d46cc247be878de9d3a88f0c44.png")
+```
+
+## SQL
+
+-   SQL (pronounced S-Q-L or SEQUEL) is a language designed to [query relational databases]{.red}
+
+-   While relatively uncommon in academia, many companies / governments expect data scientists to be able to write SQL queries
+
+-   The result of an SQL query is always a [table]{.red}
+
+-   It's a [nonprocedural language]{.red}: define inputs and outputs; how the statement is executed is left to the optimizer
+
+-   SQL is a language that works with many types of relational database systems. Nearly identical syntax but some small differences on the margins
+
+## How to interact with SQL: IDEs
+
+```{r}
+knitr::include_graphics("https://blog.coupler.io/wp-content/uploads/2021/04/1-bigquery-sql.png")
+```
+
+## How to interact with SQL: Python/R
+
+1.  Use an R or Python package that helps you connect with a specific type of database (sqlite3 library in Python)
+
+2.  Establish a connection between your local computer and the database
+
+3.  Write a SQL query
+
+4.  Execute the query
+
+5.  Pull the result and work with the result in that language
+
+## SQL Query: Example
+
+<br>
+
+```{r echo=TRUE, eval=FALSE}
+
+select 
+	country, 
+	ccode, 
+	year, 
+	riots
+from conflict
+
+```
+
+## SQL Query: Main Components
+
+-   [SELECT]{.red} columns
+
+-   [FROM]{.red} a table in a database
+
+-   [WHERE]{.red} rows meet a condition
+
+-   [GROUP BY]{.red} values of a column
+
+-   [ORDER BY]{.red} values of a column when displaying results
+
+-   [LIMIT]{.red} to only X number of rows in resulting table
+
+-   [Always required]{.blue}: SELECT and FROM. Rest are optional.
+
+## Aggregate Functions
+
+SELECT can be combined with functions such as SUM, COUNT, AVG... including when using GROUP BY
+
+```{r echo=TRUE, eval=FALSE}
+select 
+	country,  
+	year, 
+	sum(riots) as riots,
+	sum(protests) as protests
+from conflict 
+group by country, year
+```
+
+## Joins
+
+Relational databases are all about joins. SQL offers the same type of joins as we saw in pandas
+
+-   inner join (default)
+
+-   left join
+
+-   outer join
+
+-   Use join + on to define which column to join.
+
+# [Quick notebook with examples]()

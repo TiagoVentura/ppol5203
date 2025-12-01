@@ -57,8 +57,8 @@ website:
             text: "Week 11: Text as Data II"
           - href: weeks/week-12_.qmd
             text: "Week 12: LLMs"
-          # - href: weeks/week-13.qmd
-          #  text: "Week 13: SQL"
+          - href: weeks/week-13.qmd
+            text: "Week 13: SQL"
           # - href: weeks/week-14.qmd
           #  text: "Week 14: Project Presentation"
           
