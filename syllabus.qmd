@@ -184,7 +184,7 @@ Due dates and breakdowns for the project are as follows:
 |------------------|-------------|---------------|----------------|
 | Project Proposal | October 31  | 2 pages       | 5%             |
 | Presentation     | December 09 | 10-15 minutes | 10%            |
-| Project Report   | December 16 | 10 pages      | 25%            |
+| Project Report   | December 17 | 10 pages      | 25%            |
 
 **Important notes about the final project**
 
